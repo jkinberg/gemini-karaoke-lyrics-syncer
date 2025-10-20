@@ -1,0 +1,5 @@
+{
+  "name": "Karaoke Syncer",
+  "description": "An AI-powered tool to generate synchronized Spanish and English karaoke lyric data files from raw text lyrics, complete with simulated word-level timing.",
+  "requestFramePermissions": []
+}
