@@ -333,22 +333,43 @@ const DifficultyBar: React.FC<{ score: number }> = ({ score }) => {
   );
 };
 
+const HighlightedText: React.FC<{ text?: string; highlight?: string }> = ({ text = '', highlight = '' }) => {
+  if (!highlight.trim() || !text.toLowerCase().includes(highlight.toLowerCase())) {
+    return <>{text}</>;
+  }
+  const regex = new RegExp(`(${highlight})`, 'gi');
+  const parts = text.split(regex);
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.toLowerCase() === highlight.toLowerCase() ? (
+          <strong key={i} className="font-bold text-emerald-400">{part}</strong>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+};
+
 
 const VocabularyDisplay: React.FC<{ vocabList: VocabularyItem[] | null, isLoading: boolean }> = ({ vocabList, isLoading }) => {
   const handleDownloadCsv = () => {
     if (!vocabList || vocabList.length === 0) return;
 
-    const headers = ['Term', 'Definition', 'Difficulty', 'Example'];
+    const headers = ['Spanish Term', 'English Term', 'Definition', 'Difficulty', 'Spanish Example', 'English Example'];
     const csvRows = [headers.join(',')];
 
     const escapeCsvCell = (cell: string) => `"${cell.replace(/"/g, '""')}"`;
 
     vocabList.forEach(item => {
       const row = [
-        escapeCsvCell(item.term),
+        escapeCsvCell(item.term.spanish),
+        escapeCsvCell(item.term.english),
         escapeCsvCell(item.definition),
         item.difficulty.toString(),
-        escapeCsvCell(item.example)
+        escapeCsvCell(item.example.spanish),
+        escapeCsvCell(item.example.english)
       ];
       csvRows.push(row.join(','));
     });
@@ -415,7 +436,7 @@ const VocabularyDisplay: React.FC<{ vocabList: VocabularyItem[] | null, isLoadin
           <table className="w-full text-sm text-left text-textSecondary">
             <thead className="text-xs text-textPrimary uppercase bg-gray-800">
               <tr>
-                <th scope="col" className="px-6 py-3">Spanish Term</th>
+                <th scope="col" className="px-6 py-3">Term</th>
                 <th scope="col" className="px-6 py-3">English Definition</th>
                 <th scope="col" className="px-6 py-3">Example from Lyrics</th>
                 <th scope="col" className="px-6 py-3">Difficulty</th>
@@ -425,10 +446,14 @@ const VocabularyDisplay: React.FC<{ vocabList: VocabularyItem[] | null, isLoadin
               {vocabList.map((item, index) => (
                 <tr key={index} className="bg-surface border-b border-gray-700 hover:bg-gray-800/50">
                   <th scope="row" className="px-6 py-4 font-medium text-textPrimary whitespace-nowrap">
-                    {item.term}
+                    <span className="block">{item.term.spanish}</span>
+                    <span className="block text-gray-400 font-normal">({item.term.english})</span>
                   </th>
                   <td className="px-6 py-4">{item.definition}</td>
-                  <td className="px-6 py-4 italic">"{item.example}"</td>
+                  <td className="px-6 py-4 italic text-textPrimary">
+                    <span className="block">"<HighlightedText text={item.example.spanish} highlight={item.term.spanish} />"</span>
+                    <span className="block text-gray-400 mt-1">"<HighlightedText text={item.example.english} highlight={item.term.english} />"</span>
+                  </td>
                   <td className="px-6 py-4">
                     <DifficultyBar score={item.difficulty} />
                   </td>

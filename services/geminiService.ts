@@ -237,10 +237,10 @@ Your task is to analyze a set of song lyrics and extract key vocabulary words th
 
 1.  Identify 10-15 key Spanish vocabulary terms from the lyrics. Focus on words that are common, useful, or represent important concepts in the song.
 2.  For each term, provide the following information:
-    - \`term\`: The Spanish word in its base form (e.g., infinitive for verbs, singular for nouns).
-    - \`definition\`: A concise and accurate English definition.
+    - \`term\`: An object containing the Spanish word in its base form (\`spanish\`) and its direct, corresponding English translation (\`english\`).
+    - \`definition\`: A concise and accurate English definition of the Spanish term.
     - \`difficulty\`: An integer score from 1 (very common, beginner) to 10 (rare, advanced) representing the word's difficulty for an English speaker.
-    - \`example\`: The full, original line from the Spanish lyrics where the word appears, to provide context.
+    - \`example\`: An object containing the full, original line from the Spanish lyrics where the word appears (\`spanish\`) and its corresponding English translation (\`english\`).
 
 **Output Format:**
 You MUST return a single, minified JSON object that strictly follows the provided schema. The output should be an array of vocabulary item objects.
@@ -253,8 +253,13 @@ Do not include any other text, explanations, or markdown formatting.
       type: Type.OBJECT,
       properties: {
         term: {
-          type: Type.STRING,
-          description: 'The Spanish word in its base form (e.g., infinitive for verbs, singular for nouns).',
+          type: Type.OBJECT,
+          description: 'An object containing the base Spanish word and its direct English translation.',
+          properties: {
+            spanish: { type: Type.STRING, description: 'The Spanish word in its base form.' },
+            english: { type: Type.STRING, description: 'The direct English translation of the term.' }
+          },
+          required: ['spanish', 'english']
         },
         definition: {
           type: Type.STRING,
@@ -265,8 +270,19 @@ Do not include any other text, explanations, or markdown formatting.
           description: "An integer score from 1 (very common, beginner) to 10 (rare, advanced) representing the word's difficulty.",
         },
         example: {
-          type: Type.STRING,
-          description: 'The full, original line from the Spanish lyrics where the word appears.',
+          type: Type.OBJECT,
+          description: 'An object containing the original Spanish line and its English translation.',
+          properties: {
+            spanish: {
+              type: Type.STRING,
+              description: 'The full, original line from the Spanish lyrics where the word appears.'
+            },
+            english: {
+              type: Type.STRING,
+              description: 'The English translation of the example line.'
+            }
+          },
+          required: ['spanish', 'english']
         },
       },
       required: ['term', 'definition', 'difficulty', 'example'],

@@ -33,8 +33,14 @@ export interface KaraokeApiResponse {
 }
 
 export interface VocabularyItem {
-  term: string;
+  term: {
+    spanish: string;
+    english: string;
+  };
   definition: string;
   difficulty: number;
-  example: string;
+  example: {
+    spanish: string;
+    english: string;
+  };
 }
