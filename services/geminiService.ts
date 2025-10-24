@@ -1,5 +1,5 @@
-import { GoogleGenAI } from "@google/genai";
-import { KaraokeApiResponse } from '../types';
+import { GoogleGenAI, Type } from "@google/genai";
+import { KaraokeApiResponse, VocabularyItem } from '../types';
 
 const fileToGenerativePart = async (file: File) => {
   const base64EncodedDataPromise = new Promise<string>((resolve, reject) => {
@@ -204,5 +204,94 @@ Translated Lyrics:
   } catch (error) {
     console.error("Error calling Gemini API for translation:", error);
     throw new Error("An API error occurred during translation. Please try again.");
+  }
+};
+
+
+export const generateVocabularyList = async (
+  spanishLyrics: string,
+  englishLyrics: string,
+): Promise<VocabularyItem[]> => {
+  if (!process.env.API_KEY) {
+    throw new Error("API_KEY environment variable is not set.");
+  }
+
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const model = 'gemini-2.5-flash';
+
+  const prompt = `
+You are an expert language tutor specializing in teaching Spanish to native English speakers.
+Your task is to analyze a set of song lyrics and extract key vocabulary words that would be most beneficial for an intermediate learner.
+
+**Input Data:**
+- Spanish Lyrics:
+  ---
+  ${spanishLyrics}
+  ---
+- English Lyrics (for context):
+  ---
+  ${englishLyrics}
+  ---
+
+**Task Instructions:**
+
+1.  Identify 10-15 key Spanish vocabulary terms from the lyrics. Focus on words that are common, useful, or represent important concepts in the song.
+2.  For each term, provide the following information:
+    - \`term\`: The Spanish word in its base form (e.g., infinitive for verbs, singular for nouns).
+    - \`definition\`: A concise and accurate English definition.
+    - \`difficulty\`: An integer score from 1 (very common, beginner) to 10 (rare, advanced) representing the word's difficulty for an English speaker.
+    - \`example\`: The full, original line from the Spanish lyrics where the word appears, to provide context.
+
+**Output Format:**
+You MUST return a single, minified JSON object that strictly follows the provided schema. The output should be an array of vocabulary item objects.
+Do not include any other text, explanations, or markdown formatting.
+`;
+
+  const schema = {
+    type: Type.ARRAY,
+    items: {
+      type: Type.OBJECT,
+      properties: {
+        term: {
+          type: Type.STRING,
+          description: 'The Spanish word in its base form (e.g., infinitive for verbs, singular for nouns).',
+        },
+        definition: {
+          type: Type.STRING,
+          description: 'A concise and accurate English definition.',
+        },
+        difficulty: {
+          type: Type.INTEGER,
+          description: "An integer score from 1 (very common, beginner) to 10 (rare, advanced) representing the word's difficulty.",
+        },
+        example: {
+          type: Type.STRING,
+          description: 'The full, original line from the Spanish lyrics where the word appears.',
+        },
+      },
+      required: ['term', 'definition', 'difficulty', 'example'],
+    },
+  };
+
+  try {
+    const response = await ai.models.generateContent({
+      model: model,
+      contents: prompt,
+      config: {
+        responseMimeType: 'application/json',
+        responseSchema: schema,
+      },
+    });
+    
+    const text = response.text.trim();
+    if (!text) {
+        throw new Error("The vocabulary model returned an empty response.");
+    }
+    const parsedJson = JSON.parse(text);
+    return parsedJson as VocabularyItem[];
+
+  } catch (error) {
+    console.error("Error calling Gemini API for vocabulary generation:", error);
+    throw new Error("An API error occurred while generating the vocabulary list. This feature may not be available right now.");
   }
 };

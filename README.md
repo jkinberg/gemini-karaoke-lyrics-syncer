@@ -1,7 +1,7 @@
 
 # Karaoke Syncer AI
 
-Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini model to automatically generate perfectly synchronized, word-level karaoke lyric files from an audio track and raw text lyrics. It supports both Spanish and English, provides AI-powered translation, and exports the data in a clean, developer-friendly JSON format.
+Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini model to automatically generate perfectly synchronized, word-level karaoke lyric files from an audio track and raw text lyrics. It supports both Spanish and English, provides AI-powered translation, and exports the data in a clean, developer-friendly JSON format. It also includes a language-learning feature that extracts key vocabulary from the lyrics to help users learn Spanish.
 
 ![Karaoke Syncer AI Screenshot](https://storage.googleapis.com/aistudio-hosting/readme_assets/karaoke-syncer-demo.png)
 
@@ -11,10 +11,11 @@ Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini 
 - **Word-Level Timing**: Generates start and end timestamps for every single word, enabling precise karaoke-style highlighting.
 - **Bilingual Workflow**: Supports both **Spanish ↔ English** processing. You can provide the original audio in either language.
 - **AI Lyric Translation**: Includes a built-in translation feature powered by Gemini 2.5 Flash to automatically generate the translated lyrics, saving you time.
+- **Vocabulary Learning**: After generation, the AI identifies key Spanish vocabulary from the lyrics. It provides English definitions, difficulty scores, and contextual examples in a clean table format. You can download this list as a **CSV** or **JSON** file for easy import into flashcard apps.
 - **Multi-Format Audio Upload**: Simple drag-and-drop interface for audio files, supporting `MP3`, `WAV`, `M4A`, `FLAC`, `AAC`, `OGG`, `OPUS`, and `3GP`.
 - **Proactive Audio Analysis**: Instantly checks the duration of your uploaded audio and warns you if it's over 10 minutes, helping to manage expectations for processing time.
 - **Live Status Updates**: A visual progress bar and dynamic status messages give you real-time feedback during the AI generation process.
-- **Flexible Export Options**: Download the generated data as individual `spanish_karaoke_data.json` and `english_karaoke_data.json` files, or as a single combined `karaoke_data.zip` archive.
+- **Flexible Export Options**: Download the generated data as individual `spanish_karaoke_data.json` and `english_karaoke_data.json` files, a combined `karaoke_data.zip` archive, or a `vocabulary.csv`/`vocabulary.json` list.
 - **Fully Responsive**: A clean and modern UI built with Tailwind CSS that works seamlessly on both desktop and mobile devices.
 
 ## 🚀 How It Works
@@ -29,12 +30,13 @@ The application operates entirely on the client-side, making direct calls to the
     c. The audio data and the prompt are sent to the multimodal **Gemini 2.5 Pro** model.
 4.  **Process**: The Gemini model performs a complex analysis of the audio to identify vocal sections, instrumental breaks, and the precise timing of each word in the original language. It then maps these exact timings to the translated words.
 5.  **Output**: The model returns a single JSON object containing two complete, synchronized data structures for both the Spanish and English lyrics.
-6.  **Display & Download**: The application parses this response, displays the formatted JSON in the UI, and makes it available for download.
+6.  **Vocabulary Extraction**: Immediately following a successful sync, the app makes a second, targeted call to the **Gemini 2.5 Flash** model. It sends the Spanish and English lyrics and asks the AI to act as a language tutor, extracting key vocabulary terms and returning them in a structured JSON format.
+7.  **Display & Download**: The application parses both responses, displays the formatted JSON for the karaoke data, shows the vocabulary list in a table, and makes all data available for download in multiple formats.
 
 ## 🛠️ Technology Stack
 
 - **Frontend**: React, TypeScript, Tailwind CSS
-- **AI Model**: Google Gemini 2.5 Pro (for audio synchronization) & Gemini 2.5 Flash (for translation)
+- **AI Model**: Google Gemini 2.5 Pro (for audio synchronization) & Gemini 2.5 Flash (for translation and vocabulary)
 - **Libraries**:
   - `@google/genai`: The official Google client library for the Gemini API.
   - `jszip`: For creating the `.zip` archive on the client side.
@@ -48,7 +50,7 @@ The application operates entirely on the client-side, making direct calls to the
 ├── App.tsx             # The main application component with all UI and state logic
 ├── services/
 │   └── geminiService.ts  # Handles all API calls to the Gemini model
-├── types.ts            # TypeScript type definitions for the karaoke data structures
+├── types.ts            # TypeScript type definitions for the data structures
 └── README.md           # This file
 ```
 
@@ -66,4 +68,4 @@ This project is designed to run in a browser-based development environment that 
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License.

@@ -31,3 +31,10 @@ export interface KaraokeApiResponse {
   spanish: KaraokeData;
   english: KaraokeData;
 }
+
+export interface VocabularyItem {
+  term: string;
+  definition: string;
+  difficulty: number;
+  example: string;
+}

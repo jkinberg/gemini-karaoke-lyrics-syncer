@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useRef } from 'react';
 import JSZip from 'jszip';
-import { generateKaraokeData, translateLyrics } from './services/geminiService';
-import type { KaraokeData, KaraokeApiResponse } from './types';
+import { generateKaraokeData, translateLyrics, generateVocabularyList } from './services/geminiService';
+import type { KaraokeData, KaraokeApiResponse, VocabularyItem } from './types';
 
 const placeholderSpanish = `[Estrofa 1]
 El sol se pone en el horizonte
@@ -318,6 +318,137 @@ const OutputDisplay: React.FC<OutputDisplayProps> = ({ title, data, filename }) 
   );
 };
 
+const DifficultyBar: React.FC<{ score: number }> = ({ score }) => {
+  const normalizedScore = Math.max(1, Math.min(10, score));
+  const hue = 120 - normalizedScore * 12; // 120 (green) to 0 (red)
+  const backgroundColor = `hsl(${hue}, 70%, 50%)`;
+
+  return (
+    <div className="w-24 bg-gray-600 rounded-full h-2.5" title={`Difficulty: ${score}/10`}>
+      <div
+        className="h-2.5 rounded-full"
+        style={{ width: `${normalizedScore * 10}%`, backgroundColor }}
+      ></div>
+    </div>
+  );
+};
+
+
+const VocabularyDisplay: React.FC<{ vocabList: VocabularyItem[] | null, isLoading: boolean }> = ({ vocabList, isLoading }) => {
+  const handleDownloadCsv = () => {
+    if (!vocabList || vocabList.length === 0) return;
+
+    const headers = ['Term', 'Definition', 'Difficulty', 'Example'];
+    const csvRows = [headers.join(',')];
+
+    const escapeCsvCell = (cell: string) => `"${cell.replace(/"/g, '""')}"`;
+
+    vocabList.forEach(item => {
+      const row = [
+        escapeCsvCell(item.term),
+        escapeCsvCell(item.definition),
+        item.difficulty.toString(),
+        escapeCsvCell(item.example)
+      ];
+      csvRows.push(row.join(','));
+    });
+
+    const csvString = csvRows.join('\n');
+    const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'vocabulary.csv';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+  
+  const handleDownloadJson = () => {
+    if (!vocabList || vocabList.length === 0) return;
+
+    const jsonString = JSON.stringify(vocabList, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'vocabulary.json';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
+  return (
+    <div className="mt-8 border-t border-gray-700 pt-8">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-4">
+        <h2 className="text-2xl font-bold text-center sm:text-left">Key Vocabulary Learnings</h2>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={handleDownloadJson}
+            disabled={!vocabList || vocabList.length === 0}
+            className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md transition duration-300 disabled:bg-gray-700 disabled:cursor-not-allowed disabled:text-gray-400"
+          >
+            <DownloadIcon />
+            <span className="ml-2">Download as JSON</span>
+          </button>
+          <button
+            onClick={handleDownloadCsv}
+            disabled={!vocabList || vocabList.length === 0}
+            className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-secondary hover:bg-emerald-600 rounded-lg shadow-md transition duration-300 disabled:bg-gray-700 disabled:cursor-not-allowed disabled:text-gray-400"
+          >
+            <DownloadIcon />
+            <span className="ml-2">Download as CSV</span>
+          </button>
+        </div>
+      </div>
+
+      {isLoading && (
+        <div className="text-center p-8 bg-surface rounded-lg">
+          <p className="text-textSecondary animate-pulse">Generating vocabulary list...</p>
+        </div>
+      )}
+
+      {!isLoading && vocabList && vocabList.length > 0 && (
+         <div className="bg-surface rounded-lg border border-gray-700 overflow-x-auto">
+          <table className="w-full text-sm text-left text-textSecondary">
+            <thead className="text-xs text-textPrimary uppercase bg-gray-800">
+              <tr>
+                <th scope="col" className="px-6 py-3">Spanish Term</th>
+                <th scope="col" className="px-6 py-3">English Definition</th>
+                <th scope="col" className="px-6 py-3">Example from Lyrics</th>
+                <th scope="col" className="px-6 py-3">Difficulty</th>
+              </tr>
+            </thead>
+            <tbody>
+              {vocabList.map((item, index) => (
+                <tr key={index} className="bg-surface border-b border-gray-700 hover:bg-gray-800/50">
+                  <th scope="row" className="px-6 py-4 font-medium text-textPrimary whitespace-nowrap">
+                    {item.term}
+                  </th>
+                  <td className="px-6 py-4">{item.definition}</td>
+                  <td className="px-6 py-4 italic">"{item.example}"</td>
+                  <td className="px-6 py-4">
+                    <DifficultyBar score={item.difficulty} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {!isLoading && (!vocabList || vocabList.length === 0) && (
+        <div className="text-center p-8 bg-surface rounded-lg">
+          <p className="text-textSecondary">Vocabulary list will appear here after generation.</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+
 interface ProgressBarProps {
   progress: number;
 }
@@ -338,8 +469,10 @@ const App: React.FC = () => {
   const [audioFile, setAudioFile] = useState<File | null>(null);
   const [audioDuration, setAudioDuration] = useState<number | null>(null);
   const [karaokeData, setKaraokeData] = useState<KaraokeApiResponse | null>(null);
+  const [vocabularyList, setVocabularyList] = useState<VocabularyItem[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isTranslating, setIsTranslating] = useState<boolean>(false);
+  const [isGeneratingVocab, setIsGeneratingVocab] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [progress, setProgress] = useState<number>(0);
   const [statusMessage, setStatusMessage] = useState<string>('');
@@ -388,8 +521,8 @@ const App: React.FC = () => {
       return;
     }
     
-    // Immediately clear previous results and errors for a clean slate
     setKaraokeData(null);
+    setVocabularyList(null);
     setError(null);
     setIsLoading(true);
     setProgress(0);
@@ -410,9 +543,6 @@ const App: React.FC = () => {
     }, 400);
 
     const sanitizeLyrics = (text: string) => {
-      // This regex removes characters that are not Unicode letters, numbers,
-      // whitespace, or common punctuation used in lyrics ([ ] . , ! ? ' " -).
-      // It helps prevent errors from special characters like ♪.
       return text.replace(/[^\p{L}\p{N}\s.,!?'"()[\]-]/gu, '');
     };
     
@@ -427,10 +557,24 @@ const App: React.FC = () => {
       const result = await generateKaraokeData(audioFile, originalLyrics, translatedLyrics, languageFlow, setStatusMessage);
       if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
       setProgress(100);
+      setKaraokeData(result);
+      
+      // Now, generate vocabulary
+      setIsGeneratingVocab(true);
+      try {
+        const vocab = await generateVocabularyList(spanishLyrics, englishLyrics);
+        setVocabularyList(vocab);
+      } catch (vocabErr) {
+        console.error("Could not generate vocabulary list:", vocabErr);
+        // Do not set main error, just log it. The primary feature still succeeded.
+      } finally {
+        setIsGeneratingVocab(false);
+      }
+
       setTimeout(() => {
-        setKaraokeData(result);
         setIsLoading(false);
       }, 500);
+
     } catch (err: unknown) {
       if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
       if (err instanceof Error) {
@@ -473,8 +617,10 @@ const App: React.FC = () => {
     setAudioFile(null);
     setAudioDuration(null);
     setKaraokeData(null);
+    setVocabularyList(null);
     setIsLoading(false);
     setIsTranslating(false);
+    setIsGeneratingVocab(false);
     setError(null);
     setProgress(0);
     setStatusMessage('');
@@ -595,6 +741,7 @@ const App: React.FC = () => {
         )}
 
         {karaokeData && !isLoading && (
+          <>
             <div className="mt-8 text-center border-t border-gray-700 pt-8">
                 <button
                     onClick={handleDownloadAll}
@@ -604,20 +751,23 @@ const App: React.FC = () => {
                     <span className="ml-2">Download All (.zip)</span>
                 </button>
             </div>
-        )}
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <OutputDisplay
-            title="spanish_karaoke_data.json"
-            filename="spanish_karaoke_data.json"
-            data={karaokeData?.spanish ?? null}
-          />
-          <OutputDisplay
-            title="english_karaoke_data.json"
-            filename="english_karaoke_data.json"
-            data={karaokeData?.english ?? null}
-          />
-        </div>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+              <OutputDisplay
+                title="spanish_karaoke_data.json"
+                filename="spanish_karaoke_data.json"
+                data={karaokeData?.spanish ?? null}
+              />
+              <OutputDisplay
+                title="english_karaoke_data.json"
+                filename="english_karaoke_data.json"
+                data={karaokeData?.english ?? null}
+              />
+            </div>
+
+            <VocabularyDisplay vocabList={vocabularyList} isLoading={isGeneratingVocab} />
+          </>
+        )}
       </main>
     </div>
   );
