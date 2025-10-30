@@ -2,9 +2,9 @@
 
 Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini model to automatically generate perfectly synchronized, word-level karaoke lyric files from an audio track and raw text lyrics. It supports both Spanish and English, provides AI-powered translation, and exports the data in a clean, developer-friendly JSON format. The app also features an interactive preview player, allowing you to watch the synchronized lyrics in real-time, and a language-learning module that extracts key vocabulary from the lyrics.
 
-![Main Application Interface](https://storage.googleapis.com/aistudio-hosting/project-assets/karaoke-syncer-ai/screenshot-1.png)
-![Karaoke Preview and JSON Output](https://storage.googleapis.com/aistudio-hosting/project-assets/karaoke-syncer-ai/screenshot-2.png)
-![Vocabulary Learning Feature](https://storage.googleapis.com/aistudio-hosting/project-assets/karaoke-syncer-ai/screenshot-3.png)
+![Main Application Interface](https://storage.googleapis.com/aistudio-samples/project-assets/karaoke-syncer-ai/screenshot-1.png)
+![Karaoke Preview and JSON Output](https://storage.googleapis.com/aistudio-samples/project-assets/karaoke-syncer-ai/screenshot-2.png)
+![Vocabulary Learning Feature](https://storage.googleapis.com/aistudio-samples/project-assets/karaoke-syncer-ai/screenshot-3.png)
 
 ## ✨ Features
 
