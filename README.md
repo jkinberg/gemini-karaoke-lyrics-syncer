@@ -2,13 +2,14 @@
 
 # Karaoke Syncer AI
 
-Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini model to automatically generate perfectly synchronized, word-level karaoke lyric files from an audio track and raw text lyrics. It supports both Spanish and English, provides AI-powered translation, and exports the data in a clean, developer-friendly JSON format. It also includes a language-learning feature that extracts key vocabulary from the lyrics to help users learn Spanish.
+Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini model to automatically generate perfectly synchronized, word-level karaoke lyric files from an audio track and raw text lyrics. It supports both Spanish and English, provides AI-powered translation, and exports the data in a clean, developer-friendly JSON format. The app also features an interactive preview player, allowing you to watch the synchronized lyrics in real-time, and a language-learning module that extracts key vocabulary from the lyrics.
 
 ![Karaoke Syncer AI Screenshot](./assets/karaoke-syncer-demo.png)
 
 ## ✨ Features
 
 - **AI-Powered Synchronization**: Utilizes the Gemini 2.5 Pro model to analyze an audio file and align lyrics with millisecond precision.
+- **Interactive Karaoke Preview**: Instantly verify the synchronization with a built-in player. Watch lyrics highlight word-by-word in real-time, side-by-side in both languages, complete with audio controls and clickable line-seeking to check timing accuracy.
 - **Word-Level Timing**: Generates start and end timestamps for every single word, enabling precise karaoke-style highlighting.
 - **Bilingual Workflow**: Supports both **Spanish ↔ English** processing. You can provide the original audio in either language.
 - **AI Lyric Translation**: Includes a built-in translation feature powered by Gemini 2.5 Flash to automatically generate the translated lyrics, saving you time.
@@ -32,7 +33,7 @@ The application operates entirely on the client-side, making direct calls to the
 4.  **Process**: The Gemini model performs a complex analysis of the audio to identify vocal sections, instrumental breaks, and the precise timing of each word in the original language. It then maps these exact timings to the translated words.
 5.  **Output**: The model returns a single JSON object containing two complete, synchronized data structures for both the Spanish and English lyrics.
 6.  **Vocabulary Extraction**: Immediately following a successful sync, the app makes a second, targeted call to the **Gemini 2.5 Flash** model. It sends the Spanish and English lyrics and asks the AI to act as a language tutor, extracting key vocabulary terms and returning them in a structured JSON format.
-7.  **Display & Download**: The application parses both responses, displays the formatted JSON for the karaoke data, shows the vocabulary list in a table, and makes all generated files available for individual download or as a single combined zip archive.
+7.  **Preview, Display & Download**: The application parses both responses. Users can immediately test the result in the **interactive preview player**. The raw JSON data is also displayed, the vocabulary list is shown in a table, and all generated files are made available for individual download or as a single combined zip archive.
 
 ## 🛠️ Technology Stack
 

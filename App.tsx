@@ -1,7 +1,7 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import JSZip from 'jszip';
 import { generateKaraokeData, translateLyrics, generateVocabularyList } from './services/geminiService';
-import type { KaraokeData, KaraokeApiResponse, VocabularyItem } from './types';
+import type { KaraokeData, KaraokeApiResponse, VocabularyItem, KaraokeSegment } from './types';
 
 const placeholderSpanish = `[Estrofa 1]
 El sol se pone en el horizonte
@@ -88,8 +88,27 @@ const ClearIcon: React.FC = () => (
   </svg>
 );
 
+const PlayIcon: React.FC = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+    </svg>
+);
+
+const PauseIcon: React.FC = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+    </svg>
+);
+
+const ChevronDownIcon: React.FC<{className?: string}> = ({className}) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={`h-6 w-6 ${className}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+);
+
+
 const formatDuration = (seconds: number | null): string => {
-    if (seconds === null || isNaN(seconds)) return '';
+    if (seconds === null || isNaN(seconds)) return '0:00';
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
@@ -517,6 +536,187 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => (
   </div>
 );
 
+// --- KARAOKE PREVIEW COMPONENTS ---
+
+interface LyricPanelProps {
+  segments: KaraokeSegment[];
+  currentTimeMs: number;
+  language: string;
+  onSeekTo: (timeMs: number) => void;
+}
+
+const LyricPanel: React.FC<LyricPanelProps> = ({ segments, currentTimeMs, language, onSeekTo }) => {
+  const activeSegmentRef = useRef<HTMLDivElement>(null);
+
+  const activeSegmentIndex = segments.findIndex(
+    (s) => currentTimeMs >= s.startTimeMs && currentTimeMs < s.endTimeMs
+  );
+
+  useEffect(() => {
+    if (activeSegmentRef.current) {
+      activeSegmentRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  }, [activeSegmentIndex]);
+
+  return (
+    <div className="h-64 overflow-y-auto p-4 rounded-lg bg-black/30 scroll-smooth">
+      <h3 className="text-lg font-bold text-center mb-4 sticky top-0 bg-surface/80 backdrop-blur-sm py-2">{language}</h3>
+      <div className="flex flex-col gap-4 text-center">
+        {segments.map((segment, index) => {
+          const isActive = index === activeSegmentIndex;
+          const isPast = index < activeSegmentIndex;
+
+          let lineContent;
+          if (segment.type === 'INSTRUMENTAL') {
+              lineContent = <span className="italic">♪ {segment.cueText} ♪</span>;
+          } else if (segment.words) {
+              lineContent = segment.words.map((word, wordIndex) => {
+                  const isCurrentWord = isActive && currentTimeMs >= word.startTimeMs && currentTimeMs < word.endTimeMs;
+                  const isPastWord = isActive && currentTimeMs >= word.endTimeMs;
+                  const wordClass = isCurrentWord
+                      ? "text-emerald-400 font-bold"
+                      : isPastWord
+                      ? "text-textPrimary"
+                      : "text-textSecondary";
+                  return <span key={wordIndex} className={`transition-colors duration-100 ${wordClass}`}>{word.word} </span>;
+              });
+          } else {
+              lineContent = <span>{segment.text}</span>;
+          }
+
+          return (
+            <div
+              key={segment.segmentIndex}
+              ref={isActive ? activeSegmentRef : null}
+              onClick={() => onSeekTo(segment.startTimeMs)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onSeekTo(segment.startTimeMs); }}
+              className={`transition-all duration-300 ease-in-out p-2 rounded-md cursor-pointer hover:bg-white/10 ${isActive ? 'text-textPrimary font-bold text-2xl' : isPast ? 'text-gray-600 text-lg' : 'text-textSecondary text-lg'}`}
+            >
+              {lineContent}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+interface KaraokePreviewProps {
+  karaokeData: KaraokeApiResponse;
+  audioFile: File;
+}
+
+const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const audioRef = useRef<HTMLAudioElement>(null);
+    const animationFrameRef = useRef<number | null>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0); // in seconds
+    const [duration, setDuration] = useState(0);
+
+    useEffect(() => {
+        const audio = audioRef.current;
+        if (!audio || !audioFile) return;
+
+        const objectUrl = URL.createObjectURL(audioFile);
+        audio.src = objectUrl;
+
+        const handleLoadedMetadata = () => setDuration(audio.duration);
+        const handleEnded = () => setIsPlaying(false);
+
+        audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+        audio.addEventListener('ended', handleEnded);
+
+        return () => {
+            audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
+            audio.removeEventListener('ended', handleEnded);
+            URL.revokeObjectURL(objectUrl);
+            if (animationFrameRef.current) {
+                cancelAnimationFrame(animationFrameRef.current);
+            }
+        };
+    }, [audioFile]);
+
+    const animate = useCallback(() => {
+        if (audioRef.current) {
+            setCurrentTime(audioRef.current.currentTime);
+            animationFrameRef.current = requestAnimationFrame(animate);
+        }
+    }, []);
+
+    const togglePlayPause = () => {
+        const audio = audioRef.current;
+        if (!audio) return;
+
+        if (isPlaying) {
+            audio.pause();
+            if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+        } else {
+            audio.play();
+            animationFrameRef.current = requestAnimationFrame(animate);
+        }
+        setIsPlaying(!isPlaying);
+    };
+    
+    const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const newTime = parseFloat(e.target.value);
+      if (audioRef.current) {
+        audioRef.current.currentTime = newTime;
+        setCurrentTime(newTime);
+      }
+    };
+    
+    const handleSeekTo = (timeMs: number) => {
+        const newTime = timeMs / 1000;
+        if (audioRef.current) {
+            audioRef.current.currentTime = newTime;
+            setCurrentTime(newTime);
+        }
+    };
+
+    return (
+        <div className="mt-8 border-t border-gray-700 pt-8">
+            <audio ref={audioRef} />
+            <div className="bg-surface rounded-lg border border-gray-700">
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="w-full flex justify-between items-center p-4 bg-gray-800 hover:bg-gray-800/80 transition-colors"
+                >
+                    <h2 className="text-2xl font-bold">Preview Synchronization</h2>
+                    <ChevronDownIcon className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isOpen && (
+                    <div className="p-4 space-y-4">
+                        <div className="flex items-center gap-4">
+                            <button onClick={togglePlayPause} className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                                {isPlaying ? <PauseIcon /> : <PlayIcon />}
+                            </button>
+                            <span className="text-sm font-mono">{formatDuration(currentTime)}</span>
+                            <input
+                                type="range"
+                                min="0"
+                                max={duration || 0}
+                                value={currentTime}
+                                onChange={handleSeek}
+                                className="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                            />
+                            <span className="text-sm font-mono">{formatDuration(duration)}</span>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <LyricPanel segments={karaokeData.spanish.segments} currentTimeMs={currentTime * 1000} language="Spanish" onSeekTo={handleSeekTo} />
+                            <LyricPanel segments={karaokeData.english.segments} currentTimeMs={currentTime * 1000} language="English" onSeekTo={handleSeekTo} />
+                        </div>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
 
 const App: React.FC = () => {
   const [spanishLyrics, setSpanishLyrics] = useState<string>('');
@@ -589,7 +789,7 @@ const App: React.FC = () => {
     progressIntervalRef.current = window.setInterval(() => {
       setProgress(prev => {
         if (prev >= 95) {
-          if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
+          // The interval will be cleared by other logic when isLoading becomes false.
           return 95;
         }
         if (prev < 60) return prev + (Math.random() * 5 + 1);
@@ -847,7 +1047,7 @@ const App: React.FC = () => {
             </div>
         )}
 
-        {karaokeData && !isLoading && (
+        {karaokeData && audioFile && !isLoading && (
           <>
             <div className="mt-8 text-center border-t border-gray-700 pt-8">
                 <button
@@ -858,6 +1058,8 @@ const App: React.FC = () => {
                     <span className="ml-2">Download All (.zip)</span>
                 </button>
             </div>
+            
+            <KaraokePreview karaokeData={karaokeData} audioFile={audioFile} />
 
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
               <OutputDisplay
