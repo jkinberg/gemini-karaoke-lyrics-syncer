@@ -241,6 +241,7 @@ Your task is to analyze a set of song lyrics and extract key vocabulary words th
     - \`definition\`: A concise and accurate English definition of the Spanish term.
     - \`difficulty\`: An integer score from 1 (very common, beginner) to 10 (rare, advanced) representing the word's difficulty for an English speaker.
     - \`example\`: An object containing the full, original line from the Spanish lyrics where the word appears (\`spanish\`) and its corresponding English translation (\`english\`).
+    - \`highlight\`: An object containing the exact Spanish word as it appears in the example sentence (\`spanish\`), and its corresponding English translated word (\`english\`). This is crucial for accurate highlighting.
 
 **Output Format:**
 You MUST return a single, minified JSON object that strictly follows the provided schema. The output should be an array of vocabulary item objects.
@@ -284,8 +285,23 @@ Do not include any other text, explanations, or markdown formatting.
           },
           required: ['spanish', 'english']
         },
+        highlight: {
+          type: Type.OBJECT,
+          description: 'An object containing the exact words from the examples for highlighting.',
+          properties: {
+            spanish: {
+              type: Type.STRING,
+              description: 'The exact Spanish word as it appears in the example sentence.'
+            },
+            english: {
+              type: Type.STRING,
+              description: 'The corresponding English word from the translated example.'
+            }
+          },
+          required: ['spanish', 'english']
+        },
       },
-      required: ['term', 'definition', 'difficulty', 'example'],
+      required: ['term', 'definition', 'difficulty', 'example', 'highlight'],
     },
   };
 

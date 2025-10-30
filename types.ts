@@ -43,4 +43,8 @@ export interface VocabularyItem {
     spanish: string;
     english: string;
   };
+  highlight: {
+    spanish: string;
+    english: string;
+  };
 }

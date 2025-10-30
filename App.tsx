@@ -361,6 +361,14 @@ const VocabularyDisplay: React.FC<{ vocabList: VocabularyItem[] | null, isLoadin
     const csvRows = [headers.join(',')];
 
     const escapeCsvCell = (cell: string) => `"${cell.replace(/"/g, '""')}"`;
+    
+    const transformTextForCsvHighlight = (text: string = '', highlight: string = ''): string => {
+        if (!highlight.trim() || !text.toLowerCase().includes(highlight.toLowerCase())) {
+            return text;
+        }
+        const regex = new RegExp(`(${highlight})`, 'gi');
+        return text.replace(regex, `**$1**`);
+    };
 
     vocabList.forEach(item => {
       const row = [
@@ -368,8 +376,8 @@ const VocabularyDisplay: React.FC<{ vocabList: VocabularyItem[] | null, isLoadin
         escapeCsvCell(item.term.english),
         escapeCsvCell(item.definition),
         item.difficulty.toString(),
-        escapeCsvCell(item.example.spanish),
-        escapeCsvCell(item.example.english)
+        escapeCsvCell(transformTextForCsvHighlight(item.example.spanish, item.highlight.spanish)),
+        escapeCsvCell(transformTextForCsvHighlight(item.example.english, item.highlight.english))
       ];
       csvRows.push(row.join(','));
     });
@@ -389,7 +397,30 @@ const VocabularyDisplay: React.FC<{ vocabList: VocabularyItem[] | null, isLoadin
   const handleDownloadJson = () => {
     if (!vocabList || vocabList.length === 0) return;
 
-    const jsonString = JSON.stringify(vocabList, null, 2);
+    const transformTextForJsonHighlight = (text: string = '', highlight: string = ''): { text: string; highlight: boolean }[] => {
+        if (!highlight.trim() || !text.toLowerCase().includes(highlight.toLowerCase())) {
+            return [{ text, highlight: false }];
+        }
+        const regex = new RegExp(`(${highlight})`, 'gi');
+        const parts = text.split(regex);
+        
+        return parts.filter(part => part).map((part) => ({
+            text: part,
+            highlight: part.toLowerCase() === highlight.toLowerCase(),
+        }));
+    };
+
+    const exportableData = vocabList.map(({ term, definition, difficulty, example, highlight }) => ({
+        term,
+        definition,
+        difficulty,
+        example: {
+            spanish: transformTextForJsonHighlight(example.spanish, highlight.spanish),
+            english: transformTextForJsonHighlight(example.english, highlight.english),
+        },
+    }));
+
+    const jsonString = JSON.stringify(exportableData, null, 2);
     const blob = new Blob([jsonString], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -451,8 +482,8 @@ const VocabularyDisplay: React.FC<{ vocabList: VocabularyItem[] | null, isLoadin
                   </th>
                   <td className="px-6 py-4">{item.definition}</td>
                   <td className="px-6 py-4 italic text-textPrimary">
-                    <span className="block">"<HighlightedText text={item.example.spanish} highlight={item.term.spanish} />"</span>
-                    <span className="block text-gray-400 mt-1">"<HighlightedText text={item.example.english} highlight={item.term.english} />"</span>
+                    <span className="block">"<HighlightedText text={item.example.spanish} highlight={item.highlight.spanish} />"</span>
+                    <span className="block text-gray-400 mt-1">"<HighlightedText text={item.example.english} highlight={item.highlight.english} />"</span>
                   </td>
                   <td className="px-6 py-4">
                     <DifficultyBar score={item.difficulty} />
@@ -624,17 +655,68 @@ const App: React.FC = () => {
       JSON.stringify(karaokeData.english, null, 2)
     );
 
+    if (vocabularyList && vocabularyList.length > 0) {
+      // Logic for vocabulary.json
+      const transformTextForJsonHighlight = (text: string = '', highlight: string = ''): { text: string; highlight: boolean }[] => {
+          if (!highlight.trim() || !text.toLowerCase().includes(highlight.toLowerCase())) {
+              return [{ text, highlight: false }];
+          }
+          const regex = new RegExp(`(${highlight})`, 'gi');
+          const parts = text.split(regex);
+          return parts.filter(part => part).map((part) => ({
+              text: part,
+              highlight: part.toLowerCase() === highlight.toLowerCase(),
+          }));
+      };
+      const exportableJsonData = vocabularyList.map(({ term, definition, difficulty, example, highlight }) => ({
+          term,
+          definition,
+          difficulty,
+          example: {
+              spanish: transformTextForJsonHighlight(example.spanish, highlight.spanish),
+              english: transformTextForJsonHighlight(example.english, highlight.english),
+          },
+      }));
+      const jsonString = JSON.stringify(exportableJsonData, null, 2);
+      zip.file("vocabulary.json", jsonString);
+
+      // Logic for vocabulary.csv
+      const headers = ['Spanish Term', 'English Term', 'Definition', 'Difficulty', 'Spanish Example', 'English Example'];
+      const csvRows = [headers.join(',')];
+      const escapeCsvCell = (cell: string) => `"${cell.replace(/"/g, '""')}"`;
+      const transformTextForCsvHighlight = (text: string = '', highlight: string = ''): string => {
+          if (!highlight.trim() || !text.toLowerCase().includes(highlight.toLowerCase())) {
+              return text;
+          }
+          const regex = new RegExp(`(${highlight})`, 'gi');
+          return text.replace(regex, `**$1**`);
+      };
+      vocabularyList.forEach(item => {
+        const row = [
+          escapeCsvCell(item.term.spanish),
+          escapeCsvCell(item.term.english),
+          escapeCsvCell(item.definition),
+          item.difficulty.toString(),
+          escapeCsvCell(transformTextForCsvHighlight(item.example.spanish, item.highlight.spanish)),
+          escapeCsvCell(transformTextForCsvHighlight(item.example.english, item.highlight.english))
+        ];
+        csvRows.push(row.join(','));
+      });
+      const csvString = csvRows.join('\n');
+      zip.file("vocabulary.csv", csvString);
+    }
+
     zip.generateAsync({ type: "blob" }).then((content) => {
       const url = URL.createObjectURL(content);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'karaoke_data.zip';
+      link.download = 'karaoke_and_vocabulary_data.zip';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
     });
-  }, [karaokeData]);
+  }, [karaokeData, vocabularyList]);
 
   const handleClearAll = useCallback(() => {
     setSpanishLyrics('');
