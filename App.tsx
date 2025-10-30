@@ -571,20 +571,53 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ segments, currentTimeMs, langua
 
           let lineContent;
           if (segment.type === 'INSTRUMENTAL') {
-              lineContent = <span className="italic">♪ {segment.cueText} ♪</span>;
-          } else if (segment.words) {
-              lineContent = segment.words.map((word, wordIndex) => {
-                  const isCurrentWord = isActive && currentTimeMs >= word.startTimeMs && currentTimeMs < word.endTimeMs;
-                  const isPastWord = isActive && currentTimeMs >= word.endTimeMs;
-                  const wordClass = isCurrentWord
-                      ? "text-emerald-400 font-bold"
-                      : isPastWord
-                      ? "text-textPrimary"
-                      : "text-textSecondary";
-                  return <span key={wordIndex} className={`transition-colors duration-100 ${wordClass}`}>{word.word} </span>;
+            lineContent = <span className="italic">♪ {segment.cueText} ♪</span>;
+          } else if (segment.text && segment.words && segment.words.length > 0) {
+            if (isActive) {
+              // Refactored logic for active, timed lines
+              const normalize = (s: string) => s.replace(/[.,!?'"¡¿]/g, "").toLowerCase();
+              const lineParts = segment.text.split(/(\s+)/);
+              let timedWordIdx = 0;
+
+              lineContent = lineParts.map((part, partIndex) => {
+                if (!part.trim()) {
+                  return <React.Fragment key={`space-${partIndex}`}>{part}</React.Fragment>;
+                }
+                
+                if (timedWordIdx < segment.words.length) {
+                  const timedWord = segment.words[timedWordIdx];
+                  if (normalize(part) === normalize(timedWord.word)) {
+                    const isCurrentWord = currentTimeMs >= timedWord.startTimeMs && currentTimeMs < timedWord.endTimeMs;
+                    const isPastWord = currentTimeMs >= timedWord.endTimeMs;
+                    const wordClass = isCurrentWord
+                        ? "text-emerald-400 font-bold"
+                        : isPastWord
+                        ? "text-textPrimary"
+                        : "text-textSecondary";
+                    
+                    timedWordIdx++;
+                    return (
+                        <span key={`word-${partIndex}`} className={`transition-colors duration-100 ${wordClass}`}>
+                            {part}
+                        </span>
+                    );
+                  }
+                }
+                
+                // For unmatched parts within an active line, treat them as upcoming.
+                return (
+                    <span key={`unmatched-${partIndex}`} className="transition-colors duration-100 text-textSecondary">
+                        {part}
+                    </span>
+                );
               });
-          } else {
+            } else {
+              // Inactive timed line, just show the text.
               lineContent = <span>{segment.text}</span>;
+            }
+          } else {
+            // Fallback for any other case (e.g., lyric line without text or words)
+            lineContent = <span>{segment.text || ''}</span>;
           }
 
           return (
