@@ -1,5 +1,5 @@
 import { GoogleGenAI, Type } from "@google/genai";
-import { KaraokeApiResponse, VocabularyItem } from '../types';
+import { KaraokeApiResponse, KaraokeData, VocabularyItem } from '../types';
 
 const fileToGenerativePart = async (file: File) => {
   const base64EncodedDataPromise = new Promise<string>((resolve, reject) => {
@@ -20,77 +20,145 @@ const fileToGenerativePart = async (file: File) => {
   };
 };
 
+const retryWithBackoff = async <T>(
+  fn: () => Promise<T>,
+  retries = 3,
+  initialDelay = 1000,
+  onRetry?: (attempt: number, error: Error) => void
+): Promise<T> => {
+  let lastError: Error | unknown;
 
-const buildPrompt = (originalLyrics: string, translatedLyrics: string, languageFlow: 'es-en' | 'en-es'): string => {
-  const isEsToEn = languageFlow === 'es-en';
-  const originalLangName = isEsToEn ? 'Spanish' : 'English';
-  const translatedLangName = isEsToEn ? 'English' : 'Spanish';
-  
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      lastError = error;
+
+      // Don't retry on our custom, non-recoverable errors.
+      if (error instanceof Error && (
+          error.message.includes("timed out") || 
+          error.message.includes("JSON format") ||
+          error.message.includes("empty response")
+      )) {
+        throw error;
+      }
+
+      if (attempt < retries) {
+        if (onRetry) {
+          onRetry(attempt, error as Error);
+        }
+        // Exponential backoff with jitter
+        const delay = initialDelay * 2 ** (attempt - 1) + Math.random() * 1000;
+        await new Promise(resolve => setTimeout(resolve, delay));
+      }
+    }
+  }
+  throw lastError;
+};
+
+
+const singleLanguageSchema = {
+    type: Type.OBJECT,
+    properties: {
+        metadata: {
+            type: Type.OBJECT,
+            properties: {
+                title: { type: Type.STRING },
+                artist: { type: Type.STRING },
+                durationMs: { type: Type.INTEGER },
+                language: { type: Type.STRING },
+                version: { type: Type.STRING }
+            },
+            required: ["title", "artist", "durationMs", "language", "version"]
+        },
+        segments: {
+            type: Type.ARRAY,
+            items: {
+                type: Type.OBJECT,
+                properties: {
+                    type: { type: Type.STRING },
+                    startTimeMs: { type: Type.INTEGER },
+                    endTimeMs: { type: Type.INTEGER },
+                    cueText: { type: Type.STRING },
+                    text: { type: Type.STRING },
+                    segmentIndex: { type: Type.INTEGER },
+                    words: {
+                        type: Type.ARRAY,
+                        items: {
+                            type: Type.OBJECT,
+                            properties: {
+                                word: { type: Type.STRING },
+                                startTimeMs: { type: Type.INTEGER },
+                                endTimeMs: { type: Type.INTEGER }
+                            },
+                            required: ["word", "startTimeMs", "endTimeMs"]
+                        }
+                    }
+                },
+                required: ["type", "startTimeMs", "endTimeMs", "segmentIndex"]
+            }
+        }
+    },
+    required: ["metadata", "segments"]
+};
+
+
+const buildSingleLanguagePrompt = (lyrics: string, langName: string): string => {
   return `
-You are a professional Audio Alignment and Translation Engine. Your task is to generate a pair of synchronized karaoke lyric data files (${originalLangName} and ${translatedLangName}) based on an audio file and provided lyrics.
-
-**Constraint:** Both generated files MUST use the exact same temporal data (startTimeMs and endTimeMs) derived from the ${originalLangName} vocal track in the provided audio. The ${translatedLangName} translation will use the timing of the ${originalLangName} words they correspond to.
+You are a professional Audio Alignment Engine. Your task is to generate a single, highly accurate, synchronized karaoke lyric data file based on an audio file and provided lyrics.
 
 **Input Data:**
 - Audio File: [Provided in the request]
-- Raw ${originalLangName} Lyrics (Original):
+- Raw ${langName} Lyrics:
   ---
-  ${originalLyrics}
-  ---
-- Raw ${translatedLangName} Lyrics (Translation):
-  ---
-  ${translatedLyrics}
+  ${lyrics}
   ---
 
 **Task Instructions:**
 
-1.  **Primary Alignment (${originalLangName}):** Analyze the provided audio and align the ${originalLangName} lyrics to the vocal track with millisecond precision (all time values must be integers).
-2.  **Segment the Song:** Segment the entire song into a \`segments\` array, identifying every portion as either "LYRIC" or "INSTRUMENTAL" based on the audio.
-    - For LYRIC segments: Include word-level timing for every word, preserving natural gaps based on the audio.
-    - For INSTRUMENTAL segments: Create instrumental breaks (like an intro, outro, or solo) based on the audio and provide a descriptive ${originalLangName} \`cueText\`.
-3.  **Synchronize (${translatedLangName}):** Generate the ${translatedLangName} file by performing a one-to-one word substitution, strictly using the EXACT \`startTimeMs\` and \`endTimeMs\` values determined in the ${originalLangName} alignment from the audio.
-    - For LYRIC segments: Substitute the ${originalLangName} \`word\` and \`text\` fields with the ${translatedLangName} translations.
-    - For INSTRUMENTAL segments: Substitute the ${originalLangName} \`cueText\` with an appropriate ${translatedLangName} translation.
+1.  **Analyze Audio:** Deeply analyze the provided audio to identify vocal melodies, rhythms, and pauses.
+2.  **Precise Alignment:** Align the provided ${langName} lyrics to the vocal track with millisecond precision. Every word must have an accurate \`startTimeMs\` and \`endTimeMs\`.
+3.  **Segment the Song:** Segment the entire song into a \`segments\` array.
+    - Identify every portion as either "LYRIC" or "INSTRUMENTAL".
+    - For "LYRIC" segments: Include word-level timing for every single word.
+    - For "INSTRUMENTAL" segments: Create instrumental breaks (e.g., intro, solo) and provide a descriptive \`cueText\` in ${langName}.
+4.  **Extract Metadata:** Determine the song's title and artist from the audio if possible, and calculate the total duration in milliseconds.
 
 **Output Format:**
-
-You MUST return a single, minified JSON object with two top-level keys: "spanish" and "english". Each key should contain a JSON object that strictly follows this schema:
-
-\`\`\`json
-{
-  "metadata": {
-    "title": "Song Title",
-    "artist": "Artist Name",
-    "durationMs": 180000,
-    "language": "es-ES" or "en-US",
-    "version": "1.1"
-  },
-  "segments": [
-    {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 0,
-      "endTimeMs": 5000,
-      "cueText": "Intro",
-      "segmentIndex": 1
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 5500,
-      "endTimeMs": 9900,
-      "text": "This is the first phrase",
-      "segmentIndex": 2,
-      "words": [
-        { "word": "This", "startTimeMs": 5500, "endTimeMs": 5900 },
-        { "word": "is", "startTimeMs": 6100, "endTimeMs": 6450 }
-      ]
-    }
-  ]
-}
-\`\`\`
-
-Do not include any other text, explanations, or markdown formatting in your response. Only the single JSON object is allowed.
+You MUST return a single, minified JSON object that strictly follows the provided schema. Do not include any other text, explanations, or markdown formatting.
 `;
 };
+
+const buildTranslationAlignmentPrompt = (timedOriginalData: KaraokeData, translatedLyrics: string, originalLangName: string, translatedLangName: string): string => {
+  return `
+You are a precise text-transformation engine. Your task is to create a translated karaoke data file by mapping translated lyrics onto an existing, perfectly timed data structure.
+
+**Constraint:** You MUST use the exact same temporal data (\`startTimeMs\`, \`endTimeMs\`, and segment structure) from the provided "Original Timed Data". Do NOT alter any timing values.
+
+**Input Data:**
+
+1.  **Original Timed Data (${originalLangName} JSON):**
+    \`\`\`json
+    ${JSON.stringify(timedOriginalData, null, 2)}
+    \`\`\`
+
+2.  **Raw Translated Lyrics (${translatedLangName} Text):**
+    ---
+    ${translatedLyrics}
+    ---
+
+**Task Instructions:**
+
+1.  **Map Translation:** Go through the "Original Timed Data" segment by segment.
+2.  **Substitute Text:** For each segment, replace the ${originalLangName} text fields (\`text\`, \`word\`, \`cueText\`) with their corresponding ${translatedLangName} translations from the "Raw Translated Lyrics".
+3.  **Preserve Timings:** Keep all \`startTimeMs\`, \`endTimeMs\`, \`segmentIndex\`, and \`type\` fields identical to the original data.
+4.  **Update Metadata:** Change the \`metadata.language\` field to reflect the new language code ('en-US' or 'es-ES').
+
+**Output Format:**
+You MUST return a single, minified JSON object for the ${translatedLangName} version, strictly following the same schema as the input JSON. Do not include any other text, explanations, or markdown.
+`;
+};
+
 
 export const generateKaraokeData = async (
   audioFile: File,
@@ -104,57 +172,106 @@ export const generateKaraokeData = async (
   }
 
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-  const model = 'gemini-2.5-pro';
-
-  const prompt = buildPrompt(originalLyrics, translatedLyrics, languageFlow);
-  
-  onStatusUpdate('Preparing audio file for the AI...');
-  const audioPart = await fileToGenerativePart(audioFile);
-  const textPart = { text: prompt };
+  const isEsToEn = languageFlow === 'es-en';
+  const originalLangName = isEsToEn ? 'Spanish' : 'English';
+  const translatedLangName = isEsToEn ? 'English' : 'Spanish';
 
   try {
-    onStatusUpdate('Sending audio and lyrics to the AI model...');
-    const apiCallPromise = ai.models.generateContent({
-      model: model,
-      contents: [{ parts: [textPart, audioPart] }],
+    // --- STEP 1: Generate accurately timed data for the original language ---
+    onStatusUpdate(`Step 1/2: Preparing audio and ${originalLangName} lyrics for the AI...`);
+    const audioPart = await fileToGenerativePart(audioFile);
+    const primaryPrompt = buildSingleLanguagePrompt(originalLyrics, originalLangName);
+    const primaryTextPart = { text: primaryPrompt };
+
+    const primaryModel = 'gemini-2.5-pro';
+    
+    onStatusUpdate(`Step 1/2: Sending data to the AI. This is the longest step and may take up to 5 minutes...`);
+    
+    const primaryApiCall = () => ai.models.generateContent({
+      model: primaryModel,
+      contents: [{ parts: [primaryTextPart, audioPart] }],
       config: {
         responseMimeType: 'application/json',
+        responseSchema: singleLanguageSchema,
       },
     });
-
+    
+    const primaryApiCallPromise = retryWithBackoff(
+      primaryApiCall, 3, 2000,
+      (attempt) => {
+        console.warn(`Primary API call failed on attempt ${attempt}. Retrying...`);
+        onStatusUpdate(`Step 1/2: Request failed, retrying... (Attempt ${attempt + 1}/3)`);
+      }
+    );
+    
     const timeoutPromise = new Promise<never>((_, reject) =>
       setTimeout(() => reject(new Error("The request timed out after 5 minutes. This is common for longer songs. Please check your inputs or try again.")), 300000)
     );
+
+    const primaryResponse = await Promise.race([primaryApiCallPromise, timeoutPromise]);
     
-    // Set status *before* starting the race
-    onStatusUpdate('AI is analyzing the audio. This is the longest step and may take up to 5 minutes for a typical song...');
-    const response = await Promise.race([apiCallPromise, timeoutPromise]);
-    
-    onStatusUpdate('Received response, parsing JSON data...');
-    const text = response.text.trim();
-    if (!text) {
-        throw new Error("The AI model returned an empty response. This could be due to a content safety filter or an issue with the provided audio/lyrics.");
+    onStatusUpdate('Step 1/2: Received response, parsing original language data...');
+    const primaryText = primaryResponse.text.trim();
+    if (!primaryText) {
+        throw new Error("The AI model returned an empty response for the primary alignment. This could be due to a content safety filter or an issue with the provided audio/lyrics.");
     }
 
+    let originalTimedData: KaraokeData;
     try {
-        // Find the start and end of the main JSON object to handle malformed responses
-        const startIndex = text.indexOf('{');
-        const endIndex = text.lastIndexOf('}');
-        if (startIndex === -1 || endIndex === -1 || endIndex < startIndex) {
-            throw new Error("Could not find a valid JSON object in the model's response.");
-        }
-        const jsonStr = text.substring(startIndex, endIndex + 1);
-        
-        const parsedJson = JSON.parse(jsonStr);
-        onStatusUpdate('Success! Finalizing results...');
-        return parsedJson as KaraokeApiResponse;
+        originalTimedData = JSON.parse(primaryText);
     } catch (parseError) {
-        console.error("Failed to parse JSON response from model:", text);
-        throw new Error("The AI model's response was not in the expected JSON format. Please try adjusting your lyrics or try again.");
+        console.error("Failed to parse JSON response from primary alignment:", primaryText);
+        throw new Error("The AI model's response for the original lyrics was not in the expected JSON format.");
     }
+
+    // --- STEP 2: Use the result from Step 1 to align the translated lyrics ---
+    onStatusUpdate(`Step 2/2: Aligning ${translatedLangName} translation...`);
+    
+    const translationPrompt = buildTranslationAlignmentPrompt(originalTimedData, translatedLyrics, originalLangName, translatedLangName);
+    const translationModel = 'gemini-2.5-flash';
+
+    const translationApiCall = () => ai.models.generateContent({
+        model: translationModel,
+        contents: translationPrompt,
+        config: {
+            responseMimeType: 'application/json',
+            responseSchema: singleLanguageSchema,
+        },
+    });
+
+    const translationResponse = await retryWithBackoff(
+      translationApiCall, 3, 1000,
+      (attempt) => {
+        console.warn(`Translation alignment API call failed on attempt ${attempt}. Retrying...`);
+        onStatusUpdate(`Step 2/2: Request failed, retrying... (Attempt ${attempt + 1}/3)`);
+      }
+    );
+
+    onStatusUpdate('Step 2/2: Received response, parsing translated language data...');
+    const translationText = translationResponse.text.trim();
+    if (!translationText) {
+        throw new Error("The AI model returned an empty response for the translation alignment.");
+    }
+
+    let translatedTimedData: KaraokeData;
+    try {
+        translatedTimedData = JSON.parse(translationText);
+    } catch (parseError) {
+        console.error("Failed to parse JSON response from translation alignment:", translationText);
+        throw new Error("The AI model's response for the translated lyrics was not in the expected JSON format.");
+    }
+    
+    onStatusUpdate('Success! Finalizing results...');
+    
+    // Combine results into the final expected format
+    return {
+        spanish: isEsToEn ? originalTimedData : translatedTimedData,
+        english: isEsToEn ? translatedTimedData : originalTimedData,
+    };
+
   } catch (error) {
-    console.error("Error calling Gemini API:", error);
-    if (error instanceof Error && (error.message.includes("JSON format") || error.message.includes("empty response") || error.message.includes("timed out") || error.message.includes("valid JSON object"))) {
+    console.error("Error during karaoke generation process:", error);
+    if (error instanceof Error && (error.message.includes("JSON format") || error.message.includes("empty response") || error.message.includes("timed out"))) {
         throw error; // Re-throw our custom, user-friendly errors
     }
     throw new Error("An API error occurred while processing the request. Please check your network connection and API key settings, or try again later.");
@@ -192,10 +309,15 @@ Translated Lyrics:
 `;
 
   try {
-    const response = await ai.models.generateContent({
+    const apiCall = () => ai.models.generateContent({
       model: model,
       contents: prompt,
     });
+    
+    const response = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
+      console.warn(`Translation API call failed on attempt ${attempt}. Retrying...`);
+    });
+
     const translatedText = response.text.trim();
     if (!translatedText) {
       throw new Error("Translation failed: the model returned an empty response.");
@@ -306,13 +428,17 @@ Do not include any other text, explanations, or markdown formatting.
   };
 
   try {
-    const response = await ai.models.generateContent({
+    const apiCall = () => ai.models.generateContent({
       model: model,
       contents: prompt,
       config: {
         responseMimeType: 'application/json',
         responseSchema: schema,
       },
+    });
+    
+    const response = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
+      console.warn(`Vocabulary API call failed on attempt ${attempt}. Retrying...`);
     });
     
     const text = response.text.trim();

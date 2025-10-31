@@ -575,7 +575,7 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ segments, currentTimeMs, langua
           } else if (segment.text && segment.words && segment.words.length > 0) {
             if (isActive) {
               // Refactored logic for active, timed lines
-              const normalize = (s: string) => s.replace(/[.,!?'"¡¿]/g, "").toLowerCase();
+              const normalize = (s: string) => s.replace(/[.,!?'"¡¿-]/g, "").toLowerCase();
               const lineParts = segment.text.split(/(\s+)/);
               let timedWordIdx = 0;
 
@@ -767,6 +767,8 @@ const App: React.FC = () => {
   const [statusMessage, setStatusMessage] = useState<string>('');
   const progressIntervalRef = useRef<number | null>(null);
   const DURATION_WARNING_THRESHOLD = 600; // 10 minutes
+  const buildVersion = '1.1.0';
+  const buildTimestamp = new Date().toISOString();
 
   const handleTranslate = useCallback(async () => {
       setError(null);
@@ -1111,6 +1113,11 @@ const App: React.FC = () => {
           </>
         )}
       </main>
+      <footer className="text-center py-4 border-t border-gray-800">
+        <p className="text-xs text-gray-600">
+          Version: {buildVersion} | Build: {buildTimestamp}
+        </p>
+      </footer>
     </div>
   );
 };
