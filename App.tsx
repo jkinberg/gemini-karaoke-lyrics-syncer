@@ -2,6 +2,7 @@ import React, { useState, useCallback, useRef, useEffect } from 'react';
 import JSZip from 'jszip';
 import { generateKaraokeData, translateLyrics, generateVocabularyList } from './services/geminiService';
 import type { KaraokeData, KaraokeApiResponse, VocabularyItem, KaraokeSegment } from './types';
+import { testCase } from './test-data';
 
 const placeholderSpanish = `[Estrofa 1]
 El sol se pone en el horizonte
@@ -645,7 +646,7 @@ interface KaraokePreviewProps {
 }
 
 const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true); // Default to open for better UX
     const audioRef = useRef<HTMLAudioElement>(null);
     const animationFrameRef = useRef<number | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -768,7 +769,27 @@ const App: React.FC = () => {
   const progressIntervalRef = useRef<number | null>(null);
   const DURATION_WARNING_THRESHOLD = 600; // 10 minutes
   const buildVersion = '1.1.0';
-  const buildTimestamp = new Date().toISOString();
+  const [buildTimestamp, setBuildTimestamp] = useState<string>('...');
+
+  useEffect(() => {
+    const fetchBuildTimestamp = async () => {
+      try {
+        const response = await fetch('/App.tsx', { method: 'HEAD' });
+        const lastModified = response.headers.get('Last-Modified');
+        if (lastModified) {
+          const date = new Date(lastModified);
+          setBuildTimestamp(date.toLocaleString());
+        } else {
+          setBuildTimestamp('N/A');
+        }
+      } catch (err) {
+        console.error('Could not fetch build timestamp:', err);
+        setBuildTimestamp('N/A');
+      }
+    };
+    fetchBuildTimestamp();
+  }, []);
+
 
   const handleTranslate = useCallback(async () => {
       setError(null);
@@ -971,6 +992,92 @@ const App: React.FC = () => {
       progressIntervalRef.current = null;
     }
   }, []);
+
+  const handleRunDiagnosticTest = useCallback(async () => {
+    // 1. Clear everything
+    handleClearAll();
+
+    // 2. Set lyrics and data from test case
+    setSpanishLyrics(testCase.lyrics.spanish);
+    setEnglishLyrics(testCase.lyrics.english);
+    setKaraokeData({
+      spanish: testCase.karaokeData.spanish as KaraokeData,
+      english: testCase.karaokeData.english as KaraokeData,
+    });
+    
+    // 3. Create a silent audio file with the correct duration
+    const durationSeconds = testCase.karaokeData.spanish.metadata.durationMs / 1000;
+    setAudioDuration(durationSeconds);
+
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const sampleRate = audioContext.sampleRate;
+    const frameCount = sampleRate * durationSeconds;
+    const buffer = audioContext.createBuffer(1, frameCount, sampleRate);
+    
+    // This buffer is already silent, so we don't need to fill it with data.
+    
+    // Convert AudioBuffer to WAV blob
+    const getWavBlob = (audioBuffer: AudioBuffer): Blob => {
+        const numOfChan = audioBuffer.numberOfChannels;
+        const length = audioBuffer.length * numOfChan * 2 + 44;
+        const buffer = new ArrayBuffer(length);
+        const view = new DataView(buffer);
+        const channels = [];
+        let i, sample;
+        let offset = 0;
+        let pos = 0;
+
+        const setUint16 = (data: number) => {
+            view.setUint16(pos, data, true);
+            pos += 2;
+        }
+        const setUint32 = (data: number) => {
+            view.setUint32(pos, data, true);
+            pos += 4;
+        }
+
+        // write WAVE header
+        setUint32(0x46464952); // "RIFF"
+        setUint32(length - 8); // file length - 8
+        setUint32(0x45564157); // "WAVE"
+
+        setUint32(0x20746d66); // "fmt " chunk
+        setUint32(16); // length = 16
+        setUint16(1); // PCM (uncompressed)
+        setUint16(numOfChan);
+        setUint32(audioBuffer.sampleRate);
+        setUint32(audioBuffer.sampleRate * 2 * numOfChan); // avg. bytes/sec
+        setUint16(numOfChan * 2); // block-align
+        setUint16(16); // 16-bit
+        
+        setUint32(0x61746164); // "data" - chunk
+        setUint32(length - pos - 4); // chunk length
+
+        for (i = 0; i < audioBuffer.numberOfChannels; i++) {
+            channels.push(audioBuffer.getChannelData(i));
+        }
+
+        while (pos < length) {
+            for (i = 0; i < numOfChan; i++) {
+                sample = Math.max(-1, Math.min(1, channels[i][offset])); // clamp
+                sample = (0.5 + sample < 0 ? sample * 32768 : sample * 32767) | 0; // scale to 16-bit signed int
+                view.setInt16(pos, sample, true);
+                pos += 2;
+            }
+            offset++
+        }
+        return new Blob([view], { type: 'audio/wav' });
+    }
+
+    const wavBlob = getWavBlob(buffer);
+    const silentAudioFile = new File([wavBlob], "diagnostic_silent.wav", { type: "audio/wav" });
+
+    setAudioFile(silentAudioFile);
+    
+    // 4. Set a status message
+    setError("Diagnostic mode: Loaded pre-validated test data. This is NOT a live AI result.");
+
+  }, [handleClearAll]);
   
   const sourceLyricsEmpty = languageFlow === 'es-en' ? !spanishLyrics.trim() : !englishLyrics.trim();
   const canClear = !!(audioFile || spanishLyrics.trim() || englishLyrics.trim() || karaokeData || error);
@@ -1077,8 +1184,8 @@ const App: React.FC = () => {
         )}
 
         {error && !isLoading && (
-            <div className="mt-6 p-4 text-center bg-red-900/50 border border-red-700 text-red-300 rounded-lg">
-                <p><strong>Error:</strong> {error}</p>
+            <div className={`mt-6 p-4 text-center rounded-lg ${error.startsWith('Diagnostic mode') ? 'bg-blue-900/50 border border-blue-700 text-blue-300' : 'bg-red-900/50 border border-red-700 text-red-300'}`}>
+                <p><strong>{error.startsWith('Diagnostic mode') ? 'Notice' : 'Error'}:</strong> {error}</p>
             </div>
         )}
 
@@ -1114,9 +1221,14 @@ const App: React.FC = () => {
         )}
       </main>
       <footer className="text-center py-4 border-t border-gray-800">
-        <p className="text-xs text-gray-600">
-          Version: {buildVersion} | Build: {buildTimestamp}
-        </p>
+        <div className="flex justify-center items-center gap-4">
+            <p className="text-xs text-gray-600">
+              Version: {buildVersion} | Build: {buildTimestamp}
+            </p>
+            <button onClick={handleRunDiagnosticTest} className="text-xs text-gray-600 hover:text-gray-400 transition-colors">
+              Run Diagnostic Test
+            </button>
+        </div>
       </footer>
     </div>
   );

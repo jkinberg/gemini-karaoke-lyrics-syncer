@@ -114,15 +114,48 @@ You are a professional Audio Alignment Engine. Your task is to generate a single
   ${lyrics}
   ---
 
-**Task Instructions:**
+**Critical Task Instructions:**
 
 1.  **Analyze Audio:** Deeply analyze the provided audio to identify vocal melodies, rhythms, and pauses.
 2.  **Precise Alignment:** Align the provided ${langName} lyrics to the vocal track with millisecond precision. Every word must have an accurate \`startTimeMs\` and \`endTimeMs\`.
-3.  **Segment the Song:** Segment the entire song into a \`segments\` array.
+3.  **Lyric Alignment and Correction:**
+    -   **Audio is the Ground Truth:** The provided audio file is the definitive source of truth for the lyrics. The text lyrics provided are a very close guide but may not be a perfect 100% transcript.
+    -   **Prioritize Sung Vocals:** Your primary task is to accurately transcribe and time the words that are *actually sung* in the audio.
+    -   **Correct Discrepancies:** If you hear a difference between the audio and the provided text (e.g., an ad-lib, a repeated word, a slightly different phrasing), your final JSON output **MUST** reflect what is sung in the audio. This is the most critical instruction. For example, if the lyrics say "love you" but the singer sings "love you, you", your output for that segment must include the repeated "you" with its correct timing.
+    -   **Maintain Structure:** While making corrections, preserve the overall line and segment structure of the provided lyrics as much as possible.
+4.  **Segment the Song:** Segment the entire song into a \`segments\` array.
     - Identify every portion as either "LYRIC" or "INSTRUMENTAL".
     - For "LYRIC" segments: Include word-level timing for every single word.
     - For "INSTRUMENTAL" segments: Create instrumental breaks (e.g., intro, solo) and provide a descriptive \`cueText\` in ${langName}.
-4.  **Extract Metadata:** Determine the song's title and artist from the audio if possible, and calculate the total duration in milliseconds.
+5.  **Extract Metadata:** Determine the song's title and artist from the audio if possible, and calculate the total duration in milliseconds.
+
+**Critical Precision Guidelines:**
+
+-   **Fast Vocals:** Pay extreme attention to fast-paced vocal sections. Word timings in these areas must be very short and precise.
+-   **Sustained Notes:** If a singer holds a note on a word for a long duration, the \`endTimeMs\` must reflect the entire duration of that sustained sound.
+-   **Vocal Decay:** The \`endTimeMs\` for a word should be the point where the sound of that word is no longer audible, not when the next word begins. Account for natural vocal decay.
+
+**Example of a Perfect Segment:**
+
+For a lyric line "Y pienso en ti, solo en ti" that is sung between 45000ms and 49000ms, the output for that segment should look like this:
+\`\`\`json
+{
+  "type": "LYRIC",
+  "startTimeMs": 45000,
+  "endTimeMs": 49000,
+  "text": "Y pienso en ti, solo en ti",
+  "segmentIndex": 4,
+  "words": [
+    { "word": "Y", "startTimeMs": 45150, "endTimeMs": 45300 },
+    { "word": "pienso", "startTimeMs": 45310, "endTimeMs": 45800 },
+    { "word": "en", "startTimeMs": 45810, "endTimeMs": 46000 },
+    { "word": "ti,", "startTimeMs": 46010, "endTimeMs": 46500 },
+    { "word": "solo", "startTimeMs": 46800, "endTimeMs": 47300 },
+    { "word": "en", "startTimeMs": 47310, "endTimeMs": 47500 },
+    { "word": "ti", "startTimeMs": 47510, "endTimeMs": 48200 }
+  ]
+}
+\`\`\`
 
 **Output Format:**
 You MUST return a single, minified JSON object that strictly follows the provided schema. Do not include any other text, explanations, or markdown formatting.
