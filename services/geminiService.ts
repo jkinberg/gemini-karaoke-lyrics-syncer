@@ -38,7 +38,9 @@ const retryWithBackoff = async <T>(
       if (error instanceof Error && (
           error.message.includes("timed out") || 
           error.message.includes("JSON format") ||
-          error.message.includes("empty response")
+          error.message.includes("empty response") ||
+          error.message.includes("API key") || // Don't retry on auth errors
+          error.message.includes("safety filter") // Don't retry on content blocks
       )) {
         throw error;
       }
@@ -172,7 +174,7 @@ You are a precise text-transformation engine. Your task is to create a translate
 
 1.  **Original Timed Data (${originalLangName} JSON):**
     \`\`\`json
-    ${JSON.stringify(timedOriginalData, null, 2)}
+    ${JSON.stringify(timedOriginalData)}
     \`\`\`
 
 2.  **Raw Translated Lyrics (${translatedLangName} Text):**
@@ -190,6 +192,37 @@ You are a precise text-transformation engine. Your task is to create a translate
 **Output Format:**
 You MUST return a single, minified JSON object for the ${translatedLangName} version, strictly following the same schema as the input JSON. Do not include any other text, explanations, or markdown.
 `;
+};
+
+
+const parseGoogleGenerativeAIError = (error: any): string => {
+    if (typeof error === 'object' && error !== null && 'message' in error) {
+        const message = error.message as string;
+        
+        // Check for common, user-actionable errors
+        if (message.includes('API key not valid')) {
+            return 'API Key Invalid. Please ensure your API key is correct and has the necessary permissions.';
+        }
+        if (message.includes('permission denied')) {
+            return 'Permission Denied. The provided API key may not have access to the required models. Please check your Google AI project settings.';
+        }
+        if (message.includes('429') && message.toLowerCase().includes('quota')) {
+            return 'Quota Exceeded. You have made too many requests in a short period. Please wait and try again, or check your quota limits in your Google AI project.';
+        }
+         if (message.includes('503') && message.toLowerCase().includes('service unavailable')) {
+            return 'Service Unavailable. The AI model is temporarily overloaded. Please try again in a few moments.';
+        }
+        if (message.includes('504') && message.toLowerCase().includes('deadline exceeded')) {
+             return 'Request Timed Out. The model took too long to respond, which can happen with very long or complex audio files. Please try a shorter file.';
+        }
+
+        // Check for content safety issues
+        if (message.includes('[SAFETY]')) {
+            return 'Request blocked by the content safety filter. The provided lyrics may contain sensitive material.';
+        }
+    }
+    // Fallback for other generic API errors
+    return "An unknown API error occurred. Please check the developer console for more details and try again later.";
 };
 
 
@@ -211,14 +244,14 @@ export const generateKaraokeData = async (
 
   try {
     // --- STEP 1: Generate accurately timed data for the original language ---
-    onStatusUpdate(`Step 1/2: Preparing audio and ${originalLangName} lyrics for the AI...`);
+    onStatusUpdate(`Step 1/2: Preparing audio and ${originalLangName} lyrics for analysis...`);
     const audioPart = await fileToGenerativePart(audioFile);
     const primaryPrompt = buildSingleLanguagePrompt(originalLyrics, originalLangName);
     const primaryTextPart = { text: primaryPrompt };
 
     const primaryModel = 'gemini-2.5-pro';
     
-    onStatusUpdate(`Step 1/2: Sending data to the AI. This is the longest step and may take up to 5 minutes...`);
+    onStatusUpdate(`Step 1/2: Analyzing audio waveform and aligning ${originalLangName} lyrics. This is the longest step and may take up to 5 minutes...`);
     
     const primaryApiCall = () => ai.models.generateContent({
       model: primaryModel,
@@ -233,7 +266,7 @@ export const generateKaraokeData = async (
       primaryApiCall, 3, 2000,
       (attempt) => {
         console.warn(`Primary API call failed on attempt ${attempt}. Retrying...`);
-        onStatusUpdate(`Step 1/2: Request failed, retrying... (Attempt ${attempt + 1}/3)`);
+        onStatusUpdate(`Step 1/2: Request failed, attempting to reconnect... (Attempt ${attempt + 1}/3)`);
       }
     );
     
@@ -243,7 +276,7 @@ export const generateKaraokeData = async (
 
     const primaryResponse = await Promise.race([primaryApiCallPromise, timeoutPromise]);
     
-    onStatusUpdate('Step 1/2: Received response, parsing original language data...');
+    onStatusUpdate('Step 1/2: Received response, parsing synchronized data...');
     const primaryText = primaryResponse.text.trim();
     if (!primaryText) {
         throw new Error("The AI model returned an empty response for the primary alignment. This could be due to a content safety filter or an issue with the provided audio/lyrics.");
@@ -258,7 +291,7 @@ export const generateKaraokeData = async (
     }
 
     // --- STEP 2: Use the result from Step 1 to align the translated lyrics ---
-    onStatusUpdate(`Step 2/2: Aligning ${translatedLangName} translation...`);
+    onStatusUpdate(`Step 2/2: Mapping ${translatedLangName} translation onto synchronized timeline...`);
     
     const translationPrompt = buildTranslationAlignmentPrompt(originalTimedData, translatedLyrics, originalLangName, translatedLangName);
     const translationModel = 'gemini-2.5-flash';
@@ -280,7 +313,7 @@ export const generateKaraokeData = async (
       }
     );
 
-    onStatusUpdate('Step 2/2: Received response, parsing translated language data...');
+    onStatusUpdate('Step 2/2: Received response, parsing translated data...');
     const translationText = translationResponse.text.trim();
     if (!translationText) {
         throw new Error("The AI model returned an empty response for the translation alignment.");
@@ -307,7 +340,8 @@ export const generateKaraokeData = async (
     if (error instanceof Error && (error.message.includes("JSON format") || error.message.includes("empty response") || error.message.includes("timed out"))) {
         throw error; // Re-throw our custom, user-friendly errors
     }
-    throw new Error("An API error occurred while processing the request. Please check your network connection and API key settings, or try again later.");
+    // For all other errors, try to parse them into a more specific message.
+    throw new Error(parseGoogleGenerativeAIError(error));
   }
 };
 
@@ -358,7 +392,7 @@ Translated Lyrics:
     return translatedText;
   } catch (error) {
     console.error("Error calling Gemini API for translation:", error);
-    throw new Error("An API error occurred during translation. Please try again.");
+    throw new Error(parseGoogleGenerativeAIError(error));
   }
 };
 
@@ -483,6 +517,6 @@ Do not include any other text, explanations, or markdown formatting.
 
   } catch (error) {
     console.error("Error calling Gemini API for vocabulary generation:", error);
-    throw new Error("An API error occurred while generating the vocabulary list. This feature may not be available right now.");
+    throw new Error(parseGoogleGenerativeAIError(error));
   }
 };

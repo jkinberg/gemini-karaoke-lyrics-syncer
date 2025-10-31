@@ -842,15 +842,24 @@ const App: React.FC = () => {
     
     if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
 
+    // More realistic progress simulation
     progressIntervalRef.current = window.setInterval(() => {
       setProgress(prev => {
-        if (prev >= 95) {
-          // The interval will be cleared by other logic when isLoading becomes false.
+        // Step 1 (Audio Analysis) is the longest, so we give it ~80% of the progress bar
+        if (statusMessage.startsWith('Step 1/2')) {
+          if (prev < 80) return prev + (Math.random() * 2 + 0.5);
+          return 80;
+        }
+        // Step 2 (Translation Mapping) is faster
+        if (statusMessage.startsWith('Step 2/2')) {
+          if (prev < 95) return prev + (Math.random() * 3 + 1);
           return 95;
         }
-        if (prev < 60) return prev + (Math.random() * 5 + 1);
-        if (prev < 85) return prev + (Math.random() * 2 + 1);
-        return prev + 0.5;
+        // Cap at 95 until success
+        if (prev >= 95) {
+          return 95;
+        }
+        return prev + 1;
       });
     }, 400);
 
@@ -871,7 +880,7 @@ const App: React.FC = () => {
       setProgress(100);
       setKaraokeData(result);
       
-      // Now, generate vocabulary
+      setStatusMessage('Generating vocabulary list...');
       setIsGeneratingVocab(true);
       try {
         const vocab = await generateVocabularyList(spanishLyrics, englishLyrics);
@@ -882,7 +891,8 @@ const App: React.FC = () => {
       } finally {
         setIsGeneratingVocab(false);
       }
-
+      
+      setStatusMessage('Processing complete!');
       setTimeout(() => {
         setIsLoading(false);
       }, 500);
@@ -895,8 +905,10 @@ const App: React.FC = () => {
         setError('An unknown error occurred.');
       }
       setIsLoading(false);
+      setProgress(0);
+      setStatusMessage('Generation failed.');
     }
-  }, [audioFile, spanishLyrics, englishLyrics, languageFlow]);
+  }, [audioFile, spanishLyrics, englishLyrics, languageFlow, statusMessage]);
 
   const handleDownloadAll = useCallback(() => {
     if (!karaokeData) return;
