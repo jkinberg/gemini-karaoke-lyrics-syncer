@@ -405,7 +405,6 @@ const KaraokePreview: React.FC<{ karaokeData: KaraokeApiResponse; audioFile: Fil
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
-    // FIX: Provide an initial value of null to useRef.
     const animationFrameRef = useRef<number | null>(null);
 
     // For Audio Visualizer
@@ -593,23 +592,15 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, o
 
     useEffect(() => {
         if (activeSegmentIndex === -1 || !scrollContainerRef.current) return;
-        
+
         const activeElement = scrollContainerRef.current.children[activeSegmentIndex] as HTMLElement;
-        if (!activeElement) return;
-
-        // Manual scroll calculation for smoothness
-        const container = scrollContainerRef.current;
-        const containerHeight = container.offsetHeight;
-        const elementTop = activeElement.offsetTop;
-        const elementHeight = activeElement.offsetHeight;
-        
-        const desiredScrollTop = elementTop - (containerHeight / 2) + (elementHeight / 2);
-        
-        container.scrollTo({
-            top: desiredScrollTop,
-            behavior: 'smooth',
-        });
-
+        if (activeElement) {
+            activeElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+                inline: 'nearest'
+            });
+        }
     }, [activeSegmentIndex]);
 
     const normalizeWord = (word: string) => {
@@ -619,23 +610,30 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, o
     return (
         <div className="bg-black/30 p-4 rounded-lg">
             <h3 className="text-lg font-bold text-center mb-4">{title}</h3>
-            <div ref={scrollContainerRef} className="h-48 overflow-y-auto space-y-4 text-center pr-2">
+            <div ref={scrollContainerRef} className="h-48 overflow-y-auto space-y-4 text-center pr-2 relative">
                 {segments.map((segment, index) => {
                     const isActive = index === activeSegmentIndex;
+                    const baseClasses = "text-xl transition-all duration-300 cursor-pointer";
+
                     if (segment.type === 'INSTRUMENTAL') {
+                        const activeClasses = "text-secondary font-bold";
+                        const inactiveClasses = "text-textSecondary/70";
                         return (
-                            <p key={index} className={`italic transition-all duration-300 ${isActive ? 'text-secondary text-2xl font-bold' : 'text-textSecondary/70 text-lg'}`}>
+                            <p key={index} className={`italic ${baseClasses} ${isActive ? activeClasses : inactiveClasses} ${isActive ? 'scale-110' : 'scale-100'}`}>
                                 {segment.cueText}
                             </p>
                         );
                     }
+                    
+                    const activeClasses = "text-textPrimary font-bold";
+                    const inactiveClasses = "text-textSecondary";
 
                     const wordsToHighlight = segment.words || [];
                     const renderedWords = segment.text?.split(/(\s+)/) || [];
                     let wordIndex = 0;
 
                     return (
-                        <p key={index} onClick={() => onSeek(segment.startTimeMs)} className={`transition-all duration-300 cursor-pointer ${isActive ? 'text-textPrimary text-2xl font-bold' : 'text-textSecondary text-lg'}`}>
+                        <p key={index} onClick={() => onSeek(segment.startTimeMs)} className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses} ${isActive ? 'scale-110' : 'scale-100'}`}>
                            {renderedWords.map((part, partIndex) => {
                                 if (/\s+/.test(part)) return <span key={partIndex}>{part}</span>;
                                 if (!part) return null;
@@ -699,6 +697,23 @@ const KaraokeDataDisplay: React.FC<{ karaokeData: KaraokeApiResponse, setKaraoke
     }
   };
 
+  const handleDownloadAll = () => {
+    const zip = new JSZip();
+    zip.file("spanish_karaoke_data.json", JSON.stringify(karaokeData.spanish, null, 2));
+    zip.file("english_karaoke_data.json", JSON.stringify(karaokeData.english, null, 2));
+    
+    zip.generateAsync({ type: "blob" }).then((content) => {
+        const url = URL.createObjectURL(content);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'karaoke_data.zip';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+  };
+
   const JsonDisplay = ({ lang, data }: { lang: 'spanish' | 'english', data: KaraokeData }) => {
     const downloadJson = () => {
         const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -718,7 +733,7 @@ const KaraokeDataDisplay: React.FC<{ karaokeData: KaraokeApiResponse, setKaraoke
     };
 
     return (
-        <div className="bg-black/30 p-4 rounded-lg flex-1">
+        <div className="bg-black/30 p-4 rounded-lg flex-1 min-w-0">
             <div className="flex justify-between items-center mb-2">
                 <h3 className="text-lg font-bold text-textPrimary">{lang === 'spanish' ? 'Spanish' : 'English'} Karaoke Data</h3>
                  <div className="flex items-center gap-2">
@@ -738,9 +753,17 @@ const KaraokeDataDisplay: React.FC<{ karaokeData: KaraokeApiResponse, setKaraoke
   };
   
   return (
-      <div className="space-y-4 md:space-y-0 md:flex md:gap-6">
-          <JsonDisplay lang="spanish" data={karaokeData.spanish} />
-          <JsonDisplay lang="english" data={karaokeData.english} />
+      <div className="space-y-4">
+          <div className="flex justify-between items-center">
+            <h2 className="text-2xl font-bold">Generated Data Files</h2>
+            <ActionButton onClick={handleDownloadAll} icon="M9 0l-9 9h6v15h6v-15h6z">
+               Download All (.zip)
+            </ActionButton>
+          </div>
+          <div className="space-y-4 md:space-y-0 md:flex md:gap-6">
+              <JsonDisplay lang="spanish" data={karaokeData.spanish} />
+              <JsonDisplay lang="english" data={karaokeData.english} />
+          </div>
       </div>
   );
 };
