@@ -9,17 +9,17 @@ You can try the live application here: **[https://karaoke-syncer-362554121203.us
 ## ✨ Features
 
 - **High-Accuracy Synchronization**: Utilizes a two-step process with **Gemini 2.5 Pro** and a sophisticated prompt that treats the audio as the "ground truth," allowing it to correct discrepancies between the provided lyrics and the actual performance.
-- **Interactive Karaoke Preview**: Instantly verify the synchronization with a built-in player. Watch lyrics highlight word-by-word in real-time, side-by-side in both languages, complete with audio controls and clickable line-seeking to check timing accuracy.
+- **Interactive Karaoke Preview**: Instantly verify the synchronization with a built-in player. Watch lyrics highlight word-by-word in real-time, side-by-side in both languages, complete with audio controls, a **real-time audio spectrum visualizer**, and clickable line-seeking to check timing accuracy.
+- **AI Refinement Pass**: An optional "review and refine" step where a second AI pass acts as a quality assurance specialist, critiquing and correcting the initial synchronization for the highest possible accuracy.
 - **Built-in Diagnostic Tool**: Run a pre-validated test case to verify the preview player's accuracy independently of the AI's output, helping to isolate and debug issues.
 - **Word-Level Timing**: Generates start and end timestamps for every single word, enabling precise karaoke-style highlighting.
 - **Bilingual Workflow**: Supports both **Spanish ↔ English** processing. You can provide the original audio in either language.
 - **AI Lyric Translation**: Includes a built-in translation feature powered by **Gemini 2.5 Flash** to automatically generate the translated lyrics, saving you time.
 - **Vocabulary Learning**: After generation, the AI identifies key Spanish vocabulary from the lyrics. It provides English definitions, difficulty scores, and contextual examples in a clean table format. You can download this list as a **CSV** or **JSON** file for easy import into flashcard apps.
-- **Multi-Format Audio Upload**: Simple drag-and-drop interface for audio files, supporting `MP3`, `WAV`, `M4A`, `FLAC`, `AAC`, `OGG`, `OPUS`, and `3GP`.
 - **Live Status Updates**: A visual progress bar and dynamic status messages give you real-time feedback during the AI generation process.
 - **Robust API Communication**: Implements an automatic retry mechanism with exponential backoff for all API calls, making the application more resilient to transient network errors.
-- **Flexible Export Options**: Download individual karaoke data files (`.json`), vocabulary lists (`.json`, `.csv`), or a single `karaoke_and_vocabulary_data.zip` archive containing all generated files.
-- **Fully Responsive**: A clean and modern UI built with Tailwind CSS that works seamlessly on both desktop and mobile devices.
+- **Flexible Export Options**: Download individual karaoke data files (`.json`) and vocabulary lists (`.json`, `.csv`).
+- **Modern & Responsive UI**: A clean "glassmorphism" UI built with Tailwind CSS that provides a guided, tabbed experience and works seamlessly on both desktop and mobile devices.
 
 ## 🚀 How It Works
 
@@ -29,16 +29,16 @@ The application improves synchronization accuracy by using a sophisticated, two-
 2.  **Translate (Optional)**: The user can click the "Translate" button. The application sends the source lyrics to the **Gemini 2.5 Flash** model to get a high-quality translation, which then populates the second text area.
 3.  **Generate Step 1: High-Fidelity Timing**: When "Generate Synced Files" is clicked, the app first sends the audio file and the **original lyrics** to the powerful **Gemini 2.5 Pro** model. The prompt instructs the AI to treat the audio as the "ground truth" and to correct any discrepancies in the provided lyrics to match what is actually sung. This creates a highly accurate, "source of truth" timed data file based on the real performance.
 4.  **Generate Step 2: Translation Mapping**: The accurately timed data from Step 1 is then sent, along with the translated lyrics, to the fast and efficient **Gemini 2.5 Flash** model. This second, simpler task instructs the AI to map the translated words onto the existing timestamps without re-analyzing the audio, preserving the precise timing.
-5.  **Vocabulary Extraction**: Immediately following a successful sync, the app makes another targeted call to **Gemini 2.5 Flash**. It sends the lyrics and asks the AI to act as a language tutor, extracting key vocabulary terms and returning them in a structured JSON format.
-6.  **Preview, Display & Download**: The application parses all responses. Users can immediately test the result in the **interactive preview player**. The raw JSON data is also displayed, the vocabulary list is shown in a table, and all generated files are made available for individual download or as a single combined zip archive.
+5.  **Refine (Optional)**: After the initial generation, the user can trigger an AI Refinement Pass. This sends the audio and the generated data *back* to Gemini 2.5 Pro, instructing it to act as a Quality Assurance specialist—reviewing, critiquing, and returning a corrected version with even higher timing accuracy.
+6.  **Vocabulary Extraction**: Immediately following a successful sync, the app makes another targeted call to **Gemini 2.5 Flash**. It sends the lyrics and asks the AI to act as a language tutor, extracting key vocabulary terms and returning them in a structured JSON format.
+7.  **Preview, Display & Download**: The application parses all responses and presents them in a clean, **tabbed interface** for easy navigation between the Preview Player, the side-by-side Karaoke Data, and the Vocabulary list. All generated files are available for individual download.
 
 ## 🛠️ Technology Stack
 
 - **Frontend**: React, TypeScript, Tailwind CSS
-- **AI Model**: Google Gemini 2.5 Pro (for audio synchronization) & Gemini 2.5 Flash (for translation and vocabulary)
+- **AI Model**: Google Gemini 2.5 Pro (for audio synchronization & refinement) & Gemini 2.5 Flash (for translation and vocabulary)
 - **Libraries**:
   - `@google/genai`: The official Google client library for the Gemini API.
-  - `jszip`: For creating the `.zip` archive on the client side.
 
 ## 📂 Project Structure
 

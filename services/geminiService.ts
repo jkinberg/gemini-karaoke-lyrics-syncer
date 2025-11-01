@@ -58,8 +58,8 @@ const retryWithBackoff = async <T>(
   throw lastError;
 };
 
-
-const singleLanguageSchema = {
+// FIX: Export 'singleLanguageSchema' for use in other modules.
+export const singleLanguageSchema = {
     type: Type.OBJECT,
     properties: {
         metadata: {
@@ -164,7 +164,8 @@ You MUST return a single, minified JSON object that strictly follows the provide
 `;
 };
 
-const buildTranslationAlignmentPrompt = (timedOriginalData: KaraokeData, translatedLyrics: string, originalLangName: string, translatedLangName: string): string => {
+// FIX: Export 'buildTranslationAlignmentPrompt' for use in other modules.
+export const buildTranslationAlignmentPrompt = (timedOriginalData: KaraokeData, translatedLyrics: string, originalLangName: string, translatedLangName: string): string => {
   return `
 You are a precise text-transformation engine. Your task is to create a translated karaoke data file by mapping translated lyrics onto an existing, perfectly timed data structure.
 
@@ -191,6 +192,42 @@ You are a precise text-transformation engine. Your task is to create a translate
 
 **Output Format:**
 You MUST return a single, minified JSON object for the ${translatedLangName} version, strictly following the same schema as the input JSON. Do not include any other text, explanations, or markdown.
+`;
+};
+
+
+const buildRefinementPrompt = (draftKaraokeData: KaraokeData, langName: string): string => {
+  return `
+You are a meticulous Quality Assurance specialist for AI-generated audio-to-text synchronization. Your task is to review a "draft" synchronized karaoke file against its source audio, identify any timing or text inaccuracies, and return a complete, corrected version.
+
+**Input Data:**
+- Audio File: [Provided in the request]
+- Draft ${langName} Karaoke JSON:
+  \`\`\`json
+  ${JSON.stringify(draftKaraokeData)}
+  \`\`\`
+
+**Critical Task: Review and Correct**
+
+Your goal is to produce a final JSON file with the highest possible accuracy. Listen to the audio and compare it to the draft JSON, paying extremely close attention to the following potential errors:
+
+1.  **Incorrect Segment Timings:**
+    -   Verify that the \`startTimeMs\` of each LYRIC segment perfectly matches the beginning of the sung phrase.
+    -   Verify that the \`endTimeMs\` accurately captures the end of the phrase, including vocal decay.
+2.  **Inaccurate Word Timings:**
+    -   For each word in the \`words\` array, listen intently. Does the \`startTimeMs\` match the exact moment the word's sound begins?
+    -   Does the \`endTimeMs\` match the moment the word's sound ends? This is especially critical for sustained notes or fast-paced sections.
+3.  **Synchronization Drift:**
+    -   Check if the synchronization is accurate at the beginning but becomes progressively worse over time. If you detect drift, you must recalculate all subsequent timings to correct it.
+4.  **Text Discrepancies:**
+    -   The audio is the absolute ground truth. If the draft JSON contains a word that isn't actually sung, remove it.
+    -   If the audio contains a sung word (like an ad-lib or repetition) that is missing from the draft JSON, you MUST add it with its correct timing.
+
+**Output Mandate:**
+
+-   Your final output MUST be a single, minified, and complete JSON object representing the *entire corrected song data*.
+-   This corrected object must strictly follow the original JSON schema.
+-   Do not provide text explanations, summaries of your changes, or any text outside of the JSON object. Simply return the perfected JSON.
 `;
 };
 
@@ -341,6 +378,75 @@ export const generateKaraokeData = async (
         throw error; // Re-throw our custom, user-friendly errors
     }
     // For all other errors, try to parse them into a more specific message.
+    throw new Error(parseGoogleGenerativeAIError(error));
+  }
+};
+
+
+export const refineKaraokeData = async (
+  audioFile: File,
+  karaokeDataToRefine: KaraokeData,
+  languageName: string,
+  onStatusUpdate: (message: string) => void,
+): Promise<KaraokeData> => {
+  if (!process.env.API_KEY) {
+    throw new Error("API_KEY environment variable is not set.");
+  }
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
+  try {
+    onStatusUpdate('Preparing audio for analysis...');
+    const audioPart = await fileToGenerativePart(audioFile);
+    
+    onStatusUpdate('Constructing AI review prompt...');
+    const refinementPrompt = buildRefinementPrompt(karaokeDataToRefine, languageName);
+    const textPart = { text: refinementPrompt };
+    
+    const model = 'gemini-2.5-pro';
+    onStatusUpdate(`Sending data to AI for quality review. This can take several minutes...`);
+
+    const apiCall = () => ai.models.generateContent({
+      model: model,
+      contents: [{ parts: [textPart, audioPart] }],
+      config: {
+        responseMimeType: 'application/json',
+        responseSchema: singleLanguageSchema,
+      },
+    });
+
+    const apiCallPromise = retryWithBackoff(
+      apiCall, 3, 2000,
+      (attempt) => {
+        console.warn(`Refinement API call failed on attempt ${attempt}. Retrying...`);
+        onStatusUpdate(`Refinement failed, attempting to reconnect... (Attempt ${attempt + 1}/3)`);
+      }
+    );
+    
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("The refinement request timed out after 5 minutes.")), 300000)
+    );
+    
+    const response = await Promise.race([apiCallPromise, timeoutPromise]);
+    
+    onStatusUpdate('Received refined data, parsing final result...');
+    const text = response.text.trim();
+     if (!text) {
+        throw new Error("The AI model returned an empty response during the refinement pass.");
+    }
+    
+    try {
+        const refinedData = JSON.parse(text);
+        return refinedData as KaraokeData;
+    } catch (parseError) {
+        console.error("Failed to parse JSON response from refinement pass:", text);
+        throw new Error("The AI model's response during refinement was not in the expected JSON format.");
+    }
+
+  } catch (error) {
+     console.error("Error during karaoke refinement process:", error);
+    if (error instanceof Error && (error.message.includes("JSON format") || error.message.includes("empty response") || error.message.includes("timed out"))) {
+        throw error;
+    }
     throw new Error(parseGoogleGenerativeAIError(error));
   }
 };

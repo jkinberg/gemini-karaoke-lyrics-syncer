@@ -25,6 +25,17 @@
       }
     </script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+      :root {
+        --background-image: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
+      }
+      body {
+        background-color: #111827;
+        background-image: var(--background-image);
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
   <script type="importmap">
 {
   "imports": {
@@ -37,7 +48,7 @@
 }
 </script>
 </head>
-  <body class="bg-background text-textPrimary">
+  <body class="text-textPrimary">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
