@@ -1,4 +1,5 @@
-import { GoogleGenAI, Type } from "@google/genai";
+// FIX: Import GenerateContentResponse to correctly type API call results.
+import { GoogleGenAI, Type, GenerateContentResponse } from "@google/genai";
 import { KaraokeApiResponse, KaraokeData, VocabularyItem } from '../types';
 
 const fileToGenerativePart = async (file: File) => {
@@ -219,15 +220,55 @@ Your goal is to produce a final JSON file with the highest possible accuracy. Li
     -   Does the \`endTimeMs\` match the moment the word's sound ends? This is especially critical for sustained notes or fast-paced sections.
 3.  **Synchronization Drift:**
     -   Check if the synchronization is accurate at the beginning but becomes progressively worse over time. If you detect drift, you must recalculate all subsequent timings to correct it.
-4.  **Text Discrepancies:**
-    -   The audio is the absolute ground truth. If the draft JSON contains a word that isn't actually sung, remove it.
-    -   If the audio contains a sung word (like an ad-lib or repetition) that is missing from the draft JSON, you MUST add it with its correct timing.
+4.  **Text Discrepancies (Highest Priority):**
+    -   **The audio is the absolute ground truth.** Your primary directive is to ensure the final text is a perfect transcript of all audible singing.
+    -   **Listen for Additions:** Pay special attention to ad-libs, background vocals, and repeated phrases that might be missing from the draft. If a word or phrase is sung in the audio (by any vocalist), it **MUST** be added to the text and timed correctly. This is a common source of error in initial drafts.
+    -   **Listen for Omissions:** If the draft JSON contains a word that isn't actually sung in the audio, remove it.
 
 **Output Mandate:**
 
 -   Your final output MUST be a single, minified, and complete JSON object representing the *entire corrected song data*.
 -   This corrected object must strictly follow the original JSON schema.
 -   Do not provide text explanations, summaries of your changes, or any text outside of the JSON object. Simply return the perfected JSON.
+`;
+};
+
+const buildTranslatedRefinementPrompt = (
+  draftTranslatedData: KaraokeData, 
+  refinedOriginalData: KaraokeData,
+  translatedLangName: string,
+  originalLangName: string
+): string => {
+  return `
+You are a precise Temporal Alignment Specialist for multilingual karaoke. Your task is to adjust the timing of a translated lyric file to match a perfectly timed original version, using the audio as a reference for rhythm and cadence.
+
+**CRITICAL CONSTRAINT: DO NOT CHANGE THE TRANSLATED LYRICS.** The text in the "Draft ${translatedLangName} Data" is the correct and final translation. Your ONLY task is to correct its \`startTimeMs\` and \`endTimeMs\` values for both segments and words.
+
+**Input Data:**
+
+1.  **Audio File:** [Provided in the request]
+2.  **Ground Truth Timed Data (${originalLangName}):** This version has been meticulously timed against the audio. Use its segment structure and timings as your primary guide.
+    \`\`\`json
+    ${JSON.stringify(refinedOriginalData)}
+    \`\`\`
+3.  **Draft Translated Data (${translatedLangName}):** This is the file you must correct.
+    \`\`\`json
+    ${JSON.stringify(draftTranslatedData)}
+    \`\`\`
+
+**Task Instructions:**
+
+1.  **Analyze Cadence:** Listen to the audio to understand the vocal rhythm, flow, and pauses.
+2.  **Reference Original Timings:** Look at the \`startTimeMs\` and \`endTimeMs\` in the "${originalLangName}" data. This is your timing blueprint.
+3.  **Correct Translated Timings:** Go through the "Draft ${translatedLangName} Data" word by word and segment by segment. Adjust every \`startTimeMs\` and \`endTimeMs\` value so that the English words align perfectly with the sung syllables in the audio, using the ${originalLangName} data as a structural reference.
+4.  **Handle Phrasing Differences:** Languages have different syllable counts. For example, "I love you" (3 syllables) might be translated from "Te amo" (2 syllables). You must intelligently distribute the total segment duration from the original data across the translated words. Ensure the timing feels natural and matches the singer's delivery.
+5.  **Preserve Text Integrity:** Re-iterate: You MUST NOT add, remove, or alter any words in the \`text\` or \`words.word\` fields of the draft ${translatedLangName} data. The translation is final. Any deviation from this rule will result in failure.
+
+**Output Mandate:**
+
+-   Return a single, minified, and complete JSON object representing the *entire corrected ${translatedLangName} song data*.
+-   This corrected object must strictly follow the original JSON schema.
+-   Do not provide text explanations, summaries of your changes, or any text outside of the JSON object.
 `;
 };
 
@@ -311,7 +352,8 @@ export const generateKaraokeData = async (
       setTimeout(() => reject(new Error("The request timed out after 5 minutes. This is common for longer songs. Please check your inputs or try again.")), 300000)
     );
 
-    const primaryResponse = await Promise.race([primaryApiCallPromise, timeoutPromise]);
+    // FIX: Explicitly type the API response to resolve 'unknown' type from Promise.race.
+    const primaryResponse: GenerateContentResponse = await Promise.race([primaryApiCallPromise, timeoutPromise]);
     
     onStatusUpdate('Step 1/2: Received response, parsing synchronized data...');
     const primaryText = primaryResponse.text.trim();
@@ -342,7 +384,8 @@ export const generateKaraokeData = async (
         },
     });
 
-    const translationResponse = await retryWithBackoff(
+    // FIX: Explicitly type the API response to resolve 'unknown' type.
+    const translationResponse: GenerateContentResponse = await retryWithBackoff(
       translationApiCall, 3, 1000,
       (attempt) => {
         console.warn(`Translation alignment API call failed on attempt ${attempt}. Retrying...`);
@@ -426,7 +469,8 @@ export const refineKaraokeData = async (
       setTimeout(() => reject(new Error("The refinement request timed out after 5 minutes.")), 300000)
     );
     
-    const response = await Promise.race([apiCallPromise, timeoutPromise]);
+    // FIX: Explicitly type the API response to resolve 'unknown' type from Promise.race.
+    const response: GenerateContentResponse = await Promise.race([apiCallPromise, timeoutPromise]);
     
     onStatusUpdate('Received refined data, parsing final result...');
     const text = response.text.trim();
@@ -444,6 +488,81 @@ export const refineKaraokeData = async (
 
   } catch (error) {
      console.error("Error during karaoke refinement process:", error);
+    if (error instanceof Error && (error.message.includes("JSON format") || error.message.includes("empty response") || error.message.includes("timed out"))) {
+        throw error;
+    }
+    throw new Error(parseGoogleGenerativeAIError(error));
+  }
+};
+
+export const refineTranslatedKaraokeData = async (
+  audioFile: File,
+  translatedDataToRefine: KaraokeData,
+  originalRefinedData: KaraokeData,
+  translatedLangName: string,
+  originalLangName: string,
+  onStatusUpdate: (message: string) => void,
+): Promise<KaraokeData> => {
+  if (!process.env.API_KEY) {
+    throw new Error("API_KEY environment variable is not set.");
+  }
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
+  try {
+    onStatusUpdate('Preparing audio for alignment...');
+    const audioPart = await fileToGenerativePart(audioFile);
+    
+    onStatusUpdate('Constructing AI alignment prompt...');
+    const refinementPrompt = buildTranslatedRefinementPrompt(
+      translatedDataToRefine,
+      originalRefinedData,
+      translatedLangName,
+      originalLangName
+    );
+    const textPart = { text: refinementPrompt };
+    
+    const model = 'gemini-2.5-pro';
+    onStatusUpdate(`Sending data to AI for timing alignment. This can take several minutes...`);
+
+    const apiCall = () => ai.models.generateContent({
+      model: model,
+      contents: [{ parts: [textPart, audioPart] }],
+      config: {
+        responseMimeType: 'application/json',
+        responseSchema: singleLanguageSchema,
+      },
+    });
+
+    const apiCallPromise = retryWithBackoff(
+      apiCall, 3, 2000,
+      (attempt) => {
+        console.warn(`Alignment API call failed on attempt ${attempt}. Retrying...`);
+        onStatusUpdate(`Alignment failed, attempting to reconnect... (Attempt ${attempt + 1}/3)`);
+      }
+    );
+    
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("The alignment request timed out after 5 minutes.")), 300000)
+    );
+    
+    const response: GenerateContentResponse = await Promise.race([apiCallPromise, timeoutPromise]);
+    
+    onStatusUpdate('Received aligned data, parsing final result...');
+    const text = response.text.trim();
+    if (!text) {
+        throw new Error("The AI model returned an empty response during the alignment pass.");
+    }
+    
+    try {
+        const alignedData = JSON.parse(text);
+        return alignedData as KaraokeData;
+    } catch (parseError) {
+        console.error("Failed to parse JSON response from alignment pass:", text);
+        throw new Error("The AI model's response during alignment was not in the expected JSON format.");
+    }
+
+  } catch (error) {
+    console.error("Error during karaoke alignment process:", error);
     if (error instanceof Error && (error.message.includes("JSON format") || error.message.includes("empty response") || error.message.includes("timed out"))) {
         throw error;
     }
@@ -487,7 +606,8 @@ Translated Lyrics:
       contents: prompt,
     });
     
-    const response = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
+    // FIX: Explicitly type the API response to resolve 'unknown' type.
+    const response: GenerateContentResponse = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
       console.warn(`Translation API call failed on attempt ${attempt}. Retrying...`);
     });
 
@@ -515,28 +635,38 @@ export const generateVocabularyList = async (
   const model = 'gemini-2.5-flash';
 
   const prompt = `
-You are an expert language tutor specializing in teaching Spanish to native English speakers.
-Your task is to analyze a set of song lyrics and extract key vocabulary words that would be most beneficial for an intermediate learner.
+You are an expert cultural linguist, specializing in teaching the nuances of modern Spanish slang and idioms to English speakers through popular music.
+Your task is to analyze a song's lyrics and extract the most culturally significant vocabulary, prioritizing slang and phrases that a typical textbook would miss.
 
 **Input Data:**
 - Spanish Lyrics:
   ---
   ${spanishLyrics}
   ---
-- English Lyrics (for context):
+- English Lyrics (for contextual understanding):
   ---
   ${englishLyrics}
   ---
 
+**Core Mission: Uncover the "Street Smarts"**
+
+Your goal is to identify 10-15 Spanish terms or phrases from the lyrics that are prime examples of:
+-   **Popular Slang & Colloquialisms:** Words or phrases used in informal, everyday conversation.
+-   **Idiomatic Expressions:** Phrases where the meaning isn't deducible from the individual words (e.g., "tomar el pelo").
+-   **Culturally-Specific Context:** Words that have a deeper meaning or connotation within the culture that might be lost in a direct translation.
+-   **Poetic or Figurative Language:** Metaphors or creative word uses that are key to the song's artistic expression.
+
+**Crucially, AVOID simple, common vocabulary** that would be found in a beginner's textbook (e.g., avoid words like 'y', 'el', 'casa', 'ser', 'estar' unless they are used in a very unique idiomatic way).
+
 **Task Instructions:**
 
-1.  Identify 10-15 key Spanish vocabulary terms from the lyrics. Focus on words that are common, useful, or represent important concepts in the song.
-2.  For each term, provide the following information:
-    - \`term\`: An object containing the Spanish word in its base form (\`spanish\`) and its direct, corresponding English translation (\`english\`).
-    - \`definition\`: A concise and accurate English definition of the Spanish term.
-    - \`difficulty\`: An integer score from 1 (very common, beginner) to 10 (rare, advanced) representing the word's difficulty for an English speaker.
-    - \`example\`: An object containing the full, original line from the Spanish lyrics where the word appears (\`spanish\`) and its corresponding English translation (\`english\`).
-    - \`highlight\`: An object containing the exact Spanish word as it appears in the example sentence (\`spanish\`), and its corresponding English translated word (\`english\`). This is crucial for accurate highlighting.
+For each identified term/phrase, provide the following structured information:
+
+-   \`term\`: An object containing the Spanish term/phrase (\`spanish\`) and its closest English equivalent (\`english\`), which might be a literal translation or a slang equivalent.
+-   \`definition\`: This is the most important part. Provide a clear English explanation of the term's literal meaning AND its contextual, slang, or idiomatic usage in the song. Explain *why* it's interesting, what cultural subtext it carries, or how a native speaker would interpret it in this context.
+-   \`difficulty\`: An integer from 1 to 10. This score should not represent how common the word is, but rather how *non-obvious* its meaning is to a non-native speaker. A 1 would be slightly nuanced, while a 10 would be a very specific or obscure slang term that is almost impossible to guess.
+-   \`example\`: An object containing the full, original line from the Spanish lyrics where the word appears (\`spanish\`) and its corresponding English translation (\`english\`).
+-   \`highlight\`: An object containing the exact Spanish word/phrase as it appears in the example sentence (\`spanish\`), and its corresponding English translated word/phrase (\`english\`). This is crucial for accurate highlighting.
 
 **Output Format:**
 You MUST return a single, minified JSON object that strictly follows the provided schema. The output should be an array of vocabulary item objects.
@@ -610,7 +740,8 @@ Do not include any other text, explanations, or markdown formatting.
       },
     });
     
-    const response = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
+    // FIX: Explicitly type the API response to resolve 'unknown' type.
+    const response: GenerateContentResponse = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
       console.warn(`Vocabulary API call failed on attempt ${attempt}. Retrying...`);
     });
     

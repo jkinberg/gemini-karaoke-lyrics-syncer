@@ -5,6 +5,7 @@ import {
   generateVocabularyList,
   translateLyrics,
   refineKaraokeData,
+  refineTranslatedKaraokeData,
 } from './services/geminiService';
 import { KaraokeApiResponse, KaraokeData, KaraokeSegment, KaraokeWord, VocabularyItem } from './types';
 import { testCase } from './test-data';
@@ -317,7 +318,7 @@ const App: React.FC = () => {
                         <TabNav activeTab={activeTab} setActiveTab={setActiveTab} hasVocab={!!vocabularyList} />
                         <div className="mt-6">
                             {activeTab === 'preview' && audioFile && <KaraokePreview karaokeData={karaokeData} audioFile={audioFile} />}
-                            {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile}/>}
+                            {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow}/>}
                             {activeTab === 'vocab' && vocabularyList && <VocabularyDisplay vocabularyList={vocabularyList} />}
                         </div>
                          <div className="text-center mt-8">
@@ -664,36 +665,74 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, o
 };
 
 
-const KaraokeDataDisplay: React.FC<{ karaokeData: KaraokeApiResponse, setKaraokeData: (data: KaraokeApiResponse) => void, audioFile: File | null }> = ({ karaokeData, setKaraokeData, audioFile }) => {
-  const [isRefining, setIsRefining] = useState<{ spanish?: boolean, english?: boolean }>({});
-  const [refineStatus, setRefineStatus] = useState<{ spanish?: string, english?: string }>({});
+const KaraokeDataDisplay: React.FC<{ karaokeData: KaraokeApiResponse, setKaraokeData: (data: KaraokeApiResponse) => void, audioFile: File | null, languageFlow: 'es-en' | 'en-es' }> = ({ karaokeData, setKaraokeData, audioFile, languageFlow }) => {
+  const [isRefining, setIsRefining] = useState(false);
+  const [refineStatus, setRefineStatus] = useState('');
+  const [refineProgress, setRefineProgress] = useState(0);
 
-  const handleRefine = async (lang: 'spanish' | 'english') => {
+  const handleRefineBoth = async () => {
     if (!audioFile) {
-      alert("Audio file is missing.");
+      alert("Audio file is missing. Cannot start refinement.");
       return;
     }
+
+    setIsRefining(true);
+    setRefineProgress(0);
+
+    const originalLangIsSpanish = languageFlow === 'es-en';
+    const originalLangName = originalLangIsSpanish ? 'Spanish' : 'English';
+    const translatedLangName = originalLangIsSpanish ? 'English' : 'Spanish';
     
-    setIsRefining(prev => ({ ...prev, [lang]: true }));
-    setRefineStatus(prev => ({ ...prev, [lang]: 'Starting refinement...' }));
+    const originalDataKey = originalLangIsSpanish ? 'spanish' : 'english';
+    const translatedDataKey = originalLangIsSpanish ? 'english' : 'spanish';
+
 
     try {
-      const dataToRefine = karaokeData[lang];
-      const langName = lang === 'spanish' ? 'Spanish' : 'English';
-      const refinedData = await refineKaraokeData(audioFile, dataToRefine, langName, (status) => {
-        setRefineStatus(prev => ({ ...prev, [lang]: status }));
+      // Step 1: Refine Original Language
+      setRefineStatus(`Step 1/2: Refining ${originalLangName} lyrics against audio...`);
+      setRefineProgress(10);
+      const originalDataToRefine = karaokeData[originalDataKey];
+      const refinedOriginalData = await refineKaraokeData(audioFile, originalDataToRefine, originalLangName, (status) => {
+        setRefineStatus(`Step 1/2: Refining ${originalLangName} - ${status}`);
+        if (status.toLowerCase().includes('sending data')) setRefineProgress(25);
+      });
+      setRefineProgress(50);
+      
+      const updatedDataAfterStep1 = { ...karaokeData, [originalDataKey]: refinedOriginalData };
+      setKaraokeData(updatedDataAfterStep1);
+      setRefineStatus(`${originalLangName} refinement complete!`);
+
+
+      // Step 2: Refine Translated Language (Timing Alignment)
+      setRefineStatus(`Step 2/2: Aligning ${translatedLangName} translation timing...`);
+      setRefineProgress(60);
+      const translatedDataToRefine = karaokeData[translatedDataKey];
+      const refinedTranslatedData = await refineTranslatedKaraokeData(
+        audioFile, 
+        translatedDataToRefine, 
+        refinedOriginalData, 
+        translatedLangName,
+        originalLangName,
+        (status) => {
+          setRefineStatus(`Step 2/2: Aligning ${translatedLangName} - ${status}`);
+          if (status.toLowerCase().includes('sending data')) setRefineProgress(75);
       });
       
-      setKaraokeData({
-        ...karaokeData,
-        [lang]: refinedData
+      setKaraokeData({ 
+        ...updatedDataAfterStep1,
+        [translatedDataKey]: refinedTranslatedData 
       });
+
+      setRefineProgress(100);
+      setRefineStatus('Refinement complete! Both language files have been updated.');
 
     } catch (err) {
       alert(`Error during refinement: ${(err as Error).message}`);
+      setRefineStatus(`Error: ${(err as Error).message}`);
     } finally {
-      setIsRefining(prev => ({ ...prev, [lang]: false }));
-      setRefineStatus(prev => ({ ...prev, [lang]: 'Refinement complete!' }));
+      setTimeout(() => {
+        setIsRefining(false);
+      }, 5000); // Keep success/error message visible for 5 seconds
     }
   };
 
@@ -737,14 +776,10 @@ const KaraokeDataDisplay: React.FC<{ karaokeData: KaraokeApiResponse, setKaraoke
             <div className="flex justify-between items-center mb-2">
                 <h3 className="text-lg font-bold text-textPrimary">{lang === 'spanish' ? 'Spanish' : 'English'} Karaoke Data</h3>
                  <div className="flex items-center gap-2">
-                    <ActionButton onClick={() => handleRefine(lang)} disabled={isRefining[lang]} className="px-3 py-1 text-sm">
-                       {isRefining[lang] ? 'Refining...' : 'Refine with AI Review'}
-                    </ActionButton>
                     <button onClick={copyJson} className="p-2 rounded-md hover:bg-white/20 transition"><Icon path="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.153 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM10.5 16.5h-1.5" className="w-5 h-5" /></button>
                     <button onClick={downloadJson} className="p-2 rounded-md hover:bg-white/20 transition"><Icon path="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" className="w-5 h-5" /></button>
                 </div>
             </div>
-            {isRefining[lang] && <p className="text-sm text-secondary mb-2">{refineStatus[lang]}</p>}
             <pre className="w-full text-xs bg-black/40 p-3 rounded-md h-96 overflow-auto text-slate-300">
                 {JSON.stringify(data, null, 2)}
             </pre>
@@ -754,12 +789,25 @@ const KaraokeDataDisplay: React.FC<{ karaokeData: KaraokeApiResponse, setKaraoke
   
   return (
       <div className="space-y-4">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-wrap justify-between items-center gap-4">
             <h2 className="text-2xl font-bold">Generated Data Files</h2>
-            <ActionButton onClick={handleDownloadAll} icon="M9 0l-9 9h6v15h6v-15h6z">
-               Download All (.zip)
-            </ActionButton>
+            <div className="flex items-center gap-4">
+              <ActionButton onClick={handleRefineBoth} disabled={isRefining} icon="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" className="px-4 py-2 text-base">
+                {isRefining ? 'Refining...' : 'Refine Both with AI Review'}
+              </ActionButton>
+              <ActionButton onClick={handleDownloadAll} icon="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" className="px-4 py-2 text-base">
+                Download All (.zip)
+              </ActionButton>
+            </div>
           </div>
+          {isRefining && (
+            <div className="p-4 bg-black/30 rounded-lg">
+                <p className="text-textSecondary mb-2 text-center">{refineStatus}</p>
+                <div className="w-full bg-black/40 rounded-full h-2.5">
+                    <div className="bg-secondary h-2.5 rounded-full transition-all duration-500" style={{ width: `${refineProgress}%` }}></div>
+                </div>
+            </div>
+          )}
           <div className="space-y-4 md:space-y-0 md:flex md:gap-6">
               <JsonDisplay lang="spanish" data={karaokeData.spanish} />
               <JsonDisplay lang="english" data={karaokeData.english} />
