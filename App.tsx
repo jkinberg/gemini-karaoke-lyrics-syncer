@@ -137,6 +137,7 @@ const App: React.FC = () => {
 
     // Human-in-the-loop state for manual timing adjustment
     const [adjustmentTarget, setAdjustmentTarget] = useState<{ lang: 'spanish' | 'english'; index: number } | null>(null);
+    const [playRequest, setPlayRequest] = useState<{ startTimeMs: number, endTimeMs: number } | null>(null);
 
 
     useEffect(() => {
@@ -152,6 +153,12 @@ const App: React.FC = () => {
         })
         .catch(() => setBuildTimestamp('N/A'));
     }, []);
+
+    useEffect(() => {
+        if (playRequest) {
+            setActiveTab('preview');
+        }
+    }, [playRequest]);
 
     const clearAll = () => {
         setAudioFile(null);
@@ -236,9 +243,7 @@ const App: React.FC = () => {
             
             onStatusUpdate('Generating vocabulary list...');
             setProgress(90);
-            const spanishTextForVocab = result.spanish.segments.filter(s => s.type === 'LYRIC' && s.text).map(s => s.text).join('\n');
-            const englishTextForVocab = result.english.segments.filter(s => s.type === 'LYRIC' && s.text).map(s => s.text).join('\n');
-            const vocab = await generateVocabularyList(spanishTextForVocab, englishTextForVocab);
+            const vocab = await generateVocabularyList(result.spanish, result.english);
             setVocabularyList(vocab);
 
             setStatusMessage('Process complete!');
@@ -362,9 +367,9 @@ const App: React.FC = () => {
                     <div className="p-4 sm:p-8">
                         <TabNav activeTab={activeTab} setActiveTab={setActiveTab} hasVocab={!!vocabularyList} />
                         <div className="mt-6">
-                            {activeTab === 'preview' && audioFile && <KaraokePreview karaokeData={karaokeData} audioFile={audioFile} adjustmentTarget={adjustmentTarget} onSetAdjustmentTarget={setAdjustmentTarget} onApplyTimingShift={handleApplyTimingShift} />}
+                            {activeTab === 'preview' && audioFile && <KaraokePreview karaokeData={karaokeData} audioFile={audioFile} adjustmentTarget={adjustmentTarget} onSetAdjustmentTarget={setAdjustmentTarget} onApplyTimingShift={handleApplyTimingShift} playRequest={playRequest} onPlayRequestComplete={() => setPlayRequest(null)} />}
                             {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow} />}
-                            {activeTab === 'vocab' && vocabularyList && <VocabularyDisplay vocabularyList={vocabularyList} />}
+                            {activeTab === 'vocab' && vocabularyList && <VocabularyDisplay vocabularyList={vocabularyList} onPlayRequest={setPlayRequest} />}
                         </div>
                          <div className="text-center mt-8">
                             <button onClick={clearAll} className="bg-white/10 text-textSecondary px-6 py-2 rounded-lg hover:bg-white/20 transition">Start Over</button>
@@ -452,10 +457,12 @@ interface KaraokePreviewProps {
   adjustmentTarget: { lang: 'spanish' | 'english'; index: number } | null;
   onSetAdjustmentTarget: (target: { lang: 'spanish' | 'english'; index: number } | null) => void;
   onApplyTimingShift: (deltaMs: number) => void;
+  playRequest: { startTimeMs: number, endTimeMs: number } | null;
+  onPlayRequestComplete: () => void;
 }
 
 
-const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile, adjustmentTarget, onSetAdjustmentTarget, onApplyTimingShift }) => {
+const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile, adjustmentTarget, onSetAdjustmentTarget, onApplyTimingShift, playRequest, onPlayRequestComplete }) => {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
@@ -471,6 +478,44 @@ const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile,
     const sourceNodeRef = useRef<MediaElementAudioSourceNode | null>(null);
 
     const audioUrl = useMemo(() => URL.createObjectURL(audioFile), [audioFile]);
+
+    const animate = useCallback(() => {
+        if (audioRef.current) {
+            setCurrentTime(audioRef.current.currentTime);
+        }
+        
+        // --- Visualizer Drawing Logic ---
+        if (analyserRef.current && canvasRef.current) {
+            const analyser = analyserRef.current;
+            const canvas = canvasRef.current;
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
+            
+            const bufferLength = analyser.frequencyBinCount;
+            const dataArray = new Uint8Array(bufferLength);
+            analyser.getByteFrequencyData(dataArray);
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const barWidth = (canvas.width / bufferLength) * 2.5;
+            let x = 0;
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            gradient.addColorStop(0, '#10B981'); // secondary
+            gradient.addColorStop(1, '#1E40AF'); // primary
+
+            for (let i = 0; i < bufferLength; i++) {
+                const barHeight = dataArray[i];
+                
+                ctx.fillStyle = gradient;
+                ctx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight / 2);
+                
+                x += barWidth + 1;
+            }
+        }
+        
+        animationFrameRef.current = requestAnimationFrame(animate);
+    }, []);
 
     useEffect(() => {
         const audio = audioRef.current;
@@ -519,44 +564,52 @@ const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile,
       }
     }, [tempAdjustmentTime]);
 
+    useEffect(() => {
+        const audio = audioRef.current;
+        if (!playRequest || !audio) return;
 
-    const animate = useCallback(() => {
-        if (audioRef.current) {
-            setCurrentTime(audioRef.current.currentTime);
+        // Ensure audio context is ready
+        setupAudioContext();
+        if (audioContextRef.current && audioContextRef.current.state === 'suspended') {
+            audioContextRef.current.resume();
         }
+
+        audio.currentTime = playRequest.startTimeMs / 1000;
         
-        // --- Visualizer Drawing Logic ---
-        if (analyserRef.current && canvasRef.current) {
-            const analyser = analyserRef.current;
-            const canvas = canvasRef.current;
-            const ctx = canvas.getContext('2d');
-            if (!ctx) return;
-            
-            const bufferLength = analyser.frequencyBinCount;
-            const dataArray = new Uint8Array(bufferLength);
-            analyser.getByteFrequencyData(dataArray);
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            const barWidth = (canvas.width / bufferLength) * 2.5;
-            let x = 0;
-            
-            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-            gradient.addColorStop(0, '#10B981'); // secondary
-            gradient.addColorStop(1, '#1E40AF'); // primary
-
-            for (let i = 0; i < bufferLength; i++) {
-                const barHeight = dataArray[i];
-                
-                ctx.fillStyle = gradient;
-                ctx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight / 2);
-                
-                x += barWidth + 1;
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            setIsPlaying(true);
+            if (!animationFrameRef.current) {
+              animationFrameRef.current = requestAnimationFrame(animate);
             }
+          }).catch(error => {
+            console.error("Audio playback failed:", error);
+            setIsPlaying(false); // If play fails, reflect it in the state
+            onPlayRequestComplete();
+          });
         }
+
+        const checkEndTime = () => {
+          if (audio.currentTime * 1000 >= playRequest.endTimeMs) {
+            audio.pause();
+            setIsPlaying(false);
+            if (animationFrameRef.current) {
+              cancelAnimationFrame(animationFrameRef.current);
+              animationFrameRef.current = null;
+            }
+            onPlayRequestComplete();
+          }
+        };
         
-        animationFrameRef.current = requestAnimationFrame(animate);
-    }, []);
+        audio.addEventListener('timeupdate', checkEndTime);
+
+        return () => {
+          audio.removeEventListener('timeupdate', checkEndTime);
+        };
+
+    }, [playRequest, onPlayRequestComplete, animate]);
+
 
     const setupAudioContext = () => {
         if (!audioContextRef.current && audioRef.current) {
@@ -1015,8 +1068,12 @@ const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, se
   );
 };
 
+interface VocabularyDisplayProps {
+  vocabularyList: VocabularyItem[];
+  onPlayRequest: (request: { startTimeMs: number, endTimeMs: number }) => void;
+}
 
-const VocabularyDisplay: React.FC<{ vocabularyList: VocabularyItem[] }> = ({ vocabularyList }) => {
+const VocabularyDisplay: React.FC<VocabularyDisplayProps> = ({ vocabularyList, onPlayRequest }) => {
     const downloadFile = (format: 'json' | 'csv') => {
         let dataStr: string;
         let fileName: string;
@@ -1095,6 +1152,7 @@ const VocabularyDisplay: React.FC<{ vocabularyList: VocabularyItem[] }> = ({ voc
                             <th className="p-3">Definition</th>
                             <th className="p-3">Example from Lyrics</th>
                             <th className="p-3 text-center">Difficulty</th>
+                            <th className="p-3 text-center w-20">Play</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1115,6 +1173,15 @@ const VocabularyDisplay: React.FC<{ vocabularyList: VocabularyItem[] }> = ({ voc
                                     <div className="w-full bg-black/40 rounded-full h-2.5 mt-1">
                                         <div className="bg-secondary h-2.5 rounded-full" style={{ width: `${item.difficulty * 10}%` }}></div>
                                     </div>
+                                </td>
+                                <td className="p-3 align-top text-center">
+                                  <button
+                                    onClick={() => onPlayRequest({ startTimeMs: item.startTimeMs, endTimeMs: item.endTimeMs })}
+                                    className="p-2 rounded-full bg-secondary/20 text-secondary hover:bg-secondary hover:text-background transition transform hover:scale-110"
+                                    title="Play audio for this line"
+                                  >
+                                    <Icon path="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" className="w-5 h-5" />
+                                  </button>
                                 </td>
                             </tr>
                         ))}

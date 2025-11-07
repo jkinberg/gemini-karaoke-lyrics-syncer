@@ -47,4 +47,6 @@ export interface VocabularyItem {
     spanish: string;
     english: string;
   };
+  startTimeMs: number;
+  endTimeMs: number;
 }

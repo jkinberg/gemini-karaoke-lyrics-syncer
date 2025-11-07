@@ -624,8 +624,8 @@ Translated Lyrics:
 
 
 export const generateVocabularyList = async (
-  spanishLyrics: string,
-  englishLyrics: string,
+  spanishKaraokeData: KaraokeData,
+  englishKaraokeData: KaraokeData,
 ): Promise<VocabularyItem[]> => {
   if (!process.env.API_KEY) {
     throw new Error("API_KEY environment variable is not set.");
@@ -639,13 +639,13 @@ You are an expert cultural linguist, specializing in teaching the nuances of mod
 Your task is to analyze a song's lyrics and extract the most culturally significant vocabulary, prioritizing slang and phrases that a typical textbook would miss.
 
 **Input Data:**
-- Spanish Lyrics:
+- Spanish Timed Lyrics Data:
   ---
-  ${spanishLyrics}
+  ${JSON.stringify(spanishKaraokeData)}
   ---
-- English Lyrics (for contextual understanding):
+- English Timed Lyrics Data (for contextual understanding):
   ---
-  ${englishLyrics}
+  ${JSON.stringify(englishKaraokeData)}
   ---
 
 **Core Mission: Uncover the "Street Smarts"**
@@ -667,6 +667,8 @@ For each identified term/phrase, provide the following structured information:
 -   \`difficulty\`: An integer from 1 to 10. This score should not represent how common the word is, but rather how *non-obvious* its meaning is to a non-native speaker. A 1 would be slightly nuanced, while a 10 would be a very specific or obscure slang term that is almost impossible to guess.
 -   \`example\`: An object containing the full, original line from the Spanish lyrics where the word appears (\`spanish\`) and its corresponding English translation (\`english\`).
 -   \`highlight\`: An object containing the exact Spanish word/phrase as it appears in the example sentence (\`spanish\`), and its corresponding English translated word/phrase (\`english\`). This is crucial for accurate highlighting.
+-   \`startTimeMs\`: **CRITICAL:** Find the \`startTimeMs\` of the *very first word* of the highlighted Spanish phrase (\`highlight.spanish\`) within that segment's \`words\` array.
+-   \`endTimeMs\`: **CRITICAL:** Find the \`endTimeMs\` of the *very last word* of the highlighted Spanish phrase (\`highlight.spanish\`) within that segment's \`words\` array. For example, if the example is "Así que vamos a romper" and the highlight is "vamos a romper", you must return the \`startTimeMs\` of the word "vamos" and the \`endTimeMs\` of the word "romper". This is essential for precise audio playback.
 
 **Output Format:**
 You MUST return a single, minified JSON object that strictly follows the provided schema. The output should be an array of vocabulary item objects.
@@ -725,8 +727,16 @@ Do not include any other text, explanations, or markdown formatting.
           },
           required: ['spanish', 'english']
         },
+        startTimeMs: {
+            type: Type.INTEGER,
+            description: "The precise start time in milliseconds of the highlighted term, derived from the source lyric's word-level timing data."
+        },
+        endTimeMs: {
+            type: Type.INTEGER,
+            description: "The precise end time in milliseconds of the highlighted term, derived from the source lyric's word-level timing data."
+        }
       },
-      required: ['term', 'definition', 'difficulty', 'example', 'highlight'],
+      required: ['term', 'definition', 'difficulty', 'example', 'highlight', 'startTimeMs', 'endTimeMs'],
     },
   };
 
