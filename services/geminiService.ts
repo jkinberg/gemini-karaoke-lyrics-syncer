@@ -667,8 +667,8 @@ For each identified term/phrase, provide the following structured information:
 -   \`difficulty\`: An integer from 1 to 10. This score should not represent how common the word is, but rather how *non-obvious* its meaning is to a non-native speaker. A 1 would be slightly nuanced, while a 10 would be a very specific or obscure slang term that is almost impossible to guess.
 -   \`example\`: An object containing the full, original line from the Spanish lyrics where the word appears (\`spanish\`) and its corresponding English translation (\`english\`).
 -   \`highlight\`: An object containing the exact Spanish word/phrase as it appears in the example sentence (\`spanish\`), and its corresponding English translated word/phrase (\`english\`). This is crucial for accurate highlighting.
--   \`startTimeMs\`: **CRITICAL:** Find the \`startTimeMs\` of the *very first word* of the highlighted Spanish phrase (\`highlight.spanish\`) within that segment's \`words\` array.
--   \`endTimeMs\`: **CRITICAL:** Find the \`endTimeMs\` of the *very last word* of the highlighted Spanish phrase (\`highlight.spanish\`) within that segment's \`words\` array. For example, if the example is "Así que vamos a romper" and the highlight is "vamos a romper", you must return the \`startTimeMs\` of the word "vamos" and the \`endTimeMs\` of the word "romper". This is essential for precise audio playback.
+-   \`startTimeMs\`: **CRITICAL:** Find the \`startTimeMs\` of the *entire segment* (the full lyric line) where the term appears. This value should come directly from the \`startTimeMs\` of the corresponding segment object in the Spanish Timed Lyrics Data.
+-   \`endTimeMs\`: **CRITICAL:** Find the \`endTimeMs\` of the *entire segment* (the full lyric line) where the term appears. This value should come directly from the \`endTimeMs\` of the corresponding segment object in the Spanish Timed Lyrics Data. For example, if the example is "Así que vamos a romper" and that line corresponds to a segment with \`startTimeMs: 16000\` and \`endTimeMs: 17800\`, you must return these exact values.
 
 **Output Format:**
 You MUST return a single, minified JSON object that strictly follows the provided schema. The output should be an array of vocabulary item objects.
@@ -729,11 +729,11 @@ Do not include any other text, explanations, or markdown formatting.
         },
         startTimeMs: {
             type: Type.INTEGER,
-            description: "The precise start time in milliseconds of the highlighted term, derived from the source lyric's word-level timing data."
+            description: "The start time in milliseconds of the entire lyric line (segment) where the term appears."
         },
         endTimeMs: {
             type: Type.INTEGER,
-            description: "The precise end time in milliseconds of the highlighted term, derived from the source lyric's word-level timing data."
+            description: "The end time in milliseconds of the entire lyric line (segment) where the term appears."
         }
       },
       required: ['term', 'definition', 'difficulty', 'example', 'highlight', 'startTimeMs', 'endTimeMs'],
