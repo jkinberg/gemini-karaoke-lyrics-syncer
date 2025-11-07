@@ -160,6 +160,49 @@ const App: React.FC = () => {
         }
     }, [playRequest]);
 
+    // FIX: This effect automatically synchronizes vocabulary timecodes and example text
+    // with the karaoke data whenever the karaoke data is refined or adjusted.
+    useEffect(() => {
+        // Run only when both data sets are available
+        if (karaokeData && vocabularyList?.length) {
+
+            const newVocabularyList = vocabularyList.map(item => {
+                // The segmentIndex is 1-based, while the segments array is 0-based
+                const segmentIndex = item.segmentIndex - 1;
+                if (segmentIndex < 0 || segmentIndex >= karaokeData.spanish.segments.length) {
+                    return item; // Return original if index is out of bounds
+                }
+
+                const spanishSegment = karaokeData.spanish.segments[segmentIndex];
+                const englishSegment = karaokeData.english.segments[segmentIndex];
+
+                // Check if an update is needed to avoid unnecessary re-renders
+                if (spanishSegment.startTimeMs !== item.startTimeMs ||
+                    spanishSegment.endTimeMs !== item.endTimeMs ||
+                    (spanishSegment.text && spanishSegment.text !== item.example.spanish)) {
+                    
+                    return {
+                        ...item,
+                        startTimeMs: spanishSegment.startTimeMs,
+                        endTimeMs: spanishSegment.endTimeMs,
+                        example: {
+                            spanish: spanishSegment.text || item.example.spanish,
+                            english: englishSegment?.text || item.example.english,
+                        },
+                    };
+                }
+                
+                return item; // No changes needed
+            });
+
+            // Only update state if the list has actually changed to prevent infinite loops
+            if (JSON.stringify(newVocabularyList) !== JSON.stringify(vocabularyList)) {
+                console.log("Vocabulary has been re-synced with updated karaoke data.");
+                setVocabularyList(newVocabularyList);
+            }
+        }
+    }, [karaokeData, vocabularyList]);
+
     const clearAll = () => {
         setAudioFile(null);
         setSpanishLyrics('');

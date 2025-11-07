@@ -49,4 +49,5 @@ export interface VocabularyItem {
   };
   startTimeMs: number;
   endTimeMs: number;
+  segmentIndex: number;
 }

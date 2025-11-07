@@ -669,6 +669,7 @@ For each identified term/phrase, provide the following structured information:
 -   \`highlight\`: An object containing the exact Spanish word/phrase as it appears in the example sentence (\`spanish\`), and its corresponding English translated word/phrase (\`english\`). This is crucial for accurate highlighting.
 -   \`startTimeMs\`: **CRITICAL:** Find the \`startTimeMs\` of the *entire segment* (the full lyric line) where the term appears. This value should come directly from the \`startTimeMs\` of the corresponding segment object in the Spanish Timed Lyrics Data.
 -   \`endTimeMs\`: **CRITICAL:** Find the \`endTimeMs\` of the *entire segment* (the full lyric line) where the term appears. This value should come directly from the \`endTimeMs\` of the corresponding segment object in the Spanish Timed Lyrics Data. For example, if the example is "Así que vamos a romper" and that line corresponds to a segment with \`startTimeMs: 16000\` and \`endTimeMs: 17800\`, you must return these exact values.
+-   \`segmentIndex\`: **CRITICAL:** Find the \`segmentIndex\` of the segment where the term appears. This value should come directly from the corresponding segment object in the Spanish Timed Lyrics Data.
 
 **Output Format:**
 You MUST return a single, minified JSON object that strictly follows the provided schema. The output should be an array of vocabulary item objects.
@@ -734,9 +735,13 @@ Do not include any other text, explanations, or markdown formatting.
         endTimeMs: {
             type: Type.INTEGER,
             description: "The end time in milliseconds of the entire lyric line (segment) where the term appears."
+        },
+        segmentIndex: {
+            type: Type.INTEGER,
+            description: "The index of the segment from the original data where the example line is found."
         }
       },
-      required: ['term', 'definition', 'difficulty', 'example', 'highlight', 'startTimeMs', 'endTimeMs'],
+      required: ['term', 'definition', 'difficulty', 'example', 'highlight', 'startTimeMs', 'endTimeMs', 'segmentIndex'],
     },
   };
 
