@@ -135,6 +135,10 @@ const App: React.FC = () => {
     const [vocabularyList, setVocabularyList] = useState<VocabularyItem[] | null>(null);
     const [activeTab, setActiveTab] = useState<'preview' | 'data' | 'vocab'>('preview');
 
+    // Human-in-the-loop state for manual timing adjustment
+    const [adjustmentTarget, setAdjustmentTarget] = useState<{ lang: 'spanish' | 'english'; index: number } | null>(null);
+
+
     useEffect(() => {
       // Fetch build timestamp on mount
       fetch('/App.tsx', { method: 'HEAD' })
@@ -159,6 +163,7 @@ const App: React.FC = () => {
         setStatusMessage('');
         setIsLoading(false);
         setProgress(0);
+        setAdjustmentTarget(null);
     };
 
     const handleTranslate = async () => {
@@ -202,6 +207,7 @@ const App: React.FC = () => {
         setError(null);
         setKaraokeData(null);
         setVocabularyList(null);
+        setAdjustmentTarget(null);
         setProgress(0);
 
         // Simulate progress
@@ -245,6 +251,45 @@ const App: React.FC = () => {
         }
     };
     
+    // FIX: Wrapped handleApplyTimingShift in useCallback to prevent stale closures.
+    // This ensures the function always has access to the latest karaokeData and adjustmentTarget state,
+    // fixing the bug where manual timing adjustments were not being applied correctly.
+    const handleApplyTimingShift = useCallback((deltaMs: number) => {
+      if (!adjustmentTarget || !karaokeData) return;
+  
+      const { index } = adjustmentTarget;
+  
+      const shiftTimestamps = (data: KaraokeData): KaraokeData => {
+          const newSegments = data.segments.map((segment, i) => {
+              if (i < index) {
+                  return segment; // Return segment as-is if it's before the anchor point
+              }
+  
+              const newSegment: KaraokeSegment = {
+                  ...segment,
+                  startTimeMs: segment.startTimeMs + deltaMs,
+                  endTimeMs: segment.endTimeMs + deltaMs,
+                  words: segment.words?.map(word => ({
+                      ...word,
+                      startTimeMs: word.startTimeMs + deltaMs,
+                      endTimeMs: word.endTimeMs + deltaMs,
+                  }))
+              };
+              return newSegment;
+          });
+  
+          return { ...data, segments: newSegments };
+      };
+      
+      const newSpanishData = shiftTimestamps(karaokeData.spanish);
+      const newEnglishData = shiftTimestamps(karaokeData.english);
+  
+      setKaraokeData({
+        spanish: newSpanishData,
+        english: newEnglishData,
+      });
+    }, [adjustmentTarget, karaokeData]);
+
     const runDiagnosticTest = () => {
       const { lyrics, karaokeData: testKaraokeData } = testCase;
       setSpanishLyrics(lyrics.spanish);
@@ -317,8 +362,8 @@ const App: React.FC = () => {
                     <div className="p-4 sm:p-8">
                         <TabNav activeTab={activeTab} setActiveTab={setActiveTab} hasVocab={!!vocabularyList} />
                         <div className="mt-6">
-                            {activeTab === 'preview' && audioFile && <KaraokePreview karaokeData={karaokeData} audioFile={audioFile} />}
-                            {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow}/>}
+                            {activeTab === 'preview' && audioFile && <KaraokePreview karaokeData={karaokeData} audioFile={audioFile} adjustmentTarget={adjustmentTarget} onSetAdjustmentTarget={setAdjustmentTarget} onApplyTimingShift={handleApplyTimingShift} />}
+                            {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow} />}
                             {activeTab === 'vocab' && vocabularyList && <VocabularyDisplay vocabularyList={vocabularyList} />}
                         </div>
                          <div className="text-center mt-8">
@@ -401,12 +446,23 @@ const TabNav: React.FC<{ activeTab: string, setActiveTab: (tab: any) => void, ha
     );
 };
 
-const KaraokePreview: React.FC<{ karaokeData: KaraokeApiResponse; audioFile: File }> = ({ karaokeData, audioFile }) => {
+interface KaraokePreviewProps {
+  karaokeData: KaraokeApiResponse;
+  audioFile: File;
+  adjustmentTarget: { lang: 'spanish' | 'english'; index: number } | null;
+  onSetAdjustmentTarget: (target: { lang: 'spanish' | 'english'; index: number } | null) => void;
+  onApplyTimingShift: (deltaMs: number) => void;
+}
+
+
+const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile, adjustmentTarget, onSetAdjustmentTarget, onApplyTimingShift }) => {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const animationFrameRef = useRef<number | null>(null);
+    // FIX: State to manage the temporary start time during manual adjustment.
+    const [tempAdjustmentTime, setTempAdjustmentTime] = useState<number | null>(null);
 
     // For Audio Visualizer
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -440,6 +496,29 @@ const KaraokePreview: React.FC<{ karaokeData: KaraokeApiResponse; audioFile: Fil
             }
         };
     }, [audioUrl]);
+
+    // FIX: Effect to initialize the temporary adjustment time when a target is selected.
+    useEffect(() => {
+      if (adjustmentTarget) {
+        const { lang, index } = adjustmentTarget;
+        const segment = karaokeData[lang].segments[index];
+        setTempAdjustmentTime(segment.startTimeMs);
+      } else {
+        setTempAdjustmentTime(null);
+      }
+    }, [adjustmentTarget, karaokeData]);
+
+    // FIX: Effect to sync the audio player's playhead with the temporary adjustment time.
+    useEffect(() => {
+      if (tempAdjustmentTime !== null && audioRef.current) {
+        const newTimeInSeconds = tempAdjustmentTime / 1000;
+        // Check to prevent feedback loop from timeupdate events
+        if (Math.abs(audioRef.current.currentTime - newTimeInSeconds) > 0.1) {
+            audioRef.current.currentTime = newTimeInSeconds;
+        }
+      }
+    }, [tempAdjustmentTime]);
+
 
     const animate = useCallback(() => {
         if (audioRef.current) {
@@ -540,6 +619,11 @@ const KaraokePreview: React.FC<{ karaokeData: KaraokeApiResponse; audioFile: Fil
     return (
         <div className="bg-black/20 p-4 sm:p-6 rounded-lg space-y-4">
             <audio ref={audioRef} src={audioUrl} onEnded={() => setIsPlaying(false)} />
+
+            {/* FIX: Added a new time display in SS.ms format for precise reference. */}
+            <div className="text-center font-mono text-2xl text-textSecondary tracking-wider -mb-2">
+              <span>{(currentTime || 0).toFixed(3)}s</span>
+            </div>
             
             {/* --- Audio Controls --- */}
             <div className="flex items-center gap-4">
@@ -561,6 +645,20 @@ const KaraokePreview: React.FC<{ karaokeData: KaraokeApiResponse; audioFile: Fil
             {/* --- Audio Visualizer Canvas --- */}
             <canvas ref={canvasRef} width="1000" height="100" className="w-full h-[100px] rounded-md"></canvas>
 
+            {/* --- Timing Adjustment Panel --- */}
+            {/* FIX: The panel is now controlled by the new tempAdjustmentTime state. */}
+            {adjustmentTarget && tempAdjustmentTime !== null && (
+              <TimingAdjustmentPanel 
+                karaokeData={karaokeData}
+                adjustmentTarget={adjustmentTarget} 
+                tempAdjustmentTime={tempAdjustmentTime}
+                setTempAdjustmentTime={setTempAdjustmentTime}
+                onApplyShift={onApplyTimingShift} 
+                onCancel={() => onSetAdjustmentTarget(null)}
+                onSeek={handleSeekToTime}
+              />
+            )}
+
             {/* --- Lyric Panels --- */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <LyricPanel
@@ -568,16 +666,85 @@ const KaraokePreview: React.FC<{ karaokeData: KaraokeApiResponse; audioFile: Fil
                     segments={karaokeData.spanish.segments}
                     currentTime={currentTime * 1000}
                     onSeek={handleSeekToTime}
+                    adjustmentTarget={adjustmentTarget}
+                    onSetAdjustmentTarget={onSetAdjustmentTarget}
                 />
                 <LyricPanel
                     title="English"
                     segments={karaokeData.english.segments}
                     currentTime={currentTime * 1000}
                     onSeek={handleSeekToTime}
+                    adjustmentTarget={adjustmentTarget}
+                    onSetAdjustmentTarget={onSetAdjustmentTarget}
                 />
             </div>
         </div>
     );
+};
+
+const TimingAdjustmentPanel: React.FC<{
+  karaokeData: KaraokeApiResponse;
+  adjustmentTarget: { lang: 'spanish' | 'english'; index: number };
+  tempAdjustmentTime: number;
+  setTempAdjustmentTime: (time: number) => void;
+  onApplyShift: (deltaMs: number) => void;
+  onCancel: () => void;
+  onSeek: (timeMs: number) => void;
+}> = ({ karaokeData, adjustmentTarget, tempAdjustmentTime, setTempAdjustmentTime, onApplyShift, onCancel, onSeek }) => {
+  const { lang, index } = adjustmentTarget;
+  const originalSegment = karaokeData[lang].segments[index];
+
+  const handleNudge = (amountMs: number) => {
+    setTempAdjustmentTime(Math.max(0, tempAdjustmentTime + amountMs));
+  };
+  
+  const handleApply = () => {
+    const delta = tempAdjustmentTime - originalSegment.startTimeMs;
+    onApplyShift(delta);
+    onCancel();
+  };
+
+  const nudgeAmounts = [-1000, -100, 100, 1000];
+  const originalTimeFormatted = (originalSegment.startTimeMs / 1000).toFixed(3);
+  const newTimeFormatted = (tempAdjustmentTime / 1000).toFixed(3);
+
+  return (
+    <div className="bg-black/40 p-4 rounded-lg border border-secondary/50 flex flex-wrap items-center justify-between gap-4">
+      <div className="flex-1 min-w-[200px]">
+        <div className="flex items-center gap-2">
+           <Icon path="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" className="w-5 h-5 text-secondary" />
+           <p className="font-bold">Adjusting Timing</p>
+        </div>
+        <p className="text-sm text-textSecondary truncate">
+          Line #{index + 1}: "{originalSegment.text || originalSegment.cueText}"
+        </p>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <span className="text-sm font-mono text-textSecondary" title="Original Start Time">{originalTimeFormatted}s</span>
+         <Icon path="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" className="w-4 h-4 text-textSecondary" />
+        <span 
+          onClick={() => onSeek(tempAdjustmentTime)}
+          className="font-bold text-2xl mx-2 font-mono text-secondary animate-pulse cursor-pointer" 
+          title="Click to seek audio to new start time"
+        >
+          {newTimeFormatted}s
+        </span>
+        <div className="flex items-center gap-1">
+          {nudgeAmounts.map(amount => (
+            <button key={amount} onClick={() => handleNudge(amount)} className="px-2 py-1 text-xs font-bold bg-white/10 rounded-md hover:bg-secondary hover:text-background transition">
+              {amount > 0 ? `+${amount / 1000}` : `${amount / 1000}`}s
+            </button>
+          ))}
+        </div>
+      </div>
+      
+      <div className="flex items-center gap-2">
+        <button onClick={handleApply} className="px-4 py-2 text-sm bg-secondary text-background font-semibold rounded-md hover:bg-green-400 transition">Apply Shift</button>
+        <button onClick={onCancel} className="p-2 rounded-md hover:bg-white/20 transition"><Icon path="M6 18L18 6M6 6l12 12" className="w-5 h-5" /></button>
+      </div>
+    </div>
+  );
 };
 
 interface LyricPanelProps {
@@ -585,11 +752,14 @@ interface LyricPanelProps {
     segments: KaraokeSegment[];
     currentTime: number;
     onSeek: (timeMs: number) => void;
+    adjustmentTarget: { lang: string; index: number } | null;
+    onSetAdjustmentTarget: (target: { lang: 'spanish' | 'english'; index: number } | null) => void;
 }
 
-const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, onSeek }) => {
+const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, onSeek, adjustmentTarget, onSetAdjustmentTarget }) => {
     const activeSegmentIndex = segments.findIndex(seg => currentTime >= seg.startTimeMs && currentTime <= seg.endTimeMs);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const langKey = title.toLowerCase() as 'spanish' | 'english';
 
     useEffect(() => {
         if (activeSegmentIndex === -1 || !scrollContainerRef.current) return;
@@ -604,6 +774,15 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, o
         }
     }, [activeSegmentIndex]);
 
+    const handleSetAdjustmentTarget = (index: number) => {
+      const isCurrentlyTarget = adjustmentTarget?.lang === langKey && adjustmentTarget?.index === index;
+      if (isCurrentlyTarget) {
+        onSetAdjustmentTarget(null); // Toggle off
+      } else {
+        onSetAdjustmentTarget({ lang: langKey, index });
+      }
+    };
+
     const normalizeWord = (word: string) => {
         return word.toLowerCase().replace(/[.,'¡!¿?]/g, '').replace(/-/g, ' ');
     };
@@ -611,52 +790,65 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, o
     return (
         <div className="bg-black/30 p-4 rounded-lg">
             <h3 className="text-lg font-bold text-center mb-4">{title}</h3>
-            <div ref={scrollContainerRef} className="h-48 overflow-y-auto space-y-4 text-center pr-2 relative">
+            <div ref={scrollContainerRef} className="h-48 overflow-y-auto space-y-2 text-center pr-2 relative">
                 {segments.map((segment, index) => {
                     const isActive = index === activeSegmentIndex;
+                    const isAdjustmentTarget = adjustmentTarget?.lang === langKey && adjustmentTarget?.index === index;
+
                     const baseClasses = "text-xl transition-all duration-300 cursor-pointer";
 
-                    if (segment.type === 'INSTRUMENTAL') {
-                        const activeClasses = "text-secondary font-bold";
-                        const inactiveClasses = "text-textSecondary/70";
-                        return (
-                            <p key={index} className={`italic ${baseClasses} ${isActive ? activeClasses : inactiveClasses} ${isActive ? 'scale-110' : 'scale-100'}`}>
-                                {segment.cueText}
-                            </p>
-                        );
+                    let segmentClasses = "";
+                    if (isAdjustmentTarget) {
+                      segmentClasses = "ring-2 ring-secondary rounded-md p-2 box-border";
+                    } else if (adjustmentTarget) {
+                      segmentClasses = "opacity-50";
                     }
-                    
-                    const activeClasses = "text-textPrimary font-bold";
-                    const inactiveClasses = "text-textSecondary";
-
-                    const wordsToHighlight = segment.words || [];
-                    const renderedWords = segment.text?.split(/(\s+)/) || [];
-                    let wordIndex = 0;
 
                     return (
-                        <p key={index} onClick={() => onSeek(segment.startTimeMs)} className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses} ${isActive ? 'scale-110' : 'scale-100'}`}>
-                           {renderedWords.map((part, partIndex) => {
-                                if (/\s+/.test(part)) return <span key={partIndex}>{part}</span>;
-                                if (!part) return null;
+                        <div key={index} className={`flex items-center gap-2 group ${segmentClasses}`}>
+                            <button 
+                              onClick={() => handleSetAdjustmentTarget(index)}
+                              className="opacity-0 group-hover:opacity-75 hover:!opacity-100 transition-opacity text-textSecondary hover:text-secondary"
+                              title="Adjust timing for this line"
+                            >
+                                <Icon path="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" className="w-5 h-5" />
+                            </button>
+                            <div className="flex-1" onClick={() => onSeek(segment.startTimeMs)}>
+                                {segment.type === 'INSTRUMENTAL' ? (
+                                    <p className={`italic ${baseClasses} ${isActive ? 'text-secondary font-bold scale-110' : 'text-textSecondary/70 scale-100'}`}>
+                                        {segment.cueText}
+                                    </p>
+                                ) : (
+                                    <p className={`${baseClasses} ${isActive ? 'text-textPrimary font-bold scale-110' : 'text-textSecondary'}`}>
+                                       {/* FIX: The original logic for finding wordIndex was complex and buggy, causing a "used before declaration" error.
+                                           This has been replaced with a simpler, more robust counter-based approach that correctly handles various lyric formatting issues. */}
+                                       {(() => {
+                                            let wordCounter = 0;
+                                            return (segment.text?.split(/(\s+)/) || []).map((part, partIndex) => {
+                                                if (/\s+/.test(part) || !part) return <span key={partIndex}>{part}</span>;
 
-                                const currentWordData = wordsToHighlight[wordIndex];
-                                wordIndex++;
+                                                const wordIndex = wordCounter++;
+                                                const currentWordData = (segment.words || [])[wordIndex];
 
-                                if (!currentWordData || normalizeWord(part) !== normalizeWord(currentWordData.word)) {
-                                    return <span key={partIndex}>{part}</span>;
-                                }
-                                
-                                const isWordActive = isActive && currentTime >= currentWordData.startTimeMs && currentTime <= currentWordData.endTimeMs;
-                                const isWordSung = isActive && currentTime > currentWordData.endTimeMs;
+                                                if (!currentWordData || normalizeWord(part) !== normalizeWord(currentWordData.word)) {
+                                                    return <span key={partIndex}>{part}</span>;
+                                                }
+                                                
+                                                const isWordActive = isActive && currentTime >= currentWordData.startTimeMs && currentTime <= currentWordData.endTimeMs;
+                                                const isWordSung = isActive && currentTime > currentWordData.endTimeMs;
 
-                                return (
-                                    <span key={partIndex} className={`transition-colors duration-150 
-                                      ${isWordActive ? 'text-secondary' : isWordSung ? 'text-white' : 'text-inherit'}`}>
-                                      {part}
-                                    </span>
-                                );
-                            })}
-                        </p>
+                                                return (
+                                                    <span key={partIndex} className={`transition-colors duration-150 
+                                                      ${isWordActive ? 'text-secondary' : isWordSung ? 'text-white' : 'text-inherit'}`}>
+                                                      {part}
+                                                    </span>
+                                                );
+                                            });
+                                       })()}
+                                    </p>
+                                )}
+                            </div>
+                        </div>
                     );
                 })}
             </div>
@@ -665,7 +857,14 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, o
 };
 
 
-const KaraokeDataDisplay: React.FC<{ karaokeData: KaraokeApiResponse, setKaraokeData: (data: KaraokeApiResponse) => void, audioFile: File | null, languageFlow: 'es-en' | 'en-es' }> = ({ karaokeData, setKaraokeData, audioFile, languageFlow }) => {
+interface KaraokeDataDisplayProps {
+    karaokeData: KaraokeApiResponse;
+    setKaraokeData: (data: KaraokeApiResponse) => void;
+    audioFile: File | null;
+    languageFlow: 'es-en' | 'en-es';
+}
+
+const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, setKaraokeData, audioFile, languageFlow }) => {
   const [isRefining, setIsRefining] = useState(false);
   const [refineStatus, setRefineStatus] = useState('');
   const [refineProgress, setRefineProgress] = useState(0);
@@ -792,8 +991,8 @@ const KaraokeDataDisplay: React.FC<{ karaokeData: KaraokeApiResponse, setKaraoke
           <div className="flex flex-wrap justify-between items-center gap-4">
             <h2 className="text-2xl font-bold">Generated Data Files</h2>
             <div className="flex items-center gap-4">
-              <ActionButton onClick={handleRefineBoth} disabled={isRefining} icon="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" className="px-4 py-2 text-base">
-                {isRefining ? 'Refining...' : 'Refine Both with AI Review'}
+              <ActionButton onClick={handleRefineBoth} disabled={isRefining} icon={"M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"} className="px-4 py-2 text-base">
+                {isRefining ? 'Processing...' : 'Refine Both with AI Review'}
               </ActionButton>
               <ActionButton onClick={handleDownloadAll} icon="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" className="px-4 py-2 text-base">
                 Download All (.zip)

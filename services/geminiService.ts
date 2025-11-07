@@ -170,7 +170,7 @@ export const buildTranslationAlignmentPrompt = (timedOriginalData: KaraokeData, 
   return `
 You are a precise text-transformation engine. Your task is to create a translated karaoke data file by mapping translated lyrics onto an existing, perfectly timed data structure.
 
-**Constraint:** You MUST use the exact same temporal data (\`startTimeMs\`, \`endTimeMs\`, and segment structure) from the provided "Original Timed Data". Do NOT alter any timing values.
+**Constraint:** You MUST use the exact same segment structure from the provided "Original Timed Data". Do NOT alter segment-level timings.
 
 **Input Data:**
 
@@ -187,9 +187,10 @@ You are a precise text-transformation engine. Your task is to create a translate
 **Task Instructions:**
 
 1.  **Map Translation:** Go through the "Original Timed Data" segment by segment.
-2.  **Substitute Text:** For each segment, replace the ${originalLangName} text fields (\`text\`, \`word\`, \`cueText\`) with their corresponding ${translatedLangName} translations from the "Raw Translated Lyrics".
-3.  **Preserve Timings:** Keep all \`startTimeMs\`, \`endTimeMs\`, \`segmentIndex\`, and \`type\` fields identical to the original data.
-4.  **Update Metadata:** Change the \`metadata.language\` field to reflect the new language code ('en-US' or 'es-ES').
+2.  **Substitute Text:** For each segment, replace the ${originalLangName} text fields (\`text\` and \`cueText\`) with their corresponding ${translatedLangName} translations from the "Raw Translated Lyrics".
+3.  **Preserve Segment Timings:** Keep all segment-level \`startTimeMs\`, \`endTimeMs\`, \`segmentIndex\`, and \`type\` fields identical to the original data.
+4.  **Recalculate Word Timings (Critical):** The number of words will likely differ between languages. For each "LYRIC" segment, you must generate a new \`words\` array for the translated text. The new word timings MUST fit within the segment's original \`startTimeMs\` and \`endTimeMs\`. Distribute the timing logically based on the syllables and natural cadence of the translated words. For example, if "Contigo" (startTime: 1000, endTime: 1500) becomes "With you", the new words could be \`[{"word": "With", "startTimeMs": 1000, "endTimeMs": 1250}, {"word": "you", "startTimeMs": 1251, "endTimeMs": 1500}]\`. This is the most important step.
+5.  **Update Metadata:** Change the \`metadata.language\` field to reflect the new language code ('en-US' or 'es-ES').
 
 **Output Format:**
 You MUST return a single, minified JSON object for the ${translatedLangName} version, strictly following the same schema as the input JSON. Do not include any other text, explanations, or markdown.
@@ -271,7 +272,6 @@ You are a precise Temporal Alignment Specialist for multilingual karaoke. Your t
 -   Do not provide text explanations, summaries of your changes, or any text outside of the JSON object.
 `;
 };
-
 
 const parseGoogleGenerativeAIError = (error: any): string => {
     if (typeof error === 'object' && error !== null && 'message' in error) {
@@ -373,7 +373,8 @@ export const generateKaraokeData = async (
     onStatusUpdate(`Step 2/2: Mapping ${translatedLangName} translation onto synchronized timeline...`);
     
     const translationPrompt = buildTranslationAlignmentPrompt(originalTimedData, translatedLyrics, originalLangName, translatedLangName);
-    const translationModel = 'gemini-2.5-flash';
+    // FIX: Upgraded to gemini-2.5-pro for more reliable and complex JSON manipulation.
+    const translationModel = 'gemini-2.5-pro';
 
     const translationApiCall = () => ai.models.generateContent({
         model: translationModel,
@@ -569,7 +570,6 @@ export const refineTranslatedKaraokeData = async (
     throw new Error(parseGoogleGenerativeAIError(error));
   }
 };
-
 
 export const translateLyrics = async (
   sourceText: string,
