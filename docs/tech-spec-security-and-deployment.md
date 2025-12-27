@@ -21,9 +21,143 @@ These changes are interdependent—the security fix must be completed before ena
 
 ### Current State
 
-- The `GEMINI_API_KEY` is referenced in `vite.config.ts` via `process.env.GEMINI_API_KEY`
-- The key may be committed to git history (requires verification)
-- The deployed Cloud Run service has the key configured (method unknown—likely environment variable or hardcoded)
+- The `GEMINI_API_KEY` is injected at build time via `vite.config.ts` using Vite's `define` option
+- **Critical issue:** This embeds the actual API key string into the JavaScript bundle
+- Since this is a client-side React app, anyone can view the key in browser DevTools
+- The key is NOT exposed in the GitHub repository (verified), but IS exposed in the deployed application
+
+### Root Cause
+
+In `vite.config.ts`:
+```typescript
+define: {
+  'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+}
+```
+
+This replaces `process.env.API_KEY` with the literal key value at build time. The bundled JavaScript sent to browsers contains the actual API key.
+
+### Preferred Solution: Server-Side Proxy (Priority: P1)
+
+Instead of calling Gemini directly from the browser, route API calls through a backend proxy that keeps the key server-side.
+
+```
+Current (insecure):
+Browser → Gemini API (key in browser JS)
+
+Proposed (secure):
+Browser → Express Server → Gemini API (key on server only)
+```
+
+#### Implementation Overview
+
+| File | Change |
+|------|--------|
+| `server.ts` (new) | Express server with `/api/gemini` proxy endpoint |
+| `services/geminiService.ts` | Call `/api/gemini` instead of Gemini directly |
+| `vite.config.ts` | Remove the `define` block entirely |
+| `Dockerfile` | Run Express server instead of static file server |
+| `package.json` | Add `express` dependency, update `start` script |
+
+#### Server Implementation (`server.ts`)
+
+```typescript
+import express from 'express';
+import path from 'path';
+import { GoogleGenAI } from '@google/genai';
+
+const app = express();
+const PORT = process.env.PORT || 8080;
+
+// Serve static files from the Vite build
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Parse JSON bodies
+app.use(express.json({ limit: '50mb' }));
+
+// Gemini proxy endpoint
+app.post('/api/gemini', async (req, res) => {
+  try {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ error: 'API key not configured' });
+    }
+
+    const ai = new GoogleGenAI({ apiKey });
+    const { model, contents, config } = req.body;
+
+    const result = await ai.models.generateContent({
+      model,
+      contents,
+      config,
+    });
+
+    res.json({ result: result.text });
+  } catch (error) {
+    console.error('Gemini API error:', error);
+    res.status(500).json({ error: 'Gemini API request failed' });
+  }
+});
+
+// SPA fallback - serve index.html for all other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+```
+
+#### Client-Side Changes (`geminiService.ts`)
+
+Replace direct Gemini calls with fetch to the proxy:
+
+```typescript
+// Before:
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const result = await ai.models.generateContent({ model, contents, config });
+
+// After:
+const response = await fetch('/api/gemini', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ model, contents, config }),
+});
+const { result } = await response.json();
+```
+
+#### Updated Dockerfile
+
+```dockerfile
+FROM node:20-slim
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+
+COPY . .
+RUN npm run build
+
+EXPOSE 8080
+CMD ["node", "server.js"]
+```
+
+#### Estimated Effort
+
+- Server setup: 1 hour
+- Service refactor: 1-2 hours
+- Testing & deployment: 1 hour
+- **Total: 3-4 hours**
+
+### Risk Assessment
+
+| Risk Level | Scenario |
+|------------|----------|
+| **Low (current)** | App URL is private, no users, key not in repo |
+| **High (if shared)** | Anyone with the URL can extract the key from browser |
+
+**Recommendation:** Implement server-side proxy before sharing the application URL with anyone.
 
 ### Required Actions
 
