@@ -387,6 +387,396 @@ src/
 
 ---
 
+## Phase 4: Cross-Language Consistency Validation
+
+The current system generates Spanish and English karaoke data in separate passes, with no enforcement that they remain structurally aligned. This causes vocabulary timecode drift and translation sync issues.
+
+### New Validation Checks
+
+#### Tier 1: Critical Cross-Language Errors
+
+| Check | Description | Detection Logic |
+|-------|-------------|-----------------|
+| Segment count mismatch | Spanish and English have different segment counts | `spanish.segments.length !== english.segments.length` |
+| Segment timing divergence | Same segment has different timing across languages | `abs(spanish.segments[i].startTimeMs - english.segments[i].startTimeMs) > 10` |
+| Segment type mismatch | LYRIC vs INSTRUMENTAL differs between languages | `spanish.segments[i].type !== english.segments[i].type` |
+| Segment index mismatch | segmentIndex values don't match | `spanish.segments[i].segmentIndex !== english.segments[i].segmentIndex` |
+
+#### Tier 2: Cross-Language Warnings
+
+| Check | Description | Threshold |
+|-------|-------------|-----------|
+| Word count ratio extreme | Translated segment has very different word count | Ratio > 2.0 or < 0.5 |
+| Syllable density mismatch | Translated words crammed into short duration | < 80ms per syllable estimated |
+| Segment end time drift | English segment ends at different time than Spanish | > 50ms difference |
+
+### Extended ComparisonResult
+
+```typescript
+interface ComparisonResult {
+  isConsistent: boolean;              // No critical cross-language errors
+  segmentCountMatch: boolean;
+  segmentCount: { spanish: number; english: number };
+
+  timingDriftIssues: TimingDriftIssue[];
+  structureMismatches: StructureMismatch[];
+  wordCountComparison: WordCountComparison[];
+
+  // New: segment-by-segment alignment report
+  segmentAlignment: SegmentAlignmentReport[];
+}
+
+interface SegmentAlignmentReport {
+  segmentIndex: number;
+  spanish: { startTimeMs: number; endTimeMs: number; wordCount: number; text: string };
+  english: { startTimeMs: number; endTimeMs: number; wordCount: number; text: string };
+  issues: string[];  // e.g., ["timing drift: 15ms", "word ratio: 2.5x"]
+}
+
+interface StructureMismatch {
+  segmentIndex: number;
+  type: 'COUNT' | 'TYPE' | 'INDEX' | 'TIMING';
+  spanish: unknown;
+  english: unknown;
+  message: string;
+}
+```
+
+### Enforcement Strategy
+
+When `compareKaraokeVersions()` detects critical mismatches:
+
+1. **Reject and re-generate** - If segment counts differ, translation alignment failed
+2. **Auto-correct timing** - Copy segment-level timing from Spanish to English
+3. **Warn user** - Display specific segments that need review
+
+---
+
+## Phase 5: Translation Alignment Improvements
+
+### Problem: No Audio Ground Truth
+
+The current translation alignment prompt receives:
+- Original timed Spanish data
+- Translated English text
+- **No audio file**
+
+This means Gemini distributes word timing based on guessed syllable counts, not actual vocal delivery.
+
+### Solution A: Audio-Informed Translation Alignment (Recommended)
+
+Modify `generateKaraokeData()` to pass audio to the translation alignment step:
+
+```typescript
+// Current (line 373-409 in geminiService.ts):
+const translationResult = await retryWithBackoff(async () => {
+  return await ai.models.generateContent({
+    model: SYNC_MODEL,
+    contents: [{ role: 'user', parts: [{ text: translationPrompt }] }],  // No audio!
+    // ...
+  });
+}, 3, 2000);
+
+// Proposed:
+const translationResult = await retryWithBackoff(async () => {
+  return await ai.models.generateContent({
+    model: SYNC_MODEL,
+    contents: [{
+      role: 'user',
+      parts: [
+        { inlineData: { mimeType: audioMimeType, data: audioBase64 } },  // ADD AUDIO
+        { text: translationPrompt }
+      ]
+    }],
+    // ...
+  });
+}, 3, 2000);
+```
+
+**Prompt modification:**
+
+```
+You are refining the translation alignment. You have:
+1. The original Spanish karaoke data with word-level timing
+2. The English translation text
+3. The original audio file
+
+Your task:
+- Listen to the audio to verify syllable timing
+- Map English words to the same vocal moments as Spanish
+- If English has more/fewer words, distribute timing proportionally BUT verify against audio
+- Output must have IDENTICAL segment timing to Spanish input
+```
+
+**Trade-offs:**
+- ✅ Higher accuracy - AI can verify translation fits vocal delivery
+- ❌ Higher cost - Audio processing doubles API cost
+- ❌ Higher latency - Additional audio analysis time
+
+### Solution B: Algorithmic Fallback (Lower Cost)
+
+If audio-informed alignment is too expensive, implement deterministic word timing distribution:
+
+```typescript
+function distributeWordTiming(
+  segmentStart: number,
+  segmentEnd: number,
+  words: string[],
+  originalWords: KaraokeWord[]
+): KaraokeWord[] {
+  const segmentDuration = segmentEnd - segmentStart;
+
+  // Estimate syllables per word (simple heuristic)
+  const syllableCounts = words.map(w => estimateSyllables(w));
+  const totalSyllables = syllableCounts.reduce((a, b) => a + b, 0);
+
+  // Distribute proportionally
+  let currentTime = segmentStart;
+  return words.map((word, i) => {
+    const proportion = syllableCounts[i] / totalSyllables;
+    const duration = Math.round(segmentDuration * proportion);
+    const result = {
+      word,
+      startTimeMs: currentTime,
+      endTimeMs: currentTime + duration,
+    };
+    currentTime += duration;
+    return result;
+  });
+}
+
+function estimateSyllables(word: string): number {
+  // Count vowel groups as syllables
+  const vowelGroups = word.toLowerCase().match(/[aeiouy]+/g) || [];
+  return Math.max(1, vowelGroups.length);
+}
+```
+
+**Usage:** Run this AFTER Gemini generates translation, as a correction pass.
+
+### Solution C: Segment Structure Lock (Prompt Engineering)
+
+Add explicit constraints to all prompts that modify karaoke data:
+
+```typescript
+const SEGMENT_LOCK_INSTRUCTION = `
+**CRITICAL STRUCTURAL CONSTRAINTS:**
+1. You MUST output EXACTLY ${segmentCount} segments
+2. Each segment MUST have segmentIndex values 1 through ${segmentCount} in order
+3. Segment-level startTimeMs and endTimeMs MUST match the input EXACTLY
+4. You may ONLY modify word-level timing and text within segments
+5. Do NOT merge, split, add, or remove segments
+
+If you cannot comply with these constraints, output an error instead of invalid data.
+`;
+```
+
+Add this to:
+- `buildTranslationAlignmentPrompt()`
+- `buildRefinementPrompt()`
+- `buildTranslatedRefinementPrompt()`
+
+---
+
+## Phase 6: Vocabulary Timecode Consistency
+
+### Problem Statement
+
+Vocabulary items reference segments by `segmentIndex`, but:
+1. Index is 1-based (Gemini output) vs 0-based (JavaScript arrays)
+2. Refinement can change segment count, invalidating indices
+3. Timecodes are segment-level, not word-level
+4. Out-of-bounds indices silently return stale data
+
+### Solution 1: Word-Level Vocabulary Timecodes
+
+Modify vocabulary extraction prompt to find the specific word's timing, not just segment timing:
+
+```typescript
+// Current prompt instruction:
+"Find the startTimeMs of the *entire segment* where the term appears"
+
+// Proposed:
+"Find the WORD-LEVEL timing for the term:
+1. Locate the segment containing the term
+2. Find the specific word(s) within that segment's words array
+3. Return the startTimeMs of the FIRST word of the term
+4. Return the endTimeMs of the LAST word of the term
+
+Example:
+Segment words: [{"word": "El", ...}, {"word": "amor", "startTimeMs": 5000, "endTimeMs": 5400}, ...]
+Term: "amor"
+Result: startTimeMs: 5000, endTimeMs: 5400 (word-level, not segment-level)"
+```
+
+**Extended VocabularyItem type:**
+
+```typescript
+interface VocabularyItem {
+  // ... existing fields ...
+
+  // Segment-level (for context)
+  segmentIndex: number;
+  segmentStartTimeMs: number;
+  segmentEndTimeMs: number;
+
+  // Word-level (for precise playback)
+  wordStartTimeMs: number;   // NEW
+  wordEndTimeMs: number;     // NEW
+  wordIndices: number[];     // NEW: indices within segment.words array
+}
+```
+
+### Solution 2: Vocabulary Re-Extraction After Refinement
+
+Add a flag to track when vocabulary needs regeneration:
+
+```typescript
+// In App.tsx state
+const [vocabularyStale, setVocabularyStale] = useState(false);
+
+// After any refinement operation
+const handleRefineComplete = () => {
+  setVocabularyStale(true);
+  // Show warning: "Vocabulary timecodes may be outdated. Regenerate vocabulary?"
+};
+
+// Auto-regenerate option
+const handleRegenerateVocabulary = async () => {
+  if (karaokeData) {
+    const newVocabulary = await generateVocabularyList(karaokeData.spanish, karaokeData.english);
+    setVocabularyList(newVocabulary);
+    setVocabularyStale(false);
+  }
+};
+```
+
+### Solution 3: Robust Segment Matching
+
+Instead of relying solely on `segmentIndex`, match vocabulary to segments by text content:
+
+```typescript
+function findVocabularySegment(
+  vocab: VocabularyItem,
+  segments: KaraokeSegment[]
+): KaraokeSegment | null {
+  // Primary: try by index
+  const byIndex = segments[vocab.segmentIndex - 1];
+  if (byIndex?.text?.includes(vocab.term.spanish)) {
+    return byIndex;
+  }
+
+  // Fallback: search by content
+  const byContent = segments.find(s => s.text?.includes(vocab.term.spanish));
+  if (byContent) {
+    console.warn(`Vocabulary "${vocab.term.spanish}" found by content match, not index`);
+    return byContent;
+  }
+
+  // Not found
+  console.error(`Vocabulary "${vocab.term.spanish}" not found in any segment`);
+  return null;
+}
+```
+
+### Solution 4: Validation for Vocabulary Consistency
+
+Add vocabulary-specific validation checks:
+
+```typescript
+interface VocabularyValidationResult {
+  isValid: boolean;
+  issues: VocabularyIssue[];
+}
+
+interface VocabularyIssue {
+  term: string;
+  type: 'INDEX_OUT_OF_BOUNDS' | 'TERM_NOT_IN_SEGMENT' | 'TIMING_MISMATCH' | 'STALE_REFERENCE';
+  message: string;
+  segmentIndex: number;
+}
+
+function validateVocabulary(
+  vocabulary: VocabularyItem[],
+  karaokeData: { spanish: KaraokeData; english: KaraokeData }
+): VocabularyValidationResult {
+  const issues: VocabularyIssue[] = [];
+
+  for (const item of vocabulary) {
+    const segmentIndex = item.segmentIndex - 1;
+
+    // Check bounds
+    if (segmentIndex < 0 || segmentIndex >= karaokeData.spanish.segments.length) {
+      issues.push({
+        term: item.term.spanish,
+        type: 'INDEX_OUT_OF_BOUNDS',
+        message: `Segment ${item.segmentIndex} does not exist (max: ${karaokeData.spanish.segments.length})`,
+        segmentIndex: item.segmentIndex,
+      });
+      continue;
+    }
+
+    const segment = karaokeData.spanish.segments[segmentIndex];
+
+    // Check term exists in segment
+    if (!segment.text?.toLowerCase().includes(item.term.spanish.toLowerCase())) {
+      issues.push({
+        term: item.term.spanish,
+        type: 'TERM_NOT_IN_SEGMENT',
+        message: `Term "${item.term.spanish}" not found in segment text: "${segment.text}"`,
+        segmentIndex: item.segmentIndex,
+      });
+    }
+
+    // Check timing matches
+    if (item.startTimeMs !== segment.startTimeMs || item.endTimeMs !== segment.endTimeMs) {
+      issues.push({
+        term: item.term.spanish,
+        type: 'TIMING_MISMATCH',
+        message: `Vocab timing (${item.startTimeMs}-${item.endTimeMs}) differs from segment (${segment.startTimeMs}-${segment.endTimeMs})`,
+        segmentIndex: item.segmentIndex,
+      });
+    }
+  }
+
+  return { isValid: issues.length === 0, issues };
+}
+```
+
+---
+
+## Implementation Priority
+
+| Phase | Component | Effort | Impact | Priority |
+|-------|-----------|--------|--------|----------|
+| 5C | Segment structure lock (prompt) | Low | High | **P0 - Do First** |
+| 4 | Cross-language validation | Medium | High | **P1** |
+| 6.4 | Vocabulary validation | Low | Medium | **P1** |
+| 6.3 | Robust segment matching | Low | Medium | **P2** |
+| 6.2 | Vocabulary re-extraction flag | Low | Medium | **P2** |
+| 5B | Algorithmic timing distribution | Medium | Medium | **P2** |
+| 6.1 | Word-level vocabulary timecodes | Medium | Medium | **P3** |
+| 5A | Audio-informed translation | High | High | **P3 - Evaluate ROI** |
+
+### Quick Wins (< 1 hour each)
+
+1. **Add segment lock instruction to prompts** - Prevents structural drift
+2. **Add segment count validation** - Reject mismatched Spanish/English
+3. **Add vocabulary validation function** - Surface stale references
+
+### Medium Effort (2-4 hours each)
+
+4. **Implement cross-language comparison** - Full alignment report
+5. **Add robust segment matching** - Fallback to content search
+6. **Implement algorithmic timing distribution** - Post-process correction
+
+### Higher Effort (Needs ROI evaluation)
+
+7. **Audio-informed translation alignment** - May double API costs
+8. **Word-level vocabulary extraction** - Requires prompt + schema changes
+
+---
+
 ## Related Documents
 
 - `docs/tech-spec-security-and-deployment.md` - Deployment automation

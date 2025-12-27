@@ -67,4 +67,14 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 ## Documentation
 
 - `docs/tech-spec-security-and-deployment.md` - API key security fix and Cloud Run CI/CD setup
-- `docs/tech-spec-automated-quality-validation.md` - Automated QA for generated karaoke data
+- `docs/tech-spec-automated-quality-validation.md` - Automated QA for generated karaoke data, including:
+  - Cross-language consistency validation (Phase 4)
+  - Translation alignment improvements (Phase 5)
+  - Vocabulary timecode consistency (Phase 6)
+
+## Known Issues
+
+Current focus areas for improvement:
+1. **Timing accuracy** - Translation alignment lacks audio ground truth
+2. **Cross-language sync** - No enforcement that Spanish/English segments stay aligned
+3. **Vocabulary consistency** - Segment indices can become stale after refinement
