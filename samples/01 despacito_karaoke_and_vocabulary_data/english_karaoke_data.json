@@ -1,0 +1,3176 @@
+{
+  "metadata": {
+    "title": "Despacito",
+    "artist": "Luis Fonsi, Daddy Yankee",
+    "durationMs": 274000,
+    "language": "en-US",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 27800,
+      "segmentIndex": 0,
+      "cueText": "Intro"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 28200,
+      "endTimeMs": 29200,
+      "segmentIndex": 1,
+      "text": "Ah!",
+      "words": [
+        {
+          "word": "Ah!",
+          "startTimeMs": 28200,
+          "endTimeMs": 29200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 30100,
+      "endTimeMs": 31800,
+      "segmentIndex": 2,
+      "text": "Fonsi, DY",
+      "words": [
+        {
+          "word": "Fonsi,",
+          "startTimeMs": 30100,
+          "endTimeMs": 30700
+        },
+        {
+          "word": "DY",
+          "startTimeMs": 31400,
+          "endTimeMs": 31800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 33200,
+      "endTimeMs": 35000,
+      "segmentIndex": 3,
+      "text": "Oh, oh no, oh no",
+      "words": [
+        {
+          "word": "Oh,",
+          "startTimeMs": 33200,
+          "endTimeMs": 33600
+        },
+        {
+          "word": "oh",
+          "startTimeMs": 34000,
+          "endTimeMs": 34200
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 34400,
+          "endTimeMs": 34700
+        },
+        {
+          "word": "oh",
+          "startTimeMs": 34800,
+          "endTimeMs": 34900
+        },
+        {
+          "word": "no",
+          "startTimeMs": 34900,
+          "endTimeMs": 35000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 35100,
+      "endTimeMs": 38200,
+      "segmentIndex": 4,
+      "text": "(oh) Hey yeah",
+      "words": [
+        {
+          "word": "(oh)",
+          "startTimeMs": 35100,
+          "endTimeMs": 35800
+        },
+        {
+          "word": "Hey",
+          "startTimeMs": 36800,
+          "endTimeMs": 37000
+        },
+        {
+          "word": "yeah",
+          "startTimeMs": 37000,
+          "endTimeMs": 38200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 38700,
+      "endTimeMs": 40400,
+      "segmentIndex": 5,
+      "text": "Diridiri, dirididi Daddy",
+      "words": [
+        {
+          "word": "Diridiri,",
+          "startTimeMs": 38700,
+          "endTimeMs": 39200
+        },
+        {
+          "word": "dirididi",
+          "startTimeMs": 39200,
+          "endTimeMs": 39700
+        },
+        {
+          "word": "Daddy",
+          "startTimeMs": 39700,
+          "endTimeMs": 40400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 40800,
+      "endTimeMs": 41100,
+      "segmentIndex": 6,
+      "text": "Go!",
+      "words": [
+        {
+          "word": "Go!",
+          "startTimeMs": 40800,
+          "endTimeMs": 41100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 41595,
+      "endTimeMs": 45595,
+      "segmentIndex": 7,
+      "text": "Yes, you know I've been watching you for a while",
+      "words": [
+        {
+          "word": "Yes,",
+          "startTimeMs": 41595,
+          "endTimeMs": 41995
+        },
+        {
+          "word": "you",
+          "startTimeMs": 42095,
+          "endTimeMs": 42295
+        },
+        {
+          "word": "know",
+          "startTimeMs": 42395,
+          "endTimeMs": 42695
+        },
+        {
+          "word": "I've",
+          "startTimeMs": 42795,
+          "endTimeMs": 42995
+        },
+        {
+          "word": "been",
+          "startTimeMs": 42995,
+          "endTimeMs": 43195
+        },
+        {
+          "word": "watching",
+          "startTimeMs": 43295,
+          "endTimeMs": 43995
+        },
+        {
+          "word": "you",
+          "startTimeMs": 44095,
+          "endTimeMs": 44295
+        },
+        {
+          "word": "for",
+          "startTimeMs": 44395,
+          "endTimeMs": 44595
+        },
+        {
+          "word": "a",
+          "startTimeMs": 44695,
+          "endTimeMs": 44795
+        },
+        {
+          "word": "while",
+          "startTimeMs": 44895,
+          "endTimeMs": 45595
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 46604,
+      "endTimeMs": 49904,
+      "segmentIndex": 8,
+      "text": "I have to dance with you today (DY)",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 46604,
+          "endTimeMs": 46704
+        },
+        {
+          "word": "have",
+          "startTimeMs": 46704,
+          "endTimeMs": 47204
+        },
+        {
+          "word": "to",
+          "startTimeMs": 47304,
+          "endTimeMs": 47404
+        },
+        {
+          "word": "dance",
+          "startTimeMs": 47504,
+          "endTimeMs": 48004
+        },
+        {
+          "word": "with",
+          "startTimeMs": 48104,
+          "endTimeMs": 48304
+        },
+        {
+          "word": "you",
+          "startTimeMs": 48304,
+          "endTimeMs": 48604
+        },
+        {
+          "word": "today",
+          "startTimeMs": 48704,
+          "endTimeMs": 49204
+        },
+        {
+          "word": "(DY)",
+          "startTimeMs": 49304,
+          "endTimeMs": 49904
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 52219,
+      "endTimeMs": 56119,
+      "segmentIndex": 9,
+      "text": "I saw that your gaze was already calling me",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 52219,
+          "endTimeMs": 52419
+        },
+        {
+          "word": "saw",
+          "startTimeMs": 52419,
+          "endTimeMs": 52819
+        },
+        {
+          "word": "that",
+          "startTimeMs": 52919,
+          "endTimeMs": 53019
+        },
+        {
+          "word": "your",
+          "startTimeMs": 53119,
+          "endTimeMs": 53319
+        },
+        {
+          "word": "gaze",
+          "startTimeMs": 53319,
+          "endTimeMs": 53919
+        },
+        {
+          "word": "was",
+          "startTimeMs": 54019,
+          "endTimeMs": 54119
+        },
+        {
+          "word": "already",
+          "startTimeMs": 54219,
+          "endTimeMs": 54719
+        },
+        {
+          "word": "calling",
+          "startTimeMs": 54819,
+          "endTimeMs": 55519
+        },
+        {
+          "word": "me",
+          "startTimeMs": 55519,
+          "endTimeMs": 56119
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 57288,
+      "endTimeMs": 60688,
+      "segmentIndex": 10,
+      "text": "Show me the way that I'm going",
+      "words": [
+        {
+          "word": "Show",
+          "startTimeMs": 57288,
+          "endTimeMs": 57588
+        },
+        {
+          "word": "me",
+          "startTimeMs": 57588,
+          "endTimeMs": 57888
+        },
+        {
+          "word": "the",
+          "startTimeMs": 57988,
+          "endTimeMs": 58088
+        },
+        {
+          "word": "way",
+          "startTimeMs": 58188,
+          "endTimeMs": 59288
+        },
+        {
+          "word": "that",
+          "startTimeMs": 59388,
+          "endTimeMs": 59488
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 59588,
+          "endTimeMs": 59888
+        },
+        {
+          "word": "going",
+          "startTimeMs": 59988,
+          "endTimeMs": 60688
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 61850,
+      "endTimeMs": 65550,
+      "segmentIndex": 11,
+      "text": "Oh, you, you are the magnet and I am the metal",
+      "words": [
+        {
+          "word": "Oh,",
+          "startTimeMs": 61850,
+          "endTimeMs": 62250
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 62550,
+          "endTimeMs": 62850
+        },
+        {
+          "word": "you",
+          "startTimeMs": 62950,
+          "endTimeMs": 63050
+        },
+        {
+          "word": "are",
+          "startTimeMs": 63150,
+          "endTimeMs": 63350
+        },
+        {
+          "word": "the",
+          "startTimeMs": 63450,
+          "endTimeMs": 63650
+        },
+        {
+          "word": "magnet",
+          "startTimeMs": 63750,
+          "endTimeMs": 64150
+        },
+        {
+          "word": "and",
+          "startTimeMs": 64250,
+          "endTimeMs": 64350
+        },
+        {
+          "word": "I",
+          "startTimeMs": 64450,
+          "endTimeMs": 64550
+        },
+        {
+          "word": "am",
+          "startTimeMs": 64650,
+          "endTimeMs": 64850
+        },
+        {
+          "word": "the",
+          "startTimeMs": 64950,
+          "endTimeMs": 65050
+        },
+        {
+          "word": "metal",
+          "startTimeMs": 65150,
+          "endTimeMs": 65550
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 65598,
+      "endTimeMs": 68598,
+      "segmentIndex": 12,
+      "text": "I'm getting closer and I'm putting together the plan",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 65598,
+          "endTimeMs": 65798
+        },
+        {
+          "word": "getting",
+          "startTimeMs": 65898,
+          "endTimeMs": 66298
+        },
+        {
+          "word": "closer",
+          "startTimeMs": 66298,
+          "endTimeMs": 66898
+        },
+        {
+          "word": "and",
+          "startTimeMs": 66998,
+          "endTimeMs": 67098
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 67198,
+          "endTimeMs": 67398
+        },
+        {
+          "word": "putting",
+          "startTimeMs": 67498,
+          "endTimeMs": 67698
+        },
+        {
+          "word": "together",
+          "startTimeMs": 67698,
+          "endTimeMs": 67898
+        },
+        {
+          "word": "the",
+          "startTimeMs": 67998,
+          "endTimeMs": 68098
+        },
+        {
+          "word": "plan",
+          "startTimeMs": 68198,
+          "endTimeMs": 68598
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 68413,
+      "endTimeMs": 72113,
+      "segmentIndex": 13,
+      "text": "Just thinking about it quickens my pulse (oh yeah)",
+      "words": [
+        {
+          "word": "Just",
+          "startTimeMs": 68413,
+          "endTimeMs": 68713
+        },
+        {
+          "word": "thinking",
+          "startTimeMs": 68813,
+          "endTimeMs": 69113
+        },
+        {
+          "word": "about",
+          "startTimeMs": 69113,
+          "endTimeMs": 69413
+        },
+        {
+          "word": "it",
+          "startTimeMs": 69413,
+          "endTimeMs": 69613
+        },
+        {
+          "word": "quickens",
+          "startTimeMs": 69713,
+          "endTimeMs": 70413
+        },
+        {
+          "word": "my",
+          "startTimeMs": 70513,
+          "endTimeMs": 70613
+        },
+        {
+          "word": "pulse",
+          "startTimeMs": 70713,
+          "endTimeMs": 71313
+        },
+        {
+          "word": "(oh",
+          "startTimeMs": 71413,
+          "endTimeMs": 71613
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 71613,
+          "endTimeMs": 72113
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 72950,
+      "endTimeMs": 76050,
+      "segmentIndex": 14,
+      "text": "Now, now I'm liking you more than normal",
+      "words": [
+        {
+          "word": "Now,",
+          "startTimeMs": 72950,
+          "endTimeMs": 73350
+        },
+        {
+          "word": "now",
+          "startTimeMs": 73650,
+          "endTimeMs": 73850
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 73950,
+          "endTimeMs": 74050
+        },
+        {
+          "word": "liking",
+          "startTimeMs": 74150,
+          "endTimeMs": 74650
+        },
+        {
+          "word": "you",
+          "startTimeMs": 74650,
+          "endTimeMs": 74950
+        },
+        {
+          "word": "more",
+          "startTimeMs": 75050,
+          "endTimeMs": 75250
+        },
+        {
+          "word": "than",
+          "startTimeMs": 75350,
+          "endTimeMs": 75450
+        },
+        {
+          "word": "normal",
+          "startTimeMs": 75450,
+          "endTimeMs": 76050
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 76397,
+      "endTimeMs": 78897,
+      "segmentIndex": 15,
+      "text": "All my senses are asking for more",
+      "words": [
+        {
+          "word": "All",
+          "startTimeMs": 76397,
+          "endTimeMs": 76697
+        },
+        {
+          "word": "my",
+          "startTimeMs": 76797,
+          "endTimeMs": 76997
+        },
+        {
+          "word": "senses",
+          "startTimeMs": 77097,
+          "endTimeMs": 77697
+        },
+        {
+          "word": "are",
+          "startTimeMs": 77797,
+          "endTimeMs": 77997
+        },
+        {
+          "word": "asking",
+          "startTimeMs": 78097,
+          "endTimeMs": 78397
+        },
+        {
+          "word": "for",
+          "startTimeMs": 78397,
+          "endTimeMs": 78597
+        },
+        {
+          "word": "more",
+          "startTimeMs": 78697,
+          "endTimeMs": 78897
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 79252,
+      "endTimeMs": 82252,
+      "segmentIndex": 16,
+      "text": "We have to take this without any rush",
+      "words": [
+        {
+          "word": "We",
+          "startTimeMs": 79252,
+          "endTimeMs": 79452
+        },
+        {
+          "word": "have",
+          "startTimeMs": 79452,
+          "endTimeMs": 79752
+        },
+        {
+          "word": "to",
+          "startTimeMs": 79852,
+          "endTimeMs": 79952
+        },
+        {
+          "word": "take",
+          "startTimeMs": 80052,
+          "endTimeMs": 80352
+        },
+        {
+          "word": "this",
+          "startTimeMs": 80352,
+          "endTimeMs": 80552
+        },
+        {
+          "word": "without",
+          "startTimeMs": 80652,
+          "endTimeMs": 81052
+        },
+        {
+          "word": "any",
+          "startTimeMs": 81052,
+          "endTimeMs": 81252
+        },
+        {
+          "word": "rush",
+          "startTimeMs": 81352,
+          "endTimeMs": 82252
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 83100,
+      "endTimeMs": 84400,
+      "segmentIndex": 17,
+      "text": "Slowly",
+      "words": [
+        {
+          "word": "Slowly",
+          "startTimeMs": 83100,
+          "endTimeMs": 84400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 85000,
+      "endTimeMs": 87500,
+      "segmentIndex": 18,
+      "text": "I want to breathe your neck slowly",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 85000,
+          "endTimeMs": 85100
+        },
+        {
+          "word": "want",
+          "startTimeMs": 85100,
+          "endTimeMs": 85300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 85300,
+          "endTimeMs": 85400
+        },
+        {
+          "word": "breathe",
+          "startTimeMs": 85400,
+          "endTimeMs": 85900
+        },
+        {
+          "word": "your",
+          "startTimeMs": 86000,
+          "endTimeMs": 86100
+        },
+        {
+          "word": "neck",
+          "startTimeMs": 86200,
+          "endTimeMs": 86600
+        },
+        {
+          "word": "slowly",
+          "startTimeMs": 86700,
+          "endTimeMs": 87500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 87800,
+      "endTimeMs": 90000,
+      "segmentIndex": 19,
+      "text": "Let me tell you things in your ear",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 87800,
+          "endTimeMs": 88100
+        },
+        {
+          "word": "me",
+          "startTimeMs": 88200,
+          "endTimeMs": 88300
+        },
+        {
+          "word": "tell",
+          "startTimeMs": 88400,
+          "endTimeMs": 88600
+        },
+        {
+          "word": "you",
+          "startTimeMs": 88600,
+          "endTimeMs": 88900
+        },
+        {
+          "word": "things",
+          "startTimeMs": 89000,
+          "endTimeMs": 89400
+        },
+        {
+          "word": "in",
+          "startTimeMs": 89500,
+          "endTimeMs": 89600
+        },
+        {
+          "word": "your",
+          "startTimeMs": 89600,
+          "endTimeMs": 89700
+        },
+        {
+          "word": "ear",
+          "startTimeMs": 89700,
+          "endTimeMs": 90000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 90400,
+      "endTimeMs": 93300,
+      "segmentIndex": 20,
+      "text": "So that you remember if you're not with me",
+      "words": [
+        {
+          "word": "So",
+          "startTimeMs": 90400,
+          "endTimeMs": 90700
+        },
+        {
+          "word": "that",
+          "startTimeMs": 90800,
+          "endTimeMs": 90900
+        },
+        {
+          "word": "you",
+          "startTimeMs": 91000,
+          "endTimeMs": 91100
+        },
+        {
+          "word": "remember",
+          "startTimeMs": 91200,
+          "endTimeMs": 91800
+        },
+        {
+          "word": "if",
+          "startTimeMs": 91900,
+          "endTimeMs": 92000
+        },
+        {
+          "word": "you're",
+          "startTimeMs": 92100,
+          "endTimeMs": 92300
+        },
+        {
+          "word": "not",
+          "startTimeMs": 92300,
+          "endTimeMs": 92500
+        },
+        {
+          "word": "with",
+          "startTimeMs": 92600,
+          "endTimeMs": 92900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 92900,
+          "endTimeMs": 93300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 94200,
+      "endTimeMs": 95600,
+      "segmentIndex": 21,
+      "text": "Slowly",
+      "words": [
+        {
+          "word": "Slowly",
+          "startTimeMs": 94200,
+          "endTimeMs": 95600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 96000,
+      "endTimeMs": 98300,
+      "segmentIndex": 22,
+      "text": "I want to undress you with kisses slowly",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 96000,
+          "endTimeMs": 96100
+        },
+        {
+          "word": "want",
+          "startTimeMs": 96100,
+          "endTimeMs": 96300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 96300,
+          "endTimeMs": 96400
+        },
+        {
+          "word": "undress",
+          "startTimeMs": 96400,
+          "endTimeMs": 96700
+        },
+        {
+          "word": "you",
+          "startTimeMs": 96700,
+          "endTimeMs": 96900
+        },
+        {
+          "word": "with",
+          "startTimeMs": 97000,
+          "endTimeMs": 97100
+        },
+        {
+          "word": "kisses",
+          "startTimeMs": 97200,
+          "endTimeMs": 97600
+        },
+        {
+          "word": "slowly",
+          "startTimeMs": 97700,
+          "endTimeMs": 98300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 98500,
+      "endTimeMs": 100900,
+      "segmentIndex": 23,
+      "text": "Sign the walls of your labyrinth",
+      "words": [
+        {
+          "word": "Sign",
+          "startTimeMs": 98500,
+          "endTimeMs": 99000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 99100,
+          "endTimeMs": 99200
+        },
+        {
+          "word": "walls",
+          "startTimeMs": 99300,
+          "endTimeMs": 99800
+        },
+        {
+          "word": "of",
+          "startTimeMs": 99900,
+          "endTimeMs": 100000
+        },
+        {
+          "word": "your",
+          "startTimeMs": 100100,
+          "endTimeMs": 100200
+        },
+        {
+          "word": "labyrinth",
+          "startTimeMs": 100300,
+          "endTimeMs": 100900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 101200,
+      "endTimeMs": 104900,
+      "segmentIndex": 24,
+      "text": "And make your body a whole manuscript (climb, climb, climb)",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 101200,
+          "endTimeMs": 101300
+        },
+        {
+          "word": "make",
+          "startTimeMs": 101400,
+          "endTimeMs": 101700
+        },
+        {
+          "word": "your",
+          "startTimeMs": 101800,
+          "endTimeMs": 102100
+        },
+        {
+          "word": "body",
+          "startTimeMs": 102200,
+          "endTimeMs": 102600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 102700,
+          "endTimeMs": 102800
+        },
+        {
+          "word": "whole",
+          "startTimeMs": 102800,
+          "endTimeMs": 103100
+        },
+        {
+          "word": "manuscript",
+          "startTimeMs": 103200,
+          "endTimeMs": 104000
+        },
+        {
+          "word": "(climb,",
+          "startTimeMs": 104000,
+          "endTimeMs": 104200
+        },
+        {
+          "word": "climb,",
+          "startTimeMs": 104300,
+          "endTimeMs": 104600
+        },
+        {
+          "word": "climb)",
+          "startTimeMs": 104700,
+          "endTimeMs": 104900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 105100,
+      "endTimeMs": 106000,
+      "segmentIndex": 25,
+      "text": "(Climb, climb) Oh",
+      "words": [
+        {
+          "word": "(Climb,",
+          "startTimeMs": 105100,
+          "endTimeMs": 105400
+        },
+        {
+          "word": "climb)",
+          "startTimeMs": 105500,
+          "endTimeMs": 105700
+        },
+        {
+          "word": "Oh",
+          "startTimeMs": 105800,
+          "endTimeMs": 106000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 106200,
+      "endTimeMs": 109600,
+      "segmentIndex": 26,
+      "text": "I want to see your hair dance, I want to be your rhythm",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 106200,
+          "endTimeMs": 106300
+        },
+        {
+          "word": "want",
+          "startTimeMs": 106300,
+          "endTimeMs": 106500
+        },
+        {
+          "word": "to",
+          "startTimeMs": 106500,
+          "endTimeMs": 106600
+        },
+        {
+          "word": "see",
+          "startTimeMs": 106700,
+          "endTimeMs": 106800
+        },
+        {
+          "word": "your",
+          "startTimeMs": 106900,
+          "endTimeMs": 107100
+        },
+        {
+          "word": "hair",
+          "startTimeMs": 107100,
+          "endTimeMs": 107300
+        },
+        {
+          "word": "dance,",
+          "startTimeMs": 107600,
+          "endTimeMs": 108000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 108100,
+          "endTimeMs": 108200
+        },
+        {
+          "word": "want",
+          "startTimeMs": 108200,
+          "endTimeMs": 108300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 108300,
+          "endTimeMs": 108400
+        },
+        {
+          "word": "be",
+          "startTimeMs": 108400,
+          "endTimeMs": 108600
+        },
+        {
+          "word": "your",
+          "startTimeMs": 108700,
+          "endTimeMs": 108800
+        },
+        {
+          "word": "rhythm",
+          "startTimeMs": 108900,
+          "endTimeMs": 109600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 110100,
+      "endTimeMs": 116300,
+      "segmentIndex": 27,
+      "text": "So that you teach my mouth, Your favorite places (favorite, favorite baby)",
+      "words": [
+        {
+          "word": "So",
+          "startTimeMs": 110100,
+          "endTimeMs": 110200
+        },
+        {
+          "word": "that",
+          "startTimeMs": 110200,
+          "endTimeMs": 110300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 110400,
+          "endTimeMs": 110500
+        },
+        {
+          "word": "teach",
+          "startTimeMs": 110600,
+          "endTimeMs": 111000
+        },
+        {
+          "word": "my",
+          "startTimeMs": 111100,
+          "endTimeMs": 111400
+        },
+        {
+          "word": "mouth,",
+          "startTimeMs": 111500,
+          "endTimeMs": 112200
+        },
+        {
+          "word": "Your",
+          "startTimeMs": 112900,
+          "endTimeMs": 113200
+        },
+        {
+          "word": "favorite",
+          "startTimeMs": 113300,
+          "endTimeMs": 113900
+        },
+        {
+          "word": "places",
+          "startTimeMs": 114000,
+          "endTimeMs": 114700
+        },
+        {
+          "word": "(favorite,",
+          "startTimeMs": 114800,
+          "endTimeMs": 115400
+        },
+        {
+          "word": "favorite",
+          "startTimeMs": 115500,
+          "endTimeMs": 115900
+        },
+        {
+          "word": "baby)",
+          "startTimeMs": 116000,
+          "endTimeMs": 116300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 116900,
+      "endTimeMs": 120000,
+      "segmentIndex": 28,
+      "text": "Let me exceed your danger zones",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 116900,
+          "endTimeMs": 117100
+        },
+        {
+          "word": "me",
+          "startTimeMs": 117100,
+          "endTimeMs": 117300
+        },
+        {
+          "word": "exceed",
+          "startTimeMs": 117400,
+          "endTimeMs": 118300
+        },
+        {
+          "word": "your",
+          "startTimeMs": 118400,
+          "endTimeMs": 118600
+        },
+        {
+          "word": "danger",
+          "startTimeMs": 118700,
+          "endTimeMs": 119300
+        },
+        {
+          "word": "zones",
+          "startTimeMs": 119400,
+          "endTimeMs": 120000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 121000,
+      "endTimeMs": 126100,
+      "segmentIndex": 29,
+      "text": "Until I provoke your screams, And that you forget your last name",
+      "words": [
+        {
+          "word": "Until",
+          "startTimeMs": 121000,
+          "endTimeMs": 121200
+        },
+        {
+          "word": "I",
+          "startTimeMs": 121200,
+          "endTimeMs": 121400
+        },
+        {
+          "word": "provoke",
+          "startTimeMs": 121500,
+          "endTimeMs": 122100
+        },
+        {
+          "word": "your",
+          "startTimeMs": 122200,
+          "endTimeMs": 122400
+        },
+        {
+          "word": "screams,",
+          "startTimeMs": 122500,
+          "endTimeMs": 123300
+        },
+        {
+          "word": "And",
+          "startTimeMs": 124000,
+          "endTimeMs": 124100
+        },
+        {
+          "word": "that",
+          "startTimeMs": 124200,
+          "endTimeMs": 124300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 124300,
+          "endTimeMs": 124400
+        },
+        {
+          "word": "forget",
+          "startTimeMs": 124400,
+          "endTimeMs": 124900
+        },
+        {
+          "word": "your",
+          "startTimeMs": 125000,
+          "endTimeMs": 125100
+        },
+        {
+          "word": "last",
+          "startTimeMs": 125200,
+          "endTimeMs": 125600
+        },
+        {
+          "word": "name",
+          "startTimeMs": 125600,
+          "endTimeMs": 126100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 126800,
+      "endTimeMs": 128600,
+      "segmentIndex": 30,
+      "text": "If I ask for a kiss, come give it to me",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 126800,
+          "endTimeMs": 126900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 126900,
+          "endTimeMs": 127000
+        },
+        {
+          "word": "ask",
+          "startTimeMs": 127000,
+          "endTimeMs": 127200
+        },
+        {
+          "word": "for",
+          "startTimeMs": 127200,
+          "endTimeMs": 127400
+        },
+        {
+          "word": "a",
+          "startTimeMs": 127500,
+          "endTimeMs": 127600
+        },
+        {
+          "word": "kiss,",
+          "startTimeMs": 127700,
+          "endTimeMs": 127900
+        },
+        {
+          "word": "come",
+          "startTimeMs": 128000,
+          "endTimeMs": 128100
+        },
+        {
+          "word": "give",
+          "startTimeMs": 128200,
+          "endTimeMs": 128300
+        },
+        {
+          "word": "it",
+          "startTimeMs": 128300,
+          "endTimeMs": 128400
+        },
+        {
+          "word": "to",
+          "startTimeMs": 128400,
+          "endTimeMs": 128500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 128500,
+          "endTimeMs": 128600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 128700,
+      "endTimeMs": 129800,
+      "segmentIndex": 31,
+      "text": "I know you're thinking about it",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 128700,
+          "endTimeMs": 128800
+        },
+        {
+          "word": "know",
+          "startTimeMs": 128900,
+          "endTimeMs": 129000
+        },
+        {
+          "word": "you're",
+          "startTimeMs": 129100,
+          "endTimeMs": 129200
+        },
+        {
+          "word": "thinking",
+          "startTimeMs": 129200,
+          "endTimeMs": 129500
+        },
+        {
+          "word": "about",
+          "startTimeMs": 129500,
+          "endTimeMs": 129650
+        },
+        {
+          "word": "it",
+          "startTimeMs": 129650,
+          "endTimeMs": 129800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 129900,
+      "endTimeMs": 131000,
+      "segmentIndex": 32,
+      "text": "I've been trying for a while",
+      "words": [
+        {
+          "word": "I've",
+          "startTimeMs": 129900,
+          "endTimeMs": 130100
+        },
+        {
+          "word": "been",
+          "startTimeMs": 130100,
+          "endTimeMs": 130200
+        },
+        {
+          "word": "trying",
+          "startTimeMs": 130200,
+          "endTimeMs": 130500
+        },
+        {
+          "word": "for",
+          "startTimeMs": 130500,
+          "endTimeMs": 130600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 130600,
+          "endTimeMs": 130700
+        },
+        {
+          "word": "while",
+          "startTimeMs": 130700,
+          "endTimeMs": 131000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 131100,
+      "endTimeMs": 132600,
+      "segmentIndex": 33,
+      "text": "Mami, this is giving and giving",
+      "words": [
+        {
+          "word": "Mami,",
+          "startTimeMs": 131100,
+          "endTimeMs": 131400
+        },
+        {
+          "word": "this",
+          "startTimeMs": 131500,
+          "endTimeMs": 131700
+        },
+        {
+          "word": "is",
+          "startTimeMs": 131800,
+          "endTimeMs": 131900
+        },
+        {
+          "word": "giving",
+          "startTimeMs": 132000,
+          "endTimeMs": 132300
+        },
+        {
+          "word": "and",
+          "startTimeMs": 132300,
+          "endTimeMs": 132400
+        },
+        {
+          "word": "giving",
+          "startTimeMs": 132400,
+          "endTimeMs": 132600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 132800,
+      "endTimeMs": 135200,
+      "segmentIndex": 34,
+      "text": "You know your heart goes bam bam with me",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 132800,
+          "endTimeMs": 133000
+        },
+        {
+          "word": "know",
+          "startTimeMs": 133000,
+          "endTimeMs": 133300
+        },
+        {
+          "word": "your",
+          "startTimeMs": 133400,
+          "endTimeMs": 133500
+        },
+        {
+          "word": "heart",
+          "startTimeMs": 133600,
+          "endTimeMs": 134100
+        },
+        {
+          "word": "goes",
+          "startTimeMs": 134200,
+          "endTimeMs": 134400
+        },
+        {
+          "word": "bam",
+          "startTimeMs": 134400,
+          "endTimeMs": 134600
+        },
+        {
+          "word": "bam",
+          "startTimeMs": 134600,
+          "endTimeMs": 134800
+        },
+        {
+          "word": "with",
+          "startTimeMs": 134800,
+          "endTimeMs": 135000
+        },
+        {
+          "word": "me",
+          "startTimeMs": 135000,
+          "endTimeMs": 135200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 135300,
+      "endTimeMs": 137600,
+      "segmentIndex": 35,
+      "text": "You know that baby is looking for my bam bam",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 135300,
+          "endTimeMs": 135400
+        },
+        {
+          "word": "know",
+          "startTimeMs": 135400,
+          "endTimeMs": 135800
+        },
+        {
+          "word": "that",
+          "startTimeMs": 135900,
+          "endTimeMs": 136100
+        },
+        {
+          "word": "baby",
+          "startTimeMs": 136200,
+          "endTimeMs": 136400
+        },
+        {
+          "word": "is",
+          "startTimeMs": 136500,
+          "endTimeMs": 136600
+        },
+        {
+          "word": "looking",
+          "startTimeMs": 136700,
+          "endTimeMs": 137000
+        },
+        {
+          "word": "for",
+          "startTimeMs": 137100,
+          "endTimeMs": 137200
+        },
+        {
+          "word": "my",
+          "startTimeMs": 137200,
+          "endTimeMs": 137300
+        },
+        {
+          "word": "bam",
+          "startTimeMs": 137300,
+          "endTimeMs": 137400
+        },
+        {
+          "word": "bam",
+          "startTimeMs": 137500,
+          "endTimeMs": 137600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 137700,
+      "endTimeMs": 140200,
+      "segmentIndex": 36,
+      "text": "Come taste my mouth to see how it tastes to you",
+      "words": [
+        {
+          "word": "Come",
+          "startTimeMs": 137700,
+          "endTimeMs": 137900
+        },
+        {
+          "word": "taste",
+          "startTimeMs": 138000,
+          "endTimeMs": 138300
+        },
+        {
+          "word": "my",
+          "startTimeMs": 138400,
+          "endTimeMs": 138500
+        },
+        {
+          "word": "mouth",
+          "startTimeMs": 138800,
+          "endTimeMs": 139100
+        },
+        {
+          "word": "to",
+          "startTimeMs": 139100,
+          "endTimeMs": 139200
+        },
+        {
+          "word": "see",
+          "startTimeMs": 139200,
+          "endTimeMs": 139400
+        },
+        {
+          "word": "how",
+          "startTimeMs": 139500,
+          "endTimeMs": 139600
+        },
+        {
+          "word": "it",
+          "startTimeMs": 139600,
+          "endTimeMs": 139700
+        },
+        {
+          "word": "tastes",
+          "startTimeMs": 139700,
+          "endTimeMs": 139900
+        },
+        {
+          "word": "to",
+          "startTimeMs": 139900,
+          "endTimeMs": 140000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 140000,
+          "endTimeMs": 140200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 140300,
+      "endTimeMs": 142900,
+      "segmentIndex": 37,
+      "text": "I want, I want, I want to see how much love fits in you",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 140300,
+          "endTimeMs": 140400
+        },
+        {
+          "word": "want,",
+          "startTimeMs": 140400,
+          "endTimeMs": 140600
+        },
+        {
+          "word": "I",
+          "startTimeMs": 140700,
+          "endTimeMs": 140800
+        },
+        {
+          "word": "want,",
+          "startTimeMs": 140800,
+          "endTimeMs": 140900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 141000,
+          "endTimeMs": 141100
+        },
+        {
+          "word": "want",
+          "startTimeMs": 141100,
+          "endTimeMs": 141200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 141200,
+          "endTimeMs": 141300
+        },
+        {
+          "word": "see",
+          "startTimeMs": 141300,
+          "endTimeMs": 141400
+        },
+        {
+          "word": "how",
+          "startTimeMs": 141500,
+          "endTimeMs": 141800
+        },
+        {
+          "word": "much",
+          "startTimeMs": 141800,
+          "endTimeMs": 142100
+        },
+        {
+          "word": "love",
+          "startTimeMs": 142200,
+          "endTimeMs": 142300
+        },
+        {
+          "word": "fits",
+          "startTimeMs": 142400,
+          "endTimeMs": 142500
+        },
+        {
+          "word": "in",
+          "startTimeMs": 142500,
+          "endTimeMs": 142600
+        },
+        {
+          "word": "you",
+          "startTimeMs": 142700,
+          "endTimeMs": 142900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 143300,
+      "endTimeMs": 145600,
+      "segmentIndex": 38,
+      "text": "I'm not in a hurry, I want to take the trip",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 143300,
+          "endTimeMs": 143400
+        },
+        {
+          "word": "not",
+          "startTimeMs": 143500,
+          "endTimeMs": 143600
+        },
+        {
+          "word": "in",
+          "startTimeMs": 143600,
+          "endTimeMs": 143700
+        },
+        {
+          "word": "a",
+          "startTimeMs": 143700,
+          "endTimeMs": 144000
+        },
+        {
+          "word": "hurry,",
+          "startTimeMs": 144100,
+          "endTimeMs": 144500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 144600,
+          "endTimeMs": 144700
+        },
+        {
+          "word": "want",
+          "startTimeMs": 144800,
+          "endTimeMs": 144900
+        },
+        {
+          "word": "to",
+          "startTimeMs": 144900,
+          "endTimeMs": 145000
+        },
+        {
+          "word": "take",
+          "startTimeMs": 145000,
+          "endTimeMs": 145200
+        },
+        {
+          "word": "the",
+          "startTimeMs": 145300,
+          "endTimeMs": 145400
+        },
+        {
+          "word": "trip",
+          "startTimeMs": 145500,
+          "endTimeMs": 145600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 145700,
+      "endTimeMs": 148400,
+      "segmentIndex": 39,
+      "text": "We start slow, then wild",
+      "words": [
+        {
+          "word": "We",
+          "startTimeMs": 145700,
+          "endTimeMs": 146000
+        },
+        {
+          "word": "start",
+          "startTimeMs": 146000,
+          "endTimeMs": 146400
+        },
+        {
+          "word": "slow,",
+          "startTimeMs": 146500,
+          "endTimeMs": 146900
+        },
+        {
+          "word": "then",
+          "startTimeMs": 147000,
+          "endTimeMs": 147400
+        },
+        {
+          "word": "wild",
+          "startTimeMs": 147500,
+          "endTimeMs": 148400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 148700,
+      "endTimeMs": 151200,
+      "segmentIndex": 40,
+      "text": "Step by step, soft softly",
+      "words": [
+        {
+          "word": "Step",
+          "startTimeMs": 148700,
+          "endTimeMs": 149100
+        },
+        {
+          "word": "by",
+          "startTimeMs": 149200,
+          "endTimeMs": 149300
+        },
+        {
+          "word": "step,",
+          "startTimeMs": 149400,
+          "endTimeMs": 149900
+        },
+        {
+          "word": "soft",
+          "startTimeMs": 150000,
+          "endTimeMs": 150300
+        },
+        {
+          "word": "softly",
+          "startTimeMs": 150400,
+          "endTimeMs": 151200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 151300,
+      "endTimeMs": 153800,
+      "segmentIndex": 41,
+      "text": "We're getting closer little by little",
+      "words": [
+        {
+          "word": "We're",
+          "startTimeMs": 151300,
+          "endTimeMs": 151500
+        },
+        {
+          "word": "getting",
+          "startTimeMs": 151600,
+          "endTimeMs": 151900
+        },
+        {
+          "word": "closer",
+          "startTimeMs": 152000,
+          "endTimeMs": 152600
+        },
+        {
+          "word": "little",
+          "startTimeMs": 152700,
+          "endTimeMs": 153100
+        },
+        {
+          "word": "by",
+          "startTimeMs": 153200,
+          "endTimeMs": 153300
+        },
+        {
+          "word": "little",
+          "startTimeMs": 153400,
+          "endTimeMs": 153800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 154000,
+      "endTimeMs": 156600,
+      "segmentIndex": 42,
+      "text": "When you kiss me with that skill",
+      "words": [
+        {
+          "word": "When",
+          "startTimeMs": 154000,
+          "endTimeMs": 154400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 154500,
+          "endTimeMs": 154600
+        },
+        {
+          "word": "kiss",
+          "startTimeMs": 154700,
+          "endTimeMs": 154800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 154800,
+          "endTimeMs": 154900
+        },
+        {
+          "word": "with",
+          "startTimeMs": 155400,
+          "endTimeMs": 155600
+        },
+        {
+          "word": "that",
+          "startTimeMs": 155700,
+          "endTimeMs": 155900
+        },
+        {
+          "word": "skill",
+          "startTimeMs": 156000,
+          "endTimeMs": 156600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 156700,
+      "endTimeMs": 159200,
+      "segmentIndex": 43,
+      "text": "I see that you are mischief with delicacy",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 156700,
+          "endTimeMs": 157000
+        },
+        {
+          "word": "see",
+          "startTimeMs": 157000,
+          "endTimeMs": 157100
+        },
+        {
+          "word": "that",
+          "startTimeMs": 157100,
+          "endTimeMs": 157200
+        },
+        {
+          "word": "you",
+          "startTimeMs": 157200,
+          "endTimeMs": 157300
+        },
+        {
+          "word": "are",
+          "startTimeMs": 157300,
+          "endTimeMs": 157500
+        },
+        {
+          "word": "mischief",
+          "startTimeMs": 157600,
+          "endTimeMs": 158100
+        },
+        {
+          "word": "with",
+          "startTimeMs": 158200,
+          "endTimeMs": 158400
+        },
+        {
+          "word": "delicacy",
+          "startTimeMs": 158500,
+          "endTimeMs": 159200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 159300,
+      "endTimeMs": 161800,
+      "segmentIndex": 44,
+      "text": "Step by step, soft softly",
+      "words": [
+        {
+          "word": "Step",
+          "startTimeMs": 159300,
+          "endTimeMs": 159700
+        },
+        {
+          "word": "by",
+          "startTimeMs": 159800,
+          "endTimeMs": 159900
+        },
+        {
+          "word": "step,",
+          "startTimeMs": 160000,
+          "endTimeMs": 160500
+        },
+        {
+          "word": "soft",
+          "startTimeMs": 160600,
+          "endTimeMs": 160900
+        },
+        {
+          "word": "softly",
+          "startTimeMs": 161000,
+          "endTimeMs": 161800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 162000,
+      "endTimeMs": 164900,
+      "segmentIndex": 45,
+      "text": "We're getting closer, little by little (oh oh)",
+      "words": [
+        {
+          "word": "We're",
+          "startTimeMs": 162000,
+          "endTimeMs": 162200
+        },
+        {
+          "word": "getting",
+          "startTimeMs": 162300,
+          "endTimeMs": 162600
+        },
+        {
+          "word": "closer,",
+          "startTimeMs": 162700,
+          "endTimeMs": 163300
+        },
+        {
+          "word": "little",
+          "startTimeMs": 163400,
+          "endTimeMs": 163800
+        },
+        {
+          "word": "by",
+          "startTimeMs": 163900,
+          "endTimeMs": 164000
+        },
+        {
+          "word": "little",
+          "startTimeMs": 164100,
+          "endTimeMs": 164500
+        },
+        {
+          "word": "(oh",
+          "startTimeMs": 164500,
+          "endTimeMs": 164700
+        },
+        {
+          "word": "oh)",
+          "startTimeMs": 164700,
+          "endTimeMs": 164900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 165000,
+      "endTimeMs": 167500,
+      "segmentIndex": 46,
+      "text": "And that beauty is a puzzle (oh no)",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 165000,
+          "endTimeMs": 165100
+        },
+        {
+          "word": "that",
+          "startTimeMs": 165200,
+          "endTimeMs": 165300
+        },
+        {
+          "word": "beauty",
+          "startTimeMs": 165600,
+          "endTimeMs": 166400
+        },
+        {
+          "word": "is",
+          "startTimeMs": 166500,
+          "endTimeMs": 166600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 166700,
+          "endTimeMs": 166800
+        },
+        {
+          "word": "puzzle",
+          "startTimeMs": 166900,
+          "endTimeMs": 167300
+        },
+        {
+          "word": "(oh",
+          "startTimeMs": 167300,
+          "endTimeMs": 167400
+        },
+        {
+          "word": "no)",
+          "startTimeMs": 167400,
+          "endTimeMs": 167500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 167500,
+      "endTimeMs": 170500,
+      "segmentIndex": 47,
+      "text": "But to put it together, here I have the piece (slow, oh yeah)",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 167500,
+          "endTimeMs": 167800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 167800,
+          "endTimeMs": 167900
+        },
+        {
+          "word": "put",
+          "startTimeMs": 167900,
+          "endTimeMs": 168000
+        },
+        {
+          "word": "it",
+          "startTimeMs": 168000,
+          "endTimeMs": 168100
+        },
+        {
+          "word": "together,",
+          "startTimeMs": 168100,
+          "endTimeMs": 168600
+        },
+        {
+          "word": "here",
+          "startTimeMs": 168700,
+          "endTimeMs": 168900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 168900,
+          "endTimeMs": 169000
+        },
+        {
+          "word": "have",
+          "startTimeMs": 169000,
+          "endTimeMs": 169200
+        },
+        {
+          "word": "the",
+          "startTimeMs": 169300,
+          "endTimeMs": 169400
+        },
+        {
+          "word": "piece",
+          "startTimeMs": 169500,
+          "endTimeMs": 170000
+        },
+        {
+          "word": "(slow,",
+          "startTimeMs": 170000,
+          "endTimeMs": 170100
+        },
+        {
+          "word": "oh",
+          "startTimeMs": 170200,
+          "endTimeMs": 170300
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 170300,
+          "endTimeMs": 170500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 170900,
+      "endTimeMs": 172300,
+      "segmentIndex": 48,
+      "text": "Slowly",
+      "words": [
+        {
+          "word": "Slowly",
+          "startTimeMs": 170900,
+          "endTimeMs": 172300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 172900,
+      "endTimeMs": 175300,
+      "segmentIndex": 49,
+      "text": "I want to breathe your neck slowly",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 172900,
+          "endTimeMs": 173000
+        },
+        {
+          "word": "want",
+          "startTimeMs": 173000,
+          "endTimeMs": 173200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 173200,
+          "endTimeMs": 173300
+        },
+        {
+          "word": "breathe",
+          "startTimeMs": 173300,
+          "endTimeMs": 173800
+        },
+        {
+          "word": "your",
+          "startTimeMs": 173900,
+          "endTimeMs": 174000
+        },
+        {
+          "word": "neck",
+          "startTimeMs": 174100,
+          "endTimeMs": 174500
+        },
+        {
+          "word": "slowly",
+          "startTimeMs": 174600,
+          "endTimeMs": 175300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 175500,
+      "endTimeMs": 177900,
+      "segmentIndex": 50,
+      "text": "Let me tell you things in your ear",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 175500,
+          "endTimeMs": 175800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 175900,
+          "endTimeMs": 176000
+        },
+        {
+          "word": "tell",
+          "startTimeMs": 176100,
+          "endTimeMs": 176200
+        },
+        {
+          "word": "you",
+          "startTimeMs": 176200,
+          "endTimeMs": 176300
+        },
+        {
+          "word": "things",
+          "startTimeMs": 176700,
+          "endTimeMs": 177100
+        },
+        {
+          "word": "in",
+          "startTimeMs": 177200,
+          "endTimeMs": 177300
+        },
+        {
+          "word": "your",
+          "startTimeMs": 177300,
+          "endTimeMs": 177400
+        },
+        {
+          "word": "ear",
+          "startTimeMs": 177400,
+          "endTimeMs": 177900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 178100,
+      "endTimeMs": 180600,
+      "segmentIndex": 51,
+      "text": "So that you remember if you're not with me",
+      "words": [
+        {
+          "word": "So",
+          "startTimeMs": 178100,
+          "endTimeMs": 178400
+        },
+        {
+          "word": "that",
+          "startTimeMs": 178500,
+          "endTimeMs": 178600
+        },
+        {
+          "word": "you",
+          "startTimeMs": 178700,
+          "endTimeMs": 178800
+        },
+        {
+          "word": "remember",
+          "startTimeMs": 178900,
+          "endTimeMs": 179500
+        },
+        {
+          "word": "if",
+          "startTimeMs": 179600,
+          "endTimeMs": 179700
+        },
+        {
+          "word": "you're",
+          "startTimeMs": 179800,
+          "endTimeMs": 179900
+        },
+        {
+          "word": "not",
+          "startTimeMs": 180000,
+          "endTimeMs": 180300
+        },
+        {
+          "word": "with",
+          "startTimeMs": 180300,
+          "endTimeMs": 180400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 180400,
+          "endTimeMs": 180600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 182000,
+      "endTimeMs": 183400,
+      "segmentIndex": 52,
+      "text": "Slowly",
+      "words": [
+        {
+          "word": "Slowly",
+          "startTimeMs": 182000,
+          "endTimeMs": 183400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 183800,
+      "endTimeMs": 186200,
+      "segmentIndex": 53,
+      "text": "I want to undress you with kisses slowly",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 183800,
+          "endTimeMs": 183900
+        },
+        {
+          "word": "want",
+          "startTimeMs": 183900,
+          "endTimeMs": 184100
+        },
+        {
+          "word": "to",
+          "startTimeMs": 184100,
+          "endTimeMs": 184200
+        },
+        {
+          "word": "undress",
+          "startTimeMs": 184200,
+          "endTimeMs": 184700
+        },
+        {
+          "word": "you",
+          "startTimeMs": 184700,
+          "endTimeMs": 184800
+        },
+        {
+          "word": "with",
+          "startTimeMs": 184800,
+          "endTimeMs": 184900
+        },
+        {
+          "word": "kisses",
+          "startTimeMs": 185000,
+          "endTimeMs": 185400
+        },
+        {
+          "word": "slowly",
+          "startTimeMs": 185500,
+          "endTimeMs": 186200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 186400,
+      "endTimeMs": 188800,
+      "segmentIndex": 54,
+      "text": "Sign the walls of your labyrinth",
+      "words": [
+        {
+          "word": "Sign",
+          "startTimeMs": 186400,
+          "endTimeMs": 186900
+        },
+        {
+          "word": "the",
+          "startTimeMs": 187000,
+          "endTimeMs": 187100
+        },
+        {
+          "word": "walls",
+          "startTimeMs": 187200,
+          "endTimeMs": 187700
+        },
+        {
+          "word": "of",
+          "startTimeMs": 187800,
+          "endTimeMs": 187900
+        },
+        {
+          "word": "your",
+          "startTimeMs": 188000,
+          "endTimeMs": 188100
+        },
+        {
+          "word": "labyrinth",
+          "startTimeMs": 188200,
+          "endTimeMs": 188800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 189000,
+      "endTimeMs": 192800,
+      "segmentIndex": 55,
+      "text": "And make your body a whole manuscript (climb, climb, climb)",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 189000,
+          "endTimeMs": 189100
+        },
+        {
+          "word": "make",
+          "startTimeMs": 189200,
+          "endTimeMs": 189500
+        },
+        {
+          "word": "your",
+          "startTimeMs": 189600,
+          "endTimeMs": 189900
+        },
+        {
+          "word": "body",
+          "startTimeMs": 190000,
+          "endTimeMs": 190400
+        },
+        {
+          "word": "a",
+          "startTimeMs": 190500,
+          "endTimeMs": 190600
+        },
+        {
+          "word": "whole",
+          "startTimeMs": 190600,
+          "endTimeMs": 190900
+        },
+        {
+          "word": "manuscript",
+          "startTimeMs": 191000,
+          "endTimeMs": 191800
+        },
+        {
+          "word": "(climb,",
+          "startTimeMs": 191800,
+          "endTimeMs": 192100
+        },
+        {
+          "word": "climb,",
+          "startTimeMs": 192200,
+          "endTimeMs": 192400
+        },
+        {
+          "word": "climb)",
+          "startTimeMs": 192500,
+          "endTimeMs": 192800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 192900,
+      "endTimeMs": 193800,
+      "segmentIndex": 56,
+      "text": "(Climb, climb) Oh",
+      "words": [
+        {
+          "word": "(Climb,",
+          "startTimeMs": 192900,
+          "endTimeMs": 193200
+        },
+        {
+          "word": "climb)",
+          "startTimeMs": 193300,
+          "endTimeMs": 193500
+        },
+        {
+          "word": "Oh",
+          "startTimeMs": 193600,
+          "endTimeMs": 193800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 194000,
+      "endTimeMs": 197000,
+      "segmentIndex": 57,
+      "text": "I want to see your hair dance, I want to be your rhythm",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 194000,
+          "endTimeMs": 194100
+        },
+        {
+          "word": "want",
+          "startTimeMs": 194100,
+          "endTimeMs": 194400
+        },
+        {
+          "word": "to",
+          "startTimeMs": 194400,
+          "endTimeMs": 194500
+        },
+        {
+          "word": "see",
+          "startTimeMs": 194500,
+          "endTimeMs": 194600
+        },
+        {
+          "word": "your",
+          "startTimeMs": 194700,
+          "endTimeMs": 194900
+        },
+        {
+          "word": "hair",
+          "startTimeMs": 194900,
+          "endTimeMs": 195100
+        },
+        {
+          "word": "dance,",
+          "startTimeMs": 195400,
+          "endTimeMs": 195800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 195900,
+          "endTimeMs": 196000
+        },
+        {
+          "word": "want",
+          "startTimeMs": 196000,
+          "endTimeMs": 196100
+        },
+        {
+          "word": "to",
+          "startTimeMs": 196100,
+          "endTimeMs": 196200
+        },
+        {
+          "word": "be",
+          "startTimeMs": 196200,
+          "endTimeMs": 196400
+        },
+        {
+          "word": "your",
+          "startTimeMs": 196500,
+          "endTimeMs": 196600
+        },
+        {
+          "word": "rhythm",
+          "startTimeMs": 196700,
+          "endTimeMs": 197000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 197800,
+      "endTimeMs": 203600,
+      "segmentIndex": 58,
+      "text": "So that you teach my mouth, Your favorite places (favorite, favorite baby)",
+      "words": [
+        {
+          "word": "So",
+          "startTimeMs": 197800,
+          "endTimeMs": 197900
+        },
+        {
+          "word": "that",
+          "startTimeMs": 197900,
+          "endTimeMs": 198000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 198100,
+          "endTimeMs": 198200
+        },
+        {
+          "word": "teach",
+          "startTimeMs": 198300,
+          "endTimeMs": 198800
+        },
+        {
+          "word": "my",
+          "startTimeMs": 198900,
+          "endTimeMs": 199200
+        },
+        {
+          "word": "mouth,",
+          "startTimeMs": 199300,
+          "endTimeMs": 200000
+        },
+        {
+          "word": "Your",
+          "startTimeMs": 200600,
+          "endTimeMs": 201000
+        },
+        {
+          "word": "favorite",
+          "startTimeMs": 201100,
+          "endTimeMs": 201600
+        },
+        {
+          "word": "places",
+          "startTimeMs": 201700,
+          "endTimeMs": 202400
+        },
+        {
+          "word": "(favorite,",
+          "startTimeMs": 202500,
+          "endTimeMs": 202900
+        },
+        {
+          "word": "favorite",
+          "startTimeMs": 203000,
+          "endTimeMs": 203300
+        },
+        {
+          "word": "baby)",
+          "startTimeMs": 203400,
+          "endTimeMs": 203600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 204800,
+      "endTimeMs": 207900,
+      "segmentIndex": 59,
+      "text": "Let me exceed your danger zones",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 204800,
+          "endTimeMs": 205000
+        },
+        {
+          "word": "me",
+          "startTimeMs": 205000,
+          "endTimeMs": 205200
+        },
+        {
+          "word": "exceed",
+          "startTimeMs": 205300,
+          "endTimeMs": 206100
+        },
+        {
+          "word": "your",
+          "startTimeMs": 206200,
+          "endTimeMs": 206400
+        },
+        {
+          "word": "danger",
+          "startTimeMs": 206500,
+          "endTimeMs": 207100
+        },
+        {
+          "word": "zones",
+          "startTimeMs": 207200,
+          "endTimeMs": 207900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 208800,
+      "endTimeMs": 213500,
+      "segmentIndex": 60,
+      "text": "Until I provoke your screams, And that you forget your last name",
+      "words": [
+        {
+          "word": "Until",
+          "startTimeMs": 208800,
+          "endTimeMs": 209000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 209000,
+          "endTimeMs": 209200
+        },
+        {
+          "word": "provoke",
+          "startTimeMs": 209300,
+          "endTimeMs": 209800
+        },
+        {
+          "word": "your",
+          "startTimeMs": 209900,
+          "endTimeMs": 210100
+        },
+        {
+          "word": "screams,",
+          "startTimeMs": 210200,
+          "endTimeMs": 211000
+        },
+        {
+          "word": "And",
+          "startTimeMs": 211600,
+          "endTimeMs": 211700
+        },
+        {
+          "word": "that",
+          "startTimeMs": 211800,
+          "endTimeMs": 211900
+        },
+        {
+          "word": "you",
+          "startTimeMs": 211900,
+          "endTimeMs": 212000
+        },
+        {
+          "word": "forget",
+          "startTimeMs": 212000,
+          "endTimeMs": 212500
+        },
+        {
+          "word": "your",
+          "startTimeMs": 212600,
+          "endTimeMs": 212700
+        },
+        {
+          "word": "last",
+          "startTimeMs": 212800,
+          "endTimeMs": 213100
+        },
+        {
+          "word": "name",
+          "startTimeMs": 213100,
+          "endTimeMs": 213500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 213800,
+      "endTimeMs": 215400,
+      "segmentIndex": 61,
+      "text": "Slowly",
+      "words": [
+        {
+          "word": "Slowly",
+          "startTimeMs": 213800,
+          "endTimeMs": 215400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 216000,
+      "endTimeMs": 218500,
+      "segmentIndex": 62,
+      "text": "Let's do it on a beach in Puerto Rico",
+      "words": [
+        {
+          "word": "Let's",
+          "startTimeMs": 216000,
+          "endTimeMs": 216300
+        },
+        {
+          "word": "do",
+          "startTimeMs": 216300,
+          "endTimeMs": 216400
+        },
+        {
+          "word": "it",
+          "startTimeMs": 216400,
+          "endTimeMs": 216500
+        },
+        {
+          "word": "on",
+          "startTimeMs": 216600,
+          "endTimeMs": 216800
+        },
+        {
+          "word": "a",
+          "startTimeMs": 216800,
+          "endTimeMs": 217000
+        },
+        {
+          "word": "beach",
+          "startTimeMs": 217000,
+          "endTimeMs": 217400
+        },
+        {
+          "word": "in",
+          "startTimeMs": 217500,
+          "endTimeMs": 217800
+        },
+        {
+          "word": "Puerto",
+          "startTimeMs": 217900,
+          "endTimeMs": 218300
+        },
+        {
+          "word": "Rico",
+          "startTimeMs": 218300,
+          "endTimeMs": 218500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 218600,
+      "endTimeMs": 221300,
+      "segmentIndex": 63,
+      "text": "Until the waves scream \"Ay, bendito\"",
+      "words": [
+        {
+          "word": "Until",
+          "startTimeMs": 218600,
+          "endTimeMs": 219000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 219100,
+          "endTimeMs": 219200
+        },
+        {
+          "word": "waves",
+          "startTimeMs": 219300,
+          "endTimeMs": 219900
+        },
+        {
+          "word": "scream",
+          "startTimeMs": 220000,
+          "endTimeMs": 220400
+        },
+        {
+          "word": "\"Ay,",
+          "startTimeMs": 220500,
+          "endTimeMs": 220700
+        },
+        {
+          "word": "bendito\"",
+          "startTimeMs": 220800,
+          "endTimeMs": 221300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 221400,
+      "endTimeMs": 224700,
+      "segmentIndex": 64,
+      "text": "So that my mark stays with you (dance it)",
+      "words": [
+        {
+          "word": "So",
+          "startTimeMs": 221400,
+          "endTimeMs": 221700
+        },
+        {
+          "word": "that",
+          "startTimeMs": 221800,
+          "endTimeMs": 221900
+        },
+        {
+          "word": "my",
+          "startTimeMs": 222000,
+          "endTimeMs": 222100
+        },
+        {
+          "word": "mark",
+          "startTimeMs": 222200,
+          "endTimeMs": 222700
+        },
+        {
+          "word": "stays",
+          "startTimeMs": 222800,
+          "endTimeMs": 223300
+        },
+        {
+          "word": "with",
+          "startTimeMs": 223300,
+          "endTimeMs": 223400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 223400,
+          "endTimeMs": 224000
+        },
+        {
+          "word": "(dance",
+          "startTimeMs": 224100,
+          "endTimeMs": 224500
+        },
+        {
+          "word": "it)",
+          "startTimeMs": 224500,
+          "endTimeMs": 224700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 225400,
+      "endTimeMs": 228000,
+      "segmentIndex": 65,
+      "text": "Step by step, soft softly (hey yeah, yeah)",
+      "words": [
+        {
+          "word": "Step",
+          "startTimeMs": 225400,
+          "endTimeMs": 225800
+        },
+        {
+          "word": "by",
+          "startTimeMs": 225900,
+          "endTimeMs": 226000
+        },
+        {
+          "word": "step,",
+          "startTimeMs": 226100,
+          "endTimeMs": 226600
+        },
+        {
+          "word": "soft",
+          "startTimeMs": 226700,
+          "endTimeMs": 227000
+        },
+        {
+          "word": "softly",
+          "startTimeMs": 227100,
+          "endTimeMs": 227600
+        },
+        {
+          "word": "(hey",
+          "startTimeMs": 227600,
+          "endTimeMs": 227700
+        },
+        {
+          "word": "yeah,",
+          "startTimeMs": 227700,
+          "endTimeMs": 227900
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 227900,
+          "endTimeMs": 228000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 228100,
+      "endTimeMs": 230800,
+      "segmentIndex": 66,
+      "text": "We're getting closer, little by little (oh no)",
+      "words": [
+        {
+          "word": "We're",
+          "startTimeMs": 228100,
+          "endTimeMs": 228300
+        },
+        {
+          "word": "getting",
+          "startTimeMs": 228400,
+          "endTimeMs": 228700
+        },
+        {
+          "word": "closer,",
+          "startTimeMs": 228800,
+          "endTimeMs": 229400
+        },
+        {
+          "word": "little",
+          "startTimeMs": 229500,
+          "endTimeMs": 229900
+        },
+        {
+          "word": "by",
+          "startTimeMs": 230000,
+          "endTimeMs": 230100
+        },
+        {
+          "word": "little",
+          "startTimeMs": 230200,
+          "endTimeMs": 230600
+        },
+        {
+          "word": "(oh",
+          "startTimeMs": 230600,
+          "endTimeMs": 230700
+        },
+        {
+          "word": "no)",
+          "startTimeMs": 230700,
+          "endTimeMs": 230800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 230800,
+      "endTimeMs": 235000,
+      "segmentIndex": 67,
+      "text": "So that you teach my mouth, Your favorite places (favorite, favorite baby)",
+      "words": [
+        {
+          "word": "So",
+          "startTimeMs": 230800,
+          "endTimeMs": 231000
+        },
+        {
+          "word": "that",
+          "startTimeMs": 231000,
+          "endTimeMs": 231100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 231100,
+          "endTimeMs": 231200
+        },
+        {
+          "word": "teach",
+          "startTimeMs": 231300,
+          "endTimeMs": 231800
+        },
+        {
+          "word": "my",
+          "startTimeMs": 231900,
+          "endTimeMs": 232200
+        },
+        {
+          "word": "mouth,",
+          "startTimeMs": 232300,
+          "endTimeMs": 232800
+        },
+        {
+          "word": "Your",
+          "startTimeMs": 233100,
+          "endTimeMs": 233500
+        },
+        {
+          "word": "favorite",
+          "startTimeMs": 233600,
+          "endTimeMs": 234100
+        },
+        {
+          "word": "places",
+          "startTimeMs": 234200,
+          "endTimeMs": 234600
+        },
+        {
+          "word": "(favorite,",
+          "startTimeMs": 234600,
+          "endTimeMs": 234700
+        },
+        {
+          "word": "favorite",
+          "startTimeMs": 234700,
+          "endTimeMs": 234900
+        },
+        {
+          "word": "baby)",
+          "startTimeMs": 234900,
+          "endTimeMs": 235000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 235600,
+      "endTimeMs": 238200,
+      "segmentIndex": 68,
+      "text": "Step by step, soft softly",
+      "words": [
+        {
+          "word": "Step",
+          "startTimeMs": 235600,
+          "endTimeMs": 236000
+        },
+        {
+          "word": "by",
+          "startTimeMs": 236100,
+          "endTimeMs": 236200
+        },
+        {
+          "word": "step,",
+          "startTimeMs": 236300,
+          "endTimeMs": 236800
+        },
+        {
+          "word": "soft",
+          "startTimeMs": 236900,
+          "endTimeMs": 237200
+        },
+        {
+          "word": "softly",
+          "startTimeMs": 237300,
+          "endTimeMs": 238200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 238400,
+      "endTimeMs": 240900,
+      "segmentIndex": 69,
+      "text": "We're getting closer, little by little",
+      "words": [
+        {
+          "word": "We're",
+          "startTimeMs": 238400,
+          "endTimeMs": 238600
+        },
+        {
+          "word": "getting",
+          "startTimeMs": 238700,
+          "endTimeMs": 239000
+        },
+        {
+          "word": "closer,",
+          "startTimeMs": 239100,
+          "endTimeMs": 239700
+        },
+        {
+          "word": "little",
+          "startTimeMs": 239800,
+          "endTimeMs": 240200
+        },
+        {
+          "word": "by",
+          "startTimeMs": 240300,
+          "endTimeMs": 240400
+        },
+        {
+          "word": "little",
+          "startTimeMs": 240500,
+          "endTimeMs": 240900
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 240901,
+      "endTimeMs": 274000,
+      "segmentIndex": 70,
+      "cueText": "Outro"
+    }
+  ]
+}

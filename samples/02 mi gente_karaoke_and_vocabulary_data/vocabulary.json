@@ -1,0 +1,528 @@
+[
+  {
+    "term": {
+      "spanish": "llevar",
+      "english": "to carry/take/lead"
+    },
+    "definition": "To transport, lead, or take something or someone. In this context, to lead to a certain action.",
+    "difficulty": 3,
+    "example": {
+      "spanish": [
+        {
+          "text": "Si el ritmo te ",
+          "highlight": false
+        },
+        {
+          "text": "lleva",
+          "highlight": true
+        },
+        {
+          "text": " a mover la cabeza",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "If the rhythm ",
+          "highlight": false
+        },
+        {
+          "text": "makes",
+          "highlight": true
+        },
+        {
+          "text": " your head move",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "empezar",
+      "english": "to start/begin"
+    },
+    "definition": "To commence or initiate an action or process.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "Ya ",
+          "highlight": false
+        },
+        {
+          "text": "empezamos",
+          "highlight": true
+        },
+        {
+          "text": " como es",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "We've already ",
+          "highlight": false
+        },
+        {
+          "text": "started",
+          "highlight": true
+        },
+        {
+          "text": " as it should",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "discriminar",
+      "english": "to discriminate"
+    },
+    "definition": "To make an unjust or prejudicial distinction in the treatment of different categories of people or things.",
+    "difficulty": 4,
+    "example": {
+      "spanish": [
+        {
+          "text": "Mi música no ",
+          "highlight": false
+        },
+        {
+          "text": "discrimina",
+          "highlight": true
+        },
+        {
+          "text": " a nadie",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "My music doesn't ",
+          "highlight": false
+        },
+        {
+          "text": "discriminate",
+          "highlight": true
+        },
+        {
+          "text": " against anyone",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "romper",
+      "english": "to break"
+    },
+    "definition": "To separate into pieces violently or suddenly. Also used idiomatically for 'breaking it down' (dancing).",
+    "difficulty": 2,
+    "example": {
+      "spanish": [
+        {
+          "text": "Así que vamos a ",
+          "highlight": false
+        },
+        {
+          "text": "romper",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "So let's ",
+          "highlight": false
+        },
+        {
+          "text": "break it down",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "gente",
+      "english": "people"
+    },
+    "definition": "Human beings in general or considered collectively.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "Toda mi ",
+          "highlight": false
+        },
+        {
+          "text": "gente",
+          "highlight": true
+        },
+        {
+          "text": " se mueve",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "All my ",
+          "highlight": false
+        },
+        {
+          "text": "people",
+          "highlight": true
+        },
+        {
+          "text": " are moving",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "mover",
+      "english": "to move"
+    },
+    "definition": "To change the position of something or oneself.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "Toda mi gente se ",
+          "highlight": false
+        },
+        {
+          "text": "mueve",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "All my people are ",
+          "highlight": false
+        },
+        {
+          "text": "moving",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "entretener",
+      "english": "to entertain"
+    },
+    "definition": "To provide (someone) with amusement or enjoyment.",
+    "difficulty": 3,
+    "example": {
+      "spanish": [
+        {
+          "text": "Hago música que ",
+          "highlight": false
+        },
+        {
+          "text": "entretiene",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "I make music that ",
+          "highlight": false
+        },
+        {
+          "text": "entertains",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "querer",
+      "english": "to want/to love"
+    },
+    "definition": "To desire or wish for something, or to feel love or affection for someone.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "El mundo nos ",
+          "highlight": false
+        },
+        {
+          "text": "quiere",
+          "highlight": true
+        },
+        {
+          "text": ", nos ",
+          "highlight": false
+        },
+        {
+          "text": "quiere",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "The world ",
+          "highlight": false
+        },
+        {
+          "text": "wants",
+          "highlight": true
+        },
+        {
+          "text": " us, ",
+          "highlight": false
+        },
+        {
+          "text": "wants",
+          "highlight": true
+        },
+        {
+          "text": " us",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "discoteca",
+      "english": "club/discotheque"
+    },
+    "definition": "A public establishment for dancing, especially to recorded popular music.",
+    "difficulty": 2,
+    "example": {
+      "spanish": [
+        {
+          "text": "Tamo' rompiendo la ",
+          "highlight": false
+        },
+        {
+          "text": "discoteca",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "We're tearing up the ",
+          "highlight": false
+        },
+        {
+          "text": "club",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "apenas",
+      "english": "hardly/scarcely/just"
+    },
+    "definition": "Only just, almost not; indicates something is new or has just started.",
+    "difficulty": 4,
+    "example": {
+      "spanish": [
+        {
+          "text": "La fiesta no para, ",
+          "highlight": false
+        },
+        {
+          "text": "apenas",
+          "highlight": true
+        },
+        {
+          "text": " comienza",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "The party doesn't stop, it's ",
+          "highlight": false
+        },
+        {
+          "text": "just",
+          "highlight": true
+        },
+        {
+          "text": " beginning",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "comenzar",
+      "english": "to begin/start"
+    },
+    "definition": "To perform or undergo the first part of an action or activity. Synonym of 'empezar'.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "La fiesta no para, apenas ",
+          "highlight": false
+        },
+        {
+          "text": "comienza",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "The party doesn't stop, it's just ",
+          "highlight": false
+        },
+        {
+          "text": "beginning",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "mentir",
+      "english": "to lie"
+    },
+    "definition": "To speak untruthfully with intent to deceive or mislead.",
+    "difficulty": 3,
+    "example": {
+      "spanish": [
+        {
+          "text": "Los DJs no ",
+          "highlight": false
+        },
+        {
+          "text": "mienten",
+          "highlight": true
+        },
+        {
+          "text": ", le gusta a mi gente",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "The DJs don't ",
+          "highlight": false
+        },
+        {
+          "text": "lie",
+          "highlight": true
+        },
+        {
+          "text": ", my people like it",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "mundial",
+      "english": "worldwide/global"
+    },
+    "definition": "Affecting or known about by the whole world.",
+    "difficulty": 2,
+    "example": {
+      "spanish": [
+        {
+          "text": "Y eso se fue ",
+          "highlight": false
+        },
+        {
+          "text": "mundial",
+          "highlight": true
+        },
+        {
+          "text": " (Freeze)",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "And that went ",
+          "highlight": false
+        },
+        {
+          "text": "worldwide",
+          "highlight": true
+        },
+        {
+          "text": " (Freeze)",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "elevar",
+      "english": "to raise/to elevate"
+    },
+    "definition": "To lift or make higher. Figuratively, to improve or advance.",
+    "difficulty": 4,
+    "example": {
+      "spanish": [
+        {
+          "text": "Y con el tiempo nos seguimos ",
+          "highlight": false
+        },
+        {
+          "text": "elevando",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "And with time we keep ",
+          "highlight": false
+        },
+        {
+          "text": "rising",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "fin",
+      "english": "end"
+    },
+    "definition": "The final part of something, typically a period, activity, or story.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "Esta fiesta no tiene ",
+          "highlight": false
+        },
+        {
+          "text": "fin",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "This party has no ",
+          "highlight": false
+        },
+        {
+          "text": "end",
+          "highlight": true
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,1800 @@
+{
+  "metadata": {
+    "title": "Oh My God",
+    "artist": "Guianko",
+    "durationMs": 182000,
+    "language": "es",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 10112,
+      "segmentIndex": 0,
+      "cueText": "Intro"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 10113,
+      "endTimeMs": 11283,
+      "segmentIndex": 1,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 10113,
+          "endTimeMs": 10483
+        },
+        {
+          "word": "my",
+          "startTimeMs": 10493,
+          "endTimeMs": 10733
+        },
+        {
+          "word": "God",
+          "startTimeMs": 10743,
+          "endTimeMs": 11283
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 12023,
+      "endTimeMs": 13913,
+      "segmentIndex": 2,
+      "text": "Todo lo malo échalo pa’ allá",
+      "words": [
+        {
+          "word": "Todo",
+          "startTimeMs": 12023,
+          "endTimeMs": 12303
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 12313,
+          "endTimeMs": 12473
+        },
+        {
+          "word": "malo",
+          "startTimeMs": 12483,
+          "endTimeMs": 12843
+        },
+        {
+          "word": "échalo",
+          "startTimeMs": 12853,
+          "endTimeMs": 13323
+        },
+        {
+          "word": "pa’",
+          "startTimeMs": 13333,
+          "endTimeMs": 13533
+        },
+        {
+          "word": "allá",
+          "startTimeMs": 13543,
+          "endTimeMs": 13913
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 14633,
+      "endTimeMs": 15823,
+      "segmentIndex": 3,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 14633,
+          "endTimeMs": 14893
+        },
+        {
+          "word": "my",
+          "startTimeMs": 14903,
+          "endTimeMs": 15133
+        },
+        {
+          "word": "God",
+          "startTimeMs": 15143,
+          "endTimeMs": 15823
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 16383,
+      "endTimeMs": 18483,
+      "segmentIndex": 4,
+      "text": "Dame salud y prosperidad",
+      "words": [
+        {
+          "word": "Dame",
+          "startTimeMs": 16383,
+          "endTimeMs": 16743
+        },
+        {
+          "word": "salud",
+          "startTimeMs": 16753,
+          "endTimeMs": 17163
+        },
+        {
+          "word": "y",
+          "startTimeMs": 17173,
+          "endTimeMs": 17313
+        },
+        {
+          "word": "prosperidad",
+          "startTimeMs": 17323,
+          "endTimeMs": 18483
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 19788,
+      "endTimeMs": 23228,
+      "segmentIndex": 5,
+      "text": "No tengo nada pero soy feliz",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 19788,
+          "endTimeMs": 20038
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 20048,
+          "endTimeMs": 20428
+        },
+        {
+          "word": "nada",
+          "startTimeMs": 20438,
+          "endTimeMs": 20978
+        },
+        {
+          "word": "pero",
+          "startTimeMs": 20988,
+          "endTimeMs": 21478
+        },
+        {
+          "word": "soy",
+          "startTimeMs": 21488,
+          "endTimeMs": 21958
+        },
+        {
+          "word": "feliz",
+          "startTimeMs": 21968,
+          "endTimeMs": 23228
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 24098,
+      "endTimeMs": 27768,
+      "segmentIndex": 6,
+      "text": "Solo recuerdos habitan en mí",
+      "words": [
+        {
+          "word": "Solo",
+          "startTimeMs": 24098,
+          "endTimeMs": 24498
+        },
+        {
+          "word": "recuerdos",
+          "startTimeMs": 24508,
+          "endTimeMs": 25378
+        },
+        {
+          "word": "habitan",
+          "startTimeMs": 25388,
+          "endTimeMs": 26098
+        },
+        {
+          "word": "en",
+          "startTimeMs": 26108,
+          "endTimeMs": 26398
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 26408,
+          "endTimeMs": 27768
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 28588,
+      "endTimeMs": 32188,
+      "segmentIndex": 7,
+      "text": "Sueños que cumplir y yo voy a mí",
+      "words": [
+        {
+          "word": "Sueños",
+          "startTimeMs": 28588,
+          "endTimeMs": 29028
+        },
+        {
+          "word": "que",
+          "startTimeMs": 29038,
+          "endTimeMs": 29208
+        },
+        {
+          "word": "cumplir",
+          "startTimeMs": 29218,
+          "endTimeMs": 30148
+        },
+        {
+          "word": "y",
+          "startTimeMs": 30158,
+          "endTimeMs": 30338
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 30348,
+          "endTimeMs": 30598
+        },
+        {
+          "word": "voy",
+          "startTimeMs": 30608,
+          "endTimeMs": 30888
+        },
+        {
+          "word": "a",
+          "startTimeMs": 30898,
+          "endTimeMs": 31048
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 31058,
+          "endTimeMs": 32188
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 32998,
+      "endTimeMs": 35518,
+      "segmentIndex": 8,
+      "text": "Puede que esté crazy, pero no lazy",
+      "words": [
+        {
+          "word": "Puede",
+          "startTimeMs": 32998,
+          "endTimeMs": 33328
+        },
+        {
+          "word": "que",
+          "startTimeMs": 33338,
+          "endTimeMs": 33468
+        },
+        {
+          "word": "esté",
+          "startTimeMs": 33478,
+          "endTimeMs": 33798
+        },
+        {
+          "word": "crazy,",
+          "startTimeMs": 33808,
+          "endTimeMs": 34398
+        },
+        {
+          "word": "pero",
+          "startTimeMs": 34408,
+          "endTimeMs": 34758
+        },
+        {
+          "word": "no",
+          "startTimeMs": 34768,
+          "endTimeMs": 34978
+        },
+        {
+          "word": "lazy",
+          "startTimeMs": 34988,
+          "endTimeMs": 35518
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 35848,
+      "endTimeMs": 38008,
+      "segmentIndex": 9,
+      "text": "Hasta lograrlo voy a seguir",
+      "words": [
+        {
+          "word": "Hasta",
+          "startTimeMs": 35848,
+          "endTimeMs": 36178
+        },
+        {
+          "word": "lograrlo",
+          "startTimeMs": 36188,
+          "endTimeMs": 36828
+        },
+        {
+          "word": "voy",
+          "startTimeMs": 36838,
+          "endTimeMs": 37078
+        },
+        {
+          "word": "a",
+          "startTimeMs": 37088,
+          "endTimeMs": 37238
+        },
+        {
+          "word": "seguir",
+          "startTimeMs": 37248,
+          "endTimeMs": 38008
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 38778,
+      "endTimeMs": 40088,
+      "segmentIndex": 10,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 38778,
+          "endTimeMs": 39028
+        },
+        {
+          "word": "my",
+          "startTimeMs": 39038,
+          "endTimeMs": 39288
+        },
+        {
+          "word": "God",
+          "startTimeMs": 39298,
+          "endTimeMs": 40088
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 40608,
+      "endTimeMs": 42838,
+      "segmentIndex": 11,
+      "text": "Todo lo malo échalo pa’ allá",
+      "words": [
+        {
+          "word": "Todo",
+          "startTimeMs": 40608,
+          "endTimeMs": 40888
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 40898,
+          "endTimeMs": 41018
+        },
+        {
+          "word": "malo",
+          "startTimeMs": 41028,
+          "endTimeMs": 41418
+        },
+        {
+          "word": "échalo",
+          "startTimeMs": 41428,
+          "endTimeMs": 41888
+        },
+        {
+          "word": "pa’",
+          "startTimeMs": 41898,
+          "endTimeMs": 42098
+        },
+        {
+          "word": "allá",
+          "startTimeMs": 42108,
+          "endTimeMs": 42838
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 43418,
+      "endTimeMs": 44768,
+      "segmentIndex": 12,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 43418,
+          "endTimeMs": 43698
+        },
+        {
+          "word": "my",
+          "startTimeMs": 43708,
+          "endTimeMs": 43948
+        },
+        {
+          "word": "God",
+          "startTimeMs": 43958,
+          "endTimeMs": 44768
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 45338,
+      "endTimeMs": 47448,
+      "segmentIndex": 13,
+      "text": "Dame salud y prosperidad",
+      "words": [
+        {
+          "word": "Dame",
+          "startTimeMs": 45338,
+          "endTimeMs": 45648
+        },
+        {
+          "word": "salud",
+          "startTimeMs": 45658,
+          "endTimeMs": 46028
+        },
+        {
+          "word": "y",
+          "startTimeMs": 46038,
+          "endTimeMs": 46188
+        },
+        {
+          "word": "prosperidad",
+          "startTimeMs": 46198,
+          "endTimeMs": 47448
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 48138,
+      "endTimeMs": 50298,
+      "segmentIndex": 14,
+      "text": "Que se me alineen todos los planetas",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 48138,
+          "endTimeMs": 48298
+        },
+        {
+          "word": "se",
+          "startTimeMs": 48308,
+          "endTimeMs": 48478
+        },
+        {
+          "word": "me",
+          "startTimeMs": 48488,
+          "endTimeMs": 48608
+        },
+        {
+          "word": "alineen",
+          "startTimeMs": 48618,
+          "endTimeMs": 49018
+        },
+        {
+          "word": "todos",
+          "startTimeMs": 49028,
+          "endTimeMs": 49328
+        },
+        {
+          "word": "los",
+          "startTimeMs": 49338,
+          "endTimeMs": 49478
+        },
+        {
+          "word": "planetas",
+          "startTimeMs": 49488,
+          "endTimeMs": 50298
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 50488,
+      "endTimeMs": 52638,
+      "segmentIndex": 15,
+      "text": "Que mi cartera no haga más dietas",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 50488,
+          "endTimeMs": 50648
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 50658,
+          "endTimeMs": 50828
+        },
+        {
+          "word": "cartera",
+          "startTimeMs": 50838,
+          "endTimeMs": 51388
+        },
+        {
+          "word": "no",
+          "startTimeMs": 51398,
+          "endTimeMs": 51558
+        },
+        {
+          "word": "haga",
+          "startTimeMs": 51568,
+          "endTimeMs": 51858
+        },
+        {
+          "word": "más",
+          "startTimeMs": 51868,
+          "endTimeMs": 52058
+        },
+        {
+          "word": "dietas",
+          "startTimeMs": 52068,
+          "endTimeMs": 52638
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 52788,
+      "endTimeMs": 54788,
+      "segmentIndex": 16,
+      "text": "Que me visite la buena suerte",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 52788,
+          "endTimeMs": 52948
+        },
+        {
+          "word": "me",
+          "startTimeMs": 52958,
+          "endTimeMs": 53118
+        },
+        {
+          "word": "visite",
+          "startTimeMs": 53128,
+          "endTimeMs": 53708
+        },
+        {
+          "word": "la",
+          "startTimeMs": 53718,
+          "endTimeMs": 53848
+        },
+        {
+          "word": "buena",
+          "startTimeMs": 53858,
+          "endTimeMs": 54198
+        },
+        {
+          "word": "suerte",
+          "startTimeMs": 54208,
+          "endTimeMs": 54788
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 55238,
+      "endTimeMs": 57148,
+      "segmentIndex": 17,
+      "text": "Para ayudar a toda mi gente",
+      "words": [
+        {
+          "word": "Para",
+          "startTimeMs": 55238,
+          "endTimeMs": 55528
+        },
+        {
+          "word": "ayudar",
+          "startTimeMs": 55538,
+          "endTimeMs": 56028
+        },
+        {
+          "word": "a",
+          "startTimeMs": 56038,
+          "endTimeMs": 56198
+        },
+        {
+          "word": "toda",
+          "startTimeMs": 56208,
+          "endTimeMs": 56498
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 56508,
+          "endTimeMs": 56678
+        },
+        {
+          "word": "gente",
+          "startTimeMs": 56688,
+          "endTimeMs": 57148
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 58028,
+      "endTimeMs": 59308,
+      "segmentIndex": 18,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 58028,
+          "endTimeMs": 58278
+        },
+        {
+          "word": "my",
+          "startTimeMs": 58288,
+          "endTimeMs": 58528
+        },
+        {
+          "word": "God",
+          "startTimeMs": 58538,
+          "endTimeMs": 59308
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 59978,
+      "endTimeMs": 62208,
+      "segmentIndex": 19,
+      "text": "Todo lo malo échalo pa’ allá",
+      "words": [
+        {
+          "word": "Todo",
+          "startTimeMs": 59978,
+          "endTimeMs": 60238
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 60248,
+          "endTimeMs": 60398
+        },
+        {
+          "word": "malo",
+          "startTimeMs": 60408,
+          "endTimeMs": 60788
+        },
+        {
+          "word": "échalo",
+          "startTimeMs": 60798,
+          "endTimeMs": 61268
+        },
+        {
+          "word": "pa’",
+          "startTimeMs": 61278,
+          "endTimeMs": 61488
+        },
+        {
+          "word": "allá",
+          "startTimeMs": 61498,
+          "endTimeMs": 62208
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 62888,
+      "endTimeMs": 64158,
+      "segmentIndex": 20,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 62888,
+          "endTimeMs": 63138
+        },
+        {
+          "word": "my",
+          "startTimeMs": 63148,
+          "endTimeMs": 63378
+        },
+        {
+          "word": "God",
+          "startTimeMs": 63388,
+          "endTimeMs": 64158
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 64748,
+      "endTimeMs": 66988,
+      "segmentIndex": 21,
+      "text": "Dame salud y prosperidad",
+      "words": [
+        {
+          "word": "Dame",
+          "startTimeMs": 64748,
+          "endTimeMs": 65058
+        },
+        {
+          "word": "salud",
+          "startTimeMs": 65068,
+          "endTimeMs": 65478
+        },
+        {
+          "word": "y",
+          "startTimeMs": 65488,
+          "endTimeMs": 65638
+        },
+        {
+          "word": "prosperidad",
+          "startTimeMs": 65648,
+          "endTimeMs": 66988
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 67831,
+      "endTimeMs": 69861,
+      "segmentIndex": 22,
+      "text": "Hay que dar gracias por un día más de vida",
+      "words": [
+        {
+          "word": "Hay",
+          "startTimeMs": 67831,
+          "endTimeMs": 67981
+        },
+        {
+          "word": "que",
+          "startTimeMs": 67991,
+          "endTimeMs": 68121
+        },
+        {
+          "word": "dar",
+          "startTimeMs": 68131,
+          "endTimeMs": 68321
+        },
+        {
+          "word": "gracias",
+          "startTimeMs": 68331,
+          "endTimeMs": 68711
+        },
+        {
+          "word": "por",
+          "startTimeMs": 68721,
+          "endTimeMs": 68891
+        },
+        {
+          "word": "un",
+          "startTimeMs": 68901,
+          "endTimeMs": 69021
+        },
+        {
+          "word": "día",
+          "startTimeMs": 69031,
+          "endTimeMs": 69211
+        },
+        {
+          "word": "más",
+          "startTimeMs": 69221,
+          "endTimeMs": 69401
+        },
+        {
+          "word": "de",
+          "startTimeMs": 69411,
+          "endTimeMs": 69531
+        },
+        {
+          "word": "vida",
+          "startTimeMs": 69541,
+          "endTimeMs": 69861
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 70291,
+      "endTimeMs": 72321,
+      "segmentIndex": 23,
+      "text": "Por los amigos que son pocos hoy en día",
+      "words": [
+        {
+          "word": "Por",
+          "startTimeMs": 70291,
+          "endTimeMs": 70441
+        },
+        {
+          "word": "los",
+          "startTimeMs": 70451,
+          "endTimeMs": 70621
+        },
+        {
+          "word": "amigos",
+          "startTimeMs": 70631,
+          "endTimeMs": 71051
+        },
+        {
+          "word": "que",
+          "startTimeMs": 71061,
+          "endTimeMs": 71181
+        },
+        {
+          "word": "son",
+          "startTimeMs": 71191,
+          "endTimeMs": 71391
+        },
+        {
+          "word": "pocos",
+          "startTimeMs": 71401,
+          "endTimeMs": 71711
+        },
+        {
+          "word": "hoy",
+          "startTimeMs": 71721,
+          "endTimeMs": 71891
+        },
+        {
+          "word": "en",
+          "startTimeMs": 71901,
+          "endTimeMs": 72001
+        },
+        {
+          "word": "día",
+          "startTimeMs": 72011,
+          "endTimeMs": 72321
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 72661,
+      "endTimeMs": 74781,
+      "segmentIndex": 24,
+      "text": "No hagas el mal porque todo se te vira",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 72661,
+          "endTimeMs": 72831
+        },
+        {
+          "word": "hagas",
+          "startTimeMs": 72841,
+          "endTimeMs": 73121
+        },
+        {
+          "word": "el",
+          "startTimeMs": 73131,
+          "endTimeMs": 73231
+        },
+        {
+          "word": "mal",
+          "startTimeMs": 73241,
+          "endTimeMs": 73511
+        },
+        {
+          "word": "porque",
+          "startTimeMs": 73521,
+          "endTimeMs": 73841
+        },
+        {
+          "word": "todo",
+          "startTimeMs": 73851,
+          "endTimeMs": 74091
+        },
+        {
+          "word": "se",
+          "startTimeMs": 74101,
+          "endTimeMs": 74221
+        },
+        {
+          "word": "te",
+          "startTimeMs": 74231,
+          "endTimeMs": 74381
+        },
+        {
+          "word": "vira",
+          "startTimeMs": 74391,
+          "endTimeMs": 74781
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 75161,
+      "endTimeMs": 77111,
+      "segmentIndex": 25,
+      "text": "Un día estás abajo y al otro día arriba",
+      "words": [
+        {
+          "word": "Un",
+          "startTimeMs": 75161,
+          "endTimeMs": 75321
+        },
+        {
+          "word": "día",
+          "startTimeMs": 75331,
+          "endTimeMs": 75491
+        },
+        {
+          "word": "estás",
+          "startTimeMs": 75501,
+          "endTimeMs": 75791
+        },
+        {
+          "word": "abajo",
+          "startTimeMs": 75801,
+          "endTimeMs": 76211
+        },
+        {
+          "word": "y",
+          "startTimeMs": 76221,
+          "endTimeMs": 76291
+        },
+        {
+          "word": "al",
+          "startTimeMs": 76301,
+          "endTimeMs": 76421
+        },
+        {
+          "word": "otro",
+          "startTimeMs": 76431,
+          "endTimeMs": 76681
+        },
+        {
+          "word": "día",
+          "startTimeMs": 76691,
+          "endTimeMs": 76831
+        },
+        {
+          "word": "arriba",
+          "startTimeMs": 76841,
+          "endTimeMs": 77111
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 77461,
+      "endTimeMs": 80511,
+      "segmentIndex": 26,
+      "text": "Sueños que cumplir y yo voy a mí",
+      "words": [
+        {
+          "word": "Sueños",
+          "startTimeMs": 77461,
+          "endTimeMs": 77911
+        },
+        {
+          "word": "que",
+          "startTimeMs": 77921,
+          "endTimeMs": 78101
+        },
+        {
+          "word": "cumplir",
+          "startTimeMs": 78111,
+          "endTimeMs": 79031
+        },
+        {
+          "word": "y",
+          "startTimeMs": 79041,
+          "endTimeMs": 79211
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 79221,
+          "endTimeMs": 79461
+        },
+        {
+          "word": "voy",
+          "startTimeMs": 79471,
+          "endTimeMs": 79761
+        },
+        {
+          "word": "a",
+          "startTimeMs": 79771,
+          "endTimeMs": 79911
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 79921,
+          "endTimeMs": 80511
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 81561,
+      "endTimeMs": 83861,
+      "segmentIndex": 27,
+      "text": "Puede que esté crazy, pero no lazy",
+      "words": [
+        {
+          "word": "Puede",
+          "startTimeMs": 81561,
+          "endTimeMs": 81861
+        },
+        {
+          "word": "que",
+          "startTimeMs": 81871,
+          "endTimeMs": 82011
+        },
+        {
+          "word": "esté",
+          "startTimeMs": 82021,
+          "endTimeMs": 82331
+        },
+        {
+          "word": "crazy,",
+          "startTimeMs": 82341,
+          "endTimeMs": 82941
+        },
+        {
+          "word": "pero",
+          "startTimeMs": 82951,
+          "endTimeMs": 83291
+        },
+        {
+          "word": "no",
+          "startTimeMs": 83301,
+          "endTimeMs": 83501
+        },
+        {
+          "word": "lazy",
+          "startTimeMs": 83511,
+          "endTimeMs": 83861
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 84111,
+      "endTimeMs": 86061,
+      "segmentIndex": 28,
+      "text": "Hasta lograrlo voy a seguir",
+      "words": [
+        {
+          "word": "Hasta",
+          "startTimeMs": 84111,
+          "endTimeMs": 84401
+        },
+        {
+          "word": "lograrlo",
+          "startTimeMs": 84411,
+          "endTimeMs": 85071
+        },
+        {
+          "word": "voy",
+          "startTimeMs": 85081,
+          "endTimeMs": 85331
+        },
+        {
+          "word": "a",
+          "startTimeMs": 85341,
+          "endTimeMs": 85481
+        },
+        {
+          "word": "seguir",
+          "startTimeMs": 85491,
+          "endTimeMs": 86061
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 86062,
+      "endTimeMs": 93343,
+      "segmentIndex": 29,
+      "cueText": "Puente Musical"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 93744,
+      "endTimeMs": 94984,
+      "segmentIndex": 30,
+      "text": "Oh my God!",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 93744,
+          "endTimeMs": 94014
+        },
+        {
+          "word": "my",
+          "startTimeMs": 94024,
+          "endTimeMs": 94264
+        },
+        {
+          "word": "God!",
+          "startTimeMs": 94274,
+          "endTimeMs": 94984
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 95100,
+      "endTimeMs": 95800,
+      "segmentIndex": 31,
+      "text": "(Yeah)",
+      "words": [
+        {
+          "word": "(Yeah)",
+          "startTimeMs": 95100,
+          "endTimeMs": 95800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 96200,
+      "endTimeMs": 96900,
+      "segmentIndex": 32,
+      "text": "(Ah-ah)",
+      "words": [
+        {
+          "word": "(Ah-ah)",
+          "startTimeMs": 96200,
+          "endTimeMs": 96900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 97684,
+      "endTimeMs": 98374,
+      "segmentIndex": 33,
+      "text": "(Candelita)",
+      "words": [
+        {
+          "word": "(Candelita)",
+          "startTimeMs": 97684,
+          "endTimeMs": 98374
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 98764,
+      "endTimeMs": 100024,
+      "segmentIndex": 34,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 98764,
+          "endTimeMs": 99034
+        },
+        {
+          "word": "my",
+          "startTimeMs": 99044,
+          "endTimeMs": 99264
+        },
+        {
+          "word": "God",
+          "startTimeMs": 99274,
+          "endTimeMs": 100024
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 100300,
+      "endTimeMs": 100600,
+      "segmentIndex": 35,
+      "text": "(Díselo)",
+      "words": [
+        {
+          "word": "(Díselo)",
+          "startTimeMs": 100300,
+          "endTimeMs": 100600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 100684,
+      "endTimeMs": 101414,
+      "segmentIndex": 36,
+      "text": "Mauro!",
+      "words": [
+        {
+          "word": "Mauro!",
+          "startTimeMs": 100684,
+          "endTimeMs": 101414
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 101884,
+      "endTimeMs": 102824,
+      "segmentIndex": 37,
+      "text": "Díselo, Guianko!",
+      "words": [
+        {
+          "word": "Díselo,",
+          "startTimeMs": 101884,
+          "endTimeMs": 102314
+        },
+        {
+          "word": "Guianko!",
+          "startTimeMs": 102324,
+          "endTimeMs": 102824
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 103434,
+      "endTimeMs": 104684,
+      "segmentIndex": 38,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 103434,
+          "endTimeMs": 103684
+        },
+        {
+          "word": "my",
+          "startTimeMs": 103694,
+          "endTimeMs": 103934
+        },
+        {
+          "word": "God",
+          "startTimeMs": 103944,
+          "endTimeMs": 104684
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 105264,
+      "endTimeMs": 107514,
+      "segmentIndex": 39,
+      "text": "Todo lo malo échalo pa’ allá",
+      "words": [
+        {
+          "word": "Todo",
+          "startTimeMs": 105264,
+          "endTimeMs": 105534
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 105544,
+          "endTimeMs": 105694
+        },
+        {
+          "word": "malo",
+          "startTimeMs": 105704,
+          "endTimeMs": 106084
+        },
+        {
+          "word": "échalo",
+          "startTimeMs": 106094,
+          "endTimeMs": 106564
+        },
+        {
+          "word": "pa’",
+          "startTimeMs": 106574,
+          "endTimeMs": 106764
+        },
+        {
+          "word": "allá",
+          "startTimeMs": 106774,
+          "endTimeMs": 107514
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 108114,
+      "endTimeMs": 109364,
+      "segmentIndex": 40,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 108114,
+          "endTimeMs": 108384
+        },
+        {
+          "word": "my",
+          "startTimeMs": 108394,
+          "endTimeMs": 108614
+        },
+        {
+          "word": "God",
+          "startTimeMs": 108624,
+          "endTimeMs": 109364
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 109954,
+      "endTimeMs": 112064,
+      "segmentIndex": 41,
+      "text": "Dame salud y prosperidad",
+      "words": [
+        {
+          "word": "Dame",
+          "startTimeMs": 109954,
+          "endTimeMs": 110264
+        },
+        {
+          "word": "salud",
+          "startTimeMs": 110274,
+          "endTimeMs": 110684
+        },
+        {
+          "word": "y",
+          "startTimeMs": 110694,
+          "endTimeMs": 110824
+        },
+        {
+          "word": "prosperidad",
+          "startTimeMs": 110834,
+          "endTimeMs": 112064
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 112434,
+      "endTimeMs": 114674,
+      "segmentIndex": 42,
+      "text": "Que la mala lengua no tenga chance",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 112434,
+          "endTimeMs": 112594
+        },
+        {
+          "word": "la",
+          "startTimeMs": 112604,
+          "endTimeMs": 112734
+        },
+        {
+          "word": "mala",
+          "startTimeMs": 112744,
+          "endTimeMs": 113124
+        },
+        {
+          "word": "lengua",
+          "startTimeMs": 113134,
+          "endTimeMs": 113544
+        },
+        {
+          "word": "no",
+          "startTimeMs": 113554,
+          "endTimeMs": 113704
+        },
+        {
+          "word": "tenga",
+          "startTimeMs": 113714,
+          "endTimeMs": 114034
+        },
+        {
+          "word": "chance",
+          "startTimeMs": 114044,
+          "endTimeMs": 114674
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 115104,
+      "endTimeMs": 116974,
+      "segmentIndex": 43,
+      "text": "Y que la envidia a mí no me alcance",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 115104,
+          "endTimeMs": 115184
+        },
+        {
+          "word": "que",
+          "startTimeMs": 115194,
+          "endTimeMs": 115334
+        },
+        {
+          "word": "la",
+          "startTimeMs": 115344,
+          "endTimeMs": 115464
+        },
+        {
+          "word": "envidia",
+          "startTimeMs": 115474,
+          "endTimeMs": 116024
+        },
+        {
+          "word": "a",
+          "startTimeMs": 116034,
+          "endTimeMs": 116104
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 116114,
+          "endTimeMs": 116234
+        },
+        {
+          "word": "no",
+          "startTimeMs": 116244,
+          "endTimeMs": 116384
+        },
+        {
+          "word": "me",
+          "startTimeMs": 116394,
+          "endTimeMs": 116514
+        },
+        {
+          "word": "alcance",
+          "startTimeMs": 116524,
+          "endTimeMs": 116974
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 117334,
+      "endTimeMs": 119504,
+      "segmentIndex": 44,
+      "text": "Que el tiempo siempre sea mi testigo",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 117334,
+          "endTimeMs": 117484
+        },
+        {
+          "word": "el",
+          "startTimeMs": 117494,
+          "endTimeMs": 117624
+        },
+        {
+          "word": "tiempo",
+          "startTimeMs": 117634,
+          "endTimeMs": 118024
+        },
+        {
+          "word": "siempre",
+          "startTimeMs": 118034,
+          "endTimeMs": 118424
+        },
+        {
+          "word": "sea",
+          "startTimeMs": 118434,
+          "endTimeMs": 118654
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 118664,
+          "endTimeMs": 118814
+        },
+        {
+          "word": "testigo",
+          "startTimeMs": 118824,
+          "endTimeMs": 119504
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 119844,
+      "endTimeMs": 121984,
+      "segmentIndex": 45,
+      "text": "Solo hago el bien por eso te pido",
+      "words": [
+        {
+          "word": "Solo",
+          "startTimeMs": 119844,
+          "endTimeMs": 120194
+        },
+        {
+          "word": "hago",
+          "startTimeMs": 120204,
+          "endTimeMs": 120484
+        },
+        {
+          "word": "el",
+          "startTimeMs": 120494,
+          "endTimeMs": 120604
+        },
+        {
+          "word": "bien",
+          "startTimeMs": 120614,
+          "endTimeMs": 120894
+        },
+        {
+          "word": "por",
+          "startTimeMs": 120904,
+          "endTimeMs": 121104
+        },
+        {
+          "word": "eso",
+          "startTimeMs": 121114,
+          "endTimeMs": 121404
+        },
+        {
+          "word": "te",
+          "startTimeMs": 121414,
+          "endTimeMs": 121554
+        },
+        {
+          "word": "pido",
+          "startTimeMs": 121564,
+          "endTimeMs": 121984
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 122724,
+      "endTimeMs": 123904,
+      "segmentIndex": 46,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 122724,
+          "endTimeMs": 122984
+        },
+        {
+          "word": "my",
+          "startTimeMs": 122994,
+          "endTimeMs": 123214
+        },
+        {
+          "word": "God",
+          "startTimeMs": 123224,
+          "endTimeMs": 123904
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 124284,
+      "endTimeMs": 126744,
+      "segmentIndex": 47,
+      "text": "(Lucha por tu sueño, que sí se puede)",
+      "words": [
+        {
+          "word": "(Lucha",
+          "startTimeMs": 124284,
+          "endTimeMs": 124584
+        },
+        {
+          "word": "por",
+          "startTimeMs": 124594,
+          "endTimeMs": 124774
+        },
+        {
+          "word": "tu",
+          "startTimeMs": 124784,
+          "endTimeMs": 124924
+        },
+        {
+          "word": "sueño,",
+          "startTimeMs": 124934,
+          "endTimeMs": 125574
+        },
+        {
+          "word": "que",
+          "startTimeMs": 125784,
+          "endTimeMs": 125914
+        },
+        {
+          "word": "sí",
+          "startTimeMs": 125924,
+          "endTimeMs": 126114
+        },
+        {
+          "word": "se",
+          "startTimeMs": 126124,
+          "endTimeMs": 126294
+        },
+        {
+          "word": "puede)",
+          "startTimeMs": 126304,
+          "endTimeMs": 126744
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 127444,
+      "endTimeMs": 128624,
+      "segmentIndex": 48,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 127444,
+          "endTimeMs": 127684
+        },
+        {
+          "word": "my",
+          "startTimeMs": 127694,
+          "endTimeMs": 127924
+        },
+        {
+          "word": "God",
+          "startTimeMs": 127934,
+          "endTimeMs": 128624
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 128924,
+      "endTimeMs": 131804,
+      "segmentIndex": 49,
+      "text": "(Y cuando no encuentres la salida canta conmigo)",
+      "words": [
+        {
+          "word": "(Y",
+          "startTimeMs": 128924,
+          "endTimeMs": 129044
+        },
+        {
+          "word": "cuando",
+          "startTimeMs": 129054,
+          "endTimeMs": 129384
+        },
+        {
+          "word": "no",
+          "startTimeMs": 129394,
+          "endTimeMs": 129544
+        },
+        {
+          "word": "encuentres",
+          "startTimeMs": 129554,
+          "endTimeMs": 130044
+        },
+        {
+          "word": "la",
+          "startTimeMs": 130054,
+          "endTimeMs": 130204
+        },
+        {
+          "word": "salida",
+          "startTimeMs": 130214,
+          "endTimeMs": 130794
+        },
+        {
+          "word": "canta",
+          "startTimeMs": 130804,
+          "endTimeMs": 131224
+        },
+        {
+          "word": "conmigo)",
+          "startTimeMs": 131234,
+          "endTimeMs": 131804
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 132334,
+      "endTimeMs": 133554,
+      "segmentIndex": 50,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 132334,
+          "endTimeMs": 132604
+        },
+        {
+          "word": "my",
+          "startTimeMs": 132614,
+          "endTimeMs": 132834
+        },
+        {
+          "word": "God",
+          "startTimeMs": 132844,
+          "endTimeMs": 133554
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 134154,
+      "endTimeMs": 136374,
+      "segmentIndex": 51,
+      "text": "Todo lo malo échalo pa’ allá",
+      "words": [
+        {
+          "word": "Todo",
+          "startTimeMs": 134154,
+          "endTimeMs": 134414
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 134424,
+          "endTimeMs": 134574
+        },
+        {
+          "word": "malo",
+          "startTimeMs": 134584,
+          "endTimeMs": 134974
+        },
+        {
+          "word": "échalo",
+          "startTimeMs": 134984,
+          "endTimeMs": 135444
+        },
+        {
+          "word": "pa’",
+          "startTimeMs": 135454,
+          "endTimeMs": 135644
+        },
+        {
+          "word": "allá",
+          "startTimeMs": 135654,
+          "endTimeMs": 136374
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 137004,
+      "endTimeMs": 138224,
+      "segmentIndex": 52,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 137004,
+          "endTimeMs": 137264
+        },
+        {
+          "word": "my",
+          "startTimeMs": 137274,
+          "endTimeMs": 137494
+        },
+        {
+          "word": "God",
+          "startTimeMs": 137504,
+          "endTimeMs": 138224
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 138824,
+      "endTimeMs": 140964,
+      "segmentIndex": 53,
+      "text": "Dame salud y prosperidad",
+      "words": [
+        {
+          "word": "Dame",
+          "startTimeMs": 138824,
+          "endTimeMs": 139124
+        },
+        {
+          "word": "salud",
+          "startTimeMs": 139134,
+          "endTimeMs": 139544
+        },
+        {
+          "word": "y",
+          "startTimeMs": 139554,
+          "endTimeMs": 139694
+        },
+        {
+          "word": "prosperidad",
+          "startTimeMs": 139704,
+          "endTimeMs": 140964
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 140965,
+      "endTimeMs": 182000,
+      "segmentIndex": 54,
+      "cueText": "Outro"
+    }
+  ]
+}

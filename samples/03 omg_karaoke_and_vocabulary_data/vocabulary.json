@@ -1,0 +1,512 @@
+[
+  {
+    "term": {
+      "spanish": "echar",
+      "english": "to throw"
+    },
+    "definition": "To throw, cast, or expel.",
+    "difficulty": 3,
+    "example": {
+      "spanish": [
+        {
+          "text": "Todo lo malo ",
+          "highlight": false
+        },
+        {
+          "text": "échalo",
+          "highlight": true
+        },
+        {
+          "text": " pa’ allá",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "Throw",
+          "highlight": true
+        },
+        {
+          "text": " all the bad things over there",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "salud",
+      "english": "health"
+    },
+    "definition": "The state of being free from illness or injury.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "Dame ",
+          "highlight": false
+        },
+        {
+          "text": "salud",
+          "highlight": true
+        },
+        {
+          "text": " y prosperidad",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "Give me ",
+          "highlight": false
+        },
+        {
+          "text": "health",
+          "highlight": true
+        },
+        {
+          "text": " and prosperity",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "prosperidad",
+      "english": "prosperity"
+    },
+    "definition": "The state of being successful, usually by making a lot of money.",
+    "difficulty": 2,
+    "example": {
+      "spanish": [
+        {
+          "text": "Dame salud y ",
+          "highlight": false
+        },
+        {
+          "text": "prosperidad",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "Give me health and ",
+          "highlight": false
+        },
+        {
+          "text": "prosperity",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "feliz",
+      "english": "happy"
+    },
+    "definition": "Feeling or showing pleasure or contentment.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "No tengo nada pero soy ",
+          "highlight": false
+        },
+        {
+          "text": "feliz",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "I have nothing but I am ",
+          "highlight": false
+        },
+        {
+          "text": "happy",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "recuerdo",
+      "english": "memory"
+    },
+    "definition": "The faculty by which the mind stores and remembers information.",
+    "difficulty": 2,
+    "example": {
+      "spanish": [
+        {
+          "text": "Solo ",
+          "highlight": false
+        },
+        {
+          "text": "recuerdos",
+          "highlight": true
+        },
+        {
+          "text": " habitan en mí",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "Only ",
+          "highlight": false
+        },
+        {
+          "text": "memories",
+          "highlight": true
+        },
+        {
+          "text": " dwell within me",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "sueño",
+      "english": "dream"
+    },
+    "definition": "A series of thoughts, images, or emotions occurring during sleep; also, a cherished aspiration.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "Sueños",
+          "highlight": true
+        },
+        {
+          "text": " que cumplir y yo voy a mí",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "Dreams",
+          "highlight": true
+        },
+        {
+          "text": " to fulfill and I'm going for it",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "cumplir",
+      "english": "to fulfill"
+    },
+    "definition": "To achieve or realize something desired or promised.",
+    "difficulty": 3,
+    "example": {
+      "spanish": [
+        {
+          "text": "Sueños que ",
+          "highlight": false
+        },
+        {
+          "text": "cumplir",
+          "highlight": true
+        },
+        {
+          "text": " y yo voy a mí",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "Dreams to ",
+          "highlight": false
+        },
+        {
+          "text": "fulfill",
+          "highlight": true
+        },
+        {
+          "text": " and I'm going for it",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "seguir",
+      "english": "to continue"
+    },
+    "definition": "To carry on with an action or process.",
+    "difficulty": 2,
+    "example": {
+      "spanish": [
+        {
+          "text": "Hasta lograrlo voy a ",
+          "highlight": false
+        },
+        {
+          "text": "seguir",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "Until I achieve it, I will ",
+          "highlight": false
+        },
+        {
+          "text": "continue",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "cartera",
+      "english": "wallet"
+    },
+    "definition": "A small flat case for carrying paper money, credit cards, etc.",
+    "difficulty": 3,
+    "example": {
+      "spanish": [
+        {
+          "text": "Que mi ",
+          "highlight": false
+        },
+        {
+          "text": "cartera",
+          "highlight": true
+        },
+        {
+          "text": " no haga más dietas",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "May my ",
+          "highlight": false
+        },
+        {
+          "text": "wallet",
+          "highlight": true
+        },
+        {
+          "text": " not go on more diets",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "suerte",
+      "english": "luck"
+    },
+    "definition": "Success or failure apparently brought by chance rather than through one's own actions.",
+    "difficulty": 2,
+    "example": {
+      "spanish": [
+        {
+          "text": "Que me visite la buena ",
+          "highlight": false
+        },
+        {
+          "text": "suerte",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "May good ",
+          "highlight": false
+        },
+        {
+          "text": "luck",
+          "highlight": true
+        },
+        {
+          "text": " visit me",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "gente",
+      "english": "people"
+    },
+    "definition": "Human beings in general or considered collectively.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "Para ayudar a toda mi ",
+          "highlight": false
+        },
+        {
+          "text": "gente",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "To help all my ",
+          "highlight": false
+        },
+        {
+          "text": "people",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "gracias",
+      "english": "thanks"
+    },
+    "definition": "An expression of gratitude.",
+    "difficulty": 1,
+    "example": {
+      "spanish": [
+        {
+          "text": "Hay que dar ",
+          "highlight": false
+        },
+        {
+          "text": "gracias",
+          "highlight": true
+        },
+        {
+          "text": " por un día mas de vida",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "One must give ",
+          "highlight": false
+        },
+        {
+          "text": "thanks",
+          "highlight": true
+        },
+        {
+          "text": " for one more day of life",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "envidia",
+      "english": "envy"
+    },
+    "definition": "A feeling of discontented or resentful longing aroused by someone else's possessions, qualities, or luck.",
+    "difficulty": 3,
+    "example": {
+      "spanish": [
+        {
+          "text": "Y que la ",
+          "highlight": false
+        },
+        {
+          "text": "envidia",
+          "highlight": true
+        },
+        {
+          "text": " a mí no me alcance",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "And may ",
+          "highlight": false
+        },
+        {
+          "text": "envy",
+          "highlight": true
+        },
+        {
+          "text": " not reach me",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "alcanzar",
+      "english": "to reach"
+    },
+    "definition": "To stretch out an arm or hand so as to touch, grasp, or take hold of something.",
+    "difficulty": 3,
+    "example": {
+      "spanish": [
+        {
+          "text": "Y que la envidia a mí no me ",
+          "highlight": false
+        },
+        {
+          "text": "alcance",
+          "highlight": true
+        }
+      ],
+      "english": [
+        {
+          "text": "And may envy not ",
+          "highlight": false
+        },
+        {
+          "text": "reach",
+          "highlight": true
+        },
+        {
+          "text": " me",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "term": {
+      "spanish": "luchar",
+      "english": "to fight"
+    },
+    "definition": "To engage in a fight or struggle.",
+    "difficulty": 3,
+    "example": {
+      "spanish": [
+        {
+          "text": "Lucha",
+          "highlight": true
+        },
+        {
+          "text": " por tu sueño, que sí se puede",
+          "highlight": false
+        }
+      ],
+      "english": [
+        {
+          "text": "Fight",
+          "highlight": true
+        },
+        {
+          "text": " for your dream, yes you can",
+          "highlight": false
+        }
+      ]
+    }
+  }
+]
