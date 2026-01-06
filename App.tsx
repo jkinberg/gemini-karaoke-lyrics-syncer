@@ -139,6 +139,22 @@ const App: React.FC = () => {
     const [adjustmentTarget, setAdjustmentTarget] = useState<{ lang: 'spanish' | 'english'; index: number } | null>(null);
     const [playRequest, setPlayRequest] = useState<{ startTimeMs: number, endTimeMs: number } | null>(null);
 
+    // Audio blob URL - managed at App level to persist across tab switches
+    const [audioUrl, setAudioUrl] = useState<string | null>(null);
+
+    // Create/revoke blob URL when audioFile changes
+    useEffect(() => {
+        if (audioFile) {
+            const url = URL.createObjectURL(audioFile);
+            setAudioUrl(url);
+            return () => {
+                URL.revokeObjectURL(url);
+            };
+        } else {
+            setAudioUrl(null);
+        }
+    }, [audioFile]);
+
 
     useEffect(() => {
       // Fetch build timestamp on mount
@@ -410,7 +426,7 @@ const App: React.FC = () => {
                     <div className="p-4 sm:p-8">
                         <TabNav activeTab={activeTab} setActiveTab={setActiveTab} hasVocab={!!vocabularyList} />
                         <div className="mt-6">
-                            {activeTab === 'preview' && audioFile && <KaraokePreview karaokeData={karaokeData} audioFile={audioFile} adjustmentTarget={adjustmentTarget} onSetAdjustmentTarget={setAdjustmentTarget} onApplyTimingShift={handleApplyTimingShift} playRequest={playRequest} onPlayRequestComplete={() => setPlayRequest(null)} />}
+                            {activeTab === 'preview' && audioUrl && <KaraokePreview karaokeData={karaokeData} audioUrl={audioUrl} adjustmentTarget={adjustmentTarget} onSetAdjustmentTarget={setAdjustmentTarget} onApplyTimingShift={handleApplyTimingShift} playRequest={playRequest} onPlayRequestComplete={() => setPlayRequest(null)} />}
                             {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow} />}
                             {activeTab === 'vocab' && vocabularyList && <VocabularyDisplay vocabularyList={vocabularyList} onPlayRequest={setPlayRequest} />}
                         </div>
@@ -496,7 +512,7 @@ const TabNav: React.FC<{ activeTab: string, setActiveTab: (tab: any) => void, ha
 
 interface KaraokePreviewProps {
   karaokeData: KaraokeApiResponse;
-  audioFile: File;
+  audioUrl: string;
   adjustmentTarget: { lang: 'spanish' | 'english'; index: number } | null;
   onSetAdjustmentTarget: (target: { lang: 'spanish' | 'english'; index: number } | null) => void;
   onApplyTimingShift: (deltaMs: number) => void;
@@ -505,7 +521,7 @@ interface KaraokePreviewProps {
 }
 
 
-const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile, adjustmentTarget, onSetAdjustmentTarget, onApplyTimingShift, playRequest, onPlayRequestComplete }) => {
+const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioUrl, adjustmentTarget, onSetAdjustmentTarget, onApplyTimingShift, playRequest, onPlayRequestComplete }) => {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
@@ -519,8 +535,6 @@ const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile,
     const audioContextRef = useRef<AudioContext | null>(null);
     const analyserRef = useRef<AnalyserNode | null>(null);
     const sourceNodeRef = useRef<MediaElementAudioSourceNode | null>(null);
-
-    const audioUrl = useMemo(() => URL.createObjectURL(audioFile), [audioFile]);
 
     const animate = useCallback(() => {
         if (audioRef.current) {
@@ -578,7 +592,6 @@ const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioFile,
         return () => {
             audio.removeEventListener("loadeddata", setAudioData);
             audio.removeEventListener("timeupdate", handleTimeUpdate);
-            URL.revokeObjectURL(audioUrl);
             if (animationFrameRef.current) {
                 cancelAnimationFrame(animationFrameRef.current);
             }
