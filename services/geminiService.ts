@@ -1,6 +1,33 @@
-// FIX: Import GenerateContentResponse to correctly type API call results.
-import { GoogleGenAI, Type, GenerateContentResponse } from "@google/genai";
+import { Type } from "@google/genai";
 import { KaraokeApiResponse, KaraokeData, VocabularyItem } from '../types';
+
+// Response type from our proxy endpoint
+interface GeminiProxyResponse {
+  text: string;
+  candidates?: unknown[];
+  error?: string;
+}
+
+// Helper to call the Gemini API via our server proxy
+const callGeminiProxy = async (
+  model: string,
+  contents: unknown,
+  config?: unknown
+): Promise<GeminiProxyResponse> => {
+  const response = await fetch('/api/gemini', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ model, contents, config }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok || data.error) {
+    throw new Error(data.error || `Proxy request failed with status ${response.status}`);
+  }
+
+  return data;
+};
 
 const fileToGenerativePart = async (file: File) => {
   const base64EncodedDataPromise = new Promise<string>((resolve, reject) => {
@@ -311,11 +338,6 @@ export const generateKaraokeData = async (
   languageFlow: 'es-en' | 'en-es',
   onStatusUpdate: (message: string) => void,
 ): Promise<KaraokeApiResponse> => {
-  if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable is not set.");
-  }
-
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   const isEsToEn = languageFlow === 'es-en';
   const originalLangName = isEsToEn ? 'Spanish' : 'English';
   const translatedLangName = isEsToEn ? 'English' : 'Spanish';
@@ -328,18 +350,18 @@ export const generateKaraokeData = async (
     const primaryTextPart = { text: primaryPrompt };
 
     const primaryModel = 'gemini-2.5-pro';
-    
+
     onStatusUpdate(`Step 1/2: Analyzing audio waveform and aligning ${originalLangName} lyrics. This is the longest step and may take up to 5 minutes...`);
-    
-    const primaryApiCall = () => ai.models.generateContent({
-      model: primaryModel,
-      contents: [{ parts: [primaryTextPart, audioPart] }],
-      config: {
+
+    const primaryApiCall = () => callGeminiProxy(
+      primaryModel,
+      [{ parts: [primaryTextPart, audioPart] }],
+      {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
-      },
-    });
-    
+      }
+    );
+
     const primaryApiCallPromise = retryWithBackoff(
       primaryApiCall, 3, 2000,
       (attempt) => {
@@ -347,13 +369,12 @@ export const generateKaraokeData = async (
         onStatusUpdate(`Step 1/2: Request failed, attempting to reconnect... (Attempt ${attempt + 1}/3)`);
       }
     );
-    
+
     const timeoutPromise = new Promise<never>((_, reject) =>
       setTimeout(() => reject(new Error("The request timed out after 5 minutes. This is common for longer songs. Please check your inputs or try again.")), 300000)
     );
 
-    // FIX: Explicitly type the API response to resolve 'unknown' type from Promise.race.
-    const primaryResponse: GenerateContentResponse = await Promise.race([primaryApiCallPromise, timeoutPromise]);
+    const primaryResponse = await Promise.race([primaryApiCallPromise, timeoutPromise]);
     
     onStatusUpdate('Step 1/2: Received response, parsing synchronized data...');
     const primaryText = primaryResponse.text.trim();
@@ -371,22 +392,20 @@ export const generateKaraokeData = async (
 
     // --- STEP 2: Use the result from Step 1 to align the translated lyrics ---
     onStatusUpdate(`Step 2/2: Mapping ${translatedLangName} translation onto synchronized timeline...`);
-    
+
     const translationPrompt = buildTranslationAlignmentPrompt(originalTimedData, translatedLyrics, originalLangName, translatedLangName);
-    // FIX: Upgraded to gemini-2.5-pro for more reliable and complex JSON manipulation.
     const translationModel = 'gemini-2.5-pro';
 
-    const translationApiCall = () => ai.models.generateContent({
-        model: translationModel,
-        contents: translationPrompt,
-        config: {
-            responseMimeType: 'application/json',
-            responseSchema: singleLanguageSchema,
-        },
-    });
+    const translationApiCall = () => callGeminiProxy(
+      translationModel,
+      translationPrompt,
+      {
+        responseMimeType: 'application/json',
+        responseSchema: singleLanguageSchema,
+      }
+    );
 
-    // FIX: Explicitly type the API response to resolve 'unknown' type.
-    const translationResponse: GenerateContentResponse = await retryWithBackoff(
+    const translationResponse = await retryWithBackoff(
       translationApiCall, 3, 1000,
       (attempt) => {
         console.warn(`Translation alignment API call failed on attempt ${attempt}. Retrying...`);
@@ -433,30 +452,25 @@ export const refineKaraokeData = async (
   languageName: string,
   onStatusUpdate: (message: string) => void,
 ): Promise<KaraokeData> => {
-  if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable is not set.");
-  }
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
   try {
     onStatusUpdate('Preparing audio for analysis...');
     const audioPart = await fileToGenerativePart(audioFile);
-    
+
     onStatusUpdate('Constructing AI review prompt...');
     const refinementPrompt = buildRefinementPrompt(karaokeDataToRefine, languageName);
     const textPart = { text: refinementPrompt };
-    
+
     const model = 'gemini-2.5-pro';
     onStatusUpdate(`Sending data to AI for quality review. This can take several minutes...`);
 
-    const apiCall = () => ai.models.generateContent({
-      model: model,
-      contents: [{ parts: [textPart, audioPart] }],
-      config: {
+    const apiCall = () => callGeminiProxy(
+      model,
+      [{ parts: [textPart, audioPart] }],
+      {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
-      },
-    });
+      }
+    );
 
     const apiCallPromise = retryWithBackoff(
       apiCall, 3, 2000,
@@ -465,13 +479,12 @@ export const refineKaraokeData = async (
         onStatusUpdate(`Refinement failed, attempting to reconnect... (Attempt ${attempt + 1}/3)`);
       }
     );
-    
+
     const timeoutPromise = new Promise<never>((_, reject) =>
       setTimeout(() => reject(new Error("The refinement request timed out after 5 minutes.")), 300000)
     );
-    
-    // FIX: Explicitly type the API response to resolve 'unknown' type from Promise.race.
-    const response: GenerateContentResponse = await Promise.race([apiCallPromise, timeoutPromise]);
+
+    const response = await Promise.race([apiCallPromise, timeoutPromise]);
     
     onStatusUpdate('Received refined data, parsing final result...');
     const text = response.text.trim();
@@ -504,15 +517,10 @@ export const refineTranslatedKaraokeData = async (
   originalLangName: string,
   onStatusUpdate: (message: string) => void,
 ): Promise<KaraokeData> => {
-  if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable is not set.");
-  }
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
   try {
     onStatusUpdate('Preparing audio for alignment...');
     const audioPart = await fileToGenerativePart(audioFile);
-    
+
     onStatusUpdate('Constructing AI alignment prompt...');
     const refinementPrompt = buildTranslatedRefinementPrompt(
       translatedDataToRefine,
@@ -521,18 +529,18 @@ export const refineTranslatedKaraokeData = async (
       originalLangName
     );
     const textPart = { text: refinementPrompt };
-    
+
     const model = 'gemini-2.5-pro';
     onStatusUpdate(`Sending data to AI for timing alignment. This can take several minutes...`);
 
-    const apiCall = () => ai.models.generateContent({
-      model: model,
-      contents: [{ parts: [textPart, audioPart] }],
-      config: {
+    const apiCall = () => callGeminiProxy(
+      model,
+      [{ parts: [textPart, audioPart] }],
+      {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
-      },
-    });
+      }
+    );
 
     const apiCallPromise = retryWithBackoff(
       apiCall, 3, 2000,
@@ -541,12 +549,12 @@ export const refineTranslatedKaraokeData = async (
         onStatusUpdate(`Alignment failed, attempting to reconnect... (Attempt ${attempt + 1}/3)`);
       }
     );
-    
+
     const timeoutPromise = new Promise<never>((_, reject) =>
       setTimeout(() => reject(new Error("The alignment request timed out after 5 minutes.")), 300000)
     );
-    
-    const response: GenerateContentResponse = await Promise.race([apiCallPromise, timeoutPromise]);
+
+    const response = await Promise.race([apiCallPromise, timeoutPromise]);
     
     onStatusUpdate('Received aligned data, parsing final result...');
     const text = response.text.trim();
@@ -576,11 +584,6 @@ export const translateLyrics = async (
   sourceLang: 'es' | 'en',
   targetLang: 'es' | 'en'
 ): Promise<string> => {
-  if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable is not set.");
-  }
-
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   const model = 'gemini-2.5-flash';
 
   const sourceLangName = sourceLang === 'es' ? 'Spanish' : 'English';
@@ -601,13 +604,9 @@ Translated Lyrics:
 `;
 
   try {
-    const apiCall = () => ai.models.generateContent({
-      model: model,
-      contents: prompt,
-    });
-    
-    // FIX: Explicitly type the API response to resolve 'unknown' type.
-    const response: GenerateContentResponse = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
+    const apiCall = () => callGeminiProxy(model, prompt);
+
+    const response = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
       console.warn(`Translation API call failed on attempt ${attempt}. Retrying...`);
     });
 
@@ -627,11 +626,6 @@ export const generateVocabularyList = async (
   spanishKaraokeData: KaraokeData,
   englishKaraokeData: KaraokeData,
 ): Promise<VocabularyItem[]> => {
-  if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable is not set.");
-  }
-
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   const model = 'gemini-2.5-flash';
 
   const prompt = `
@@ -746,20 +740,19 @@ Do not include any other text, explanations, or markdown formatting.
   };
 
   try {
-    const apiCall = () => ai.models.generateContent({
-      model: model,
-      contents: prompt,
-      config: {
+    const apiCall = () => callGeminiProxy(
+      model,
+      prompt,
+      {
         responseMimeType: 'application/json',
         responseSchema: schema,
-      },
-    });
-    
-    // FIX: Explicitly type the API response to resolve 'unknown' type.
-    const response: GenerateContentResponse = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
+      }
+    );
+
+    const response = await retryWithBackoff(apiCall, 3, 1000, (attempt) => {
       console.warn(`Vocabulary API call failed on attempt ${attempt}. Retrying...`);
     });
-    
+
     const text = response.text.trim();
     if (!text) {
         throw new Error("The vocabulary model returned an empty response.");

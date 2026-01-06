@@ -5,6 +5,7 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 ## Tech Stack
 
 - **Frontend:** React 19 + TypeScript 5.8 + Tailwind CSS (CDN)
+- **Backend:** Express 4 (API proxy for Gemini)
 - **Build:** Vite 6
 - **AI:** Google Gemini API (@google/genai) - Gemini 2.5 Pro for sync, Flash for translation
 - **Utilities:** jszip, Web Audio API
@@ -13,21 +14,30 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 
 ```
 ├── App.tsx              # Main React component (all UI components)
+├── server.ts            # Express server with /api/gemini proxy
 ├── services/
-│   └── geminiService.ts # Gemini API integration, prompts, retry logic
+│   └── geminiService.ts # Client-side API calls (via server proxy)
 ├── types.ts             # TypeScript type definitions
 ├── test-data.ts         # Test case for diagnostic tool
 ├── index.tsx            # React entry point
 ├── index.html           # HTML entry with Tailwind CDN
-└── vite.config.ts       # Vite configuration
+├── vite.config.ts       # Vite config with dev proxy
+├── Dockerfile           # Production container build
+├── .env.example         # Environment template
+└── docs/                # Technical specifications
 ```
 
 ## Commands
 
 ```bash
-npm run dev      # Start dev server (port 3000)
-npm run build    # Production build
-npm run preview  # Preview production build
+# Development (requires two terminals)
+npm run dev:server  # Terminal 1: Express API server (port 8080)
+npm run dev         # Terminal 2: Vite frontend (port 3000, proxies /api to 8080)
+
+# Production
+npm run build       # Build frontend + compile server
+npm run start       # Run production server (port 8080)
+npm run preview     # Preview Vite build only
 ```
 
 ## Deployment
@@ -58,11 +68,13 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 
 ## Architecture Notes
 
+- **Server-side API proxy** - Express server handles all Gemini API calls, keeping the API key secure (never in browser)
 - Single-page app with all components in App.tsx
 - State management via React hooks (no external state library)
-- geminiService.ts handles all API calls with exponential backoff retry
+- geminiService.ts calls `/api/gemini` proxy endpoint with exponential backoff retry
 - Real-time audio spectrum visualizer using Web Audio API
 - Vocabulary extraction identifies Spanish slang/idioms with audio timecodes
+- In development, Vite proxies `/api` requests to Express server on port 8080
 
 ## Documentation
 

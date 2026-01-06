@@ -1,7 +1,8 @@
 # Technical Spec: API Key Security & Automated Deployment
 
-**Status:** Draft
+**Status:** Implemented (Server-Side Proxy)
 **Created:** 2025-12-26
+**Updated:** 2026-01-06
 **Target Environment:** Google Cloud Run (us-west1)
 **Live URL:** https://karaoke-syncer-362554121203.us-west1.run.app/
 
@@ -158,6 +159,33 @@ CMD ["node", "server.js"]
 | **High (if shared)** | Anyone with the URL can extract the key from browser |
 
 **Recommendation:** Implement server-side proxy before sharing the application URL with anyone.
+
+### Implementation Status (2026-01-06)
+
+The server-side proxy has been implemented:
+
+- **`server.ts`** - Express server with `/api/gemini` proxy endpoint
+- **`services/geminiService.ts`** - Refactored to call proxy instead of Gemini directly
+- **`vite.config.ts`** - Removed `define` block, added dev proxy to forward `/api` requests
+- **`Dockerfile`** - Created for production deployment
+- **`package.json`** - Added Express, tsx, build scripts
+- **`.env.example`** - Template for environment variables
+- **`.gitignore`** - Updated to exclude `.env*` files
+
+**Local Development:**
+```bash
+# Terminal 1: Run the Express server (requires .env with GEMINI_API_KEY)
+npm run dev:server
+
+# Terminal 2: Run the Vite dev server (proxies /api to Express)
+npm run dev
+```
+
+**Production Build:**
+```bash
+npm run build  # Builds frontend + server
+npm run start  # Runs production server
+```
 
 ### Required Actions
 

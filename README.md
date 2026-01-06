@@ -48,28 +48,63 @@ The application improves synchronization accuracy by using a sophisticated, mult
 
 ```
 .
-├── index.html          # Main HTML entry point
-├── index.tsx           # Renders the React application
-├── App.tsx             # Main application component with all UI and state logic
+├── index.html            # Main HTML entry point
+├── index.tsx             # Renders the React application
+├── App.tsx               # Main application component with all UI and state logic
+├── server.ts             # Express server with Gemini API proxy
 ├── services/
-│   └── geminiService.ts  # Handles all API calls to the Gemini model
-├── types.ts            # TypeScript type definitions
-├── test-data.ts        # Contains pre-validated data for the diagnostic tool
-├── metadata.json       # Application metadata
-└── README.md           # This file
+│   └── geminiService.ts  # Client-side API calls (via server proxy)
+├── types.ts              # TypeScript type definitions
+├── test-data.ts          # Contains pre-validated data for the diagnostic tool
+├── vite.config.ts        # Vite configuration with dev proxy
+├── Dockerfile            # Production container build
+├── .env.example          # Environment variable template
+└── docs/                 # Technical specifications
 ```
 
 ## ⚙️ Running Locally
 
-This project is designed to run in a browser-based development environment that can securely provide a Gemini API key.
+### Prerequisites
+- Node.js 20+
+- A Google Gemini API key ([get one here](https://aistudio.google.com/app/apikey))
 
-1.  **Prerequisites**: A modern web browser and an environment that can serve the static files (`index.html`, `index.tsx`, etc.).
-2.  **API Key**: The application requires a Google Gemini API key to function. It expects the key to be available in the execution environment as `process.env.API_KEY`.
-3.  **Serve the Files**: Use a simple local server to host the project directory. For example, using Python:
-    ```bash
-    python -m http.server
-    ```
-4.  **Access**: Open your browser and navigate to the local server's address (e.g., `http://localhost:8000`).
+### Setup
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Configure environment:**
+   ```bash
+   cp .env.example .env
+   # Edit .env and add your GEMINI_API_KEY
+   ```
+
+3. **Start the development servers** (requires two terminals):
+
+   **Terminal 1 - Express API server:**
+   ```bash
+   npm run dev:server
+   ```
+
+   **Terminal 2 - Vite frontend:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Access** the application at `http://localhost:3000`
+
+### Architecture Note
+
+The application uses a **server-side proxy** to keep the Gemini API key secure. The Express server (`server.ts`) handles all API calls to Gemini, so the API key never reaches the browser. In development, Vite proxies `/api` requests to the Express server running on port 8080.
+
+### Production Build
+
+```bash
+npm run build   # Build frontend + server
+npm run start   # Run production server on port 8080
+```
 
 ## 📄 License
 

@@ -1,7 +1,15 @@
+# Environment files (contain secrets)
+.env
+.env.local
+.env.*.local
+
 # Audio files (large binaries)
 *.mp3
 *.wav
 *.m4a
+
+# Build outputs
+dist-server
 
 # Logs
 logs
