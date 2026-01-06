@@ -38,6 +38,10 @@ npm run dev         # Terminal 2: Vite frontend (port 3000, proxies /api to 8080
 npm run build       # Build frontend + compile server
 npm run start       # Run production server (port 8080)
 npm run preview     # Preview Vite build only
+
+# Cloud Run Preview Deploys (for testing feature branches)
+npm run deploy:preview         # Deploy to karaoke-syncer-preview service
+npm run deploy:preview:delete  # Delete preview service when done
 ```
 
 ## Deployment
