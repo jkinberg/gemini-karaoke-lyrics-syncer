@@ -797,3 +797,203 @@ Do not include any other text, explanations, or markdown formatting.
     throw new Error(parseGoogleGenerativeAIError(error));
   }
 };
+
+// Build a focused refinement prompt for specific segments
+const buildSegmentFocusedRefinementPrompt = (
+  draftKaraokeData: KaraokeData,
+  markedSegmentIndices: number[],
+  langName: string,
+  referenceData?: KaraokeData
+): string => {
+  const segmentCount = draftKaraokeData.segments.length;
+
+  // Calculate context window - include 2 segments before and after each marked segment
+  const contextWindow = 2;
+  const segmentsToRefine = new Set<number>();
+
+  markedSegmentIndices.forEach(idx => {
+    // Add the marked segment
+    segmentsToRefine.add(idx);
+    // Add context segments before
+    for (let i = 1; i <= contextWindow; i++) {
+      if (idx - i >= 0) segmentsToRefine.add(idx - i);
+    }
+    // Add context segments after
+    for (let i = 1; i <= contextWindow; i++) {
+      if (idx + i < segmentCount) segmentsToRefine.add(idx + i);
+    }
+  });
+
+  const sortedSegmentsToRefine = Array.from(segmentsToRefine).sort((a, b) => a - b);
+  const markedIndicesSet = new Set(markedSegmentIndices);
+
+  // Create a focused view of the segments that need attention
+  const focusedSegmentInfo = sortedSegmentsToRefine.map(idx => {
+    const segment = draftKaraokeData.segments[idx];
+    return {
+      index: idx,
+      isMarkedForRefinement: markedIndicesSet.has(idx),
+      isContextSegment: !markedIndicesSet.has(idx),
+      type: segment.type,
+      text: segment.text || segment.cueText,
+      currentStartTimeMs: segment.startTimeMs,
+      currentEndTimeMs: segment.endTimeMs,
+    };
+  });
+
+  const hasReference = referenceData !== undefined;
+  const referenceInfo = hasReference ? `
+**Reference Timing Data (already refined):**
+Use these segment timings as the ground truth for structural alignment:
+\`\`\`json
+${JSON.stringify(referenceData.segments.filter((_, idx) => segmentsToRefine.has(idx)))}
+\`\`\`` : '';
+
+  return `
+You are a precision Audio-Lyric Synchronization Specialist. The user has identified specific segments in their karaoke file that appear to be MISALIGNED with the audio. Your task is to carefully re-analyze these segments against the audio and provide corrected timing data.
+
+**CRITICAL STRUCTURAL CONSTRAINTS:**
+1. You MUST output EXACTLY ${segmentCount} segments - no more, no less
+2. Each segment MUST have segmentIndex values 1 through ${segmentCount} in order
+3. Segment type (LYRIC/INSTRUMENTAL) MUST remain unchanged
+4. Do NOT merge, split, add, or remove segments
+5. For segments NOT in the focus area, copy them EXACTLY as provided
+6. For segments IN the focus area, carefully re-time them against the audio
+
+**User-Marked Problem Segments:**
+The following segments have been flagged as MISALIGNED by the user. These need the most careful attention:
+${markedSegmentIndices.map(idx => `- Segment ${idx + 1}: "${draftKaraokeData.segments[idx].text || draftKaraokeData.segments[idx].cueText}"`).join('\n')}
+
+**Focus Area (Segments to Re-analyze):**
+You should re-analyze these segments (marked segments + surrounding context):
+\`\`\`json
+${JSON.stringify(focusedSegmentInfo, null, 2)}
+\`\`\`
+${referenceInfo}
+
+**Full Current ${langName} Data:**
+\`\`\`json
+${JSON.stringify(draftKaraokeData)}
+\`\`\`
+
+**Audio File:** [Provided in the request]
+
+**Task Instructions:**
+
+1. **Listen to the Audio Carefully:** Focus especially on the time ranges where the marked segments occur.
+
+2. **Re-analyze Marked Segments:** For each segment marked as "isMarkedForRefinement: true":
+   - Listen to when the vocals ACTUALLY start for that line
+   - Listen to when the vocals ACTUALLY end
+   - Adjust \`startTimeMs\` and \`endTimeMs\` to match the REAL audio
+   - Re-time every word in the \`words\` array to match actual pronunciation timing
+
+3. **Adjust Context Segments:** For segments marked as "isContextSegment: true":
+   - These may need timing adjustments due to changes in the marked segments
+   - Ensure they don't overlap with adjusted segments
+   - Maintain smooth timing flow between segments
+
+4. **Handle Cascading Effects:** If you adjust a segment's timing, ensure that:
+   - No segments overlap (unless the audio genuinely overlaps)
+   - The flow remains natural from one segment to the next
+   - Word timings within each segment are accurate
+
+5. **Preserve Unchanged Segments:** For segments NOT in the focus area, copy them exactly as-is from the input data.
+
+**Common Issues to Look For:**
+- Segments starting too early or too late
+- Word timing drift within a segment
+- Segment end times cutting off sustained vocals
+- Timing accumulation errors that compound over multiple segments
+
+**Output Mandate:**
+Return a single, complete, minified JSON object representing the ENTIRE corrected song data with all ${segmentCount} segments.
+Do not include explanations or text outside the JSON object.
+`;
+};
+
+export const refineMarkedSegments = async (
+  audioFile: File,
+  karaokeDataToRefine: KaraokeData,
+  markedSegmentIndices: number[],
+  languageName: string,
+  onStatusUpdate: (message: string) => void,
+  referenceData?: KaraokeData
+): Promise<KaraokeData> => {
+  if (markedSegmentIndices.length === 0) {
+    return karaokeDataToRefine; // Nothing to refine
+  }
+
+  try {
+    onStatusUpdate('Preparing audio for focused analysis...');
+    const audioPart = await fileToGenerativePart(audioFile);
+
+    onStatusUpdate(`Constructing focused refinement prompt for ${markedSegmentIndices.length} segment(s)...`);
+    const refinementPrompt = buildSegmentFocusedRefinementPrompt(
+      karaokeDataToRefine,
+      markedSegmentIndices,
+      languageName,
+      referenceData
+    );
+    const textPart = { text: refinementPrompt };
+
+    const model = 'gemini-3-pro-preview';
+    onStatusUpdate(`Analyzing marked segments. This may take several minutes...`);
+
+    const apiCall = () => callGeminiProxy(
+      model,
+      [{ parts: [textPart, audioPart] }],
+      {
+        responseMimeType: 'application/json',
+        responseSchema: singleLanguageSchema,
+      }
+    );
+
+    const apiCallPromise = retryWithBackoff(
+      apiCall, 3, 2000,
+      (attempt) => {
+        console.warn(`Segment refinement API call failed on attempt ${attempt}. Retrying...`);
+        onStatusUpdate(`Refinement failed, retrying... (Attempt ${attempt + 1}/3)`);
+      }
+    );
+
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("The segment refinement request timed out after 5 minutes.")), 300000)
+    );
+
+    const response = await Promise.race([apiCallPromise, timeoutPromise]);
+
+    onStatusUpdate('Received refined data, parsing result...');
+    const text = response.text.trim();
+    if (!text) {
+      throw new Error("The AI model returned an empty response during segment refinement.");
+    }
+
+    try {
+      const refinedData = JSON.parse(text);
+
+      // Validate segment count matches
+      if (refinedData.segments?.length !== karaokeDataToRefine.segments.length) {
+        console.warn(`Segment count mismatch: expected ${karaokeDataToRefine.segments.length}, got ${refinedData.segments?.length}`);
+        throw new Error("The AI model changed the segment structure. Please try again.");
+      }
+
+      return refinedData as KaraokeData;
+    } catch (parseError) {
+      console.error("Failed to parse JSON response from segment refinement:", text);
+      throw new Error("The AI model's response during segment refinement was not in the expected JSON format.");
+    }
+
+  } catch (error) {
+    console.error("Error during segment refinement process:", error);
+    if (error instanceof Error && (
+      error.message.includes("JSON format") ||
+      error.message.includes("empty response") ||
+      error.message.includes("timed out") ||
+      error.message.includes("segment structure")
+    )) {
+      throw error;
+    }
+    throw new Error(parseGoogleGenerativeAIError(error));
+  }
+};

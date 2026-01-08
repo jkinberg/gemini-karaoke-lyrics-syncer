@@ -6,6 +6,7 @@ import {
   translateLyrics,
   refineKaraokeData,
   refineTranslatedKaraokeData,
+  refineMarkedSegments,
 } from './services/geminiService';
 import {
   validateKaraokeDataPair,
@@ -177,8 +178,8 @@ const App: React.FC = () => {
     const [validationReport, setValidationReport] = useState<ValidationReport | null>(null);
     const [activeTab, setActiveTab] = useState<'preview' | 'data' | 'vocab'>('preview');
 
-    // Human-in-the-loop state for manual timing adjustment
-    const [adjustmentTarget, setAdjustmentTarget] = useState<{ lang: 'spanish' | 'english'; index: number } | null>(null);
+    // Segment marking for AI refinement
+    const [markedSegments, setMarkedSegments] = useState<Set<number>>(new Set());
     const [playRequest, setPlayRequest] = useState<{ startTimeMs: number, endTimeMs: number } | null>(null);
     const [showValidationPanel, setShowValidationPanel] = useState(false);
 
@@ -293,7 +294,7 @@ const App: React.FC = () => {
         setStatusMessage('');
         setIsLoading(false);
         setProgress(0);
-        setAdjustmentTarget(null);
+        setMarkedSegments(new Set());
     };
 
     const handleTranslate = async () => {
@@ -410,44 +411,23 @@ const App: React.FC = () => {
         }
     };
 
-    // FIX: Wrapped handleApplyTimingShift in useCallback to prevent stale closures.
-    // This ensures the function always has access to the latest karaokeData and adjustmentTarget state,
-    // fixing the bug where manual timing adjustments were not being applied correctly.
-    const handleApplyTimingShift = useCallback((deltaMs: number) => {
-      if (!adjustmentTarget || !karaokeData) return;
-  
-      const { index } = adjustmentTarget;
-  
-      const shiftTimestamps = (data: KaraokeData): KaraokeData => {
-          const newSegments = data.segments.map((segment, i) => {
-              if (i < index) {
-                  return segment; // Return segment as-is if it's before the anchor point
-              }
-  
-              const newSegment: KaraokeSegment = {
-                  ...segment,
-                  startTimeMs: segment.startTimeMs + deltaMs,
-                  endTimeMs: segment.endTimeMs + deltaMs,
-                  words: segment.words?.map(word => ({
-                      ...word,
-                      startTimeMs: word.startTimeMs + deltaMs,
-                      endTimeMs: word.endTimeMs + deltaMs,
-                  }))
-              };
-              return newSegment;
-          });
-  
-          return { ...data, segments: newSegments };
-      };
-      
-      const newSpanishData = shiftTimestamps(karaokeData.spanish);
-      const newEnglishData = shiftTimestamps(karaokeData.english);
-  
-      setKaraokeData({
-        spanish: newSpanishData,
-        english: newEnglishData,
+    // Toggle segment marking for AI refinement
+    const handleToggleSegmentMark = useCallback((segmentIndex: number) => {
+      setMarkedSegments(prev => {
+        const newSet = new Set(prev);
+        if (newSet.has(segmentIndex)) {
+          newSet.delete(segmentIndex);
+        } else {
+          newSet.add(segmentIndex);
+        }
+        return newSet;
       });
-    }, [adjustmentTarget, karaokeData]);
+    }, []);
+
+    // Clear all marked segments
+    const handleClearMarkedSegments = useCallback(() => {
+      setMarkedSegments(new Set());
+    }, []);
 
     // Handle seeking from validation panel
     const handleSeekFromValidation = (timeMs: number) => {
@@ -525,7 +505,7 @@ const App: React.FC = () => {
                         )}
 
                         <div className="mt-2">
-                            {activeTab === 'preview' && audioUrl && <KaraokePreview karaokeData={karaokeData} audioUrl={audioUrl} adjustmentTarget={adjustmentTarget} onSetAdjustmentTarget={setAdjustmentTarget} onApplyTimingShift={handleApplyTimingShift} playRequest={playRequest} onPlayRequestComplete={() => setPlayRequest(null)} />}
+                            {activeTab === 'preview' && audioUrl && <KaraokePreview karaokeData={karaokeData} audioUrl={audioUrl} markedSegments={markedSegments} onToggleSegmentMark={handleToggleSegmentMark} onClearMarkedSegments={handleClearMarkedSegments} playRequest={playRequest} onPlayRequestComplete={() => setPlayRequest(null)} audioFile={audioFile} languageFlow={languageFlow} setKaraokeData={setKaraokeData} onValidationUpdate={setValidationReport} />}
                             {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow} onValidationUpdate={setValidationReport} />}
                             {activeTab === 'vocab' && (
                                 vocabularyList
@@ -769,22 +749,40 @@ const TabNav: React.FC<{ activeTab: string, setActiveTab: (tab: any) => void, ha
 interface KaraokePreviewProps {
   karaokeData: KaraokeApiResponse;
   audioUrl: string;
-  adjustmentTarget: { lang: 'spanish' | 'english'; index: number } | null;
-  onSetAdjustmentTarget: (target: { lang: 'spanish' | 'english'; index: number } | null) => void;
-  onApplyTimingShift: (deltaMs: number) => void;
+  markedSegments: Set<number>;
+  onToggleSegmentMark: (segmentIndex: number) => void;
+  onClearMarkedSegments: () => void;
   playRequest: { startTimeMs: number, endTimeMs: number } | null;
   onPlayRequestComplete: () => void;
+  audioFile: File | null;
+  languageFlow: 'es-en' | 'en-es';
+  setKaraokeData: (data: KaraokeApiResponse) => void;
+  onValidationUpdate?: (report: ValidationReport) => void;
 }
 
 
-const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioUrl, adjustmentTarget, onSetAdjustmentTarget, onApplyTimingShift, playRequest, onPlayRequestComplete }) => {
+const KaraokePreview: React.FC<KaraokePreviewProps> = ({
+    karaokeData,
+    audioUrl,
+    markedSegments,
+    onToggleSegmentMark,
+    onClearMarkedSegments,
+    playRequest,
+    onPlayRequestComplete,
+    audioFile,
+    languageFlow,
+    setKaraokeData,
+    onValidationUpdate
+}) => {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const animationFrameRef = useRef<number | null>(null);
-    // FIX: State to manage the temporary start time during manual adjustment.
-    const [tempAdjustmentTime, setTempAdjustmentTime] = useState<number | null>(null);
+
+    // Segment refinement state
+    const [isRefiningSegments, setIsRefiningSegments] = useState(false);
+    const [refineStatus, setRefineStatus] = useState('');
 
     // For Audio Visualizer
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -853,28 +851,6 @@ const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioUrl, 
             }
         };
     }, [audioUrl]);
-
-    // FIX: Effect to initialize the temporary adjustment time when a target is selected.
-    useEffect(() => {
-      if (adjustmentTarget) {
-        const { lang, index } = adjustmentTarget;
-        const segment = karaokeData[lang].segments[index];
-        setTempAdjustmentTime(segment.startTimeMs);
-      } else {
-        setTempAdjustmentTime(null);
-      }
-    }, [adjustmentTarget, karaokeData]);
-
-    // FIX: Effect to sync the audio player's playhead with the temporary adjustment time.
-    useEffect(() => {
-      if (tempAdjustmentTime !== null && audioRef.current) {
-        const newTimeInSeconds = tempAdjustmentTime / 1000;
-        // Check to prevent feedback loop from timeupdate events
-        if (Math.abs(audioRef.current.currentTime - newTimeInSeconds) > 0.1) {
-            audioRef.current.currentTime = newTimeInSeconds;
-        }
-      }
-    }, [tempAdjustmentTime]);
 
     useEffect(() => {
         const audio = audioRef.current;
@@ -1010,17 +986,21 @@ const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioUrl, 
             {/* --- Audio Visualizer Canvas --- */}
             <canvas ref={canvasRef} width="1000" height="100" className="w-full h-[100px] rounded-md"></canvas>
 
-            {/* --- Timing Adjustment Panel --- */}
-            {/* FIX: The panel is now controlled by the new tempAdjustmentTime state. */}
-            {adjustmentTarget && tempAdjustmentTime !== null && (
-              <TimingAdjustmentPanel 
+            {/* --- Segment Refinement Panel --- */}
+            {markedSegments.size > 0 && (
+              <SegmentRefinementPanel
+                markedSegments={markedSegments}
+                totalSegments={karaokeData.spanish.segments.length}
+                onClearMarkedSegments={onClearMarkedSegments}
+                isRefining={isRefiningSegments}
+                refineStatus={refineStatus}
                 karaokeData={karaokeData}
-                adjustmentTarget={adjustmentTarget} 
-                tempAdjustmentTime={tempAdjustmentTime}
-                setTempAdjustmentTime={setTempAdjustmentTime}
-                onApplyShift={onApplyTimingShift} 
-                onCancel={() => onSetAdjustmentTarget(null)}
-                onSeek={handleSeekToTime}
+                audioFile={audioFile}
+                languageFlow={languageFlow}
+                setKaraokeData={setKaraokeData}
+                setIsRefining={setIsRefiningSegments}
+                setRefineStatus={setRefineStatus}
+                onValidationUpdate={onValidationUpdate}
               />
             )}
 
@@ -1031,83 +1011,174 @@ const KaraokePreview: React.FC<KaraokePreviewProps> = ({ karaokeData, audioUrl, 
                     segments={karaokeData.spanish.segments}
                     currentTime={currentTime * 1000}
                     onSeek={handleSeekToTime}
-                    adjustmentTarget={adjustmentTarget}
-                    onSetAdjustmentTarget={onSetAdjustmentTarget}
+                    markedSegments={markedSegments}
+                    onToggleSegmentMark={onToggleSegmentMark}
                 />
                 <LyricPanel
                     title="English"
                     segments={karaokeData.english.segments}
                     currentTime={currentTime * 1000}
                     onSeek={handleSeekToTime}
-                    adjustmentTarget={adjustmentTarget}
-                    onSetAdjustmentTarget={onSetAdjustmentTarget}
+                    markedSegments={markedSegments}
+                    onToggleSegmentMark={onToggleSegmentMark}
                 />
             </div>
         </div>
     );
 };
 
-const TimingAdjustmentPanel: React.FC<{
+interface SegmentRefinementPanelProps {
+  markedSegments: Set<number>;
+  totalSegments: number;
+  onClearMarkedSegments: () => void;
+  isRefining: boolean;
+  refineStatus: string;
   karaokeData: KaraokeApiResponse;
-  adjustmentTarget: { lang: 'spanish' | 'english'; index: number };
-  tempAdjustmentTime: number;
-  setTempAdjustmentTime: (time: number) => void;
-  onApplyShift: (deltaMs: number) => void;
-  onCancel: () => void;
-  onSeek: (timeMs: number) => void;
-}> = ({ karaokeData, adjustmentTarget, tempAdjustmentTime, setTempAdjustmentTime, onApplyShift, onCancel, onSeek }) => {
-  const { lang, index } = adjustmentTarget;
-  const originalSegment = karaokeData[lang].segments[index];
+  audioFile: File | null;
+  languageFlow: 'es-en' | 'en-es';
+  setKaraokeData: (data: KaraokeApiResponse) => void;
+  setIsRefining: (value: boolean) => void;
+  setRefineStatus: (status: string) => void;
+  onValidationUpdate?: (report: ValidationReport) => void;
+}
 
-  const handleNudge = (amountMs: number) => {
-    setTempAdjustmentTime(Math.max(0, tempAdjustmentTime + amountMs));
-  };
-  
-  const handleApply = () => {
-    const delta = tempAdjustmentTime - originalSegment.startTimeMs;
-    onApplyShift(delta);
-    onCancel();
-  };
+const SegmentRefinementPanel: React.FC<SegmentRefinementPanelProps> = ({
+  markedSegments,
+  totalSegments,
+  onClearMarkedSegments,
+  isRefining,
+  refineStatus,
+  karaokeData,
+  audioFile,
+  languageFlow,
+  setKaraokeData,
+  setIsRefining,
+  setRefineStatus,
+  onValidationUpdate
+}) => {
+  const markedIndices = Array.from(markedSegments).sort((a, b) => a - b);
 
-  const nudgeAmounts = [-1000, -100, 100, 1000];
-  const originalTimeFormatted = (originalSegment.startTimeMs / 1000).toFixed(3);
-  const newTimeFormatted = (tempAdjustmentTime / 1000).toFixed(3);
+  const handleRefineMarkedSegments = async () => {
+    if (!audioFile) {
+      alert("Audio file is missing. Cannot start refinement.");
+      return;
+    }
+
+    setIsRefining(true);
+    setRefineStatus('Preparing segment refinement...');
+
+    const originalLangIsSpanish = languageFlow === 'es-en';
+    const originalDataKey = originalLangIsSpanish ? 'spanish' : 'english';
+    const translatedDataKey = originalLangIsSpanish ? 'english' : 'spanish';
+    const originalLangName = originalLangIsSpanish ? 'Spanish' : 'English';
+    const translatedLangName = originalLangIsSpanish ? 'English' : 'Spanish';
+
+    try {
+      // Step 1: Refine marked segments in original language
+      setRefineStatus(`Refining ${markedIndices.length} marked segments in ${originalLangName}...`);
+      const refinedOriginalData = await refineMarkedSegments(
+        audioFile,
+        karaokeData[originalDataKey],
+        markedIndices,
+        originalLangName,
+        (status) => setRefineStatus(`${originalLangName}: ${status}`)
+      );
+
+      // Update with refined original data
+      const updatedDataAfterOriginal = { ...karaokeData, [originalDataKey]: refinedOriginalData };
+      setKaraokeData(updatedDataAfterOriginal);
+
+      // Step 2: Refine translated language to match
+      setRefineStatus(`Aligning ${translatedLangName} translation with refined timing...`);
+      const refinedTranslatedData = await refineMarkedSegments(
+        audioFile,
+        karaokeData[translatedDataKey],
+        markedIndices,
+        translatedLangName,
+        (status) => setRefineStatus(`${translatedLangName}: ${status}`),
+        refinedOriginalData // Pass the refined original as reference for timing
+      );
+
+      const finalData = {
+        ...updatedDataAfterOriginal,
+        [translatedDataKey]: refinedTranslatedData
+      };
+      setKaraokeData(finalData);
+
+      // Step 3: Run full validation to catch cascading issues
+      if (onValidationUpdate) {
+        setRefineStatus('Running full validation pass...');
+        const report = validateKaraokeDataPair(finalData.spanish, finalData.english);
+        onValidationUpdate(report);
+
+        const interpretation = getScoreInterpretation(report.overallScore);
+        setRefineStatus(`Refinement complete! Quality: ${report.overallScore}/100 (${interpretation.label})`);
+      } else {
+        setRefineStatus('Refinement complete!');
+      }
+
+      playNotificationSound('success');
+
+      // Clear marked segments after successful refinement
+      setTimeout(() => {
+        onClearMarkedSegments();
+        setIsRefining(false);
+      }, 3000);
+
+    } catch (err) {
+      setRefineStatus(`Error: ${(err as Error).message}`);
+      playNotificationSound('error');
+      setIsRefining(false);
+    }
+  };
 
   return (
-    <div className="bg-black/40 p-4 rounded-lg border border-secondary/50 flex flex-wrap items-center justify-between gap-4">
-      <div className="flex-1 min-w-[200px]">
-        <div className="flex items-center gap-2">
-           <Icon path="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" className="w-5 h-5 text-secondary" />
-           <p className="font-bold">Adjusting Timing</p>
+    <div className="bg-black/40 p-4 rounded-lg border border-yellow-500/50 space-y-3">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="p-2 bg-yellow-500/20 rounded-lg">
+            <Icon path="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" className="w-5 h-5 text-yellow-500" />
+          </div>
+          <div>
+            <p className="font-bold text-yellow-400">
+              {markedIndices.length} segment{markedIndices.length !== 1 ? 's' : ''} marked for refinement
+            </p>
+            <p className="text-sm text-textSecondary">
+              Lines: {markedIndices.map(i => i + 1).join(', ')}
+            </p>
+          </div>
         </div>
-        <p className="text-sm text-textSecondary truncate">
-          Line #{index + 1}: "{originalSegment.text || originalSegment.cueText}"
-        </p>
+
+        <div className="flex items-center gap-2">
+          {!isRefining && (
+            <>
+              <button
+                onClick={handleRefineMarkedSegments}
+                className="flex items-center gap-2 px-4 py-2 bg-secondary text-background font-semibold rounded-lg hover:bg-green-400 transition"
+              >
+                <Icon path="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" className="w-5 h-5" />
+                Refine Marked Segments
+              </button>
+              <button
+                onClick={onClearMarkedSegments}
+                className="p-2 rounded-lg hover:bg-white/10 transition text-textSecondary hover:text-white"
+                title="Clear all marked segments"
+              >
+                <Icon path="M6 18L18 6M6 6l12 12" className="w-5 h-5" />
+              </button>
+            </>
+          )}
+        </div>
       </div>
 
-      <div className="flex items-center gap-2">
-        <span className="text-sm font-mono text-textSecondary" title="Original Start Time">{originalTimeFormatted}s</span>
-         <Icon path="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" className="w-4 h-4 text-textSecondary" />
-        <span 
-          onClick={() => onSeek(tempAdjustmentTime)}
-          className="font-bold text-2xl mx-2 font-mono text-secondary animate-pulse cursor-pointer" 
-          title="Click to seek audio to new start time"
-        >
-          {newTimeFormatted}s
-        </span>
-        <div className="flex items-center gap-1">
-          {nudgeAmounts.map(amount => (
-            <button key={amount} onClick={() => handleNudge(amount)} className="px-2 py-1 text-xs font-bold bg-white/10 rounded-md hover:bg-secondary hover:text-background transition">
-              {amount > 0 ? `+${amount / 1000}` : `${amount / 1000}`}s
-            </button>
-          ))}
+      {isRefining && (
+        <div className="bg-black/30 rounded-lg p-3">
+          <p className="text-textSecondary text-sm mb-2">{refineStatus}</p>
+          <div className="w-full bg-black/40 rounded-full h-1.5">
+            <div className="bg-secondary h-1.5 rounded-full animate-pulse" style={{ width: '100%' }}></div>
+          </div>
         </div>
-      </div>
-      
-      <div className="flex items-center gap-2">
-        <button onClick={handleApply} className="px-4 py-2 text-sm bg-secondary text-background font-semibold rounded-md hover:bg-green-400 transition">Apply Shift</button>
-        <button onClick={onCancel} className="p-2 rounded-md hover:bg-white/20 transition"><Icon path="M6 18L18 6M6 6l12 12" className="w-5 h-5" /></button>
-      </div>
+      )}
     </div>
   );
 };
@@ -1117,14 +1188,13 @@ interface LyricPanelProps {
     segments: KaraokeSegment[];
     currentTime: number;
     onSeek: (timeMs: number) => void;
-    adjustmentTarget: { lang: string; index: number } | null;
-    onSetAdjustmentTarget: (target: { lang: 'spanish' | 'english'; index: number } | null) => void;
+    markedSegments: Set<number>;
+    onToggleSegmentMark: (segmentIndex: number) => void;
 }
 
-const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, onSeek, adjustmentTarget, onSetAdjustmentTarget }) => {
+const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, onSeek, markedSegments, onToggleSegmentMark }) => {
     const activeSegmentIndex = segments.findIndex(seg => currentTime >= seg.startTimeMs && currentTime <= seg.endTimeMs);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
-    const langKey = title.toLowerCase() as 'spanish' | 'english';
 
     useEffect(() => {
         if (activeSegmentIndex === -1 || !scrollContainerRef.current) return;
@@ -1139,15 +1209,6 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, o
         }
     }, [activeSegmentIndex]);
 
-    const handleSetAdjustmentTarget = (index: number) => {
-      const isCurrentlyTarget = adjustmentTarget?.lang === langKey && adjustmentTarget?.index === index;
-      if (isCurrentlyTarget) {
-        onSetAdjustmentTarget(null); // Toggle off
-      } else {
-        onSetAdjustmentTarget({ lang: langKey, index });
-      }
-    };
-
     const normalizeWord = (word: string) => {
         return word.toLowerCase().replace(/[.,'¡!¿?]/g, '').replace(/-/g, ' ');
     };
@@ -1158,25 +1219,26 @@ const LyricPanel: React.FC<LyricPanelProps> = ({ title, segments, currentTime, o
             <div ref={scrollContainerRef} className="h-48 overflow-y-auto space-y-2 text-center pr-2 relative">
                 {segments.map((segment, index) => {
                     const isActive = index === activeSegmentIndex;
-                    const isAdjustmentTarget = adjustmentTarget?.lang === langKey && adjustmentTarget?.index === index;
+                    const isMarked = markedSegments.has(index);
 
                     const baseClasses = "text-xl transition-all duration-300 cursor-pointer";
 
                     let segmentClasses = "";
-                    if (isAdjustmentTarget) {
-                      segmentClasses = "ring-2 ring-secondary rounded-md p-2 box-border";
-                    } else if (adjustmentTarget) {
-                      segmentClasses = "opacity-50";
+                    if (isMarked) {
+                      segmentClasses = "ring-2 ring-yellow-500 rounded-md p-2 box-border bg-yellow-500/10";
                     }
 
                     return (
                         <div key={index} className={`flex items-center gap-2 group ${segmentClasses}`}>
-                            <button 
-                              onClick={() => handleSetAdjustmentTarget(index)}
-                              className="opacity-0 group-hover:opacity-75 hover:!opacity-100 transition-opacity text-textSecondary hover:text-secondary"
-                              title="Adjust timing for this line"
+                            <button
+                              onClick={() => onToggleSegmentMark(index)}
+                              className={`transition-opacity ${isMarked ? 'opacity-100 text-yellow-500' : 'opacity-0 group-hover:opacity-75 hover:!opacity-100 text-textSecondary hover:text-yellow-500'}`}
+                              title={isMarked ? "Unmark this segment" : "Mark as misaligned for refinement"}
                             >
-                                <Icon path="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" className="w-5 h-5" />
+                                <Icon path={isMarked
+                                  ? "M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+                                  : "M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                                } className="w-5 h-5" />
                             </button>
                             <div className="flex-1" onClick={() => onSeek(segment.startTimeMs)}>
                                 {segment.type === 'INSTRUMENTAL' ? (
