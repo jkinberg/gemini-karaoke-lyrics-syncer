@@ -7,7 +7,7 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 - **Frontend:** React 19 + TypeScript 5.8 + Tailwind CSS (CDN)
 - **Backend:** Express 4 (API proxy for Gemini)
 - **Build:** Vite 6
-- **AI:** Google Gemini API (@google/genai) - Gemini 2.5 Pro for sync, Flash for translation
+- **AI:** Google Gemini API (@google/genai) - Gemini 3 Pro for sync, Flash for translation
 - **Utilities:** jszip, Web Audio API
 
 ## Project Structure
@@ -16,9 +16,9 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 ├── App.tsx              # Main React component (all UI components)
 ├── server.ts            # Express server with /api/gemini proxy
 ├── services/
-│   └── geminiService.ts # Client-side API calls (via server proxy)
+│   ├── geminiService.ts # Client-side API calls (via server proxy)
+│   └── validationService.ts # Quality validation for karaoke data
 ├── types.ts             # TypeScript type definitions
-├── test-data.ts         # Test case for diagnostic tool
 ├── index.tsx            # React entry point
 ├── index.html           # HTML entry with Tailwind CDN
 ├── vite.config.ts       # Vite config with dev proxy
@@ -64,7 +64,7 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 
 1. User uploads audio + provides lyrics in source language
 2. Optional: Auto-translate via Gemini Flash
-3. Gemini 2.5 Pro generates word-level timestamps (treats audio as ground truth)
+3. Gemini 3 Pro generates word-level timestamps (treats audio as ground truth)
 4. Second pass aligns translated lyrics to original timing
 5. Optional: AI refinement pass for timing corrections
 6. Manual timing adjustments available with millisecond precision

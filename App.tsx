@@ -14,7 +14,6 @@ import {
   ValidationIssue,
 } from './services/validationService';
 import { KaraokeApiResponse, KaraokeData, KaraokeSegment, KaraokeWord, VocabularyItem } from './types';
-import { testCase } from './test-data';
 
 // --- Helper Functions & Components ---
 
@@ -409,28 +408,6 @@ const App: React.FC = () => {
       });
     }, [adjustmentTarget, karaokeData]);
 
-    const runDiagnosticTest = () => {
-      const { lyrics, karaokeData: testKaraokeData } = testCase;
-      setSpanishLyrics(lyrics.spanish);
-      setEnglishLyrics(lyrics.english);
-      setKaraokeData(testKaraokeData as unknown as KaraokeApiResponse);
-      setVocabularyList(null);
-      setError(null);
-      
-      // Generate a silent audio file to make the player work
-      const audioContext = new AudioContext();
-      const durationInSeconds = testKaraokeData.spanish.metadata.durationMs / 1000;
-      const sampleRate = audioContext.sampleRate;
-      const frameCount = sampleRate * durationInSeconds;
-      const buffer = audioContext.createBuffer(1, frameCount, sampleRate);
-      const blob = new Blob([new Uint8Array(buffer.getChannelData(0).buffer)], { type: 'audio/wav' });
-      const silentFile = new File([blob], "silent_test_audio.wav", { type: "audio/wav" });
-      setAudioFile(silentFile);
-      
-      setStatusMessage("Diagnostic test loaded. The preview player is now active with known-good data.");
-      setActiveTab('preview');
-    };
-
     // Handle seeking from validation panel
     const handleSeekFromValidation = (timeMs: number) => {
         setPlayRequest({ startTimeMs: timeMs, endTimeMs: timeMs + 3000 }); // Play 3 seconds from that point
@@ -522,7 +499,7 @@ const App: React.FC = () => {
                 )}
             </GlassPanel>
 
-            <Footer buildTimestamp={buildTimestamp} onRunTest={runDiagnosticTest} />
+            <Footer buildTimestamp={buildTimestamp} />
         </div>
     );
 };
@@ -1545,13 +1522,9 @@ const VocabularyDisplay: React.FC<VocabularyDisplayProps> = ({ vocabularyList, o
     );
 };
 
-const Footer: React.FC<{ buildTimestamp: string, onRunTest: () => void }> = ({ buildTimestamp, onRunTest }) => (
+const Footer: React.FC<{ buildTimestamp: string }> = ({ buildTimestamp }) => (
     <footer className="text-center text-xs text-textSecondary/50 w-full max-w-5xl">
-        <p>
-            <button onClick={onRunTest} className="hover:text-secondary transition underline">Run Diagnostic Test</button>
-            <span className="mx-2">|</span>
-            Version 1.2.0 | Build: {buildTimestamp}
-        </p>
+        <p>Version {__APP_VERSION__} | Build: {buildTimestamp}</p>
     </footer>
 );
 
