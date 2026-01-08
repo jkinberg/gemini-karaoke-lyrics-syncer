@@ -194,10 +194,18 @@ You MUST return a single, minified JSON object that strictly follows the provide
 
 // FIX: Export 'buildTranslationAlignmentPrompt' for use in other modules.
 export const buildTranslationAlignmentPrompt = (timedOriginalData: KaraokeData, translatedLyrics: string, originalLangName: string, translatedLangName: string): string => {
+  const segmentCount = timedOriginalData.segments.length;
+
   return `
 You are a precise text-transformation engine. Your task is to create a translated karaoke data file by mapping translated lyrics onto an existing, perfectly timed data structure.
 
-**Constraint:** You MUST use the exact same segment structure from the provided "Original Timed Data". Do NOT alter segment-level timings.
+**CRITICAL STRUCTURAL CONSTRAINTS (MUST FOLLOW):**
+1. You MUST output EXACTLY ${segmentCount} segments - no more, no less
+2. Each segment MUST have segmentIndex values 1 through ${segmentCount} in order
+3. Segment-level startTimeMs and endTimeMs MUST match the input EXACTLY (copy them verbatim)
+4. Segment type (LYRIC/INSTRUMENTAL) MUST match the input EXACTLY
+5. You may ONLY modify: text, cueText, words array, and metadata.language
+6. Do NOT merge, split, add, or remove segments under any circumstances
 
 **Input Data:**
 
@@ -226,8 +234,18 @@ You MUST return a single, minified JSON object for the ${translatedLangName} ver
 
 
 const buildRefinementPrompt = (draftKaraokeData: KaraokeData, langName: string): string => {
+  const segmentCount = draftKaraokeData.segments.length;
+
   return `
 You are a meticulous Quality Assurance specialist for AI-generated audio-to-text synchronization. Your task is to review a "draft" synchronized karaoke file against its source audio, identify any timing or text inaccuracies, and return a complete, corrected version.
+
+**CRITICAL STRUCTURAL CONSTRAINTS (MUST FOLLOW):**
+1. You MUST output EXACTLY ${segmentCount} segments - no more, no less
+2. Each segment MUST have segmentIndex values 1 through ${segmentCount} in order
+3. Segment type (LYRIC/INSTRUMENTAL) MUST remain unchanged from the input
+4. Do NOT merge, split, add, or remove segments under any circumstances
+5. You MAY adjust segment-level startTimeMs/endTimeMs if audio analysis reveals timing errors
+6. You MAY adjust word-level timing and correct text to match actual audio
 
 **Input Data:**
 - Audio File: [Provided in the request]
@@ -262,13 +280,23 @@ Your goal is to produce a final JSON file with the highest possible accuracy. Li
 };
 
 const buildTranslatedRefinementPrompt = (
-  draftTranslatedData: KaraokeData, 
+  draftTranslatedData: KaraokeData,
   refinedOriginalData: KaraokeData,
   translatedLangName: string,
   originalLangName: string
 ): string => {
+  const segmentCount = refinedOriginalData.segments.length;
+
   return `
 You are a precise Temporal Alignment Specialist for multilingual karaoke. Your task is to adjust the timing of a translated lyric file to match a perfectly timed original version, using the audio as a reference for rhythm and cadence.
+
+**CRITICAL STRUCTURAL CONSTRAINTS (MUST FOLLOW):**
+1. You MUST output EXACTLY ${segmentCount} segments - no more, no less
+2. Each segment MUST have segmentIndex values 1 through ${segmentCount} in order
+3. Segment-level startTimeMs and endTimeMs MUST match the ${originalLangName} ground truth EXACTLY
+4. Segment type (LYRIC/INSTRUMENTAL) MUST match the ${originalLangName} ground truth EXACTLY
+5. Do NOT merge, split, add, or remove segments under any circumstances
+6. Do NOT change any text content - only adjust word-level timing within segments
 
 **CRITICAL CONSTRAINT: DO NOT CHANGE THE TRANSLATED LYRICS.** The text in the "Draft ${translatedLangName} Data" is the correct and final translation. Your ONLY task is to correct its \`startTimeMs\` and \`endTimeMs\` values for both segments and words.
 
@@ -349,7 +377,7 @@ export const generateKaraokeData = async (
     const primaryPrompt = buildSingleLanguagePrompt(originalLyrics, originalLangName);
     const primaryTextPart = { text: primaryPrompt };
 
-    const primaryModel = 'gemini-2.5-pro';
+    const primaryModel = 'gemini-3-pro';
 
     onStatusUpdate(`Step 1/2: Analyzing audio waveform and aligning ${originalLangName} lyrics. This is the longest step and may take up to 5 minutes...`);
 
@@ -394,7 +422,7 @@ export const generateKaraokeData = async (
     onStatusUpdate(`Step 2/2: Mapping ${translatedLangName} translation onto synchronized timeline...`);
 
     const translationPrompt = buildTranslationAlignmentPrompt(originalTimedData, translatedLyrics, originalLangName, translatedLangName);
-    const translationModel = 'gemini-2.5-pro';
+    const translationModel = 'gemini-3-pro';
 
     const translationApiCall = () => callGeminiProxy(
       translationModel,
@@ -460,7 +488,7 @@ export const refineKaraokeData = async (
     const refinementPrompt = buildRefinementPrompt(karaokeDataToRefine, languageName);
     const textPart = { text: refinementPrompt };
 
-    const model = 'gemini-2.5-pro';
+    const model = 'gemini-3-pro';
     onStatusUpdate(`Sending data to AI for quality review. This can take several minutes...`);
 
     const apiCall = () => callGeminiProxy(
@@ -530,7 +558,7 @@ export const refineTranslatedKaraokeData = async (
     );
     const textPart = { text: refinementPrompt };
 
-    const model = 'gemini-2.5-pro';
+    const model = 'gemini-3-pro';
     onStatusUpdate(`Sending data to AI for timing alignment. This can take several minutes...`);
 
     const apiCall = () => callGeminiProxy(
@@ -584,7 +612,7 @@ export const translateLyrics = async (
   sourceLang: 'es' | 'en',
   targetLang: 'es' | 'en'
 ): Promise<string> => {
-  const model = 'gemini-2.5-flash';
+  const model = 'gemini-3-flash';
 
   const sourceLangName = sourceLang === 'es' ? 'Spanish' : 'English';
   const targetLangName = targetLang === 'en' ? 'English' : 'Spanish';
@@ -626,7 +654,7 @@ export const generateVocabularyList = async (
   spanishKaraokeData: KaraokeData,
   englishKaraokeData: KaraokeData,
 ): Promise<VocabularyItem[]> => {
-  const model = 'gemini-2.5-flash';
+  const model = 'gemini-3-flash';
 
   const prompt = `
 You are an expert cultural linguist, specializing in teaching the nuances of modern Spanish slang and idioms to English speakers through popular music.

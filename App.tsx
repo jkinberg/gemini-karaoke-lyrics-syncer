@@ -7,6 +7,12 @@ import {
   refineKaraokeData,
   refineTranslatedKaraokeData,
 } from './services/geminiService';
+import {
+  validateKaraokeDataPair,
+  getScoreInterpretation,
+  ValidationReport,
+  ValidationIssue,
+} from './services/validationService';
 import { KaraokeApiResponse, KaraokeData, KaraokeSegment, KaraokeWord, VocabularyItem } from './types';
 import { testCase } from './test-data';
 
@@ -125,6 +131,7 @@ const App: React.FC = () => {
     // UI State
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isTranslating, setIsTranslating] = useState<boolean>(false);
+    const [isGeneratingVocab, setIsGeneratingVocab] = useState<boolean>(false);
     const [statusMessage, setStatusMessage] = useState<string>('');
     const [error, setError] = useState<string | null>(null);
     const [progress, setProgress] = useState(0);
@@ -133,11 +140,13 @@ const App: React.FC = () => {
     // Results
     const [karaokeData, setKaraokeData] = useState<KaraokeApiResponse | null>(null);
     const [vocabularyList, setVocabularyList] = useState<VocabularyItem[] | null>(null);
+    const [validationReport, setValidationReport] = useState<ValidationReport | null>(null);
     const [activeTab, setActiveTab] = useState<'preview' | 'data' | 'vocab'>('preview');
 
     // Human-in-the-loop state for manual timing adjustment
     const [adjustmentTarget, setAdjustmentTarget] = useState<{ lang: 'spanish' | 'english'; index: number } | null>(null);
     const [playRequest, setPlayRequest] = useState<{ startTimeMs: number, endTimeMs: number } | null>(null);
+    const [showValidationPanel, setShowValidationPanel] = useState(false);
 
     // Audio blob URL - managed at App level to persist across tab switches
     const [audioUrl, setAudioUrl] = useState<string | null>(null);
@@ -225,6 +234,7 @@ const App: React.FC = () => {
         setEnglishLyrics('');
         setKaraokeData(null);
         setVocabularyList(null);
+        setValidationReport(null);
         setError(null);
         setStatusMessage('');
         setIsLoading(false);
@@ -273,6 +283,7 @@ const App: React.FC = () => {
         setError(null);
         setKaraokeData(null);
         setVocabularyList(null);
+        setValidationReport(null);
         setAdjustmentTarget(null);
         setProgress(0);
 
@@ -299,13 +310,14 @@ const App: React.FC = () => {
             const result = await generateKaraokeData(audioFile, originalLyrics, translatedLyrics, languageFlow, onStatusUpdate);
             setKaraokeData(result);
             setActiveTab('preview');
-            
-            onStatusUpdate('Generating vocabulary list...');
-            setProgress(90);
-            const vocab = await generateVocabularyList(result.spanish, result.english);
-            setVocabularyList(vocab);
 
-            setStatusMessage('Process complete!');
+            // Run validation
+            onStatusUpdate('Validating generated data...');
+            const report = validateKaraokeDataPair(result.spanish, result.english);
+            setValidationReport(report);
+
+            const interpretation = getScoreInterpretation(report.overallScore);
+            setStatusMessage(`Karaoke data generated! Quality: ${report.overallScore}/100 (${interpretation.label})`);
             setProgress(100);
         } catch (err) {
             setError((err as Error).message);
@@ -314,7 +326,30 @@ const App: React.FC = () => {
             setIsLoading(false);
         }
     };
-    
+
+    const handleGenerateVocabulary = async () => {
+        if (!karaokeData) {
+            setError("Please generate karaoke data first.");
+            return;
+        }
+
+        setIsGeneratingVocab(true);
+        setError(null);
+        setStatusMessage('Extracting vocabulary from lyrics...');
+
+        try {
+            const vocab = await generateVocabularyList(karaokeData.spanish, karaokeData.english);
+            setVocabularyList(vocab);
+            setStatusMessage('Vocabulary extraction complete!');
+            setActiveTab('vocab');
+        } catch (err) {
+            setError((err as Error).message);
+            setStatusMessage('');
+        } finally {
+            setIsGeneratingVocab(false);
+        }
+    };
+
     // FIX: Wrapped handleApplyTimingShift in useCallback to prevent stale closures.
     // This ensures the function always has access to the latest karaokeData and adjustmentTarget state,
     // fixing the bug where manual timing adjustments were not being applied correctly.
@@ -376,6 +411,13 @@ const App: React.FC = () => {
       setActiveTab('preview');
     };
 
+    // Handle seeking from validation panel
+    const handleSeekFromValidation = (timeMs: number) => {
+        setPlayRequest({ startTimeMs: timeMs, endTimeMs: timeMs + 3000 }); // Play 3 seconds from that point
+        setActiveTab('preview');
+        setShowValidationPanel(false);
+    };
+
     const isGenerateDisabled = isLoading || !audioFile || !spanishLyrics || !englishLyrics;
 
     return (
@@ -424,11 +466,34 @@ const App: React.FC = () => {
 
                 {karaokeData && !isLoading && (
                     <div className="p-4 sm:p-8">
-                        <TabNav activeTab={activeTab} setActiveTab={setActiveTab} hasVocab={!!vocabularyList} />
-                        <div className="mt-6">
+                        {/* Header with tabs and validation badge */}
+                        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
+                            <TabNav activeTab={activeTab} setActiveTab={setActiveTab} hasVocab={!!vocabularyList} />
+                            {validationReport && (
+                                <ValidationBadge
+                                    report={validationReport}
+                                    onShowDetails={() => setShowValidationPanel(!showValidationPanel)}
+                                />
+                            )}
+                        </div>
+
+                        {/* Validation Panel (expandable) */}
+                        {showValidationPanel && validationReport && (
+                            <ValidationPanel
+                                report={validationReport}
+                                onClose={() => setShowValidationPanel(false)}
+                                onSeek={handleSeekFromValidation}
+                            />
+                        )}
+
+                        <div className="mt-2">
                             {activeTab === 'preview' && audioUrl && <KaraokePreview karaokeData={karaokeData} audioUrl={audioUrl} adjustmentTarget={adjustmentTarget} onSetAdjustmentTarget={setAdjustmentTarget} onApplyTimingShift={handleApplyTimingShift} playRequest={playRequest} onPlayRequestComplete={() => setPlayRequest(null)} />}
-                            {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow} />}
-                            {activeTab === 'vocab' && vocabularyList && <VocabularyDisplay vocabularyList={vocabularyList} onPlayRequest={setPlayRequest} />}
+                            {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow} onValidationUpdate={setValidationReport} />}
+                            {activeTab === 'vocab' && (
+                                vocabularyList
+                                    ? <VocabularyDisplay vocabularyList={vocabularyList} onPlayRequest={setPlayRequest} />
+                                    : <VocabularyPlaceholder onGenerate={handleGenerateVocabulary} isGenerating={isGeneratingVocab} />
+                            )}
                         </div>
                          <div className="text-center mt-8">
                             <button onClick={clearAll} className="bg-white/10 text-textSecondary px-6 py-2 rounded-lg hover:bg-white/20 transition">Start Over</button>
@@ -491,17 +556,170 @@ const ErrorMessage: React.FC<{ message: string }> = ({ message }) => (
     </div>
 );
 
+// --- Validation UI Components ---
+
+interface ValidationBadgeProps {
+  report: ValidationReport;
+  onShowDetails: () => void;
+}
+
+const ValidationBadge: React.FC<ValidationBadgeProps> = ({ report, onShowDetails }) => {
+    const interpretation = getScoreInterpretation(report.overallScore);
+    const totalErrors = report.spanish.errorCount + report.english.errorCount +
+        report.crossLanguage.issues.filter(i => i.severity === 'error').length;
+    const totalWarnings = report.spanish.warningCount + report.english.warningCount +
+        report.crossLanguage.issues.filter(i => i.severity === 'warning').length;
+
+    return (
+        <div
+            onClick={onShowDetails}
+            className="flex items-center gap-3 px-4 py-2 bg-black/30 rounded-lg cursor-pointer hover:bg-black/40 transition"
+        >
+            <div className={`text-2xl font-bold ${interpretation.color}`}>
+                {report.overallScore}
+            </div>
+            <div className="text-sm">
+                <div className={`font-medium ${interpretation.color}`}>{interpretation.label}</div>
+                <div className="text-textSecondary text-xs">
+                    {totalErrors > 0 && <span className="text-red-400 mr-2">{totalErrors} errors</span>}
+                    {totalWarnings > 0 && <span className="text-yellow-400">{totalWarnings} warnings</span>}
+                    {totalErrors === 0 && totalWarnings === 0 && <span className="text-green-400">No issues</span>}
+                </div>
+            </div>
+            <Icon path="M8.25 4.5l7.5 7.5-7.5 7.5" className="w-4 h-4 text-textSecondary" />
+        </div>
+    );
+};
+
+interface ValidationPanelProps {
+  report: ValidationReport;
+  onClose: () => void;
+  onSeek: (timeMs: number) => void;
+}
+
+const ValidationPanel: React.FC<ValidationPanelProps> = ({ report, onClose, onSeek }) => {
+    const allIssues: (ValidationIssue & { source: string })[] = [
+        ...report.spanish.errors.map(i => ({ ...i, source: 'Spanish' })),
+        ...report.spanish.warnings.map(i => ({ ...i, source: 'Spanish' })),
+        ...report.english.errors.map(i => ({ ...i, source: 'English' })),
+        ...report.english.warnings.map(i => ({ ...i, source: 'English' })),
+        ...report.crossLanguage.issues.map(i => ({ ...i, source: 'Cross-Language' })),
+    ];
+
+    const errors = allIssues.filter(i => i.severity === 'error');
+    const warnings = allIssues.filter(i => i.severity === 'warning');
+
+    const interpretation = getScoreInterpretation(report.overallScore);
+
+    return (
+        <div className="bg-black/40 border border-white/10 rounded-lg p-4 mb-4">
+            <div className="flex justify-between items-start mb-4">
+                <div>
+                    <h3 className="text-lg font-bold flex items-center gap-2">
+                        Quality Score:
+                        <span className={interpretation.color}>{report.overallScore}/100</span>
+                        <span className={`text-sm font-normal ${interpretation.color}`}>({interpretation.label})</span>
+                    </h3>
+                    <p className="text-sm text-textSecondary">{interpretation.recommendation}</p>
+                </div>
+                <button onClick={onClose} className="p-1 hover:bg-white/10 rounded transition">
+                    <Icon path="M6 18L18 6M6 6l12 12" className="w-5 h-5" />
+                </button>
+            </div>
+
+            {/* Metrics Summary */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4 text-sm">
+                <div className="bg-black/30 p-2 rounded">
+                    <div className="text-textSecondary">Segments</div>
+                    <div className="font-bold">{report.spanish.metrics.totalSegments}</div>
+                </div>
+                <div className="bg-black/30 p-2 rounded">
+                    <div className="text-textSecondary">Words (ES)</div>
+                    <div className="font-bold">{report.spanish.metrics.totalWords}</div>
+                </div>
+                <div className="bg-black/30 p-2 rounded">
+                    <div className="text-textSecondary">Words (EN)</div>
+                    <div className="font-bold">{report.english.metrics.totalWords}</div>
+                </div>
+                <div className="bg-black/30 p-2 rounded">
+                    <div className="text-textSecondary">Coverage</div>
+                    <div className="font-bold">{Math.round(report.spanish.metrics.coverageRatio * 100)}%</div>
+                </div>
+            </div>
+
+            {/* Issues List */}
+            {allIssues.length > 0 ? (
+                <div className="space-y-2 max-h-64 overflow-y-auto">
+                    {errors.length > 0 && (
+                        <div className="mb-3">
+                            <div className="text-red-400 font-medium text-sm mb-1">Errors ({errors.length})</div>
+                            {errors.map((issue, idx) => (
+                                <IssueRow key={`error-${idx}`} issue={issue} onSeek={onSeek} />
+                            ))}
+                        </div>
+                    )}
+                    {warnings.length > 0 && (
+                        <div>
+                            <div className="text-yellow-400 font-medium text-sm mb-1">Warnings ({warnings.length})</div>
+                            {warnings.map((issue, idx) => (
+                                <IssueRow key={`warning-${idx}`} issue={issue} onSeek={onSeek} />
+                            ))}
+                        </div>
+                    )}
+                </div>
+            ) : (
+                <div className="text-center py-4 text-green-400">
+                    <Icon path="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" className="w-8 h-8 mx-auto mb-2" />
+                    <p>No issues detected!</p>
+                </div>
+            )}
+        </div>
+    );
+};
+
+const IssueRow: React.FC<{ issue: ValidationIssue & { source: string }; onSeek: (timeMs: number) => void }> = ({ issue, onSeek }) => {
+    const canSeek = issue.context.startTimeMs !== undefined;
+
+    return (
+        <div
+            className={`flex items-start gap-2 p-2 rounded text-sm ${
+                issue.severity === 'error' ? 'bg-red-900/20' : 'bg-yellow-900/20'
+            } ${canSeek ? 'cursor-pointer hover:bg-white/10' : ''}`}
+            onClick={() => canSeek && onSeek(issue.context.startTimeMs!)}
+        >
+            <span className={`shrink-0 ${issue.severity === 'error' ? 'text-red-400' : 'text-yellow-400'}`}>
+                {issue.severity === 'error' ? '●' : '▲'}
+            </span>
+            <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2">
+                    <span className="text-textSecondary text-xs">{issue.source}</span>
+                    {issue.segmentIndex >= 0 && (
+                        <span className="text-textSecondary text-xs">Seg {issue.segmentIndex + 1}</span>
+                    )}
+                </div>
+                <div className="text-textPrimary truncate">{issue.message}</div>
+            </div>
+            {canSeek && (
+                <Icon path="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" className="w-4 h-4 text-textSecondary shrink-0" />
+            )}
+        </div>
+    );
+};
+
 const TabNav: React.FC<{ activeTab: string, setActiveTab: (tab: any) => void, hasVocab: boolean }> = ({ activeTab, setActiveTab, hasVocab }) => {
-    const tabs = [{ id: 'preview', label: 'Preview' }, { id: 'data', label: 'Karaoke Data' }, { id: 'vocab', label: 'Vocabulary', disabled: !hasVocab }];
+    const tabs = [
+        { id: 'preview', label: 'Preview' },
+        { id: 'data', label: 'Karaoke Data' },
+        { id: 'vocab', label: hasVocab ? 'Vocabulary' : 'Vocabulary ✨' }
+    ];
     return (
         <div className="border-b border-white/10 flex justify-center space-x-4 sm:space-x-8">
             {tabs.map(tab => (
                 <button
                     key={tab.id}
-                    onClick={() => !tab.disabled && setActiveTab(tab.id)}
+                    onClick={() => setActiveTab(tab.id)}
                     className={`px-4 py-2 text-sm sm:text-base font-medium transition-colors
-                        ${activeTab === tab.id ? 'text-secondary border-b-2 border-secondary' : 'text-textSecondary hover:text-textPrimary'}
-                        ${tab.disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        ${activeTab === tab.id ? 'text-secondary border-b-2 border-secondary' : 'text-textSecondary hover:text-textPrimary'}`}
                 >
                     {tab.label}
                 </button>
@@ -971,9 +1189,10 @@ interface KaraokeDataDisplayProps {
     setKaraokeData: (data: KaraokeApiResponse) => void;
     audioFile: File | null;
     languageFlow: 'es-en' | 'en-es';
+    onValidationUpdate?: (report: ValidationReport) => void;
 }
 
-const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, setKaraokeData, audioFile, languageFlow }) => {
+const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, setKaraokeData, audioFile, languageFlow, onValidationUpdate }) => {
   const [isRefining, setIsRefining] = useState(false);
   const [refineStatus, setRefineStatus] = useState('');
   const [refineProgress, setRefineProgress] = useState(0);
@@ -1026,13 +1245,23 @@ const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, se
           if (status.toLowerCase().includes('sending data')) setRefineProgress(75);
       });
       
-      setKaraokeData({ 
+      const finalData = {
         ...updatedDataAfterStep1,
-        [translatedDataKey]: refinedTranslatedData 
-      });
+        [translatedDataKey]: refinedTranslatedData
+      };
+      setKaraokeData(finalData);
 
+      // Re-run validation after refinement
+      if (onValidationUpdate) {
+        setRefineStatus('Validating refined data...');
+        const report = validateKaraokeDataPair(finalData.spanish, finalData.english);
+        onValidationUpdate(report);
+        const interpretation = getScoreInterpretation(report.overallScore);
+        setRefineStatus(`Refinement complete! Quality: ${report.overallScore}/100 (${interpretation.label})`);
+      } else {
+        setRefineStatus('Refinement complete! Both language files have been updated.');
+      }
       setRefineProgress(100);
-      setRefineStatus('Refinement complete! Both language files have been updated.');
 
     } catch (err) {
       alert(`Error during refinement: ${(err as Error).message}`);
@@ -1123,6 +1352,54 @@ const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, se
       </div>
   );
 };
+
+interface VocabularyPlaceholderProps {
+  onGenerate: () => void;
+  isGenerating: boolean;
+}
+
+const VocabularyPlaceholder: React.FC<VocabularyPlaceholderProps> = ({ onGenerate, isGenerating }) => (
+    <div className="bg-black/20 p-8 sm:p-12 rounded-lg text-center">
+        <div className="max-w-md mx-auto space-y-6">
+            {isGenerating ? (
+                <>
+                    <div className="animate-pulse">
+                        <Icon path="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" className="w-16 h-16 mx-auto text-secondary" />
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-bold text-textPrimary mb-2">Analyzing Lyrics...</h3>
+                        <p className="text-textSecondary">
+                            AI is extracting culturally significant slang, idioms, and expressions.
+                            This usually takes 10-30 seconds.
+                        </p>
+                    </div>
+                </>
+            ) : (
+                <>
+                    <Icon path="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" className="w-16 h-16 mx-auto text-secondary/50" />
+                    <div>
+                        <h3 className="text-xl font-bold text-textPrimary mb-2">Extract Key Vocabulary</h3>
+                        <p className="text-textSecondary">
+                            Use AI to identify culturally significant slang, idioms, and expressions from the lyrics
+                            — perfect for language learning!
+                        </p>
+                    </div>
+                    <p className="text-sm text-textSecondary/70">
+                        Tip: Generate vocabulary after you're satisfied with the karaoke timing accuracy.
+                    </p>
+                    <ActionButton
+                        onClick={onGenerate}
+                        disabled={isGenerating}
+                        icon="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"
+                        className="px-8 py-3"
+                    >
+                        Generate Vocabulary
+                    </ActionButton>
+                </>
+            )}
+        </div>
+    </div>
+);
 
 interface VocabularyDisplayProps {
   vocabularyList: VocabularyItem[];
