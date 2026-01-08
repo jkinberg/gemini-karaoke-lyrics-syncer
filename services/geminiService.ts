@@ -377,7 +377,7 @@ export const generateKaraokeData = async (
     const primaryPrompt = buildSingleLanguagePrompt(originalLyrics, originalLangName);
     const primaryTextPart = { text: primaryPrompt };
 
-    const primaryModel = 'gemini-3-pro';
+    const primaryModel = 'gemini-3-pro-preview';
 
     onStatusUpdate(`Step 1/2: Analyzing audio waveform and aligning ${originalLangName} lyrics. This is the longest step and may take up to 5 minutes...`);
 
@@ -422,7 +422,7 @@ export const generateKaraokeData = async (
     onStatusUpdate(`Step 2/2: Mapping ${translatedLangName} translation onto synchronized timeline...`);
 
     const translationPrompt = buildTranslationAlignmentPrompt(originalTimedData, translatedLyrics, originalLangName, translatedLangName);
-    const translationModel = 'gemini-3-pro';
+    const translationModel = 'gemini-3-pro-preview';
 
     const translationApiCall = () => callGeminiProxy(
       translationModel,
@@ -488,7 +488,7 @@ export const refineKaraokeData = async (
     const refinementPrompt = buildRefinementPrompt(karaokeDataToRefine, languageName);
     const textPart = { text: refinementPrompt };
 
-    const model = 'gemini-3-pro';
+    const model = 'gemini-3-pro-preview';
     onStatusUpdate(`Sending data to AI for quality review. This can take several minutes...`);
 
     const apiCall = () => callGeminiProxy(
@@ -558,7 +558,7 @@ export const refineTranslatedKaraokeData = async (
     );
     const textPart = { text: refinementPrompt };
 
-    const model = 'gemini-3-pro';
+    const model = 'gemini-3-pro-preview';
     onStatusUpdate(`Sending data to AI for timing alignment. This can take several minutes...`);
 
     const apiCall = () => callGeminiProxy(
@@ -612,7 +612,7 @@ export const translateLyrics = async (
   sourceLang: 'es' | 'en',
   targetLang: 'es' | 'en'
 ): Promise<string> => {
-  const model = 'gemini-3-flash';
+  const model = 'gemini-3-flash-preview';
 
   const sourceLangName = sourceLang === 'es' ? 'Spanish' : 'English';
   const targetLangName = targetLang === 'en' ? 'English' : 'Spanish';
@@ -654,7 +654,7 @@ export const generateVocabularyList = async (
   spanishKaraokeData: KaraokeData,
   englishKaraokeData: KaraokeData,
 ): Promise<VocabularyItem[]> => {
-  const model = 'gemini-3-flash';
+  const model = 'gemini-3-flash-preview';
 
   const prompt = `
 You are an expert cultural linguist, specializing in teaching the nuances of modern Spanish slang and idioms to English speakers through popular music.
@@ -672,13 +672,17 @@ Your task is to analyze a song's lyrics and extract the most culturally signific
 
 **Core Mission: Uncover the "Street Smarts"**
 
-Your goal is to identify 10-15 Spanish terms or phrases from the lyrics that are prime examples of:
--   **Popular Slang & Colloquialisms:** Words or phrases used in informal, everyday conversation.
--   **Idiomatic Expressions:** Phrases where the meaning isn't deducible from the individual words (e.g., "tomar el pelo").
--   **Culturally-Specific Context:** Words that have a deeper meaning or connotation within the culture that might be lost in a direct translation.
--   **Poetic or Figurative Language:** Metaphors or creative word uses that are key to the song's artistic expression.
+Your goal is to identify **5-8 of the MOST culturally significant** Spanish terms or phrases from the lyrics. Focus on quality over quantity - only include terms that are truly valuable for language learners.
 
-**Crucially, AVOID simple, common vocabulary** that would be found in a beginner's textbook (e.g., avoid words like 'y', 'el', 'casa', 'ser', 'estar' unless they are used in a very unique idiomatic way).
+Prioritize these types (in order of importance):
+1.  **Popular Slang & Colloquialisms:** Words or phrases used in informal, everyday conversation that a textbook would never teach.
+2.  **Idiomatic Expressions:** Phrases where the meaning isn't deducible from the individual words (e.g., "tomar el pelo").
+3.  **Culturally-Specific Context:** Words that have a deeper meaning or connotation within the culture that might be lost in a direct translation.
+
+**Crucially, AVOID:**
+- Simple, common vocabulary found in beginner textbooks (e.g., 'y', 'el', 'casa', 'ser', 'estar')
+- Standard verbs and nouns unless used in a very unique idiomatic way
+- Terms that are easily understood from direct translation
 
 **Task Instructions:**
 

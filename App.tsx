@@ -192,31 +192,51 @@ const App: React.FC = () => {
         if (karaokeData && vocabularyList?.length) {
 
             const newVocabularyList = vocabularyList.map(item => {
-                // The segmentIndex is 1-based, while the segments array is 0-based
-                const segmentIndex = item.segmentIndex - 1;
-                if (segmentIndex < 0 || segmentIndex >= karaokeData.spanish.segments.length) {
-                    return item; // Return original if index is out of bounds
+                // Find the segment by matching the example text (most reliable method)
+                // This handles both 0-based and 1-based segmentIndex from Gemini
+                let spanishSegment = karaokeData.spanish.segments.find(
+                    seg => seg.text && item.example.spanish &&
+                           seg.text.toLowerCase().includes(item.term.spanish.toLowerCase())
+                );
+
+                // Fallback: try the segmentIndex (handle both 0-based and 1-based)
+                if (!spanishSegment) {
+                    const idx = item.segmentIndex;
+                    // Try 1-based first (segmentIndex - 1)
+                    if (idx >= 1 && idx <= karaokeData.spanish.segments.length) {
+                        spanishSegment = karaokeData.spanish.segments[idx - 1];
+                    }
+                    // Try 0-based
+                    else if (idx >= 0 && idx < karaokeData.spanish.segments.length) {
+                        spanishSegment = karaokeData.spanish.segments[idx];
+                    }
                 }
 
-                const spanishSegment = karaokeData.spanish.segments[segmentIndex];
-                const englishSegment = karaokeData.english.segments[segmentIndex];
+                if (!spanishSegment) {
+                    return item; // Return original if no segment found
+                }
+
+                // Find matching English segment by timing
+                const englishSegment = karaokeData.english.segments.find(
+                    seg => seg.startTimeMs === spanishSegment!.startTimeMs
+                ) || karaokeData.english.segments[karaokeData.spanish.segments.indexOf(spanishSegment)];
 
                 // Check if an update is needed to avoid unnecessary re-renders
                 if (spanishSegment.startTimeMs !== item.startTimeMs ||
-                    spanishSegment.endTimeMs !== item.endTimeMs ||
-                    (spanishSegment.text && spanishSegment.text !== item.example.spanish)) {
-                    
+                    spanishSegment.endTimeMs !== item.endTimeMs) {
+
                     return {
                         ...item,
                         startTimeMs: spanishSegment.startTimeMs,
                         endTimeMs: spanishSegment.endTimeMs,
+                        segmentIndex: karaokeData.spanish.segments.indexOf(spanishSegment) + 1,
                         example: {
                             spanish: spanishSegment.text || item.example.spanish,
                             english: englishSegment?.text || item.example.english,
                         },
                     };
                 }
-                
+
                 return item; // No changes needed
             });
 
