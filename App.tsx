@@ -123,37 +123,17 @@ const FileUploader: React.FC<{ onFileSelect: (file: File) => void; selectedFile:
     );
 };
 
-const LyricEditor: React.FC<{ value: string; onChange: (value: string) => void; placeholder: string; lang: string }> = ({ value, onChange, placeholder, lang }) => {
-    const renderHighlightedText = () => {
-        const parts = value.split(/(\[.*?\]|\(.*?\))/g);
-        return parts.map((part, index) => {
-            if (part.match(/^(\[.*?\]|\(.*?\))$/)) {
-                return <span key={index} className="text-secondary/80 font-semibold">{part}</span>;
-            }
-            return part;
-        });
-    };
-
-    return (
-        <div className="relative">
-            <label className="block text-sm font-medium text-textSecondary mb-1">{lang} Lyrics</label>
-            <div className="relative">
-                <textarea
-                    value={value}
-                    onChange={(e) => onChange(e.target.value)}
-                    placeholder={placeholder}
-                    className="w-full h-64 p-3 bg-black/20 text-textPrimary rounded-lg border border-white/20 focus:ring-2 focus:ring-secondary focus:border-secondary resize-none font-mono text-sm leading-6"
-                />
-                <div 
-                  aria-hidden="true" 
-                  className="absolute inset-0 w-full h-64 p-3 bg-transparent text-transparent rounded-lg border border-transparent pointer-events-none overflow-auto font-mono text-sm leading-6 whitespace-pre-wrap"
-                >
-                    {renderHighlightedText()}
-                </div>
-            </div>
-        </div>
-    );
-};
+const LyricEditor: React.FC<{ value: string; onChange: (value: string) => void; placeholder: string; lang: string }> = ({ value, onChange, placeholder, lang }) => (
+    <div>
+        <label className="block text-sm font-medium text-textSecondary mb-1">{lang} Lyrics</label>
+        <textarea
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            placeholder={placeholder}
+            className="w-full h-64 p-3 bg-black/20 text-textPrimary rounded-lg border border-white/20 focus:ring-2 focus:ring-secondary focus:border-secondary resize-none font-mono text-sm leading-6"
+        />
+    </div>
+);
 
 
 const App: React.FC = () => {
