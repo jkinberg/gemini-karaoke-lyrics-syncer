@@ -321,7 +321,7 @@ const App: React.FC = () => {
         setKaraokeData(null);
         setVocabularyList(null);
         setValidationReport(null);
-        setAdjustmentTarget(null);
+        setMarkedSegments(new Set());
         setProgress(0);
 
         // Simulate progress
