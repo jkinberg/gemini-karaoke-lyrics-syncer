@@ -17,6 +17,41 @@ import { KaraokeApiResponse, KaraokeData, KaraokeSegment, KaraokeWord, Vocabular
 
 // --- Helper Functions & Components ---
 
+// Audio notification sounds using Web Audio API
+const playNotificationSound = (type: 'success' | 'error') => {
+  try {
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    if (type === 'success') {
+      // Pleasant two-tone chime (C5 -> E5)
+      oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+      oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.15); // E5
+      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+      oscillator.type = 'sine';
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.4);
+    } else {
+      // Low warning tone (A3 -> F3)
+      oscillator.frequency.setValueAtTime(220, audioContext.currentTime); // A3
+      oscillator.frequency.setValueAtTime(174.61, audioContext.currentTime + 0.15); // F3
+      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+      oscillator.type = 'sine';
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.5);
+    }
+  } catch (e) {
+    // Audio not supported or blocked - silently ignore
+    console.log('Audio notification not available:', e);
+  }
+};
+
 const Icon: React.FC<{ path: string; className?: string }> = ({ path, className = 'w-6 h-6' }) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
     <path strokeLinecap="round" strokeLinejoin="round" d={path} />
@@ -281,8 +316,10 @@ const App: React.FC = () => {
             } else {
                 setSpanishLyrics(translated);
             }
+            playNotificationSound('success');
         } catch (err) {
             setError((err as Error).message);
+            playNotificationSound('error');
         } finally {
             setIsTranslating(false);
         }
@@ -338,8 +375,10 @@ const App: React.FC = () => {
             const interpretation = getScoreInterpretation(report.overallScore);
             setStatusMessage(`Karaoke data generated! Quality: ${report.overallScore}/100 (${interpretation.label})`);
             setProgress(100);
+            playNotificationSound('success');
         } catch (err) {
             setError((err as Error).message);
+            playNotificationSound('error');
         } finally {
             clearInterval(interval);
             setIsLoading(false);
@@ -361,9 +400,11 @@ const App: React.FC = () => {
             setVocabularyList(vocab);
             setStatusMessage('Vocabulary extraction complete!');
             setActiveTab('vocab');
+            playNotificationSound('success');
         } catch (err) {
             setError((err as Error).message);
             setStatusMessage('');
+            playNotificationSound('error');
         } finally {
             setIsGeneratingVocab(false);
         }
@@ -1259,10 +1300,12 @@ const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, se
         setRefineStatus('Refinement complete! Both language files have been updated.');
       }
       setRefineProgress(100);
+      playNotificationSound('success');
 
     } catch (err) {
       alert(`Error during refinement: ${(err as Error).message}`);
       setRefineStatus(`Error: ${(err as Error).message}`);
+      playNotificationSound('error');
     } finally {
       setTimeout(() => {
         setIsRefining(false);
