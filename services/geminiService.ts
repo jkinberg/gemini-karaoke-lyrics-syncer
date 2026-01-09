@@ -363,88 +363,104 @@ You MUST return a single, minified JSON object for the ${translatedLangName} ver
 // --- LRC-Based Synchronization ---
 
 /**
- * Build a prompt for LRC-anchored karaoke generation.
- * LRC timestamps serve as anchor points (±500ms flexibility) for segment boundaries.
+ * Build a prompt for LRC-guided karaoke generation.
+ * LRC provides structure (lyrics text, order) while audio analysis determines actual timing.
+ * The prompt instructs Gemini to detect instrumental sections and handle LRC/audio mismatches.
  */
 const buildLrcBasedPrompt = (parsedLrc: ParsedLrc, langName: string): string => {
   // Convert LRC lines to segment input format
   const segments = parsedLrc.lines.map((line, index) => ({
     segmentIndex: index + 1,
-    startTimeMs: line.startTimeMs,
-    endTimeMs: line.endTimeMs,
+    approximateStartMs: line.startTimeMs,
+    approximateEndMs: line.endTimeMs,
     text: line.text,
     wordCount: line.wordCount,
   }));
 
   return `
-You are a precise Audio-to-Lyrics Alignment Specialist. Your task is to add WORD-LEVEL timing to pre-segmented lyrics using an LRC file as the timing foundation.
+You are a precise Audio-to-Lyrics Alignment Specialist. Your task is to synchronize lyrics to audio, using an LRC file as a STRUCTURAL GUIDE while relying on AUDIO ANALYSIS for accurate timing.
 
-**KEY CONCEPT: LRC as Anchor Points**
-You are provided with lyrics that have been pre-segmented with LINE-LEVEL timestamps from an LRC file. These timestamps are APPROXIMATE ANCHORS - they provide the structure but may be slightly off (±500ms).
+**KEY CONCEPT: LRC as Structure, Audio as Truth**
+The LRC file provides:
+- The lyrics TEXT (what words to look for)
+- The general ORDER of lines
+- APPROXIMATE timing (which may be significantly off for this specific audio file)
 
-Your task is to:
-1. Use the LRC timestamps as STRONG GUIDANCE for segment boundaries
-2. Listen to the AUDIO to verify and fine-tune the timing
-3. Add WORD-LEVEL timing within each segment
+The AUDIO provides:
+- The ACTUAL timing of when vocals occur (ground truth)
+- Detection of instrumental sections, intros, outros, and breaks
+- Verification of what's actually sung vs what's in the lyrics
+
+**IMPORTANT:** The LRC timestamps may be significantly misaligned with this audio file (different song versions, different intro lengths, timing drift). You MUST listen to the audio and determine the ACTUAL timing - do NOT blindly follow LRC timestamps.
 
 **Input Data:**
 - Audio File: [Provided in the request]
-- Pre-segmented ${langName} Lyrics (from LRC file):
+- ${langName} Lyrics from LRC (APPROXIMATE timing - verify against audio):
   \`\`\`json
   ${JSON.stringify(segments, null, 2)}
   \`\`\`
 
 **RULES (MUST FOLLOW):**
 
-1. **LRC as Flexible Anchor (±500ms):**
-   - The provided startTimeMs/endTimeMs are APPROXIMATE from the LRC file
-   - You MAY adjust segment boundaries by up to ±500ms if the audio clearly indicates different timing
-   - The AUDIO is the ground truth for fine-tuning
+1. **Audio is Ground Truth:**
+   - LISTEN to the audio to find when each line is ACTUALLY sung
+   - The LRC timestamps are just a rough guide - they may be off by many seconds
+   - If the audio has a long intro before vocals, the first lyric segment should start when vocals actually begin
+   - Trust your audio analysis over the LRC timestamps
 
-2. **Audio is Ground Truth:**
-   - If the singer starts a line slightly earlier or later than the LRC indicates, adjust accordingly
-   - If the LRC text differs slightly from what's actually sung (ad-libs, variations), prioritize what's sung
-   - Listen carefully to word boundaries within each segment
+2. **Detect Non-Vocal Sections:**
+   - **Instrumental Intros:** If the audio has music before vocals begin, add an INSTRUMENTAL segment
+   - **Musical Interludes:** If there are instrumental breaks between vocal sections, add INSTRUMENTAL segments
+   - **Outros:** If the song ends with instrumental music after the last lyrics, add an INSTRUMENTAL segment
+   - **Skits/Spoken Word:** If there are non-singing vocal sections (dialogue, skits, spoken intros), you may mark these as INSTRUMENTAL with descriptive cueText, or include them as LYRIC segments if the text is provided
+   - For all INSTRUMENTAL segments, provide a descriptive cueText in ${langName} (e.g., "Intro musical", "Interludio", "Outro")
 
 3. **Word-Level Timing:**
-   - Distribute word timing based on what you HEAR in the audio
-   - First word should start close to segment.startTimeMs (±500ms)
-   - Last word should end close to segment.endTimeMs (±500ms)
-   - Words should NOT overlap within a segment
+   - For each LYRIC segment, distribute word timing based on what you HEAR
+   - Words should NOT overlap
    - No zero-duration words
+   - Pay attention to fast sections - word timings must be precise
+   - For sustained notes, endTimeMs should reflect the full duration held
 
-4. **Preserve Structure:**
-   - Output EXACTLY ${segments.length} segments (matching the LRC line count)
-   - Maintain the same general order and structure
-   - Each segment needs segmentIndex values 1 through ${segments.length}
+4. **Flexible Structure:**
+   - Start with the ${segments.length} lyrics lines from the LRC
+   - ADD instrumental segments where you detect non-vocal sections in the audio
+   - The final segment count may be MORE than ${segments.length} due to added instrumentals
+   - Each segment needs a sequential segmentIndex starting from 1
 
-5. **Handle Instrumentals:**
-   - If you detect a gap > 5 seconds before the first lyric line, add an INSTRUMENTAL segment for the intro
-   - If you detect gaps > 5 seconds between lyric segments, you may add INSTRUMENTAL segments
-   - For instrumental segments, provide a descriptive cueText in ${langName}
-
-**Critical Precision Guidelines:**
-- **Fast Vocals:** Pay extreme attention to fast-paced sections. Word timings must be very short and precise.
-- **Sustained Notes:** If a singer holds a note, the endTimeMs must reflect the full duration.
-- **Vocal Decay:** The endTimeMs should be when the sound is no longer audible, not when the next word begins.
+5. **Handle LRC/Audio Mismatches:**
+   - If lyrics in LRC don't match what's sung (ad-libs, variations), prioritize what's actually sung
+   - If the LRC is missing sections that are sung, include them
+   - If the LRC has lines that aren't in the audio, omit them
 
 **Output Format:**
 Return a complete KaraokeData JSON object with:
 - metadata: { title, artist, durationMs, language: "${langName === 'Spanish' ? 'es-ES' : 'en-US'}", version: "1.0" }
-- segments: Array of segments with word-level timing
+- segments: Array of segments with word-level timing (may include added INSTRUMENTAL segments)
 
-Each LYRIC segment should have:
+LYRIC segment format:
 \`\`\`json
 {
   "type": "LYRIC",
-  "startTimeMs": <adjusted from LRC if needed>,
-  "endTimeMs": <adjusted from LRC if needed>,
+  "startTimeMs": <actual timing from audio>,
+  "endTimeMs": <actual timing from audio>,
   "text": "<the lyric text>",
-  "segmentIndex": <1-based index>,
+  "segmentIndex": <sequential 1-based index>,
   "words": [
     { "word": "...", "startTimeMs": ..., "endTimeMs": ... },
     ...
   ]
+}
+\`\`\`
+
+INSTRUMENTAL segment format:
+\`\`\`json
+{
+  "type": "INSTRUMENTAL",
+  "startTimeMs": <start of instrumental section>,
+  "endTimeMs": <end of instrumental section>,
+  "cueText": "<description in ${langName}>",
+  "segmentIndex": <sequential 1-based index>
 }
 \`\`\`
 
