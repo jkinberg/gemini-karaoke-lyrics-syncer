@@ -1,5 +1,10 @@
 import { Type } from "@google/genai";
 import { KaraokeApiResponse, KaraokeData, VocabularyItem } from '../types';
+import {
+  validateKaraokeDataPair,
+  extractProblemSegmentIndices,
+  ValidationReport,
+} from './validationService';
 
 // Model tier type - exported for use in App.tsx
 export type GeminiModelTier = 'gemini-2.5' | 'gemini-3-preview';
@@ -12,10 +17,10 @@ const getModelNames = (tier: GeminiModelTier) => {
       flash: 'gemini-3-flash-preview',
     };
   }
-  // Default to stable 2.5 models
+  // Default to stable 2.5 models (no preview suffix for stable versions)
   return {
-    pro: 'gemini-2.5-pro-preview-06-05',
-    flash: 'gemini-2.5-flash-preview-05-20',
+    pro: 'gemini-2.5-pro',
+    flash: 'gemini-2.5-flash',
   };
 };
 
@@ -407,6 +412,7 @@ export const generateKaraokeData = async (
       {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
+        maxOutputTokens: 32768,
       }
     );
 
@@ -450,6 +456,7 @@ export const generateKaraokeData = async (
       {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
+        maxOutputTokens: 32768,
       }
     );
 
@@ -519,6 +526,7 @@ export const refineKaraokeData = async (
       {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
+        maxOutputTokens: 32768,
       }
     );
 
@@ -591,6 +599,7 @@ export const refineTranslatedKaraokeData = async (
       {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
+        maxOutputTokens: 32768,
       }
     );
 
@@ -976,6 +985,7 @@ export const refineMarkedSegments = async (
       {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
+        maxOutputTokens: 32768, // Increased to handle full song JSON output
       }
     );
 
@@ -1026,4 +1036,200 @@ export const refineMarkedSegments = async (
     }
     throw new Error(parseGoogleGenerativeAIError(error));
   }
+};
+
+// --- Auto Validation-Guided Refinement ---
+
+export interface AutoRefineProgress {
+  iteration: number;
+  maxIterations: number;
+  problemSegmentCount: number;
+  currentScore: number;
+  targetScore: number;
+  status: 'refining' | 'validating' | 'complete' | 'error';
+}
+
+export interface AutoRefineResult {
+  karaokeData: KaraokeApiResponse;
+  finalValidation: ValidationReport;
+  iterations: number;
+  improved: boolean;
+}
+
+/**
+ * Automatically refines karaoke data by identifying problem segments from validation
+ * and iteratively refining them until the quality score reaches the target threshold.
+ */
+export const autoRefineProblems = async (
+  audioFile: File,
+  karaokeData: KaraokeApiResponse,
+  languageFlow: string,
+  onStatusUpdate: (message: string) => void,
+  onProgress?: (progress: AutoRefineProgress) => void,
+  options: {
+    targetScore?: number;
+    maxIterations?: number;
+    includeWarnings?: boolean;
+    modelTier?: GeminiModelTier;
+  } = {}
+): Promise<AutoRefineResult> => {
+  const {
+    targetScore = 85,
+    maxIterations = 3,
+    includeWarnings = true,
+    modelTier = 'gemini-2.5',
+  } = options;
+
+  // Determine language names from flow
+  const isSpanishToEnglish = languageFlow === 'spanish-to-english';
+  const primaryLang = isSpanishToEnglish ? 'Spanish' : 'English';
+  const secondaryLang = isSpanishToEnglish ? 'English' : 'Spanish';
+
+  let currentData = karaokeData;
+  let currentValidation = validateKaraokeDataPair(currentData.spanish, currentData.english);
+  const initialScore = currentValidation.overallScore;
+
+  // Check if already at target
+  if (currentValidation.overallScore >= targetScore) {
+    onStatusUpdate(`Quality score is already ${currentValidation.overallScore}. No refinement needed.`);
+    return {
+      karaokeData: currentData,
+      finalValidation: currentValidation,
+      iterations: 0,
+      improved: false,
+    };
+  }
+
+  onStatusUpdate(`Starting auto-refinement. Current score: ${currentValidation.overallScore}, Target: ${targetScore}`);
+
+  for (let iteration = 1; iteration <= maxIterations; iteration++) {
+    // Extract problem segments
+    const problemIndices = extractProblemSegmentIndices(currentValidation, {
+      includeWarnings,
+      language: 'both',
+    });
+
+    const totalProblems = new Set([...problemIndices.spanish, ...problemIndices.english]).size;
+
+    if (totalProblems === 0) {
+      onStatusUpdate(`No more problem segments identified. Score: ${currentValidation.overallScore}`);
+      break;
+    }
+
+    onProgress?.({
+      iteration,
+      maxIterations,
+      problemSegmentCount: totalProblems,
+      currentScore: currentValidation.overallScore,
+      targetScore,
+      status: 'refining',
+    });
+
+    onStatusUpdate(
+      `Iteration ${iteration}/${maxIterations}: Refining ${totalProblems} problem segment(s)...`
+    );
+
+    try {
+      // Refine Spanish (primary) if there are issues
+      if (problemIndices.spanish.length > 0) {
+        onStatusUpdate(
+          `Refining ${problemIndices.spanish.length} ${primaryLang} segment(s)...`
+        );
+        const refinedSpanish = await refineMarkedSegments(
+          audioFile,
+          currentData.spanish,
+          problemIndices.spanish,
+          primaryLang,
+          onStatusUpdate,
+          undefined,
+          modelTier
+        );
+        currentData = { ...currentData, spanish: refinedSpanish };
+      }
+
+      // Refine English (secondary) if there are issues
+      if (problemIndices.english.length > 0) {
+        onStatusUpdate(
+          `Refining ${problemIndices.english.length} ${secondaryLang} segment(s)...`
+        );
+        const refinedEnglish = await refineMarkedSegments(
+          audioFile,
+          currentData.english,
+          problemIndices.english,
+          secondaryLang,
+          onStatusUpdate,
+          currentData.spanish, // Use Spanish as reference for alignment
+          modelTier
+        );
+        currentData = { ...currentData, english: refinedEnglish };
+      }
+
+      // Re-validate
+      onProgress?.({
+        iteration,
+        maxIterations,
+        problemSegmentCount: totalProblems,
+        currentScore: currentValidation.overallScore,
+        targetScore,
+        status: 'validating',
+      });
+
+      onStatusUpdate('Re-validating refined data...');
+      currentValidation = validateKaraokeDataPair(currentData.spanish, currentData.english);
+
+      onStatusUpdate(
+        `Iteration ${iteration} complete. Score: ${currentValidation.overallScore} (was ${initialScore})`
+      );
+
+      // Check if we've reached target
+      if (currentValidation.overallScore >= targetScore) {
+        onStatusUpdate(
+          `Target score reached! Final score: ${currentValidation.overallScore}`
+        );
+        break;
+      }
+
+    } catch (error) {
+      console.error(`Auto-refine iteration ${iteration} failed:`, error);
+      onStatusUpdate(
+        `Refinement iteration ${iteration} failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
+
+      onProgress?.({
+        iteration,
+        maxIterations,
+        problemSegmentCount: totalProblems,
+        currentScore: currentValidation.overallScore,
+        targetScore,
+        status: 'error',
+      });
+
+      // Continue with next iteration instead of failing completely
+      // unless this is the last iteration
+      if (iteration === maxIterations) {
+        throw error;
+      }
+    }
+  }
+
+  onProgress?.({
+    iteration: maxIterations,
+    maxIterations,
+    problemSegmentCount: 0,
+    currentScore: currentValidation.overallScore,
+    targetScore,
+    status: 'complete',
+  });
+
+  const improved = currentValidation.overallScore > initialScore;
+  onStatusUpdate(
+    `Auto-refinement complete. Score: ${initialScore} → ${currentValidation.overallScore} (${improved ? 'improved' : 'no change'})`
+  );
+
+  return {
+    karaokeData: currentData,
+    finalValidation: currentValidation,
+    iterations: maxIterations,
+    improved,
+  };
 };

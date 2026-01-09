@@ -7,7 +7,9 @@ import {
   refineKaraokeData,
   refineTranslatedKaraokeData,
   refineMarkedSegments,
+  autoRefineProblems,
   GeminiModelTier,
+  AutoRefineProgress,
 } from './services/geminiService';
 import {
   validateKaraokeDataPair,
@@ -164,6 +166,10 @@ const App: React.FC = () => {
     const [markedSegments, setMarkedSegments] = useState<Set<number>>(new Set());
     const [playRequest, setPlayRequest] = useState<{ startTimeMs: number, endTimeMs: number } | null>(null);
     const [showValidationPanel, setShowValidationPanel] = useState(false);
+
+    // Auto-refinement state
+    const [isAutoRefining, setIsAutoRefining] = useState(false);
+    const [autoRefineProgress, setAutoRefineProgress] = useState<AutoRefineProgress | null>(null);
 
     // Audio blob URL - managed at App level to persist across tab switches
     const [audioUrl, setAudioUrl] = useState<string | null>(null);
@@ -419,6 +425,44 @@ const App: React.FC = () => {
         setShowValidationPanel(false);
     };
 
+    const handleAutoFix = async () => {
+        if (!audioFile || !karaokeData) return;
+
+        setIsAutoRefining(true);
+        setAutoRefineProgress(null);
+        setError(null);
+
+        try {
+            const result = await autoRefineProblems(
+                audioFile,
+                karaokeData,
+                languageFlow,
+                setStatusMessage,
+                setAutoRefineProgress,
+                {
+                    targetScore: 85,
+                    maxIterations: 3,
+                    includeWarnings: true,
+                    modelTier,
+                }
+            );
+
+            setKaraokeData(result.karaokeData);
+            setValidationReport(result.finalValidation);
+
+            if (result.improved) {
+                playNotificationSound('success');
+            }
+        } catch (err) {
+            console.error('Auto-fix failed:', err);
+            setError(err instanceof Error ? err.message : 'Auto-fix failed');
+            playNotificationSound('error');
+        } finally {
+            setIsAutoRefining(false);
+            setAutoRefineProgress(null);
+        }
+    };
+
     const isGenerateDisabled = isLoading || !audioFile || !spanishLyrics || !englishLyrics;
 
     return (
@@ -469,7 +513,7 @@ const App: React.FC = () => {
                     </div>
                 )}
 
-                {isLoading && <ProgressBar progress={progress} statusMessage={statusMessage} />}
+                {(isLoading || isAutoRefining) && <ProgressBar progress={progress} statusMessage={statusMessage} />}
                 {error && <ErrorMessage message={error} />}
 
                 {karaokeData && !isLoading && (
@@ -491,6 +535,9 @@ const App: React.FC = () => {
                                 report={validationReport}
                                 onClose={() => setShowValidationPanel(false)}
                                 onSeek={handleSeekFromValidation}
+                                onAutoFix={handleAutoFix}
+                                isAutoRefining={isAutoRefining}
+                                autoRefineProgress={autoRefineProgress}
                             />
                         )}
 
@@ -603,9 +650,19 @@ interface ValidationPanelProps {
   report: ValidationReport;
   onClose: () => void;
   onSeek: (timeMs: number) => void;
+  onAutoFix?: () => void;
+  isAutoRefining?: boolean;
+  autoRefineProgress?: AutoRefineProgress | null;
 }
 
-const ValidationPanel: React.FC<ValidationPanelProps> = ({ report, onClose, onSeek }) => {
+const ValidationPanel: React.FC<ValidationPanelProps> = ({
+    report,
+    onClose,
+    onSeek,
+    onAutoFix,
+    isAutoRefining = false,
+    autoRefineProgress,
+}) => {
     const allIssues: (ValidationIssue & { source: string })[] = [
         ...report.spanish.errors.map(i => ({ ...i, source: 'Spanish' })),
         ...report.spanish.warnings.map(i => ({ ...i, source: 'Spanish' })),
@@ -634,6 +691,48 @@ const ValidationPanel: React.FC<ValidationPanelProps> = ({ report, onClose, onSe
                     <Icon path="M6 18L18 6M6 6l12 12" className="w-5 h-5" />
                 </button>
             </div>
+
+            {/* Auto-Fix Button */}
+            {onAutoFix && report.overallScore < 85 && allIssues.length > 0 && (
+                <div className="mb-4">
+                    {isAutoRefining ? (
+                        <div className="bg-secondary/20 border border-secondary/30 rounded-lg p-3">
+                            <div className="flex items-center gap-3">
+                                <div className="animate-spin">
+                                    <Icon path="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" className="w-5 h-5 text-secondary" />
+                                </div>
+                                <div className="flex-1">
+                                    <div className="text-sm font-medium text-textPrimary">
+                                        {autoRefineProgress
+                                            ? `Auto-fixing: Iteration ${autoRefineProgress.iteration}/${autoRefineProgress.maxIterations}`
+                                            : 'Starting auto-fix...'}
+                                    </div>
+                                    {autoRefineProgress && (
+                                        <div className="text-xs text-textSecondary">
+                                            {autoRefineProgress.status === 'refining' && `Refining ${autoRefineProgress.problemSegmentCount} segment(s)...`}
+                                            {autoRefineProgress.status === 'validating' && 'Re-validating...'}
+                                            {autoRefineProgress.status === 'error' && 'Error occurred, retrying...'}
+                                        </div>
+                                    )}
+                                </div>
+                                {autoRefineProgress && (
+                                    <div className="text-sm text-textSecondary">
+                                        Score: {autoRefineProgress.currentScore} → {autoRefineProgress.targetScore}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    ) : (
+                        <button
+                            onClick={onAutoFix}
+                            className="w-full bg-secondary/80 hover:bg-secondary text-white font-medium py-2 px-4 rounded-lg transition flex items-center justify-center gap-2"
+                        >
+                            <Icon path="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" className="w-5 h-5" />
+                            Auto-Fix Issues ({allIssues.length} issues)
+                        </button>
+                    )}
+                </div>
+            )}
 
             {/* Metrics Summary */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4 text-sm">

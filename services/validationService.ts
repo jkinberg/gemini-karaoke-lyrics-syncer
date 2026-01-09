@@ -547,6 +547,75 @@ function calculateQualityScore(
   return Math.max(0, Math.min(100, Math.round(score)));
 }
 
+// --- Utility: Extract Problem Segment Indices ---
+
+/**
+ * Extracts unique segment indices that have validation issues.
+ * Used for automated validation-guided refinement.
+ */
+export function extractProblemSegmentIndices(
+  validation: ValidationReport,
+  options: {
+    includeWarnings?: boolean;
+    language?: 'spanish' | 'english' | 'both';
+  } = {}
+): { spanish: number[]; english: number[] } {
+  const { includeWarnings = true, language = 'both' } = options;
+
+  const spanishIndices = new Set<number>();
+  const englishIndices = new Set<number>();
+
+  // Helper to add indices from issues
+  const addFromIssues = (issues: ValidationIssue[], targetSet: Set<number>) => {
+    for (const issue of issues) {
+      // Skip issues without segment index (like global issues)
+      if (issue.segmentIndex === undefined || issue.segmentIndex < 0) continue;
+
+      // Add errors always
+      if (issue.severity === 'error') {
+        targetSet.add(issue.segmentIndex);
+      }
+      // Add warnings if requested
+      else if (includeWarnings && issue.severity === 'warning') {
+        targetSet.add(issue.segmentIndex);
+      }
+    }
+  };
+
+  // Collect from Spanish validation
+  if (language === 'spanish' || language === 'both') {
+    addFromIssues(validation.spanish.errors, spanishIndices);
+    if (includeWarnings) {
+      addFromIssues(validation.spanish.warnings, spanishIndices);
+    }
+  }
+
+  // Collect from English validation
+  if (language === 'english' || language === 'both') {
+    addFromIssues(validation.english.errors, englishIndices);
+    if (includeWarnings) {
+      addFromIssues(validation.english.warnings, englishIndices);
+    }
+  }
+
+  // Collect from cross-language issues (applies to both)
+  if (language === 'both') {
+    for (const issue of validation.crossLanguage.issues) {
+      if (issue.segmentIndex === undefined || issue.segmentIndex < 0) continue;
+
+      if (issue.severity === 'error' || (includeWarnings && issue.severity === 'warning')) {
+        spanishIndices.add(issue.segmentIndex);
+        englishIndices.add(issue.segmentIndex);
+      }
+    }
+  }
+
+  return {
+    spanish: Array.from(spanishIndices).sort((a, b) => a - b),
+    english: Array.from(englishIndices).sort((a, b) => a - b),
+  };
+}
+
 // --- Utility: Get Score Interpretation ---
 
 export function getScoreInterpretation(score: number): {
