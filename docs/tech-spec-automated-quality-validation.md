@@ -777,6 +777,379 @@ function validateVocabulary(
 
 ---
 
+## Phase 7: Synchronization Quality Improvements
+
+The core challenge is achieving accurate word-level synchronization between lyrics and vocals. Current issues include:
+
+1. **Long API calls** - Full song analysis takes 3-5+ minutes, prone to timeout
+2. **Inconsistent quality** - Same inputs can produce different quality scores each run
+3. **Full-song refinement bottleneck** - Re-analyzing everything is slow and often times out
+4. **Low first-pass accuracy** - Many segments fail validation on initial generation
+
+### Improvement Approaches
+
+#### Option A: Chunked Audio Processing
+
+Split long songs into smaller chunks (60-90 seconds) for parallel processing.
+
+**Implementation:**
+```typescript
+async function processInChunks(
+  audioFile: File,
+  lyrics: string,
+  chunkDurationMs: number = 90000
+): Promise<KaraokeData> {
+  // 1. Get audio duration
+  const duration = await getAudioDuration(audioFile);
+
+  // 2. Split lyrics by estimated timing (or section markers)
+  const chunks = splitLyricsIntoChunks(lyrics, duration, chunkDurationMs);
+
+  // 3. Extract audio segments using Web Audio API
+  const audioChunks = await extractAudioChunks(audioFile, chunks);
+
+  // 4. Process each chunk in parallel (or series to avoid rate limits)
+  const chunkResults = await Promise.all(
+    audioChunks.map((chunk, i) =>
+      generateChunkKaraokeData(chunk.audio, chunk.lyrics, i)
+    )
+  );
+
+  // 5. Merge results, handling overlaps at boundaries
+  return mergeChunkResults(chunkResults);
+}
+```
+
+**Pros:**
+- Faster per-request (30-60s vs 3-5min)
+- Less likely to timeout
+- Can parallelize for speed
+- Smaller context = potentially more accurate
+
+**Cons:**
+- Complex boundary handling (songs don't have clean breaks)
+- Need audio extraction (Web Audio API complexity)
+- More total API calls = higher cost
+- Risk of timing drift between chunks
+
+**Effort:** High
+**Impact:** High (if boundary handling works well)
+
+---
+
+#### Option B: Two-Stage Timing Generation
+
+Separate segment-level timing from word-level timing.
+
+**Stage 1: Segment Structure (Fast)**
+```typescript
+const segmentPrompt = `
+Analyze this audio and identify all vocal sections and instrumental breaks.
+Output ONLY segment-level timing (no word timing yet):
+- Segment start/end times
+- Type: LYRIC or INSTRUMENTAL
+- The text content for each segment
+
+Do NOT output word-level timing in this pass.
+`;
+```
+
+**Stage 2: Word Timing per Segment (Parallel)**
+```typescript
+async function addWordTiming(
+  audioFile: File,
+  segment: KaraokeSegment
+): Promise<KaraokeSegment> {
+  const prompt = `
+    Listen to the audio between ${segment.startTimeMs}ms and ${segment.endTimeMs}ms.
+    The lyrics for this section are: "${segment.text}"
+
+    Output word-level timing for each word in this segment.
+  `;
+  // Process just this segment
+}
+
+// Process all segments in parallel
+const withWordTiming = await Promise.all(
+  segments.map(seg => seg.type === 'LYRIC' ? addWordTiming(audioFile, seg) : seg)
+);
+```
+
+**Pros:**
+- Segment structure locked early (prevents structural drift)
+- Word timing focused on small windows
+- Parallel processing possible
+- Easier to retry individual segments
+
+**Cons:**
+- More API calls (1 + N where N = lyric segment count)
+- May still timeout on very long segments
+- Requires passing audio with time range context
+
+**Effort:** Medium-High
+**Impact:** High
+
+---
+
+#### Option C: Model Strategy (Flash Draft, Pro Polish)
+
+Use faster/cheaper model for initial pass, expensive model only for targeted fixes.
+
+**Implementation:**
+```typescript
+// Stage 1: Fast draft with Flash
+const draftData = await generateKaraokeData(
+  audioFile, lyrics, languageFlow, onStatus,
+  'gemini-flash' // Use Flash for speed
+);
+
+// Stage 2: Validate
+const validation = validateKaraokeData(draftData);
+const problemSegments = extractProblemSegmentIndices(validation);
+
+// Stage 3: Targeted refinement with Pro (only problem areas)
+if (problemSegments.length > 0) {
+  const refinedData = await refineMarkedSegments(
+    audioFile, draftData, problemSegments, langName, onStatus,
+    undefined, 'gemini-pro' // Use Pro for accuracy
+  );
+}
+```
+
+**Pros:**
+- Faster first results
+- Cheaper (Flash is ~10x cheaper than Pro)
+- Pro capacity reserved for difficult sections
+
+**Cons:**
+- Flash quality may be lower baseline
+- Still requires refinement for many segments
+- Two models = more complexity
+
+**Effort:** Low (already have model selection)
+**Impact:** Medium
+
+---
+
+#### Option D: Automated Validation-Guided Refinement
+
+Automatically identify and refine segments that fail validation checks.
+
+**Implementation:**
+```typescript
+function extractProblemSegmentIndices(
+  validation: ValidationReport
+): number[] {
+  const problemIndices = new Set<number>();
+
+  // Collect all segments with issues
+  for (const issue of [...validation.errors, ...validation.warnings]) {
+    if (issue.segmentIndex !== undefined) {
+      problemIndices.add(issue.segmentIndex);
+    }
+  }
+
+  return Array.from(problemIndices).sort((a, b) => a - b);
+}
+
+async function autoRefineProblems(
+  audioFile: File,
+  karaokeData: KaraokeApiResponse,
+  validation: ValidationReport,
+  maxIterations: number = 3
+): Promise<KaraokeApiResponse> {
+  let currentData = karaokeData;
+  let currentValidation = validation;
+
+  for (let i = 0; i < maxIterations; i++) {
+    const problemIndices = extractProblemSegmentIndices(currentValidation);
+
+    if (problemIndices.length === 0) {
+      break; // All issues resolved
+    }
+
+    // Refine problem segments
+    currentData = await refineMarkedSegments(
+      audioFile, currentData, problemIndices, ...
+    );
+
+    // Re-validate
+    currentValidation = validateKaraokeDataPair(
+      currentData.spanish, currentData.english
+    );
+
+    // Check if score improved
+    if (currentValidation.overallScore >= 90) {
+      break; // Good enough
+    }
+  }
+
+  return currentData;
+}
+```
+
+**UI Addition:**
+- "Auto-Fix Issues" button appears when validation score < threshold
+- Shows progress: "Fixing 12 problem segments... (iteration 1/3)"
+- Displays before/after quality scores
+
+**Pros:**
+- Leverages existing validation + refinement code
+- No manual segment marking required
+- Iterative improvement until quality threshold met
+- Can limit iterations to control cost/time
+
+**Cons:**
+- Still processes full audio per refinement call
+- May timeout if many segments need fixing
+- Validation may not catch all sync issues
+
+**Effort:** Low-Medium
+**Impact:** Medium-High
+
+---
+
+#### Option E: Audio-First Transcription
+
+Let AI transcribe what it hears first, then align provided lyrics.
+
+**Stage 1: Transcribe with Timestamps**
+```typescript
+const transcriptionPrompt = `
+Listen to this audio file and transcribe ALL sung vocals with precise timestamps.
+Do not reference any provided lyrics - transcribe only what you hear.
+
+Output format:
+{
+  "transcription": [
+    { "text": "heard word", "startTimeMs": 1000, "endTimeMs": 1200 },
+    ...
+  ]
+}
+`;
+```
+
+**Stage 2: Align Provided Lyrics to Transcription**
+```typescript
+const alignmentPrompt = `
+You have:
+1. A transcription of what was sung (with timestamps)
+2. The official lyrics
+
+Match the official lyrics to the transcription timestamps.
+Handle cases where:
+- Singer adds ad-libs not in lyrics
+- Singer skips or changes words
+- Pronunciation differs from spelling
+`;
+```
+
+**Pros:**
+- Timing based on actual audio, not forced text alignment
+- Better handling of ad-libs and variations
+- Two smaller, focused tasks vs one complex task
+
+**Cons:**
+- Transcription may have errors
+- Alignment is a second complex task
+- May not match provided lyrics exactly
+- Higher total API usage
+
+**Effort:** High
+**Impact:** Potentially Very High (if alignment works well)
+
+---
+
+#### Option F: Progressive Refinement with Smaller Context
+
+Instead of sending full song context for refinement, send only the problem segment + minimal context.
+
+**Current approach:**
+- Sends full song JSON + audio for refinement
+- AI must process everything to fix one segment
+
+**Proposed approach:**
+```typescript
+async function refineSegmentMinimal(
+  audioFile: File,
+  segment: KaraokeSegment,
+  prevSegment: KaraokeSegment | null,
+  nextSegment: KaraokeSegment | null
+): Promise<KaraokeSegment> {
+  // Extract just the relevant audio portion
+  const audioSlice = await extractAudioRange(
+    audioFile,
+    (prevSegment?.startTimeMs ?? segment.startTimeMs) - 2000,
+    (nextSegment?.endTimeMs ?? segment.endTimeMs) + 2000
+  );
+
+  const prompt = `
+    Focus on this segment: "${segment.text}"
+    Expected timing: ${segment.startTimeMs} - ${segment.endTimeMs}
+
+    Previous segment ends at: ${prevSegment?.endTimeMs ?? 'N/A'}
+    Next segment starts at: ${nextSegment?.startTimeMs ?? 'N/A'}
+
+    Re-analyze word timing for this segment only.
+  `;
+
+  // Much smaller request = faster, less likely to timeout
+}
+```
+
+**Pros:**
+- Much faster per-segment (seconds vs minutes)
+- Less likely to timeout
+- Can parallelize segment refinement
+- Focused context = potentially more accurate
+
+**Cons:**
+- Requires audio slicing (Web Audio API complexity)
+- Many API calls for many problem segments
+- Need to maintain segment boundary consistency
+
+**Effort:** Medium-High
+**Impact:** High
+
+---
+
+### Impact vs Effort Matrix
+
+```
+                    Low Effort    Medium Effort    High Effort
+                    ──────────────────────────────────────────
+High Impact    │      D              B              A, E
+               │   (Auto-fix)    (Two-stage)    (Chunked, Transcribe)
+               │
+Medium Impact  │      C              F
+               │   (Flash/Pro)   (Minimal context)
+               │
+Low Impact     │
+               │
+```
+
+### Recommended Implementation Order
+
+| Priority | Option | Rationale |
+|----------|--------|-----------|
+| **P0** | D: Auto Validation-Guided Refinement | Low effort, uses existing code, immediate value |
+| **P1** | C: Flash Draft + Pro Polish | Low effort, reduces cost and time for first pass |
+| **P2** | B: Two-Stage Timing | Medium effort, fundamentally better architecture |
+| **P3** | F: Minimal Context Refinement | Requires audio slicing but significant speed gain |
+| **P4** | A: Chunked Processing | High effort but solves timeout issues for long songs |
+| **P5** | E: Audio-First Transcription | Experimental, high effort, but could be breakthrough |
+
+### Success Metrics
+
+| Metric | Current | Target |
+|--------|---------|--------|
+| First-pass quality score | 60-75 | 80+ |
+| Refinement timeout rate | ~30% | <5% |
+| Time to usable output | 8-12 min | <5 min |
+| Segments needing manual fix | 20-40% | <10% |
+
+---
+
 ## Related Documents
 
 - `docs/tech-spec-security-and-deployment.md` - Deployment automation
