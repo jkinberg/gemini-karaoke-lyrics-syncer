@@ -1,9 +1,22 @@
 # Technical Spec: Automated Quality Validation for Karaoke Data
 
-**Status:** Draft
+**Status:** Partially Implemented
 **Created:** 2025-12-26
+**Updated:** 2026-01-08
 **Priority:** Medium
 **Dependencies:** None (can be implemented independently)
+
+### Implementation Status
+
+| Phase | Status | Notes |
+|-------|--------|-------|
+| Phase 1: Core Validation | ✅ Implemented | `validationService.ts` |
+| Phase 2: UI Integration | ✅ Implemented | ValidationBadge, ValidationPanel in App.tsx |
+| Phase 3: Auto-Reprocessing | ✅ Implemented | Via Phase 7 Option D |
+| Phase 4: Cross-Language | ✅ Implemented | `validateCrossLanguage()` |
+| Phase 5: Translation Alignment | 📋 Planned | Options documented |
+| Phase 6: Vocabulary Consistency | 📋 Planned | Options documented |
+| Phase 7 Option D: Auto-Fix | ✅ Implemented | `autoRefineProblems()` in geminiService.ts |
 
 ---
 
@@ -1130,14 +1143,14 @@ Low Impact     │
 
 ### Recommended Implementation Order
 
-| Priority | Option | Rationale |
-|----------|--------|-----------|
-| **P0** | D: Auto Validation-Guided Refinement | Low effort, uses existing code, immediate value |
-| **P1** | C: Flash Draft + Pro Polish | Low effort, reduces cost and time for first pass |
-| **P2** | B: Two-Stage Timing | Medium effort, fundamentally better architecture |
-| **P3** | F: Minimal Context Refinement | Requires audio slicing but significant speed gain |
-| **P4** | A: Chunked Processing | High effort but solves timeout issues for long songs |
-| **P5** | E: Audio-First Transcription | Experimental, high effort, but could be breakthrough |
+| Priority | Option | Status | Rationale |
+|----------|--------|--------|-----------|
+| **P0** | D: Auto Validation-Guided Refinement | ✅ **Implemented** | Low effort, uses existing code, immediate value |
+| **P1** | C: Flash Draft + Pro Polish | 📋 Planned | Low effort, reduces cost and time for first pass |
+| **P2** | B: Two-Stage Timing | 📋 Planned | Medium effort, fundamentally better architecture |
+| **P3** | F: Minimal Context Refinement | 📋 Planned | Requires audio slicing but significant speed gain |
+| **P4** | A: Chunked Processing | 📋 Planned | High effort but solves timeout issues for long songs |
+| **P5** | E: Audio-First Transcription | 📋 Planned | Experimental, high effort, but could be breakthrough |
 
 ### Success Metrics
 

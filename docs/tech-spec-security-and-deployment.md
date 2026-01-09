@@ -2,7 +2,7 @@
 
 **Status:** Implemented (Server-Side Proxy)
 **Created:** 2025-12-26
-**Updated:** 2026-01-06
+**Updated:** 2026-01-08
 **Target Environment:** Google Cloud Run (us-west1)
 **Live URL:** https://karaoke-syncer-362554121203.us-west1.run.app/
 
