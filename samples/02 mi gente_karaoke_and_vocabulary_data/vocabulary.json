@@ -1,528 +1,116 @@
 [
   {
     "term": {
-      "spanish": "llevar",
-      "english": "to carry/take/lead"
+      "spanish": "como es",
+      "english": "the right way"
     },
-    "definition": "To transport, lead, or take something or someone. In this context, to lead to a certain action.",
-    "difficulty": 3,
-    "example": {
-      "spanish": [
-        {
-          "text": "Si el ritmo te ",
-          "highlight": false
-        },
-        {
-          "text": "lleva",
-          "highlight": true
-        },
-        {
-          "text": " a mover la cabeza",
-          "highlight": false
-        }
-      ],
-      "english": [
-        {
-          "text": "If the rhythm ",
-          "highlight": false
-        },
-        {
-          "text": "makes",
-          "highlight": true
-        },
-        {
-          "text": " your head move",
-          "highlight": false
-        }
-      ]
-    }
-  },
-  {
-    "term": {
-      "spanish": "empezar",
-      "english": "to start/begin"
-    },
-    "definition": "To commence or initiate an action or process.",
-    "difficulty": 1,
-    "example": {
-      "spanish": [
-        {
-          "text": "Ya ",
-          "highlight": false
-        },
-        {
-          "text": "empezamos",
-          "highlight": true
-        },
-        {
-          "text": " como es",
-          "highlight": false
-        }
-      ],
-      "english": [
-        {
-          "text": "We've already ",
-          "highlight": false
-        },
-        {
-          "text": "started",
-          "highlight": true
-        },
-        {
-          "text": " as it should",
-          "highlight": false
-        }
-      ]
-    }
-  },
-  {
-    "term": {
-      "spanish": "discriminar",
-      "english": "to discriminate"
-    },
-    "definition": "To make an unjust or prejudicial distinction in the treatment of different categories of people or things.",
+    "definition": "A colloquial expression meaning 'the way it should be' or 'properly.' In this context, it signals that the artist is starting the track with the correct vibe and energy immediately, adhering to the high standards of the genre.",
     "difficulty": 4,
     "example": {
-      "spanish": [
-        {
-          "text": "Mi música no ",
-          "highlight": false
-        },
-        {
-          "text": "discrimina",
-          "highlight": true
-        },
-        {
-          "text": " a nadie",
-          "highlight": false
-        }
-      ],
-      "english": [
-        {
-          "text": "My music doesn't ",
-          "highlight": false
-        },
-        {
-          "text": "discriminate",
-          "highlight": true
-        },
-        {
-          "text": " against anyone",
-          "highlight": false
-        }
-      ]
-    }
+      "spanish": "Ya empezamo' como es",
+      "english": "We’ve already started the right way"
+    },
+    "highlight": {
+      "spanish": "como es",
+      "english": "the right way"
+    },
+    "startTimeMs": 12180,
+    "endTimeMs": 14320,
+    "segmentIndex": 3
   },
   {
     "term": {
       "spanish": "romper",
-      "english": "to break"
+      "english": "tear it up"
     },
-    "definition": "To separate into pieces violently or suddenly. Also used idiomatically for 'breaking it down' (dancing).",
-    "difficulty": 2,
+    "definition": "While literally meaning 'to break,' in urban music slang, it means to perform with incredible energy, to 'kill it,' or to make a party explode. It is one of the most common terms in reggaeton to describe a successful song or performance.",
+    "difficulty": 5,
     "example": {
-      "spanish": [
-        {
-          "text": "Así que vamos a ",
-          "highlight": false
-        },
-        {
-          "text": "romper",
-          "highlight": true
-        }
-      ],
-      "english": [
-        {
-          "text": "So let's ",
-          "highlight": false
-        },
-        {
-          "text": "break it down",
-          "highlight": true
-        }
-      ]
-    }
+      "spanish": "Así que vamo' a romper",
+      "english": "So let’s tear it up"
+    },
+    "highlight": {
+      "spanish": "romper",
+      "english": "tear it up"
+    },
+    "startTimeMs": 16640,
+    "endTimeMs": 18230,
+    "segmentIndex": 5
   },
   {
     "term": {
       "spanish": "gente",
       "english": "people"
     },
-    "definition": "Human beings in general or considered collectively.",
-    "difficulty": 1,
-    "example": {
-      "spanish": [
-        {
-          "text": "Toda mi ",
-          "highlight": false
-        },
-        {
-          "text": "gente",
-          "highlight": true
-        },
-        {
-          "text": " se mueve",
-          "highlight": false
-        }
-      ],
-      "english": [
-        {
-          "text": "All my ",
-          "highlight": false
-        },
-        {
-          "text": "people",
-          "highlight": true
-        },
-        {
-          "text": " are moving",
-          "highlight": false
-        }
-      ]
-    }
-  },
-  {
-    "term": {
-      "spanish": "mover",
-      "english": "to move"
-    },
-    "definition": "To change the position of something or oneself.",
-    "difficulty": 1,
-    "example": {
-      "spanish": [
-        {
-          "text": "Toda mi gente se ",
-          "highlight": false
-        },
-        {
-          "text": "mueve",
-          "highlight": true
-        }
-      ],
-      "english": [
-        {
-          "text": "All my people are ",
-          "highlight": false
-        },
-        {
-          "text": "moving",
-          "highlight": true
-        }
-      ]
-    }
-  },
-  {
-    "term": {
-      "spanish": "entretener",
-      "english": "to entertain"
-    },
-    "definition": "To provide (someone) with amusement or enjoyment.",
+    "definition": "In the title and lyrics, 'gente' (people) carries a heavy cultural weight of community and solidarity. It refers to the Latin diaspora and fans as a collective family, making it more personal than the generic English word 'people.'",
     "difficulty": 3,
     "example": {
-      "spanish": [
-        {
-          "text": "Hago música que ",
-          "highlight": false
-        },
-        {
-          "text": "entretiene",
-          "highlight": true
-        }
-      ],
-      "english": [
-        {
-          "text": "I make music that ",
-          "highlight": false
-        },
-        {
-          "text": "entertains",
-          "highlight": true
-        }
-      ]
-    }
+      "spanish": "Toda mi gente se mueve (rra)",
+      "english": "All my people are moving (rra)"
+    },
+    "highlight": {
+      "spanish": "gente",
+      "english": "people"
+    },
+    "startTimeMs": 18230,
+    "endTimeMs": 20110,
+    "segmentIndex": 6
   },
   {
     "term": {
-      "spanish": "querer",
-      "english": "to want/to love"
+      "spanish": "se fue mundial",
+      "english": "went global"
     },
-    "definition": "To desire or wish for something, or to feel love or affection for someone.",
-    "difficulty": 1,
-    "example": {
-      "spanish": [
-        {
-          "text": "El mundo nos ",
-          "highlight": false
-        },
-        {
-          "text": "quiere",
-          "highlight": true
-        },
-        {
-          "text": ", nos ",
-          "highlight": false
-        },
-        {
-          "text": "quiere",
-          "highlight": true
-        }
-      ],
-      "english": [
-        {
-          "text": "The world ",
-          "highlight": false
-        },
-        {
-          "text": "wants",
-          "highlight": true
-        },
-        {
-          "text": " us, ",
-          "highlight": false
-        },
-        {
-          "text": "wants",
-          "highlight": true
-        },
-        {
-          "text": " us",
-          "highlight": false
-        }
-      ]
-    }
-  },
-  {
-    "term": {
-      "spanish": "discoteca",
-      "english": "club/discotheque"
-    },
-    "definition": "A public establishment for dancing, especially to recorded popular music.",
-    "difficulty": 2,
-    "example": {
-      "spanish": [
-        {
-          "text": "Tamo' rompiendo la ",
-          "highlight": false
-        },
-        {
-          "text": "discoteca",
-          "highlight": true
-        }
-      ],
-      "english": [
-        {
-          "text": "We're tearing up the ",
-          "highlight": false
-        },
-        {
-          "text": "club",
-          "highlight": true
-        }
-      ]
-    }
-  },
-  {
-    "term": {
-      "spanish": "apenas",
-      "english": "hardly/scarcely/just"
-    },
-    "definition": "Only just, almost not; indicates something is new or has just started.",
+    "definition": "This phrase is used to describe something that has reached massive, international success or has gone viral. It implies that the song or movement has transcended local borders to become a worldwide phenomenon.",
     "difficulty": 4,
     "example": {
-      "spanish": [
-        {
-          "text": "La fiesta no para, ",
-          "highlight": false
-        },
-        {
-          "text": "apenas",
-          "highlight": true
-        },
-        {
-          "text": " comienza",
-          "highlight": false
-        }
-      ],
-      "english": [
-        {
-          "text": "The party doesn't stop, it's ",
-          "highlight": false
-        },
-        {
-          "text": "just",
-          "highlight": true
-        },
-        {
-          "text": " beginning",
-          "highlight": false
-        }
-      ]
-    }
+      "spanish": "Y eso se fue mundial (¡freeze!)",
+      "english": "And that went global (freeze!)"
+    },
+    "highlight": {
+      "spanish": "se fue mundial",
+      "english": "went global"
+    },
+    "startTimeMs": 75690,
+    "endTimeMs": 78080,
+    "segmentIndex": 23
   },
   {
     "term": {
-      "spanish": "comenzar",
-      "english": "to begin/start"
+      "spanish": "palo",
+      "english": "hit"
     },
-    "definition": "To perform or undergo the first part of an action or activity. Synonym of 'empezar'.",
-    "difficulty": 1,
+    "definition": "Slang used in the Latin music industry to refer to a hit song or a 'banger.' Literally meaning 'stick' or 'wood,' calling a track 'otro palo' means it is another guaranteed chart-topper that will be played everywhere.",
+    "difficulty": 7,
     "example": {
-      "spanish": [
-        {
-          "text": "La fiesta no para, apenas ",
-          "highlight": false
-        },
-        {
-          "text": "comienza",
-          "highlight": true
-        }
-      ],
-      "english": [
-        {
-          "text": "The party doesn't stop, it's just ",
-          "highlight": false
-        },
-        {
-          "text": "beginning",
-          "highlight": true
-        }
-      ]
-    }
+      "spanish": "Es otro palo y, ¡blam!",
+      "english": "It's another hit and, blam!"
+    },
+    "highlight": {
+      "spanish": "palo",
+      "english": "hit"
+    },
+    "startTimeMs": 80370,
+    "endTimeMs": 81930,
+    "segmentIndex": 25
   },
   {
     "term": {
-      "spanish": "mentir",
-      "english": "to lie"
+      "spanish": "duro",
+      "english": "killing it"
     },
-    "definition": "To speak untruthfully with intent to deceive or mislead.",
-    "difficulty": 3,
+    "definition": "Literally 'hard' or 'tough,' but used as slang to describe someone who is extremely talented, dominant, or at the peak of their career. Being 'duro' is a sign of respect for one's skills and status in the street or the music industry.",
+    "difficulty": 6,
     "example": {
-      "spanish": [
-        {
-          "text": "Los DJs no ",
-          "highlight": false
-        },
-        {
-          "text": "mienten",
-          "highlight": true
-        },
-        {
-          "text": ", le gusta a mi gente",
-          "highlight": false
-        }
-      ],
-      "english": [
-        {
-          "text": "The DJs don't ",
-          "highlight": false
-        },
-        {
-          "text": "lie",
-          "highlight": true
-        },
-        {
-          "text": ", my people like it",
-          "highlight": false
-        }
-      ]
-    }
-  },
-  {
-    "term": {
-      "spanish": "mundial",
-      "english": "worldwide/global"
+      "spanish": "Estoy muy duro, sí, okay, ahí vamos",
+      "english": "I'm killing it, yeah, okay, here we go"
     },
-    "definition": "Affecting or known about by the whole world.",
-    "difficulty": 2,
-    "example": {
-      "spanish": [
-        {
-          "text": "Y eso se fue ",
-          "highlight": false
-        },
-        {
-          "text": "mundial",
-          "highlight": true
-        },
-        {
-          "text": " (Freeze)",
-          "highlight": false
-        }
-      ],
-      "english": [
-        {
-          "text": "And that went ",
-          "highlight": false
-        },
-        {
-          "text": "worldwide",
-          "highlight": true
-        },
-        {
-          "text": " (Freeze)",
-          "highlight": false
-        }
-      ]
-    }
-  },
-  {
-    "term": {
-      "spanish": "elevar",
-      "english": "to raise/to elevate"
+    "highlight": {
+      "spanish": "duro",
+      "english": "killing it"
     },
-    "definition": "To lift or make higher. Figuratively, to improve or advance.",
-    "difficulty": 4,
-    "example": {
-      "spanish": [
-        {
-          "text": "Y con el tiempo nos seguimos ",
-          "highlight": false
-        },
-        {
-          "text": "elevando",
-          "highlight": true
-        }
-      ],
-      "english": [
-        {
-          "text": "And with time we keep ",
-          "highlight": false
-        },
-        {
-          "text": "rising",
-          "highlight": true
-        }
-      ]
-    }
-  },
-  {
-    "term": {
-      "spanish": "fin",
-      "english": "end"
-    },
-    "definition": "The final part of something, typically a period, activity, or story.",
-    "difficulty": 1,
-    "example": {
-      "spanish": [
-        {
-          "text": "Esta fiesta no tiene ",
-          "highlight": false
-        },
-        {
-          "text": "fin",
-          "highlight": true
-        }
-      ],
-      "english": [
-        {
-          "text": "This party has no ",
-          "highlight": false
-        },
-        {
-          "text": "end",
-          "highlight": true
-        }
-      ]
-    }
+    "startTimeMs": 114670,
+    "endTimeMs": 116810,
+    "segmentIndex": 34
   }
 ]

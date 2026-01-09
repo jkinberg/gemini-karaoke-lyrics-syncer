@@ -2,973 +2,1016 @@
   "metadata": {
     "title": "Mi Gente",
     "artist": "J Balvin, Willy William",
-    "durationMs": 189000,
+    "durationMs": 185000,
     "language": "en-US",
-    "version": "Original"
+    "version": "1.0"
   },
   "segments": [
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 0,
-      "endTimeMs": 9100,
-      "segmentIndex": 0,
-      "cueText": "Intro"
+      "type": "LYRIC",
+      "startTimeMs": 4810,
+      "endTimeMs": 5300,
+      "segmentIndex": 1,
+      "text": "¡Wuh!",
+      "words": [
+        {
+          "word": "¡Wuh!",
+          "startTimeMs": 4810,
+          "endTimeMs": 5300
+        }
+      ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 9100,
-      "endTimeMs": 13400,
-      "segmentIndex": 1,
-      "text": "If the rhythm leads you to move your head Now we’re already starting off right",
+      "startTimeMs": 9690,
+      "endTimeMs": 12180,
+      "segmentIndex": 2,
+      "text": "If the rhythm moves you to bob your head",
       "words": [
         {
           "word": "If",
-          "startTimeMs": 9140,
-          "endTimeMs": 9300
+          "startTimeMs": 9690,
+          "endTimeMs": 9900
         },
         {
           "word": "the",
-          "startTimeMs": 9300,
-          "endTimeMs": 9450
+          "startTimeMs": 9900,
+          "endTimeMs": 10100
         },
         {
           "word": "rhythm",
-          "startTimeMs": 9450,
-          "endTimeMs": 9750
-        },
-        {
-          "word": "leads",
-          "startTimeMs": 9750,
-          "endTimeMs": 9950
-        },
-        {
-          "word": "you",
-          "startTimeMs": 9950,
-          "endTimeMs": 10150
-        },
-        {
-          "word": "to",
-          "startTimeMs": 10150,
-          "endTimeMs": 10250
-        },
-        {
-          "word": "move",
-          "startTimeMs": 10250,
+          "startTimeMs": 10100,
           "endTimeMs": 10500
         },
         {
-          "word": "your",
+          "word": "moves",
           "startTimeMs": 10500,
-          "endTimeMs": 10700
+          "endTimeMs": 10800
         },
         {
-          "word": "head",
-          "startTimeMs": 10700,
+          "word": "you",
+          "startTimeMs": 10800,
+          "endTimeMs": 11000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 11000,
           "endTimeMs": 11200
         },
         {
-          "word": "Now",
+          "word": "bob",
+          "startTimeMs": 11200,
+          "endTimeMs": 11500
+        },
+        {
+          "word": "your",
           "startTimeMs": 11500,
           "endTimeMs": 11700
         },
         {
-          "word": "we’re",
+          "word": "head",
           "startTimeMs": 11700,
-          "endTimeMs": 11900
-        },
-        {
-          "word": "already",
-          "startTimeMs": 11900,
-          "endTimeMs": 12300
-        },
-        {
-          "word": "starting",
-          "startTimeMs": 12300,
-          "endTimeMs": 12700
-        },
-        {
-          "word": "off",
-          "startTimeMs": 12700,
-          "endTimeMs": 12900
-        },
-        {
-          "word": "right",
-          "startTimeMs": 12900,
-          "endTimeMs": 13400
+          "endTimeMs": 12180
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 13400,
-      "endTimeMs": 17900,
-      "segmentIndex": 2,
-      "text": "My music doesn’t discriminate against anyone So we’re going to break it down",
+      "startTimeMs": 12180,
+      "endTimeMs": 14320,
+      "segmentIndex": 3,
+      "text": "We’ve already started the right way",
       "words": [
         {
-          "word": "My",
+          "word": "We’ve",
+          "startTimeMs": 12180,
+          "endTimeMs": 12500
+        },
+        {
+          "word": "already",
+          "startTimeMs": 12500,
+          "endTimeMs": 13000
+        },
+        {
+          "word": "started",
+          "startTimeMs": 13000,
+          "endTimeMs": 13500
+        },
+        {
+          "word": "the",
           "startTimeMs": 13500,
           "endTimeMs": 13700
         },
         {
-          "word": "music",
+          "word": "right",
           "startTimeMs": 13700,
-          "endTimeMs": 14100
+          "endTimeMs": 14000
         },
         {
-          "word": "doesn’t",
-          "startTimeMs": 14100,
-          "endTimeMs": 14400
+          "word": "way",
+          "startTimeMs": 14000,
+          "endTimeMs": 14320
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 14320,
+      "endTimeMs": 16640,
+      "segmentIndex": 4,
+      "text": "My music doesn't discriminate against anyone",
+      "words": [
+        {
+          "word": "My",
+          "startTimeMs": 14320,
+          "endTimeMs": 14500
         },
         {
-          "word": "discriminate",
-          "startTimeMs": 14400,
-          "endTimeMs": 15000
+          "word": "music",
+          "startTimeMs": 14500,
+          "endTimeMs": 14900
         },
         {
-          "word": "against",
-          "startTimeMs": 15000,
+          "word": "doesn't",
+          "startTimeMs": 14900,
           "endTimeMs": 15300
         },
         {
-          "word": "anyone",
+          "word": "discriminate",
           "startTimeMs": 15300,
-          "endTimeMs": 15800
+          "endTimeMs": 15900
         },
         {
-          "word": "So",
-          "startTimeMs": 16000,
+          "word": "against",
+          "startTimeMs": 15900,
           "endTimeMs": 16200
         },
         {
-          "word": "we’re",
+          "word": "anyone",
           "startTimeMs": 16200,
-          "endTimeMs": 16400
-        },
+          "endTimeMs": 16640
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 16640,
+      "endTimeMs": 18230,
+      "segmentIndex": 5,
+      "text": "So let’s tear it up",
+      "words": [
         {
-          "word": "going",
-          "startTimeMs": 16400,
-          "endTimeMs": 16700
-        },
-        {
-          "word": "to",
-          "startTimeMs": 16700,
+          "word": "So",
+          "startTimeMs": 16640,
           "endTimeMs": 16900
         },
         {
-          "word": "break",
+          "word": "let’s",
           "startTimeMs": 16900,
           "endTimeMs": 17200
         },
         {
-          "word": "it",
+          "word": "tear",
           "startTimeMs": 17200,
-          "endTimeMs": 17400
+          "endTimeMs": 17600
         },
         {
-          "word": "down",
-          "startTimeMs": 17400,
-          "endTimeMs": 17900
+          "word": "it",
+          "startTimeMs": 17600,
+          "endTimeMs": 17800
+        },
+        {
+          "word": "up",
+          "startTimeMs": 17800,
+          "endTimeMs": 18230
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 17900,
-      "endTimeMs": 19800,
-      "segmentIndex": 3,
-      "text": "All my people are moving",
+      "startTimeMs": 18230,
+      "endTimeMs": 20110,
+      "segmentIndex": 6,
+      "text": "All my people are moving (rra)",
       "words": [
         {
           "word": "All",
-          "startTimeMs": 17950,
-          "endTimeMs": 18200
+          "startTimeMs": 18230,
+          "endTimeMs": 18500
         },
         {
           "word": "my",
-          "startTimeMs": 18200,
-          "endTimeMs": 18400
+          "startTimeMs": 18500,
+          "endTimeMs": 18700
         },
         {
           "word": "people",
-          "startTimeMs": 18400,
-          "endTimeMs": 18900
-        },
-        {
-          "word": "are",
-          "startTimeMs": 18900,
+          "startTimeMs": 18700,
           "endTimeMs": 19200
         },
         {
-          "word": "moving",
+          "word": "are",
           "startTimeMs": 19200,
+          "endTimeMs": 19400
+        },
+        {
+          "word": "moving",
+          "startTimeMs": 19400,
           "endTimeMs": 19800
+        },
+        {
+          "word": "(rra)",
+          "startTimeMs": 19800,
+          "endTimeMs": 20110
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 19800,
-      "endTimeMs": 22000,
-      "segmentIndex": 4,
+      "startTimeMs": 20110,
+      "endTimeMs": 22090,
+      "segmentIndex": 7,
       "text": "Look at how the rhythm has them",
       "words": [
         {
           "word": "Look",
-          "startTimeMs": 19850,
-          "endTimeMs": 20100
+          "startTimeMs": 20110,
+          "endTimeMs": 20400
         },
         {
           "word": "at",
-          "startTimeMs": 20100,
-          "endTimeMs": 20300
-        },
-        {
-          "word": "how",
-          "startTimeMs": 20300,
+          "startTimeMs": 20400,
           "endTimeMs": 20600
         },
         {
-          "word": "the",
+          "word": "how",
           "startTimeMs": 20600,
           "endTimeMs": 20800
         },
         {
-          "word": "rhythm",
+          "word": "the",
           "startTimeMs": 20800,
-          "endTimeMs": 21300
+          "endTimeMs": 21000
+        },
+        {
+          "word": "rhythm",
+          "startTimeMs": 21000,
+          "endTimeMs": 21500
         },
         {
           "word": "has",
-          "startTimeMs": 21300,
-          "endTimeMs": 21600
+          "startTimeMs": 21500,
+          "endTimeMs": 21700
         },
         {
           "word": "them",
-          "startTimeMs": 21600,
-          "endTimeMs": 22000
+          "startTimeMs": 21700,
+          "endTimeMs": 22090
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 22000,
-      "endTimeMs": 24000,
-      "segmentIndex": 5,
+      "startTimeMs": 22090,
+      "endTimeMs": 24310,
+      "segmentIndex": 8,
       "text": "I make music that entertains",
       "words": [
         {
           "word": "I",
-          "startTimeMs": 22100,
-          "endTimeMs": 22300
+          "startTimeMs": 22090,
+          "endTimeMs": 22200
         },
         {
           "word": "make",
-          "startTimeMs": 22300,
-          "endTimeMs": 22600
+          "startTimeMs": 22200,
+          "endTimeMs": 22500
         },
         {
           "word": "music",
-          "startTimeMs": 22600,
-          "endTimeMs": 23100
+          "startTimeMs": 22500,
+          "endTimeMs": 23000
         },
         {
           "word": "that",
-          "startTimeMs": 23100,
+          "startTimeMs": 23000,
           "endTimeMs": 23400
         },
         {
           "word": "entertains",
           "startTimeMs": 23400,
-          "endTimeMs": 24000
+          "endTimeMs": 24310
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 24000,
-      "endTimeMs": 27500,
-      "segmentIndex": 6,
-      "text": "The world loves us, loves us, it loves me",
+      "startTimeMs": 24310,
+      "endTimeMs": 26740,
+      "segmentIndex": 9,
+      "text": "The world loves us, loves us, loves me",
       "words": [
         {
           "word": "The",
-          "startTimeMs": 24100,
-          "endTimeMs": 24300
+          "startTimeMs": 24310,
+          "endTimeMs": 24500
         },
         {
           "word": "world",
-          "startTimeMs": 24300,
-          "endTimeMs": 24800
+          "startTimeMs": 24500,
+          "endTimeMs": 24900
         },
         {
           "word": "loves",
-          "startTimeMs": 24800,
-          "endTimeMs": 25100
+          "startTimeMs": 24900,
+          "endTimeMs": 25200
         },
         {
           "word": "us,",
-          "startTimeMs": 25100,
+          "startTimeMs": 25200,
           "endTimeMs": 25500
         },
         {
           "word": "loves",
-          "startTimeMs": 25600,
-          "endTimeMs": 25900
+          "startTimeMs": 25500,
+          "endTimeMs": 25800
         },
         {
           "word": "us,",
-          "startTimeMs": 25900,
-          "endTimeMs": 26300
-        },
-        {
-          "word": "it",
-          "startTimeMs": 26300,
-          "endTimeMs": 26500
+          "startTimeMs": 25800,
+          "endTimeMs": 26000
         },
         {
           "word": "loves",
-          "startTimeMs": 26500,
-          "endTimeMs": 26900
+          "startTimeMs": 26000,
+          "endTimeMs": 26300
         },
         {
           "word": "me",
-          "startTimeMs": 26900,
-          "endTimeMs": 27500
+          "startTimeMs": 26300,
+          "endTimeMs": 26740
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 27500,
-      "endTimeMs": 29500,
-      "segmentIndex": 7,
-      "text": "All my people are moving",
+      "startTimeMs": 26740,
+      "endTimeMs": 29270,
+      "segmentIndex": 10,
+      "text": "All my people are moving (rra)",
       "words": [
         {
           "word": "All",
-          "startTimeMs": 27600,
-          "endTimeMs": 27850
+          "startTimeMs": 26740,
+          "endTimeMs": 27000
         },
         {
           "word": "my",
-          "startTimeMs": 27850,
-          "endTimeMs": 28050
+          "startTimeMs": 27000,
+          "endTimeMs": 27200
         },
         {
           "word": "people",
-          "startTimeMs": 28050,
-          "endTimeMs": 28550
+          "startTimeMs": 27200,
+          "endTimeMs": 27700
         },
         {
           "word": "are",
-          "startTimeMs": 28550,
-          "endTimeMs": 28850
+          "startTimeMs": 27700,
+          "endTimeMs": 28000
         },
         {
           "word": "moving",
-          "startTimeMs": 28850,
-          "endTimeMs": 29500
+          "startTimeMs": 28000,
+          "endTimeMs": 28500
+        },
+        {
+          "word": "(rra)",
+          "startTimeMs": 28500,
+          "endTimeMs": 29270
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 29500,
-      "endTimeMs": 31500,
-      "segmentIndex": 8,
+      "startTimeMs": 29270,
+      "endTimeMs": 31460,
+      "segmentIndex": 11,
       "text": "Look at how the rhythm has them",
       "words": [
         {
           "word": "Look",
-          "startTimeMs": 29600,
-          "endTimeMs": 29850
+          "startTimeMs": 29270,
+          "endTimeMs": 29500
         },
         {
           "word": "at",
-          "startTimeMs": 29850,
-          "endTimeMs": 30050
+          "startTimeMs": 29500,
+          "endTimeMs": 29700
         },
         {
           "word": "how",
-          "startTimeMs": 30050,
-          "endTimeMs": 30350
+          "startTimeMs": 29700,
+          "endTimeMs": 29900
         },
         {
           "word": "the",
-          "startTimeMs": 30350,
-          "endTimeMs": 30550
+          "startTimeMs": 29900,
+          "endTimeMs": 30100
         },
         {
           "word": "rhythm",
-          "startTimeMs": 30550,
-          "endTimeMs": 31050
+          "startTimeMs": 30100,
+          "endTimeMs": 30600
         },
         {
           "word": "has",
-          "startTimeMs": 31050,
-          "endTimeMs": 31300
+          "startTimeMs": 30600,
+          "endTimeMs": 30900
         },
         {
           "word": "them",
-          "startTimeMs": 31300,
-          "endTimeMs": 31500
+          "startTimeMs": 30900,
+          "endTimeMs": 31460
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 31500,
-      "endTimeMs": 33500,
-      "segmentIndex": 9,
+      "startTimeMs": 31460,
+      "endTimeMs": 32920,
+      "segmentIndex": 12,
       "text": "I make music that entertains",
       "words": [
         {
           "word": "I",
-          "startTimeMs": 31600,
-          "endTimeMs": 31800
+          "startTimeMs": 31460,
+          "endTimeMs": 31550
         },
         {
           "word": "make",
-          "startTimeMs": 31800,
-          "endTimeMs": 32100
+          "startTimeMs": 31550,
+          "endTimeMs": 31800
         },
         {
           "word": "music",
-          "startTimeMs": 32100,
-          "endTimeMs": 32600
+          "startTimeMs": 31800,
+          "endTimeMs": 32200
         },
         {
           "word": "that",
-          "startTimeMs": 32600,
-          "endTimeMs": 32900
+          "startTimeMs": 32200,
+          "endTimeMs": 32400
         },
         {
           "word": "entertains",
-          "startTimeMs": 32900,
-          "endTimeMs": 33500
+          "startTimeMs": 32400,
+          "endTimeMs": 32920
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 33500,
+      "startTimeMs": 32920,
       "endTimeMs": 37000,
-      "segmentIndex": 10,
-      "text": "My music has them dancing hard And you dance like this",
+      "segmentIndex": 13,
+      "text": "My music has them dancing hard and you dance like this (let's go)",
       "words": [
         {
           "word": "My",
-          "startTimeMs": 33600,
-          "endTimeMs": 33800
+          "startTimeMs": 32920,
+          "endTimeMs": 33100
         },
         {
           "word": "music",
-          "startTimeMs": 33800,
-          "endTimeMs": 34300
+          "startTimeMs": 33100,
+          "endTimeMs": 33500
         },
         {
           "word": "has",
-          "startTimeMs": 34300,
-          "endTimeMs": 34500
+          "startTimeMs": 33500,
+          "endTimeMs": 33700
         },
         {
           "word": "them",
-          "startTimeMs": 34500,
-          "endTimeMs": 34800
+          "startTimeMs": 33700,
+          "endTimeMs": 33900
         },
         {
           "word": "dancing",
-          "startTimeMs": 34800,
-          "endTimeMs": 35300
+          "startTimeMs": 33900,
+          "endTimeMs": 34400
         },
         {
           "word": "hard",
-          "startTimeMs": 35300,
-          "endTimeMs": 35800
+          "startTimeMs": 34400,
+          "endTimeMs": 34800
         },
         {
-          "word": "And",
-          "startTimeMs": 36000,
-          "endTimeMs": 36200
+          "word": "and",
+          "startTimeMs": 34800,
+          "endTimeMs": 35000
         },
         {
           "word": "you",
-          "startTimeMs": 36200,
-          "endTimeMs": 36400
+          "startTimeMs": 35000,
+          "endTimeMs": 35200
         },
         {
           "word": "dance",
-          "startTimeMs": 36400,
-          "endTimeMs": 36700
+          "startTimeMs": 35200,
+          "endTimeMs": 35600
         },
         {
           "word": "like",
-          "startTimeMs": 36700,
-          "endTimeMs": 36850
+          "startTimeMs": 35600,
+          "endTimeMs": 35900
         },
         {
           "word": "this",
-          "startTimeMs": 36850,
+          "startTimeMs": 35900,
+          "endTimeMs": 36200
+        },
+        {
+          "word": "(let's",
+          "startTimeMs": 36200,
+          "endTimeMs": 36600
+        },
+        {
+          "word": "go)",
+          "startTimeMs": 36600,
           "endTimeMs": 37000
         }
       ]
     },
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 37000,
-      "endTimeMs": 55300,
-      "segmentIndex": 11,
-      "cueText": "Drop"
-    },
-    {
       "type": "LYRIC",
-      "startTimeMs": 55300,
-      "endTimeMs": 57500,
-      "segmentIndex": 12,
-      "text": "We’re tearing up the club",
+      "startTimeMs": 54920,
+      "endTimeMs": 57290,
+      "segmentIndex": 14,
+      "text": "We're tearing up the club",
       "words": [
         {
-          "word": "We’re",
-          "startTimeMs": 55500,
-          "endTimeMs": 55900
+          "word": "We're",
+          "startTimeMs": 54920,
+          "endTimeMs": 55400
         },
         {
           "word": "tearing",
-          "startTimeMs": 55900,
-          "endTimeMs": 56500
+          "startTimeMs": 55400,
+          "endTimeMs": 56200
         },
         {
           "word": "up",
-          "startTimeMs": 56500,
-          "endTimeMs": 56800
+          "startTimeMs": 56200,
+          "endTimeMs": 56600
         },
         {
           "word": "the",
-          "startTimeMs": 56800,
-          "endTimeMs": 57000
+          "startTimeMs": 56600,
+          "endTimeMs": 56800
         },
         {
           "word": "club",
-          "startTimeMs": 57000,
-          "endTimeMs": 57500
+          "startTimeMs": 56800,
+          "endTimeMs": 57290
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 57500,
-      "endTimeMs": 59800,
-      "segmentIndex": 13,
-      "text": "The party doesn’t stop, it’s only just beginning",
+      "startTimeMs": 57290,
+      "endTimeMs": 59390,
+      "segmentIndex": 15,
+      "text": "The party doesn't stop, it’s just beginning",
       "words": [
         {
           "word": "The",
-          "startTimeMs": 57700,
-          "endTimeMs": 57900
+          "startTimeMs": 57290,
+          "endTimeMs": 57400
         },
         {
           "word": "party",
-          "startTimeMs": 57900,
-          "endTimeMs": 58300
+          "startTimeMs": 57400,
+          "endTimeMs": 57800
         },
         {
-          "word": "doesn’t",
-          "startTimeMs": 58300,
-          "endTimeMs": 58600
+          "word": "doesn't",
+          "startTimeMs": 57800,
+          "endTimeMs": 58100
         },
         {
           "word": "stop,",
-          "startTimeMs": 58600,
-          "endTimeMs": 59000
+          "startTimeMs": 58100,
+          "endTimeMs": 58400
         },
         {
           "word": "it’s",
-          "startTimeMs": 59000,
-          "endTimeMs": 59200
-        },
-        {
-          "word": "only",
-          "startTimeMs": 59200,
-          "endTimeMs": 59400
+          "startTimeMs": 58400,
+          "endTimeMs": 58600
         },
         {
           "word": "just",
-          "startTimeMs": 59400,
-          "endTimeMs": 59600
+          "startTimeMs": 58600,
+          "endTimeMs": 58800
         },
         {
           "word": "beginning",
-          "startTimeMs": 59600,
-          "endTimeMs": 59800
+          "startTimeMs": 58800,
+          "endTimeMs": 59390
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 59800,
-      "endTimeMs": 61900,
-      "segmentIndex": 14,
-      "text": "It’s like this, it’s like that",
+      "startTimeMs": 59390,
+      "endTimeMs": 61910,
+      "segmentIndex": 16,
+      "text": "(Eh!) C'est comme ci (eh!), c'est comme ça",
       "words": [
         {
-          "word": "It’s",
-          "startTimeMs": 59900,
+          "word": "(Eh!)",
+          "startTimeMs": 59390,
+          "endTimeMs": 59700
+        },
+        {
+          "word": "C'est",
+          "startTimeMs": 59700,
+          "endTimeMs": 60000
+        },
+        {
+          "word": "comme",
+          "startTimeMs": 60000,
           "endTimeMs": 60200
         },
         {
-          "word": "like",
+          "word": "ci",
           "startTimeMs": 60200,
-          "endTimeMs": 60500
+          "endTimeMs": 60600
         },
         {
-          "word": "this,",
-          "startTimeMs": 60500,
+          "word": "(eh!),",
+          "startTimeMs": 60600,
           "endTimeMs": 60900
         },
         {
-          "word": "it’s",
-          "startTimeMs": 61000,
-          "endTimeMs": 61300
+          "word": "c'est",
+          "startTimeMs": 60900,
+          "endTimeMs": 61200
         },
         {
-          "word": "like",
-          "startTimeMs": 61300,
-          "endTimeMs": 61600
+          "word": "comme",
+          "startTimeMs": 61200,
+          "endTimeMs": 61400
         },
         {
-          "word": "that",
-          "startTimeMs": 61600,
-          "endTimeMs": 61900
+          "word": "ça",
+          "startTimeMs": 61400,
+          "endTimeMs": 61910
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 61900,
-      "endTimeMs": 64500,
-      "segmentIndex": 15,
-      "text": "My darling, la-la-la-la-la",
+      "startTimeMs": 61910,
+      "endTimeMs": 64040,
+      "segmentIndex": 17,
+      "text": "(Eh!) Ma chérie, la-la-la-la-la",
       "words": [
         {
-          "word": "My",
-          "startTimeMs": 62000,
+          "word": "(Eh!)",
+          "startTimeMs": 61910,
           "endTimeMs": 62300
         },
         {
-          "word": "darling,",
+          "word": "Ma",
           "startTimeMs": 62300,
-          "endTimeMs": 62800
+          "endTimeMs": 62500
         },
         {
-          "word": "la",
-          "startTimeMs": 62900,
-          "endTimeMs": 63200
+          "word": "chérie,",
+          "startTimeMs": 62500,
+          "endTimeMs": 63000
         },
         {
-          "word": "la",
-          "startTimeMs": 63200,
-          "endTimeMs": 63400
-        },
-        {
-          "word": "la",
-          "startTimeMs": 63400,
-          "endTimeMs": 63600
-        },
-        {
-          "word": "la",
-          "startTimeMs": 63600,
-          "endTimeMs": 63800
-        },
-        {
-          "word": "la",
-          "startTimeMs": 63800,
-          "endTimeMs": 64500
+          "word": "la-la-la-la-la",
+          "startTimeMs": 63000,
+          "endTimeMs": 64040
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 64500,
-      "endTimeMs": 66500,
-      "segmentIndex": 16,
-      "text": "France, Colombia",
+      "startTimeMs": 64040,
+      "endTimeMs": 66470,
+      "segmentIndex": 18,
+      "text": "(Eh) France (eh), Colombia (eh)",
       "words": [
         {
-          "word": "France,",
-          "startTimeMs": 64600,
-          "endTimeMs": 65100
+          "word": "(Eh)",
+          "startTimeMs": 64040,
+          "endTimeMs": 64400
+        },
+        {
+          "word": "France",
+          "startTimeMs": 64400,
+          "endTimeMs": 65000
+        },
+        {
+          "word": "(eh),",
+          "startTimeMs": 65000,
+          "endTimeMs": 65400
         },
         {
           "word": "Colombia",
-          "startTimeMs": 65500,
-          "endTimeMs": 66500
+          "startTimeMs": 65400,
+          "endTimeMs": 66100
+        },
+        {
+          "word": "(eh)",
+          "startTimeMs": 66100,
+          "endTimeMs": 66470
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 66500,
-      "endTimeMs": 68500,
-      "segmentIndex": 17,
-      "text": "I like it (Freeze)",
+      "startTimeMs": 66470,
+      "endTimeMs": 68770,
+      "segmentIndex": 19,
+      "text": "I like it (freeze!)",
       "words": [
         {
           "word": "I",
+          "startTimeMs": 66470,
+          "endTimeMs": 66600
+        },
+        {
+          "word": "like",
           "startTimeMs": 66600,
           "endTimeMs": 66900
         },
         {
-          "word": "like",
-          "startTimeMs": 66900,
-          "endTimeMs": 67200
-        },
-        {
           "word": "it",
-          "startTimeMs": 67200,
-          "endTimeMs": 67600
+          "startTimeMs": 66900,
+          "endTimeMs": 67100
         },
         {
-          "word": "(Freeze)",
-          "startTimeMs": 67800,
-          "endTimeMs": 68500
+          "word": "(freeze!)",
+          "startTimeMs": 67100,
+          "endTimeMs": 68770
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 68500,
-      "endTimeMs": 70700,
-      "segmentIndex": 18,
-      "text": "J Balvin, Willy William",
+      "startTimeMs": 68770,
+      "endTimeMs": 71600,
+      "segmentIndex": 20,
+      "text": "(Eh) J Balvin (eh), Willy William (eh)",
       "words": [
         {
-          "word": "J",
-          "startTimeMs": 68800,
-          "endTimeMs": 69100
+          "word": "(Eh)",
+          "startTimeMs": 68770,
+          "endTimeMs": 69200
         },
         {
-          "word": "Balvin,",
-          "startTimeMs": 69100,
-          "endTimeMs": 69600
+          "word": "J",
+          "startTimeMs": 69200,
+          "endTimeMs": 69400
+        },
+        {
+          "word": "Balvin",
+          "startTimeMs": 69400,
+          "endTimeMs": 69900
+        },
+        {
+          "word": "(eh),",
+          "startTimeMs": 69900,
+          "endTimeMs": 70300
         },
         {
           "word": "Willy",
-          "startTimeMs": 69600,
-          "endTimeMs": 70000
+          "startTimeMs": 70300,
+          "endTimeMs": 70600
         },
         {
           "word": "William",
-          "startTimeMs": 70000,
-          "endTimeMs": 70700
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 70700,
-      "endTimeMs": 72500,
-      "segmentIndex": 19,
-      "text": "They like it (Freeze)",
-      "words": [
-        {
-          "word": "They",
-          "startTimeMs": 70800,
+          "startTimeMs": 70600,
           "endTimeMs": 71100
         },
         {
-          "word": "like",
+          "word": "(eh)",
           "startTimeMs": 71100,
-          "endTimeMs": 71400
-        },
-        {
-          "word": "it",
-          "startTimeMs": 71400,
-          "endTimeMs": 71800
-        },
-        {
-          "word": "(Freeze)",
-          "startTimeMs": 72000,
-          "endTimeMs": 72500
+          "endTimeMs": 71600
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 72500,
-      "endTimeMs": 75400,
-      "segmentIndex": 20,
-      "text": "The DJs don’t lie, my people like it",
+      "startTimeMs": 71600,
+      "endTimeMs": 73220,
+      "segmentIndex": 21,
+      "text": "I like it (freeze!)",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 71600,
+          "endTimeMs": 71700
+        },
+        {
+          "word": "like",
+          "startTimeMs": 71700,
+          "endTimeMs": 72000
+        },
+        {
+          "word": "it",
+          "startTimeMs": 72000,
+          "endTimeMs": 72300
+        },
+        {
+          "word": "(freeze!)",
+          "startTimeMs": 72300,
+          "endTimeMs": 73220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 73220,
+      "endTimeMs": 75690,
+      "segmentIndex": 22,
+      "text": "The DJs don't lie, they like my people",
       "words": [
         {
           "word": "The",
-          "startTimeMs": 72900,
-          "endTimeMs": 73100
-        },
-        {
-          "word": "DJs",
-          "startTimeMs": 73100,
+          "startTimeMs": 73220,
           "endTimeMs": 73400
         },
         {
-          "word": "don’t",
+          "word": "DJs",
           "startTimeMs": 73400,
-          "endTimeMs": 73600
+          "endTimeMs": 73800
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 73800,
+          "endTimeMs": 74100
         },
         {
           "word": "lie,",
-          "startTimeMs": 73600,
-          "endTimeMs": 74000
+          "startTimeMs": 74100,
+          "endTimeMs": 74500
         },
         {
-          "word": "my",
-          "startTimeMs": 74200,
-          "endTimeMs": 74400
-        },
-        {
-          "word": "people",
-          "startTimeMs": 74400,
-          "endTimeMs": 74800
+          "word": "they",
+          "startTimeMs": 74500,
+          "endTimeMs": 74700
         },
         {
           "word": "like",
-          "startTimeMs": 74800,
+          "startTimeMs": 74700,
           "endTimeMs": 75000
         },
         {
-          "word": "it",
+          "word": "my",
           "startTimeMs": 75000,
-          "endTimeMs": 75400
+          "endTimeMs": 75200
+        },
+        {
+          "word": "people",
+          "startTimeMs": 75200,
+          "endTimeMs": 75690
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 75400,
-      "endTimeMs": 77400,
-      "segmentIndex": 21,
-      "text": "And this went worldwide (Freeze)",
+      "startTimeMs": 75690,
+      "endTimeMs": 78080,
+      "segmentIndex": 23,
+      "text": "And that went global (freeze!)",
       "words": [
         {
           "word": "And",
-          "startTimeMs": 75500,
-          "endTimeMs": 75700
+          "startTimeMs": 75690,
+          "endTimeMs": 75800
         },
         {
-          "word": "this",
-          "startTimeMs": 75700,
-          "endTimeMs": 75900
+          "word": "that",
+          "startTimeMs": 75800,
+          "endTimeMs": 76100
         },
         {
           "word": "went",
-          "startTimeMs": 75900,
-          "endTimeMs": 76200
+          "startTimeMs": 76100,
+          "endTimeMs": 76500
         },
         {
-          "word": "worldwide",
-          "startTimeMs": 76200,
-          "endTimeMs": 76800
+          "word": "global",
+          "startTimeMs": 76500,
+          "endTimeMs": 77100
         },
         {
-          "word": "(Freeze)",
-          "startTimeMs": 76900,
-          "endTimeMs": 77400
+          "word": "(freeze!)",
+          "startTimeMs": 77100,
+          "endTimeMs": 78080
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 77400,
-      "endTimeMs": 79800,
-      "segmentIndex": 22,
-      "text": "We don’t turn it down, we never stop",
+      "startTimeMs": 78080,
+      "endTimeMs": 80370,
+      "segmentIndex": 24,
+      "text": "We don't turn it down, we never stop",
       "words": [
         {
           "word": "We",
-          "startTimeMs": 77500,
-          "endTimeMs": 77700
-        },
-        {
-          "word": "don’t",
-          "startTimeMs": 77700,
-          "endTimeMs": 78000
-        },
-        {
-          "word": "turn",
-          "startTimeMs": 78000,
+          "startTimeMs": 78080,
           "endTimeMs": 78200
         },
         {
-          "word": "it",
+          "word": "don't",
           "startTimeMs": 78200,
-          "endTimeMs": 78400
+          "endTimeMs": 78500
+        },
+        {
+          "word": "turn",
+          "startTimeMs": 78500,
+          "endTimeMs": 78700
+        },
+        {
+          "word": "it",
+          "startTimeMs": 78700,
+          "endTimeMs": 78800
         },
         {
           "word": "down,",
-          "startTimeMs": 78400,
-          "endTimeMs": 78600
+          "startTimeMs": 78800,
+          "endTimeMs": 79100
         },
         {
           "word": "we",
-          "startTimeMs": 78700,
-          "endTimeMs": 78900
-        },
-        {
-          "word": "never",
-          "startTimeMs": 78900,
+          "startTimeMs": 79100,
           "endTimeMs": 79300
         },
         {
-          "word": "stop",
+          "word": "never",
           "startTimeMs": 79300,
           "endTimeMs": 79800
+        },
+        {
+          "word": "stop",
+          "startTimeMs": 79800,
+          "endTimeMs": 80370
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 79800,
-      "endTimeMs": 81800,
-      "segmentIndex": 23,
-      "text": "It’s another hit and blam!",
+      "startTimeMs": 80370,
+      "endTimeMs": 81930,
+      "segmentIndex": 25,
+      "text": "It's another hit and, blam!",
       "words": [
         {
-          "word": "It’s",
-          "startTimeMs": 79900,
-          "endTimeMs": 80100
+          "word": "It's",
+          "startTimeMs": 80370,
+          "endTimeMs": 80500
         },
         {
           "word": "another",
-          "startTimeMs": 80100,
-          "endTimeMs": 80400
+          "startTimeMs": 80500,
+          "endTimeMs": 80900
         },
         {
           "word": "hit",
-          "startTimeMs": 80400,
-          "endTimeMs": 80800
+          "startTimeMs": 80900,
+          "endTimeMs": 81200
         },
         {
-          "word": "and",
-          "startTimeMs": 80800,
-          "endTimeMs": 81000
+          "word": "and,",
+          "startTimeMs": 81200,
+          "endTimeMs": 81500
         },
         {
           "word": "blam!",
-          "startTimeMs": 81000,
-          "endTimeMs": 81800
+          "startTimeMs": 81500,
+          "endTimeMs": 81930
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 81800,
-      "endTimeMs": 83900,
-      "segmentIndex": 24,
+      "startTimeMs": 81930,
+      "endTimeMs": 84030,
+      "segmentIndex": 26,
       "text": "And where are my people?",
       "words": [
         {
           "word": "And",
-          "startTimeMs": 81900,
+          "startTimeMs": 81930,
           "endTimeMs": 82100
         },
         {
@@ -984,69 +1027,69 @@
         {
           "word": "my",
           "startTimeMs": 82800,
-          "endTimeMs": 83100
+          "endTimeMs": 83200
         },
         {
           "word": "people?",
-          "startTimeMs": 83100,
-          "endTimeMs": 83900
+          "startTimeMs": 83200,
+          "endTimeMs": 84030
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 83900,
-      "endTimeMs": 85900,
-      "segmentIndex": 25,
-      "text": "But make your head move",
+      "startTimeMs": 84030,
+      "endTimeMs": 85740,
+      "segmentIndex": 27,
+      "text": "Mais fais bouger la tête",
       "words": [
         {
-          "word": "But",
-          "startTimeMs": 84000,
-          "endTimeMs": 84300
+          "word": "Mais",
+          "startTimeMs": 84030,
+          "endTimeMs": 84200
         },
         {
-          "word": "make",
-          "startTimeMs": 84300,
-          "endTimeMs": 84600
+          "word": "fais",
+          "startTimeMs": 84200,
+          "endTimeMs": 84500
         },
         {
-          "word": "your",
-          "startTimeMs": 84600,
+          "word": "bouger",
+          "startTimeMs": 84500,
           "endTimeMs": 85000
         },
         {
-          "word": "head",
+          "word": "la",
           "startTimeMs": 85000,
-          "endTimeMs": 85400
+          "endTimeMs": 85200
         },
         {
-          "word": "move",
-          "startTimeMs": 85400,
-          "endTimeMs": 85900
+          "word": "tête",
+          "startTimeMs": 85200,
+          "endTimeMs": 85740
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 85900,
-      "endTimeMs": 88000,
-      "segmentIndex": 26,
+      "startTimeMs": 85740,
+      "endTimeMs": 88480,
+      "segmentIndex": 28,
       "text": "And where are my people?",
       "words": [
         {
           "word": "And",
-          "startTimeMs": 86000,
-          "endTimeMs": 86200
+          "startTimeMs": 85740,
+          "endTimeMs": 86100
         },
         {
           "word": "where",
-          "startTimeMs": 86200,
-          "endTimeMs": 86600
+          "startTimeMs": 86100,
+          "endTimeMs": 86500
         },
         {
           "word": "are",
-          "startTimeMs": 86600,
+          "startTimeMs": 86500,
           "endTimeMs": 86900
         },
         {
@@ -1057,90 +1100,112 @@
         {
           "word": "people?",
           "startTimeMs": 87200,
-          "endTimeMs": 88000
+          "endTimeMs": 88480
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 88000,
-      "endTimeMs": 90000,
-      "segmentIndex": 27,
+      "startTimeMs": 88480,
+      "endTimeMs": 89750,
+      "segmentIndex": 29,
       "text": "Say yeah, yeah, yeah",
       "words": [
         {
           "word": "Say",
-          "startTimeMs": 88100,
-          "endTimeMs": 88400
+          "startTimeMs": 88480,
+          "endTimeMs": 88700
         },
         {
           "word": "yeah,",
-          "startTimeMs": 88400,
-          "endTimeMs": 88900
+          "startTimeMs": 88700,
+          "endTimeMs": 89000
         },
         {
           "word": "yeah,",
-          "startTimeMs": 88900,
-          "endTimeMs": 89400
+          "startTimeMs": 89000,
+          "endTimeMs": 89300
         },
         {
           "word": "yeah",
-          "startTimeMs": 89400,
-          "endTimeMs": 90000
+          "startTimeMs": 89300,
+          "endTimeMs": 89750
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 90000,
-      "endTimeMs": 92500,
-      "segmentIndex": 28,
-      "text": "One, two, three, leggo!",
+      "startTimeMs": 89750,
+      "endTimeMs": 91500,
+      "segmentIndex": 30,
+      "text": "One, two, three, leggo! (Oh, say yes)",
       "words": [
         {
           "word": "One,",
-          "startTimeMs": 90100,
-          "endTimeMs": 90500
+          "startTimeMs": 89750,
+          "endTimeMs": 89950
         },
         {
           "word": "two,",
-          "startTimeMs": 90500,
-          "endTimeMs": 91000
+          "startTimeMs": 89950,
+          "endTimeMs": 90150
         },
         {
           "word": "three,",
-          "startTimeMs": 91000,
-          "endTimeMs": 91500
+          "startTimeMs": 90150,
+          "endTimeMs": 90400
         },
         {
           "word": "leggo!",
-          "startTimeMs": 91500,
-          "endTimeMs": 92500
+          "startTimeMs": 90400,
+          "endTimeMs": 90900
+        },
+        {
+          "word": "(Oh,",
+          "startTimeMs": 90900,
+          "endTimeMs": 91100
+        },
+        {
+          "word": "say",
+          "startTimeMs": 91100,
+          "endTimeMs": 91300
+        },
+        {
+          "word": "yes)",
+          "startTimeMs": 91300,
+          "endTimeMs": 91500
         }
       ]
     },
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 92500,
-      "endTimeMs": 110000,
-      "segmentIndex": 29,
-      "cueText": "(Oh, say yes) [Drop]"
+      "type": "LYRIC",
+      "startTimeMs": 107900,
+      "endTimeMs": 110080,
+      "segmentIndex": 31,
+      "text": "Rra!",
+      "words": [
+        {
+          "word": "Rra!",
+          "startTimeMs": 109000,
+          "endTimeMs": 110080
+        }
+      ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 110000,
-      "endTimeMs": 112500,
-      "segmentIndex": 30,
+      "startTimeMs": 110080,
+      "endTimeMs": 112730,
+      "segmentIndex": 32,
       "text": "From corner to corner, from there we go",
       "words": [
         {
           "word": "From",
-          "startTimeMs": 110200,
-          "endTimeMs": 110500
+          "startTimeMs": 110080,
+          "endTimeMs": 110300
         },
         {
           "word": "corner",
-          "startTimeMs": 110500,
+          "startTimeMs": 110300,
           "endTimeMs": 110800
         },
         {
@@ -1151,251 +1216,271 @@
         {
           "word": "corner,",
           "startTimeMs": 111000,
-          "endTimeMs": 111300
-        },
-        {
-          "word": "from",
-          "startTimeMs": 111300,
           "endTimeMs": 111500
         },
         {
-          "word": "there",
+          "word": "from",
           "startTimeMs": 111500,
           "endTimeMs": 111800
         },
         {
-          "word": "we",
+          "word": "there",
           "startTimeMs": 111800,
-          "endTimeMs": 112000
+          "endTimeMs": 112100
+        },
+        {
+          "word": "we",
+          "startTimeMs": 112100,
+          "endTimeMs": 112300
         },
         {
           "word": "go",
-          "startTimeMs": 112000,
-          "endTimeMs": 112500
+          "startTimeMs": 112300,
+          "endTimeMs": 112730
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 112500,
-      "endTimeMs": 115000,
-      "segmentIndex": 31,
+      "startTimeMs": 112730,
+      "endTimeMs": 114670,
+      "segmentIndex": 33,
       "text": "The world is big, but I have it in my hands",
       "words": [
         {
           "word": "The",
-          "startTimeMs": 112600,
-          "endTimeMs": 112800
+          "startTimeMs": 112730,
+          "endTimeMs": 112850
         },
         {
           "word": "world",
-          "startTimeMs": 112800,
-          "endTimeMs": 113100
+          "startTimeMs": 112850,
+          "endTimeMs": 113200
         },
         {
           "word": "is",
-          "startTimeMs": 113100,
-          "endTimeMs": 113300
+          "startTimeMs": 113200,
+          "endTimeMs": 113350
         },
         {
           "word": "big,",
-          "startTimeMs": 113300,
+          "startTimeMs": 113350,
           "endTimeMs": 113600
         },
         {
           "word": "but",
           "startTimeMs": 113600,
-          "endTimeMs": 113800
+          "endTimeMs": 113750
         },
         {
           "word": "I",
-          "startTimeMs": 113800,
-          "endTimeMs": 113900
+          "startTimeMs": 113750,
+          "endTimeMs": 113850
         },
         {
           "word": "have",
-          "startTimeMs": 113900,
-          "endTimeMs": 114100
+          "startTimeMs": 113850,
+          "endTimeMs": 114050
         },
         {
           "word": "it",
-          "startTimeMs": 114100,
-          "endTimeMs": 114200
+          "startTimeMs": 114050,
+          "endTimeMs": 114150
         },
         {
           "word": "in",
-          "startTimeMs": 114200,
-          "endTimeMs": 114300
+          "startTimeMs": 114150,
+          "endTimeMs": 114250
         },
         {
           "word": "my",
-          "startTimeMs": 114300,
-          "endTimeMs": 114500
+          "startTimeMs": 114250,
+          "endTimeMs": 114350
         },
         {
           "word": "hands",
-          "startTimeMs": 114500,
-          "endTimeMs": 115000
+          "startTimeMs": 114350,
+          "endTimeMs": 114670
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 115000,
-      "endTimeMs": 117300,
-      "segmentIndex": 32,
-      "text": "I’m killing it, yes, okay, here we go",
+      "startTimeMs": 114670,
+      "endTimeMs": 116810,
+      "segmentIndex": 34,
+      "text": "I'm killing it, yeah, okay, here we go",
       "words": [
         {
-          "word": "I’m",
-          "startTimeMs": 115100,
-          "endTimeMs": 115400
+          "word": "I'm",
+          "startTimeMs": 114670,
+          "endTimeMs": 114800
         },
         {
           "word": "killing",
-          "startTimeMs": 115400,
-          "endTimeMs": 115800
+          "startTimeMs": 114800,
+          "endTimeMs": 115200
         },
         {
           "word": "it,",
-          "startTimeMs": 115800,
-          "endTimeMs": 116000
+          "startTimeMs": 115200,
+          "endTimeMs": 115400
         },
         {
-          "word": "yes,",
-          "startTimeMs": 116000,
-          "endTimeMs": 116300
+          "word": "yeah,",
+          "startTimeMs": 115400,
+          "endTimeMs": 115700
         },
         {
           "word": "okay,",
-          "startTimeMs": 116300,
-          "endTimeMs": 116700
+          "startTimeMs": 115700,
+          "endTimeMs": 116100
         },
         {
           "word": "here",
-          "startTimeMs": 116700,
-          "endTimeMs": 116900
+          "startTimeMs": 116100,
+          "endTimeMs": 116300
         },
         {
           "word": "we",
-          "startTimeMs": 116900,
-          "endTimeMs": 117100
+          "startTimeMs": 116300,
+          "endTimeMs": 116500
         },
         {
           "word": "go",
-          "startTimeMs": 117100,
-          "endTimeMs": 117300
+          "startTimeMs": 116500,
+          "endTimeMs": 116810
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 117300,
-      "endTimeMs": 119500,
-      "segmentIndex": 33,
-      "text": "And with time we keep on rising",
+      "startTimeMs": 116810,
+      "endTimeMs": 119370,
+      "segmentIndex": 35,
+      "text": "And over time we keep on rising (and yeah)",
       "words": [
         {
           "word": "And",
-          "startTimeMs": 117400,
-          "endTimeMs": 117600
+          "startTimeMs": 116810,
+          "endTimeMs": 117000
         },
         {
-          "word": "with",
-          "startTimeMs": 117600,
-          "endTimeMs": 117800
+          "word": "over",
+          "startTimeMs": 117000,
+          "endTimeMs": 117300
         },
         {
           "word": "time",
-          "startTimeMs": 117800,
-          "endTimeMs": 118200
+          "startTimeMs": 117300,
+          "endTimeMs": 117700
         },
         {
           "word": "we",
+          "startTimeMs": 117700,
+          "endTimeMs": 117900
+        },
+        {
+          "word": "keep",
+          "startTimeMs": 117900,
+          "endTimeMs": 118200
+        },
+        {
+          "word": "on",
           "startTimeMs": 118200,
           "endTimeMs": 118400
         },
         {
-          "word": "keep",
-          "startTimeMs": 118400,
-          "endTimeMs": 118700
-        },
-        {
-          "word": "on",
-          "startTimeMs": 118700,
-          "endTimeMs": 118900
-        },
-        {
           "word": "rising",
-          "startTimeMs": 118900,
-          "endTimeMs": 119500
+          "startTimeMs": 118400,
+          "endTimeMs": 119000
+        },
+        {
+          "word": "(and",
+          "startTimeMs": 119000,
+          "endTimeMs": 119200
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 119200,
+          "endTimeMs": 119370
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 119500,
-      "endTimeMs": 121500,
-      "segmentIndex": 34,
-      "text": "That we keep breaking it down here",
+      "startTimeMs": 119370,
+      "endTimeMs": 121890,
+      "segmentIndex": 36,
+      "text": "We keep on tearing it up here (and yeah)",
       "words": [
         {
-          "word": "That",
-          "startTimeMs": 119600,
-          "endTimeMs": 119800
-        },
-        {
-          "word": "we",
-          "startTimeMs": 119800,
-          "endTimeMs": 120000
+          "word": "We",
+          "startTimeMs": 119370,
+          "endTimeMs": 119600
         },
         {
           "word": "keep",
-          "startTimeMs": 120000,
-          "endTimeMs": 120300
+          "startTimeMs": 119600,
+          "endTimeMs": 119900
         },
         {
-          "word": "breaking",
-          "startTimeMs": 120300,
-          "endTimeMs": 120800
+          "word": "on",
+          "startTimeMs": 119900,
+          "endTimeMs": 120100
+        },
+        {
+          "word": "tearing",
+          "startTimeMs": 120100,
+          "endTimeMs": 120600
         },
         {
           "word": "it",
+          "startTimeMs": 120600,
+          "endTimeMs": 120800
+        },
+        {
+          "word": "up",
           "startTimeMs": 120800,
           "endTimeMs": 121000
         },
         {
-          "word": "down",
+          "word": "here",
           "startTimeMs": 121000,
-          "endTimeMs": 121200
+          "endTimeMs": 121400
         },
         {
-          "word": "here",
-          "startTimeMs": 121200,
-          "endTimeMs": 121500
+          "word": "(and",
+          "startTimeMs": 121400,
+          "endTimeMs": 121600
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 121600,
+          "endTimeMs": 121890
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 121500,
-      "endTimeMs": 123500,
-      "segmentIndex": 35,
-      "text": "This party has no end",
+      "startTimeMs": 121890,
+      "endTimeMs": 123710,
+      "segmentIndex": 37,
+      "text": "This party has no end (and yeah)",
       "words": [
         {
           "word": "This",
-          "startTimeMs": 121600,
-          "endTimeMs": 121900
+          "startTimeMs": 121890,
+          "endTimeMs": 122100
         },
         {
           "word": "party",
-          "startTimeMs": 121900,
-          "endTimeMs": 122400
+          "startTimeMs": 122100,
+          "endTimeMs": 122500
         },
         {
           "word": "has",
-          "startTimeMs": 122400,
+          "startTimeMs": 122500,
           "endTimeMs": 122700
         },
         {
@@ -1406,503 +1491,562 @@
         {
           "word": "end",
           "startTimeMs": 123000,
+          "endTimeMs": 123300
+        },
+        {
+          "word": "(and",
+          "startTimeMs": 123300,
           "endTimeMs": 123500
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 123500,
+          "endTimeMs": 123710
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 123500,
-      "endTimeMs": 125500,
-      "segmentIndex": 36,
-      "text": "Bottles up, yes",
+      "startTimeMs": 123710,
+      "endTimeMs": 125540,
+      "segmentIndex": 38,
+      "text": "Bottles up, yeah",
       "words": [
         {
           "word": "Bottles",
-          "startTimeMs": 123600,
-          "endTimeMs": 124200
+          "startTimeMs": 123710,
+          "endTimeMs": 124500
         },
         {
           "word": "up,",
-          "startTimeMs": 124200,
-          "endTimeMs": 124800
+          "startTimeMs": 124500,
+          "endTimeMs": 125000
         },
         {
-          "word": "yes",
-          "startTimeMs": 124900,
-          "endTimeMs": 125500
+          "word": "yeah",
+          "startTimeMs": 125000,
+          "endTimeMs": 125540
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 125500,
-      "endTimeMs": 128100,
-      "segmentIndex": 37,
-      "text": "I have them dancing, breaking it down, and I’m still here",
+      "startTimeMs": 125540,
+      "endTimeMs": 128180,
+      "segmentIndex": 39,
+      "text": "I have them dancing, tearing it up and I'm still here (and yeah)",
       "words": [
         {
           "word": "I",
-          "startTimeMs": 125600,
-          "endTimeMs": 125800
+          "startTimeMs": 125540,
+          "endTimeMs": 125680
         },
         {
           "word": "have",
-          "startTimeMs": 125800,
+          "startTimeMs": 125680,
+          "endTimeMs": 125840
+        },
+        {
+          "word": "them",
+          "startTimeMs": 125840,
           "endTimeMs": 126000
         },
         {
-          "word": "them",
-          "startTimeMs": 126000,
-          "endTimeMs": 126200
-        },
-        {
           "word": "dancing,",
-          "startTimeMs": 126200,
-          "endTimeMs": 126700
+          "startTimeMs": 126000,
+          "endTimeMs": 126550
         },
         {
-          "word": "breaking",
-          "startTimeMs": 126700,
-          "endTimeMs": 127200
+          "word": "tearing",
+          "startTimeMs": 126550,
+          "endTimeMs": 126850
         },
         {
           "word": "it",
-          "startTimeMs": 127200,
-          "endTimeMs": 127400
+          "startTimeMs": 126850,
+          "endTimeMs": 126950
         },
         {
-          "word": "down,",
-          "startTimeMs": 127400,
-          "endTimeMs": 127600
+          "word": "up",
+          "startTimeMs": 126950,
+          "endTimeMs": 127100
         },
         {
           "word": "and",
-          "startTimeMs": 127600,
-          "endTimeMs": 127700
+          "startTimeMs": 127100,
+          "endTimeMs": 127200
         },
         {
-          "word": "I’m",
-          "startTimeMs": 127700,
-          "endTimeMs": 127900
+          "word": "I'm",
+          "startTimeMs": 127200,
+          "endTimeMs": 127300
         },
         {
           "word": "still",
-          "startTimeMs": 127900,
+          "startTimeMs": 127300,
+          "endTimeMs": 127550
+        },
+        {
+          "word": "here",
+          "startTimeMs": 127550,
+          "endTimeMs": 127850
+        },
+        {
+          "word": "(and",
+          "startTimeMs": 127850,
           "endTimeMs": 128000
         },
         {
-          "word": "here",
+          "word": "yeah)",
           "startTimeMs": 128000,
-          "endTimeMs": 128100
+          "endTimeMs": 128180
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 128100,
-      "endTimeMs": 130100,
-      "segmentIndex": 38,
-      "text": "That we keep breaking it down here",
+      "startTimeMs": 128180,
+      "endTimeMs": 130000,
+      "segmentIndex": 40,
+      "text": "We keep on tearing it up here (and yeah)",
       "words": [
         {
-          "word": "That",
-          "startTimeMs": 128200,
-          "endTimeMs": 128400
-        },
-        {
-          "word": "we",
-          "startTimeMs": 128400,
-          "endTimeMs": 128600
+          "word": "We",
+          "startTimeMs": 128180,
+          "endTimeMs": 128300
         },
         {
           "word": "keep",
-          "startTimeMs": 128600,
-          "endTimeMs": 128900
+          "startTimeMs": 128300,
+          "endTimeMs": 128550
         },
         {
-          "word": "breaking",
-          "startTimeMs": 128900,
-          "endTimeMs": 129400
+          "word": "on",
+          "startTimeMs": 128550,
+          "endTimeMs": 128800
+        },
+        {
+          "word": "tearing",
+          "startTimeMs": 128800,
+          "endTimeMs": 129100
         },
         {
           "word": "it",
-          "startTimeMs": 129400,
-          "endTimeMs": 129600
+          "startTimeMs": 129100,
+          "endTimeMs": 129200
         },
         {
-          "word": "down",
-          "startTimeMs": 129600,
-          "endTimeMs": 129800
+          "word": "up",
+          "startTimeMs": 129200,
+          "endTimeMs": 129350
         },
         {
           "word": "here",
-          "startTimeMs": 129800,
-          "endTimeMs": 130100
+          "startTimeMs": 129350,
+          "endTimeMs": 129700
+        },
+        {
+          "word": "(and",
+          "startTimeMs": 129700,
+          "endTimeMs": 129850
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 129850,
+          "endTimeMs": 130000
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 130100,
-      "endTimeMs": 132100,
-      "segmentIndex": 39,
-      "text": "This party has no end",
+      "startTimeMs": 130000,
+      "endTimeMs": 132000,
+      "segmentIndex": 41,
+      "text": "This party has no end (and yeah)",
       "words": [
         {
           "word": "This",
-          "startTimeMs": 130200,
-          "endTimeMs": 130500
+          "startTimeMs": 130000,
+          "endTimeMs": 130200
         },
         {
           "word": "party",
-          "startTimeMs": 130500,
-          "endTimeMs": 131000
+          "startTimeMs": 130200,
+          "endTimeMs": 130600
         },
         {
           "word": "has",
-          "startTimeMs": 131000,
-          "endTimeMs": 131300
+          "startTimeMs": 130600,
+          "endTimeMs": 130750
         },
         {
           "word": "no",
-          "startTimeMs": 131300,
-          "endTimeMs": 131600
+          "startTimeMs": 130750,
+          "endTimeMs": 131050
         },
         {
           "word": "end",
-          "startTimeMs": 131600,
-          "endTimeMs": 132100
+          "startTimeMs": 131050,
+          "endTimeMs": 131450
+        },
+        {
+          "word": "(and",
+          "startTimeMs": 131450,
+          "endTimeMs": 131650
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 131650,
+          "endTimeMs": 132000
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 132100,
-      "endTimeMs": 134100,
-      "segmentIndex": 40,
-      "text": "Bottles up, yes",
+      "startTimeMs": 133750,
+      "endTimeMs": 135250,
+      "segmentIndex": 42,
+      "text": "Bottles up, yeah",
       "words": [
         {
           "word": "Bottles",
-          "startTimeMs": 132200,
-          "endTimeMs": 132800
+          "startTimeMs": 133750,
+          "endTimeMs": 134300
         },
         {
           "word": "up,",
-          "startTimeMs": 132800,
-          "endTimeMs": 133400
-        },
-        {
-          "word": "yes",
-          "startTimeMs": 133500,
-          "endTimeMs": 134100
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 134100,
-      "endTimeMs": 137000,
-      "segmentIndex": 41,
-      "text": "I have them dancing, breaking it down",
-      "words": [
-        {
-          "word": "I",
-          "startTimeMs": 134200,
-          "endTimeMs": 134400
-        },
-        {
-          "word": "have",
-          "startTimeMs": 134400,
+          "startTimeMs": 134300,
           "endTimeMs": 134700
         },
         {
-          "word": "them",
+          "word": "yeah",
           "startTimeMs": 134700,
-          "endTimeMs": 135000
+          "endTimeMs": 135250
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 135250,
+      "endTimeMs": 136870,
+      "segmentIndex": 43,
+      "text": "I have them dancing, tearing it up",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 135250,
+          "endTimeMs": 135350
         },
         {
-          "word": "dancing,",
-          "startTimeMs": 135000,
+          "word": "have",
+          "startTimeMs": 135350,
           "endTimeMs": 135500
         },
         {
-          "word": "breaking",
+          "word": "them",
           "startTimeMs": 135500,
+          "endTimeMs": 135700
+        },
+        {
+          "word": "dancing,",
+          "startTimeMs": 135700,
           "endTimeMs": 136200
         },
         {
-          "word": "it",
+          "word": "tearing",
           "startTimeMs": 136200,
-          "endTimeMs": 136500
+          "endTimeMs": 136600
         },
         {
-          "word": "down",
-          "startTimeMs": 136500,
-          "endTimeMs": 137000
+          "word": "it",
+          "startTimeMs": 136600,
+          "endTimeMs": 136700
+        },
+        {
+          "word": "up",
+          "startTimeMs": 136700,
+          "endTimeMs": 136870
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 137000,
-      "endTimeMs": 139100,
-      "segmentIndex": 42,
-      "text": "And where are my people?",
-      "words": [
-        {
-          "word": "And",
-          "startTimeMs": 137100,
-          "endTimeMs": 137300
-        },
-        {
-          "word": "where",
-          "startTimeMs": 137300,
-          "endTimeMs": 137700
-        },
-        {
-          "word": "are",
-          "startTimeMs": 137700,
-          "endTimeMs": 138000
-        },
-        {
-          "word": "my",
-          "startTimeMs": 138000,
-          "endTimeMs": 138300
-        },
-        {
-          "word": "people?",
-          "startTimeMs": 138300,
-          "endTimeMs": 139100
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 139100,
-      "endTimeMs": 141200,
-      "segmentIndex": 43,
-      "text": "But make your head move",
-      "words": [
-        {
-          "word": "But",
-          "startTimeMs": 139200,
-          "endTimeMs": 139500
-        },
-        {
-          "word": "make",
-          "startTimeMs": 139500,
-          "endTimeMs": 139800
-        },
-        {
-          "word": "your",
-          "startTimeMs": 139800,
-          "endTimeMs": 140200
-        },
-        {
-          "word": "head",
-          "startTimeMs": 140200,
-          "endTimeMs": 140600
-        },
-        {
-          "word": "move",
-          "startTimeMs": 140600,
-          "endTimeMs": 141200
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 141200,
-      "endTimeMs": 143300,
+      "startTimeMs": 136870,
+      "endTimeMs": 139070,
       "segmentIndex": 44,
       "text": "And where are my people?",
       "words": [
         {
           "word": "And",
-          "startTimeMs": 141300,
-          "endTimeMs": 141500
+          "startTimeMs": 136870,
+          "endTimeMs": 137000
         },
         {
           "word": "where",
-          "startTimeMs": 141500,
-          "endTimeMs": 141900
+          "startTimeMs": 137000,
+          "endTimeMs": 137400
         },
         {
           "word": "are",
-          "startTimeMs": 141900,
-          "endTimeMs": 142200
+          "startTimeMs": 137400,
+          "endTimeMs": 137800
         },
         {
           "word": "my",
-          "startTimeMs": 142200,
-          "endTimeMs": 142500
+          "startTimeMs": 137800,
+          "endTimeMs": 138100
         },
         {
           "word": "people?",
-          "startTimeMs": 142500,
-          "endTimeMs": 143300
+          "startTimeMs": 138100,
+          "endTimeMs": 139070
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 143300,
-      "endTimeMs": 145300,
+      "startTimeMs": 139070,
+      "endTimeMs": 141540,
       "segmentIndex": 45,
+      "text": "Mais fais bouger la tête",
+      "words": [
+        {
+          "word": "Mais",
+          "startTimeMs": 139070,
+          "endTimeMs": 139300
+        },
+        {
+          "word": "fais",
+          "startTimeMs": 139300,
+          "endTimeMs": 139600
+        },
+        {
+          "word": "bouger",
+          "startTimeMs": 139600,
+          "endTimeMs": 140100
+        },
+        {
+          "word": "la",
+          "startTimeMs": 140100,
+          "endTimeMs": 140300
+        },
+        {
+          "word": "tête",
+          "startTimeMs": 140300,
+          "endTimeMs": 141540
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 141540,
+      "endTimeMs": 143780,
+      "segmentIndex": 46,
+      "text": "And where are my people?",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 141540,
+          "endTimeMs": 141800
+        },
+        {
+          "word": "where",
+          "startTimeMs": 141800,
+          "endTimeMs": 142200
+        },
+        {
+          "word": "are",
+          "startTimeMs": 142200,
+          "endTimeMs": 142600
+        },
+        {
+          "word": "my",
+          "startTimeMs": 142600,
+          "endTimeMs": 142900
+        },
+        {
+          "word": "people?",
+          "startTimeMs": 142900,
+          "endTimeMs": 143780
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 143780,
+      "endTimeMs": 144670,
+      "segmentIndex": 47,
       "text": "Say yeah, yeah, yeah",
       "words": [
         {
           "word": "Say",
-          "startTimeMs": 143400,
-          "endTimeMs": 143700
+          "startTimeMs": 143780,
+          "endTimeMs": 144000
         },
         {
           "word": "yeah,",
-          "startTimeMs": 143700,
+          "startTimeMs": 144000,
           "endTimeMs": 144200
         },
         {
           "word": "yeah,",
           "startTimeMs": 144200,
-          "endTimeMs": 144700
+          "endTimeMs": 144400
         },
         {
           "word": "yeah",
-          "startTimeMs": 144700,
-          "endTimeMs": 145300
+          "startTimeMs": 144400,
+          "endTimeMs": 144670
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 145300,
-      "endTimeMs": 147800,
-      "segmentIndex": 46,
-      "text": "One, two, three, leggo!",
+      "startTimeMs": 144670,
+      "endTimeMs": 146500,
+      "segmentIndex": 48,
+      "text": "One, two, three, leggo! (Oh, say yes)",
       "words": [
         {
           "word": "One,",
-          "startTimeMs": 145400,
-          "endTimeMs": 145800
+          "startTimeMs": 144670,
+          "endTimeMs": 144900
         },
         {
           "word": "two,",
-          "startTimeMs": 145800,
-          "endTimeMs": 146300
+          "startTimeMs": 144900,
+          "endTimeMs": 145200
         },
         {
           "word": "three,",
-          "startTimeMs": 146300,
-          "endTimeMs": 146800
+          "startTimeMs": 145200,
+          "endTimeMs": 145500
         },
         {
           "word": "leggo!",
-          "startTimeMs": 146800,
-          "endTimeMs": 147800
+          "startTimeMs": 145500,
+          "endTimeMs": 145900
+        },
+        {
+          "word": "(Oh,",
+          "startTimeMs": 145900,
+          "endTimeMs": 146100
+        },
+        {
+          "word": "say",
+          "startTimeMs": 146100,
+          "endTimeMs": 146200
+        },
+        {
+          "word": "yes)",
+          "startTimeMs": 146200,
+          "endTimeMs": 146500
         }
       ]
     },
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 147800,
-      "endTimeMs": 160000,
-      "segmentIndex": 47,
-      "cueText": "(Oh, say yes) [Drop]"
-    },
-    {
       "type": "LYRIC",
-      "startTimeMs": 160000,
-      "endTimeMs": 161800,
-      "segmentIndex": 48,
-      "text": "Worldwide",
+      "startTimeMs": 160180,
+      "endTimeMs": 163530,
+      "segmentIndex": 49,
+      "text": "Worldwide, Willy William",
       "words": [
         {
-          "word": "Worldwide",
-          "startTimeMs": 160500,
-          "endTimeMs": 161800
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 161800,
-      "endTimeMs": 163500,
-      "segmentIndex": 49,
-      "text": "Willy William",
-      "words": [
+          "word": "Worldwide,",
+          "startTimeMs": 160180,
+          "endTimeMs": 161000
+        },
         {
           "word": "Willy",
-          "startTimeMs": 161900,
-          "endTimeMs": 162600
+          "startTimeMs": 161000,
+          "endTimeMs": 161500
         },
         {
           "word": "William",
-          "startTimeMs": 162600,
-          "endTimeMs": 163500
+          "startTimeMs": 161500,
+          "endTimeMs": 163530
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 163500,
-      "endTimeMs": 165500,
+      "startTimeMs": 163530,
+      "endTimeMs": 165130,
       "segmentIndex": 50,
       "text": "J Balvin, man",
       "words": [
         {
           "word": "J",
-          "startTimeMs": 163600,
-          "endTimeMs": 163900
+          "startTimeMs": 163530,
+          "endTimeMs": 163800
         },
         {
           "word": "Balvin,",
-          "startTimeMs": 163900,
-          "endTimeMs": 164400
+          "startTimeMs": 163800,
+          "endTimeMs": 164300
         },
         {
           "word": "man",
-          "startTimeMs": 164400,
-          "endTimeMs": 165500
+          "startTimeMs": 164300,
+          "endTimeMs": 165130
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 165500,
-      "endTimeMs": 170000,
+      "startTimeMs": 165130,
+      "endTimeMs": 167380,
       "segmentIndex": 51,
-      "text": "Uh-huh, uh-huh, uh-huh, uh-huh",
+      "text": "Uh-huh",
       "words": [
         {
           "word": "Uh-huh",
-          "startTimeMs": 165600,
-          "endTimeMs": 166400
-        },
-        {
-          "word": "uh-huh",
-          "startTimeMs": 166500,
-          "endTimeMs": 167300
-        },
-        {
-          "word": "uh-huh",
-          "startTimeMs": 167400,
-          "endTimeMs": 168200
-        },
-        {
-          "word": "uh-huh",
-          "startTimeMs": 168300,
-          "endTimeMs": 170000
+          "startTimeMs": 165130,
+          "endTimeMs": 165800
         }
       ]
     },
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 170000,
-      "endTimeMs": 189000,
+      "type": "LYRIC",
+      "startTimeMs": 167380,
+      "endTimeMs": 169560,
       "segmentIndex": 52,
-      "cueText": "Outro"
+      "text": "Uh-huh",
+      "words": [
+        {
+          "word": "Uh-huh",
+          "startTimeMs": 167380,
+          "endTimeMs": 168000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 169560,
+      "endTimeMs": 171730,
+      "segmentIndex": 53,
+      "text": "Uh-huh",
+      "words": [
+        {
+          "word": "Uh-huh",
+          "startTimeMs": 169560,
+          "endTimeMs": 170200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 171730,
+      "endTimeMs": 174730,
+      "segmentIndex": 54,
+      "text": "Uh-huh",
+      "words": [
+        {
+          "word": "Uh-huh",
+          "startTimeMs": 171730,
+          "endTimeMs": 172500
+        }
+      ]
     }
   ]
 }
