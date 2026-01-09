@@ -1,6 +1,24 @@
 import { Type } from "@google/genai";
 import { KaraokeApiResponse, KaraokeData, VocabularyItem } from '../types';
 
+// Model tier type - exported for use in App.tsx
+export type GeminiModelTier = 'gemini-2.5' | 'gemini-3-preview';
+
+// Get model names based on selected tier
+const getModelNames = (tier: GeminiModelTier) => {
+  if (tier === 'gemini-3-preview') {
+    return {
+      pro: 'gemini-3-pro-preview',
+      flash: 'gemini-3-flash-preview',
+    };
+  }
+  // Default to stable 2.5 models
+  return {
+    pro: 'gemini-2.5-pro-preview-06-05',
+    flash: 'gemini-2.5-flash-preview-05-20',
+  };
+};
+
 // Response type from our proxy endpoint
 interface GeminiProxyResponse {
   text: string;
@@ -365,10 +383,12 @@ export const generateKaraokeData = async (
   translatedLyrics: string,
   languageFlow: 'es-en' | 'en-es',
   onStatusUpdate: (message: string) => void,
+  modelTier: GeminiModelTier = 'gemini-2.5',
 ): Promise<KaraokeApiResponse> => {
   const isEsToEn = languageFlow === 'es-en';
   const originalLangName = isEsToEn ? 'Spanish' : 'English';
   const translatedLangName = isEsToEn ? 'English' : 'Spanish';
+  const models = getModelNames(modelTier);
 
   try {
     // --- STEP 1: Generate accurately timed data for the original language ---
@@ -377,7 +397,7 @@ export const generateKaraokeData = async (
     const primaryPrompt = buildSingleLanguagePrompt(originalLyrics, originalLangName);
     const primaryTextPart = { text: primaryPrompt };
 
-    const primaryModel = 'gemini-3-pro-preview';
+    const primaryModel = models.pro;
 
     onStatusUpdate(`Step 1/2: Analyzing audio waveform and aligning ${originalLangName} lyrics. This is the longest step and may take up to 5 minutes...`);
 
@@ -422,7 +442,7 @@ export const generateKaraokeData = async (
     onStatusUpdate(`Step 2/2: Mapping ${translatedLangName} translation onto synchronized timeline...`);
 
     const translationPrompt = buildTranslationAlignmentPrompt(originalTimedData, translatedLyrics, originalLangName, translatedLangName);
-    const translationModel = 'gemini-3-pro-preview';
+    const translationModel = models.pro;
 
     const translationApiCall = () => callGeminiProxy(
       translationModel,
@@ -479,7 +499,9 @@ export const refineKaraokeData = async (
   karaokeDataToRefine: KaraokeData,
   languageName: string,
   onStatusUpdate: (message: string) => void,
+  modelTier: GeminiModelTier = 'gemini-2.5',
 ): Promise<KaraokeData> => {
+  const models = getModelNames(modelTier);
   try {
     onStatusUpdate('Preparing audio for analysis...');
     const audioPart = await fileToGenerativePart(audioFile);
@@ -488,7 +510,7 @@ export const refineKaraokeData = async (
     const refinementPrompt = buildRefinementPrompt(karaokeDataToRefine, languageName);
     const textPart = { text: refinementPrompt };
 
-    const model = 'gemini-3-pro-preview';
+    const model = models.pro;
     onStatusUpdate(`Sending data to AI for quality review. This can take several minutes...`);
 
     const apiCall = () => callGeminiProxy(
@@ -544,7 +566,9 @@ export const refineTranslatedKaraokeData = async (
   translatedLangName: string,
   originalLangName: string,
   onStatusUpdate: (message: string) => void,
+  modelTier: GeminiModelTier = 'gemini-2.5',
 ): Promise<KaraokeData> => {
+  const models = getModelNames(modelTier);
   try {
     onStatusUpdate('Preparing audio for alignment...');
     const audioPart = await fileToGenerativePart(audioFile);
@@ -558,7 +582,7 @@ export const refineTranslatedKaraokeData = async (
     );
     const textPart = { text: refinementPrompt };
 
-    const model = 'gemini-3-pro-preview';
+    const model = models.pro;
     onStatusUpdate(`Sending data to AI for timing alignment. This can take several minutes...`);
 
     const apiCall = () => callGeminiProxy(
@@ -610,9 +634,11 @@ export const refineTranslatedKaraokeData = async (
 export const translateLyrics = async (
   sourceText: string,
   sourceLang: 'es' | 'en',
-  targetLang: 'es' | 'en'
+  targetLang: 'es' | 'en',
+  modelTier: GeminiModelTier = 'gemini-2.5',
 ): Promise<string> => {
-  const model = 'gemini-3-flash-preview';
+  const models = getModelNames(modelTier);
+  const model = models.flash;
 
   const sourceLangName = sourceLang === 'es' ? 'Spanish' : 'English';
   const targetLangName = targetLang === 'en' ? 'English' : 'Spanish';
@@ -653,8 +679,10 @@ Translated Lyrics:
 export const generateVocabularyList = async (
   spanishKaraokeData: KaraokeData,
   englishKaraokeData: KaraokeData,
+  modelTier: GeminiModelTier = 'gemini-2.5',
 ): Promise<VocabularyItem[]> => {
-  const model = 'gemini-3-flash-preview';
+  const models = getModelNames(modelTier);
+  const model = models.flash;
 
   const prompt = `
 You are an expert cultural linguist, specializing in teaching the nuances of modern Spanish slang and idioms to English speakers through popular music.
@@ -918,12 +946,14 @@ export const refineMarkedSegments = async (
   markedSegmentIndices: number[],
   languageName: string,
   onStatusUpdate: (message: string) => void,
-  referenceData?: KaraokeData
+  referenceData?: KaraokeData,
+  modelTier: GeminiModelTier = 'gemini-2.5',
 ): Promise<KaraokeData> => {
   if (markedSegmentIndices.length === 0) {
     return karaokeDataToRefine; // Nothing to refine
   }
 
+  const models = getModelNames(modelTier);
   try {
     onStatusUpdate('Preparing audio for focused analysis...');
     const audioPart = await fileToGenerativePart(audioFile);
@@ -937,7 +967,7 @@ export const refineMarkedSegments = async (
     );
     const textPart = { text: refinementPrompt };
 
-    const model = 'gemini-3-pro-preview';
+    const model = models.pro;
     onStatusUpdate(`Analyzing marked segments. This may take several minutes...`);
 
     const apiCall = () => callGeminiProxy(

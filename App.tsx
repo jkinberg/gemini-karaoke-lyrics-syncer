@@ -7,6 +7,7 @@ import {
   refineKaraokeData,
   refineTranslatedKaraokeData,
   refineMarkedSegments,
+  GeminiModelTier,
 } from './services/geminiService';
 import {
   validateKaraokeDataPair,
@@ -142,6 +143,7 @@ const App: React.FC = () => {
     const [spanishLyrics, setSpanishLyrics] = useState<string>('');
     const [englishLyrics, setEnglishLyrics] = useState<string>('');
     const [languageFlow, setLanguageFlow] = useState<'es-en' | 'en-es'>('es-en');
+    const [modelTier, setModelTier] = useState<GeminiModelTier>('gemini-2.5');
 
     // UI State
     const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -290,7 +292,8 @@ const App: React.FC = () => {
             const translated = await translateLyrics(
                 sourceText,
                 isEsToEn ? 'es' : 'en',
-                isEsToEn ? 'en' : 'es'
+                isEsToEn ? 'en' : 'es',
+                modelTier
             );
             if (isEsToEn) {
                 setEnglishLyrics(translated);
@@ -344,7 +347,7 @@ const App: React.FC = () => {
             const originalLyrics = languageFlow === 'es-en' ? spanishLyrics : englishLyrics;
             const translatedLyrics = languageFlow === 'es-en' ? englishLyrics : spanishLyrics;
 
-            const result = await generateKaraokeData(audioFile, originalLyrics, translatedLyrics, languageFlow, onStatusUpdate);
+            const result = await generateKaraokeData(audioFile, originalLyrics, translatedLyrics, languageFlow, onStatusUpdate, modelTier);
             setKaraokeData(result);
             setActiveTab('preview');
 
@@ -377,7 +380,7 @@ const App: React.FC = () => {
         setStatusMessage('Extracting vocabulary from lyrics...');
 
         try {
-            const vocab = await generateVocabularyList(karaokeData.spanish, karaokeData.english);
+            const vocab = await generateVocabularyList(karaokeData.spanish, karaokeData.english, modelTier);
             setVocabularyList(vocab);
             setStatusMessage('Vocabulary extraction complete!');
             setActiveTab('vocab');
@@ -428,12 +431,19 @@ const App: React.FC = () => {
                         <FileUploader onFileSelect={setAudioFile} selectedFile={audioFile} />
                         {audioFile && (
                             <>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
                                     <div>
                                         <label className="block text-sm font-medium text-textSecondary mb-1">Original Language Flow</label>
                                         <select value={languageFlow} onChange={(e) => setLanguageFlow(e.target.value as 'es-en' | 'en-es')} className="w-full p-3 bg-black/20 text-textPrimary rounded-lg border border-white/20 focus:ring-2 focus:ring-secondary focus:border-secondary">
                                             <option value="es-en">Spanish → English</option>
                                             <option value="en-es">English → Spanish</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-textSecondary mb-1">AI Model</label>
+                                        <select value={modelTier} onChange={(e) => setModelTier(e.target.value as GeminiModelTier)} className="w-full p-3 bg-black/20 text-textPrimary rounded-lg border border-white/20 focus:ring-2 focus:ring-secondary focus:border-secondary">
+                                            <option value="gemini-2.5">Gemini 2.5 (Stable)</option>
+                                            <option value="gemini-3-preview">Gemini 3 (Preview)</option>
                                         </select>
                                     </div>
                                     <ActionButton onClick={handleTranslate} disabled={isTranslating} icon="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z">
@@ -485,8 +495,8 @@ const App: React.FC = () => {
                         )}
 
                         <div className="mt-2">
-                            {activeTab === 'preview' && audioUrl && <KaraokePreview karaokeData={karaokeData} audioUrl={audioUrl} markedSegments={markedSegments} onToggleSegmentMark={handleToggleSegmentMark} onClearMarkedSegments={handleClearMarkedSegments} playRequest={playRequest} onPlayRequestComplete={() => setPlayRequest(null)} audioFile={audioFile} languageFlow={languageFlow} setKaraokeData={setKaraokeData} onValidationUpdate={setValidationReport} />}
-                            {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow} onValidationUpdate={setValidationReport} />}
+                            {activeTab === 'preview' && audioUrl && <KaraokePreview karaokeData={karaokeData} audioUrl={audioUrl} markedSegments={markedSegments} onToggleSegmentMark={handleToggleSegmentMark} onClearMarkedSegments={handleClearMarkedSegments} playRequest={playRequest} onPlayRequestComplete={() => setPlayRequest(null)} audioFile={audioFile} languageFlow={languageFlow} setKaraokeData={setKaraokeData} onValidationUpdate={setValidationReport} modelTier={modelTier} />}
+                            {activeTab === 'data' && <KaraokeDataDisplay karaokeData={karaokeData} setKaraokeData={setKaraokeData} audioFile={audioFile} languageFlow={languageFlow} onValidationUpdate={setValidationReport} modelTier={modelTier} />}
                             {activeTab === 'vocab' && (
                                 vocabularyList
                                     ? <VocabularyDisplay vocabularyList={vocabularyList} onPlayRequest={setPlayRequest} />
@@ -738,6 +748,7 @@ interface KaraokePreviewProps {
   languageFlow: 'es-en' | 'en-es';
   setKaraokeData: (data: KaraokeApiResponse) => void;
   onValidationUpdate?: (report: ValidationReport) => void;
+  modelTier: GeminiModelTier;
 }
 
 
@@ -752,6 +763,7 @@ const KaraokePreview: React.FC<KaraokePreviewProps> = ({
     audioFile,
     languageFlow,
     setKaraokeData,
+    modelTier,
     onValidationUpdate
 }) => {
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -981,6 +993,7 @@ const KaraokePreview: React.FC<KaraokePreviewProps> = ({
                 setIsRefining={setIsRefiningSegments}
                 setRefineStatus={setRefineStatus}
                 onValidationUpdate={onValidationUpdate}
+                modelTier={modelTier}
               />
             )}
 
@@ -1020,6 +1033,7 @@ interface SegmentRefinementPanelProps {
   setIsRefining: (value: boolean) => void;
   setRefineStatus: (status: string) => void;
   onValidationUpdate?: (report: ValidationReport) => void;
+  modelTier: GeminiModelTier;
 }
 
 const SegmentRefinementPanel: React.FC<SegmentRefinementPanelProps> = ({
@@ -1034,7 +1048,8 @@ const SegmentRefinementPanel: React.FC<SegmentRefinementPanelProps> = ({
   setKaraokeData,
   setIsRefining,
   setRefineStatus,
-  onValidationUpdate
+  onValidationUpdate,
+  modelTier
 }) => {
   const markedIndices = Array.from(markedSegments).sort((a, b) => a - b);
 
@@ -1061,7 +1076,9 @@ const SegmentRefinementPanel: React.FC<SegmentRefinementPanelProps> = ({
         karaokeData[originalDataKey],
         markedIndices,
         originalLangName,
-        (status) => setRefineStatus(`${originalLangName}: ${status}`)
+        (status) => setRefineStatus(`${originalLangName}: ${status}`),
+        undefined,
+        modelTier
       );
 
       // Update with refined original data
@@ -1076,7 +1093,8 @@ const SegmentRefinementPanel: React.FC<SegmentRefinementPanelProps> = ({
         markedIndices,
         translatedLangName,
         (status) => setRefineStatus(`${translatedLangName}: ${status}`),
-        refinedOriginalData // Pass the refined original as reference for timing
+        refinedOriginalData, // Pass the refined original as reference for timing
+        modelTier
       );
 
       const finalData = {
@@ -1270,9 +1288,10 @@ interface KaraokeDataDisplayProps {
     audioFile: File | null;
     languageFlow: 'es-en' | 'en-es';
     onValidationUpdate?: (report: ValidationReport) => void;
+    modelTier: GeminiModelTier;
 }
 
-const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, setKaraokeData, audioFile, languageFlow, onValidationUpdate }) => {
+const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, setKaraokeData, audioFile, languageFlow, onValidationUpdate, modelTier }) => {
   const [isRefining, setIsRefining] = useState(false);
   const [refineStatus, setRefineStatus] = useState('');
   const [refineProgress, setRefineProgress] = useState(0);
@@ -1302,7 +1321,7 @@ const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, se
       const refinedOriginalData = await refineKaraokeData(audioFile, originalDataToRefine, originalLangName, (status) => {
         setRefineStatus(`Step 1/2: Refining ${originalLangName} - ${status}`);
         if (status.toLowerCase().includes('sending data')) setRefineProgress(25);
-      });
+      }, modelTier);
       setRefineProgress(50);
       
       const updatedDataAfterStep1 = { ...karaokeData, [originalDataKey]: refinedOriginalData };
@@ -1315,15 +1334,15 @@ const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, se
       setRefineProgress(60);
       const translatedDataToRefine = karaokeData[translatedDataKey];
       const refinedTranslatedData = await refineTranslatedKaraokeData(
-        audioFile, 
-        translatedDataToRefine, 
-        refinedOriginalData, 
+        audioFile,
+        translatedDataToRefine,
+        refinedOriginalData,
         translatedLangName,
         originalLangName,
         (status) => {
           setRefineStatus(`Step 2/2: Aligning ${translatedLangName} - ${status}`);
           if (status.toLowerCase().includes('sending data')) setRefineProgress(75);
-      });
+      }, modelTier);
       
       const finalData = {
         ...updatedDataAfterStep1,
