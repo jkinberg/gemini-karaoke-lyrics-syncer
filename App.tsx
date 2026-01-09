@@ -147,7 +147,7 @@ const App: React.FC = () => {
     const [spanishLyrics, setSpanishLyrics] = useState<string>('');
     const [englishLyrics, setEnglishLyrics] = useState<string>('');
     const [languageFlow, setLanguageFlow] = useState<'es-en' | 'en-es'>('es-en');
-    const [modelTier, setModelTier] = useState<GeminiModelTier>('gemini-2.5');
+    const [modelTier, setModelTier] = useState<GeminiModelTier>('gemini-3-preview');
 
     // LRC Mode - auto-detected when Spanish lyrics contain LRC timestamps
     const [lrcContent, setLrcContent] = useState<string>('');
@@ -528,8 +528,8 @@ const App: React.FC = () => {
                                     <div>
                                         <label className="block text-sm font-medium text-textSecondary mb-1">AI Model</label>
                                         <select value={modelTier} onChange={(e) => setModelTier(e.target.value as GeminiModelTier)} className="w-full p-3 bg-black/20 text-textPrimary rounded-lg border border-white/20 focus:ring-2 focus:ring-secondary focus:border-secondary">
+                                            <option value="gemini-3-preview">Gemini 3 (Recommended)</option>
                                             <option value="gemini-2.5">Gemini 2.5 (Stable)</option>
-                                            <option value="gemini-3-preview">Gemini 3 (Preview)</option>
                                         </select>
                                     </div>
                                     {!isLrcMode && (
@@ -538,41 +538,68 @@ const App: React.FC = () => {
                                         </ActionButton>
                                     )}
                                 </div>
-                                {/* LRC Mode Indicator */}
+                                {/* LRC Mode Info */}
                                 {isLrcMode && parsedLrcInfo && (
-                                    <div className="flex items-center gap-3 p-4 bg-secondary/20 border border-secondary/50 rounded-lg">
-                                        <div className="flex items-center gap-2">
-                                            <span className="px-2 py-1 bg-secondary text-background text-xs font-bold rounded">LRC MODE</span>
-                                            <span className="text-textPrimary font-medium">
-                                                {parsedLrcInfo.lineCount} lines detected
+                                    <div className="flex flex-wrap items-center gap-3 p-3 bg-secondary/10 border border-secondary/30 rounded-lg text-sm">
+                                        <span className="text-textPrimary">
+                                            <span className="font-medium">{parsedLrcInfo.lineCount} lines</span> with timestamps
+                                        </span>
+                                        {(parsedLrcInfo.metadata.title || parsedLrcInfo.metadata.artist) && (
+                                            <span className="text-textSecondary">
+                                                {parsedLrcInfo.metadata.title && `"${parsedLrcInfo.metadata.title}"`}
+                                                {parsedLrcInfo.metadata.title && parsedLrcInfo.metadata.artist && ' by '}
+                                                {parsedLrcInfo.metadata.artist}
                                             </span>
-                                        </div>
-                                        <div className="text-textSecondary text-sm">
-                                            {parsedLrcInfo.metadata.title && <span className="mr-2">"{parsedLrcInfo.metadata.title}"</span>}
-                                            {parsedLrcInfo.metadata.artist && <span>by {parsedLrcInfo.metadata.artist}</span>}
-                                        </div>
-                                        <div className="ml-auto text-xs text-textSecondary">
-                                            Translation will be auto-generated
-                                        </div>
+                                        )}
+                                        <span className="ml-auto text-textSecondary">
+                                            English translation will be auto-generated
+                                        </span>
                                     </div>
                                 )}
 
                                 <div className={`grid gap-6 ${isLrcMode ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'}`}>
                                     <div>
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <label className="block text-sm font-medium text-textSecondary">
-                                                {isLrcMode ? 'Spanish LRC Content' : 'Spanish Lyrics'}
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center gap-2">
+                                                <label className="block text-sm font-medium text-textSecondary">
+                                                    {isLrcMode ? 'LRC Content' : 'Lyrics'}
+                                                </label>
+                                                {isLrcMode && (
+                                                    <span className="px-2 py-0.5 bg-secondary/20 text-secondary text-xs font-medium rounded">
+                                                        LRC detected
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <label className="flex items-center gap-2 px-3 py-1.5 bg-secondary/20 hover:bg-secondary/30 text-secondary text-sm font-medium rounded-lg cursor-pointer transition-colors">
+                                                <Icon path="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" className="w-4 h-4" />
+                                                Upload .LRC
+                                                <input
+                                                    type="file"
+                                                    accept=".lrc,.txt"
+                                                    className="hidden"
+                                                    onChange={(e) => {
+                                                        const file = e.target.files?.[0];
+                                                        if (file) {
+                                                            const reader = new FileReader();
+                                                            reader.onload = (event) => {
+                                                                const content = event.target?.result as string;
+                                                                setSpanishLyrics(content);
+                                                            };
+                                                            reader.readAsText(file);
+                                                        }
+                                                    }}
+                                                />
                                             </label>
-                                            {!isLrcMode && (
-                                                <span className="text-xs text-textSecondary/70">
-                                                    (Paste LRC format for enhanced timing)
-                                                </span>
-                                            )}
                                         </div>
+                                        {!isLrcMode && (
+                                            <p className="text-xs text-textSecondary/70 mb-2">
+                                                For best results, paste or upload an <span className="text-secondary font-medium">.LRC file</span> with timestamps like <code className="bg-black/30 px-1 rounded">[00:10.14] lyrics here</code>
+                                            </p>
+                                        )}
                                         <textarea
                                             value={spanishLyrics}
                                             onChange={(e) => setSpanishLyrics(e.target.value)}
-                                            placeholder={isLrcMode ? "[00:10.14] Ey, Tití me preguntó..." : "[Intro]..."}
+                                            placeholder="[00:10.14] Paste LRC content here, or click 'Upload .LRC' above..."
                                             className={`w-full h-64 p-3 bg-black/20 text-textPrimary rounded-lg border focus:ring-2 focus:ring-secondary focus:border-secondary resize-none font-mono text-sm leading-6 ${
                                                 isLrcMode ? 'border-secondary/50' : 'border-white/20'
                                             }`}
@@ -590,7 +617,7 @@ const App: React.FC = () => {
                               disabled={isGenerateDisabled}
                               className={`w-full sm:w-auto px-12 py-4 text-lg font-bold ${isGenerateDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
                               icon="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 22.5l-.648-1.938a3.375 3.375 0 00-2.456-2.456L11.25 18l1.938-.648a3.375 3.375 0 002.456-2.456L16.25 13l.648 1.938a3.375 3.375 0 002.456 2.456L21 18l-1.938.648a3.375 3.375 0 00-2.456 2.456z">
-                                {isLoading ? 'Generating...' : (isLrcMode ? 'Generate from LRC' : 'Generate Synced Files')}
+                                {isLoading ? 'Generating...' : (isLrcMode ? 'Generate Karaoke' : 'Generate (LRC recommended)')}
                             </ActionButton>
                             <button onClick={clearAll} className="text-textSecondary hover:text-textPrimary transition">Clear All</button>
                         </div>
