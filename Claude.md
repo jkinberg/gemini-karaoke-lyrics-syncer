@@ -19,6 +19,7 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 ├── server.ts            # Express server with /api/gemini proxy
 ├── services/
 │   ├── geminiService.ts # Client-side API calls, auto-refinement logic
+│   ├── lrcParser.ts     # LRC file parsing and format detection
 │   └── validationService.ts # Quality validation, problem detection
 ├── types.ts             # TypeScript type definitions
 ├── index.tsx            # React entry point
@@ -61,9 +62,12 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 - `KaraokeSegment` - Individual lyric/instrumental segment with word-level timing
 - `KaraokeWord` - Single word with startTimeMs/endTimeMs
 - `VocabularyItem` - Extracted cultural vocabulary with audio timecodes
+- `ParsedLrc` - Parsed LRC file with line-level timestamps
+- `LrcLine` - Single LRC line with timing and text
 
 ## Core Workflow
 
+### Standard Mode
 1. User uploads audio + provides lyrics in source language
 2. User selects AI model tier (Gemini 2.5 stable or Gemini 3 preview)
 3. Optional: Auto-translate via Gemini Flash
@@ -73,6 +77,14 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 7. Optional: **Auto-Fix Issues** - automatically refines problem segments identified by validation
 8. Optional: Manual segment refinement or timing adjustments
 9. Export as JSON or zip archive
+
+### LRC Mode (Recommended when LRC available)
+1. User uploads audio + pastes LRC content (auto-detected by `[mm:ss.xx]` format)
+2. LRC provides line-level timing anchors (±500ms flexibility)
+3. Auto-translate Spanish lyrics to English via Gemini Flash
+4. Gemini Pro distributes words within each LRC segment boundary
+5. English words aligned to same segment structure
+6. Higher accuracy due to constrained timing problem
 
 ## Architecture Notes
 
@@ -86,6 +98,7 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 
 ## Documentation
 
+- `docs/tech-spec-lrc-based-synchronization.md` - LRC file support for improved timing accuracy
 - `docs/tech-spec-security-and-deployment.md` - API key security fix and Cloud Run CI/CD setup
 - `docs/tech-spec-automated-quality-validation.md` - Automated QA for generated karaoke data:
   - Phase 1-3: Core validation logic and UI integration
@@ -96,6 +109,7 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 
 ## Key Features
 
+- **LRC-Based Sync** - Use LRC files as timing anchors for significantly improved word-level accuracy
 - **Model Selection** - Switch between Gemini 2.5 (stable, reliable) and Gemini 3 (preview, experimental)
 - **Auto Validation** - Quality score (0-100) with error/warning detection after generation
 - **Auto-Fix Issues** - One-click automatic refinement of problem segments (iterates up to 3x until score >= 85)

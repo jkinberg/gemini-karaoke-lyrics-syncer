@@ -1,9 +1,10 @@
 # Technical Spec: LRC-Based Karaoke Synchronization
 
-**Status:** Draft
+**Status:** Complete
 **Created:** 2026-01-08
+**Updated:** 2026-01-09
 **Priority:** High
-**Branch:** `feature/lrc-based-sync` (to be created)
+**Branch:** `feature/lrc-based-sync`
 
 ---
 
@@ -15,6 +16,60 @@ The current approach of sending raw lyrics + audio to Gemini for full-song synch
 2. **Inconsistent quality** - Same inputs produce varying quality scores
 3. **Long processing times** - Full song analysis takes 3-5+ minutes, prone to timeout
 4. **No anchor points** - AI must guess structure from scratch each time
+
+---
+
+## Implementation Summary
+
+### What Was Built
+
+1. **LRC Parser** (`services/lrcParser.ts`)
+   - `parseLrc(content)` - Parses LRC format into structured data with line-level timestamps
+   - `isLrcFormat(text)` - Auto-detects if pasted text is LRC format
+   - `extractLyricsText(parsedLrc)` - Extracts plain lyrics for translation
+   - `formatTimestamp(ms)` - Formats milliseconds for display
+   - Handles metadata tags (`[ti:Title]`, `[ar:Artist]`, etc.)
+   - Calculates end times from next line's start (last line gets +3000ms)
+
+2. **New Types** (`types.ts`)
+   - `LrcLine` - Single parsed line with startTimeMs, endTimeMs, text, wordCount
+   - `LrcMetadata` - Optional title, artist, album, length
+   - `ParsedLrc` - Collection of lines and metadata
+
+3. **LRC-Based Generation** (`services/geminiService.ts`)
+   - `buildLrcBasedPrompt(parsedLrc, langName)` - Creates prompt with LRC segments as anchors
+   - `generateKaraokeFromLrc(audioFile, lrcContent, langName, onStatusUpdate, modelTier)` - Generates word-level timing using LRC anchors
+   - `generateBilingualKaraokeFromLrc(audioFile, lrcContent, onStatusUpdate, modelTier)` - Full bilingual workflow: parse LRC → translate → generate Spanish timing → align English
+
+4. **UI Integration** (`App.tsx`)
+   - Auto-detection: When LRC format is detected in lyrics textarea, UI switches to "LRC MODE"
+   - Visual indicator: Blue "LRC MODE" badge when active
+   - Simplified workflow: English lyrics textarea hidden (translations generated automatically)
+   - Button text updates: "Generate Karaoke from LRC" when in LRC mode
+
+5. **Partial Output Refinement** (`services/geminiService.ts`)
+   - Refactored auto-correction to return only refined segments instead of full song data
+   - `calculateFocusArea()` - Identifies marked segments + context window
+   - `mergeRefinedSegments()` - Merges refined segments back with boundary adjustments
+   - Prevents JSON truncation issues with long songs (70+ segments)
+
+### Key Design Decisions
+
+| Decision | Choice | Rationale |
+|----------|--------|-----------|
+| LRC Input | Auto-detect in textarea | Simpler UX, no mode toggle needed |
+| Timestamp flexibility | ±500ms adjustment allowed | LRC timestamps aren't always perfect |
+| Processing | Single API call | Full song context, simpler implementation |
+| Instrumentals | Detected via gaps >5s | Automatic, no manual marking needed |
+| Translation | Gemini Flash | Fast, cost-effective for text translation |
+
+### Results
+
+- **Accuracy**: Significantly improved word-level timing accuracy
+- **Gemini 3 Pro**: Produces high-quality results without needing auto-correction
+- **User experience**: Simpler workflow when LRC files are available
+
+---
 
 ## Proposed Solution
 
@@ -426,15 +481,19 @@ The LRC-based approach is additive - it doesn't remove the existing raw lyrics a
 
 ---
 
-## Open Questions
+## Open Questions (Resolved)
 
 1. **Instrumental sections** - LRC files don't mark instrumentals. Should we auto-detect gaps > N seconds as instrumental?
+   - **Resolution:** Yes, gaps > 5 seconds are auto-detected as potential instrumentals. The Gemini prompt also instructs the AI to identify instrumental sections.
 
 2. **LRC accuracy** - What if the LRC itself has timing errors? Should we offer a "verify LRC timing" step?
+   - **Resolution:** Allow ±500ms flexibility in segment boundaries. The audio is treated as ground truth, and the AI can adjust timing within this tolerance.
 
 3. **Batch processing** - Should we process segments in batches (e.g., 10 at a time) to reduce per-request size?
+   - **Resolution:** Single API call for initial generation (full song context is valuable). Batch processing is a future optimization if needed.
 
 4. **LRC sources** - Should we integrate with LRC databases/APIs, or rely on user-provided files only?
+   - **Resolution:** User-provided only for now. Users can paste LRC content directly into the lyrics textarea.
 
 ---
 

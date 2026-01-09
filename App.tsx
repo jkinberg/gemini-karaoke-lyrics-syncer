@@ -8,9 +8,11 @@ import {
   refineTranslatedKaraokeData,
   refineMarkedSegments,
   autoRefineProblems,
+  generateBilingualKaraokeFromLrc,
   GeminiModelTier,
   AutoRefineProgress,
 } from './services/geminiService';
+import { isLrcFormat, parseLrc } from './services/lrcParser';
 import {
   validateKaraokeDataPair,
   getScoreInterpretation,
@@ -147,6 +149,18 @@ const App: React.FC = () => {
     const [languageFlow, setLanguageFlow] = useState<'es-en' | 'en-es'>('es-en');
     const [modelTier, setModelTier] = useState<GeminiModelTier>('gemini-2.5');
 
+    // LRC Mode - auto-detected when Spanish lyrics contain LRC timestamps
+    const [lrcContent, setLrcContent] = useState<string>('');
+    const isLrcMode = useMemo(() => isLrcFormat(spanishLyrics), [spanishLyrics]);
+    const parsedLrcInfo = useMemo(() => {
+        if (!isLrcMode) return null;
+        const parsed = parseLrc(spanishLyrics);
+        return {
+            lineCount: parsed.lines.length,
+            metadata: parsed.metadata,
+        };
+    }, [isLrcMode, spanishLyrics]);
+
     // UI State
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isTranslating, setIsTranslating] = useState<boolean>(false);
@@ -275,6 +289,7 @@ const App: React.FC = () => {
         setAudioFile(null);
         setSpanishLyrics('');
         setEnglishLyrics('');
+        setLrcContent('');
         setKaraokeData(null);
         setVocabularyList(null);
         setValidationReport(null);
@@ -320,9 +335,19 @@ const App: React.FC = () => {
             setError("Please provide an audio file.");
             return;
         }
-        if (!spanishLyrics || !englishLyrics) {
-            setError("Please provide both Spanish and English lyrics.");
-            return;
+
+        // In LRC mode, we only need the Spanish LRC content
+        // In standard mode, we need both Spanish and English lyrics
+        if (isLrcMode) {
+            if (!spanishLyrics) {
+                setError("Please provide LRC content.");
+                return;
+            }
+        } else {
+            if (!spanishLyrics || !englishLyrics) {
+                setError("Please provide both Spanish and English lyrics.");
+                return;
+            }
         }
 
         setIsLoading(true);
@@ -344,16 +369,31 @@ const App: React.FC = () => {
         try {
             const onStatusUpdate = (message: string) => {
                 setStatusMessage(message);
-                if (message.includes('Step 1/2')) setProgress(p => Math.max(p, 10));
+                if (message.includes('Step 1')) setProgress(p => Math.max(p, 10));
+                if (message.includes('Step 2')) setProgress(p => Math.max(p, 30));
+                if (message.includes('Step 3')) setProgress(p => Math.max(p, 50));
+                if (message.includes('Step 4')) setProgress(p => Math.max(p, 80));
                 if (message.includes('Analyzing')) setProgress(p => Math.max(p, 25));
-                if (message.includes('Step 2/2')) setProgress(p => Math.max(p, 80));
-                if (message.includes('Success')) setProgress(100);
+                if (message.includes('complete')) setProgress(100);
             };
 
-            const originalLyrics = languageFlow === 'es-en' ? spanishLyrics : englishLyrics;
-            const translatedLyrics = languageFlow === 'es-en' ? englishLyrics : spanishLyrics;
+            let result: KaraokeApiResponse;
 
-            const result = await generateKaraokeData(audioFile, originalLyrics, translatedLyrics, languageFlow, onStatusUpdate, modelTier);
+            if (isLrcMode) {
+                // Use LRC-based generation (auto-translates and generates bilingual)
+                result = await generateBilingualKaraokeFromLrc(
+                    audioFile,
+                    spanishLyrics,
+                    onStatusUpdate,
+                    modelTier
+                );
+            } else {
+                // Use standard generation
+                const originalLyrics = languageFlow === 'es-en' ? spanishLyrics : englishLyrics;
+                const translatedLyrics = languageFlow === 'es-en' ? englishLyrics : spanishLyrics;
+                result = await generateKaraokeData(audioFile, originalLyrics, translatedLyrics, languageFlow, onStatusUpdate, modelTier);
+            }
+
             setKaraokeData(result);
             setActiveTab('preview');
 
@@ -463,7 +503,9 @@ const App: React.FC = () => {
         }
     };
 
-    const isGenerateDisabled = isLoading || !audioFile || !spanishLyrics || !englishLyrics;
+    // In LRC mode, we only need audio + Spanish LRC content
+    // In standard mode, we need audio + both lyrics
+    const isGenerateDisabled = isLoading || !audioFile || !spanishLyrics || (!isLrcMode && !englishLyrics);
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-start p-4 sm:p-6 md:p-8 space-y-8">
@@ -490,13 +532,55 @@ const App: React.FC = () => {
                                             <option value="gemini-3-preview">Gemini 3 (Preview)</option>
                                         </select>
                                     </div>
-                                    <ActionButton onClick={handleTranslate} disabled={isTranslating} icon="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z">
-                                        {isTranslating ? 'Translating...' : `Translate to ${languageFlow === 'es-en' ? 'English' : 'Spanish'}`}
-                                    </ActionButton>
+                                    {!isLrcMode && (
+                                        <ActionButton onClick={handleTranslate} disabled={isTranslating} icon="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z">
+                                            {isTranslating ? 'Translating...' : `Translate to ${languageFlow === 'es-en' ? 'English' : 'Spanish'}`}
+                                        </ActionButton>
+                                    )}
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <LyricEditor value={spanishLyrics} onChange={setSpanishLyrics} placeholder="[Intro]..." lang="Spanish" />
-                                    <LyricEditor value={englishLyrics} onChange={setEnglishLyrics} placeholder="[Intro]..." lang="English" />
+                                {/* LRC Mode Indicator */}
+                                {isLrcMode && parsedLrcInfo && (
+                                    <div className="flex items-center gap-3 p-4 bg-secondary/20 border border-secondary/50 rounded-lg">
+                                        <div className="flex items-center gap-2">
+                                            <span className="px-2 py-1 bg-secondary text-background text-xs font-bold rounded">LRC MODE</span>
+                                            <span className="text-textPrimary font-medium">
+                                                {parsedLrcInfo.lineCount} lines detected
+                                            </span>
+                                        </div>
+                                        <div className="text-textSecondary text-sm">
+                                            {parsedLrcInfo.metadata.title && <span className="mr-2">"{parsedLrcInfo.metadata.title}"</span>}
+                                            {parsedLrcInfo.metadata.artist && <span>by {parsedLrcInfo.metadata.artist}</span>}
+                                        </div>
+                                        <div className="ml-auto text-xs text-textSecondary">
+                                            Translation will be auto-generated
+                                        </div>
+                                    </div>
+                                )}
+
+                                <div className={`grid gap-6 ${isLrcMode ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'}`}>
+                                    <div>
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <label className="block text-sm font-medium text-textSecondary">
+                                                {isLrcMode ? 'Spanish LRC Content' : 'Spanish Lyrics'}
+                                            </label>
+                                            {!isLrcMode && (
+                                                <span className="text-xs text-textSecondary/70">
+                                                    (Paste LRC format for enhanced timing)
+                                                </span>
+                                            )}
+                                        </div>
+                                        <textarea
+                                            value={spanishLyrics}
+                                            onChange={(e) => setSpanishLyrics(e.target.value)}
+                                            placeholder={isLrcMode ? "[00:10.14] Ey, Tití me preguntó..." : "[Intro]..."}
+                                            className={`w-full h-64 p-3 bg-black/20 text-textPrimary rounded-lg border focus:ring-2 focus:ring-secondary focus:border-secondary resize-none font-mono text-sm leading-6 ${
+                                                isLrcMode ? 'border-secondary/50' : 'border-white/20'
+                                            }`}
+                                        />
+                                    </div>
+                                    {!isLrcMode && (
+                                        <LyricEditor value={englishLyrics} onChange={setEnglishLyrics} placeholder="[Intro]..." lang="English" />
+                                    )}
                                 </div>
                             </>
                         )}
@@ -506,7 +590,7 @@ const App: React.FC = () => {
                               disabled={isGenerateDisabled}
                               className={`w-full sm:w-auto px-12 py-4 text-lg font-bold ${isGenerateDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
                               icon="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 22.5l-.648-1.938a3.375 3.375 0 00-2.456-2.456L11.25 18l1.938-.648a3.375 3.375 0 002.456-2.456L16.25 13l.648 1.938a3.375 3.375 0 002.456 2.456L21 18l-1.938.648a3.375 3.375 0 00-2.456 2.456z">
-                                {isLoading ? 'Generating...' : 'Generate Synced Files'}
+                                {isLoading ? 'Generating...' : (isLrcMode ? 'Generate from LRC' : 'Generate Synced Files')}
                             </ActionButton>
                             <button onClick={clearAll} className="text-textSecondary hover:text-textPrimary transition">Clear All</button>
                         </div>

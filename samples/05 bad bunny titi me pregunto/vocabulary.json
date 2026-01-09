@@ -1,0 +1,135 @@
+[
+  {
+    "term": {
+      "spanish": "Tití",
+      "english": "Auntie"
+    },
+    "definition": "A colloquial, affectionate term for 'aunt' (tía) widely used in Puerto Rico and the Dominican Republic. It reflects the close-knit family structures where aunts play a significant role in questioning young men about their love lives.",
+    "difficulty": 4,
+    "example": {
+      "spanish": "Ey, Tití me preguntó si tengo mucha' novia'",
+      "english": "Hey, Auntie asked me if I have many girlfriends"
+    },
+    "highlight": {
+      "spanish": "Tití",
+      "english": "Auntie"
+    },
+    "startTimeMs": 41740,
+    "endTimeMs": 45520,
+    "segmentIndex": 1
+  },
+  {
+    "term": {
+      "spanish": "uva bombón",
+      "english": "total babe"
+    },
+    "definition": "Dominican slang used to describe something or someone of excellent quality, particularly a very attractive woman. 'Uva' (grape) implies something 'fine' or 'fresh,' and 'bombón' refers to a sweet treat.",
+    "difficulty": 9,
+    "example": {
+      "spanish": "Una dominicana que es uva bombón",
+      "english": "A Dominican girl who's a total babe"
+    },
+    "highlight": {
+      "spanish": "uva bombón",
+      "english": "total babe"
+    },
+    "startTimeMs": 95940,
+    "endTimeMs": 98210,
+    "segmentIndex": 23
+  },
+  {
+    "term": {
+      "spanish": "cabrón",
+      "english": "the shit"
+    },
+    "definition": "While often an insult (jerk/bastard), in Puerto Rico and many Caribbean regions, it's frequently used to mean 'awesome,' 'cool,' or 'the best' when describing an object, situation, or skill.",
+    "difficulty": 7,
+    "example": {
+      "spanish": "Y dice que mi bicho está cabrón",
+      "english": "And says my dick is the shit"
+    },
+    "highlight": {
+      "spanish": "cabrón",
+      "english": "the shit"
+    },
+    "startTimeMs": 102310,
+    "endTimeMs": 104520,
+    "segmentIndex": 26
+  },
+  {
+    "term": {
+      "spanish": "pámpara",
+      "english": "vibe"
+    },
+    "definition": "A Dominican slang term popularized by urban music. It essentially means 'it's lit,' 'the vibe,' or indicates that something is going well or looks good. It's used as an exclamation of success or style.",
+    "difficulty": 10,
+    "example": {
+      "spanish": "Tití me preguntó-tó-tó-tó-tó-tó-tó (qué pámpara)",
+      "english": "Auntie asked me-me-me-me-me-me-me (what a vibe)"
+    },
+    "highlight": {
+      "spanish": "pámpara",
+      "english": "vibe"
+    },
+    "startTimeMs": 134350,
+    "endTimeMs": 138970,
+    "segmentIndex": 40
+  },
+  {
+    "term": {
+      "spanish": "azaroso",
+      "english": "nuisance"
+    },
+    "definition": "In Dominican slang, this refers to a person who is annoying, a nuisance, or brings bad luck/problems. It's a common street-level insult used by the older woman (the 'aunt' figure) in the song's skit.",
+    "difficulty": 8,
+    "example": {
+      "spanish": "Oye, muchacho del diablo, azaroso",
+      "english": "Listen, you devilish boy, you nuisance"
+    },
+    "highlight": {
+      "spanish": "azaroso",
+      "english": "nuisance"
+    },
+    "startTimeMs": 167670,
+    "endTimeMs": 170410,
+    "segmentIndex": 52
+  },
+  {
+    "term": {
+      "spanish": "totito",
+      "english": "pussy"
+    },
+    "definition": "A colloquial and somewhat vulgar Caribbean slang term for female genitalia. It is ubiquitous in reggaeton and trap lyrics to describe physical attraction or sexual encounters.",
+    "difficulty": 8,
+    "example": {
+      "spanish": "Ya me aburrí, hoy quiero un totito inédito",
+      "english": "I'm bored now, today I want some brand new pussy"
+    },
+    "highlight": {
+      "spanish": "totito",
+      "english": "pussy"
+    },
+    "startTimeMs": 209220,
+    "endTimeMs": 211230,
+    "segmentIndex": 70
+  },
+  {
+    "term": {
+      "spanish": "inédito",
+      "english": "brand new"
+    },
+    "definition": "Literally means 'unpublished' or 'unreleased.' In this context, it is used idiomatically to mean 'something new,' 'unseen,' or 'never experienced before,' emphasizing the speaker's boredom with his current romantic options.",
+    "difficulty": 6,
+    "example": {
+      "spanish": "Ya me aburrí, hoy quiero un totito inédito",
+      "english": "I'm bored now, today I want some brand new pussy"
+    },
+    "highlight": {
+      "spanish": "inédito",
+      "english": "brand new"
+    },
+    "startTimeMs": 209220,
+    "endTimeMs": 211230,
+    "segmentIndex": 70
+  }
+]

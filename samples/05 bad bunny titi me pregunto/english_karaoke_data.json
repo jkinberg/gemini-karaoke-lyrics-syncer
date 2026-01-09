@@ -1,0 +1,3438 @@
+{
+  "metadata": {
+    "title": "Tití Me Preguntó",
+    "artist": "Bad Bunny",
+    "durationMs": 253000,
+    "language": "en-US",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 41740,
+      "segmentIndex": 0,
+      "cueText": "Intro / Skit"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 41740,
+      "endTimeMs": 45520,
+      "segmentIndex": 1,
+      "text": "Hey, Auntie asked me if I have many girlfriends",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 41740,
+          "endTimeMs": 42100
+        },
+        {
+          "word": "Auntie",
+          "startTimeMs": 42100,
+          "endTimeMs": 42500
+        },
+        {
+          "word": "asked",
+          "startTimeMs": 42500,
+          "endTimeMs": 42900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 42900,
+          "endTimeMs": 43100
+        },
+        {
+          "word": "if",
+          "startTimeMs": 43100,
+          "endTimeMs": 43250
+        },
+        {
+          "word": "I",
+          "startTimeMs": 43250,
+          "endTimeMs": 43400
+        },
+        {
+          "word": "have",
+          "startTimeMs": 43400,
+          "endTimeMs": 43600
+        },
+        {
+          "word": "many",
+          "startTimeMs": 43600,
+          "endTimeMs": 44000
+        },
+        {
+          "word": "girlfriends",
+          "startTimeMs": 44000,
+          "endTimeMs": 45520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 45520,
+      "endTimeMs": 47310,
+      "segmentIndex": 2,
+      "text": "Many girlfriends",
+      "words": [
+        {
+          "word": "Many",
+          "startTimeMs": 45520,
+          "endTimeMs": 46100
+        },
+        {
+          "word": "girlfriends",
+          "startTimeMs": 46100,
+          "endTimeMs": 47310
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 47310,
+      "endTimeMs": 50360,
+      "segmentIndex": 3,
+      "text": "Today I have one, tomorrow another, hey",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 47310,
+          "endTimeMs": 47600
+        },
+        {
+          "word": "I",
+          "startTimeMs": 47600,
+          "endTimeMs": 47700
+        },
+        {
+          "word": "have",
+          "startTimeMs": 47700,
+          "endTimeMs": 47900
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 47900,
+          "endTimeMs": 48300
+        },
+        {
+          "word": "tomorrow",
+          "startTimeMs": 48300,
+          "endTimeMs": 48800
+        },
+        {
+          "word": "another,",
+          "startTimeMs": 48800,
+          "endTimeMs": 49400
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 49400,
+          "endTimeMs": 50360
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 50360,
+      "endTimeMs": 51660,
+      "segmentIndex": 4,
+      "text": "But there's no wedding",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 50360,
+          "endTimeMs": 50500
+        },
+        {
+          "word": "there's",
+          "startTimeMs": 50500,
+          "endTimeMs": 50800
+        },
+        {
+          "word": "no",
+          "startTimeMs": 50800,
+          "endTimeMs": 51000
+        },
+        {
+          "word": "wedding",
+          "startTimeMs": 51000,
+          "endTimeMs": 51660
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 51660,
+      "endTimeMs": 54350,
+      "segmentIndex": 5,
+      "text": "Auntie asked me if I have many girlfriends",
+      "words": [
+        {
+          "word": "Auntie",
+          "startTimeMs": 51660,
+          "endTimeMs": 52000
+        },
+        {
+          "word": "asked",
+          "startTimeMs": 52000,
+          "endTimeMs": 52400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 52400,
+          "endTimeMs": 52600
+        },
+        {
+          "word": "if",
+          "startTimeMs": 52600,
+          "endTimeMs": 52700
+        },
+        {
+          "word": "I",
+          "startTimeMs": 52700,
+          "endTimeMs": 52800
+        },
+        {
+          "word": "have",
+          "startTimeMs": 52800,
+          "endTimeMs": 53000
+        },
+        {
+          "word": "many",
+          "startTimeMs": 53000,
+          "endTimeMs": 53500
+        },
+        {
+          "word": "girlfriends",
+          "startTimeMs": 53500,
+          "endTimeMs": 54350
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 54350,
+      "endTimeMs": 56310,
+      "segmentIndex": 6,
+      "text": "Many girlfriends",
+      "words": [
+        {
+          "word": "Many",
+          "startTimeMs": 54350,
+          "endTimeMs": 54900
+        },
+        {
+          "word": "girlfriends",
+          "startTimeMs": 54900,
+          "endTimeMs": 56310
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 56310,
+      "endTimeMs": 59070,
+      "segmentIndex": 7,
+      "text": "Today I have one, tomorrow another",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 56310,
+          "endTimeMs": 56600
+        },
+        {
+          "word": "I",
+          "startTimeMs": 56600,
+          "endTimeMs": 56700
+        },
+        {
+          "word": "have",
+          "startTimeMs": 56700,
+          "endTimeMs": 56900
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 56900,
+          "endTimeMs": 57300
+        },
+        {
+          "word": "tomorrow",
+          "startTimeMs": 57300,
+          "endTimeMs": 57800
+        },
+        {
+          "word": "another",
+          "startTimeMs": 57800,
+          "endTimeMs": 59070
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 59070,
+      "endTimeMs": 63220,
+      "segmentIndex": 8,
+      "text": "I'm gonna take them all to a VIP, a VIP",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 59070,
+          "endTimeMs": 59200
+        },
+        {
+          "word": "gonna",
+          "startTimeMs": 59200,
+          "endTimeMs": 59400
+        },
+        {
+          "word": "take",
+          "startTimeMs": 59400,
+          "endTimeMs": 59600
+        },
+        {
+          "word": "them",
+          "startTimeMs": 59600,
+          "endTimeMs": 59800
+        },
+        {
+          "word": "all",
+          "startTimeMs": 59800,
+          "endTimeMs": 60000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 60000,
+          "endTimeMs": 60200
+        },
+        {
+          "word": "a",
+          "startTimeMs": 60200,
+          "endTimeMs": 60400
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 60400,
+          "endTimeMs": 61200
+        },
+        {
+          "word": "a",
+          "startTimeMs": 61200,
+          "endTimeMs": 61400
+        },
+        {
+          "word": "VIP",
+          "startTimeMs": 61400,
+          "endTimeMs": 63220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 63220,
+      "endTimeMs": 65390,
+      "segmentIndex": 9,
+      "text": "Hey, say hi to Auntie",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 63220,
+          "endTimeMs": 63500
+        },
+        {
+          "word": "say",
+          "startTimeMs": 63500,
+          "endTimeMs": 63800
+        },
+        {
+          "word": "hi",
+          "startTimeMs": 63800,
+          "endTimeMs": 64100
+        },
+        {
+          "word": "to",
+          "startTimeMs": 64100,
+          "endTimeMs": 64300
+        },
+        {
+          "word": "Auntie",
+          "startTimeMs": 64300,
+          "endTimeMs": 65390
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 65390,
+      "endTimeMs": 68030,
+      "segmentIndex": 10,
+      "text": "Let's take a selfie, say \"cheese\", hey",
+      "words": [
+        {
+          "word": "Let's",
+          "startTimeMs": 65390,
+          "endTimeMs": 65600
+        },
+        {
+          "word": "take",
+          "startTimeMs": 65600,
+          "endTimeMs": 65800
+        },
+        {
+          "word": "a",
+          "startTimeMs": 65800,
+          "endTimeMs": 65900
+        },
+        {
+          "word": "selfie,",
+          "startTimeMs": 65900,
+          "endTimeMs": 66600
+        },
+        {
+          "word": "say",
+          "startTimeMs": 66600,
+          "endTimeMs": 66900
+        },
+        {
+          "word": "\"cheese\",",
+          "startTimeMs": 66900,
+          "endTimeMs": 67500
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 67500,
+          "endTimeMs": 68030
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 68030,
+      "endTimeMs": 69720,
+      "segmentIndex": 11,
+      "text": "Let those I've already had smile",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 68030,
+          "endTimeMs": 68200
+        },
+        {
+          "word": "those",
+          "startTimeMs": 68200,
+          "endTimeMs": 68500
+        },
+        {
+          "word": "I've",
+          "startTimeMs": 68500,
+          "endTimeMs": 68700
+        },
+        {
+          "word": "already",
+          "startTimeMs": 68700,
+          "endTimeMs": 69000
+        },
+        {
+          "word": "had",
+          "startTimeMs": 69000,
+          "endTimeMs": 69200
+        },
+        {
+          "word": "smile",
+          "startTimeMs": 69200,
+          "endTimeMs": 69720
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 69720,
+      "endTimeMs": 73970,
+      "segmentIndex": 12,
+      "text": "In a VIP, a VIP, hey, say hi to Auntie",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 69720,
+          "endTimeMs": 69900
+        },
+        {
+          "word": "a",
+          "startTimeMs": 69900,
+          "endTimeMs": 70100
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 70100,
+          "endTimeMs": 70600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 70600,
+          "endTimeMs": 70800
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 70800,
+          "endTimeMs": 71500
+        },
+        {
+          "word": "hey,",
+          "startTimeMs": 71500,
+          "endTimeMs": 72100
+        },
+        {
+          "word": "say",
+          "startTimeMs": 72100,
+          "endTimeMs": 72400
+        },
+        {
+          "word": "hi",
+          "startTimeMs": 72400,
+          "endTimeMs": 72700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 72700,
+          "endTimeMs": 72900
+        },
+        {
+          "word": "Auntie",
+          "startTimeMs": 72900,
+          "endTimeMs": 73970
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 73970,
+      "endTimeMs": 76490,
+      "segmentIndex": 13,
+      "text": "Let's take a selfie, say \"cheese\"",
+      "words": [
+        {
+          "word": "Let's",
+          "startTimeMs": 73970,
+          "endTimeMs": 74200
+        },
+        {
+          "word": "take",
+          "startTimeMs": 74200,
+          "endTimeMs": 74400
+        },
+        {
+          "word": "a",
+          "startTimeMs": 74400,
+          "endTimeMs": 74500
+        },
+        {
+          "word": "selfie,",
+          "startTimeMs": 74500,
+          "endTimeMs": 75300
+        },
+        {
+          "word": "say",
+          "startTimeMs": 75300,
+          "endTimeMs": 75600
+        },
+        {
+          "word": "\"cheese\"",
+          "startTimeMs": 75600,
+          "endTimeMs": 76490
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 76490,
+      "endTimeMs": 78100,
+      "segmentIndex": 14,
+      "text": "Let those who've already forgotten about me smile",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 76490,
+          "endTimeMs": 76600
+        },
+        {
+          "word": "those",
+          "startTimeMs": 76600,
+          "endTimeMs": 76800
+        },
+        {
+          "word": "who've",
+          "startTimeMs": 76800,
+          "endTimeMs": 77000
+        },
+        {
+          "word": "already",
+          "startTimeMs": 77000,
+          "endTimeMs": 77200
+        },
+        {
+          "word": "forgotten",
+          "startTimeMs": 77200,
+          "endTimeMs": 77600
+        },
+        {
+          "word": "about",
+          "startTimeMs": 77600,
+          "endTimeMs": 77800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 77800,
+          "endTimeMs": 77900
+        },
+        {
+          "word": "smile",
+          "startTimeMs": 77900,
+          "endTimeMs": 78100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 78100,
+      "endTimeMs": 81010,
+      "segmentIndex": 15,
+      "text": "I really like the Gabrielas, the Patricias",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 78100,
+          "endTimeMs": 78200
+        },
+        {
+          "word": "really",
+          "startTimeMs": 78200,
+          "endTimeMs": 78400
+        },
+        {
+          "word": "like",
+          "startTimeMs": 78400,
+          "endTimeMs": 78600
+        },
+        {
+          "word": "the",
+          "startTimeMs": 78600,
+          "endTimeMs": 78800
+        },
+        {
+          "word": "Gabrielas,",
+          "startTimeMs": 78800,
+          "endTimeMs": 79700
+        },
+        {
+          "word": "the",
+          "startTimeMs": 79700,
+          "endTimeMs": 79900
+        },
+        {
+          "word": "Patricias",
+          "startTimeMs": 79900,
+          "endTimeMs": 81010
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 81010,
+      "endTimeMs": 82720,
+      "segmentIndex": 16,
+      "text": "The Nicoles, the Sofias",
+      "words": [
+        {
+          "word": "The",
+          "startTimeMs": 81010,
+          "endTimeMs": 81200
+        },
+        {
+          "word": "Nicoles,",
+          "startTimeMs": 81200,
+          "endTimeMs": 81800
+        },
+        {
+          "word": "the",
+          "startTimeMs": 81800,
+          "endTimeMs": 82000
+        },
+        {
+          "word": "Sofias",
+          "startTimeMs": 82000,
+          "endTimeMs": 82720
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 82720,
+      "endTimeMs": 84820,
+      "segmentIndex": 17,
+      "text": "My first girlfriend in kindergarten, María",
+      "words": [
+        {
+          "word": "My",
+          "startTimeMs": 82720,
+          "endTimeMs": 82800
+        },
+        {
+          "word": "first",
+          "startTimeMs": 82800,
+          "endTimeMs": 83000
+        },
+        {
+          "word": "girlfriend",
+          "startTimeMs": 83000,
+          "endTimeMs": 83400
+        },
+        {
+          "word": "in",
+          "startTimeMs": 83400,
+          "endTimeMs": 83500
+        },
+        {
+          "word": "kindergarten,",
+          "startTimeMs": 83500,
+          "endTimeMs": 84000
+        },
+        {
+          "word": "María",
+          "startTimeMs": 84000,
+          "endTimeMs": 84820
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 84820,
+      "endTimeMs": 86900,
+      "segmentIndex": 18,
+      "text": "And my first love was named Thalía",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 84820,
+          "endTimeMs": 84900
+        },
+        {
+          "word": "my",
+          "startTimeMs": 84900,
+          "endTimeMs": 85000
+        },
+        {
+          "word": "first",
+          "startTimeMs": 85000,
+          "endTimeMs": 85200
+        },
+        {
+          "word": "love",
+          "startTimeMs": 85200,
+          "endTimeMs": 85500
+        },
+        {
+          "word": "was",
+          "startTimeMs": 85500,
+          "endTimeMs": 85700
+        },
+        {
+          "word": "named",
+          "startTimeMs": 85700,
+          "endTimeMs": 86300
+        },
+        {
+          "word": "Thalía",
+          "startTimeMs": 86300,
+          "endTimeMs": 86900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 86900,
+      "endTimeMs": 89190,
+      "segmentIndex": 19,
+      "text": "I have a Colombian girl who writes me every day",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 86900,
+          "endTimeMs": 87000
+        },
+        {
+          "word": "have",
+          "startTimeMs": 87000,
+          "endTimeMs": 87100
+        },
+        {
+          "word": "a",
+          "startTimeMs": 87100,
+          "endTimeMs": 87200
+        },
+        {
+          "word": "Colombian",
+          "startTimeMs": 87200,
+          "endTimeMs": 87600
+        },
+        {
+          "word": "girl",
+          "startTimeMs": 87600,
+          "endTimeMs": 87800
+        },
+        {
+          "word": "who",
+          "startTimeMs": 87800,
+          "endTimeMs": 88000
+        },
+        {
+          "word": "writes",
+          "startTimeMs": 88000,
+          "endTimeMs": 88300
+        },
+        {
+          "word": "me",
+          "startTimeMs": 88300,
+          "endTimeMs": 88500
+        },
+        {
+          "word": "every",
+          "startTimeMs": 88500,
+          "endTimeMs": 88800
+        },
+        {
+          "word": "day",
+          "startTimeMs": 88800,
+          "endTimeMs": 89190
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 89190,
+      "endTimeMs": 91360,
+      "segmentIndex": 20,
+      "text": "And a Mexican girl that even I didn't know about",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 89190,
+          "endTimeMs": 89300
+        },
+        {
+          "word": "a",
+          "startTimeMs": 89300,
+          "endTimeMs": 89400
+        },
+        {
+          "word": "Mexican",
+          "startTimeMs": 89400,
+          "endTimeMs": 89800
+        },
+        {
+          "word": "girl",
+          "startTimeMs": 89800,
+          "endTimeMs": 90000
+        },
+        {
+          "word": "that",
+          "startTimeMs": 90000,
+          "endTimeMs": 90200
+        },
+        {
+          "word": "even",
+          "startTimeMs": 90200,
+          "endTimeMs": 90400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 90400,
+          "endTimeMs": 90500
+        },
+        {
+          "word": "didn't",
+          "startTimeMs": 90500,
+          "endTimeMs": 90700
+        },
+        {
+          "word": "know",
+          "startTimeMs": 90700,
+          "endTimeMs": 91000
+        },
+        {
+          "word": "about",
+          "startTimeMs": 91000,
+          "endTimeMs": 91360
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 91360,
+      "endTimeMs": 93760,
+      "segmentIndex": 21,
+      "text": "Another in San Antonio who still loves me",
+      "words": [
+        {
+          "word": "Another",
+          "startTimeMs": 91360,
+          "endTimeMs": 91600
+        },
+        {
+          "word": "in",
+          "startTimeMs": 91600,
+          "endTimeMs": 91700
+        },
+        {
+          "word": "San",
+          "startTimeMs": 91700,
+          "endTimeMs": 91900
+        },
+        {
+          "word": "Antonio",
+          "startTimeMs": 91900,
+          "endTimeMs": 92300
+        },
+        {
+          "word": "who",
+          "startTimeMs": 92300,
+          "endTimeMs": 92500
+        },
+        {
+          "word": "still",
+          "startTimeMs": 92500,
+          "endTimeMs": 92800
+        },
+        {
+          "word": "loves",
+          "startTimeMs": 92800,
+          "endTimeMs": 93200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 93200,
+          "endTimeMs": 93760
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 93760,
+      "endTimeMs": 95940,
+      "segmentIndex": 22,
+      "text": "And the ones from PR who are all mine",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 93760,
+          "endTimeMs": 93900
+        },
+        {
+          "word": "the",
+          "startTimeMs": 93900,
+          "endTimeMs": 94000
+        },
+        {
+          "word": "ones",
+          "startTimeMs": 94000,
+          "endTimeMs": 94200
+        },
+        {
+          "word": "from",
+          "startTimeMs": 94200,
+          "endTimeMs": 94300
+        },
+        {
+          "word": "PR",
+          "startTimeMs": 94300,
+          "endTimeMs": 94700
+        },
+        {
+          "word": "who",
+          "startTimeMs": 94700,
+          "endTimeMs": 94900
+        },
+        {
+          "word": "are",
+          "startTimeMs": 94900,
+          "endTimeMs": 95100
+        },
+        {
+          "word": "all",
+          "startTimeMs": 95100,
+          "endTimeMs": 95300
+        },
+        {
+          "word": "mine",
+          "startTimeMs": 95300,
+          "endTimeMs": 95940
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 95940,
+      "endTimeMs": 98210,
+      "segmentIndex": 23,
+      "text": "A Dominican girl who's a total babe",
+      "words": [
+        {
+          "word": "A",
+          "startTimeMs": 95940,
+          "endTimeMs": 96000
+        },
+        {
+          "word": "Dominican",
+          "startTimeMs": 96000,
+          "endTimeMs": 96500
+        },
+        {
+          "word": "girl",
+          "startTimeMs": 96500,
+          "endTimeMs": 96800
+        },
+        {
+          "word": "who's",
+          "startTimeMs": 96800,
+          "endTimeMs": 97000
+        },
+        {
+          "word": "a",
+          "startTimeMs": 97000,
+          "endTimeMs": 97200
+        },
+        {
+          "word": "total",
+          "startTimeMs": 97200,
+          "endTimeMs": 97600
+        },
+        {
+          "word": "babe",
+          "startTimeMs": 97600,
+          "endTimeMs": 98210
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 98210,
+      "endTimeMs": 100170,
+      "segmentIndex": 24,
+      "text": "Fine, fine babe",
+      "words": [
+        {
+          "word": "Fine,",
+          "startTimeMs": 98210,
+          "endTimeMs": 98800
+        },
+        {
+          "word": "fine",
+          "startTimeMs": 98800,
+          "endTimeMs": 99400
+        },
+        {
+          "word": "babe",
+          "startTimeMs": 99400,
+          "endTimeMs": 100170
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 100170,
+      "endTimeMs": 102310,
+      "segmentIndex": 25,
+      "text": "The one from Barcelona who came by plane",
+      "words": [
+        {
+          "word": "The",
+          "startTimeMs": 100170,
+          "endTimeMs": 100300
+        },
+        {
+          "word": "one",
+          "startTimeMs": 100300,
+          "endTimeMs": 100450
+        },
+        {
+          "word": "from",
+          "startTimeMs": 100450,
+          "endTimeMs": 100550
+        },
+        {
+          "word": "Barcelona",
+          "startTimeMs": 100550,
+          "endTimeMs": 101100
+        },
+        {
+          "word": "who",
+          "startTimeMs": 101100,
+          "endTimeMs": 101250
+        },
+        {
+          "word": "came",
+          "startTimeMs": 101250,
+          "endTimeMs": 101500
+        },
+        {
+          "word": "by",
+          "startTimeMs": 101500,
+          "endTimeMs": 101700
+        },
+        {
+          "word": "plane",
+          "startTimeMs": 101700,
+          "endTimeMs": 102310
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 102310,
+      "endTimeMs": 104520,
+      "segmentIndex": 26,
+      "text": "And says my dick is the shit",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 102310,
+          "endTimeMs": 102450
+        },
+        {
+          "word": "says",
+          "startTimeMs": 102450,
+          "endTimeMs": 102700
+        },
+        {
+          "word": "my",
+          "startTimeMs": 102700,
+          "endTimeMs": 102850
+        },
+        {
+          "word": "dick",
+          "startTimeMs": 102850,
+          "endTimeMs": 103300
+        },
+        {
+          "word": "is",
+          "startTimeMs": 103300,
+          "endTimeMs": 103500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 103500,
+          "endTimeMs": 103700
+        },
+        {
+          "word": "shit",
+          "startTimeMs": 103700,
+          "endTimeMs": 104520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 104520,
+      "endTimeMs": 106440,
+      "segmentIndex": 27,
+      "text": "I let them play with my heart",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 104520,
+          "endTimeMs": 104700
+        },
+        {
+          "word": "let",
+          "startTimeMs": 104700,
+          "endTimeMs": 104900
+        },
+        {
+          "word": "them",
+          "startTimeMs": 104900,
+          "endTimeMs": 105100
+        },
+        {
+          "word": "play",
+          "startTimeMs": 105100,
+          "endTimeMs": 105400
+        },
+        {
+          "word": "with",
+          "startTimeMs": 105400,
+          "endTimeMs": 105600
+        },
+        {
+          "word": "my",
+          "startTimeMs": 105600,
+          "endTimeMs": 105800
+        },
+        {
+          "word": "heart",
+          "startTimeMs": 105800,
+          "endTimeMs": 106440
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 106440,
+      "endTimeMs": 108640,
+      "segmentIndex": 28,
+      "text": "I'd like to move into a mansion with all of them",
+      "words": [
+        {
+          "word": "I'd",
+          "startTimeMs": 106440,
+          "endTimeMs": 106600
+        },
+        {
+          "word": "like",
+          "startTimeMs": 106600,
+          "endTimeMs": 106800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 106800,
+          "endTimeMs": 106900
+        },
+        {
+          "word": "move",
+          "startTimeMs": 106900,
+          "endTimeMs": 107200
+        },
+        {
+          "word": "into",
+          "startTimeMs": 107200,
+          "endTimeMs": 107400
+        },
+        {
+          "word": "a",
+          "startTimeMs": 107400,
+          "endTimeMs": 107500
+        },
+        {
+          "word": "mansion",
+          "startTimeMs": 107500,
+          "endTimeMs": 108000
+        },
+        {
+          "word": "with",
+          "startTimeMs": 108000,
+          "endTimeMs": 108150
+        },
+        {
+          "word": "all",
+          "startTimeMs": 108150,
+          "endTimeMs": 108300
+        },
+        {
+          "word": "of",
+          "startTimeMs": 108300,
+          "endTimeMs": 108400
+        },
+        {
+          "word": "them",
+          "startTimeMs": 108400,
+          "endTimeMs": 108640
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 108640,
+      "endTimeMs": 110910,
+      "segmentIndex": 29,
+      "text": "The day I get married, I'll send you the invitation",
+      "words": [
+        {
+          "word": "The",
+          "startTimeMs": 108640,
+          "endTimeMs": 108750
+        },
+        {
+          "word": "day",
+          "startTimeMs": 108750,
+          "endTimeMs": 109000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 109000,
+          "endTimeMs": 109100
+        },
+        {
+          "word": "get",
+          "startTimeMs": 109100,
+          "endTimeMs": 109250
+        },
+        {
+          "word": "married,",
+          "startTimeMs": 109250,
+          "endTimeMs": 109600
+        },
+        {
+          "word": "I'll",
+          "startTimeMs": 109600,
+          "endTimeMs": 109750
+        },
+        {
+          "word": "send",
+          "startTimeMs": 109750,
+          "endTimeMs": 110000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 110000,
+          "endTimeMs": 110150
+        },
+        {
+          "word": "the",
+          "startTimeMs": 110150,
+          "endTimeMs": 110250
+        },
+        {
+          "word": "invitation",
+          "startTimeMs": 110250,
+          "endTimeMs": 110910
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 110910,
+      "endTimeMs": 112650,
+      "segmentIndex": 30,
+      "text": "Boy, stop that",
+      "words": [
+        {
+          "word": "Boy,",
+          "startTimeMs": 110910,
+          "endTimeMs": 111600
+        },
+        {
+          "word": "stop",
+          "startTimeMs": 111600,
+          "endTimeMs": 112000
+        },
+        {
+          "word": "that",
+          "startTimeMs": 112000,
+          "endTimeMs": 112650
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 112650,
+      "endTimeMs": 115680,
+      "segmentIndex": 31,
+      "text": "Hey, Auntie asked me if I have many girlfriends",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 112650,
+          "endTimeMs": 113000
+        },
+        {
+          "word": "Auntie",
+          "startTimeMs": 113000,
+          "endTimeMs": 113400
+        },
+        {
+          "word": "asked",
+          "startTimeMs": 113400,
+          "endTimeMs": 113800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 113800,
+          "endTimeMs": 114000
+        },
+        {
+          "word": "if",
+          "startTimeMs": 114000,
+          "endTimeMs": 114100
+        },
+        {
+          "word": "I",
+          "startTimeMs": 114100,
+          "endTimeMs": 114200
+        },
+        {
+          "word": "have",
+          "startTimeMs": 114200,
+          "endTimeMs": 114400
+        },
+        {
+          "word": "many",
+          "startTimeMs": 114400,
+          "endTimeMs": 114800
+        },
+        {
+          "word": "girlfriends",
+          "startTimeMs": 114800,
+          "endTimeMs": 115680
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 115680,
+      "endTimeMs": 117430,
+      "segmentIndex": 32,
+      "text": "Many girlfriends",
+      "words": [
+        {
+          "word": "Many",
+          "startTimeMs": 115680,
+          "endTimeMs": 116200
+        },
+        {
+          "word": "girlfriends",
+          "startTimeMs": 116200,
+          "endTimeMs": 117430
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 117430,
+      "endTimeMs": 120360,
+      "segmentIndex": 33,
+      "text": "Today I have one, tomorrow another, hey",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 117430,
+          "endTimeMs": 117700
+        },
+        {
+          "word": "I",
+          "startTimeMs": 117700,
+          "endTimeMs": 117800
+        },
+        {
+          "word": "have",
+          "startTimeMs": 117800,
+          "endTimeMs": 118000
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 118000,
+          "endTimeMs": 118400
+        },
+        {
+          "word": "tomorrow",
+          "startTimeMs": 118400,
+          "endTimeMs": 119000
+        },
+        {
+          "word": "another,",
+          "startTimeMs": 119000,
+          "endTimeMs": 119600
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 119600,
+          "endTimeMs": 120360
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 120360,
+      "endTimeMs": 121750,
+      "segmentIndex": 34,
+      "text": "But there's no wedding",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 120360,
+          "endTimeMs": 120600
+        },
+        {
+          "word": "there's",
+          "startTimeMs": 120600,
+          "endTimeMs": 120800
+        },
+        {
+          "word": "no",
+          "startTimeMs": 120800,
+          "endTimeMs": 121000
+        },
+        {
+          "word": "wedding",
+          "startTimeMs": 121000,
+          "endTimeMs": 121750
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 121750,
+      "endTimeMs": 124690,
+      "segmentIndex": 35,
+      "text": "Auntie asked me if I have many girlfriends, hey, hey",
+      "words": [
+        {
+          "word": "Auntie",
+          "startTimeMs": 121750,
+          "endTimeMs": 122100
+        },
+        {
+          "word": "asked",
+          "startTimeMs": 122100,
+          "endTimeMs": 122500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 122500,
+          "endTimeMs": 122700
+        },
+        {
+          "word": "if",
+          "startTimeMs": 122700,
+          "endTimeMs": 122800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 122800,
+          "endTimeMs": 122900
+        },
+        {
+          "word": "have",
+          "startTimeMs": 122900,
+          "endTimeMs": 123100
+        },
+        {
+          "word": "many",
+          "startTimeMs": 123100,
+          "endTimeMs": 123500
+        },
+        {
+          "word": "girlfriends,",
+          "startTimeMs": 123500,
+          "endTimeMs": 124100
+        },
+        {
+          "word": "hey,",
+          "startTimeMs": 124100,
+          "endTimeMs": 124350
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 124350,
+          "endTimeMs": 124690
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 124690,
+      "endTimeMs": 126320,
+      "segmentIndex": 36,
+      "text": "Many girlfriends",
+      "words": [
+        {
+          "word": "Many",
+          "startTimeMs": 124690,
+          "endTimeMs": 125200
+        },
+        {
+          "word": "girlfriends",
+          "startTimeMs": 125200,
+          "endTimeMs": 126320
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 126320,
+      "endTimeMs": 128960,
+      "segmentIndex": 37,
+      "text": "Today I have one, tomorrow another",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 126320,
+          "endTimeMs": 126600
+        },
+        {
+          "word": "I",
+          "startTimeMs": 126600,
+          "endTimeMs": 126700
+        },
+        {
+          "word": "have",
+          "startTimeMs": 126700,
+          "endTimeMs": 126900
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 126900,
+          "endTimeMs": 127300
+        },
+        {
+          "word": "tomorrow",
+          "startTimeMs": 127300,
+          "endTimeMs": 127900
+        },
+        {
+          "word": "another",
+          "startTimeMs": 127900,
+          "endTimeMs": 128600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 128960,
+      "endTimeMs": 130270,
+      "segmentIndex": 38,
+      "text": "(Tomorrow another)",
+      "words": [
+        {
+          "word": "(Tomorrow",
+          "startTimeMs": 128960,
+          "endTimeMs": 129600
+        },
+        {
+          "word": "another)",
+          "startTimeMs": 129600,
+          "endTimeMs": 130270
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 130270,
+      "endTimeMs": 134350,
+      "segmentIndex": 39,
+      "text": "Auntie asked me-me-me-me-me-me-me",
+      "words": [
+        {
+          "word": "Auntie",
+          "startTimeMs": 130270,
+          "endTimeMs": 130600
+        },
+        {
+          "word": "asked",
+          "startTimeMs": 130600,
+          "endTimeMs": 131000
+        },
+        {
+          "word": "me-me-me-me-me-me-me",
+          "startTimeMs": 131000,
+          "endTimeMs": 134350
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 134350,
+      "endTimeMs": 138970,
+      "segmentIndex": 40,
+      "text": "Auntie asked me-me-me-me-me-me-me (what a vibe)",
+      "words": [
+        {
+          "word": "Auntie",
+          "startTimeMs": 134350,
+          "endTimeMs": 134600
+        },
+        {
+          "word": "asked",
+          "startTimeMs": 134600,
+          "endTimeMs": 134900
+        },
+        {
+          "word": "me-me-me-me-me-me-me",
+          "startTimeMs": 134900,
+          "endTimeMs": 138200
+        },
+        {
+          "word": "(what",
+          "startTimeMs": 138200,
+          "endTimeMs": 138500
+        },
+        {
+          "word": "a",
+          "startTimeMs": 138500,
+          "endTimeMs": 138600
+        },
+        {
+          "word": "vibe)",
+          "startTimeMs": 138600,
+          "endTimeMs": 138970
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 138970,
+      "endTimeMs": 143100,
+      "segmentIndex": 41,
+      "text": "Auntie asked me-me-me-me-me-me-me",
+      "words": [
+        {
+          "word": "Auntie",
+          "startTimeMs": 138970,
+          "endTimeMs": 139200
+        },
+        {
+          "word": "asked",
+          "startTimeMs": 139200,
+          "endTimeMs": 139500
+        },
+        {
+          "word": "me-me-me-me-me-me-me",
+          "startTimeMs": 139500,
+          "endTimeMs": 143100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 143100,
+      "endTimeMs": 146170,
+      "segmentIndex": 42,
+      "text": "Auntie asked me-me-me-me",
+      "words": [
+        {
+          "word": "Auntie",
+          "startTimeMs": 143100,
+          "endTimeMs": 143400
+        },
+        {
+          "word": "asked",
+          "startTimeMs": 143400,
+          "endTimeMs": 143700
+        },
+        {
+          "word": "me-me-me-me",
+          "startTimeMs": 143700,
+          "endTimeMs": 146170
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 146170,
+      "endTimeMs": 148440,
+      "segmentIndex": 43,
+      "text": "But come here, boy, and why do you want so many girlfriends?",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 146170,
+          "endTimeMs": 146300
+        },
+        {
+          "word": "come",
+          "startTimeMs": 146300,
+          "endTimeMs": 146450
+        },
+        {
+          "word": "here,",
+          "startTimeMs": 146450,
+          "endTimeMs": 146600
+        },
+        {
+          "word": "boy,",
+          "startTimeMs": 146600,
+          "endTimeMs": 146900
+        },
+        {
+          "word": "and",
+          "startTimeMs": 146900,
+          "endTimeMs": 147050
+        },
+        {
+          "word": "why",
+          "startTimeMs": 147050,
+          "endTimeMs": 147200
+        },
+        {
+          "word": "do",
+          "startTimeMs": 147200,
+          "endTimeMs": 147300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 147300,
+          "endTimeMs": 147400
+        },
+        {
+          "word": "want",
+          "startTimeMs": 147400,
+          "endTimeMs": 147600
+        },
+        {
+          "word": "so",
+          "startTimeMs": 147600,
+          "endTimeMs": 147700
+        },
+        {
+          "word": "many",
+          "startTimeMs": 147700,
+          "endTimeMs": 148000
+        },
+        {
+          "word": "girlfriends?",
+          "startTimeMs": 148000,
+          "endTimeMs": 148440
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 148440,
+      "endTimeMs": 151900,
+      "segmentIndex": 44,
+      "text": "I'm gonna take them all to a VIP, a VIP",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 148440,
+          "endTimeMs": 148600
+        },
+        {
+          "word": "gonna",
+          "startTimeMs": 148600,
+          "endTimeMs": 148800
+        },
+        {
+          "word": "take",
+          "startTimeMs": 148800,
+          "endTimeMs": 149000
+        },
+        {
+          "word": "them",
+          "startTimeMs": 149000,
+          "endTimeMs": 149200
+        },
+        {
+          "word": "all",
+          "startTimeMs": 149200,
+          "endTimeMs": 149300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 149300,
+          "endTimeMs": 149400
+        },
+        {
+          "word": "a",
+          "startTimeMs": 149400,
+          "endTimeMs": 149600
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 149600,
+          "endTimeMs": 150600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 150600,
+          "endTimeMs": 150800
+        },
+        {
+          "word": "VIP",
+          "startTimeMs": 150800,
+          "endTimeMs": 151900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 151900,
+      "endTimeMs": 154170,
+      "segmentIndex": 45,
+      "text": "Hey, say hi to Auntie",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 151900,
+          "endTimeMs": 152200
+        },
+        {
+          "word": "say",
+          "startTimeMs": 152200,
+          "endTimeMs": 152500
+        },
+        {
+          "word": "hi",
+          "startTimeMs": 152500,
+          "endTimeMs": 152700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 152700,
+          "endTimeMs": 152900
+        },
+        {
+          "word": "Auntie",
+          "startTimeMs": 152900,
+          "endTimeMs": 154170
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 154170,
+      "endTimeMs": 156550,
+      "segmentIndex": 46,
+      "text": "Let's take a selfie, say \"cheese\", hey",
+      "words": [
+        {
+          "word": "Let's",
+          "startTimeMs": 154170,
+          "endTimeMs": 154400
+        },
+        {
+          "word": "take",
+          "startTimeMs": 154400,
+          "endTimeMs": 154600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 154600,
+          "endTimeMs": 154800
+        },
+        {
+          "word": "selfie,",
+          "startTimeMs": 154800,
+          "endTimeMs": 155300
+        },
+        {
+          "word": "say",
+          "startTimeMs": 155300,
+          "endTimeMs": 155600
+        },
+        {
+          "word": "\"cheese\",",
+          "startTimeMs": 155600,
+          "endTimeMs": 156100
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 156100,
+          "endTimeMs": 156550
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 156550,
+      "endTimeMs": 158420,
+      "segmentIndex": 47,
+      "text": "Let those I've already had smile",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 156550,
+          "endTimeMs": 156700
+        },
+        {
+          "word": "those",
+          "startTimeMs": 156700,
+          "endTimeMs": 156900
+        },
+        {
+          "word": "I've",
+          "startTimeMs": 156900,
+          "endTimeMs": 157100
+        },
+        {
+          "word": "already",
+          "startTimeMs": 157100,
+          "endTimeMs": 157400
+        },
+        {
+          "word": "had",
+          "startTimeMs": 157400,
+          "endTimeMs": 157700
+        },
+        {
+          "word": "smile",
+          "startTimeMs": 157700,
+          "endTimeMs": 158420
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 158420,
+      "endTimeMs": 160800,
+      "segmentIndex": 48,
+      "text": "In a VIP, a VIP",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 158420,
+          "endTimeMs": 158600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 158600,
+          "endTimeMs": 158800
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 158800,
+          "endTimeMs": 159300
+        },
+        {
+          "word": "a",
+          "startTimeMs": 159300,
+          "endTimeMs": 159500
+        },
+        {
+          "word": "VIP",
+          "startTimeMs": 159500,
+          "endTimeMs": 160800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 160800,
+      "endTimeMs": 162750,
+      "segmentIndex": 49,
+      "text": "Hey, say hi to Auntie",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 160800,
+          "endTimeMs": 161100
+        },
+        {
+          "word": "say",
+          "startTimeMs": 161100,
+          "endTimeMs": 161400
+        },
+        {
+          "word": "hi",
+          "startTimeMs": 161400,
+          "endTimeMs": 161700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 161700,
+          "endTimeMs": 161900
+        },
+        {
+          "word": "Auntie",
+          "startTimeMs": 161900,
+          "endTimeMs": 162750
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 162750,
+      "endTimeMs": 165010,
+      "segmentIndex": 50,
+      "text": "Let's take a selfie, say \"cheese\"",
+      "words": [
+        {
+          "word": "Let's",
+          "startTimeMs": 162750,
+          "endTimeMs": 163000
+        },
+        {
+          "word": "take",
+          "startTimeMs": 163000,
+          "endTimeMs": 163200
+        },
+        {
+          "word": "a",
+          "startTimeMs": 163200,
+          "endTimeMs": 163350
+        },
+        {
+          "word": "selfie,",
+          "startTimeMs": 163350,
+          "endTimeMs": 164000
+        },
+        {
+          "word": "say",
+          "startTimeMs": 164000,
+          "endTimeMs": 164300
+        },
+        {
+          "word": "\"cheese\"",
+          "startTimeMs": 164300,
+          "endTimeMs": 165010
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 165010,
+      "endTimeMs": 167670,
+      "segmentIndex": 51,
+      "text": "Let those who've already forgotten about me smile",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 165010,
+          "endTimeMs": 165200
+        },
+        {
+          "word": "those",
+          "startTimeMs": 165200,
+          "endTimeMs": 165500
+        },
+        {
+          "word": "who've",
+          "startTimeMs": 165500,
+          "endTimeMs": 165700
+        },
+        {
+          "word": "already",
+          "startTimeMs": 165700,
+          "endTimeMs": 166000
+        },
+        {
+          "word": "forgotten",
+          "startTimeMs": 166000,
+          "endTimeMs": 166500
+        },
+        {
+          "word": "about",
+          "startTimeMs": 166500,
+          "endTimeMs": 166800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 166800,
+          "endTimeMs": 167100
+        },
+        {
+          "word": "smile",
+          "startTimeMs": 167100,
+          "endTimeMs": 167670
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 167670,
+      "endTimeMs": 170410,
+      "segmentIndex": 52,
+      "text": "Listen, you devilish boy, you nuisance",
+      "words": [
+        {
+          "word": "Listen,",
+          "startTimeMs": 167670,
+          "endTimeMs": 168000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 168000,
+          "endTimeMs": 168200
+        },
+        {
+          "word": "devilish",
+          "startTimeMs": 168200,
+          "endTimeMs": 168600
+        },
+        {
+          "word": "boy,",
+          "startTimeMs": 168600,
+          "endTimeMs": 169000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 169000,
+          "endTimeMs": 169300
+        },
+        {
+          "word": "nuisance",
+          "startTimeMs": 169300,
+          "endTimeMs": 170410
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 170410,
+      "endTimeMs": 172560,
+      "segmentIndex": 53,
+      "text": "Let go of that bad life you lead on the street",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 170410,
+          "endTimeMs": 170600
+        },
+        {
+          "word": "go",
+          "startTimeMs": 170600,
+          "endTimeMs": 170800
+        },
+        {
+          "word": "of",
+          "startTimeMs": 170800,
+          "endTimeMs": 170900
+        },
+        {
+          "word": "that",
+          "startTimeMs": 170900,
+          "endTimeMs": 171100
+        },
+        {
+          "word": "bad",
+          "startTimeMs": 171100,
+          "endTimeMs": 171300
+        },
+        {
+          "word": "life",
+          "startTimeMs": 171300,
+          "endTimeMs": 171500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 171500,
+          "endTimeMs": 171700
+        },
+        {
+          "word": "lead",
+          "startTimeMs": 171700,
+          "endTimeMs": 171900
+        },
+        {
+          "word": "on",
+          "startTimeMs": 171900,
+          "endTimeMs": 172100
+        },
+        {
+          "word": "the",
+          "startTimeMs": 172100,
+          "endTimeMs": 172200
+        },
+        {
+          "word": "street",
+          "startTimeMs": 172200,
+          "endTimeMs": 172560
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 172560,
+      "endTimeMs": 174480,
+      "segmentIndex": 54,
+      "text": "Find yourself a serious woman",
+      "words": [
+        {
+          "word": "Find",
+          "startTimeMs": 172560,
+          "endTimeMs": 172900
+        },
+        {
+          "word": "yourself",
+          "startTimeMs": 172900,
+          "endTimeMs": 173300
+        },
+        {
+          "word": "a",
+          "startTimeMs": 173300,
+          "endTimeMs": 173400
+        },
+        {
+          "word": "serious",
+          "startTimeMs": 173400,
+          "endTimeMs": 173900
+        },
+        {
+          "word": "woman",
+          "startTimeMs": 173900,
+          "endTimeMs": 174480
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 174480,
+      "endTimeMs": 177290,
+      "segmentIndex": 55,
+      "text": "You devilish boy, damn",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 174480,
+          "endTimeMs": 174800
+        },
+        {
+          "word": "devilish",
+          "startTimeMs": 174800,
+          "endTimeMs": 175300
+        },
+        {
+          "word": "boy,",
+          "startTimeMs": 175300,
+          "endTimeMs": 175800
+        },
+        {
+          "word": "damn",
+          "startTimeMs": 175800,
+          "endTimeMs": 177290
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 177290,
+      "endTimeMs": 180970,
+      "segmentIndex": 56,
+      "text": "I'd like to fall in love",
+      "words": [
+        {
+          "word": "I'd",
+          "startTimeMs": 177290,
+          "endTimeMs": 177600
+        },
+        {
+          "word": "like",
+          "startTimeMs": 177600,
+          "endTimeMs": 178000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 178000,
+          "endTimeMs": 178400
+        },
+        {
+          "word": "fall",
+          "startTimeMs": 178400,
+          "endTimeMs": 178900
+        },
+        {
+          "word": "in",
+          "startTimeMs": 178900,
+          "endTimeMs": 179300
+        },
+        {
+          "word": "love",
+          "startTimeMs": 179300,
+          "endTimeMs": 180970
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 180970,
+      "endTimeMs": 183100,
+      "segmentIndex": 57,
+      "text": "But I can't",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 180970,
+          "endTimeMs": 181500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 181500,
+          "endTimeMs": 181900
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 181900,
+          "endTimeMs": 183100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 183100,
+      "endTimeMs": 185330,
+      "segmentIndex": 58,
+      "text": "But I can't",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 183100,
+          "endTimeMs": 183600
+        },
+        {
+          "word": "I",
+          "startTimeMs": 183600,
+          "endTimeMs": 184000
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 184000,
+          "endTimeMs": 185330
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 185330,
+      "endTimeMs": 186710,
+      "segmentIndex": 59,
+      "text": "Eh, eh",
+      "words": [
+        {
+          "word": "Eh,",
+          "startTimeMs": 185330,
+          "endTimeMs": 185800
+        },
+        {
+          "word": "eh",
+          "startTimeMs": 185800,
+          "endTimeMs": 186710
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 186710,
+      "endTimeMs": 190310,
+      "segmentIndex": 60,
+      "text": "I'd like to fall in love",
+      "words": [
+        {
+          "word": "I'd",
+          "startTimeMs": 186710,
+          "endTimeMs": 187000
+        },
+        {
+          "word": "like",
+          "startTimeMs": 187000,
+          "endTimeMs": 187400
+        },
+        {
+          "word": "to",
+          "startTimeMs": 187400,
+          "endTimeMs": 187800
+        },
+        {
+          "word": "fall",
+          "startTimeMs": 187800,
+          "endTimeMs": 188300
+        },
+        {
+          "word": "in",
+          "startTimeMs": 188300,
+          "endTimeMs": 188700
+        },
+        {
+          "word": "love",
+          "startTimeMs": 188700,
+          "endTimeMs": 190310
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 190310,
+      "endTimeMs": 192480,
+      "segmentIndex": 61,
+      "text": "But I can't",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 190310,
+          "endTimeMs": 190800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 190800,
+          "endTimeMs": 191200
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 191200,
+          "endTimeMs": 192480
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 192480,
+      "endTimeMs": 194800,
+      "segmentIndex": 62,
+      "text": "But I can't",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 192480,
+          "endTimeMs": 192900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 192900,
+          "endTimeMs": 193300
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 193300,
+          "endTimeMs": 194800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 194800,
+      "endTimeMs": 197450,
+      "segmentIndex": 63,
+      "text": "Sorry, I don't trust, I don't trust",
+      "words": [
+        {
+          "word": "Sorry,",
+          "startTimeMs": 194800,
+          "endTimeMs": 195200
+        },
+        {
+          "word": "I",
+          "startTimeMs": 195200,
+          "endTimeMs": 195400
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 195400,
+          "endTimeMs": 195700
+        },
+        {
+          "word": "trust,",
+          "startTimeMs": 195700,
+          "endTimeMs": 196100
+        },
+        {
+          "word": "I",
+          "startTimeMs": 196100,
+          "endTimeMs": 196300
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 196300,
+          "endTimeMs": 196600
+        },
+        {
+          "word": "trust",
+          "startTimeMs": 196600,
+          "endTimeMs": 197450
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 197450,
+      "endTimeMs": 199850,
+      "segmentIndex": 64,
+      "text": "Nah, I don't even trust myself",
+      "words": [
+        {
+          "word": "Nah,",
+          "startTimeMs": 197450,
+          "endTimeMs": 197800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 197800,
+          "endTimeMs": 198000
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 198000,
+          "endTimeMs": 198200
+        },
+        {
+          "word": "even",
+          "startTimeMs": 198200,
+          "endTimeMs": 198500
+        },
+        {
+          "word": "trust",
+          "startTimeMs": 198500,
+          "endTimeMs": 198900
+        },
+        {
+          "word": "myself",
+          "startTimeMs": 198900,
+          "endTimeMs": 199850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 199850,
+      "endTimeMs": 201950,
+      "segmentIndex": 65,
+      "text": "If you want to stay today because it's cold",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 199850,
+          "endTimeMs": 200000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 200000,
+          "endTimeMs": 200100
+        },
+        {
+          "word": "want",
+          "startTimeMs": 200100,
+          "endTimeMs": 200300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 200300,
+          "endTimeMs": 200400
+        },
+        {
+          "word": "stay",
+          "startTimeMs": 200400,
+          "endTimeMs": 200700
+        },
+        {
+          "word": "today",
+          "startTimeMs": 200700,
+          "endTimeMs": 201000
+        },
+        {
+          "word": "because",
+          "startTimeMs": 201000,
+          "endTimeMs": 201300
+        },
+        {
+          "word": "it's",
+          "startTimeMs": 201300,
+          "endTimeMs": 201500
+        },
+        {
+          "word": "cold",
+          "startTimeMs": 201500,
+          "endTimeMs": 201950
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 201950,
+      "endTimeMs": 203850,
+      "segmentIndex": 66,
+      "text": "And tomorrow you leave, nah",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 201950,
+          "endTimeMs": 202100
+        },
+        {
+          "word": "tomorrow",
+          "startTimeMs": 202100,
+          "endTimeMs": 202500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 202500,
+          "endTimeMs": 202700
+        },
+        {
+          "word": "leave,",
+          "startTimeMs": 202700,
+          "endTimeMs": 203200
+        },
+        {
+          "word": "nah",
+          "startTimeMs": 203200,
+          "endTimeMs": 203850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 203850,
+      "endTimeMs": 205780,
+      "segmentIndex": 67,
+      "text": "Many want my baby gravy",
+      "words": [
+        {
+          "word": "Many",
+          "startTimeMs": 203850,
+          "endTimeMs": 204200
+        },
+        {
+          "word": "want",
+          "startTimeMs": 204200,
+          "endTimeMs": 204600
+        },
+        {
+          "word": "my",
+          "startTimeMs": 204600,
+          "endTimeMs": 204800
+        },
+        {
+          "word": "baby",
+          "startTimeMs": 204800,
+          "endTimeMs": 205200
+        },
+        {
+          "word": "gravy",
+          "startTimeMs": 205200,
+          "endTimeMs": 205780
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 205780,
+      "endTimeMs": 207820,
+      "segmentIndex": 68,
+      "text": "They want to have my firstborn",
+      "words": [
+        {
+          "word": "They",
+          "startTimeMs": 205780,
+          "endTimeMs": 206000
+        },
+        {
+          "word": "want",
+          "startTimeMs": 206000,
+          "endTimeMs": 206200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 206200,
+          "endTimeMs": 206300
+        },
+        {
+          "word": "have",
+          "startTimeMs": 206300,
+          "endTimeMs": 206500
+        },
+        {
+          "word": "my",
+          "startTimeMs": 206500,
+          "endTimeMs": 206800
+        },
+        {
+          "word": "firstborn",
+          "startTimeMs": 206800,
+          "endTimeMs": 207820
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 207820,
+      "endTimeMs": 209220,
+      "segmentIndex": 69,
+      "text": "Hey, and take the credit",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 207820,
+          "endTimeMs": 208100
+        },
+        {
+          "word": "and",
+          "startTimeMs": 208100,
+          "endTimeMs": 208300
+        },
+        {
+          "word": "take",
+          "startTimeMs": 208300,
+          "endTimeMs": 208600
+        },
+        {
+          "word": "the",
+          "startTimeMs": 208600,
+          "endTimeMs": 208800
+        },
+        {
+          "word": "credit",
+          "startTimeMs": 208800,
+          "endTimeMs": 209220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 209220,
+      "endTimeMs": 211230,
+      "segmentIndex": 70,
+      "text": "I'm bored now, today I want some brand new pussy",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 209220,
+          "endTimeMs": 209400
+        },
+        {
+          "word": "bored",
+          "startTimeMs": 209400,
+          "endTimeMs": 209600
+        },
+        {
+          "word": "now,",
+          "startTimeMs": 209600,
+          "endTimeMs": 209800
+        },
+        {
+          "word": "today",
+          "startTimeMs": 209800,
+          "endTimeMs": 210000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 210000,
+          "endTimeMs": 210100
+        },
+        {
+          "word": "want",
+          "startTimeMs": 210100,
+          "endTimeMs": 210300
+        },
+        {
+          "word": "some",
+          "startTimeMs": 210300,
+          "endTimeMs": 210400
+        },
+        {
+          "word": "brand",
+          "startTimeMs": 210400,
+          "endTimeMs": 210600
+        },
+        {
+          "word": "new",
+          "startTimeMs": 210600,
+          "endTimeMs": 210800
+        },
+        {
+          "word": "pussy",
+          "startTimeMs": 210800,
+          "endTimeMs": 211230
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 211230,
+      "endTimeMs": 214180,
+      "segmentIndex": 71,
+      "text": "A new one, a new one, a new one, a new one, hey",
+      "words": [
+        {
+          "word": "A",
+          "startTimeMs": 211230,
+          "endTimeMs": 211300
+        },
+        {
+          "word": "new",
+          "startTimeMs": 211300,
+          "endTimeMs": 211500
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 211500,
+          "endTimeMs": 211900
+        },
+        {
+          "word": "a",
+          "startTimeMs": 211900,
+          "endTimeMs": 212000
+        },
+        {
+          "word": "new",
+          "startTimeMs": 212000,
+          "endTimeMs": 212200
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 212200,
+          "endTimeMs": 212600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 212600,
+          "endTimeMs": 212700
+        },
+        {
+          "word": "new",
+          "startTimeMs": 212700,
+          "endTimeMs": 212900
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 212900,
+          "endTimeMs": 213300
+        },
+        {
+          "word": "a",
+          "startTimeMs": 213300,
+          "endTimeMs": 213400
+        },
+        {
+          "word": "new",
+          "startTimeMs": 213400,
+          "endTimeMs": 213600
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 213600,
+          "endTimeMs": 213900
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 213900,
+          "endTimeMs": 214180
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 214180,
+      "endTimeMs": 217930,
+      "segmentIndex": 72,
+      "text": "Listen to your friend, she's right",
+      "words": [
+        {
+          "word": "Listen",
+          "startTimeMs": 214180,
+          "endTimeMs": 214600
+        },
+        {
+          "word": "to",
+          "startTimeMs": 214600,
+          "endTimeMs": 214800
+        },
+        {
+          "word": "your",
+          "startTimeMs": 214800,
+          "endTimeMs": 215000
+        },
+        {
+          "word": "friend,",
+          "startTimeMs": 215000,
+          "endTimeMs": 215600
+        },
+        {
+          "word": "she's",
+          "startTimeMs": 215600,
+          "endTimeMs": 216200
+        },
+        {
+          "word": "right",
+          "startTimeMs": 216200,
+          "endTimeMs": 217930
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 217930,
+      "endTimeMs": 220100,
+      "segmentIndex": 73,
+      "text": "I'm gonna break your heart",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 217930,
+          "endTimeMs": 218200
+        },
+        {
+          "word": "gonna",
+          "startTimeMs": 218200,
+          "endTimeMs": 218500
+        },
+        {
+          "word": "break",
+          "startTimeMs": 218500,
+          "endTimeMs": 219000
+        },
+        {
+          "word": "your",
+          "startTimeMs": 219000,
+          "endTimeMs": 219400
+        },
+        {
+          "word": "heart",
+          "startTimeMs": 219400,
+          "endTimeMs": 220100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 220100,
+      "endTimeMs": 223520,
+      "segmentIndex": 74,
+      "text": "I'm gonna break your heart",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 220100,
+          "endTimeMs": 220400
+        },
+        {
+          "word": "gonna",
+          "startTimeMs": 220400,
+          "endTimeMs": 220800
+        },
+        {
+          "word": "break",
+          "startTimeMs": 220800,
+          "endTimeMs": 221300
+        },
+        {
+          "word": "your",
+          "startTimeMs": 221300,
+          "endTimeMs": 221800
+        },
+        {
+          "word": "heart",
+          "startTimeMs": 221800,
+          "endTimeMs": 223520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 223520,
+      "endTimeMs": 226030,
+      "segmentIndex": 75,
+      "text": "Hey, don't fall in love with me",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 223520,
+          "endTimeMs": 223900
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 223900,
+          "endTimeMs": 224200
+        },
+        {
+          "word": "fall",
+          "startTimeMs": 224200,
+          "endTimeMs": 224500
+        },
+        {
+          "word": "in",
+          "startTimeMs": 224500,
+          "endTimeMs": 224700
+        },
+        {
+          "word": "love",
+          "startTimeMs": 224700,
+          "endTimeMs": 225100
+        },
+        {
+          "word": "with",
+          "startTimeMs": 225100,
+          "endTimeMs": 225400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 225400,
+          "endTimeMs": 226030
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 226030,
+      "endTimeMs": 228080,
+      "segmentIndex": 76,
+      "text": "Don't fall in love with me",
+      "words": [
+        {
+          "word": "Don't",
+          "startTimeMs": 226030,
+          "endTimeMs": 226300
+        },
+        {
+          "word": "fall",
+          "startTimeMs": 226300,
+          "endTimeMs": 226600
+        },
+        {
+          "word": "in",
+          "startTimeMs": 226600,
+          "endTimeMs": 226800
+        },
+        {
+          "word": "love",
+          "startTimeMs": 226800,
+          "endTimeMs": 227200
+        },
+        {
+          "word": "with",
+          "startTimeMs": 227200,
+          "endTimeMs": 227500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 227500,
+          "endTimeMs": 228080
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 228080,
+      "endTimeMs": 230570,
+      "segmentIndex": 77,
+      "text": "Sorry, I'm just like this, hey",
+      "words": [
+        {
+          "word": "Sorry,",
+          "startTimeMs": 228080,
+          "endTimeMs": 228500
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 228500,
+          "endTimeMs": 228800
+        },
+        {
+          "word": "just",
+          "startTimeMs": 228800,
+          "endTimeMs": 229000
+        },
+        {
+          "word": "like",
+          "startTimeMs": 229000,
+          "endTimeMs": 229300
+        },
+        {
+          "word": "this,",
+          "startTimeMs": 229300,
+          "endTimeMs": 229700
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 229700,
+          "endTimeMs": 230570
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 230570,
+      "endTimeMs": 232850,
+      "segmentIndex": 78,
+      "text": "I don't know why I'm like this",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 230570,
+          "endTimeMs": 230700
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 230700,
+          "endTimeMs": 230900
+        },
+        {
+          "word": "know",
+          "startTimeMs": 230900,
+          "endTimeMs": 231200
+        },
+        {
+          "word": "why",
+          "startTimeMs": 231200,
+          "endTimeMs": 231500
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 231500,
+          "endTimeMs": 231800
+        },
+        {
+          "word": "like",
+          "startTimeMs": 231800,
+          "endTimeMs": 232100
+        },
+        {
+          "word": "this",
+          "startTimeMs": 232100,
+          "endTimeMs": 232850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 232850,
+      "endTimeMs": 236690,
+      "segmentIndex": 79,
+      "text": "Listen to your friend, she's right",
+      "words": [
+        {
+          "word": "Listen",
+          "startTimeMs": 232850,
+          "endTimeMs": 233200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 233200,
+          "endTimeMs": 233400
+        },
+        {
+          "word": "your",
+          "startTimeMs": 233400,
+          "endTimeMs": 233700
+        },
+        {
+          "word": "friend,",
+          "startTimeMs": 233700,
+          "endTimeMs": 234300
+        },
+        {
+          "word": "she's",
+          "startTimeMs": 234300,
+          "endTimeMs": 234900
+        },
+        {
+          "word": "right",
+          "startTimeMs": 234900,
+          "endTimeMs": 236690
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 236690,
+      "endTimeMs": 238930,
+      "segmentIndex": 80,
+      "text": "I'm gonna break your heart",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 236690,
+          "endTimeMs": 236900
+        },
+        {
+          "word": "gonna",
+          "startTimeMs": 236900,
+          "endTimeMs": 237200
+        },
+        {
+          "word": "break",
+          "startTimeMs": 237200,
+          "endTimeMs": 237700
+        },
+        {
+          "word": "your",
+          "startTimeMs": 237700,
+          "endTimeMs": 238100
+        },
+        {
+          "word": "heart",
+          "startTimeMs": 238100,
+          "endTimeMs": 238930
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 238930,
+      "endTimeMs": 242270,
+      "segmentIndex": 81,
+      "text": "I'm gonna break your heart",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 238930,
+          "endTimeMs": 239200
+        },
+        {
+          "word": "gonna",
+          "startTimeMs": 239200,
+          "endTimeMs": 239600
+        },
+        {
+          "word": "break",
+          "startTimeMs": 239600,
+          "endTimeMs": 240100
+        },
+        {
+          "word": "your",
+          "startTimeMs": 240100,
+          "endTimeMs": 240500
+        },
+        {
+          "word": "heart",
+          "startTimeMs": 240500,
+          "endTimeMs": 242270
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 242270,
+      "endTimeMs": 244760,
+      "segmentIndex": 82,
+      "text": "Don't fall in love with me",
+      "words": [
+        {
+          "word": "Don't",
+          "startTimeMs": 242270,
+          "endTimeMs": 242600
+        },
+        {
+          "word": "fall",
+          "startTimeMs": 242600,
+          "endTimeMs": 242900
+        },
+        {
+          "word": "in",
+          "startTimeMs": 242900,
+          "endTimeMs": 243100
+        },
+        {
+          "word": "love",
+          "startTimeMs": 243100,
+          "endTimeMs": 243600
+        },
+        {
+          "word": "with",
+          "startTimeMs": 243600,
+          "endTimeMs": 243900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 243900,
+          "endTimeMs": 244760
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 244760,
+      "endTimeMs": 246950,
+      "segmentIndex": 83,
+      "text": "Don't fall in love with me, no",
+      "words": [
+        {
+          "word": "Don't",
+          "startTimeMs": 244760,
+          "endTimeMs": 245000
+        },
+        {
+          "word": "fall",
+          "startTimeMs": 245000,
+          "endTimeMs": 245300
+        },
+        {
+          "word": "in",
+          "startTimeMs": 245300,
+          "endTimeMs": 245500
+        },
+        {
+          "word": "love",
+          "startTimeMs": 245500,
+          "endTimeMs": 245900
+        },
+        {
+          "word": "with",
+          "startTimeMs": 245900,
+          "endTimeMs": 246200
+        },
+        {
+          "word": "me,",
+          "startTimeMs": 246200,
+          "endTimeMs": 246600
+        },
+        {
+          "word": "no",
+          "startTimeMs": 246600,
+          "endTimeMs": 246950
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 246950,
+      "endTimeMs": 249130,
+      "segmentIndex": 84,
+      "text": "Sorry, I'm just like this, now",
+      "words": [
+        {
+          "word": "Sorry,",
+          "startTimeMs": 246950,
+          "endTimeMs": 247400
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 247400,
+          "endTimeMs": 247800
+        },
+        {
+          "word": "just",
+          "startTimeMs": 247800,
+          "endTimeMs": 248100
+        },
+        {
+          "word": "like",
+          "startTimeMs": 248100,
+          "endTimeMs": 248400
+        },
+        {
+          "word": "this,",
+          "startTimeMs": 248400,
+          "endTimeMs": 248800
+        },
+        {
+          "word": "now",
+          "startTimeMs": 248800,
+          "endTimeMs": 249130
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 249130,
+      "endTimeMs": 252130,
+      "segmentIndex": 85,
+      "text": "I don't want to be like this, no",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 249130,
+          "endTimeMs": 249400
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 249400,
+          "endTimeMs": 249700
+        },
+        {
+          "word": "want",
+          "startTimeMs": 249700,
+          "endTimeMs": 250000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 250000,
+          "endTimeMs": 250200
+        },
+        {
+          "word": "be",
+          "startTimeMs": 250200,
+          "endTimeMs": 250400
+        },
+        {
+          "word": "like",
+          "startTimeMs": 250400,
+          "endTimeMs": 250800
+        },
+        {
+          "word": "this,",
+          "startTimeMs": 250800,
+          "endTimeMs": 251300
+        },
+        {
+          "word": "no",
+          "startTimeMs": 251300,
+          "endTimeMs": 252130
+        }
+      ]
+    }
+  ]
+}

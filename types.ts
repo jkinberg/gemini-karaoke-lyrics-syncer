@@ -51,3 +51,23 @@ export interface VocabularyItem {
   endTimeMs: number;
   segmentIndex: number;
 }
+
+// LRC (LyRiCs) file types for improved synchronization
+export interface LrcLine {
+  startTimeMs: number;
+  endTimeMs: number;
+  text: string;
+  wordCount: number;
+}
+
+export interface LrcMetadata {
+  title?: string;
+  artist?: string;
+  album?: string;
+  length?: string;
+}
+
+export interface ParsedLrc {
+  lines: LrcLine[];
+  metadata: LrcMetadata;
+}

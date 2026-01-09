@@ -1,0 +1,3177 @@
+{
+  "metadata": {
+    "title": "Otro Atardecer",
+    "artist": "Bad Bunny & The Marías",
+    "durationMs": 229050,
+    "language": "en-US",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 12680,
+      "segmentIndex": 0,
+      "cueText": "Intro"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 12680,
+      "endTimeMs": 18270,
+      "segmentIndex": 1,
+      "text": "Eh-eh, he-eh, eh-eh, eh-eh",
+      "words": [
+        {
+          "word": "Eh-eh,",
+          "startTimeMs": 12680,
+          "endTimeMs": 14000
+        },
+        {
+          "word": "he-eh,",
+          "startTimeMs": 14000,
+          "endTimeMs": 15500
+        },
+        {
+          "word": "eh-eh,",
+          "startTimeMs": 15500,
+          "endTimeMs": 16900
+        },
+        {
+          "word": "eh-eh",
+          "startTimeMs": 16900,
+          "endTimeMs": 18270
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 18270,
+      "endTimeMs": 21930,
+      "segmentIndex": 2,
+      "text": "Another beautiful sunset I see in San Juan",
+      "words": [
+        {
+          "word": "Another",
+          "startTimeMs": 18270,
+          "endTimeMs": 18727
+        },
+        {
+          "word": "beautiful",
+          "startTimeMs": 18727,
+          "endTimeMs": 19184
+        },
+        {
+          "word": "sunset",
+          "startTimeMs": 19184,
+          "endTimeMs": 19641
+        },
+        {
+          "word": "I",
+          "startTimeMs": 19641,
+          "endTimeMs": 20098
+        },
+        {
+          "word": "see",
+          "startTimeMs": 20098,
+          "endTimeMs": 20555
+        },
+        {
+          "word": "in",
+          "startTimeMs": 20555,
+          "endTimeMs": 21012
+        },
+        {
+          "word": "San",
+          "startTimeMs": 21012,
+          "endTimeMs": 21469
+        },
+        {
+          "word": "Juan",
+          "startTimeMs": 21469,
+          "endTimeMs": 21930
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 21930,
+      "endTimeMs": 26520,
+      "segmentIndex": 3,
+      "text": "Enjoying all those things that those who leave miss (leave, leave)",
+      "words": [
+        {
+          "word": "Enjoying",
+          "startTimeMs": 21930,
+          "endTimeMs": 22347
+        },
+        {
+          "word": "all",
+          "startTimeMs": 22347,
+          "endTimeMs": 22764
+        },
+        {
+          "word": "those",
+          "startTimeMs": 22764,
+          "endTimeMs": 23181
+        },
+        {
+          "word": "things",
+          "startTimeMs": 23181,
+          "endTimeMs": 23598
+        },
+        {
+          "word": "that",
+          "startTimeMs": 23598,
+          "endTimeMs": 24015
+        },
+        {
+          "word": "those",
+          "startTimeMs": 24015,
+          "endTimeMs": 24432
+        },
+        {
+          "word": "who",
+          "startTimeMs": 24432,
+          "endTimeMs": 24849
+        },
+        {
+          "word": "leave",
+          "startTimeMs": 24849,
+          "endTimeMs": 25266
+        },
+        {
+          "word": "miss",
+          "startTimeMs": 25266,
+          "endTimeMs": 25683
+        },
+        {
+          "word": "(leave,",
+          "startTimeMs": 25683,
+          "endTimeMs": 26100
+        },
+        {
+          "word": "leave)",
+          "startTimeMs": 26100,
+          "endTimeMs": 26520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 26520,
+      "endTimeMs": 31060,
+      "segmentIndex": 4,
+      "text": "Enjoying nights like those, that don't happen anymore (happen, happen)",
+      "words": [
+        {
+          "word": "Enjoying",
+          "startTimeMs": 26520,
+          "endTimeMs": 26974
+        },
+        {
+          "word": "nights",
+          "startTimeMs": 26974,
+          "endTimeMs": 27428
+        },
+        {
+          "word": "like",
+          "startTimeMs": 27428,
+          "endTimeMs": 27882
+        },
+        {
+          "word": "those,",
+          "startTimeMs": 27882,
+          "endTimeMs": 28336
+        },
+        {
+          "word": "that",
+          "startTimeMs": 28336,
+          "endTimeMs": 28790
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 28790,
+          "endTimeMs": 29244
+        },
+        {
+          "word": "happen",
+          "startTimeMs": 29244,
+          "endTimeMs": 29698
+        },
+        {
+          "word": "anymore",
+          "startTimeMs": 29698,
+          "endTimeMs": 30152
+        },
+        {
+          "word": "(happen,",
+          "startTimeMs": 30152,
+          "endTimeMs": 30606
+        },
+        {
+          "word": "happen)",
+          "startTimeMs": 30606,
+          "endTimeMs": 31060
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 31060,
+      "endTimeMs": 32550,
+      "segmentIndex": 5,
+      "text": "That don't happen anymore (happen)",
+      "words": [
+        {
+          "word": "That",
+          "startTimeMs": 31060,
+          "endTimeMs": 31358
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 31358,
+          "endTimeMs": 31656
+        },
+        {
+          "word": "happen",
+          "startTimeMs": 31656,
+          "endTimeMs": 31954
+        },
+        {
+          "word": "anymore",
+          "startTimeMs": 31954,
+          "endTimeMs": 32252
+        },
+        {
+          "word": "(happen)",
+          "startTimeMs": 32252,
+          "endTimeMs": 32550
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 32550,
+      "endTimeMs": 36880,
+      "segmentIndex": 6,
+      "text": "But wanting to go back to the last time",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 32550,
+          "endTimeMs": 32983
+        },
+        {
+          "word": "wanting",
+          "startTimeMs": 32983,
+          "endTimeMs": 33416
+        },
+        {
+          "word": "to",
+          "startTimeMs": 33416,
+          "endTimeMs": 33849
+        },
+        {
+          "word": "go",
+          "startTimeMs": 33849,
+          "endTimeMs": 34282
+        },
+        {
+          "word": "back",
+          "startTimeMs": 34282,
+          "endTimeMs": 34715
+        },
+        {
+          "word": "to",
+          "startTimeMs": 34715,
+          "endTimeMs": 35148
+        },
+        {
+          "word": "the",
+          "startTimeMs": 35148,
+          "endTimeMs": 35581
+        },
+        {
+          "word": "last",
+          "startTimeMs": 35581,
+          "endTimeMs": 36014
+        },
+        {
+          "word": "time",
+          "startTimeMs": 36014,
+          "endTimeMs": 36880
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 36880,
+      "endTimeMs": 39360,
+      "segmentIndex": 7,
+      "text": "And I looked you in the eyes",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 36880,
+          "endTimeMs": 37234
+        },
+        {
+          "word": "I",
+          "startTimeMs": 37234,
+          "endTimeMs": 37588
+        },
+        {
+          "word": "looked",
+          "startTimeMs": 37588,
+          "endTimeMs": 37942
+        },
+        {
+          "word": "you",
+          "startTimeMs": 37942,
+          "endTimeMs": 38296
+        },
+        {
+          "word": "in",
+          "startTimeMs": 38296,
+          "endTimeMs": 38650
+        },
+        {
+          "word": "the",
+          "startTimeMs": 38650,
+          "endTimeMs": 39004
+        },
+        {
+          "word": "eyes",
+          "startTimeMs": 39004,
+          "endTimeMs": 39360
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 39360,
+      "endTimeMs": 43600,
+      "segmentIndex": 8,
+      "text": "And tell you the things I didn't tell you (you look like my crush, haha)",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 39360,
+          "endTimeMs": 39642
+        },
+        {
+          "word": "tell",
+          "startTimeMs": 39642,
+          "endTimeMs": 39924
+        },
+        {
+          "word": "you",
+          "startTimeMs": 39924,
+          "endTimeMs": 40206
+        },
+        {
+          "word": "the",
+          "startTimeMs": 40206,
+          "endTimeMs": 40488
+        },
+        {
+          "word": "things",
+          "startTimeMs": 40488,
+          "endTimeMs": 40770
+        },
+        {
+          "word": "I",
+          "startTimeMs": 40770,
+          "endTimeMs": 41052
+        },
+        {
+          "word": "didn't",
+          "startTimeMs": 41052,
+          "endTimeMs": 41334
+        },
+        {
+          "word": "tell",
+          "startTimeMs": 41334,
+          "endTimeMs": 41616
+        },
+        {
+          "word": "you",
+          "startTimeMs": 41616,
+          "endTimeMs": 41898
+        },
+        {
+          "word": "(you",
+          "startTimeMs": 41898,
+          "endTimeMs": 42180
+        },
+        {
+          "word": "look",
+          "startTimeMs": 42180,
+          "endTimeMs": 42462
+        },
+        {
+          "word": "like",
+          "startTimeMs": 42462,
+          "endTimeMs": 42744
+        },
+        {
+          "word": "my",
+          "startTimeMs": 42744,
+          "endTimeMs": 43026
+        },
+        {
+          "word": "crush,",
+          "startTimeMs": 43026,
+          "endTimeMs": 43308
+        },
+        {
+          "word": "haha)",
+          "startTimeMs": 43308,
+          "endTimeMs": 43600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 43600,
+      "endTimeMs": 45820,
+      "segmentIndex": 9,
+      "text": "And take the photos of you that I didn't take",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 43600,
+          "endTimeMs": 43822
+        },
+        {
+          "word": "take",
+          "startTimeMs": 43822,
+          "endTimeMs": 44044
+        },
+        {
+          "word": "the",
+          "startTimeMs": 44044,
+          "endTimeMs": 44266
+        },
+        {
+          "word": "photos",
+          "startTimeMs": 44266,
+          "endTimeMs": 44488
+        },
+        {
+          "word": "of",
+          "startTimeMs": 44488,
+          "endTimeMs": 44710
+        },
+        {
+          "word": "you",
+          "startTimeMs": 44710,
+          "endTimeMs": 44932
+        },
+        {
+          "word": "that",
+          "startTimeMs": 44932,
+          "endTimeMs": 45154
+        },
+        {
+          "word": "I",
+          "startTimeMs": 45154,
+          "endTimeMs": 45376
+        },
+        {
+          "word": "didn't",
+          "startTimeMs": 45376,
+          "endTimeMs": 45598
+        },
+        {
+          "word": "take",
+          "startTimeMs": 45598,
+          "endTimeMs": 45820
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 45820,
+      "endTimeMs": 49280,
+      "segmentIndex": 10,
+      "text": "(Man, damn you look real pretty, let me take a photo of you)",
+      "words": [
+        {
+          "word": "(Man,",
+          "startTimeMs": 45820,
+          "endTimeMs": 46086
+        },
+        {
+          "word": "damn",
+          "startTimeMs": 46086,
+          "endTimeMs": 46352
+        },
+        {
+          "word": "you",
+          "startTimeMs": 46352,
+          "endTimeMs": 46618
+        },
+        {
+          "word": "look",
+          "startTimeMs": 46618,
+          "endTimeMs": 46884
+        },
+        {
+          "word": "real",
+          "startTimeMs": 46884,
+          "endTimeMs": 47150
+        },
+        {
+          "word": "pretty,",
+          "startTimeMs": 47150,
+          "endTimeMs": 47416
+        },
+        {
+          "word": "let",
+          "startTimeMs": 47416,
+          "endTimeMs": 47682
+        },
+        {
+          "word": "me",
+          "startTimeMs": 47682,
+          "endTimeMs": 47948
+        },
+        {
+          "word": "take",
+          "startTimeMs": 47948,
+          "endTimeMs": 48214
+        },
+        {
+          "word": "a",
+          "startTimeMs": 48214,
+          "endTimeMs": 48480
+        },
+        {
+          "word": "photo",
+          "startTimeMs": 48480,
+          "endTimeMs": 48746
+        },
+        {
+          "word": "of",
+          "startTimeMs": 48746,
+          "endTimeMs": 49012
+        },
+        {
+          "word": "you)",
+          "startTimeMs": 49012,
+          "endTimeMs": 49280
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 49280,
+      "endTimeMs": 52330,
+      "segmentIndex": 11,
+      "text": "Hey, my chest is raw, I took a hit",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 49280,
+          "endTimeMs": 49661
+        },
+        {
+          "word": "my",
+          "startTimeMs": 49661,
+          "endTimeMs": 50042
+        },
+        {
+          "word": "chest",
+          "startTimeMs": 50042,
+          "endTimeMs": 50423
+        },
+        {
+          "word": "is",
+          "startTimeMs": 50423,
+          "endTimeMs": 50804
+        },
+        {
+          "word": "raw,",
+          "startTimeMs": 50804,
+          "endTimeMs": 51185
+        },
+        {
+          "word": "I",
+          "startTimeMs": 51185,
+          "endTimeMs": 51566
+        },
+        {
+          "word": "took",
+          "startTimeMs": 51566,
+          "endTimeMs": 51947
+        },
+        {
+          "word": "a",
+          "startTimeMs": 51947,
+          "endTimeMs": 52100
+        },
+        {
+          "word": "hit",
+          "startTimeMs": 52100,
+          "endTimeMs": 52330
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 52330,
+      "endTimeMs": 54580,
+      "segmentIndex": 12,
+      "text": "My heart kicking me",
+      "words": [
+        {
+          "word": "My",
+          "startTimeMs": 52330,
+          "endTimeMs": 52892
+        },
+        {
+          "word": "heart",
+          "startTimeMs": 52892,
+          "endTimeMs": 53454
+        },
+        {
+          "word": "kicking",
+          "startTimeMs": 53454,
+          "endTimeMs": 54016
+        },
+        {
+          "word": "me",
+          "startTimeMs": 54016,
+          "endTimeMs": 54580
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 54580,
+      "endTimeMs": 56850,
+      "segmentIndex": 13,
+      "text": "Tell me, baby, where are you?",
+      "words": [
+        {
+          "word": "Tell",
+          "startTimeMs": 54580,
+          "endTimeMs": 54958
+        },
+        {
+          "word": "me,",
+          "startTimeMs": 54958,
+          "endTimeMs": 55336
+        },
+        {
+          "word": "baby,",
+          "startTimeMs": 55336,
+          "endTimeMs": 55714
+        },
+        {
+          "word": "where",
+          "startTimeMs": 55714,
+          "endTimeMs": 56092
+        },
+        {
+          "word": "are",
+          "startTimeMs": 56092,
+          "endTimeMs": 56470
+        },
+        {
+          "word": "you?",
+          "startTimeMs": 56470,
+          "endTimeMs": 56850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 56850,
+      "endTimeMs": 59240,
+      "segmentIndex": 14,
+      "text": "To pull up with Roro, Julito, Cristal",
+      "words": [
+        {
+          "word": "To",
+          "startTimeMs": 56850,
+          "endTimeMs": 57191
+        },
+        {
+          "word": "pull",
+          "startTimeMs": 57191,
+          "endTimeMs": 57532
+        },
+        {
+          "word": "up",
+          "startTimeMs": 57532,
+          "endTimeMs": 57873
+        },
+        {
+          "word": "with",
+          "startTimeMs": 57873,
+          "endTimeMs": 58214
+        },
+        {
+          "word": "Roro,",
+          "startTimeMs": 58214,
+          "endTimeMs": 58555
+        },
+        {
+          "word": "Julito,",
+          "startTimeMs": 58555,
+          "endTimeMs": 58896
+        },
+        {
+          "word": "Cristal",
+          "startTimeMs": 58896,
+          "endTimeMs": 59240
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 59240,
+      "endTimeMs": 63870,
+      "segmentIndex": 15,
+      "text": "Roy, Edgar, Seba, Oscar, Dalnelly, Big J, playing batá",
+      "words": [
+        {
+          "word": "Roy,",
+          "startTimeMs": 59240,
+          "endTimeMs": 59660
+        },
+        {
+          "word": "Edgar,",
+          "startTimeMs": 59660,
+          "endTimeMs": 60080
+        },
+        {
+          "word": "Seba,",
+          "startTimeMs": 60080,
+          "endTimeMs": 60500
+        },
+        {
+          "word": "Oscar,",
+          "startTimeMs": 60500,
+          "endTimeMs": 60920
+        },
+        {
+          "word": "Dalnelly,",
+          "startTimeMs": 60920,
+          "endTimeMs": 61340
+        },
+        {
+          "word": "Big J,",
+          "startTimeMs": 61340,
+          "endTimeMs": 61760
+        },
+        {
+          "word": "playing",
+          "startTimeMs": 61760,
+          "endTimeMs": 62815
+        },
+        {
+          "word": "batá",
+          "startTimeMs": 62815,
+          "endTimeMs": 63870
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 63870,
+      "endTimeMs": 67170,
+      "segmentIndex": 16,
+      "text": "Today we're leaving the street wrecked",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 63870,
+          "endTimeMs": 64420
+        },
+        {
+          "word": "we're",
+          "startTimeMs": 64420,
+          "endTimeMs": 64970
+        },
+        {
+          "word": "leaving",
+          "startTimeMs": 64970,
+          "endTimeMs": 65520
+        },
+        {
+          "word": "the",
+          "startTimeMs": 65520,
+          "endTimeMs": 66070
+        },
+        {
+          "word": "street",
+          "startTimeMs": 66070,
+          "endTimeMs": 66620
+        },
+        {
+          "word": "wrecked",
+          "startTimeMs": 66620,
+          "endTimeMs": 67170
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 67170,
+      "endTimeMs": 70150,
+      "segmentIndex": 17,
+      "text": "And it would be badass if you played the güiro for me",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 67170,
+          "endTimeMs": 67418
+        },
+        {
+          "word": "it",
+          "startTimeMs": 67418,
+          "endTimeMs": 67666
+        },
+        {
+          "word": "would",
+          "startTimeMs": 67666,
+          "endTimeMs": 67914
+        },
+        {
+          "word": "be",
+          "startTimeMs": 67914,
+          "endTimeMs": 68162
+        },
+        {
+          "word": "badass",
+          "startTimeMs": 68162,
+          "endTimeMs": 68410
+        },
+        {
+          "word": "if",
+          "startTimeMs": 68410,
+          "endTimeMs": 68658
+        },
+        {
+          "word": "you",
+          "startTimeMs": 68658,
+          "endTimeMs": 68906
+        },
+        {
+          "word": "played",
+          "startTimeMs": 68906,
+          "endTimeMs": 69154
+        },
+        {
+          "word": "the",
+          "startTimeMs": 69154,
+          "endTimeMs": 69402
+        },
+        {
+          "word": "güiro",
+          "startTimeMs": 69402,
+          "endTimeMs": 69650
+        },
+        {
+          "word": "for",
+          "startTimeMs": 69650,
+          "endTimeMs": 69898
+        },
+        {
+          "word": "me",
+          "startTimeMs": 69898,
+          "endTimeMs": 70150
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 70150,
+      "endTimeMs": 73470,
+      "segmentIndex": 18,
+      "text": "I see your name and sighs come out of me",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 70150,
+          "endTimeMs": 70482
+        },
+        {
+          "word": "see",
+          "startTimeMs": 70482,
+          "endTimeMs": 70814
+        },
+        {
+          "word": "your",
+          "startTimeMs": 70814,
+          "endTimeMs": 71146
+        },
+        {
+          "word": "name",
+          "startTimeMs": 71146,
+          "endTimeMs": 71478
+        },
+        {
+          "word": "and",
+          "startTimeMs": 71478,
+          "endTimeMs": 71810
+        },
+        {
+          "word": "sighs",
+          "startTimeMs": 71810,
+          "endTimeMs": 72142
+        },
+        {
+          "word": "come",
+          "startTimeMs": 72142,
+          "endTimeMs": 72474
+        },
+        {
+          "word": "out",
+          "startTimeMs": 72474,
+          "endTimeMs": 72806
+        },
+        {
+          "word": "of",
+          "startTimeMs": 72806,
+          "endTimeMs": 73138
+        },
+        {
+          "word": "me",
+          "startTimeMs": 73138,
+          "endTimeMs": 73470
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 73470,
+      "endTimeMs": 77060,
+      "segmentIndex": 19,
+      "text": "I don't know if they're firecrackers or if they're gunshots",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 73470,
+          "endTimeMs": 73796
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 73796,
+          "endTimeMs": 74122
+        },
+        {
+          "word": "know",
+          "startTimeMs": 74122,
+          "endTimeMs": 74448
+        },
+        {
+          "word": "if",
+          "startTimeMs": 74448,
+          "endTimeMs": 74774
+        },
+        {
+          "word": "they're",
+          "startTimeMs": 74774,
+          "endTimeMs": 75100
+        },
+        {
+          "word": "firecrackers",
+          "startTimeMs": 75100,
+          "endTimeMs": 75426
+        },
+        {
+          "word": "or",
+          "startTimeMs": 75426,
+          "endTimeMs": 75752
+        },
+        {
+          "word": "if",
+          "startTimeMs": 75752,
+          "endTimeMs": 76078
+        },
+        {
+          "word": "they're",
+          "startTimeMs": 76078,
+          "endTimeMs": 76404
+        },
+        {
+          "word": "gunshots",
+          "startTimeMs": 76404,
+          "endTimeMs": 77060
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 77060,
+      "endTimeMs": 79760,
+      "segmentIndex": 20,
+      "text": "My white girl, coke, my kilo",
+      "words": [
+        {
+          "word": "My",
+          "startTimeMs": 77060,
+          "endTimeMs": 77510
+        },
+        {
+          "word": "white",
+          "startTimeMs": 77510,
+          "endTimeMs": 77960
+        },
+        {
+          "word": "girl,",
+          "startTimeMs": 77960,
+          "endTimeMs": 78410
+        },
+        {
+          "word": "coke,",
+          "startTimeMs": 78410,
+          "endTimeMs": 78860
+        },
+        {
+          "word": "my",
+          "startTimeMs": 78860,
+          "endTimeMs": 79310
+        },
+        {
+          "word": "kilo",
+          "startTimeMs": 79310,
+          "endTimeMs": 79760
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 79760,
+      "endTimeMs": 83060,
+      "segmentIndex": 21,
+      "text": "I'm in PR, chilling, but",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 79760,
+          "endTimeMs": 80420
+        },
+        {
+          "word": "in",
+          "startTimeMs": 80420,
+          "endTimeMs": 81080
+        },
+        {
+          "word": "PR,",
+          "startTimeMs": 81080,
+          "endTimeMs": 81740
+        },
+        {
+          "word": "chilling,",
+          "startTimeMs": 81740,
+          "endTimeMs": 82400
+        },
+        {
+          "word": "but",
+          "startTimeMs": 82400,
+          "endTimeMs": 83060
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 83060,
+      "endTimeMs": 87520,
+      "segmentIndex": 22,
+      "text": "I should have taken more photos when I had you",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 83060,
+          "endTimeMs": 83506
+        },
+        {
+          "word": "should",
+          "startTimeMs": 83506,
+          "endTimeMs": 83952
+        },
+        {
+          "word": "have",
+          "startTimeMs": 83952,
+          "endTimeMs": 84398
+        },
+        {
+          "word": "taken",
+          "startTimeMs": 84398,
+          "endTimeMs": 84844
+        },
+        {
+          "word": "more",
+          "startTimeMs": 84844,
+          "endTimeMs": 85290
+        },
+        {
+          "word": "photos",
+          "startTimeMs": 85290,
+          "endTimeMs": 85736
+        },
+        {
+          "word": "when",
+          "startTimeMs": 85736,
+          "endTimeMs": 86182
+        },
+        {
+          "word": "I",
+          "startTimeMs": 86182,
+          "endTimeMs": 86628
+        },
+        {
+          "word": "had",
+          "startTimeMs": 86628,
+          "endTimeMs": 87074
+        },
+        {
+          "word": "you",
+          "startTimeMs": 87074,
+          "endTimeMs": 87520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 87520,
+      "endTimeMs": 93590,
+      "segmentIndex": 23,
+      "text": "I should have given you more kisses and hugs the times I could",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 87520,
+          "endTimeMs": 87986
+        },
+        {
+          "word": "should",
+          "startTimeMs": 87986,
+          "endTimeMs": 88452
+        },
+        {
+          "word": "have",
+          "startTimeMs": 88452,
+          "endTimeMs": 88918
+        },
+        {
+          "word": "given",
+          "startTimeMs": 88918,
+          "endTimeMs": 89384
+        },
+        {
+          "word": "you",
+          "startTimeMs": 89384,
+          "endTimeMs": 89850
+        },
+        {
+          "word": "more",
+          "startTimeMs": 89850,
+          "endTimeMs": 90316
+        },
+        {
+          "word": "kisses",
+          "startTimeMs": 90316,
+          "endTimeMs": 90782
+        },
+        {
+          "word": "and",
+          "startTimeMs": 90782,
+          "endTimeMs": 91248
+        },
+        {
+          "word": "hugs",
+          "startTimeMs": 91248,
+          "endTimeMs": 91714
+        },
+        {
+          "word": "the",
+          "startTimeMs": 91714,
+          "endTimeMs": 92180
+        },
+        {
+          "word": "times",
+          "startTimeMs": 92180,
+          "endTimeMs": 92646
+        },
+        {
+          "word": "I",
+          "startTimeMs": 92646,
+          "endTimeMs": 93112
+        },
+        {
+          "word": "could",
+          "startTimeMs": 93112,
+          "endTimeMs": 93590
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 93590,
+      "endTimeMs": 97830,
+      "segmentIndex": 24,
+      "text": "Hey, I hope my people never move away",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 93590,
+          "endTimeMs": 94120
+        },
+        {
+          "word": "I",
+          "startTimeMs": 94120,
+          "endTimeMs": 94650
+        },
+        {
+          "word": "hope",
+          "startTimeMs": 94650,
+          "endTimeMs": 95180
+        },
+        {
+          "word": "my",
+          "startTimeMs": 95180,
+          "endTimeMs": 95710
+        },
+        {
+          "word": "people",
+          "startTimeMs": 95710,
+          "endTimeMs": 96240
+        },
+        {
+          "word": "never",
+          "startTimeMs": 96240,
+          "endTimeMs": 96770
+        },
+        {
+          "word": "move",
+          "startTimeMs": 96770,
+          "endTimeMs": 97300
+        },
+        {
+          "word": "away",
+          "startTimeMs": 97300,
+          "endTimeMs": 97830
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 97830,
+      "endTimeMs": 100350,
+      "segmentIndex": 25,
+      "text": "And if I get drunk today, well, let them help me",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 97830,
+          "endTimeMs": 98059
+        },
+        {
+          "word": "if",
+          "startTimeMs": 98059,
+          "endTimeMs": 98288
+        },
+        {
+          "word": "I",
+          "startTimeMs": 98288,
+          "endTimeMs": 98517
+        },
+        {
+          "word": "get",
+          "startTimeMs": 98517,
+          "endTimeMs": 98746
+        },
+        {
+          "word": "drunk",
+          "startTimeMs": 98746,
+          "endTimeMs": 98975
+        },
+        {
+          "word": "today,",
+          "startTimeMs": 98975,
+          "endTimeMs": 99204
+        },
+        {
+          "word": "well,",
+          "startTimeMs": 99204,
+          "endTimeMs": 99433
+        },
+        {
+          "word": "let",
+          "startTimeMs": 99433,
+          "endTimeMs": 99662
+        },
+        {
+          "word": "them",
+          "startTimeMs": 99662,
+          "endTimeMs": 99891
+        },
+        {
+          "word": "help",
+          "startTimeMs": 99891,
+          "endTimeMs": 100120
+        },
+        {
+          "word": "me",
+          "startTimeMs": 100120,
+          "endTimeMs": 100350
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 100350,
+      "endTimeMs": 104550,
+      "segmentIndex": 26,
+      "text": "I should have taken more photos when I had you",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 100350,
+          "endTimeMs": 100770
+        },
+        {
+          "word": "should",
+          "startTimeMs": 100770,
+          "endTimeMs": 101190
+        },
+        {
+          "word": "have",
+          "startTimeMs": 101190,
+          "endTimeMs": 101610
+        },
+        {
+          "word": "taken",
+          "startTimeMs": 101610,
+          "endTimeMs": 102030
+        },
+        {
+          "word": "more",
+          "startTimeMs": 102030,
+          "endTimeMs": 102450
+        },
+        {
+          "word": "photos",
+          "startTimeMs": 102450,
+          "endTimeMs": 102870
+        },
+        {
+          "word": "when",
+          "startTimeMs": 102870,
+          "endTimeMs": 103290
+        },
+        {
+          "word": "I",
+          "startTimeMs": 103290,
+          "endTimeMs": 103710
+        },
+        {
+          "word": "had",
+          "startTimeMs": 103710,
+          "endTimeMs": 104130
+        },
+        {
+          "word": "you",
+          "startTimeMs": 104130,
+          "endTimeMs": 104550
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 104550,
+      "endTimeMs": 110780,
+      "segmentIndex": 27,
+      "text": "I should have given you more kisses and hugs the times I could",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 104550,
+          "endTimeMs": 105029
+        },
+        {
+          "word": "should",
+          "startTimeMs": 105029,
+          "endTimeMs": 105508
+        },
+        {
+          "word": "have",
+          "startTimeMs": 105508,
+          "endTimeMs": 105987
+        },
+        {
+          "word": "given",
+          "startTimeMs": 105987,
+          "endTimeMs": 106466
+        },
+        {
+          "word": "you",
+          "startTimeMs": 106466,
+          "endTimeMs": 106945
+        },
+        {
+          "word": "more",
+          "startTimeMs": 106945,
+          "endTimeMs": 107424
+        },
+        {
+          "word": "kisses",
+          "startTimeMs": 107424,
+          "endTimeMs": 107903
+        },
+        {
+          "word": "and",
+          "startTimeMs": 107903,
+          "endTimeMs": 108382
+        },
+        {
+          "word": "hugs",
+          "startTimeMs": 108382,
+          "endTimeMs": 108861
+        },
+        {
+          "word": "the",
+          "startTimeMs": 108861,
+          "endTimeMs": 109340
+        },
+        {
+          "word": "times",
+          "startTimeMs": 109340,
+          "endTimeMs": 109819
+        },
+        {
+          "word": "I",
+          "startTimeMs": 109819,
+          "endTimeMs": 110298
+        },
+        {
+          "word": "could",
+          "startTimeMs": 110298,
+          "endTimeMs": 110780
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 110780,
+      "endTimeMs": 115540,
+      "segmentIndex": 28,
+      "text": "I hope my people never move away",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 110780,
+          "endTimeMs": 111460
+        },
+        {
+          "word": "hope",
+          "startTimeMs": 111460,
+          "endTimeMs": 112140
+        },
+        {
+          "word": "my",
+          "startTimeMs": 112140,
+          "endTimeMs": 112820
+        },
+        {
+          "word": "people",
+          "startTimeMs": 112820,
+          "endTimeMs": 113500
+        },
+        {
+          "word": "never",
+          "startTimeMs": 113500,
+          "endTimeMs": 114180
+        },
+        {
+          "word": "move",
+          "startTimeMs": 114180,
+          "endTimeMs": 114860
+        },
+        {
+          "word": "away",
+          "startTimeMs": 114860,
+          "endTimeMs": 115540
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 115540,
+      "endTimeMs": 118920,
+      "segmentIndex": 29,
+      "text": "And if I get drunk today, well, let them help me",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 115540,
+          "endTimeMs": 115847
+        },
+        {
+          "word": "if",
+          "startTimeMs": 115847,
+          "endTimeMs": 116154
+        },
+        {
+          "word": "I",
+          "startTimeMs": 116154,
+          "endTimeMs": 116461
+        },
+        {
+          "word": "get",
+          "startTimeMs": 116461,
+          "endTimeMs": 116768
+        },
+        {
+          "word": "drunk",
+          "startTimeMs": 116768,
+          "endTimeMs": 117075
+        },
+        {
+          "word": "today,",
+          "startTimeMs": 117075,
+          "endTimeMs": 117382
+        },
+        {
+          "word": "well,",
+          "startTimeMs": 117382,
+          "endTimeMs": 117689
+        },
+        {
+          "word": "let",
+          "startTimeMs": 117689,
+          "endTimeMs": 117996
+        },
+        {
+          "word": "them",
+          "startTimeMs": 117996,
+          "endTimeMs": 118303
+        },
+        {
+          "word": "help",
+          "startTimeMs": 118303,
+          "endTimeMs": 118610
+        },
+        {
+          "word": "me",
+          "startTimeMs": 118610,
+          "endTimeMs": 118920
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 118920,
+      "endTimeMs": 124040,
+      "segmentIndex": 30,
+      "text": "Hey, today I'm gonna be with my grandpa all day, playing dominoes",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 118920,
+          "endTimeMs": 119346
+        },
+        {
+          "word": "today",
+          "startTimeMs": 119346,
+          "endTimeMs": 119772
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 119772,
+          "endTimeMs": 120198
+        },
+        {
+          "word": "gonna",
+          "startTimeMs": 120198,
+          "endTimeMs": 120624
+        },
+        {
+          "word": "be",
+          "startTimeMs": 120624,
+          "endTimeMs": 121050
+        },
+        {
+          "word": "with",
+          "startTimeMs": 121050,
+          "endTimeMs": 121476
+        },
+        {
+          "word": "my",
+          "startTimeMs": 121476,
+          "endTimeMs": 121902
+        },
+        {
+          "word": "grandpa",
+          "startTimeMs": 121902,
+          "endTimeMs": 122328
+        },
+        {
+          "word": "all",
+          "startTimeMs": 122328,
+          "endTimeMs": 122754
+        },
+        {
+          "word": "day,",
+          "startTimeMs": 122754,
+          "endTimeMs": 123180
+        },
+        {
+          "word": "playing",
+          "startTimeMs": 123180,
+          "endTimeMs": 123606
+        },
+        {
+          "word": "dominoes",
+          "startTimeMs": 123606,
+          "endTimeMs": 124040
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 124040,
+      "endTimeMs": 128510,
+      "segmentIndex": 31,
+      "text": "If he asks me if I still think of you, I tell him no",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 124040,
+          "endTimeMs": 124383
+        },
+        {
+          "word": "he",
+          "startTimeMs": 124383,
+          "endTimeMs": 124726
+        },
+        {
+          "word": "asks",
+          "startTimeMs": 124726,
+          "endTimeMs": 125069
+        },
+        {
+          "word": "me",
+          "startTimeMs": 125069,
+          "endTimeMs": 125412
+        },
+        {
+          "word": "if",
+          "startTimeMs": 125412,
+          "endTimeMs": 125755
+        },
+        {
+          "word": "I",
+          "startTimeMs": 125755,
+          "endTimeMs": 126098
+        },
+        {
+          "word": "still",
+          "startTimeMs": 126098,
+          "endTimeMs": 126441
+        },
+        {
+          "word": "think",
+          "startTimeMs": 126441,
+          "endTimeMs": 126784
+        },
+        {
+          "word": "of",
+          "startTimeMs": 126784,
+          "endTimeMs": 127127
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 127127,
+          "endTimeMs": 127470
+        },
+        {
+          "word": "I",
+          "startTimeMs": 127470,
+          "endTimeMs": 127813
+        },
+        {
+          "word": "tell",
+          "startTimeMs": 127813,
+          "endTimeMs": 128156
+        },
+        {
+          "word": "him",
+          "startTimeMs": 128156,
+          "endTimeMs": 128499
+        },
+        {
+          "word": "no",
+          "startTimeMs": 128499,
+          "endTimeMs": 128510
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 128510,
+      "endTimeMs": 134090,
+      "segmentIndex": 32,
+      "text": "That my stay close to you is already over, it's already over",
+      "words": [
+        {
+          "word": "That",
+          "startTimeMs": 128510,
+          "endTimeMs": 128939
+        },
+        {
+          "word": "my",
+          "startTimeMs": 128939,
+          "endTimeMs": 129368
+        },
+        {
+          "word": "stay",
+          "startTimeMs": 129368,
+          "endTimeMs": 129797
+        },
+        {
+          "word": "close",
+          "startTimeMs": 129797,
+          "endTimeMs": 130226
+        },
+        {
+          "word": "to",
+          "startTimeMs": 130226,
+          "endTimeMs": 130655
+        },
+        {
+          "word": "you",
+          "startTimeMs": 130655,
+          "endTimeMs": 131084
+        },
+        {
+          "word": "is",
+          "startTimeMs": 131084,
+          "endTimeMs": 131513
+        },
+        {
+          "word": "already",
+          "startTimeMs": 131513,
+          "endTimeMs": 131942
+        },
+        {
+          "word": "over,",
+          "startTimeMs": 131942,
+          "endTimeMs": 132371
+        },
+        {
+          "word": "it's",
+          "startTimeMs": 132371,
+          "endTimeMs": 132800
+        },
+        {
+          "word": "already",
+          "startTimeMs": 132800,
+          "endTimeMs": 133229
+        },
+        {
+          "word": "over",
+          "startTimeMs": 133229,
+          "endTimeMs": 134090
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 134090,
+      "endTimeMs": 138070,
+      "segmentIndex": 33,
+      "text": "Hey, start up the machines, I'm heading to Santurce",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 134090,
+          "endTimeMs": 134532
+        },
+        {
+          "word": "start",
+          "startTimeMs": 134532,
+          "endTimeMs": 134974
+        },
+        {
+          "word": "up",
+          "startTimeMs": 134974,
+          "endTimeMs": 135416
+        },
+        {
+          "word": "the",
+          "startTimeMs": 135416,
+          "endTimeMs": 135858
+        },
+        {
+          "word": "machines,",
+          "startTimeMs": 135858,
+          "endTimeMs": 136300
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 136300,
+          "endTimeMs": 136742
+        },
+        {
+          "word": "heading",
+          "startTimeMs": 136742,
+          "endTimeMs": 137184
+        },
+        {
+          "word": "to",
+          "startTimeMs": 137184,
+          "endTimeMs": 137626
+        },
+        {
+          "word": "Santurce",
+          "startTimeMs": 137626,
+          "endTimeMs": 138070
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 138070,
+      "endTimeMs": 141330,
+      "segmentIndex": 34,
+      "text": "Here we still go hard, check out the babies",
+      "words": [
+        {
+          "word": "Here",
+          "startTimeMs": 138070,
+          "endTimeMs": 138432
+        },
+        {
+          "word": "we",
+          "startTimeMs": 138432,
+          "endTimeMs": 138794
+        },
+        {
+          "word": "still",
+          "startTimeMs": 138794,
+          "endTimeMs": 139156
+        },
+        {
+          "word": "go",
+          "startTimeMs": 139156,
+          "endTimeMs": 139518
+        },
+        {
+          "word": "hard,",
+          "startTimeMs": 139518,
+          "endTimeMs": 139880
+        },
+        {
+          "word": "check",
+          "startTimeMs": 139880,
+          "endTimeMs": 140242
+        },
+        {
+          "word": "out",
+          "startTimeMs": 140242,
+          "endTimeMs": 140604
+        },
+        {
+          "word": "the",
+          "startTimeMs": 140604,
+          "endTimeMs": 140966
+        },
+        {
+          "word": "babies",
+          "startTimeMs": 140966,
+          "endTimeMs": 141330
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 141330,
+      "endTimeMs": 143340,
+      "segmentIndex": 35,
+      "text": "Damn, mami, how sweet",
+      "words": [
+        {
+          "word": "Damn,",
+          "startTimeMs": 141330,
+          "endTimeMs": 141832
+        },
+        {
+          "word": "mami,",
+          "startTimeMs": 141832,
+          "endTimeMs": 142334
+        },
+        {
+          "word": "how",
+          "startTimeMs": 142334,
+          "endTimeMs": 142836
+        },
+        {
+          "word": "sweet",
+          "startTimeMs": 142836,
+          "endTimeMs": 143340
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 143340,
+      "endTimeMs": 149220,
+      "segmentIndex": 36,
+      "text": "Today I want to drink, drink, drink",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 143340,
+          "endTimeMs": 144180
+        },
+        {
+          "word": "I",
+          "startTimeMs": 144180,
+          "endTimeMs": 145020
+        },
+        {
+          "word": "want",
+          "startTimeMs": 145020,
+          "endTimeMs": 145860
+        },
+        {
+          "word": "to",
+          "startTimeMs": 145860,
+          "endTimeMs": 146700
+        },
+        {
+          "word": "drink,",
+          "startTimeMs": 146700,
+          "endTimeMs": 147540
+        },
+        {
+          "word": "drink,",
+          "startTimeMs": 147540,
+          "endTimeMs": 148380
+        },
+        {
+          "word": "drink",
+          "startTimeMs": 148380,
+          "endTimeMs": 149220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 149220,
+      "endTimeMs": 152110,
+      "segmentIndex": 37,
+      "text": "And talk shit until they kick me out",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 149220,
+          "endTimeMs": 149581
+        },
+        {
+          "word": "talk",
+          "startTimeMs": 149581,
+          "endTimeMs": 149942
+        },
+        {
+          "word": "shit",
+          "startTimeMs": 149942,
+          "endTimeMs": 150303
+        },
+        {
+          "word": "until",
+          "startTimeMs": 150303,
+          "endTimeMs": 150664
+        },
+        {
+          "word": "they",
+          "startTimeMs": 150664,
+          "endTimeMs": 151025
+        },
+        {
+          "word": "kick",
+          "startTimeMs": 151025,
+          "endTimeMs": 151386
+        },
+        {
+          "word": "me",
+          "startTimeMs": 151386,
+          "endTimeMs": 151747
+        },
+        {
+          "word": "out",
+          "startTimeMs": 151747,
+          "endTimeMs": 152110
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 152110,
+      "endTimeMs": 154200,
+      "segmentIndex": 38,
+      "text": "I'm real faded (I'm real faded)",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 152110,
+          "endTimeMs": 152458
+        },
+        {
+          "word": "real",
+          "startTimeMs": 152458,
+          "endTimeMs": 152806
+        },
+        {
+          "word": "faded",
+          "startTimeMs": 152806,
+          "endTimeMs": 153154
+        },
+        {
+          "word": "(I'm",
+          "startTimeMs": 153154,
+          "endTimeMs": 153502
+        },
+        {
+          "word": "real",
+          "startTimeMs": 153502,
+          "endTimeMs": 153850
+        },
+        {
+          "word": "faded)",
+          "startTimeMs": 153850,
+          "endTimeMs": 154200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 154200,
+      "endTimeMs": 156220,
+      "segmentIndex": 39,
+      "text": "I'm real faded (I'm real faded)",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 154200,
+          "endTimeMs": 154536
+        },
+        {
+          "word": "real",
+          "startTimeMs": 154536,
+          "endTimeMs": 154872
+        },
+        {
+          "word": "faded",
+          "startTimeMs": 154872,
+          "endTimeMs": 155208
+        },
+        {
+          "word": "(I'm",
+          "startTimeMs": 155208,
+          "endTimeMs": 155544
+        },
+        {
+          "word": "real",
+          "startTimeMs": 155544,
+          "endTimeMs": 155880
+        },
+        {
+          "word": "faded)",
+          "startTimeMs": 155880,
+          "endTimeMs": 156220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 156220,
+      "endTimeMs": 160230,
+      "segmentIndex": 40,
+      "text": "Bastard, you drive, even walking I'm about to crash",
+      "words": [
+        {
+          "word": "Bastard,",
+          "startTimeMs": 156220,
+          "endTimeMs": 156621
+        },
+        {
+          "word": "you",
+          "startTimeMs": 156621,
+          "endTimeMs": 157022
+        },
+        {
+          "word": "drive,",
+          "startTimeMs": 157022,
+          "endTimeMs": 157423
+        },
+        {
+          "word": "even",
+          "startTimeMs": 157423,
+          "endTimeMs": 157824
+        },
+        {
+          "word": "walking",
+          "startTimeMs": 157824,
+          "endTimeMs": 158225
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 158225,
+          "endTimeMs": 158626
+        },
+        {
+          "word": "about",
+          "startTimeMs": 158626,
+          "endTimeMs": 159027
+        },
+        {
+          "word": "to",
+          "startTimeMs": 159027,
+          "endTimeMs": 159428
+        },
+        {
+          "word": "crash",
+          "startTimeMs": 159428,
+          "endTimeMs": 160230
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 160230,
+      "endTimeMs": 163070,
+      "segmentIndex": 41,
+      "text": "I'm real faded (I'm real faded)",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 160230,
+          "endTimeMs": 160703
+        },
+        {
+          "word": "real",
+          "startTimeMs": 160703,
+          "endTimeMs": 161176
+        },
+        {
+          "word": "faded",
+          "startTimeMs": 161176,
+          "endTimeMs": 161649
+        },
+        {
+          "word": "(I'm",
+          "startTimeMs": 161649,
+          "endTimeMs": 162122
+        },
+        {
+          "word": "real",
+          "startTimeMs": 162122,
+          "endTimeMs": 162595
+        },
+        {
+          "word": "faded)",
+          "startTimeMs": 162595,
+          "endTimeMs": 163070
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 163070,
+      "endTimeMs": 165150,
+      "segmentIndex": 42,
+      "text": "I'm real faded (I'm real faded)",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 163070,
+          "endTimeMs": 163416
+        },
+        {
+          "word": "real",
+          "startTimeMs": 163416,
+          "endTimeMs": 163762
+        },
+        {
+          "word": "faded",
+          "startTimeMs": 163762,
+          "endTimeMs": 164108
+        },
+        {
+          "word": "(I'm",
+          "startTimeMs": 164108,
+          "endTimeMs": 164454
+        },
+        {
+          "word": "real",
+          "startTimeMs": 164454,
+          "endTimeMs": 164800
+        },
+        {
+          "word": "faded)",
+          "startTimeMs": 164800,
+          "endTimeMs": 165150
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 165150,
+      "endTimeMs": 168320,
+      "segmentIndex": 43,
+      "text": "Let's enjoy, because you never know if we have little time left",
+      "words": [
+        {
+          "word": "Let's",
+          "startTimeMs": 165150,
+          "endTimeMs": 165414
+        },
+        {
+          "word": "enjoy,",
+          "startTimeMs": 165414,
+          "endTimeMs": 165678
+        },
+        {
+          "word": "because",
+          "startTimeMs": 165678,
+          "endTimeMs": 165942
+        },
+        {
+          "word": "you",
+          "startTimeMs": 165942,
+          "endTimeMs": 166206
+        },
+        {
+          "word": "never",
+          "startTimeMs": 166206,
+          "endTimeMs": 166470
+        },
+        {
+          "word": "know",
+          "startTimeMs": 166470,
+          "endTimeMs": 166734
+        },
+        {
+          "word": "if",
+          "startTimeMs": 166734,
+          "endTimeMs": 166998
+        },
+        {
+          "word": "we",
+          "startTimeMs": 166998,
+          "endTimeMs": 167262
+        },
+        {
+          "word": "have",
+          "startTimeMs": 167262,
+          "endTimeMs": 167526
+        },
+        {
+          "word": "little",
+          "startTimeMs": 167526,
+          "endTimeMs": 167790
+        },
+        {
+          "word": "time",
+          "startTimeMs": 167790,
+          "endTimeMs": 168054
+        },
+        {
+          "word": "left",
+          "startTimeMs": 168054,
+          "endTimeMs": 168320
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 168320,
+      "endTimeMs": 169930,
+      "segmentIndex": 44,
+      "text": "I should have taken more ph—",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 168320,
+          "endTimeMs": 168588
+        },
+        {
+          "word": "should",
+          "startTimeMs": 168588,
+          "endTimeMs": 168856
+        },
+        {
+          "word": "have",
+          "startTimeMs": 168856,
+          "endTimeMs": 169124
+        },
+        {
+          "word": "taken",
+          "startTimeMs": 169124,
+          "endTimeMs": 169392
+        },
+        {
+          "word": "more",
+          "startTimeMs": 169392,
+          "endTimeMs": 169660
+        },
+        {
+          "word": "ph—",
+          "startTimeMs": 169660,
+          "endTimeMs": 169930
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 169930,
+      "endTimeMs": 172680,
+      "segmentIndex": 45,
+      "text": "People, I fucking love you, I love you",
+      "words": [
+        {
+          "word": "People,",
+          "startTimeMs": 169930,
+          "endTimeMs": 170273
+        },
+        {
+          "word": "I",
+          "startTimeMs": 170273,
+          "endTimeMs": 170616
+        },
+        {
+          "word": "fucking",
+          "startTimeMs": 170616,
+          "endTimeMs": 170959
+        },
+        {
+          "word": "love",
+          "startTimeMs": 170959,
+          "endTimeMs": 171302
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 171302,
+          "endTimeMs": 171645
+        },
+        {
+          "word": "I",
+          "startTimeMs": 171645,
+          "endTimeMs": 171988
+        },
+        {
+          "word": "love",
+          "startTimeMs": 171988,
+          "endTimeMs": 172331
+        },
+        {
+          "word": "you",
+          "startTimeMs": 172331,
+          "endTimeMs": 172680
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 172680,
+      "endTimeMs": 174690,
+      "segmentIndex": 46,
+      "text": "Thank you for being here, really",
+      "words": [
+        {
+          "word": "Thank",
+          "startTimeMs": 172680,
+          "endTimeMs": 173015
+        },
+        {
+          "word": "you",
+          "startTimeMs": 173015,
+          "endTimeMs": 173350
+        },
+        {
+          "word": "for",
+          "startTimeMs": 173350,
+          "endTimeMs": 173685
+        },
+        {
+          "word": "being",
+          "startTimeMs": 173685,
+          "endTimeMs": 174020
+        },
+        {
+          "word": "here,",
+          "startTimeMs": 174020,
+          "endTimeMs": 174355
+        },
+        {
+          "word": "really",
+          "startTimeMs": 174355,
+          "endTimeMs": 174690
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 174690,
+      "endTimeMs": 177000,
+      "segmentIndex": 47,
+      "text": "For me it's very important that you're here",
+      "words": [
+        {
+          "word": "For",
+          "startTimeMs": 174690,
+          "endTimeMs": 174978
+        },
+        {
+          "word": "me",
+          "startTimeMs": 174978,
+          "endTimeMs": 175266
+        },
+        {
+          "word": "it's",
+          "startTimeMs": 175266,
+          "endTimeMs": 175554
+        },
+        {
+          "word": "very",
+          "startTimeMs": 175554,
+          "endTimeMs": 175842
+        },
+        {
+          "word": "important",
+          "startTimeMs": 175842,
+          "endTimeMs": 176130
+        },
+        {
+          "word": "that",
+          "startTimeMs": 176130,
+          "endTimeMs": 176418
+        },
+        {
+          "word": "you're",
+          "startTimeMs": 176418,
+          "endTimeMs": 176706
+        },
+        {
+          "word": "here",
+          "startTimeMs": 176706,
+          "endTimeMs": 177000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 177000,
+      "endTimeMs": 179230,
+      "segmentIndex": 48,
+      "text": "Each one of you means a lot to me",
+      "words": [
+        {
+          "word": "Each",
+          "startTimeMs": 177000,
+          "endTimeMs": 177247
+        },
+        {
+          "word": "one",
+          "startTimeMs": 177247,
+          "endTimeMs": 177494
+        },
+        {
+          "word": "of",
+          "startTimeMs": 177494,
+          "endTimeMs": 177741
+        },
+        {
+          "word": "you",
+          "startTimeMs": 177741,
+          "endTimeMs": 177988
+        },
+        {
+          "word": "means",
+          "startTimeMs": 177988,
+          "endTimeMs": 178235
+        },
+        {
+          "word": "a",
+          "startTimeMs": 178235,
+          "endTimeMs": 178482
+        },
+        {
+          "word": "lot",
+          "startTimeMs": 178482,
+          "endTimeMs": 178729
+        },
+        {
+          "word": "to",
+          "startTimeMs": 178729,
+          "endTimeMs": 178976
+        },
+        {
+          "word": "me",
+          "startTimeMs": 178976,
+          "endTimeMs": 179230
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 179230,
+      "endTimeMs": 181370,
+      "segmentIndex": 49,
+      "text": "So, let's go for the photo, come here",
+      "words": [
+        {
+          "word": "So,",
+          "startTimeMs": 179230,
+          "endTimeMs": 179497
+        },
+        {
+          "word": "let's",
+          "startTimeMs": 179497,
+          "endTimeMs": 179764
+        },
+        {
+          "word": "go",
+          "startTimeMs": 179764,
+          "endTimeMs": 180031
+        },
+        {
+          "word": "for",
+          "startTimeMs": 180031,
+          "endTimeMs": 180298
+        },
+        {
+          "word": "the",
+          "startTimeMs": 180298,
+          "endTimeMs": 180565
+        },
+        {
+          "word": "photo,",
+          "startTimeMs": 180565,
+          "endTimeMs": 180832
+        },
+        {
+          "word": "come",
+          "startTimeMs": 180832,
+          "endTimeMs": 181099
+        },
+        {
+          "word": "here",
+          "startTimeMs": 181099,
+          "endTimeMs": 181370
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 181370,
+      "endTimeMs": 183670,
+      "segmentIndex": 50,
+      "text": "Everyone get in, the whole crew, let's go",
+      "words": [
+        {
+          "word": "Everyone",
+          "startTimeMs": 181370,
+          "endTimeMs": 181657
+        },
+        {
+          "word": "get",
+          "startTimeMs": 181657,
+          "endTimeMs": 181944
+        },
+        {
+          "word": "in,",
+          "startTimeMs": 181944,
+          "endTimeMs": 182231
+        },
+        {
+          "word": "the",
+          "startTimeMs": 182231,
+          "endTimeMs": 182518
+        },
+        {
+          "word": "whole",
+          "startTimeMs": 182518,
+          "endTimeMs": 182805
+        },
+        {
+          "word": "crew,",
+          "startTimeMs": 182805,
+          "endTimeMs": 183092
+        },
+        {
+          "word": "let's",
+          "startTimeMs": 183092,
+          "endTimeMs": 183379
+        },
+        {
+          "word": "go",
+          "startTimeMs": 183379,
+          "endTimeMs": 183670
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 183670,
+      "endTimeMs": 185590,
+      "segmentIndex": 51,
+      "text": "Zumba!",
+      "words": [
+        {
+          "word": "Zumba!",
+          "startTimeMs": 183670,
+          "endTimeMs": 185590
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 185590,
+      "endTimeMs": 188930,
+      "segmentIndex": 52,
+      "text": "Now Bernie has the boy and Jan the girl",
+      "words": [
+        {
+          "word": "Now",
+          "startTimeMs": 185590,
+          "endTimeMs": 185961
+        },
+        {
+          "word": "Bernie",
+          "startTimeMs": 185961,
+          "endTimeMs": 186332
+        },
+        {
+          "word": "has",
+          "startTimeMs": 186332,
+          "endTimeMs": 186703
+        },
+        {
+          "word": "the",
+          "startTimeMs": 186703,
+          "endTimeMs": 187074
+        },
+        {
+          "word": "boy",
+          "startTimeMs": 187074,
+          "endTimeMs": 187445
+        },
+        {
+          "word": "and",
+          "startTimeMs": 187445,
+          "endTimeMs": 187816
+        },
+        {
+          "word": "Jan",
+          "startTimeMs": 187816,
+          "endTimeMs": 188187
+        },
+        {
+          "word": "the",
+          "startTimeMs": 188187,
+          "endTimeMs": 188558
+        },
+        {
+          "word": "girl",
+          "startTimeMs": 188558,
+          "endTimeMs": 188930
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 188930,
+      "endTimeMs": 192490,
+      "segmentIndex": 53,
+      "text": "We're not about the movies and the chains anymore",
+      "words": [
+        {
+          "word": "We're",
+          "startTimeMs": 188930,
+          "endTimeMs": 189325
+        },
+        {
+          "word": "not",
+          "startTimeMs": 189325,
+          "endTimeMs": 189720
+        },
+        {
+          "word": "about",
+          "startTimeMs": 189720,
+          "endTimeMs": 190115
+        },
+        {
+          "word": "the",
+          "startTimeMs": 190115,
+          "endTimeMs": 190510
+        },
+        {
+          "word": "movies",
+          "startTimeMs": 190510,
+          "endTimeMs": 190905
+        },
+        {
+          "word": "and",
+          "startTimeMs": 190905,
+          "endTimeMs": 191300
+        },
+        {
+          "word": "the",
+          "startTimeMs": 191300,
+          "endTimeMs": 191695
+        },
+        {
+          "word": "chains",
+          "startTimeMs": 191695,
+          "endTimeMs": 192090
+        },
+        {
+          "word": "anymore",
+          "startTimeMs": 192090,
+          "endTimeMs": 192490
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 192490,
+      "endTimeMs": 195780,
+      "segmentIndex": 54,
+      "text": "We're about the things that are worth it",
+      "words": [
+        {
+          "word": "We're",
+          "startTimeMs": 192490,
+          "endTimeMs": 192901
+        },
+        {
+          "word": "about",
+          "startTimeMs": 192901,
+          "endTimeMs": 193312
+        },
+        {
+          "word": "the",
+          "startTimeMs": 193312,
+          "endTimeMs": 193723
+        },
+        {
+          "word": "things",
+          "startTimeMs": 193723,
+          "endTimeMs": 194134
+        },
+        {
+          "word": "that",
+          "startTimeMs": 194134,
+          "endTimeMs": 194545
+        },
+        {
+          "word": "are",
+          "startTimeMs": 194545,
+          "endTimeMs": 194956
+        },
+        {
+          "word": "worth",
+          "startTimeMs": 194956,
+          "endTimeMs": 195367
+        },
+        {
+          "word": "it",
+          "startTimeMs": 195367,
+          "endTimeMs": 195780
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 195780,
+      "endTimeMs": 199660,
+      "segmentIndex": 55,
+      "text": "Hey, for the perreo, the salsa, the bomba and the plena",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 195780,
+          "endTimeMs": 196132
+        },
+        {
+          "word": "for",
+          "startTimeMs": 196132,
+          "endTimeMs": 196484
+        },
+        {
+          "word": "the",
+          "startTimeMs": 196484,
+          "endTimeMs": 196836
+        },
+        {
+          "word": "perreo,",
+          "startTimeMs": 196836,
+          "endTimeMs": 197188
+        },
+        {
+          "word": "the",
+          "startTimeMs": 197188,
+          "endTimeMs": 197540
+        },
+        {
+          "word": "salsa,",
+          "startTimeMs": 197540,
+          "endTimeMs": 197892
+        },
+        {
+          "word": "the",
+          "startTimeMs": 197892,
+          "endTimeMs": 198244
+        },
+        {
+          "word": "bomba",
+          "startTimeMs": 198244,
+          "endTimeMs": 198596
+        },
+        {
+          "word": "and",
+          "startTimeMs": 198596,
+          "endTimeMs": 198948
+        },
+        {
+          "word": "the",
+          "startTimeMs": 198948,
+          "endTimeMs": 199300
+        },
+        {
+          "word": "plena",
+          "startTimeMs": 199300,
+          "endTimeMs": 199660
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 199660,
+      "endTimeMs": 202340,
+      "segmentIndex": 56,
+      "text": "Check out mine, how it sounds",
+      "words": [
+        {
+          "word": "Check",
+          "startTimeMs": 199660,
+          "endTimeMs": 200106
+        },
+        {
+          "word": "out",
+          "startTimeMs": 200106,
+          "endTimeMs": 200552
+        },
+        {
+          "word": "mine,",
+          "startTimeMs": 200552,
+          "endTimeMs": 200998
+        },
+        {
+          "word": "how",
+          "startTimeMs": 200998,
+          "endTimeMs": 201444
+        },
+        {
+          "word": "it",
+          "startTimeMs": 201444,
+          "endTimeMs": 201890
+        },
+        {
+          "word": "sounds",
+          "startTimeMs": 201890,
+          "endTimeMs": 202340
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 202340,
+      "endTimeMs": 206640,
+      "segmentIndex": 57,
+      "text": "I should have taken more photos when I had you",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 202340,
+          "endTimeMs": 202770
+        },
+        {
+          "word": "should",
+          "startTimeMs": 202770,
+          "endTimeMs": 203200
+        },
+        {
+          "word": "have",
+          "startTimeMs": 203200,
+          "endTimeMs": 203630
+        },
+        {
+          "word": "taken",
+          "startTimeMs": 203630,
+          "endTimeMs": 204060
+        },
+        {
+          "word": "more",
+          "startTimeMs": 204060,
+          "endTimeMs": 204490
+        },
+        {
+          "word": "photos",
+          "startTimeMs": 204490,
+          "endTimeMs": 204920
+        },
+        {
+          "word": "when",
+          "startTimeMs": 204920,
+          "endTimeMs": 205350
+        },
+        {
+          "word": "I",
+          "startTimeMs": 205350,
+          "endTimeMs": 205780
+        },
+        {
+          "word": "had",
+          "startTimeMs": 205780,
+          "endTimeMs": 206210
+        },
+        {
+          "word": "you",
+          "startTimeMs": 206210,
+          "endTimeMs": 206640
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 206640,
+      "endTimeMs": 213340,
+      "segmentIndex": 58,
+      "text": "I should have given you more kisses and hugs the times I could",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 206640,
+          "endTimeMs": 207155
+        },
+        {
+          "word": "should",
+          "startTimeMs": 207155,
+          "endTimeMs": 207670
+        },
+        {
+          "word": "have",
+          "startTimeMs": 207670,
+          "endTimeMs": 208185
+        },
+        {
+          "word": "given",
+          "startTimeMs": 208185,
+          "endTimeMs": 208700
+        },
+        {
+          "word": "you",
+          "startTimeMs": 208700,
+          "endTimeMs": 209215
+        },
+        {
+          "word": "more",
+          "startTimeMs": 209215,
+          "endTimeMs": 209730
+        },
+        {
+          "word": "kisses",
+          "startTimeMs": 209730,
+          "endTimeMs": 210245
+        },
+        {
+          "word": "and",
+          "startTimeMs": 210245,
+          "endTimeMs": 210760
+        },
+        {
+          "word": "hugs",
+          "startTimeMs": 210760,
+          "endTimeMs": 211275
+        },
+        {
+          "word": "the",
+          "startTimeMs": 211275,
+          "endTimeMs": 211790
+        },
+        {
+          "word": "times",
+          "startTimeMs": 211790,
+          "endTimeMs": 212305
+        },
+        {
+          "word": "I",
+          "startTimeMs": 212305,
+          "endTimeMs": 212820
+        },
+        {
+          "word": "could",
+          "startTimeMs": 212820,
+          "endTimeMs": 213340
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 213340,
+      "endTimeMs": 217180,
+      "segmentIndex": 59,
+      "text": "I hope my people never move away",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 213340,
+          "endTimeMs": 213888
+        },
+        {
+          "word": "hope",
+          "startTimeMs": 213888,
+          "endTimeMs": 214436
+        },
+        {
+          "word": "my",
+          "startTimeMs": 214436,
+          "endTimeMs": 214984
+        },
+        {
+          "word": "people",
+          "startTimeMs": 214984,
+          "endTimeMs": 215532
+        },
+        {
+          "word": "never",
+          "startTimeMs": 215532,
+          "endTimeMs": 216080
+        },
+        {
+          "word": "move",
+          "startTimeMs": 216080,
+          "endTimeMs": 216628
+        },
+        {
+          "word": "away",
+          "startTimeMs": 216628,
+          "endTimeMs": 217180
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 217180,
+      "endTimeMs": 226050,
+      "segmentIndex": 60,
+      "text": "And that you send me more nudes",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 217180,
+          "endTimeMs": 218447
+        },
+        {
+          "word": "that",
+          "startTimeMs": 218447,
+          "endTimeMs": 219714
+        },
+        {
+          "word": "you",
+          "startTimeMs": 219714,
+          "endTimeMs": 220981
+        },
+        {
+          "word": "send",
+          "startTimeMs": 220981,
+          "endTimeMs": 222248
+        },
+        {
+          "word": "me",
+          "startTimeMs": 222248,
+          "endTimeMs": 223515
+        },
+        {
+          "word": "more",
+          "startTimeMs": 223515,
+          "endTimeMs": 224782
+        },
+        {
+          "word": "nudes",
+          "startTimeMs": 224782,
+          "endTimeMs": 226050
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 226050,
+      "endTimeMs": 229050,
+      "segmentIndex": 61,
+      "text": "And if I get drunk today, let Vero help me",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 226050,
+          "endTimeMs": 226350
+        },
+        {
+          "word": "if",
+          "startTimeMs": 226350,
+          "endTimeMs": 226650
+        },
+        {
+          "word": "I",
+          "startTimeMs": 226650,
+          "endTimeMs": 226950
+        },
+        {
+          "word": "get",
+          "startTimeMs": 226950,
+          "endTimeMs": 227250
+        },
+        {
+          "word": "drunk",
+          "startTimeMs": 227250,
+          "endTimeMs": 227550
+        },
+        {
+          "word": "today,",
+          "startTimeMs": 227550,
+          "endTimeMs": 227850
+        },
+        {
+          "word": "let",
+          "startTimeMs": 227850,
+          "endTimeMs": 228150
+        },
+        {
+          "word": "Vero",
+          "startTimeMs": 228150,
+          "endTimeMs": 228450
+        },
+        {
+          "word": "help",
+          "startTimeMs": 228450,
+          "endTimeMs": 228750
+        },
+        {
+          "word": "me",
+          "startTimeMs": 228750,
+          "endTimeMs": 229050
+        }
+      ]
+    }
+  ]
+}

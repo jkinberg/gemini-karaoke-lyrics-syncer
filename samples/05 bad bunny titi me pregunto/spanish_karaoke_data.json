@@ -1,0 +1,3253 @@
+{
+  "metadata": {
+    "title": "Tití Me Preguntó",
+    "artist": "Bad Bunny",
+    "durationMs": 253000,
+    "language": "es-ES",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 41740,
+      "segmentIndex": 0,
+      "cueText": "Intro / Skit"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 41740,
+      "endTimeMs": 45520,
+      "segmentIndex": 1,
+      "text": "Ey, Tití me preguntó si tengo mucha' novia'",
+      "words": [
+        {
+          "word": "Ey,",
+          "startTimeMs": 41740,
+          "endTimeMs": 42100
+        },
+        {
+          "word": "Tití",
+          "startTimeMs": 42100,
+          "endTimeMs": 42400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 42400,
+          "endTimeMs": 42600
+        },
+        {
+          "word": "preguntó",
+          "startTimeMs": 42600,
+          "endTimeMs": 43100
+        },
+        {
+          "word": "si",
+          "startTimeMs": 43100,
+          "endTimeMs": 43250
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 43250,
+          "endTimeMs": 43550
+        },
+        {
+          "word": "mucha'",
+          "startTimeMs": 43550,
+          "endTimeMs": 44000
+        },
+        {
+          "word": "novia'",
+          "startTimeMs": 44000,
+          "endTimeMs": 45000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 45520,
+      "endTimeMs": 47310,
+      "segmentIndex": 2,
+      "text": "Mucha' novia'",
+      "words": [
+        {
+          "word": "Mucha'",
+          "startTimeMs": 45520,
+          "endTimeMs": 46100
+        },
+        {
+          "word": "novia'",
+          "startTimeMs": 46100,
+          "endTimeMs": 47000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 47310,
+      "endTimeMs": 50360,
+      "segmentIndex": 3,
+      "text": "Hoy tengo a una, mañana otra, ey",
+      "words": [
+        {
+          "word": "Hoy",
+          "startTimeMs": 47310,
+          "endTimeMs": 47550
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 47550,
+          "endTimeMs": 47800
+        },
+        {
+          "word": "a",
+          "startTimeMs": 47800,
+          "endTimeMs": 47900
+        },
+        {
+          "word": "una,",
+          "startTimeMs": 47900,
+          "endTimeMs": 48300
+        },
+        {
+          "word": "mañana",
+          "startTimeMs": 48300,
+          "endTimeMs": 48800
+        },
+        {
+          "word": "otra,",
+          "startTimeMs": 48800,
+          "endTimeMs": 49400
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 49400,
+          "endTimeMs": 49800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 50360,
+      "endTimeMs": 51660,
+      "segmentIndex": 4,
+      "text": "Pero no hay boda",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 50360,
+          "endTimeMs": 50600
+        },
+        {
+          "word": "no",
+          "startTimeMs": 50600,
+          "endTimeMs": 50800
+        },
+        {
+          "word": "hay",
+          "startTimeMs": 50800,
+          "endTimeMs": 51000
+        },
+        {
+          "word": "boda",
+          "startTimeMs": 51000,
+          "endTimeMs": 51600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 51660,
+      "endTimeMs": 54350,
+      "segmentIndex": 5,
+      "text": "Tití me preguntó si tengo mucha' novia'",
+      "words": [
+        {
+          "word": "Tití",
+          "startTimeMs": 51660,
+          "endTimeMs": 51950
+        },
+        {
+          "word": "me",
+          "startTimeMs": 51950,
+          "endTimeMs": 52150
+        },
+        {
+          "word": "preguntó",
+          "startTimeMs": 52150,
+          "endTimeMs": 52650
+        },
+        {
+          "word": "si",
+          "startTimeMs": 52650,
+          "endTimeMs": 52800
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 52800,
+          "endTimeMs": 53100
+        },
+        {
+          "word": "mucha'",
+          "startTimeMs": 53100,
+          "endTimeMs": 53550
+        },
+        {
+          "word": "novia'",
+          "startTimeMs": 53550,
+          "endTimeMs": 54350
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 54350,
+      "endTimeMs": 56310,
+      "segmentIndex": 6,
+      "text": "Mucha' novia'",
+      "words": [
+        {
+          "word": "Mucha'",
+          "startTimeMs": 54350,
+          "endTimeMs": 54900
+        },
+        {
+          "word": "novia'",
+          "startTimeMs": 54900,
+          "endTimeMs": 55800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 56310,
+      "endTimeMs": 59070,
+      "segmentIndex": 7,
+      "text": "Hoy tengo a una, mañana otra",
+      "words": [
+        {
+          "word": "Hoy",
+          "startTimeMs": 56310,
+          "endTimeMs": 56550
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 56550,
+          "endTimeMs": 56800
+        },
+        {
+          "word": "a",
+          "startTimeMs": 56800,
+          "endTimeMs": 56900
+        },
+        {
+          "word": "una,",
+          "startTimeMs": 56900,
+          "endTimeMs": 57300
+        },
+        {
+          "word": "mañana",
+          "startTimeMs": 57300,
+          "endTimeMs": 57800
+        },
+        {
+          "word": "otra",
+          "startTimeMs": 57800,
+          "endTimeMs": 58600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 59070,
+      "endTimeMs": 63220,
+      "segmentIndex": 8,
+      "text": "Me las vo'a llevar a toa', pa un VIP, un VIP",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 59070,
+          "endTimeMs": 59250
+        },
+        {
+          "word": "las",
+          "startTimeMs": 59250,
+          "endTimeMs": 59400
+        },
+        {
+          "word": "vo'a",
+          "startTimeMs": 59400,
+          "endTimeMs": 59600
+        },
+        {
+          "word": "llevar",
+          "startTimeMs": 59600,
+          "endTimeMs": 59900
+        },
+        {
+          "word": "a",
+          "startTimeMs": 59900,
+          "endTimeMs": 60000
+        },
+        {
+          "word": "toa',",
+          "startTimeMs": 60000,
+          "endTimeMs": 60400
+        },
+        {
+          "word": "pa",
+          "startTimeMs": 60400,
+          "endTimeMs": 60600
+        },
+        {
+          "word": "un",
+          "startTimeMs": 60600,
+          "endTimeMs": 60800
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 60800,
+          "endTimeMs": 61500
+        },
+        {
+          "word": "un",
+          "startTimeMs": 61500,
+          "endTimeMs": 61700
+        },
+        {
+          "word": "VIP",
+          "startTimeMs": 61700,
+          "endTimeMs": 62500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 63220,
+      "endTimeMs": 65390,
+      "segmentIndex": 9,
+      "text": "Ey, saluden a Tití",
+      "words": [
+        {
+          "word": "Ey,",
+          "startTimeMs": 63220,
+          "endTimeMs": 63550
+        },
+        {
+          "word": "saluden",
+          "startTimeMs": 63550,
+          "endTimeMs": 64100
+        },
+        {
+          "word": "a",
+          "startTimeMs": 64100,
+          "endTimeMs": 64250
+        },
+        {
+          "word": "Tití",
+          "startTimeMs": 64250,
+          "endTimeMs": 65000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 65390,
+      "endTimeMs": 68030,
+      "segmentIndex": 10,
+      "text": "Vamo' a tirarno' un selfi, say \"cheese\", ey",
+      "words": [
+        {
+          "word": "Vamo'",
+          "startTimeMs": 65390,
+          "endTimeMs": 65600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 65600,
+          "endTimeMs": 65700
+        },
+        {
+          "word": "tirarno'",
+          "startTimeMs": 65700,
+          "endTimeMs": 66100
+        },
+        {
+          "word": "un",
+          "startTimeMs": 66100,
+          "endTimeMs": 66250
+        },
+        {
+          "word": "selfi,",
+          "startTimeMs": 66250,
+          "endTimeMs": 66600
+        },
+        {
+          "word": "say",
+          "startTimeMs": 66600,
+          "endTimeMs": 66900
+        },
+        {
+          "word": "\"cheese\",",
+          "startTimeMs": 66900,
+          "endTimeMs": 67400
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 67400,
+          "endTimeMs": 67800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 68030,
+      "endTimeMs": 69720,
+      "segmentIndex": 11,
+      "text": "Que sonrían las que ya les metí",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 68030,
+          "endTimeMs": 68200
+        },
+        {
+          "word": "sonrían",
+          "startTimeMs": 68200,
+          "endTimeMs": 68600
+        },
+        {
+          "word": "las",
+          "startTimeMs": 68600,
+          "endTimeMs": 68750
+        },
+        {
+          "word": "que",
+          "startTimeMs": 68750,
+          "endTimeMs": 68900
+        },
+        {
+          "word": "ya",
+          "startTimeMs": 68900,
+          "endTimeMs": 69050
+        },
+        {
+          "word": "les",
+          "startTimeMs": 69050,
+          "endTimeMs": 69200
+        },
+        {
+          "word": "metí",
+          "startTimeMs": 69200,
+          "endTimeMs": 69720
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 69720,
+      "endTimeMs": 73970,
+      "segmentIndex": 12,
+      "text": "En un VIP, un VIP, ey, saluden a Tití",
+      "words": [
+        {
+          "word": "En",
+          "startTimeMs": 69720,
+          "endTimeMs": 69900
+        },
+        {
+          "word": "un",
+          "startTimeMs": 69900,
+          "endTimeMs": 70100
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 70100,
+          "endTimeMs": 70600
+        },
+        {
+          "word": "un",
+          "startTimeMs": 70600,
+          "endTimeMs": 70800
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 70800,
+          "endTimeMs": 71500
+        },
+        {
+          "word": "ey,",
+          "startTimeMs": 71500,
+          "endTimeMs": 72100
+        },
+        {
+          "word": "saluden",
+          "startTimeMs": 72100,
+          "endTimeMs": 72700
+        },
+        {
+          "word": "a",
+          "startTimeMs": 72700,
+          "endTimeMs": 72900
+        },
+        {
+          "word": "Tití",
+          "startTimeMs": 72900,
+          "endTimeMs": 73600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 73970,
+      "endTimeMs": 76490,
+      "segmentIndex": 13,
+      "text": "Vamo' a tirarno' un selfi, say \"cheese\"",
+      "words": [
+        {
+          "word": "Vamo'",
+          "startTimeMs": 73970,
+          "endTimeMs": 74200
+        },
+        {
+          "word": "a",
+          "startTimeMs": 74200,
+          "endTimeMs": 74300
+        },
+        {
+          "word": "tirarno'",
+          "startTimeMs": 74300,
+          "endTimeMs": 74700
+        },
+        {
+          "word": "un",
+          "startTimeMs": 74700,
+          "endTimeMs": 74850
+        },
+        {
+          "word": "selfi,",
+          "startTimeMs": 74850,
+          "endTimeMs": 75300
+        },
+        {
+          "word": "say",
+          "startTimeMs": 75300,
+          "endTimeMs": 75600
+        },
+        {
+          "word": "\"cheese\"",
+          "startTimeMs": 75600,
+          "endTimeMs": 76490
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 76490,
+      "endTimeMs": 78100,
+      "segmentIndex": 14,
+      "text": "Que sonrían las que ya se olvidaron de mí",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 76490,
+          "endTimeMs": 76600
+        },
+        {
+          "word": "sonrían",
+          "startTimeMs": 76600,
+          "endTimeMs": 76950
+        },
+        {
+          "word": "las",
+          "startTimeMs": 76950,
+          "endTimeMs": 77100
+        },
+        {
+          "word": "que",
+          "startTimeMs": 77100,
+          "endTimeMs": 77200
+        },
+        {
+          "word": "ya",
+          "startTimeMs": 77200,
+          "endTimeMs": 77300
+        },
+        {
+          "word": "se",
+          "startTimeMs": 77300,
+          "endTimeMs": 77450
+        },
+        {
+          "word": "olvidaron",
+          "startTimeMs": 77450,
+          "endTimeMs": 77800
+        },
+        {
+          "word": "de",
+          "startTimeMs": 77800,
+          "endTimeMs": 77900
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 77900,
+          "endTimeMs": 78100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 78100,
+      "endTimeMs": 81010,
+      "segmentIndex": 15,
+      "text": "Me gustan mucho las Gabriela', las Patricia'",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 78100,
+          "endTimeMs": 78300
+        },
+        {
+          "word": "gustan",
+          "startTimeMs": 78300,
+          "endTimeMs": 78600
+        },
+        {
+          "word": "mucho",
+          "startTimeMs": 78600,
+          "endTimeMs": 78900
+        },
+        {
+          "word": "las",
+          "startTimeMs": 78900,
+          "endTimeMs": 79100
+        },
+        {
+          "word": "Gabriela',",
+          "startTimeMs": 79100,
+          "endTimeMs": 79700
+        },
+        {
+          "word": "las",
+          "startTimeMs": 79700,
+          "endTimeMs": 80100
+        },
+        {
+          "word": "Patricia'",
+          "startTimeMs": 80100,
+          "endTimeMs": 81010
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 81010,
+      "endTimeMs": 82720,
+      "segmentIndex": 16,
+      "text": "Las Nicole', las Sofía'",
+      "words": [
+        {
+          "word": "Las",
+          "startTimeMs": 81010,
+          "endTimeMs": 81250
+        },
+        {
+          "word": "Nicole',",
+          "startTimeMs": 81250,
+          "endTimeMs": 81800
+        },
+        {
+          "word": "las",
+          "startTimeMs": 81800,
+          "endTimeMs": 82100
+        },
+        {
+          "word": "Sofía'",
+          "startTimeMs": 82100,
+          "endTimeMs": 82720
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 82720,
+      "endTimeMs": 84820,
+      "segmentIndex": 17,
+      "text": "Mi primera novia en kínder, María",
+      "words": [
+        {
+          "word": "Mi",
+          "startTimeMs": 82720,
+          "endTimeMs": 82900
+        },
+        {
+          "word": "primera",
+          "startTimeMs": 82900,
+          "endTimeMs": 83200
+        },
+        {
+          "word": "novia",
+          "startTimeMs": 83200,
+          "endTimeMs": 83500
+        },
+        {
+          "word": "en",
+          "startTimeMs": 83500,
+          "endTimeMs": 83600
+        },
+        {
+          "word": "kínder,",
+          "startTimeMs": 83600,
+          "endTimeMs": 84000
+        },
+        {
+          "word": "María",
+          "startTimeMs": 84000,
+          "endTimeMs": 84820
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 84820,
+      "endTimeMs": 86900,
+      "segmentIndex": 18,
+      "text": "Y mi primer amor se llamaba Thalía",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 84820,
+          "endTimeMs": 84950
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 84950,
+          "endTimeMs": 85100
+        },
+        {
+          "word": "primer",
+          "startTimeMs": 85100,
+          "endTimeMs": 85400
+        },
+        {
+          "word": "amor",
+          "startTimeMs": 85400,
+          "endTimeMs": 85700
+        },
+        {
+          "word": "se",
+          "startTimeMs": 85700,
+          "endTimeMs": 85900
+        },
+        {
+          "word": "llamaba",
+          "startTimeMs": 85900,
+          "endTimeMs": 86300
+        },
+        {
+          "word": "Thalía",
+          "startTimeMs": 86300,
+          "endTimeMs": 86900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 86900,
+      "endTimeMs": 89190,
+      "segmentIndex": 19,
+      "text": "Tengo una colombiana que me escribe to' los día'",
+      "words": [
+        {
+          "word": "Tengo",
+          "startTimeMs": 86900,
+          "endTimeMs": 87200
+        },
+        {
+          "word": "una",
+          "startTimeMs": 87200,
+          "endTimeMs": 87400
+        },
+        {
+          "word": "colombiana",
+          "startTimeMs": 87400,
+          "endTimeMs": 88000
+        },
+        {
+          "word": "que",
+          "startTimeMs": 88000,
+          "endTimeMs": 88150
+        },
+        {
+          "word": "me",
+          "startTimeMs": 88150,
+          "endTimeMs": 88250
+        },
+        {
+          "word": "escribe",
+          "startTimeMs": 88250,
+          "endTimeMs": 88600
+        },
+        {
+          "word": "to'",
+          "startTimeMs": 88600,
+          "endTimeMs": 88800
+        },
+        {
+          "word": "los",
+          "startTimeMs": 88800,
+          "endTimeMs": 88950
+        },
+        {
+          "word": "día'",
+          "startTimeMs": 88950,
+          "endTimeMs": 89190
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 89190,
+      "endTimeMs": 91360,
+      "segmentIndex": 20,
+      "text": "Y una mexicana que ni yo sabía",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 89190,
+          "endTimeMs": 89300
+        },
+        {
+          "word": "una",
+          "startTimeMs": 89300,
+          "endTimeMs": 89500
+        },
+        {
+          "word": "mexicana",
+          "startTimeMs": 89500,
+          "endTimeMs": 90100
+        },
+        {
+          "word": "que",
+          "startTimeMs": 90100,
+          "endTimeMs": 90300
+        },
+        {
+          "word": "ni",
+          "startTimeMs": 90300,
+          "endTimeMs": 90500
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 90500,
+          "endTimeMs": 90700
+        },
+        {
+          "word": "sabía",
+          "startTimeMs": 90700,
+          "endTimeMs": 91360
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 91360,
+      "endTimeMs": 93760,
+      "segmentIndex": 21,
+      "text": "Otra en San Antonio que me quiere todavía",
+      "words": [
+        {
+          "word": "Otra",
+          "startTimeMs": 91360,
+          "endTimeMs": 91600
+        },
+        {
+          "word": "en",
+          "startTimeMs": 91600,
+          "endTimeMs": 91700
+        },
+        {
+          "word": "San",
+          "startTimeMs": 91700,
+          "endTimeMs": 91900
+        },
+        {
+          "word": "Antonio",
+          "startTimeMs": 91900,
+          "endTimeMs": 92300
+        },
+        {
+          "word": "que",
+          "startTimeMs": 92300,
+          "endTimeMs": 92500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 92500,
+          "endTimeMs": 92650
+        },
+        {
+          "word": "quiere",
+          "startTimeMs": 92650,
+          "endTimeMs": 93000
+        },
+        {
+          "word": "todavía",
+          "startTimeMs": 93000,
+          "endTimeMs": 93760
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 93760,
+      "endTimeMs": 95940,
+      "segmentIndex": 22,
+      "text": "Y las de PR que toítas son mía'",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 93760,
+          "endTimeMs": 93850
+        },
+        {
+          "word": "las",
+          "startTimeMs": 93850,
+          "endTimeMs": 94000
+        },
+        {
+          "word": "de",
+          "startTimeMs": 94000,
+          "endTimeMs": 94150
+        },
+        {
+          "word": "PR",
+          "startTimeMs": 94150,
+          "endTimeMs": 94500
+        },
+        {
+          "word": "que",
+          "startTimeMs": 94500,
+          "endTimeMs": 94700
+        },
+        {
+          "word": "toítas",
+          "startTimeMs": 94700,
+          "endTimeMs": 95200
+        },
+        {
+          "word": "son",
+          "startTimeMs": 95200,
+          "endTimeMs": 95400
+        },
+        {
+          "word": "mía'",
+          "startTimeMs": 95400,
+          "endTimeMs": 95940
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 95940,
+      "endTimeMs": 98210,
+      "segmentIndex": 23,
+      "text": "Una dominicana que es uva bombón",
+      "words": [
+        {
+          "word": "Una",
+          "startTimeMs": 95940,
+          "endTimeMs": 96200
+        },
+        {
+          "word": "dominicana",
+          "startTimeMs": 96200,
+          "endTimeMs": 96800
+        },
+        {
+          "word": "que",
+          "startTimeMs": 96800,
+          "endTimeMs": 97000
+        },
+        {
+          "word": "es",
+          "startTimeMs": 97000,
+          "endTimeMs": 97200
+        },
+        {
+          "word": "uva",
+          "startTimeMs": 97200,
+          "endTimeMs": 97500
+        },
+        {
+          "word": "bombón",
+          "startTimeMs": 97500,
+          "endTimeMs": 98210
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 98210,
+      "endTimeMs": 100170,
+      "segmentIndex": 24,
+      "text": "Uva, uva bombón",
+      "words": [
+        {
+          "word": "Uva,",
+          "startTimeMs": 98210,
+          "endTimeMs": 98800
+        },
+        {
+          "word": "uva",
+          "startTimeMs": 98800,
+          "endTimeMs": 99400
+        },
+        {
+          "word": "bombón",
+          "startTimeMs": 99400,
+          "endTimeMs": 100170
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 100170,
+      "endTimeMs": 102310,
+      "segmentIndex": 25,
+      "text": "La de Barcelona que vino en avión",
+      "words": [
+        {
+          "word": "La",
+          "startTimeMs": 100170,
+          "endTimeMs": 100300
+        },
+        {
+          "word": "de",
+          "startTimeMs": 100300,
+          "endTimeMs": 100450
+        },
+        {
+          "word": "Barcelona",
+          "startTimeMs": 100450,
+          "endTimeMs": 101000
+        },
+        {
+          "word": "que",
+          "startTimeMs": 101000,
+          "endTimeMs": 101200
+        },
+        {
+          "word": "vino",
+          "startTimeMs": 101200,
+          "endTimeMs": 101500
+        },
+        {
+          "word": "en",
+          "startTimeMs": 101500,
+          "endTimeMs": 101700
+        },
+        {
+          "word": "avión",
+          "startTimeMs": 101700,
+          "endTimeMs": 102310
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 102310,
+      "endTimeMs": 104520,
+      "segmentIndex": 26,
+      "text": "Y dice que mi bicho está cabrón",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 102310,
+          "endTimeMs": 102450
+        },
+        {
+          "word": "dice",
+          "startTimeMs": 102450,
+          "endTimeMs": 102700
+        },
+        {
+          "word": "que",
+          "startTimeMs": 102700,
+          "endTimeMs": 102850
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 102850,
+          "endTimeMs": 103050
+        },
+        {
+          "word": "bicho",
+          "startTimeMs": 103050,
+          "endTimeMs": 103400
+        },
+        {
+          "word": "está",
+          "startTimeMs": 103400,
+          "endTimeMs": 103700
+        },
+        {
+          "word": "cabrón",
+          "startTimeMs": 103700,
+          "endTimeMs": 104520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 104520,
+      "endTimeMs": 106440,
+      "segmentIndex": 27,
+      "text": "Yo dejo que jueguen con mi corazón",
+      "words": [
+        {
+          "word": "Yo",
+          "startTimeMs": 104520,
+          "endTimeMs": 104700
+        },
+        {
+          "word": "dejo",
+          "startTimeMs": 104700,
+          "endTimeMs": 105000
+        },
+        {
+          "word": "que",
+          "startTimeMs": 105000,
+          "endTimeMs": 105150
+        },
+        {
+          "word": "jueguen",
+          "startTimeMs": 105150,
+          "endTimeMs": 105500
+        },
+        {
+          "word": "con",
+          "startTimeMs": 105500,
+          "endTimeMs": 105700
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 105700,
+          "endTimeMs": 105850
+        },
+        {
+          "word": "corazón",
+          "startTimeMs": 105850,
+          "endTimeMs": 106440
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 106440,
+      "endTimeMs": 108640,
+      "segmentIndex": 28,
+      "text": "Quisiera mudarme con toas pa una mansión",
+      "words": [
+        {
+          "word": "Quisiera",
+          "startTimeMs": 106440,
+          "endTimeMs": 106800
+        },
+        {
+          "word": "mudarme",
+          "startTimeMs": 106800,
+          "endTimeMs": 107200
+        },
+        {
+          "word": "con",
+          "startTimeMs": 107200,
+          "endTimeMs": 107400
+        },
+        {
+          "word": "toas",
+          "startTimeMs": 107400,
+          "endTimeMs": 107700
+        },
+        {
+          "word": "pa",
+          "startTimeMs": 107700,
+          "endTimeMs": 107850
+        },
+        {
+          "word": "una",
+          "startTimeMs": 107850,
+          "endTimeMs": 108000
+        },
+        {
+          "word": "mansión",
+          "startTimeMs": 108000,
+          "endTimeMs": 108640
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 108640,
+      "endTimeMs": 110910,
+      "segmentIndex": 29,
+      "text": "El día que me case te envío la invitación",
+      "words": [
+        {
+          "word": "El",
+          "startTimeMs": 108640,
+          "endTimeMs": 108800
+        },
+        {
+          "word": "día",
+          "startTimeMs": 108800,
+          "endTimeMs": 109000
+        },
+        {
+          "word": "que",
+          "startTimeMs": 109000,
+          "endTimeMs": 109150
+        },
+        {
+          "word": "me",
+          "startTimeMs": 109150,
+          "endTimeMs": 109300
+        },
+        {
+          "word": "case",
+          "startTimeMs": 109300,
+          "endTimeMs": 109600
+        },
+        {
+          "word": "te",
+          "startTimeMs": 109600,
+          "endTimeMs": 109750
+        },
+        {
+          "word": "envío",
+          "startTimeMs": 109750,
+          "endTimeMs": 110050
+        },
+        {
+          "word": "la",
+          "startTimeMs": 110050,
+          "endTimeMs": 110200
+        },
+        {
+          "word": "invitación",
+          "startTimeMs": 110200,
+          "endTimeMs": 110910
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 110910,
+      "endTimeMs": 112650,
+      "segmentIndex": 30,
+      "text": "Muchacho, deja eso",
+      "words": [
+        {
+          "word": "Muchacho,",
+          "startTimeMs": 110910,
+          "endTimeMs": 111600
+        },
+        {
+          "word": "deja",
+          "startTimeMs": 111600,
+          "endTimeMs": 112000
+        },
+        {
+          "word": "eso",
+          "startTimeMs": 112000,
+          "endTimeMs": 112500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 112650,
+      "endTimeMs": 115680,
+      "segmentIndex": 31,
+      "text": "Ey, Tití me preguntó si tengo mucha' novia'",
+      "words": [
+        {
+          "word": "Ey,",
+          "startTimeMs": 112650,
+          "endTimeMs": 113000
+        },
+        {
+          "word": "Tití",
+          "startTimeMs": 113000,
+          "endTimeMs": 113400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 113400,
+          "endTimeMs": 113600
+        },
+        {
+          "word": "preguntó",
+          "startTimeMs": 113600,
+          "endTimeMs": 114200
+        },
+        {
+          "word": "si",
+          "startTimeMs": 114200,
+          "endTimeMs": 114400
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 114400,
+          "endTimeMs": 114700
+        },
+        {
+          "word": "mucha'",
+          "startTimeMs": 114700,
+          "endTimeMs": 115100
+        },
+        {
+          "word": "novia'",
+          "startTimeMs": 115100,
+          "endTimeMs": 115680
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 115680,
+      "endTimeMs": 117430,
+      "segmentIndex": 32,
+      "text": "Mucha' novia'",
+      "words": [
+        {
+          "word": "Mucha'",
+          "startTimeMs": 115680,
+          "endTimeMs": 116200
+        },
+        {
+          "word": "novia'",
+          "startTimeMs": 116200,
+          "endTimeMs": 117000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 117430,
+      "endTimeMs": 120360,
+      "segmentIndex": 33,
+      "text": "Hoy tengo a una, mañana otra, ey",
+      "words": [
+        {
+          "word": "Hoy",
+          "startTimeMs": 117430,
+          "endTimeMs": 117700
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 117700,
+          "endTimeMs": 118000
+        },
+        {
+          "word": "a",
+          "startTimeMs": 118000,
+          "endTimeMs": 118150
+        },
+        {
+          "word": "una,",
+          "startTimeMs": 118150,
+          "endTimeMs": 118600
+        },
+        {
+          "word": "mañana",
+          "startTimeMs": 118600,
+          "endTimeMs": 119100
+        },
+        {
+          "word": "otra,",
+          "startTimeMs": 119100,
+          "endTimeMs": 119600
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 119600,
+          "endTimeMs": 120000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 120360,
+      "endTimeMs": 121750,
+      "segmentIndex": 34,
+      "text": "Pero no hay boda",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 120360,
+          "endTimeMs": 120600
+        },
+        {
+          "word": "no",
+          "startTimeMs": 120600,
+          "endTimeMs": 120800
+        },
+        {
+          "word": "hay",
+          "startTimeMs": 120800,
+          "endTimeMs": 121000
+        },
+        {
+          "word": "boda",
+          "startTimeMs": 121000,
+          "endTimeMs": 121750
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 121750,
+      "endTimeMs": 124690,
+      "segmentIndex": 35,
+      "text": "Tití me preguntó si tengo mucha' novia', ey, ey",
+      "words": [
+        {
+          "word": "Tití",
+          "startTimeMs": 121750,
+          "endTimeMs": 122100
+        },
+        {
+          "word": "me",
+          "startTimeMs": 122100,
+          "endTimeMs": 122300
+        },
+        {
+          "word": "preguntó",
+          "startTimeMs": 122300,
+          "endTimeMs": 122800
+        },
+        {
+          "word": "si",
+          "startTimeMs": 122800,
+          "endTimeMs": 123000
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 123000,
+          "endTimeMs": 123300
+        },
+        {
+          "word": "mucha'",
+          "startTimeMs": 123300,
+          "endTimeMs": 123700
+        },
+        {
+          "word": "novia',",
+          "startTimeMs": 123700,
+          "endTimeMs": 124200
+        },
+        {
+          "word": "ey,",
+          "startTimeMs": 124200,
+          "endTimeMs": 124400
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 124400,
+          "endTimeMs": 124690
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 124690,
+      "endTimeMs": 126320,
+      "segmentIndex": 36,
+      "text": "Mucha' novia'",
+      "words": [
+        {
+          "word": "Mucha'",
+          "startTimeMs": 124690,
+          "endTimeMs": 125200
+        },
+        {
+          "word": "novia'",
+          "startTimeMs": 125200,
+          "endTimeMs": 126000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 126320,
+      "endTimeMs": 128960,
+      "segmentIndex": 37,
+      "text": "Hoy tengo a una, mañana otra",
+      "words": [
+        {
+          "word": "Hoy",
+          "startTimeMs": 126320,
+          "endTimeMs": 126600
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 126600,
+          "endTimeMs": 126900
+        },
+        {
+          "word": "a",
+          "startTimeMs": 126900,
+          "endTimeMs": 127000
+        },
+        {
+          "word": "una,",
+          "startTimeMs": 127000,
+          "endTimeMs": 127400
+        },
+        {
+          "word": "mañana",
+          "startTimeMs": 127400,
+          "endTimeMs": 127900
+        },
+        {
+          "word": "otra",
+          "startTimeMs": 127900,
+          "endTimeMs": 128600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 128960,
+      "endTimeMs": 130270,
+      "segmentIndex": 38,
+      "text": "(Mañana otra)",
+      "words": [
+        {
+          "word": "(Mañana",
+          "startTimeMs": 128960,
+          "endTimeMs": 129500
+        },
+        {
+          "word": "otra)",
+          "startTimeMs": 129500,
+          "endTimeMs": 130270
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 130270,
+      "endTimeMs": 134350,
+      "segmentIndex": 39,
+      "text": "Tití me preguntó-tó-tó-tó-tó-tó-tó",
+      "words": [
+        {
+          "word": "Tití",
+          "startTimeMs": 130270,
+          "endTimeMs": 130600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 130600,
+          "endTimeMs": 130800
+        },
+        {
+          "word": "preguntó-tó-tó-tó-tó-tó-tó",
+          "startTimeMs": 130800,
+          "endTimeMs": 134350
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 134350,
+      "endTimeMs": 138970,
+      "segmentIndex": 40,
+      "text": "Tití me preguntó-tó-tó-tó-tó-tó-tó (qué pámpara)",
+      "words": [
+        {
+          "word": "Tití",
+          "startTimeMs": 134350,
+          "endTimeMs": 134600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 134600,
+          "endTimeMs": 134800
+        },
+        {
+          "word": "preguntó-tó-tó-tó-tó-tó-tó",
+          "startTimeMs": 134800,
+          "endTimeMs": 138200
+        },
+        {
+          "word": "(qué",
+          "startTimeMs": 138200,
+          "endTimeMs": 138600
+        },
+        {
+          "word": "pámpara)",
+          "startTimeMs": 138600,
+          "endTimeMs": 138970
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 138970,
+      "endTimeMs": 143100,
+      "segmentIndex": 41,
+      "text": "Tití me preguntó-tó-tó-tó-tó-tó-tó",
+      "words": [
+        {
+          "word": "Tití",
+          "startTimeMs": 138970,
+          "endTimeMs": 139200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 139200,
+          "endTimeMs": 139400
+        },
+        {
+          "word": "preguntó-tó-tó-tó-tó-tó-tó",
+          "startTimeMs": 139400,
+          "endTimeMs": 143100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 143100,
+      "endTimeMs": 146170,
+      "segmentIndex": 42,
+      "text": "Tití me preguntó-tó-tó-tó",
+      "words": [
+        {
+          "word": "Tití",
+          "startTimeMs": 143100,
+          "endTimeMs": 143400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 143400,
+          "endTimeMs": 143600
+        },
+        {
+          "word": "preguntó-tó-tó-tó",
+          "startTimeMs": 143600,
+          "endTimeMs": 146170
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 146170,
+      "endTimeMs": 148440,
+      "segmentIndex": 43,
+      "text": "Pero ven acá, muchacho, ¿y para qué tú quiere' tanta' novia'?",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 146170,
+          "endTimeMs": 146350
+        },
+        {
+          "word": "ven",
+          "startTimeMs": 146350,
+          "endTimeMs": 146500
+        },
+        {
+          "word": "acá,",
+          "startTimeMs": 146500,
+          "endTimeMs": 146700
+        },
+        {
+          "word": "muchacho,",
+          "startTimeMs": 146700,
+          "endTimeMs": 147200
+        },
+        {
+          "word": "¿y",
+          "startTimeMs": 147200,
+          "endTimeMs": 147300
+        },
+        {
+          "word": "para",
+          "startTimeMs": 147300,
+          "endTimeMs": 147450
+        },
+        {
+          "word": "qué",
+          "startTimeMs": 147450,
+          "endTimeMs": 147600
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 147600,
+          "endTimeMs": 147700
+        },
+        {
+          "word": "quiere'",
+          "startTimeMs": 147700,
+          "endTimeMs": 147950
+        },
+        {
+          "word": "tanta'",
+          "startTimeMs": 147950,
+          "endTimeMs": 148200
+        },
+        {
+          "word": "novia'?",
+          "startTimeMs": 148200,
+          "endTimeMs": 148440
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 148440,
+      "endTimeMs": 151900,
+      "segmentIndex": 44,
+      "text": "Me las vo'a llevar a toa', pa un VIP, un VIP",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 148440,
+          "endTimeMs": 148600
+        },
+        {
+          "word": "las",
+          "startTimeMs": 148600,
+          "endTimeMs": 148750
+        },
+        {
+          "word": "vo'a",
+          "startTimeMs": 148750,
+          "endTimeMs": 148950
+        },
+        {
+          "word": "llevar",
+          "startTimeMs": 148950,
+          "endTimeMs": 149250
+        },
+        {
+          "word": "a",
+          "startTimeMs": 149250,
+          "endTimeMs": 149350
+        },
+        {
+          "word": "toa',",
+          "startTimeMs": 149350,
+          "endTimeMs": 149700
+        },
+        {
+          "word": "pa",
+          "startTimeMs": 149700,
+          "endTimeMs": 149900
+        },
+        {
+          "word": "un",
+          "startTimeMs": 149900,
+          "endTimeMs": 150100
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 150100,
+          "endTimeMs": 150700
+        },
+        {
+          "word": "un",
+          "startTimeMs": 150700,
+          "endTimeMs": 150900
+        },
+        {
+          "word": "VIP",
+          "startTimeMs": 150900,
+          "endTimeMs": 151500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 151900,
+      "endTimeMs": 154170,
+      "segmentIndex": 45,
+      "text": "Ey, saluden a Tití",
+      "words": [
+        {
+          "word": "Ey,",
+          "startTimeMs": 151900,
+          "endTimeMs": 152200
+        },
+        {
+          "word": "saluden",
+          "startTimeMs": 152200,
+          "endTimeMs": 152750
+        },
+        {
+          "word": "a",
+          "startTimeMs": 152750,
+          "endTimeMs": 152900
+        },
+        {
+          "word": "Tití",
+          "startTimeMs": 152900,
+          "endTimeMs": 153700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 154170,
+      "endTimeMs": 156550,
+      "segmentIndex": 46,
+      "text": "Vamo' a tirarno' un selfi, say \"cheese\", ey",
+      "words": [
+        {
+          "word": "Vamo'",
+          "startTimeMs": 154170,
+          "endTimeMs": 154400
+        },
+        {
+          "word": "a",
+          "startTimeMs": 154400,
+          "endTimeMs": 154500
+        },
+        {
+          "word": "tirarno'",
+          "startTimeMs": 154500,
+          "endTimeMs": 154900
+        },
+        {
+          "word": "un",
+          "startTimeMs": 154900,
+          "endTimeMs": 155050
+        },
+        {
+          "word": "selfi,",
+          "startTimeMs": 155050,
+          "endTimeMs": 155400
+        },
+        {
+          "word": "say",
+          "startTimeMs": 155400,
+          "endTimeMs": 155700
+        },
+        {
+          "word": "\"cheese\",",
+          "startTimeMs": 155700,
+          "endTimeMs": 156200
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 156200,
+          "endTimeMs": 156550
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 156550,
+      "endTimeMs": 158420,
+      "segmentIndex": 47,
+      "text": "Que sonrían las que ya les metí",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 156550,
+          "endTimeMs": 156700
+        },
+        {
+          "word": "sonrían",
+          "startTimeMs": 156700,
+          "endTimeMs": 157200
+        },
+        {
+          "word": "las",
+          "startTimeMs": 157200,
+          "endTimeMs": 157350
+        },
+        {
+          "word": "que",
+          "startTimeMs": 157350,
+          "endTimeMs": 157500
+        },
+        {
+          "word": "ya",
+          "startTimeMs": 157500,
+          "endTimeMs": 157650
+        },
+        {
+          "word": "les",
+          "startTimeMs": 157650,
+          "endTimeMs": 157800
+        },
+        {
+          "word": "metí",
+          "startTimeMs": 157800,
+          "endTimeMs": 158420
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 158420,
+      "endTimeMs": 160800,
+      "segmentIndex": 48,
+      "text": "En un VIP, un VIP",
+      "words": [
+        {
+          "word": "En",
+          "startTimeMs": 158420,
+          "endTimeMs": 158600
+        },
+        {
+          "word": "un",
+          "startTimeMs": 158600,
+          "endTimeMs": 158800
+        },
+        {
+          "word": "VIP,",
+          "startTimeMs": 158800,
+          "endTimeMs": 159300
+        },
+        {
+          "word": "un",
+          "startTimeMs": 159300,
+          "endTimeMs": 159500
+        },
+        {
+          "word": "VIP",
+          "startTimeMs": 159500,
+          "endTimeMs": 160300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 160800,
+      "endTimeMs": 162750,
+      "segmentIndex": 49,
+      "text": "Ey, saluden a Tití",
+      "words": [
+        {
+          "word": "Ey,",
+          "startTimeMs": 160800,
+          "endTimeMs": 161100
+        },
+        {
+          "word": "saluden",
+          "startTimeMs": 161100,
+          "endTimeMs": 161700
+        },
+        {
+          "word": "a",
+          "startTimeMs": 161700,
+          "endTimeMs": 161850
+        },
+        {
+          "word": "Tití",
+          "startTimeMs": 161850,
+          "endTimeMs": 162750
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 162750,
+      "endTimeMs": 165010,
+      "segmentIndex": 50,
+      "text": "Vamo' a tirarno' un selfie, say \"cheese\"",
+      "words": [
+        {
+          "word": "Vamo'",
+          "startTimeMs": 162750,
+          "endTimeMs": 163000
+        },
+        {
+          "word": "a",
+          "startTimeMs": 163000,
+          "endTimeMs": 163100
+        },
+        {
+          "word": "tirarno'",
+          "startTimeMs": 163100,
+          "endTimeMs": 163500
+        },
+        {
+          "word": "un",
+          "startTimeMs": 163500,
+          "endTimeMs": 163650
+        },
+        {
+          "word": "selfie,",
+          "startTimeMs": 163650,
+          "endTimeMs": 164100
+        },
+        {
+          "word": "say",
+          "startTimeMs": 164100,
+          "endTimeMs": 164400
+        },
+        {
+          "word": "\"cheese\"",
+          "startTimeMs": 164400,
+          "endTimeMs": 165010
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 165010,
+      "endTimeMs": 167670,
+      "segmentIndex": 51,
+      "text": "Que sonrían las que ya se olvidaron de mí",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 165010,
+          "endTimeMs": 165200
+        },
+        {
+          "word": "sonrían",
+          "startTimeMs": 165200,
+          "endTimeMs": 165700
+        },
+        {
+          "word": "las",
+          "startTimeMs": 165700,
+          "endTimeMs": 165900
+        },
+        {
+          "word": "que",
+          "startTimeMs": 165900,
+          "endTimeMs": 166050
+        },
+        {
+          "word": "ya",
+          "startTimeMs": 166050,
+          "endTimeMs": 166200
+        },
+        {
+          "word": "se",
+          "startTimeMs": 166200,
+          "endTimeMs": 166350
+        },
+        {
+          "word": "olvidaron",
+          "startTimeMs": 166350,
+          "endTimeMs": 167000
+        },
+        {
+          "word": "de",
+          "startTimeMs": 167000,
+          "endTimeMs": 167200
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 167200,
+          "endTimeMs": 167670
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 167670,
+      "endTimeMs": 170410,
+      "segmentIndex": 52,
+      "text": "Oye, muchacho del diablo, azaroso",
+      "words": [
+        {
+          "word": "Oye,",
+          "startTimeMs": 167670,
+          "endTimeMs": 168000
+        },
+        {
+          "word": "muchacho",
+          "startTimeMs": 168000,
+          "endTimeMs": 168500
+        },
+        {
+          "word": "del",
+          "startTimeMs": 168500,
+          "endTimeMs": 168700
+        },
+        {
+          "word": "diablo,",
+          "startTimeMs": 168700,
+          "endTimeMs": 169300
+        },
+        {
+          "word": "azaroso",
+          "startTimeMs": 169300,
+          "endTimeMs": 170410
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 170410,
+      "endTimeMs": 172560,
+      "segmentIndex": 53,
+      "text": "Suelta ese mal vivir que tú tiene' en la calle",
+      "words": [
+        {
+          "word": "Suelta",
+          "startTimeMs": 170410,
+          "endTimeMs": 170800
+        },
+        {
+          "word": "ese",
+          "startTimeMs": 170800,
+          "endTimeMs": 171000
+        },
+        {
+          "word": "mal",
+          "startTimeMs": 171000,
+          "endTimeMs": 171200
+        },
+        {
+          "word": "vivir",
+          "startTimeMs": 171200,
+          "endTimeMs": 171500
+        },
+        {
+          "word": "que",
+          "startTimeMs": 171500,
+          "endTimeMs": 171650
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 171650,
+          "endTimeMs": 171800
+        },
+        {
+          "word": "tiene'",
+          "startTimeMs": 171800,
+          "endTimeMs": 172000
+        },
+        {
+          "word": "en",
+          "startTimeMs": 172000,
+          "endTimeMs": 172100
+        },
+        {
+          "word": "la",
+          "startTimeMs": 172100,
+          "endTimeMs": 172200
+        },
+        {
+          "word": "calle",
+          "startTimeMs": 172200,
+          "endTimeMs": 172560
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 172560,
+      "endTimeMs": 174480,
+      "segmentIndex": 54,
+      "text": "Búscate una mujer seria pa ti",
+      "words": [
+        {
+          "word": "Búscate",
+          "startTimeMs": 172560,
+          "endTimeMs": 173000
+        },
+        {
+          "word": "una",
+          "startTimeMs": 173000,
+          "endTimeMs": 173200
+        },
+        {
+          "word": "mujer",
+          "startTimeMs": 173200,
+          "endTimeMs": 173600
+        },
+        {
+          "word": "seria",
+          "startTimeMs": 173600,
+          "endTimeMs": 174000
+        },
+        {
+          "word": "pa",
+          "startTimeMs": 174000,
+          "endTimeMs": 174200
+        },
+        {
+          "word": "ti",
+          "startTimeMs": 174200,
+          "endTimeMs": 174480
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 174480,
+      "endTimeMs": 177290,
+      "segmentIndex": 55,
+      "text": "Muchacho del diablo, coño",
+      "words": [
+        {
+          "word": "Muchacho",
+          "startTimeMs": 174480,
+          "endTimeMs": 175000
+        },
+        {
+          "word": "del",
+          "startTimeMs": 175000,
+          "endTimeMs": 175200
+        },
+        {
+          "word": "diablo,",
+          "startTimeMs": 175200,
+          "endTimeMs": 175800
+        },
+        {
+          "word": "coño",
+          "startTimeMs": 175800,
+          "endTimeMs": 176500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 177290,
+      "endTimeMs": 180970,
+      "segmentIndex": 56,
+      "text": "Yo quisiera enamorarme",
+      "words": [
+        {
+          "word": "Yo",
+          "startTimeMs": 177290,
+          "endTimeMs": 177700
+        },
+        {
+          "word": "quisiera",
+          "startTimeMs": 177700,
+          "endTimeMs": 178500
+        },
+        {
+          "word": "enamorarme",
+          "startTimeMs": 178500,
+          "endTimeMs": 179500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 180970,
+      "endTimeMs": 183100,
+      "segmentIndex": 57,
+      "text": "Pero no puedo",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 180970,
+          "endTimeMs": 181400
+        },
+        {
+          "word": "no",
+          "startTimeMs": 181400,
+          "endTimeMs": 181800
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 181800,
+          "endTimeMs": 182600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 183100,
+      "endTimeMs": 185330,
+      "segmentIndex": 58,
+      "text": "Pero no puedo",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 183100,
+          "endTimeMs": 183500
+        },
+        {
+          "word": "no",
+          "startTimeMs": 183500,
+          "endTimeMs": 183900
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 183900,
+          "endTimeMs": 185000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 185330,
+      "endTimeMs": 186710,
+      "segmentIndex": 59,
+      "text": "Eh, eh",
+      "words": [
+        {
+          "word": "Eh,",
+          "startTimeMs": 185330,
+          "endTimeMs": 185800
+        },
+        {
+          "word": "eh",
+          "startTimeMs": 185800,
+          "endTimeMs": 186400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 186710,
+      "endTimeMs": 190310,
+      "segmentIndex": 60,
+      "text": "Yo quisiera enamorarme",
+      "words": [
+        {
+          "word": "Yo",
+          "startTimeMs": 186710,
+          "endTimeMs": 187100
+        },
+        {
+          "word": "quisiera",
+          "startTimeMs": 187100,
+          "endTimeMs": 187900
+        },
+        {
+          "word": "enamorarme",
+          "startTimeMs": 187900,
+          "endTimeMs": 189000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 190310,
+      "endTimeMs": 192480,
+      "segmentIndex": 61,
+      "text": "Pero no puedo",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 190310,
+          "endTimeMs": 190800
+        },
+        {
+          "word": "no",
+          "startTimeMs": 190800,
+          "endTimeMs": 191200
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 191200,
+          "endTimeMs": 192000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 192480,
+      "endTimeMs": 194800,
+      "segmentIndex": 62,
+      "text": "Pero no puedo",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 192480,
+          "endTimeMs": 192900
+        },
+        {
+          "word": "no",
+          "startTimeMs": 192900,
+          "endTimeMs": 193300
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 193300,
+          "endTimeMs": 194400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 194800,
+      "endTimeMs": 197450,
+      "segmentIndex": 63,
+      "text": "Sorry, yo no confío, yo no confío",
+      "words": [
+        {
+          "word": "Sorry,",
+          "startTimeMs": 194800,
+          "endTimeMs": 195200
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 195200,
+          "endTimeMs": 195400
+        },
+        {
+          "word": "no",
+          "startTimeMs": 195400,
+          "endTimeMs": 195600
+        },
+        {
+          "word": "confío,",
+          "startTimeMs": 195600,
+          "endTimeMs": 196100
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 196100,
+          "endTimeMs": 196400
+        },
+        {
+          "word": "no",
+          "startTimeMs": 196400,
+          "endTimeMs": 196600
+        },
+        {
+          "word": "confío",
+          "startTimeMs": 196600,
+          "endTimeMs": 197450
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 197450,
+      "endTimeMs": 199850,
+      "segmentIndex": 64,
+      "text": "Nah, ni en mí mismo confío",
+      "words": [
+        {
+          "word": "Nah,",
+          "startTimeMs": 197450,
+          "endTimeMs": 197900
+        },
+        {
+          "word": "ni",
+          "startTimeMs": 197900,
+          "endTimeMs": 198100
+        },
+        {
+          "word": "en",
+          "startTimeMs": 198100,
+          "endTimeMs": 198300
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 198300,
+          "endTimeMs": 198500
+        },
+        {
+          "word": "mismo",
+          "startTimeMs": 198500,
+          "endTimeMs": 198900
+        },
+        {
+          "word": "confío",
+          "startTimeMs": 198900,
+          "endTimeMs": 199850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 199850,
+      "endTimeMs": 201950,
+      "segmentIndex": 65,
+      "text": "Si quieres quedarte hoy que hace frío",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 199850,
+          "endTimeMs": 200000
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 200000,
+          "endTimeMs": 200300
+        },
+        {
+          "word": "quedarte",
+          "startTimeMs": 200300,
+          "endTimeMs": 200800
+        },
+        {
+          "word": "hoy",
+          "startTimeMs": 200800,
+          "endTimeMs": 201000
+        },
+        {
+          "word": "que",
+          "startTimeMs": 201000,
+          "endTimeMs": 201200
+        },
+        {
+          "word": "hace",
+          "startTimeMs": 201200,
+          "endTimeMs": 201500
+        },
+        {
+          "word": "frío",
+          "startTimeMs": 201500,
+          "endTimeMs": 201950
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 201950,
+      "endTimeMs": 203850,
+      "segmentIndex": 66,
+      "text": "Y mañana te va', nah",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 201950,
+          "endTimeMs": 202100
+        },
+        {
+          "word": "mañana",
+          "startTimeMs": 202100,
+          "endTimeMs": 202500
+        },
+        {
+          "word": "te",
+          "startTimeMs": 202500,
+          "endTimeMs": 202700
+        },
+        {
+          "word": "va',",
+          "startTimeMs": 202700,
+          "endTimeMs": 203200
+        },
+        {
+          "word": "nah",
+          "startTimeMs": 203200,
+          "endTimeMs": 203850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 203850,
+      "endTimeMs": 205780,
+      "segmentIndex": 67,
+      "text": "Mucha' quieren mi baby gravy",
+      "words": [
+        {
+          "word": "Mucha'",
+          "startTimeMs": 203850,
+          "endTimeMs": 204300
+        },
+        {
+          "word": "quieren",
+          "startTimeMs": 204300,
+          "endTimeMs": 204700
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 204700,
+          "endTimeMs": 204900
+        },
+        {
+          "word": "baby",
+          "startTimeMs": 204900,
+          "endTimeMs": 205300
+        },
+        {
+          "word": "gravy",
+          "startTimeMs": 205300,
+          "endTimeMs": 205780
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 205780,
+      "endTimeMs": 207820,
+      "segmentIndex": 68,
+      "text": "Quieren tener mi primogénito",
+      "words": [
+        {
+          "word": "Quieren",
+          "startTimeMs": 205780,
+          "endTimeMs": 206100
+        },
+        {
+          "word": "tener",
+          "startTimeMs": 206100,
+          "endTimeMs": 206500
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 206500,
+          "endTimeMs": 206700
+        },
+        {
+          "word": "primogénito",
+          "startTimeMs": 206700,
+          "endTimeMs": 207820
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 207820,
+      "endTimeMs": 209220,
+      "segmentIndex": 69,
+      "text": "Ey, y llevarse el crédito",
+      "words": [
+        {
+          "word": "Ey,",
+          "startTimeMs": 207820,
+          "endTimeMs": 208100
+        },
+        {
+          "word": "y",
+          "startTimeMs": 208100,
+          "endTimeMs": 208300
+        },
+        {
+          "word": "llevarse",
+          "startTimeMs": 208300,
+          "endTimeMs": 208700
+        },
+        {
+          "word": "el",
+          "startTimeMs": 208700,
+          "endTimeMs": 208900
+        },
+        {
+          "word": "crédito",
+          "startTimeMs": 208900,
+          "endTimeMs": 209220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 209220,
+      "endTimeMs": 211230,
+      "segmentIndex": 70,
+      "text": "Ya me aburrí, hoy quiero un totito inédito",
+      "words": [
+        {
+          "word": "Ya",
+          "startTimeMs": 209220,
+          "endTimeMs": 209400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 209400,
+          "endTimeMs": 209550
+        },
+        {
+          "word": "aburrí,",
+          "startTimeMs": 209550,
+          "endTimeMs": 210000
+        },
+        {
+          "word": "hoy",
+          "startTimeMs": 210000,
+          "endTimeMs": 210200
+        },
+        {
+          "word": "quiero",
+          "startTimeMs": 210200,
+          "endTimeMs": 210400
+        },
+        {
+          "word": "un",
+          "startTimeMs": 210400,
+          "endTimeMs": 210550
+        },
+        {
+          "word": "totito",
+          "startTimeMs": 210550,
+          "endTimeMs": 210850
+        },
+        {
+          "word": "inédito",
+          "startTimeMs": 210850,
+          "endTimeMs": 211230
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 211230,
+      "endTimeMs": 214180,
+      "segmentIndex": 71,
+      "text": "Uno nuevo, uno nuevo, uno nuevo, uno nuevo, ey",
+      "words": [
+        {
+          "word": "Uno",
+          "startTimeMs": 211230,
+          "endTimeMs": 211450
+        },
+        {
+          "word": "nuevo,",
+          "startTimeMs": 211450,
+          "endTimeMs": 211900
+        },
+        {
+          "word": "uno",
+          "startTimeMs": 211900,
+          "endTimeMs": 212100
+        },
+        {
+          "word": "nuevo,",
+          "startTimeMs": 212100,
+          "endTimeMs": 212500
+        },
+        {
+          "word": "uno",
+          "startTimeMs": 212500,
+          "endTimeMs": 212700
+        },
+        {
+          "word": "nuevo,",
+          "startTimeMs": 212700,
+          "endTimeMs": 213100
+        },
+        {
+          "word": "uno",
+          "startTimeMs": 213100,
+          "endTimeMs": 213300
+        },
+        {
+          "word": "nuevo,",
+          "startTimeMs": 213300,
+          "endTimeMs": 213800
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 213800,
+          "endTimeMs": 214180
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 214180,
+      "endTimeMs": 217930,
+      "segmentIndex": 72,
+      "text": "Hazle caso a tu amiga, ella tiene razón",
+      "words": [
+        {
+          "word": "Hazle",
+          "startTimeMs": 214180,
+          "endTimeMs": 214500
+        },
+        {
+          "word": "caso",
+          "startTimeMs": 214500,
+          "endTimeMs": 214800
+        },
+        {
+          "word": "a",
+          "startTimeMs": 214800,
+          "endTimeMs": 214950
+        },
+        {
+          "word": "tu",
+          "startTimeMs": 214950,
+          "endTimeMs": 215100
+        },
+        {
+          "word": "amiga,",
+          "startTimeMs": 215100,
+          "endTimeMs": 215600
+        },
+        {
+          "word": "ella",
+          "startTimeMs": 215600,
+          "endTimeMs": 216000
+        },
+        {
+          "word": "tiene",
+          "startTimeMs": 216000,
+          "endTimeMs": 216400
+        },
+        {
+          "word": "razón",
+          "startTimeMs": 216400,
+          "endTimeMs": 217930
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 217930,
+      "endTimeMs": 220100,
+      "segmentIndex": 73,
+      "text": "Yo vo'a romperte el corazón",
+      "words": [
+        {
+          "word": "Yo",
+          "startTimeMs": 217930,
+          "endTimeMs": 218200
+        },
+        {
+          "word": "vo'a",
+          "startTimeMs": 218200,
+          "endTimeMs": 218500
+        },
+        {
+          "word": "romperte",
+          "startTimeMs": 218500,
+          "endTimeMs": 219100
+        },
+        {
+          "word": "el",
+          "startTimeMs": 219100,
+          "endTimeMs": 219400
+        },
+        {
+          "word": "corazón",
+          "startTimeMs": 219400,
+          "endTimeMs": 220100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 220100,
+      "endTimeMs": 223520,
+      "segmentIndex": 74,
+      "text": "Vo'a romperte el corazón",
+      "words": [
+        {
+          "word": "Vo'a",
+          "startTimeMs": 220100,
+          "endTimeMs": 220400
+        },
+        {
+          "word": "romperte",
+          "startTimeMs": 220400,
+          "endTimeMs": 221000
+        },
+        {
+          "word": "el",
+          "startTimeMs": 221000,
+          "endTimeMs": 221300
+        },
+        {
+          "word": "corazón",
+          "startTimeMs": 221300,
+          "endTimeMs": 223520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 223520,
+      "endTimeMs": 226030,
+      "segmentIndex": 75,
+      "text": "Ey, no te enamores de mí",
+      "words": [
+        {
+          "word": "Ey,",
+          "startTimeMs": 223520,
+          "endTimeMs": 223900
+        },
+        {
+          "word": "no",
+          "startTimeMs": 223900,
+          "endTimeMs": 224100
+        },
+        {
+          "word": "te",
+          "startTimeMs": 224100,
+          "endTimeMs": 224300
+        },
+        {
+          "word": "enamores",
+          "startTimeMs": 224300,
+          "endTimeMs": 225000
+        },
+        {
+          "word": "de",
+          "startTimeMs": 225000,
+          "endTimeMs": 225300
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 225300,
+          "endTimeMs": 226030
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 226030,
+      "endTimeMs": 228080,
+      "segmentIndex": 76,
+      "text": "No te enamores de mí",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 226030,
+          "endTimeMs": 226250
+        },
+        {
+          "word": "te",
+          "startTimeMs": 226250,
+          "endTimeMs": 226400
+        },
+        {
+          "word": "enamores",
+          "startTimeMs": 226400,
+          "endTimeMs": 227000
+        },
+        {
+          "word": "de",
+          "startTimeMs": 227000,
+          "endTimeMs": 227300
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 227300,
+          "endTimeMs": 228080
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 228080,
+      "endTimeMs": 230570,
+      "segmentIndex": 77,
+      "text": "Sorry, yo soy así, ey",
+      "words": [
+        {
+          "word": "Sorry,",
+          "startTimeMs": 228080,
+          "endTimeMs": 228500
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 228500,
+          "endTimeMs": 228800
+        },
+        {
+          "word": "soy",
+          "startTimeMs": 228800,
+          "endTimeMs": 229100
+        },
+        {
+          "word": "así,",
+          "startTimeMs": 229100,
+          "endTimeMs": 229600
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 229600,
+          "endTimeMs": 230570
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 230570,
+      "endTimeMs": 232850,
+      "segmentIndex": 78,
+      "text": "No sé por qué soy así",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 230570,
+          "endTimeMs": 230800
+        },
+        {
+          "word": "sé",
+          "startTimeMs": 230800,
+          "endTimeMs": 231100
+        },
+        {
+          "word": "por",
+          "startTimeMs": 231100,
+          "endTimeMs": 231300
+        },
+        {
+          "word": "qué",
+          "startTimeMs": 231300,
+          "endTimeMs": 231600
+        },
+        {
+          "word": "soy",
+          "startTimeMs": 231600,
+          "endTimeMs": 232000
+        },
+        {
+          "word": "así",
+          "startTimeMs": 232000,
+          "endTimeMs": 232850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 232850,
+      "endTimeMs": 236690,
+      "segmentIndex": 79,
+      "text": "Hazle caso a tu amiga, ella tiene razón",
+      "words": [
+        {
+          "word": "Hazle",
+          "startTimeMs": 232850,
+          "endTimeMs": 233150
+        },
+        {
+          "word": "caso",
+          "startTimeMs": 233150,
+          "endTimeMs": 233500
+        },
+        {
+          "word": "a",
+          "startTimeMs": 233500,
+          "endTimeMs": 233650
+        },
+        {
+          "word": "tu",
+          "startTimeMs": 233650,
+          "endTimeMs": 233800
+        },
+        {
+          "word": "amiga,",
+          "startTimeMs": 233800,
+          "endTimeMs": 234300
+        },
+        {
+          "word": "ella",
+          "startTimeMs": 234300,
+          "endTimeMs": 234700
+        },
+        {
+          "word": "tiene",
+          "startTimeMs": 234700,
+          "endTimeMs": 235100
+        },
+        {
+          "word": "razón",
+          "startTimeMs": 235100,
+          "endTimeMs": 236690
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 236690,
+      "endTimeMs": 238930,
+      "segmentIndex": 80,
+      "text": "Yo vo'a romperte el corazón",
+      "words": [
+        {
+          "word": "Yo",
+          "startTimeMs": 236690,
+          "endTimeMs": 236900
+        },
+        {
+          "word": "vo'a",
+          "startTimeMs": 236900,
+          "endTimeMs": 237200
+        },
+        {
+          "word": "romperte",
+          "startTimeMs": 237200,
+          "endTimeMs": 237800
+        },
+        {
+          "word": "el",
+          "startTimeMs": 237800,
+          "endTimeMs": 238100
+        },
+        {
+          "word": "corazón",
+          "startTimeMs": 238100,
+          "endTimeMs": 238930
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 238930,
+      "endTimeMs": 242270,
+      "segmentIndex": 81,
+      "text": "Vo'a romperte el corazón",
+      "words": [
+        {
+          "word": "Vo'a",
+          "startTimeMs": 238930,
+          "endTimeMs": 239200
+        },
+        {
+          "word": "romperte",
+          "startTimeMs": 239200,
+          "endTimeMs": 239800
+        },
+        {
+          "word": "el",
+          "startTimeMs": 239800,
+          "endTimeMs": 240100
+        },
+        {
+          "word": "corazón",
+          "startTimeMs": 240100,
+          "endTimeMs": 242270
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 242270,
+      "endTimeMs": 244760,
+      "segmentIndex": 82,
+      "text": "No te enamores de mí",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 242270,
+          "endTimeMs": 242500
+        },
+        {
+          "word": "te",
+          "startTimeMs": 242500,
+          "endTimeMs": 242700
+        },
+        {
+          "word": "enamores",
+          "startTimeMs": 242700,
+          "endTimeMs": 243400
+        },
+        {
+          "word": "de",
+          "startTimeMs": 243400,
+          "endTimeMs": 243700
+        },
+        {
+          "word": "mí",
+          "startTimeMs": 243700,
+          "endTimeMs": 244760
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 244760,
+      "endTimeMs": 246950,
+      "segmentIndex": 83,
+      "text": "No te enamores de mí, no",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 244760,
+          "endTimeMs": 245000
+        },
+        {
+          "word": "te",
+          "startTimeMs": 245000,
+          "endTimeMs": 245200
+        },
+        {
+          "word": "enamores",
+          "startTimeMs": 245200,
+          "endTimeMs": 245800
+        },
+        {
+          "word": "de",
+          "startTimeMs": 245800,
+          "endTimeMs": 246100
+        },
+        {
+          "word": "mí,",
+          "startTimeMs": 246100,
+          "endTimeMs": 246500
+        },
+        {
+          "word": "no",
+          "startTimeMs": 246500,
+          "endTimeMs": 246950
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 246950,
+      "endTimeMs": 249130,
+      "segmentIndex": 84,
+      "text": "Sorry, yo soy así, ya",
+      "words": [
+        {
+          "word": "Sorry,",
+          "startTimeMs": 246950,
+          "endTimeMs": 247400
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 247400,
+          "endTimeMs": 247700
+        },
+        {
+          "word": "soy",
+          "startTimeMs": 247700,
+          "endTimeMs": 248000
+        },
+        {
+          "word": "así,",
+          "startTimeMs": 248000,
+          "endTimeMs": 248500
+        },
+        {
+          "word": "ya",
+          "startTimeMs": 248500,
+          "endTimeMs": 249130
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 249130,
+      "endTimeMs": 252130,
+      "segmentIndex": 85,
+      "text": "No quiero ser así, no",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 249130,
+          "endTimeMs": 249400
+        },
+        {
+          "word": "quiero",
+          "startTimeMs": 249400,
+          "endTimeMs": 249800
+        },
+        {
+          "word": "ser",
+          "startTimeMs": 249800,
+          "endTimeMs": 250100
+        },
+        {
+          "word": "así,",
+          "startTimeMs": 250100,
+          "endTimeMs": 250700
+        },
+        {
+          "word": "no",
+          "startTimeMs": 250700,
+          "endTimeMs": 252130
+        }
+      ]
+    }
+  ]
+}
