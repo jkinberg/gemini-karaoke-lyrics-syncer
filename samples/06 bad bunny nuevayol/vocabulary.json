@@ -1,0 +1,116 @@
+[
+  {
+    "term": {
+      "spanish": "rulay",
+      "english": "on the loose"
+    },
+    "definition": "A slang term of Dominican origin widely used in Puerto Rico and New York. It describes being out on the town, partying, or 'active' on the streets, usually under the influence of alcohol or having a good time without worries.",
+    "difficulty": 8,
+    "example": {
+      "spanish": "Ando con mi prima, borracho rulay",
+      "english": "I'm with my cousin, drunk and on the loose"
+    },
+    "highlight": {
+      "spanish": "rulay",
+      "english": "on the loose"
+    },
+    "startTimeMs": 71200,
+    "endTimeMs": 73200,
+    "segmentIndex": 13
+  },
+  {
+    "term": {
+      "spanish": "la que hay",
+      "english": "what's up"
+    },
+    "definition": "A very common urban idiom in Puerto Rico and the diaspora. It literally asks 'what is there,' but contextually it refers to the situation, the reality of the neighborhood, or the way things are. Saying someone 'knows la que hay' implies they are street-smart or understand the local codes.",
+    "difficulty": 6,
+    "example": {
+      "spanish": "Lo mío en el Bronx, saben la que hay",
+      "english": "My business is in the Bronx, they know what's up"
+    },
+    "highlight": {
+      "spanish": "la que hay",
+      "english": "what's up"
+    },
+    "startTimeMs": 73200,
+    "endTimeMs": 75200,
+    "segmentIndex": 14
+  },
+  {
+    "term": {
+      "spanish": "nota",
+      "english": "buzz"
+    },
+    "definition": "In urban slang, 'nota' refers to the state of being high or intoxicated. When the singer mentions having the 'nota en high,' he's describing a peak state of euphoria or being very 'lit' while partying.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "Con la nota en high por Washington Heights",
+      "english": "With the buzz way up through Washington Heights"
+    },
+    "highlight": {
+      "spanish": "nota",
+      "english": "buzz"
+    },
+    "startTimeMs": 75200,
+    "endTimeMs": 77200,
+    "segmentIndex": 15
+  },
+  {
+    "term": {
+      "spanish": "dando palo",
+      "english": "hitting hits"
+    },
+    "definition": "A clever double-entendre. Literally 'hitting with a stick' (like a baseball bat), it's a Puerto Rican idiom for being successful or producing hits. Given the song's references to the Yankees and Mets, it links musical success to baseball home runs.",
+    "difficulty": 7,
+    "example": {
+      "spanish": "Porque pasan los años y sigo dando palo",
+      "english": "Because years go by and I keep hitting hits"
+    },
+    "highlight": {
+      "spanish": "dando palo",
+      "english": "hitting hits"
+    },
+    "startTimeMs": 79500,
+    "endTimeMs": 82000,
+    "segmentIndex": 17
+  },
+  {
+    "term": {
+      "spanish": "cañita",
+      "english": "moonshine"
+    },
+    "definition": "In Puerto Rico, 'cañita' refers to 'pitorro,' which is illicit, homemade moonshine rum. Drinking it at 'casa de Toñita' (a famous Puerto Rican spot in NYC) represents a deep cultural connection to the island while being in the city.",
+    "difficulty": 9,
+    "example": {
+      "spanish": "Un shot de cañita en casa de Toñita y",
+      "english": "A shot of moonshine at Toñita's house and"
+    },
+    "highlight": {
+      "spanish": "cañita",
+      "english": "moonshine"
+    },
+    "startTimeMs": 93200,
+    "endTimeMs": 95500,
+    "segmentIndex": 21
+  },
+  {
+    "term": {
+      "spanish": "piquete",
+      "english": "swagger"
+    },
+    "definition": "A quintessential reggaeton term referring to someone's style, flow, or attitude. It's the unique way someone carries themselves with confidence and 'coolness.' If you have 'piquete,' you have an undeniable presence.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "Tú tienes piquete, mami y yo también",
+      "english": "You've got swagger, mami, and so do I"
+    },
+    "highlight": {
+      "spanish": "piquete",
+      "english": "swagger"
+    },
+    "startTimeMs": 186500,
+    "endTimeMs": 189000,
+    "segmentIndex": 49
+  }
+]

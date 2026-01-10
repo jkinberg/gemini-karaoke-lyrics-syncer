@@ -1,0 +1,2840 @@
+{
+  "metadata": {
+    "title": "Dákiti",
+    "artist": "Bad Bunny & Jhay Cortez",
+    "durationMs": 180000,
+    "language": "en-US",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 16150,
+      "segmentIndex": 1,
+      "cueText": "Musical intro"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 16150,
+      "endTimeMs": 20420,
+      "segmentIndex": 2,
+      "cueText": "Baby, I already found out, it shows when you see me",
+      "text": "Baby, I already found out, it shows when you see me",
+      "words": [
+        {
+          "word": "Baby,",
+          "startTimeMs": 16150,
+          "endTimeMs": 16550
+        },
+        {
+          "word": "I",
+          "startTimeMs": 16550,
+          "endTimeMs": 16750
+        },
+        {
+          "word": "already",
+          "startTimeMs": 16750,
+          "endTimeMs": 17200
+        },
+        {
+          "word": "found",
+          "startTimeMs": 17200,
+          "endTimeMs": 17600
+        },
+        {
+          "word": "out,",
+          "startTimeMs": 17600,
+          "endTimeMs": 17900
+        },
+        {
+          "word": "it",
+          "startTimeMs": 17900,
+          "endTimeMs": 18200
+        },
+        {
+          "word": "shows",
+          "startTimeMs": 18200,
+          "endTimeMs": 18600
+        },
+        {
+          "word": "when",
+          "startTimeMs": 18600,
+          "endTimeMs": 19000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 19000,
+          "endTimeMs": 19400
+        },
+        {
+          "word": "see",
+          "startTimeMs": 19400,
+          "endTimeMs": 19800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 19800,
+          "endTimeMs": 20420
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 20420,
+      "endTimeMs": 24800,
+      "segmentIndex": 3,
+      "cueText": "There, where you haven't been, you know I'll take you",
+      "text": "There, where you haven't been, you know I'll take you",
+      "words": [
+        {
+          "word": "There,",
+          "startTimeMs": 20420,
+          "endTimeMs": 20800
+        },
+        {
+          "word": "where",
+          "startTimeMs": 20800,
+          "endTimeMs": 21200
+        },
+        {
+          "word": "you",
+          "startTimeMs": 21200,
+          "endTimeMs": 21500
+        },
+        {
+          "word": "haven't",
+          "startTimeMs": 21500,
+          "endTimeMs": 22000
+        },
+        {
+          "word": "been,",
+          "startTimeMs": 22000,
+          "endTimeMs": 22400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 22400,
+          "endTimeMs": 22700
+        },
+        {
+          "word": "know",
+          "startTimeMs": 22700,
+          "endTimeMs": 23000
+        },
+        {
+          "word": "I'll",
+          "startTimeMs": 23000,
+          "endTimeMs": 23400
+        },
+        {
+          "word": "take",
+          "startTimeMs": 23400,
+          "endTimeMs": 23800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 23800,
+          "endTimeMs": 24800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 24800,
+      "endTimeMs": 29150,
+      "segmentIndex": 4,
+      "cueText": "And tell me, what do you want to drink?, because you’re my baby",
+      "text": "And tell me, what do you want to drink?, because you’re my baby",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 24800,
+          "endTimeMs": 25000
+        },
+        {
+          "word": "tell",
+          "startTimeMs": 25000,
+          "endTimeMs": 25400
+        },
+        {
+          "word": "me,",
+          "startTimeMs": 25400,
+          "endTimeMs": 25700
+        },
+        {
+          "word": "what",
+          "startTimeMs": 25700,
+          "endTimeMs": 26000
+        },
+        {
+          "word": "do",
+          "startTimeMs": 26000,
+          "endTimeMs": 26200
+        },
+        {
+          "word": "you",
+          "startTimeMs": 26200,
+          "endTimeMs": 26400
+        },
+        {
+          "word": "want",
+          "startTimeMs": 26400,
+          "endTimeMs": 26700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 26700,
+          "endTimeMs": 26900
+        },
+        {
+          "word": "drink?,",
+          "startTimeMs": 26900,
+          "endTimeMs": 27400
+        },
+        {
+          "word": "because",
+          "startTimeMs": 27400,
+          "endTimeMs": 27800
+        },
+        {
+          "word": "you’re",
+          "startTimeMs": 27800,
+          "endTimeMs": 28200
+        },
+        {
+          "word": "my",
+          "startTimeMs": 28200,
+          "endTimeMs": 28500
+        },
+        {
+          "word": "baby",
+          "startTimeMs": 28500,
+          "endTimeMs": 29150
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 29150,
+      "endTimeMs": 34510,
+      "segmentIndex": 5,
+      "cueText": "And who’s going to talk about us, if we don't let ourselves be seen?",
+      "text": "And who’s going to talk about us, if we don't let ourselves be seen?",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 29150,
+          "endTimeMs": 29400
+        },
+        {
+          "word": "who’s",
+          "startTimeMs": 29400,
+          "endTimeMs": 29800
+        },
+        {
+          "word": "going",
+          "startTimeMs": 29800,
+          "endTimeMs": 30100
+        },
+        {
+          "word": "to",
+          "startTimeMs": 30100,
+          "endTimeMs": 30300
+        },
+        {
+          "word": "talk",
+          "startTimeMs": 30300,
+          "endTimeMs": 30600
+        },
+        {
+          "word": "about",
+          "startTimeMs": 30600,
+          "endTimeMs": 30900
+        },
+        {
+          "word": "us,",
+          "startTimeMs": 30900,
+          "endTimeMs": 31200
+        },
+        {
+          "word": "if",
+          "startTimeMs": 31200,
+          "endTimeMs": 31500
+        },
+        {
+          "word": "we",
+          "startTimeMs": 31500,
+          "endTimeMs": 31800
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 31800,
+          "endTimeMs": 32200
+        },
+        {
+          "word": "let",
+          "startTimeMs": 32200,
+          "endTimeMs": 32500
+        },
+        {
+          "word": "ourselves",
+          "startTimeMs": 32500,
+          "endTimeMs": 33000
+        },
+        {
+          "word": "be",
+          "startTimeMs": 33000,
+          "endTimeMs": 33300
+        },
+        {
+          "word": "seen?",
+          "startTimeMs": 33300,
+          "endTimeMs": 34510
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 34510,
+      "endTimeMs": 36770,
+      "segmentIndex": 6,
+      "cueText": "And sometimes it’s Dolce, sometimes Bulgari",
+      "text": "And sometimes it’s Dolce, sometimes Bulgari",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 34510,
+          "endTimeMs": 34700
+        },
+        {
+          "word": "sometimes",
+          "startTimeMs": 34700,
+          "endTimeMs": 35200
+        },
+        {
+          "word": "it’s",
+          "startTimeMs": 35200,
+          "endTimeMs": 35500
+        },
+        {
+          "word": "Dolce,",
+          "startTimeMs": 35500,
+          "endTimeMs": 35900
+        },
+        {
+          "word": "sometimes",
+          "startTimeMs": 35900,
+          "endTimeMs": 36300
+        },
+        {
+          "word": "Bulgari",
+          "startTimeMs": 36300,
+          "endTimeMs": 36770
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 36770,
+      "endTimeMs": 38820,
+      "segmentIndex": 7,
+      "cueText": "When I take it off you after the parties",
+      "text": "When I take it off you after the parties",
+      "words": [
+        {
+          "word": "When",
+          "startTimeMs": 36770,
+          "endTimeMs": 36900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 36900,
+          "endTimeMs": 37050
+        },
+        {
+          "word": "take",
+          "startTimeMs": 37050,
+          "endTimeMs": 37300
+        },
+        {
+          "word": "it",
+          "startTimeMs": 37300,
+          "endTimeMs": 37450
+        },
+        {
+          "word": "off",
+          "startTimeMs": 37450,
+          "endTimeMs": 37650
+        },
+        {
+          "word": "you",
+          "startTimeMs": 37650,
+          "endTimeMs": 37850
+        },
+        {
+          "word": "after",
+          "startTimeMs": 37850,
+          "endTimeMs": 38200
+        },
+        {
+          "word": "the",
+          "startTimeMs": 38200,
+          "endTimeMs": 38400
+        },
+        {
+          "word": "parties",
+          "startTimeMs": 38400,
+          "endTimeMs": 38820
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 38820,
+      "endTimeMs": 40960,
+      "segmentIndex": 8,
+      "cueText": "The glasses of wine, the pounds of weed",
+      "text": "The glasses of wine, the pounds of weed",
+      "words": [
+        {
+          "word": "The",
+          "startTimeMs": 38820,
+          "endTimeMs": 39000
+        },
+        {
+          "word": "glasses",
+          "startTimeMs": 39000,
+          "endTimeMs": 39400
+        },
+        {
+          "word": "of",
+          "startTimeMs": 39400,
+          "endTimeMs": 39600
+        },
+        {
+          "word": "wine,",
+          "startTimeMs": 39600,
+          "endTimeMs": 39900
+        },
+        {
+          "word": "the",
+          "startTimeMs": 39900,
+          "endTimeMs": 40100
+        },
+        {
+          "word": "pounds",
+          "startTimeMs": 40100,
+          "endTimeMs": 40500
+        },
+        {
+          "word": "of",
+          "startTimeMs": 40500,
+          "endTimeMs": 40700
+        },
+        {
+          "word": "weed",
+          "startTimeMs": 40700,
+          "endTimeMs": 40960
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 40960,
+      "endTimeMs": 43480,
+      "segmentIndex": 9,
+      "cueText": "You're all let loose, me on safari",
+      "text": "You're all let loose, me on safari",
+      "words": [
+        {
+          "word": "You're",
+          "startTimeMs": 40960,
+          "endTimeMs": 41300
+        },
+        {
+          "word": "all",
+          "startTimeMs": 41300,
+          "endTimeMs": 41500
+        },
+        {
+          "word": "let",
+          "startTimeMs": 41500,
+          "endTimeMs": 41800
+        },
+        {
+          "word": "loose,",
+          "startTimeMs": 41800,
+          "endTimeMs": 42200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 42200,
+          "endTimeMs": 42500
+        },
+        {
+          "word": "on",
+          "startTimeMs": 42500,
+          "endTimeMs": 42800
+        },
+        {
+          "word": "safari",
+          "startTimeMs": 42800,
+          "endTimeMs": 43480
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 43480,
+      "endTimeMs": 45490,
+      "segmentIndex": 10,
+      "cueText": "You move your ass phenomenally",
+      "text": "You move your ass phenomenally",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 43480,
+          "endTimeMs": 43700
+        },
+        {
+          "word": "move",
+          "startTimeMs": 43700,
+          "endTimeMs": 44100
+        },
+        {
+          "word": "your",
+          "startTimeMs": 44100,
+          "endTimeMs": 44400
+        },
+        {
+          "word": "ass",
+          "startTimeMs": 44400,
+          "endTimeMs": 44800
+        },
+        {
+          "word": "phenomenally",
+          "startTimeMs": 44800,
+          "endTimeMs": 45490
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 45490,
+      "endTimeMs": 47670,
+      "segmentIndex": 11,
+      "cueText": "So I can devour you like an animal",
+      "text": "So I can devour you like an animal",
+      "words": [
+        {
+          "word": "So",
+          "startTimeMs": 45490,
+          "endTimeMs": 45700
+        },
+        {
+          "word": "I",
+          "startTimeMs": 45700,
+          "endTimeMs": 45900
+        },
+        {
+          "word": "can",
+          "startTimeMs": 45900,
+          "endTimeMs": 46200
+        },
+        {
+          "word": "devour",
+          "startTimeMs": 46200,
+          "endTimeMs": 46600
+        },
+        {
+          "word": "you",
+          "startTimeMs": 46600,
+          "endTimeMs": 46800
+        },
+        {
+          "word": "like",
+          "startTimeMs": 46800,
+          "endTimeMs": 47100
+        },
+        {
+          "word": "an",
+          "startTimeMs": 47100,
+          "endTimeMs": 47300
+        },
+        {
+          "word": "animal",
+          "startTimeMs": 47300,
+          "endTimeMs": 47670
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 47670,
+      "endTimeMs": 50200,
+      "segmentIndex": 12,
+      "cueText": "If you haven't come yet, I'm going to wait for you",
+      "text": "If you haven't come yet, I'm going to wait for you",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 47670,
+          "endTimeMs": 47800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 47800,
+          "endTimeMs": 48000
+        },
+        {
+          "word": "haven't",
+          "startTimeMs": 48000,
+          "endTimeMs": 48300
+        },
+        {
+          "word": "come",
+          "startTimeMs": 48300,
+          "endTimeMs": 48600
+        },
+        {
+          "word": "yet,",
+          "startTimeMs": 48600,
+          "endTimeMs": 48900
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 48900,
+          "endTimeMs": 49200
+        },
+        {
+          "word": "going",
+          "startTimeMs": 49200,
+          "endTimeMs": 49400
+        },
+        {
+          "word": "to",
+          "startTimeMs": 49400,
+          "endTimeMs": 49600
+        },
+        {
+          "word": "wait",
+          "startTimeMs": 49600,
+          "endTimeMs": 49800
+        },
+        {
+          "word": "for",
+          "startTimeMs": 49800,
+          "endTimeMs": 50000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 50000,
+          "endTimeMs": 50200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 50200,
+      "endTimeMs": 52330,
+      "segmentIndex": 13,
+      "cueText": "In my bed, and I'm going to celebrate it",
+      "text": "In my bed, and I'm going to celebrate it",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 50200,
+          "endTimeMs": 50400
+        },
+        {
+          "word": "my",
+          "startTimeMs": 50400,
+          "endTimeMs": 50600
+        },
+        {
+          "word": "bed,",
+          "startTimeMs": 50600,
+          "endTimeMs": 51000
+        },
+        {
+          "word": "and",
+          "startTimeMs": 51000,
+          "endTimeMs": 51200
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 51200,
+          "endTimeMs": 51400
+        },
+        {
+          "word": "going",
+          "startTimeMs": 51400,
+          "endTimeMs": 51600
+        },
+        {
+          "word": "to",
+          "startTimeMs": 51600,
+          "endTimeMs": 51800
+        },
+        {
+          "word": "celebrate",
+          "startTimeMs": 51800,
+          "endTimeMs": 52100
+        },
+        {
+          "word": "it",
+          "startTimeMs": 52100,
+          "endTimeMs": 52330
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 52330,
+      "endTimeMs": 54510,
+      "segmentIndex": 14,
+      "cueText": "Baby, I don't oppose you",
+      "text": "Baby, I don't oppose you",
+      "words": [
+        {
+          "word": "Baby,",
+          "startTimeMs": 52330,
+          "endTimeMs": 52900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 52900,
+          "endTimeMs": 53200
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 53200,
+          "endTimeMs": 53500
+        },
+        {
+          "word": "oppose",
+          "startTimeMs": 53500,
+          "endTimeMs": 53900
+        },
+        {
+          "word": "you",
+          "startTimeMs": 53900,
+          "endTimeMs": 54510
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 54510,
+      "endTimeMs": 56710,
+      "segmentIndex": 15,
+      "cueText": "And I always give it to you",
+      "text": "And I always give it to you",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 54510,
+          "endTimeMs": 54800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 54800,
+          "endTimeMs": 55000
+        },
+        {
+          "word": "always",
+          "startTimeMs": 55000,
+          "endTimeMs": 55400
+        },
+        {
+          "word": "give",
+          "startTimeMs": 55400,
+          "endTimeMs": 55700
+        },
+        {
+          "word": "it",
+          "startTimeMs": 55700,
+          "endTimeMs": 56000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 56000,
+          "endTimeMs": 56300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 56300,
+          "endTimeMs": 56710
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 56710,
+      "endTimeMs": 61080,
+      "segmentIndex": 16,
+      "cueText": "And if you hit me up, we're going to swim in the deep end",
+      "text": "And if you hit me up, we're going to swim in the deep end",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 56710,
+          "endTimeMs": 56900
+        },
+        {
+          "word": "if",
+          "startTimeMs": 56900,
+          "endTimeMs": 57100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 57100,
+          "endTimeMs": 57300
+        },
+        {
+          "word": "hit",
+          "startTimeMs": 57300,
+          "endTimeMs": 57600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 57600,
+          "endTimeMs": 57900
+        },
+        {
+          "word": "up,",
+          "startTimeMs": 57900,
+          "endTimeMs": 58200
+        },
+        {
+          "word": "we're",
+          "startTimeMs": 58200,
+          "endTimeMs": 58500
+        },
+        {
+          "word": "going",
+          "startTimeMs": 58500,
+          "endTimeMs": 58800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 58800,
+          "endTimeMs": 59000
+        },
+        {
+          "word": "swim",
+          "startTimeMs": 59000,
+          "endTimeMs": 59400
+        },
+        {
+          "word": "in",
+          "startTimeMs": 59400,
+          "endTimeMs": 59700
+        },
+        {
+          "word": "the",
+          "startTimeMs": 59700,
+          "endTimeMs": 60000
+        },
+        {
+          "word": "deep",
+          "startTimeMs": 60000,
+          "endTimeMs": 60400
+        },
+        {
+          "word": "end",
+          "startTimeMs": 60400,
+          "endTimeMs": 61080
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 61080,
+      "endTimeMs": 63100,
+      "segmentIndex": 17,
+      "cueText": "If it’s up to me, I'll give it to you",
+      "text": "If it’s up to me, I'll give it to you",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 61080,
+          "endTimeMs": 61200
+        },
+        {
+          "word": "it’s",
+          "startTimeMs": 61200,
+          "endTimeMs": 61400
+        },
+        {
+          "word": "up",
+          "startTimeMs": 61400,
+          "endTimeMs": 61600
+        },
+        {
+          "word": "to",
+          "startTimeMs": 61600,
+          "endTimeMs": 61800
+        },
+        {
+          "word": "me,",
+          "startTimeMs": 61800,
+          "endTimeMs": 62000
+        },
+        {
+          "word": "I'll",
+          "startTimeMs": 62000,
+          "endTimeMs": 62200
+        },
+        {
+          "word": "give",
+          "startTimeMs": 62200,
+          "endTimeMs": 62400
+        },
+        {
+          "word": "it",
+          "startTimeMs": 62400,
+          "endTimeMs": 62600
+        },
+        {
+          "word": "to",
+          "startTimeMs": 62600,
+          "endTimeMs": 62800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 62800,
+          "endTimeMs": 63100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 63100,
+      "endTimeMs": 65550,
+      "segmentIndex": 18,
+      "cueText": "From September until August",
+      "text": "From September until August",
+      "words": [
+        {
+          "word": "From",
+          "startTimeMs": 63100,
+          "endTimeMs": 63400
+        },
+        {
+          "word": "September",
+          "startTimeMs": 63400,
+          "endTimeMs": 64200
+        },
+        {
+          "word": "until",
+          "startTimeMs": 64200,
+          "endTimeMs": 64600
+        },
+        {
+          "word": "August",
+          "startTimeMs": 64600,
+          "endTimeMs": 65550
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 65550,
+      "endTimeMs": 68850,
+      "segmentIndex": 19,
+      "cueText": "I don't give a damn what your friends say",
+      "text": "I don't give a damn what your friends say",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 65550,
+          "endTimeMs": 65800
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 65800,
+          "endTimeMs": 66200
+        },
+        {
+          "word": "give",
+          "startTimeMs": 66200,
+          "endTimeMs": 66600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 66600,
+          "endTimeMs": 66800
+        },
+        {
+          "word": "damn",
+          "startTimeMs": 66800,
+          "endTimeMs": 67200
+        },
+        {
+          "word": "what",
+          "startTimeMs": 67200,
+          "endTimeMs": 67500
+        },
+        {
+          "word": "your",
+          "startTimeMs": 67500,
+          "endTimeMs": 67800
+        },
+        {
+          "word": "friends",
+          "startTimeMs": 67800,
+          "endTimeMs": 68200
+        },
+        {
+          "word": "say",
+          "startTimeMs": 68200,
+          "endTimeMs": 68850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 68850,
+      "endTimeMs": 72850,
+      "segmentIndex": 20,
+      "cueText": "Already I found out, it shows when you see me",
+      "text": "Already I found out, it shows when you see me",
+      "words": [
+        {
+          "word": "Already",
+          "startTimeMs": 68850,
+          "endTimeMs": 69200
+        },
+        {
+          "word": "I",
+          "startTimeMs": 69200,
+          "endTimeMs": 69500
+        },
+        {
+          "word": "found",
+          "startTimeMs": 69500,
+          "endTimeMs": 69900
+        },
+        {
+          "word": "out,",
+          "startTimeMs": 69900,
+          "endTimeMs": 70300
+        },
+        {
+          "word": "it",
+          "startTimeMs": 70300,
+          "endTimeMs": 70600
+        },
+        {
+          "word": "shows",
+          "startTimeMs": 70600,
+          "endTimeMs": 71100
+        },
+        {
+          "word": "when",
+          "startTimeMs": 71100,
+          "endTimeMs": 71500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 71500,
+          "endTimeMs": 71900
+        },
+        {
+          "word": "see",
+          "startTimeMs": 71900,
+          "endTimeMs": 72300
+        },
+        {
+          "word": "me",
+          "startTimeMs": 72300,
+          "endTimeMs": 72850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 72850,
+      "endTimeMs": 77150,
+      "segmentIndex": 21,
+      "cueText": "There, where you haven't been, you know I'll take you",
+      "text": "There, where you haven't been, you know I'll take you",
+      "words": [
+        {
+          "word": "There,",
+          "startTimeMs": 72850,
+          "endTimeMs": 73300
+        },
+        {
+          "word": "where",
+          "startTimeMs": 73300,
+          "endTimeMs": 73700
+        },
+        {
+          "word": "you",
+          "startTimeMs": 73700,
+          "endTimeMs": 74000
+        },
+        {
+          "word": "haven't",
+          "startTimeMs": 74000,
+          "endTimeMs": 74500
+        },
+        {
+          "word": "been,",
+          "startTimeMs": 74500,
+          "endTimeMs": 74900
+        },
+        {
+          "word": "you",
+          "startTimeMs": 74900,
+          "endTimeMs": 75300
+        },
+        {
+          "word": "know",
+          "startTimeMs": 75300,
+          "endTimeMs": 75600
+        },
+        {
+          "word": "I'll",
+          "startTimeMs": 75600,
+          "endTimeMs": 76000
+        },
+        {
+          "word": "take",
+          "startTimeMs": 76000,
+          "endTimeMs": 76500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 76500,
+          "endTimeMs": 77150
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 77150,
+      "endTimeMs": 81380,
+      "segmentIndex": 22,
+      "cueText": "Tell me, what do you want to drink?, because you’re my baby",
+      "text": "Tell me, what do you want to drink?, because you’re my baby",
+      "words": [
+        {
+          "word": "Tell",
+          "startTimeMs": 77150,
+          "endTimeMs": 77500
+        },
+        {
+          "word": "me,",
+          "startTimeMs": 77500,
+          "endTimeMs": 77800
+        },
+        {
+          "word": "what",
+          "startTimeMs": 77800,
+          "endTimeMs": 78100
+        },
+        {
+          "word": "do",
+          "startTimeMs": 78100,
+          "endTimeMs": 78400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 78400,
+          "endTimeMs": 78700
+        },
+        {
+          "word": "want",
+          "startTimeMs": 78700,
+          "endTimeMs": 79100
+        },
+        {
+          "word": "to",
+          "startTimeMs": 79100,
+          "endTimeMs": 79400
+        },
+        {
+          "word": "drink?,",
+          "startTimeMs": 79400,
+          "endTimeMs": 79800
+        },
+        {
+          "word": "because",
+          "startTimeMs": 79800,
+          "endTimeMs": 80200
+        },
+        {
+          "word": "you’re",
+          "startTimeMs": 80200,
+          "endTimeMs": 80600
+        },
+        {
+          "word": "my",
+          "startTimeMs": 80600,
+          "endTimeMs": 80900
+        },
+        {
+          "word": "baby",
+          "startTimeMs": 80900,
+          "endTimeMs": 81380
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 81380,
+      "endTimeMs": 86520,
+      "segmentIndex": 23,
+      "cueText": "And who’s going to talk about us, if we don't let ourselves be seen? (You follow me?)",
+      "text": "And who’s going to talk about us, if we don't let ourselves be seen? (You follow me?)",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 81380,
+          "endTimeMs": 81600
+        },
+        {
+          "word": "who’s",
+          "startTimeMs": 81600,
+          "endTimeMs": 81900
+        },
+        {
+          "word": "going",
+          "startTimeMs": 81900,
+          "endTimeMs": 82200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 82200,
+          "endTimeMs": 82500
+        },
+        {
+          "word": "talk",
+          "startTimeMs": 82500,
+          "endTimeMs": 82800
+        },
+        {
+          "word": "about",
+          "startTimeMs": 82800,
+          "endTimeMs": 83100
+        },
+        {
+          "word": "us,",
+          "startTimeMs": 83100,
+          "endTimeMs": 83500
+        },
+        {
+          "word": "if",
+          "startTimeMs": 83500,
+          "endTimeMs": 83800
+        },
+        {
+          "word": "we",
+          "startTimeMs": 83800,
+          "endTimeMs": 84100
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 84100,
+          "endTimeMs": 84400
+        },
+        {
+          "word": "let",
+          "startTimeMs": 84400,
+          "endTimeMs": 84700
+        },
+        {
+          "word": "ourselves",
+          "startTimeMs": 84700,
+          "endTimeMs": 85100
+        },
+        {
+          "word": "be",
+          "startTimeMs": 85100,
+          "endTimeMs": 85400
+        },
+        {
+          "word": "seen?",
+          "startTimeMs": 85400,
+          "endTimeMs": 85800
+        },
+        {
+          "word": "(You",
+          "startTimeMs": 85800,
+          "endTimeMs": 86100
+        },
+        {
+          "word": "follow",
+          "startTimeMs": 86100,
+          "endTimeMs": 86300
+        },
+        {
+          "word": "me?)",
+          "startTimeMs": 86300,
+          "endTimeMs": 86520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 86520,
+      "endTimeMs": 88820,
+      "segmentIndex": 24,
+      "cueText": "Mami, you got me hooked, yeah",
+      "text": "Mami, you got me hooked, yeah",
+      "words": [
+        {
+          "word": "Mami,",
+          "startTimeMs": 86520,
+          "endTimeMs": 86900
+        },
+        {
+          "word": "you",
+          "startTimeMs": 86900,
+          "endTimeMs": 87200
+        },
+        {
+          "word": "got",
+          "startTimeMs": 87200,
+          "endTimeMs": 87500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 87500,
+          "endTimeMs": 87800
+        },
+        {
+          "word": "hooked,",
+          "startTimeMs": 87800,
+          "endTimeMs": 88400
+        },
+        {
+          "word": "yeah",
+          "startTimeMs": 88400,
+          "endTimeMs": 88820
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 88820,
+      "endTimeMs": 91430,
+      "segmentIndex": 25,
+      "cueText": "If you were the Urus, you'd have me parked",
+      "text": "If you were the Urus, you'd have me parked",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 88820,
+          "endTimeMs": 89000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 89000,
+          "endTimeMs": 89200
+        },
+        {
+          "word": "were",
+          "startTimeMs": 89200,
+          "endTimeMs": 89500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 89500,
+          "endTimeMs": 89800
+        },
+        {
+          "word": "Urus,",
+          "startTimeMs": 89800,
+          "endTimeMs": 90100
+        },
+        {
+          "word": "you'd",
+          "startTimeMs": 90100,
+          "endTimeMs": 90400
+        },
+        {
+          "word": "have",
+          "startTimeMs": 90400,
+          "endTimeMs": 90700
+        },
+        {
+          "word": "me",
+          "startTimeMs": 90700,
+          "endTimeMs": 91000
+        },
+        {
+          "word": "parked",
+          "startTimeMs": 91000,
+          "endTimeMs": 91430
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 91430,
+      "endTimeMs": 95380,
+      "segmentIndex": 26,
+      "cueText": "Cruising through Condado, with you always high",
+      "text": "Cruising through Condado, with you always high",
+      "words": [
+        {
+          "word": "Cruising",
+          "startTimeMs": 91430,
+          "endTimeMs": 91900
+        },
+        {
+          "word": "through",
+          "startTimeMs": 91900,
+          "endTimeMs": 92400
+        },
+        {
+          "word": "Condado,",
+          "startTimeMs": 92400,
+          "endTimeMs": 92900
+        },
+        {
+          "word": "with",
+          "startTimeMs": 92900,
+          "endTimeMs": 93400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 93400,
+          "endTimeMs": 93800
+        },
+        {
+          "word": "always",
+          "startTimeMs": 93800,
+          "endTimeMs": 94300
+        },
+        {
+          "word": "high",
+          "startTimeMs": 94300,
+          "endTimeMs": 95380
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 95380,
+      "endTimeMs": 97830,
+      "segmentIndex": 27,
+      "cueText": "You're not my lady, but",
+      "text": "You're not my lady, but",
+      "words": [
+        {
+          "word": "You're",
+          "startTimeMs": 95380,
+          "endTimeMs": 95800
+        },
+        {
+          "word": "not",
+          "startTimeMs": 95800,
+          "endTimeMs": 96300
+        },
+        {
+          "word": "my",
+          "startTimeMs": 96300,
+          "endTimeMs": 96800
+        },
+        {
+          "word": "lady,",
+          "startTimeMs": 96800,
+          "endTimeMs": 97300
+        },
+        {
+          "word": "but",
+          "startTimeMs": 97300,
+          "endTimeMs": 97830
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 97830,
+      "endTimeMs": 100300,
+      "segmentIndex": 28,
+      "cueText": "Take 5,000, spend it at Sephora",
+      "text": "Take 5,000, spend it at Sephora",
+      "words": [
+        {
+          "word": "Take",
+          "startTimeMs": 97830,
+          "endTimeMs": 98300
+        },
+        {
+          "word": "5,000,",
+          "startTimeMs": 98300,
+          "endTimeMs": 98800
+        },
+        {
+          "word": "spend",
+          "startTimeMs": 98800,
+          "endTimeMs": 99300
+        },
+        {
+          "word": "it",
+          "startTimeMs": 99300,
+          "endTimeMs": 99700
+        },
+        {
+          "word": "at",
+          "startTimeMs": 99700,
+          "endTimeMs": 100000
+        },
+        {
+          "word": "Sephora",
+          "startTimeMs": 100000,
+          "endTimeMs": 100300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 100300,
+      "endTimeMs": 102520,
+      "segmentIndex": 29,
+      "cueText": "Louis Vuitton, she doesn't buy at Pandora anymore",
+      "text": "Louis Vuitton, she doesn't buy at Pandora anymore",
+      "words": [
+        {
+          "word": "Louis",
+          "startTimeMs": 100300,
+          "endTimeMs": 100600
+        },
+        {
+          "word": "Vuitton,",
+          "startTimeMs": 100600,
+          "endTimeMs": 101000
+        },
+        {
+          "word": "she",
+          "startTimeMs": 101000,
+          "endTimeMs": 101200
+        },
+        {
+          "word": "doesn't",
+          "startTimeMs": 101200,
+          "endTimeMs": 101400
+        },
+        {
+          "word": "buy",
+          "startTimeMs": 101400,
+          "endTimeMs": 101700
+        },
+        {
+          "word": "at",
+          "startTimeMs": 101700,
+          "endTimeMs": 101900
+        },
+        {
+          "word": "Pandora",
+          "startTimeMs": 101900,
+          "endTimeMs": 102200
+        },
+        {
+          "word": "anymore",
+          "startTimeMs": 102200,
+          "endTimeMs": 102520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 102520,
+      "endTimeMs": 106730,
+      "segmentIndex": 30,
+      "cueText": "Like a piercing, she pierces through men, eh-eh-eh",
+      "text": "Like a piercing, she pierces through men, eh-eh-eh",
+      "words": [
+        {
+          "word": "Like",
+          "startTimeMs": 102520,
+          "endTimeMs": 102800
+        },
+        {
+          "word": "a",
+          "startTimeMs": 102800,
+          "endTimeMs": 103100
+        },
+        {
+          "word": "piercing,",
+          "startTimeMs": 103100,
+          "endTimeMs": 103600
+        },
+        {
+          "word": "she",
+          "startTimeMs": 103600,
+          "endTimeMs": 103900
+        },
+        {
+          "word": "pierces",
+          "startTimeMs": 103900,
+          "endTimeMs": 104400
+        },
+        {
+          "word": "through",
+          "startTimeMs": 104400,
+          "endTimeMs": 104700
+        },
+        {
+          "word": "men,",
+          "startTimeMs": 104700,
+          "endTimeMs": 105000
+        },
+        {
+          "word": "eh-eh-eh",
+          "startTimeMs": 105000,
+          "endTimeMs": 106730
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 106730,
+      "endTimeMs": 111080,
+      "segmentIndex": 31,
+      "cueText": "A long time ago they broke her heart (her heart)",
+      "text": "A long time ago they broke her heart (her heart)",
+      "words": [
+        {
+          "word": "A",
+          "startTimeMs": 106730,
+          "endTimeMs": 107000
+        },
+        {
+          "word": "long",
+          "startTimeMs": 107000,
+          "endTimeMs": 107300
+        },
+        {
+          "word": "time",
+          "startTimeMs": 107300,
+          "endTimeMs": 107600
+        },
+        {
+          "word": "ago",
+          "startTimeMs": 107600,
+          "endTimeMs": 107900
+        },
+        {
+          "word": "they",
+          "startTimeMs": 107900,
+          "endTimeMs": 108200
+        },
+        {
+          "word": "broke",
+          "startTimeMs": 108200,
+          "endTimeMs": 108500
+        },
+        {
+          "word": "her",
+          "startTimeMs": 108500,
+          "endTimeMs": 108800
+        },
+        {
+          "word": "heart",
+          "startTimeMs": 108800,
+          "endTimeMs": 109200
+        },
+        {
+          "word": "(her",
+          "startTimeMs": 109200,
+          "endTimeMs": 110000
+        },
+        {
+          "word": "heart)",
+          "startTimeMs": 110000,
+          "endTimeMs": 111080
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 111080,
+      "endTimeMs": 114370,
+      "segmentIndex": 32,
+      "cueText": "Studious, set on being a doctor (doctor)",
+      "text": "Studious, set on being a doctor (doctor)",
+      "words": [
+        {
+          "word": "Studious,",
+          "startTimeMs": 111080,
+          "endTimeMs": 111600
+        },
+        {
+          "word": "set",
+          "startTimeMs": 111600,
+          "endTimeMs": 112000
+        },
+        {
+          "word": "on",
+          "startTimeMs": 112000,
+          "endTimeMs": 112300
+        },
+        {
+          "word": "being",
+          "startTimeMs": 112300,
+          "endTimeMs": 112600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 112600,
+          "endTimeMs": 112800
+        },
+        {
+          "word": "doctor",
+          "startTimeMs": 112800,
+          "endTimeMs": 113300
+        },
+        {
+          "word": "(doctor)",
+          "startTimeMs": 113300,
+          "endTimeMs": 114370
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 114370,
+      "endTimeMs": 119750,
+      "segmentIndex": 33,
+      "cueText": "But (but) she likes the thugs wheelieing on motorcycles (motorcycle)",
+      "text": "But (but) she likes the thugs wheelieing on motorcycles (motorcycle)",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 114370,
+          "endTimeMs": 114700
+        },
+        {
+          "word": "(but)",
+          "startTimeMs": 114700,
+          "endTimeMs": 115100
+        },
+        {
+          "word": "she",
+          "startTimeMs": 115100,
+          "endTimeMs": 115400
+        },
+        {
+          "word": "likes",
+          "startTimeMs": 115400,
+          "endTimeMs": 115800
+        },
+        {
+          "word": "the",
+          "startTimeMs": 115800,
+          "endTimeMs": 116100
+        },
+        {
+          "word": "thugs",
+          "startTimeMs": 116100,
+          "endTimeMs": 116500
+        },
+        {
+          "word": "wheelieing",
+          "startTimeMs": 116500,
+          "endTimeMs": 117000
+        },
+        {
+          "word": "on",
+          "startTimeMs": 117000,
+          "endTimeMs": 117400
+        },
+        {
+          "word": "motorcycles",
+          "startTimeMs": 117400,
+          "endTimeMs": 118000
+        },
+        {
+          "word": "(motorcycle)",
+          "startTimeMs": 118000,
+          "endTimeMs": 119750
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 119750,
+      "endTimeMs": 122190,
+      "segmentIndex": 34,
+      "cueText": "I'm here for you 24 hours",
+      "text": "I'm here for you 24 hours",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 119750,
+          "endTimeMs": 120200
+        },
+        {
+          "word": "here",
+          "startTimeMs": 120200,
+          "endTimeMs": 120500
+        },
+        {
+          "word": "for",
+          "startTimeMs": 120500,
+          "endTimeMs": 120800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 120800,
+          "endTimeMs": 121100
+        },
+        {
+          "word": "24",
+          "startTimeMs": 121100,
+          "endTimeMs": 121500
+        },
+        {
+          "word": "hours",
+          "startTimeMs": 121500,
+          "endTimeMs": 122190
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 122190,
+      "endTimeMs": 124330,
+      "segmentIndex": 35,
+      "cueText": "Baby, I don't oppose you",
+      "text": "Baby, I don't oppose you",
+      "words": [
+        {
+          "word": "Baby,",
+          "startTimeMs": 122190,
+          "endTimeMs": 122700
+        },
+        {
+          "word": "I",
+          "startTimeMs": 122700,
+          "endTimeMs": 123000
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 123000,
+          "endTimeMs": 123300
+        },
+        {
+          "word": "oppose",
+          "startTimeMs": 123300,
+          "endTimeMs": 123700
+        },
+        {
+          "word": "you",
+          "startTimeMs": 123700,
+          "endTimeMs": 124330
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 124330,
+      "endTimeMs": 126570,
+      "segmentIndex": 36,
+      "cueText": "And I always give it to you (always give it to you)",
+      "text": "And I always give it to you (always give it to you)",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 124330,
+          "endTimeMs": 124500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 124500,
+          "endTimeMs": 124600
+        },
+        {
+          "word": "always",
+          "startTimeMs": 124600,
+          "endTimeMs": 124900
+        },
+        {
+          "word": "give",
+          "startTimeMs": 124900,
+          "endTimeMs": 125100
+        },
+        {
+          "word": "it",
+          "startTimeMs": 125100,
+          "endTimeMs": 125200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 125200,
+          "endTimeMs": 125300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 125300,
+          "endTimeMs": 125600
+        },
+        {
+          "word": "(always",
+          "startTimeMs": 125600,
+          "endTimeMs": 125900
+        },
+        {
+          "word": "give",
+          "startTimeMs": 125900,
+          "endTimeMs": 126100
+        },
+        {
+          "word": "it",
+          "startTimeMs": 126100,
+          "endTimeMs": 126200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 126200,
+          "endTimeMs": 126300
+        },
+        {
+          "word": "you)",
+          "startTimeMs": 126300,
+          "endTimeMs": 126570
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 126570,
+      "endTimeMs": 130860,
+      "segmentIndex": 37,
+      "cueText": "And if you hit me up, we're going to swim in the deep end (swim in the deep end)",
+      "text": "And if you hit me up, we're going to swim in the deep end (swim in the deep end)",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 126570,
+          "endTimeMs": 126800
+        },
+        {
+          "word": "if",
+          "startTimeMs": 126800,
+          "endTimeMs": 127000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 127000,
+          "endTimeMs": 127200
+        },
+        {
+          "word": "hit",
+          "startTimeMs": 127200,
+          "endTimeMs": 127500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 127500,
+          "endTimeMs": 127800
+        },
+        {
+          "word": "up,",
+          "startTimeMs": 127800,
+          "endTimeMs": 128100
+        },
+        {
+          "word": "we're",
+          "startTimeMs": 128100,
+          "endTimeMs": 128400
+        },
+        {
+          "word": "going",
+          "startTimeMs": 128400,
+          "endTimeMs": 128700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 128700,
+          "endTimeMs": 128900
+        },
+        {
+          "word": "swim",
+          "startTimeMs": 128900,
+          "endTimeMs": 129200
+        },
+        {
+          "word": "in",
+          "startTimeMs": 129200,
+          "endTimeMs": 129400
+        },
+        {
+          "word": "the",
+          "startTimeMs": 129400,
+          "endTimeMs": 129600
+        },
+        {
+          "word": "deep",
+          "startTimeMs": 129600,
+          "endTimeMs": 129900
+        },
+        {
+          "word": "end",
+          "startTimeMs": 129900,
+          "endTimeMs": 130200
+        },
+        {
+          "word": "(swim",
+          "startTimeMs": 130200,
+          "endTimeMs": 130400
+        },
+        {
+          "word": "in",
+          "startTimeMs": 130400,
+          "endTimeMs": 130500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 130500,
+          "endTimeMs": 130600
+        },
+        {
+          "word": "deep",
+          "startTimeMs": 130600,
+          "endTimeMs": 130700
+        },
+        {
+          "word": "end)",
+          "startTimeMs": 130700,
+          "endTimeMs": 130860
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 130860,
+      "endTimeMs": 133150,
+      "segmentIndex": 38,
+      "cueText": "If it’s up to me, I'll give it to you",
+      "text": "If it’s up to me, I'll give it to you",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 130860,
+          "endTimeMs": 131100
+        },
+        {
+          "word": "it’s",
+          "startTimeMs": 131100,
+          "endTimeMs": 131300
+        },
+        {
+          "word": "up",
+          "startTimeMs": 131300,
+          "endTimeMs": 131500
+        },
+        {
+          "word": "to",
+          "startTimeMs": 131500,
+          "endTimeMs": 131700
+        },
+        {
+          "word": "me,",
+          "startTimeMs": 131700,
+          "endTimeMs": 132000
+        },
+        {
+          "word": "I'll",
+          "startTimeMs": 132000,
+          "endTimeMs": 132300
+        },
+        {
+          "word": "give",
+          "startTimeMs": 132300,
+          "endTimeMs": 132600
+        },
+        {
+          "word": "it",
+          "startTimeMs": 132600,
+          "endTimeMs": 132800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 132800,
+          "endTimeMs": 133000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 133000,
+          "endTimeMs": 133150
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 133150,
+      "endTimeMs": 135440,
+      "segmentIndex": 39,
+      "cueText": "From September until August",
+      "text": "From September until August",
+      "words": [
+        {
+          "word": "From",
+          "startTimeMs": 133150,
+          "endTimeMs": 133400
+        },
+        {
+          "word": "September",
+          "startTimeMs": 133400,
+          "endTimeMs": 134100
+        },
+        {
+          "word": "until",
+          "startTimeMs": 134100,
+          "endTimeMs": 134500
+        },
+        {
+          "word": "August",
+          "startTimeMs": 134500,
+          "endTimeMs": 135440
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 135440,
+      "endTimeMs": 138850,
+      "segmentIndex": 40,
+      "cueText": "And I don't give a damn what your friends say",
+      "text": "And I don't give a damn what your friends say",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 135440,
+          "endTimeMs": 135700
+        },
+        {
+          "word": "I",
+          "startTimeMs": 135700,
+          "endTimeMs": 136000
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 136000,
+          "endTimeMs": 136300
+        },
+        {
+          "word": "give",
+          "startTimeMs": 136300,
+          "endTimeMs": 136600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 136600,
+          "endTimeMs": 136800
+        },
+        {
+          "word": "damn",
+          "startTimeMs": 136800,
+          "endTimeMs": 137200
+        },
+        {
+          "word": "what",
+          "startTimeMs": 137200,
+          "endTimeMs": 137500
+        },
+        {
+          "word": "your",
+          "startTimeMs": 137500,
+          "endTimeMs": 137900
+        },
+        {
+          "word": "friends",
+          "startTimeMs": 137900,
+          "endTimeMs": 138300
+        },
+        {
+          "word": "say",
+          "startTimeMs": 138300,
+          "endTimeMs": 138850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 138850,
+      "endTimeMs": 142640,
+      "segmentIndex": 41,
+      "cueText": "Already I found out, it shows when you see me",
+      "text": "Already I found out, it shows when you see me",
+      "words": [
+        {
+          "word": "Already",
+          "startTimeMs": 138850,
+          "endTimeMs": 139200
+        },
+        {
+          "word": "I",
+          "startTimeMs": 139200,
+          "endTimeMs": 139500
+        },
+        {
+          "word": "found",
+          "startTimeMs": 139500,
+          "endTimeMs": 139900
+        },
+        {
+          "word": "out,",
+          "startTimeMs": 139900,
+          "endTimeMs": 140300
+        },
+        {
+          "word": "it",
+          "startTimeMs": 140300,
+          "endTimeMs": 140600
+        },
+        {
+          "word": "shows",
+          "startTimeMs": 140600,
+          "endTimeMs": 141000
+        },
+        {
+          "word": "when",
+          "startTimeMs": 141000,
+          "endTimeMs": 141400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 141400,
+          "endTimeMs": 141800
+        },
+        {
+          "word": "see",
+          "startTimeMs": 141800,
+          "endTimeMs": 142200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 142200,
+          "endTimeMs": 142640
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 142640,
+      "endTimeMs": 146800,
+      "segmentIndex": 42,
+      "cueText": "There where you haven't been, you know I'll take you",
+      "text": "There where you haven't been, you know I'll take you",
+      "words": [
+        {
+          "word": "There",
+          "startTimeMs": 142640,
+          "endTimeMs": 143000
+        },
+        {
+          "word": "where",
+          "startTimeMs": 143000,
+          "endTimeMs": 143400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 143400,
+          "endTimeMs": 143700
+        },
+        {
+          "word": "haven't",
+          "startTimeMs": 143700,
+          "endTimeMs": 144100
+        },
+        {
+          "word": "been,",
+          "startTimeMs": 144100,
+          "endTimeMs": 144500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 144500,
+          "endTimeMs": 144900
+        },
+        {
+          "word": "know",
+          "startTimeMs": 144900,
+          "endTimeMs": 145300
+        },
+        {
+          "word": "I'll",
+          "startTimeMs": 145300,
+          "endTimeMs": 145700
+        },
+        {
+          "word": "take",
+          "startTimeMs": 145700,
+          "endTimeMs": 146100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 146100,
+          "endTimeMs": 146800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 146800,
+      "endTimeMs": 151160,
+      "segmentIndex": 43,
+      "cueText": "And tell me, what do you want to drink?, because you’re my baby",
+      "text": "And tell me, what do you want to drink?, because you’re my baby",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 146800,
+          "endTimeMs": 147000
+        },
+        {
+          "word": "tell",
+          "startTimeMs": 147000,
+          "endTimeMs": 147400
+        },
+        {
+          "word": "me,",
+          "startTimeMs": 147400,
+          "endTimeMs": 147700
+        },
+        {
+          "word": "what",
+          "startTimeMs": 147700,
+          "endTimeMs": 148100
+        },
+        {
+          "word": "do",
+          "startTimeMs": 148100,
+          "endTimeMs": 148400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 148400,
+          "endTimeMs": 148700
+        },
+        {
+          "word": "want",
+          "startTimeMs": 148700,
+          "endTimeMs": 149000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 149000,
+          "endTimeMs": 149300
+        },
+        {
+          "word": "drink?,",
+          "startTimeMs": 149300,
+          "endTimeMs": 149700
+        },
+        {
+          "word": "because",
+          "startTimeMs": 149700,
+          "endTimeMs": 150100
+        },
+        {
+          "word": "you’re",
+          "startTimeMs": 150100,
+          "endTimeMs": 150400
+        },
+        {
+          "word": "my",
+          "startTimeMs": 150400,
+          "endTimeMs": 150700
+        },
+        {
+          "word": "baby",
+          "startTimeMs": 150700,
+          "endTimeMs": 151160
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 151160,
+      "endTimeMs": 156770,
+      "segmentIndex": 44,
+      "cueText": "And who’s going to talk about us, if we don't let ourselves be seen?",
+      "text": "And who’s going to talk about us, if we don't let ourselves be seen?",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 151160,
+          "endTimeMs": 151500
+        },
+        {
+          "word": "who’s",
+          "startTimeMs": 151500,
+          "endTimeMs": 151900
+        },
+        {
+          "word": "going",
+          "startTimeMs": 151900,
+          "endTimeMs": 152300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 152300,
+          "endTimeMs": 152600
+        },
+        {
+          "word": "talk",
+          "startTimeMs": 152600,
+          "endTimeMs": 153000
+        },
+        {
+          "word": "about",
+          "startTimeMs": 153000,
+          "endTimeMs": 153400
+        },
+        {
+          "word": "us,",
+          "startTimeMs": 153400,
+          "endTimeMs": 153800
+        },
+        {
+          "word": "if",
+          "startTimeMs": 153800,
+          "endTimeMs": 154200
+        },
+        {
+          "word": "we",
+          "startTimeMs": 154200,
+          "endTimeMs": 154600
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 154600,
+          "endTimeMs": 155000
+        },
+        {
+          "word": "let",
+          "startTimeMs": 155000,
+          "endTimeMs": 155400
+        },
+        {
+          "word": "ourselves",
+          "startTimeMs": 155400,
+          "endTimeMs": 156000
+        },
+        {
+          "word": "be",
+          "startTimeMs": 156000,
+          "endTimeMs": 156300
+        },
+        {
+          "word": "seen?",
+          "startTimeMs": 156300,
+          "endTimeMs": 156770
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 156770,
+      "endTimeMs": 158810,
+      "segmentIndex": 45,
+      "cueText": "And sometimes it’s Dolce, sometimes Bulgari",
+      "text": "And sometimes it’s Dolce, sometimes Bulgari",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 156770,
+          "endTimeMs": 156900
+        },
+        {
+          "word": "sometimes",
+          "startTimeMs": 156900,
+          "endTimeMs": 157200
+        },
+        {
+          "word": "it’s",
+          "startTimeMs": 157200,
+          "endTimeMs": 157400
+        },
+        {
+          "word": "Dolce,",
+          "startTimeMs": 157400,
+          "endTimeMs": 157700
+        },
+        {
+          "word": "sometimes",
+          "startTimeMs": 157700,
+          "endTimeMs": 158100
+        },
+        {
+          "word": "Bulgari",
+          "startTimeMs": 158100,
+          "endTimeMs": 158810
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 158810,
+      "endTimeMs": 161080,
+      "segmentIndex": 46,
+      "cueText": "When I take it off you after the parties",
+      "text": "When I take it off you after the parties",
+      "words": [
+        {
+          "word": "When",
+          "startTimeMs": 158810,
+          "endTimeMs": 159000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 159000,
+          "endTimeMs": 159200
+        },
+        {
+          "word": "take",
+          "startTimeMs": 159200,
+          "endTimeMs": 159500
+        },
+        {
+          "word": "it",
+          "startTimeMs": 159500,
+          "endTimeMs": 159700
+        },
+        {
+          "word": "off",
+          "startTimeMs": 159700,
+          "endTimeMs": 160000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 160000,
+          "endTimeMs": 160200
+        },
+        {
+          "word": "after",
+          "startTimeMs": 160200,
+          "endTimeMs": 160500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 160500,
+          "endTimeMs": 160700
+        },
+        {
+          "word": "parties",
+          "startTimeMs": 160700,
+          "endTimeMs": 161080
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 161080,
+      "endTimeMs": 163350,
+      "segmentIndex": 47,
+      "cueText": "The glasses of wine, the pounds of weed",
+      "text": "The glasses of wine, the pounds of weed",
+      "words": [
+        {
+          "word": "The",
+          "startTimeMs": 161080,
+          "endTimeMs": 161300
+        },
+        {
+          "word": "glasses",
+          "startTimeMs": 161300,
+          "endTimeMs": 161700
+        },
+        {
+          "word": "of",
+          "startTimeMs": 161700,
+          "endTimeMs": 162000
+        },
+        {
+          "word": "wine,",
+          "startTimeMs": 162000,
+          "endTimeMs": 162300
+        },
+        {
+          "word": "the",
+          "startTimeMs": 162300,
+          "endTimeMs": 162500
+        },
+        {
+          "word": "pounds",
+          "startTimeMs": 162500,
+          "endTimeMs": 162800
+        },
+        {
+          "word": "of",
+          "startTimeMs": 162800,
+          "endTimeMs": 163000
+        },
+        {
+          "word": "weed",
+          "startTimeMs": 163000,
+          "endTimeMs": 163350
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 163350,
+      "endTimeMs": 165610,
+      "segmentIndex": 48,
+      "cueText": "You're all let loose, me on safari",
+      "text": "You're all let loose, me on safari",
+      "words": [
+        {
+          "word": "You're",
+          "startTimeMs": 163350,
+          "endTimeMs": 163700
+        },
+        {
+          "word": "all",
+          "startTimeMs": 163700,
+          "endTimeMs": 164000
+        },
+        {
+          "word": "let",
+          "startTimeMs": 164000,
+          "endTimeMs": 164300
+        },
+        {
+          "word": "loose,",
+          "startTimeMs": 164300,
+          "endTimeMs": 164700
+        },
+        {
+          "word": "me",
+          "startTimeMs": 164700,
+          "endTimeMs": 165000
+        },
+        {
+          "word": "on",
+          "startTimeMs": 165000,
+          "endTimeMs": 165200
+        },
+        {
+          "word": "safari",
+          "startTimeMs": 165200,
+          "endTimeMs": 165610
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 165610,
+      "endTimeMs": 167630,
+      "segmentIndex": 49,
+      "cueText": "You move your ass phenomenally",
+      "text": "You move your ass phenomenally",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 165610,
+          "endTimeMs": 165900
+        },
+        {
+          "word": "move",
+          "startTimeMs": 165900,
+          "endTimeMs": 166300
+        },
+        {
+          "word": "your",
+          "startTimeMs": 166300,
+          "endTimeMs": 166600
+        },
+        {
+          "word": "ass",
+          "startTimeMs": 166600,
+          "endTimeMs": 166900
+        },
+        {
+          "word": "phenomenally",
+          "startTimeMs": 166900,
+          "endTimeMs": 167630
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 167630,
+      "endTimeMs": 169910,
+      "segmentIndex": 50,
+      "cueText": "So I can devour you like an animal",
+      "text": "So I can devour you like an animal",
+      "words": [
+        {
+          "word": "So",
+          "startTimeMs": 167630,
+          "endTimeMs": 167900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 167900,
+          "endTimeMs": 168100
+        },
+        {
+          "word": "can",
+          "startTimeMs": 168100,
+          "endTimeMs": 168400
+        },
+        {
+          "word": "devour",
+          "startTimeMs": 168400,
+          "endTimeMs": 168800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 168800,
+          "endTimeMs": 169000
+        },
+        {
+          "word": "like",
+          "startTimeMs": 169000,
+          "endTimeMs": 169200
+        },
+        {
+          "word": "an",
+          "startTimeMs": 169200,
+          "endTimeMs": 169400
+        },
+        {
+          "word": "animal",
+          "startTimeMs": 169400,
+          "endTimeMs": 169910
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 169910,
+      "endTimeMs": 172470,
+      "segmentIndex": 51,
+      "cueText": "If you haven't come yet, I'm going to wait for you",
+      "text": "If you haven't come yet, I'm going to wait for you",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 169910,
+          "endTimeMs": 170100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 170100,
+          "endTimeMs": 170300
+        },
+        {
+          "word": "haven't",
+          "startTimeMs": 170300,
+          "endTimeMs": 170600
+        },
+        {
+          "word": "come",
+          "startTimeMs": 170600,
+          "endTimeMs": 170900
+        },
+        {
+          "word": "yet,",
+          "startTimeMs": 170900,
+          "endTimeMs": 171200
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 171200,
+          "endTimeMs": 171500
+        },
+        {
+          "word": "going",
+          "startTimeMs": 171500,
+          "endTimeMs": 171700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 171700,
+          "endTimeMs": 171900
+        },
+        {
+          "word": "wait",
+          "startTimeMs": 171900,
+          "endTimeMs": 172100
+        },
+        {
+          "word": "for",
+          "startTimeMs": 172100,
+          "endTimeMs": 172300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 172300,
+          "endTimeMs": 172470
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 172470,
+      "endTimeMs": 175470,
+      "segmentIndex": 52,
+      "cueText": "In my bed and I'm going to celebrate it",
+      "text": "In my bed and I'm going to celebrate it",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 172470,
+          "endTimeMs": 172700
+        },
+        {
+          "word": "my",
+          "startTimeMs": 172700,
+          "endTimeMs": 173000
+        },
+        {
+          "word": "bed",
+          "startTimeMs": 173000,
+          "endTimeMs": 173300
+        },
+        {
+          "word": "and",
+          "startTimeMs": 173300,
+          "endTimeMs": 173500
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 173500,
+          "endTimeMs": 173900
+        },
+        {
+          "word": "going",
+          "startTimeMs": 173900,
+          "endTimeMs": 174200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 174200,
+          "endTimeMs": 174400
+        },
+        {
+          "word": "celebrate",
+          "startTimeMs": 174400,
+          "endTimeMs": 174800
+        },
+        {
+          "word": "it",
+          "startTimeMs": 174800,
+          "endTimeMs": 175470
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 175470,
+      "endTimeMs": 180000,
+      "segmentIndex": 53,
+      "cueText": "Outro"
+    }
+  ]
+}

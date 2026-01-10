@@ -919,6 +919,10 @@ export const refineKaraokeData = async (
     const response = await Promise.race([apiCallPromise, timeoutPromise]);
 
     onStatusUpdate('Received refined data, parsing final result...');
+    if (!response || !response.text) {
+        console.error("API returned undefined response or empty text:", response);
+        throw new Error("The AI model returned an empty or blocked response during refinement.");
+    }
     const text = response.text.trim();
      if (!text) {
         throw new Error("The AI model returned an empty response during the refinement pass.");
@@ -990,8 +994,12 @@ export const refineTranslatedKaraokeData = async (
     );
 
     const response = await Promise.race([apiCallPromise, timeoutPromise]);
-    
+
     onStatusUpdate('Received aligned data, parsing final result...');
+    if (!response || !response.text) {
+        console.error("API returned undefined response or empty text:", response);
+        throw new Error("The AI model returned an empty or blocked response during alignment.");
+    }
     const text = response.text.trim();
     if (!text) {
         throw new Error("The AI model returned an empty response during the alignment pass.");
@@ -1069,6 +1077,10 @@ export const alignTranslatedToRefinedOriginal = async (
     const response = await Promise.race([apiCallPromise, timeoutPromise]);
 
     onStatusUpdate('Received aligned data, parsing result...');
+    if (!response || !response.text) {
+      console.error("API returned undefined response or empty text:", response);
+      throw new Error("The AI model returned an empty or blocked response during text alignment.");
+    }
     const text = response.text.trim();
     if (!text) {
       throw new Error("The AI model returned an empty response during text alignment.");
@@ -1125,6 +1137,10 @@ Translated Lyrics:
       console.warn(`Translation API call failed on attempt ${attempt}. Retrying...`);
     });
 
+    if (!response || !response.text) {
+      console.error("API returned undefined response or empty text:", response);
+      throw new Error("Translation failed: the model returned an empty or blocked response.");
+    }
     const translatedText = response.text.trim();
     if (!translatedText) {
       throw new Error("Translation failed: the model returned an empty response.");
@@ -1274,6 +1290,10 @@ Do not include any other text, explanations, or markdown formatting.
       console.warn(`Vocabulary API call failed on attempt ${attempt}. Retrying...`);
     });
 
+    if (!response || !response.text) {
+      console.error("API returned undefined response or empty text:", response);
+      throw new Error("Vocabulary generation failed: the model returned an empty or blocked response.");
+    }
     const text = response.text.trim();
     if (!text) {
         throw new Error("The vocabulary model returned an empty response.");
@@ -1459,6 +1479,13 @@ export const refineMarkedSegments = async (
     const response = await Promise.race([apiCallPromise, timeoutPromise]);
 
     onStatusUpdate('Received refined segments, merging into original data...');
+
+    // Handle case where response.text is undefined (API error, blocked, or empty)
+    if (!response || !response.text) {
+      console.error("API returned undefined response or empty text:", response);
+      throw new Error("The AI model returned an empty or blocked response during segment refinement. This may indicate rate limiting or content filtering.");
+    }
+
     const text = response.text.trim();
     if (!text) {
       throw new Error("The AI model returned an empty response during segment refinement.");
@@ -1559,6 +1586,10 @@ export const correctLrcTimestamps = async (
     const response = await Promise.race([apiCallPromise, timeoutPromise]);
 
     onStatusUpdate('Received corrections, applying to LRC data...');
+    if (!response || !response.text) {
+      console.error("API returned undefined response or empty text:", response);
+      throw new Error("The AI model returned an empty or blocked response for LRC correction.");
+    }
     const text = response.text.trim();
     if (!text) {
       throw new Error("The AI model returned an empty response for LRC correction.");
@@ -1678,6 +1709,10 @@ const generateKaraokeFromParsedLrc = async (
     const response = await Promise.race([apiCallPromise, timeoutPromise]);
 
     onStatusUpdate('Received response, parsing karaoke data...');
+    if (!response || !response.text) {
+      console.error("API returned undefined response or empty text:", response);
+      throw new Error("The AI model returned an empty or blocked response for LRC-based generation.");
+    }
     const text = response.text.trim();
     if (!text) {
       throw new Error("The AI model returned an empty response for LRC-based generation.");

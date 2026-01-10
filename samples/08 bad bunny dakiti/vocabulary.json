@@ -1,0 +1,135 @@
+[
+  {
+    "term": {
+      "spanish": "suelta",
+      "english": "loose / wild"
+    },
+    "definition": "Literally meaning 'loose', in the urban genre 'suelta' describes someone who is uninhibited, sexually liberated, or ready to party without care. It's often used to describe a woman who is confident and wild on the dance floor.",
+    "difficulty": 4,
+    "example": {
+      "spanish": "Tú estás bien suelta, yo de safari",
+      "english": "You're all let loose, me on safari"
+    },
+    "highlight": {
+      "spanish": "suelta",
+      "english": "let loose"
+    },
+    "startTimeMs": 40960,
+    "endTimeMs": 43480,
+    "segmentIndex": 9
+  },
+  {
+    "term": {
+      "spanish": "veni'o",
+      "english": "came / reached orgasm"
+    },
+    "definition": "A colloquial shortening of 'venido'. In the context of reggaeton and this song, it is sexual slang for reaching orgasm ('to cum'). The removal of the 'd' (veni'o instead of venido) is a hallmark of Caribbean Spanish dialects.",
+    "difficulty": 7,
+    "example": {
+      "spanish": "Si no te ha' veni'o, yo te vo' a esperar",
+      "english": "If you haven't come yet, I'm going to wait for you"
+    },
+    "highlight": {
+      "spanish": "veni'o",
+      "english": "come"
+    },
+    "startTimeMs": 47670,
+    "endTimeMs": 50200,
+    "segmentIndex": 12
+  },
+  {
+    "term": {
+      "spanish": "sin cojone'",
+      "english": "don't give a damn"
+    },
+    "definition": "A very common and vulgar Puerto Rican idiomatic expression. While 'cojones' literally refers to testicles, saying something 'me tiene sin cojones' means 'I couldn't care less' or 'I don't give a damn.' It signifies total indifference to outside opinions.",
+    "difficulty": 6,
+    "example": {
+      "spanish": "A mí sin cojone', lo que digan tu' amiga'",
+      "english": "I don't give a damn what your friends say"
+    },
+    "highlight": {
+      "spanish": "sin cojone'",
+      "english": "don't give a damn"
+    },
+    "startTimeMs": 65550,
+    "endTimeMs": 68850,
+    "segmentIndex": 19
+  },
+  {
+    "term": {
+      "spanish": "juquea'o",
+      "english": "hooked / obsessed"
+    },
+    "definition": "This is a 'Spanglish' adaptation of the English word 'hooked'. It is widely used in Puerto Rico (written as juqueado or juquea'o) to describe being addicted to a drug or, as used here, being completely obsessed and infatuated with a person.",
+    "difficulty": 8,
+    "example": {
+      "spanish": "Mami, me tiene' juquea'o, sí",
+      "english": "Mami, you got me hooked, yeah"
+    },
+    "highlight": {
+      "spanish": "juquea'o",
+      "english": "hooked"
+    },
+    "startTimeMs": 86520,
+    "endTimeMs": 88820,
+    "segmentIndex": 24
+  },
+  {
+    "term": {
+      "spanish": "arrebata'o",
+      "english": "high / stoned"
+    },
+    "definition": "Literally meaning 'snatched' or 'carried away', in Caribbean urban slang, 'arrebatao' is the standard term for being high on marijuana. It describes the state of being under the influence and 'in the zone.'",
+    "difficulty": 7,
+    "example": {
+      "spanish": "Dando vuelta' por condado, contigo siempre arrebata'o",
+      "english": "Cruising through Condado, with you always high"
+    },
+    "highlight": {
+      "spanish": "arrebata'o",
+      "english": "high"
+    },
+    "startTimeMs": 91430,
+    "endTimeMs": 95380,
+    "segmentIndex": 26
+  },
+  {
+    "term": {
+      "spanish": "títere'",
+      "english": "thugs / street guys"
+    },
+    "definition": "While it literally means 'puppet', in Puerto Rican slang, a 'títere' is a street-smart guy, often associated with the urban 'thug' aesthetic or lifestyle. In this context, it refers to the 'bad boys' that the girl in the song is attracted to.",
+    "difficulty": 9,
+    "example": {
+      "spanish": "Pero (pero) le gustan los títere' wheeleando motora (motora)",
+      "english": "But (but) she likes the thugs wheelieing on motorcycles (motorcycle)"
+    },
+    "highlight": {
+      "spanish": "títere'",
+      "english": "thugs"
+    },
+    "startTimeMs": 114370,
+    "endTimeMs": 119750,
+    "segmentIndex": 33
+  },
+  {
+    "term": {
+      "spanish": "motora",
+      "english": "motorcycle"
+    },
+    "definition": "In most Spanish-speaking countries, a motorcycle is called a 'moto' or 'motocicleta'. However, in Puerto Rico, 'motora' is the standard colloquial term. Using this word specifically anchors the lyrics in Puerto Rican culture.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "Pero (pero) le gustan los títere' wheeleando motora (motora)",
+      "english": "But (but) she likes the thugs wheelieing on motorcycles (motorcycle)"
+    },
+    "highlight": {
+      "spanish": "motora",
+      "english": "motorcycles"
+    },
+    "startTimeMs": 114370,
+    "endTimeMs": 119750,
+    "segmentIndex": 33
+  }
+]

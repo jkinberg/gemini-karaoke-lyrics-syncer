@@ -1,0 +1,2822 @@
+{
+  "metadata": {
+    "title": "Un Verano En Nueva York",
+    "artist": "Bad Bunny",
+    "durationMs": 221000,
+    "language": "en-US",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 13500,
+      "segmentIndex": 1,
+      "cueText": "Intro / Skit"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 13500,
+      "endTimeMs": 15000,
+      "segmentIndex": 2,
+      "cueText": "NEW YORK!",
+      "text": "NEW YORK!",
+      "words": [
+        {
+          "word": "NEW",
+          "startTimeMs": 13500,
+          "endTimeMs": 14250
+        },
+        {
+          "word": "YORK!",
+          "startTimeMs": 14250,
+          "endTimeMs": 15000
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 15000,
+      "endTimeMs": 36000,
+      "segmentIndex": 3,
+      "cueText": "Salsa Interlude"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 36000,
+      "endTimeMs": 38700,
+      "segmentIndex": 4,
+      "cueText": "If you want to have fun",
+      "text": "If you want to have fun",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 36000,
+          "endTimeMs": 36200
+        },
+        {
+          "word": "you",
+          "startTimeMs": 36200,
+          "endTimeMs": 36500
+        },
+        {
+          "word": "want",
+          "startTimeMs": 36500,
+          "endTimeMs": 36900
+        },
+        {
+          "word": "to",
+          "startTimeMs": 36900,
+          "endTimeMs": 37100
+        },
+        {
+          "word": "have",
+          "startTimeMs": 37100,
+          "endTimeMs": 37500
+        },
+        {
+          "word": "fun",
+          "startTimeMs": 37500,
+          "endTimeMs": 38700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 38700,
+      "endTimeMs": 41500,
+      "segmentIndex": 5,
+      "cueText": "With charm and with grace",
+      "text": "With charm and with grace",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 38700,
+          "endTimeMs": 39100
+        },
+        {
+          "word": "charm",
+          "startTimeMs": 39100,
+          "endTimeMs": 39700
+        },
+        {
+          "word": "and",
+          "startTimeMs": 39700,
+          "endTimeMs": 40000
+        },
+        {
+          "word": "with",
+          "startTimeMs": 40000,
+          "endTimeMs": 40400
+        },
+        {
+          "word": "grace",
+          "startTimeMs": 40400,
+          "endTimeMs": 41500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 41500,
+      "endTimeMs": 46300,
+      "segmentIndex": 6,
+      "cueText": "You only have to live (where to?)",
+      "text": "You only have to live (where to?)",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 41500,
+          "endTimeMs": 41800
+        },
+        {
+          "word": "only",
+          "startTimeMs": 41800,
+          "endTimeMs": 42200
+        },
+        {
+          "word": "have",
+          "startTimeMs": 42200,
+          "endTimeMs": 42500
+        },
+        {
+          "word": "to",
+          "startTimeMs": 42500,
+          "endTimeMs": 42800
+        },
+        {
+          "word": "live",
+          "startTimeMs": 42800,
+          "endTimeMs": 44000
+        },
+        {
+          "word": "(where",
+          "startTimeMs": 44500,
+          "endTimeMs": 45000
+        },
+        {
+          "word": "to?)",
+          "startTimeMs": 45000,
+          "endTimeMs": 46300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 46300,
+      "endTimeMs": 51300,
+      "segmentIndex": 7,
+      "cueText": "A summer in New York (NEW YORK!)",
+      "text": "A summer in New York (NEW YORK!)",
+      "words": [
+        {
+          "word": "A",
+          "startTimeMs": 46300,
+          "endTimeMs": 46500
+        },
+        {
+          "word": "summer",
+          "startTimeMs": 46500,
+          "endTimeMs": 47200
+        },
+        {
+          "word": "in",
+          "startTimeMs": 47200,
+          "endTimeMs": 47600
+        },
+        {
+          "word": "New",
+          "startTimeMs": 47600,
+          "endTimeMs": 48100
+        },
+        {
+          "word": "York",
+          "startTimeMs": 48100,
+          "endTimeMs": 49500
+        },
+        {
+          "word": "(NEW",
+          "startTimeMs": 50000,
+          "endTimeMs": 50600
+        },
+        {
+          "word": "YORK!)",
+          "startTimeMs": 50600,
+          "endTimeMs": 51300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 51300,
+      "endTimeMs": 55200,
+      "segmentIndex": 8,
+      "cueText": "If you want to have fun",
+      "text": "If you want to have fun",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 51300,
+          "endTimeMs": 51600
+        },
+        {
+          "word": "you",
+          "startTimeMs": 51600,
+          "endTimeMs": 52000
+        },
+        {
+          "word": "want",
+          "startTimeMs": 52000,
+          "endTimeMs": 52500
+        },
+        {
+          "word": "to",
+          "startTimeMs": 52500,
+          "endTimeMs": 52800
+        },
+        {
+          "word": "have",
+          "startTimeMs": 52800,
+          "endTimeMs": 53300
+        },
+        {
+          "word": "fun",
+          "startTimeMs": 53300,
+          "endTimeMs": 55200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 55200,
+      "endTimeMs": 59000,
+      "segmentIndex": 9,
+      "cueText": "With charm and with grace (but, what is this?)",
+      "text": "With charm and with grace (but, what is this?)",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 55200,
+          "endTimeMs": 55500
+        },
+        {
+          "word": "charm",
+          "startTimeMs": 55500,
+          "endTimeMs": 56200
+        },
+        {
+          "word": "and",
+          "startTimeMs": 56200,
+          "endTimeMs": 56500
+        },
+        {
+          "word": "with",
+          "startTimeMs": 56500,
+          "endTimeMs": 56800
+        },
+        {
+          "word": "grace",
+          "startTimeMs": 56800,
+          "endTimeMs": 57800
+        },
+        {
+          "word": "(but,",
+          "startTimeMs": 57800,
+          "endTimeMs": 58100
+        },
+        {
+          "word": "what",
+          "startTimeMs": 58100,
+          "endTimeMs": 58400
+        },
+        {
+          "word": "is",
+          "startTimeMs": 58400,
+          "endTimeMs": 58600
+        },
+        {
+          "word": "this?)",
+          "startTimeMs": 58600,
+          "endTimeMs": 59000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 59000,
+      "endTimeMs": 63000,
+      "segmentIndex": 10,
+      "cueText": "You only have to live (it's cold already)",
+      "text": "You only have to live (it's cold already)",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 59000,
+          "endTimeMs": 59300
+        },
+        {
+          "word": "only",
+          "startTimeMs": 59300,
+          "endTimeMs": 59700
+        },
+        {
+          "word": "have",
+          "startTimeMs": 59700,
+          "endTimeMs": 60000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 60000,
+          "endTimeMs": 60300
+        },
+        {
+          "word": "live",
+          "startTimeMs": 60300,
+          "endTimeMs": 61500
+        },
+        {
+          "word": "(it's",
+          "startTimeMs": 61800,
+          "endTimeMs": 62100
+        },
+        {
+          "word": "cold",
+          "startTimeMs": 62100,
+          "endTimeMs": 62500
+        },
+        {
+          "word": "already)",
+          "startTimeMs": 62500,
+          "endTimeMs": 63000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 63000,
+      "endTimeMs": 68500,
+      "segmentIndex": 11,
+      "cueText": "A summer in New York (just a little while longer)",
+      "text": "A summer in New York (just a little while longer)",
+      "words": [
+        {
+          "word": "A",
+          "startTimeMs": 63000,
+          "endTimeMs": 63200
+        },
+        {
+          "word": "summer",
+          "startTimeMs": 63200,
+          "endTimeMs": 63800
+        },
+        {
+          "word": "in",
+          "startTimeMs": 63800,
+          "endTimeMs": 64200
+        },
+        {
+          "word": "New",
+          "startTimeMs": 64200,
+          "endTimeMs": 64800
+        },
+        {
+          "word": "York",
+          "startTimeMs": 64800,
+          "endTimeMs": 66000
+        },
+        {
+          "word": "(just",
+          "startTimeMs": 67000,
+          "endTimeMs": 67300
+        },
+        {
+          "word": "a",
+          "startTimeMs": 67300,
+          "endTimeMs": 67500
+        },
+        {
+          "word": "little",
+          "startTimeMs": 67500,
+          "endTimeMs": 67800
+        },
+        {
+          "word": "while",
+          "startTimeMs": 67800,
+          "endTimeMs": 68100
+        },
+        {
+          "word": "longer)",
+          "startTimeMs": 68100,
+          "endTimeMs": 68500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 68500,
+      "endTimeMs": 71200,
+      "segmentIndex": 12,
+      "cueText": "Hey, hey, hey, fourth of July, fourth of July",
+      "text": "Hey, hey, hey, fourth of July, fourth of July",
+      "words": [
+        {
+          "word": "Hey,",
+          "startTimeMs": 68500,
+          "endTimeMs": 68800
+        },
+        {
+          "word": "hey,",
+          "startTimeMs": 68800,
+          "endTimeMs": 69100
+        },
+        {
+          "word": "hey,",
+          "startTimeMs": 69100,
+          "endTimeMs": 69400
+        },
+        {
+          "word": "fourth",
+          "startTimeMs": 69400,
+          "endTimeMs": 69700
+        },
+        {
+          "word": "of",
+          "startTimeMs": 69700,
+          "endTimeMs": 69900
+        },
+        {
+          "word": "July,",
+          "startTimeMs": 69900,
+          "endTimeMs": 70300
+        },
+        {
+          "word": "fourth",
+          "startTimeMs": 70300,
+          "endTimeMs": 70600
+        },
+        {
+          "word": "of",
+          "startTimeMs": 70600,
+          "endTimeMs": 70800
+        },
+        {
+          "word": "July",
+          "startTimeMs": 70800,
+          "endTimeMs": 71200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 71200,
+      "endTimeMs": 73200,
+      "segmentIndex": 13,
+      "cueText": "I'm with my cousin, drunk and on the loose",
+      "text": "I'm with my cousin, drunk and on the loose",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 71200,
+          "endTimeMs": 71400
+        },
+        {
+          "word": "with",
+          "startTimeMs": 71400,
+          "endTimeMs": 71600
+        },
+        {
+          "word": "my",
+          "startTimeMs": 71600,
+          "endTimeMs": 71800
+        },
+        {
+          "word": "cousin,",
+          "startTimeMs": 71800,
+          "endTimeMs": 72300
+        },
+        {
+          "word": "drunk",
+          "startTimeMs": 72300,
+          "endTimeMs": 72600
+        },
+        {
+          "word": "and",
+          "startTimeMs": 72600,
+          "endTimeMs": 72700
+        },
+        {
+          "word": "on",
+          "startTimeMs": 72700,
+          "endTimeMs": 72800
+        },
+        {
+          "word": "the",
+          "startTimeMs": 72800,
+          "endTimeMs": 72900
+        },
+        {
+          "word": "loose",
+          "startTimeMs": 72900,
+          "endTimeMs": 73200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 73200,
+      "endTimeMs": 75200,
+      "segmentIndex": 14,
+      "cueText": "My business is in the Bronx, they know what's up",
+      "text": "My business is in the Bronx, they know what's up",
+      "words": [
+        {
+          "word": "My",
+          "startTimeMs": 73200,
+          "endTimeMs": 73400
+        },
+        {
+          "word": "business",
+          "startTimeMs": 73400,
+          "endTimeMs": 73700
+        },
+        {
+          "word": "is",
+          "startTimeMs": 73700,
+          "endTimeMs": 73800
+        },
+        {
+          "word": "in",
+          "startTimeMs": 73800,
+          "endTimeMs": 73900
+        },
+        {
+          "word": "the",
+          "startTimeMs": 73900,
+          "endTimeMs": 74000
+        },
+        {
+          "word": "Bronx,",
+          "startTimeMs": 74000,
+          "endTimeMs": 74400
+        },
+        {
+          "word": "they",
+          "startTimeMs": 74400,
+          "endTimeMs": 74600
+        },
+        {
+          "word": "know",
+          "startTimeMs": 74600,
+          "endTimeMs": 74800
+        },
+        {
+          "word": "what's",
+          "startTimeMs": 74800,
+          "endTimeMs": 75000
+        },
+        {
+          "word": "up",
+          "startTimeMs": 75000,
+          "endTimeMs": 75200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 75200,
+      "endTimeMs": 77200,
+      "segmentIndex": 15,
+      "cueText": "With the buzz way up through Washington Heights",
+      "text": "With the buzz way up through Washington Heights",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 75200,
+          "endTimeMs": 75400
+        },
+        {
+          "word": "the",
+          "startTimeMs": 75400,
+          "endTimeMs": 75500
+        },
+        {
+          "word": "buzz",
+          "startTimeMs": 75500,
+          "endTimeMs": 75800
+        },
+        {
+          "word": "way",
+          "startTimeMs": 75800,
+          "endTimeMs": 76000
+        },
+        {
+          "word": "up",
+          "startTimeMs": 76000,
+          "endTimeMs": 76200
+        },
+        {
+          "word": "through",
+          "startTimeMs": 76200,
+          "endTimeMs": 76500
+        },
+        {
+          "word": "Washington",
+          "startTimeMs": 76500,
+          "endTimeMs": 76900
+        },
+        {
+          "word": "Heights",
+          "startTimeMs": 76900,
+          "endTimeMs": 77200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 77200,
+      "endTimeMs": 79500,
+      "segmentIndex": 16,
+      "cueText": "Willie Colón, they call me \"The Bad One,\" hey",
+      "text": "Willie Colón, they call me \"The Bad One,\" hey",
+      "words": [
+        {
+          "word": "Willie",
+          "startTimeMs": 77200,
+          "endTimeMs": 77500
+        },
+        {
+          "word": "Colón,",
+          "startTimeMs": 77500,
+          "endTimeMs": 77900
+        },
+        {
+          "word": "they",
+          "startTimeMs": 77900,
+          "endTimeMs": 78100
+        },
+        {
+          "word": "call",
+          "startTimeMs": 78100,
+          "endTimeMs": 78300
+        },
+        {
+          "word": "me",
+          "startTimeMs": 78300,
+          "endTimeMs": 78500
+        },
+        {
+          "word": "\"The",
+          "startTimeMs": 78500,
+          "endTimeMs": 78700
+        },
+        {
+          "word": "Bad",
+          "startTimeMs": 78700,
+          "endTimeMs": 78900
+        },
+        {
+          "word": "One,\"",
+          "startTimeMs": 78900,
+          "endTimeMs": 79200
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 79200,
+          "endTimeMs": 79500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 79500,
+      "endTimeMs": 82000,
+      "segmentIndex": 17,
+      "cueText": "Because years go by and I keep hitting hits",
+      "text": "Because years go by and I keep hitting hits",
+      "words": [
+        {
+          "word": "Because",
+          "startTimeMs": 79500,
+          "endTimeMs": 79800
+        },
+        {
+          "word": "years",
+          "startTimeMs": 79800,
+          "endTimeMs": 80200
+        },
+        {
+          "word": "go",
+          "startTimeMs": 80200,
+          "endTimeMs": 80400
+        },
+        {
+          "word": "by",
+          "startTimeMs": 80400,
+          "endTimeMs": 80700
+        },
+        {
+          "word": "and",
+          "startTimeMs": 80700,
+          "endTimeMs": 80900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 80900,
+          "endTimeMs": 81100
+        },
+        {
+          "word": "keep",
+          "startTimeMs": 81100,
+          "endTimeMs": 81300
+        },
+        {
+          "word": "hitting",
+          "startTimeMs": 81300,
+          "endTimeMs": 81700
+        },
+        {
+          "word": "hits",
+          "startTimeMs": 81700,
+          "endTimeMs": 82000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 82000,
+      "endTimeMs": 85200,
+      "segmentIndex": 18,
+      "cueText": "Selling records like Frida Kahlo paintings",
+      "text": "Selling records like Frida Kahlo paintings",
+      "words": [
+        {
+          "word": "Selling",
+          "startTimeMs": 82000,
+          "endTimeMs": 82500
+        },
+        {
+          "word": "records",
+          "startTimeMs": 82500,
+          "endTimeMs": 83000
+        },
+        {
+          "word": "like",
+          "startTimeMs": 83000,
+          "endTimeMs": 83500
+        },
+        {
+          "word": "Frida",
+          "startTimeMs": 83500,
+          "endTimeMs": 84200
+        },
+        {
+          "word": "Kahlo",
+          "startTimeMs": 84200,
+          "endTimeMs": 84600
+        },
+        {
+          "word": "paintings",
+          "startTimeMs": 84600,
+          "endTimeMs": 85200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 85200,
+      "endTimeMs": 89200,
+      "segmentIndex": 19,
+      "cueText": "The coke is white, yes, yes, the tusi is pink, eh, eh",
+      "text": "The coke is white, yes, yes, the tusi is pink, eh, eh",
+      "words": [
+        {
+          "word": "The",
+          "startTimeMs": 85200,
+          "endTimeMs": 85400
+        },
+        {
+          "word": "coke",
+          "startTimeMs": 85400,
+          "endTimeMs": 85800
+        },
+        {
+          "word": "is",
+          "startTimeMs": 85800,
+          "endTimeMs": 86000
+        },
+        {
+          "word": "white,",
+          "startTimeMs": 86000,
+          "endTimeMs": 86400
+        },
+        {
+          "word": "yes,",
+          "startTimeMs": 86400,
+          "endTimeMs": 86700
+        },
+        {
+          "word": "yes,",
+          "startTimeMs": 86700,
+          "endTimeMs": 87000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 87000,
+          "endTimeMs": 87200
+        },
+        {
+          "word": "tusi",
+          "startTimeMs": 87200,
+          "endTimeMs": 87600
+        },
+        {
+          "word": "is",
+          "startTimeMs": 87600,
+          "endTimeMs": 87800
+        },
+        {
+          "word": "pink,",
+          "startTimeMs": 87800,
+          "endTimeMs": 88200
+        },
+        {
+          "word": "eh,",
+          "startTimeMs": 88200,
+          "endTimeMs": 88700
+        },
+        {
+          "word": "eh",
+          "startTimeMs": 88700,
+          "endTimeMs": 89200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 89200,
+      "endTimeMs": 93200,
+      "segmentIndex": 20,
+      "cueText": "Don't get confused, no, no, better yet, avoid it, ey (ey)",
+      "text": "Don't get confused, no, no, better yet, avoid it, ey (ey)",
+      "words": [
+        {
+          "word": "Don't",
+          "startTimeMs": 89200,
+          "endTimeMs": 89400
+        },
+        {
+          "word": "get",
+          "startTimeMs": 89400,
+          "endTimeMs": 89600
+        },
+        {
+          "word": "confused,",
+          "startTimeMs": 89600,
+          "endTimeMs": 90200
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 90200,
+          "endTimeMs": 90600
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 90600,
+          "endTimeMs": 91000
+        },
+        {
+          "word": "better",
+          "startTimeMs": 91000,
+          "endTimeMs": 91300
+        },
+        {
+          "word": "yet,",
+          "startTimeMs": 91300,
+          "endTimeMs": 91500
+        },
+        {
+          "word": "avoid",
+          "startTimeMs": 91500,
+          "endTimeMs": 91800
+        },
+        {
+          "word": "it,",
+          "startTimeMs": 91800,
+          "endTimeMs": 92000
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 92000,
+          "endTimeMs": 92500
+        },
+        {
+          "word": "(ey)",
+          "startTimeMs": 92500,
+          "endTimeMs": 93200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 93200,
+      "endTimeMs": 95500,
+      "segmentIndex": 21,
+      "cueText": "A shot of moonshine at Toñita's house and",
+      "text": "A shot of moonshine at Toñita's house and",
+      "words": [
+        {
+          "word": "A",
+          "startTimeMs": 93200,
+          "endTimeMs": 93300
+        },
+        {
+          "word": "shot",
+          "startTimeMs": 93300,
+          "endTimeMs": 93500
+        },
+        {
+          "word": "of",
+          "startTimeMs": 93500,
+          "endTimeMs": 93700
+        },
+        {
+          "word": "moonshine",
+          "startTimeMs": 93700,
+          "endTimeMs": 94200
+        },
+        {
+          "word": "at",
+          "startTimeMs": 94200,
+          "endTimeMs": 94400
+        },
+        {
+          "word": "Toñita's",
+          "startTimeMs": 94400,
+          "endTimeMs": 94900
+        },
+        {
+          "word": "house",
+          "startTimeMs": 94900,
+          "endTimeMs": 95300
+        },
+        {
+          "word": "and",
+          "startTimeMs": 95300,
+          "endTimeMs": 95500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 95500,
+      "endTimeMs": 99200,
+      "segmentIndex": 22,
+      "cueText": "PR feels so close, yes, yes, yes",
+      "text": "PR feels so close, yes, yes, yes",
+      "words": [
+        {
+          "word": "PR",
+          "startTimeMs": 95500,
+          "endTimeMs": 96000
+        },
+        {
+          "word": "feels",
+          "startTimeMs": 96000,
+          "endTimeMs": 96400
+        },
+        {
+          "word": "so",
+          "startTimeMs": 96400,
+          "endTimeMs": 96700
+        },
+        {
+          "word": "close,",
+          "startTimeMs": 96700,
+          "endTimeMs": 97400
+        },
+        {
+          "word": "yes,",
+          "startTimeMs": 97400,
+          "endTimeMs": 97800
+        },
+        {
+          "word": "yes,",
+          "startTimeMs": 97800,
+          "endTimeMs": 98400
+        },
+        {
+          "word": "yes",
+          "startTimeMs": 98400,
+          "endTimeMs": 99200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 99200,
+      "endTimeMs": 101700,
+      "segmentIndex": 23,
+      "cueText": "I have the championship, no one takes it from me",
+      "text": "I have the championship, no one takes it from me",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 99200,
+          "endTimeMs": 99300
+        },
+        {
+          "word": "have",
+          "startTimeMs": 99300,
+          "endTimeMs": 99500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 99500,
+          "endTimeMs": 99700
+        },
+        {
+          "word": "championship,",
+          "startTimeMs": 99700,
+          "endTimeMs": 100400
+        },
+        {
+          "word": "no",
+          "startTimeMs": 100400,
+          "endTimeMs": 100600
+        },
+        {
+          "word": "one",
+          "startTimeMs": 100600,
+          "endTimeMs": 100800
+        },
+        {
+          "word": "takes",
+          "startTimeMs": 100800,
+          "endTimeMs": 101100
+        },
+        {
+          "word": "it",
+          "startTimeMs": 101100,
+          "endTimeMs": 101300
+        },
+        {
+          "word": "from",
+          "startTimeMs": 101300,
+          "endTimeMs": 101500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 101500,
+          "endTimeMs": 101700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 101700,
+      "endTimeMs": 102500,
+      "segmentIndex": 24,
+      "cueText": "The best in the world",
+      "text": "The best in the world",
+      "words": [
+        {
+          "word": "The",
+          "startTimeMs": 101700,
+          "endTimeMs": 101850
+        },
+        {
+          "word": "best",
+          "startTimeMs": 101850,
+          "endTimeMs": 102000
+        },
+        {
+          "word": "in",
+          "startTimeMs": 102000,
+          "endTimeMs": 102150
+        },
+        {
+          "word": "the",
+          "startTimeMs": 102150,
+          "endTimeMs": 102300
+        },
+        {
+          "word": "world",
+          "startTimeMs": 102300,
+          "endTimeMs": 102500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 102500,
+      "endTimeMs": 104700,
+      "segmentIndex": 25,
+      "cueText": "Number one, the best in the world, okay?",
+      "text": "Number one, the best in the world, okay?",
+      "words": [
+        {
+          "word": "Number",
+          "startTimeMs": 102500,
+          "endTimeMs": 102800
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 102800,
+          "endTimeMs": 103200
+        },
+        {
+          "word": "the",
+          "startTimeMs": 103200,
+          "endTimeMs": 103400
+        },
+        {
+          "word": "best",
+          "startTimeMs": 103400,
+          "endTimeMs": 103600
+        },
+        {
+          "word": "in",
+          "startTimeMs": 103600,
+          "endTimeMs": 103800
+        },
+        {
+          "word": "the",
+          "startTimeMs": 103800,
+          "endTimeMs": 104000
+        },
+        {
+          "word": "world,",
+          "startTimeMs": 104000,
+          "endTimeMs": 104300
+        },
+        {
+          "word": "okay?",
+          "startTimeMs": 104300,
+          "endTimeMs": 104700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 104700,
+      "endTimeMs": 105500,
+      "segmentIndex": 26,
+      "cueText": "Puerto Rico",
+      "text": "Puerto Rico",
+      "words": [
+        {
+          "word": "Puerto",
+          "startTimeMs": 104700,
+          "endTimeMs": 105100
+        },
+        {
+          "word": "Rico",
+          "startTimeMs": 105100,
+          "endTimeMs": 105500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 105500,
+      "endTimeMs": 108500,
+      "segmentIndex": 27,
+      "cueText": "How is Bad Bunny going to be the king of pop, hey",
+      "text": "How is Bad Bunny going to be the king of pop, hey",
+      "words": [
+        {
+          "word": "How",
+          "startTimeMs": 105500,
+          "endTimeMs": 105800
+        },
+        {
+          "word": "is",
+          "startTimeMs": 105800,
+          "endTimeMs": 106000
+        },
+        {
+          "word": "Bad",
+          "startTimeMs": 106000,
+          "endTimeMs": 106300
+        },
+        {
+          "word": "Bunny",
+          "startTimeMs": 106300,
+          "endTimeMs": 106600
+        },
+        {
+          "word": "going",
+          "startTimeMs": 106600,
+          "endTimeMs": 106800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 106800,
+          "endTimeMs": 106900
+        },
+        {
+          "word": "be",
+          "startTimeMs": 106900,
+          "endTimeMs": 107100
+        },
+        {
+          "word": "the",
+          "startTimeMs": 107100,
+          "endTimeMs": 107200
+        },
+        {
+          "word": "king",
+          "startTimeMs": 107200,
+          "endTimeMs": 107500
+        },
+        {
+          "word": "of",
+          "startTimeMs": 107500,
+          "endTimeMs": 107700
+        },
+        {
+          "word": "pop,",
+          "startTimeMs": 107700,
+          "endTimeMs": 108100
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 108100,
+          "endTimeMs": 108500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 108500,
+      "endTimeMs": 110200,
+      "segmentIndex": 28,
+      "cueText": "With reggaetón and dembow, ey?",
+      "text": "With reggaetón and dembow, ey?",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 108500,
+          "endTimeMs": 108700
+        },
+        {
+          "word": "reggaetón",
+          "startTimeMs": 108700,
+          "endTimeMs": 109200
+        },
+        {
+          "word": "and",
+          "startTimeMs": 109200,
+          "endTimeMs": 109400
+        },
+        {
+          "word": "dembow,",
+          "startTimeMs": 109400,
+          "endTimeMs": 109800
+        },
+        {
+          "word": "ey?",
+          "startTimeMs": 109800,
+          "endTimeMs": 110200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 110200,
+      "endTimeMs": 112000,
+      "segmentIndex": 29,
+      "cueText": "With reggaetón and dembow, yes",
+      "text": "With reggaetón and dembow, yes",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 110200,
+          "endTimeMs": 110400
+        },
+        {
+          "word": "reggaetón",
+          "startTimeMs": 110400,
+          "endTimeMs": 110900
+        },
+        {
+          "word": "and",
+          "startTimeMs": 110900,
+          "endTimeMs": 111100
+        },
+        {
+          "word": "dembow,",
+          "startTimeMs": 111100,
+          "endTimeMs": 111500
+        },
+        {
+          "word": "yes",
+          "startTimeMs": 111500,
+          "endTimeMs": 112000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 112000,
+      "endTimeMs": 114000,
+      "segmentIndex": 30,
+      "cueText": "With reggaetón and dembow",
+      "text": "With reggaetón and dembow",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 112000,
+          "endTimeMs": 112200
+        },
+        {
+          "word": "reggaetón",
+          "startTimeMs": 112200,
+          "endTimeMs": 112700
+        },
+        {
+          "word": "and",
+          "startTimeMs": 112700,
+          "endTimeMs": 112900
+        },
+        {
+          "word": "dembow",
+          "startTimeMs": 112900,
+          "endTimeMs": 113400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 114000,
+      "endTimeMs": 116200,
+      "segmentIndex": 31,
+      "cueText": "How is Bad Bunny going to be the king of pop, hey",
+      "text": "How is Bad Bunny going to be the king of pop, hey",
+      "words": [
+        {
+          "word": "How",
+          "startTimeMs": 114000,
+          "endTimeMs": 114300
+        },
+        {
+          "word": "is",
+          "startTimeMs": 114300,
+          "endTimeMs": 114500
+        },
+        {
+          "word": "Bad",
+          "startTimeMs": 114500,
+          "endTimeMs": 114700
+        },
+        {
+          "word": "Bunny",
+          "startTimeMs": 114700,
+          "endTimeMs": 115000
+        },
+        {
+          "word": "going",
+          "startTimeMs": 115000,
+          "endTimeMs": 115150
+        },
+        {
+          "word": "to",
+          "startTimeMs": 115150,
+          "endTimeMs": 115300
+        },
+        {
+          "word": "be",
+          "startTimeMs": 115300,
+          "endTimeMs": 115400
+        },
+        {
+          "word": "the",
+          "startTimeMs": 115400,
+          "endTimeMs": 115500
+        },
+        {
+          "word": "king",
+          "startTimeMs": 115500,
+          "endTimeMs": 115700
+        },
+        {
+          "word": "of",
+          "startTimeMs": 115700,
+          "endTimeMs": 115800
+        },
+        {
+          "word": "pop,",
+          "startTimeMs": 115800,
+          "endTimeMs": 116000
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 116000,
+          "endTimeMs": 116200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 116200,
+      "endTimeMs": 117700,
+      "segmentIndex": 32,
+      "cueText": "With reggaetón and dembow?",
+      "text": "With reggaetón and dembow?",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 116200,
+          "endTimeMs": 116400
+        },
+        {
+          "word": "reggaetón",
+          "startTimeMs": 116400,
+          "endTimeMs": 116900
+        },
+        {
+          "word": "and",
+          "startTimeMs": 116900,
+          "endTimeMs": 117100
+        },
+        {
+          "word": "dembow?",
+          "startTimeMs": 117100,
+          "endTimeMs": 117700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 117700,
+      "endTimeMs": 119700,
+      "segmentIndex": 33,
+      "cueText": "I feel like Lápiz in Capea El Dough",
+      "text": "I feel like Lápiz in Capea El Dough",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 117700,
+          "endTimeMs": 117800
+        },
+        {
+          "word": "feel",
+          "startTimeMs": 117800,
+          "endTimeMs": 118000
+        },
+        {
+          "word": "like",
+          "startTimeMs": 118000,
+          "endTimeMs": 118200
+        },
+        {
+          "word": "Lápiz",
+          "startTimeMs": 118200,
+          "endTimeMs": 118700
+        },
+        {
+          "word": "in",
+          "startTimeMs": 118700,
+          "endTimeMs": 118900
+        },
+        {
+          "word": "Capea",
+          "startTimeMs": 118900,
+          "endTimeMs": 119300
+        },
+        {
+          "word": "El",
+          "startTimeMs": 119300,
+          "endTimeMs": 119500
+        },
+        {
+          "word": "Dough",
+          "startTimeMs": 119500,
+          "endTimeMs": 119700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 119700,
+      "endTimeMs": 122000,
+      "segmentIndex": 34,
+      "cueText": "When I was born, that's when the flow was born",
+      "text": "When I was born, that's when the flow was born",
+      "words": [
+        {
+          "word": "When",
+          "startTimeMs": 119700,
+          "endTimeMs": 119900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 119900,
+          "endTimeMs": 120000
+        },
+        {
+          "word": "was",
+          "startTimeMs": 120000,
+          "endTimeMs": 120200
+        },
+        {
+          "word": "born,",
+          "startTimeMs": 120200,
+          "endTimeMs": 120500
+        },
+        {
+          "word": "that's",
+          "startTimeMs": 120500,
+          "endTimeMs": 120800
+        },
+        {
+          "word": "when",
+          "startTimeMs": 120800,
+          "endTimeMs": 121000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 121000,
+          "endTimeMs": 121200
+        },
+        {
+          "word": "flow",
+          "startTimeMs": 121200,
+          "endTimeMs": 121400
+        },
+        {
+          "word": "was",
+          "startTimeMs": 121400,
+          "endTimeMs": 121600
+        },
+        {
+          "word": "born",
+          "startTimeMs": 121600,
+          "endTimeMs": 122000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 122000,
+      "endTimeMs": 125700,
+      "segmentIndex": 35,
+      "cueText": "From side to side, ping-pong, heavy flow, Big Pun",
+      "text": "From side to side, ping-pong, heavy flow, Big Pun",
+      "words": [
+        {
+          "word": "From",
+          "startTimeMs": 122000,
+          "endTimeMs": 122200
+        },
+        {
+          "word": "side",
+          "startTimeMs": 122200,
+          "endTimeMs": 122400
+        },
+        {
+          "word": "to",
+          "startTimeMs": 122400,
+          "endTimeMs": 122600
+        },
+        {
+          "word": "side,",
+          "startTimeMs": 122600,
+          "endTimeMs": 123000
+        },
+        {
+          "word": "ping-pong,",
+          "startTimeMs": 123000,
+          "endTimeMs": 123600
+        },
+        {
+          "word": "heavy",
+          "startTimeMs": 123600,
+          "endTimeMs": 124000
+        },
+        {
+          "word": "flow,",
+          "startTimeMs": 124000,
+          "endTimeMs": 124500
+        },
+        {
+          "word": "Big",
+          "startTimeMs": 124500,
+          "endTimeMs": 125000
+        },
+        {
+          "word": "Pun",
+          "startTimeMs": 125000,
+          "endTimeMs": 125700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 125700,
+      "endTimeMs": 129500,
+      "segmentIndex": 36,
+      "cueText": "With a silencer we steal their girls, James Bond, ey",
+      "text": "With a silencer we steal their girls, James Bond, ey",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 125700,
+          "endTimeMs": 125900
+        },
+        {
+          "word": "a",
+          "startTimeMs": 125900,
+          "endTimeMs": 126000
+        },
+        {
+          "word": "silencer",
+          "startTimeMs": 126000,
+          "endTimeMs": 126600
+        },
+        {
+          "word": "we",
+          "startTimeMs": 126600,
+          "endTimeMs": 126800
+        },
+        {
+          "word": "steal",
+          "startTimeMs": 126800,
+          "endTimeMs": 127200
+        },
+        {
+          "word": "their",
+          "startTimeMs": 127200,
+          "endTimeMs": 127500
+        },
+        {
+          "word": "girls,",
+          "startTimeMs": 127500,
+          "endTimeMs": 128200
+        },
+        {
+          "word": "James",
+          "startTimeMs": 128200,
+          "endTimeMs": 128500
+        },
+        {
+          "word": "Bond,",
+          "startTimeMs": 128500,
+          "endTimeMs": 129000
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 129000,
+          "endTimeMs": 129500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 129500,
+      "endTimeMs": 132500,
+      "segmentIndex": 37,
+      "cueText": "I'm in my own lane, I have no rivals, no",
+      "text": "I'm in my own lane, I have no rivals, no",
+      "words": [
+        {
+          "word": "I'm",
+          "startTimeMs": 129500,
+          "endTimeMs": 129700
+        },
+        {
+          "word": "in",
+          "startTimeMs": 129700,
+          "endTimeMs": 129900
+        },
+        {
+          "word": "my",
+          "startTimeMs": 129900,
+          "endTimeMs": 130100
+        },
+        {
+          "word": "own",
+          "startTimeMs": 130100,
+          "endTimeMs": 130300
+        },
+        {
+          "word": "lane,",
+          "startTimeMs": 130300,
+          "endTimeMs": 130800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 130800,
+          "endTimeMs": 131000
+        },
+        {
+          "word": "have",
+          "startTimeMs": 131000,
+          "endTimeMs": 131200
+        },
+        {
+          "word": "no",
+          "startTimeMs": 131200,
+          "endTimeMs": 131400
+        },
+        {
+          "word": "rivals,",
+          "startTimeMs": 131400,
+          "endTimeMs": 132000
+        },
+        {
+          "word": "no",
+          "startTimeMs": 132000,
+          "endTimeMs": 132500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 132500,
+      "endTimeMs": 134500,
+      "segmentIndex": 38,
+      "cueText": "With the Yankees, in the Mets, Juan Soto",
+      "text": "With the Yankees, in the Mets, Juan Soto",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 132500,
+          "endTimeMs": 132700
+        },
+        {
+          "word": "the",
+          "startTimeMs": 132700,
+          "endTimeMs": 132900
+        },
+        {
+          "word": "Yankees,",
+          "startTimeMs": 132900,
+          "endTimeMs": 133300
+        },
+        {
+          "word": "in",
+          "startTimeMs": 133300,
+          "endTimeMs": 133500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 133500,
+          "endTimeMs": 133700
+        },
+        {
+          "word": "Mets,",
+          "startTimeMs": 133700,
+          "endTimeMs": 134000
+        },
+        {
+          "word": "Juan",
+          "startTimeMs": 134000,
+          "endTimeMs": 134200
+        },
+        {
+          "word": "Soto",
+          "startTimeMs": 134200,
+          "endTimeMs": 134500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 134500,
+      "endTimeMs": 137500,
+      "segmentIndex": 39,
+      "cueText": "Start running, because once again we hit it out of the stadium",
+      "text": "Start running, because once again we hit it out of the stadium",
+      "words": [
+        {
+          "word": "Start",
+          "startTimeMs": 134500,
+          "endTimeMs": 134800
+        },
+        {
+          "word": "running,",
+          "startTimeMs": 134800,
+          "endTimeMs": 135200
+        },
+        {
+          "word": "because",
+          "startTimeMs": 135200,
+          "endTimeMs": 135500
+        },
+        {
+          "word": "once",
+          "startTimeMs": 135500,
+          "endTimeMs": 135800
+        },
+        {
+          "word": "again",
+          "startTimeMs": 135800,
+          "endTimeMs": 136100
+        },
+        {
+          "word": "we",
+          "startTimeMs": 136100,
+          "endTimeMs": 136300
+        },
+        {
+          "word": "hit",
+          "startTimeMs": 136300,
+          "endTimeMs": 136500
+        },
+        {
+          "word": "it",
+          "startTimeMs": 136500,
+          "endTimeMs": 136600
+        },
+        {
+          "word": "out",
+          "startTimeMs": 136600,
+          "endTimeMs": 136800
+        },
+        {
+          "word": "of",
+          "startTimeMs": 136800,
+          "endTimeMs": 137000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 137000,
+          "endTimeMs": 137200
+        },
+        {
+          "word": "stadium",
+          "startTimeMs": 137200,
+          "endTimeMs": 137500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 137500,
+      "endTimeMs": 141200,
+      "segmentIndex": 40,
+      "cueText": "If you want to have fun (ey)",
+      "text": "If you want to have fun (ey)",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 137500,
+          "endTimeMs": 138000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 138000,
+          "endTimeMs": 138500
+        },
+        {
+          "word": "want",
+          "startTimeMs": 138500,
+          "endTimeMs": 139200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 139200,
+          "endTimeMs": 139500
+        },
+        {
+          "word": "have",
+          "startTimeMs": 139500,
+          "endTimeMs": 139800
+        },
+        {
+          "word": "fun",
+          "startTimeMs": 139800,
+          "endTimeMs": 140500
+        },
+        {
+          "word": "(ey)",
+          "startTimeMs": 140500,
+          "endTimeMs": 141200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 141200,
+      "endTimeMs": 145200,
+      "segmentIndex": 41,
+      "cueText": "With charm and with grace",
+      "text": "With charm and with grace",
+      "words": [
+        {
+          "word": "With",
+          "startTimeMs": 141200,
+          "endTimeMs": 141700
+        },
+        {
+          "word": "charm",
+          "startTimeMs": 141700,
+          "endTimeMs": 142500
+        },
+        {
+          "word": "and",
+          "startTimeMs": 142500,
+          "endTimeMs": 142800
+        },
+        {
+          "word": "with",
+          "startTimeMs": 142800,
+          "endTimeMs": 143300
+        },
+        {
+          "word": "grace",
+          "startTimeMs": 143300,
+          "endTimeMs": 144500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 145200,
+      "endTimeMs": 148700,
+      "segmentIndex": 42,
+      "cueText": "You only have to live (we're leaving soon)",
+      "text": "You only have to live (we're leaving soon)",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 145200,
+          "endTimeMs": 145700
+        },
+        {
+          "word": "only",
+          "startTimeMs": 145700,
+          "endTimeMs": 146200
+        },
+        {
+          "word": "have",
+          "startTimeMs": 146200,
+          "endTimeMs": 146600
+        },
+        {
+          "word": "to",
+          "startTimeMs": 146600,
+          "endTimeMs": 147000
+        },
+        {
+          "word": "live",
+          "startTimeMs": 147000,
+          "endTimeMs": 147500
+        },
+        {
+          "word": "(we're",
+          "startTimeMs": 147700,
+          "endTimeMs": 148000
+        },
+        {
+          "word": "leaving",
+          "startTimeMs": 148000,
+          "endTimeMs": 148400
+        },
+        {
+          "word": "soon)",
+          "startTimeMs": 148400,
+          "endTimeMs": 148700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 148700,
+      "endTimeMs": 152000,
+      "segmentIndex": 43,
+      "cueText": "(Just a little while more, a little while) a summer in New Yor-",
+      "text": "(Just a little while more, a little while) a summer in New Yor-",
+      "words": [
+        {
+          "word": "(Just",
+          "startTimeMs": 148700,
+          "endTimeMs": 149000
+        },
+        {
+          "word": "a",
+          "startTimeMs": 149000,
+          "endTimeMs": 149100
+        },
+        {
+          "word": "little",
+          "startTimeMs": 149100,
+          "endTimeMs": 149400
+        },
+        {
+          "word": "while",
+          "startTimeMs": 149400,
+          "endTimeMs": 149700
+        },
+        {
+          "word": "more,",
+          "startTimeMs": 149700,
+          "endTimeMs": 150000
+        },
+        {
+          "word": "a",
+          "startTimeMs": 150000,
+          "endTimeMs": 150100
+        },
+        {
+          "word": "little",
+          "startTimeMs": 150100,
+          "endTimeMs": 150300
+        },
+        {
+          "word": "while)",
+          "startTimeMs": 150300,
+          "endTimeMs": 150500
+        },
+        {
+          "word": "a",
+          "startTimeMs": 150500,
+          "endTimeMs": 150700
+        },
+        {
+          "word": "summer",
+          "startTimeMs": 150700,
+          "endTimeMs": 151200
+        },
+        {
+          "word": "in",
+          "startTimeMs": 151200,
+          "endTimeMs": 151400
+        },
+        {
+          "word": "New",
+          "startTimeMs": 151400,
+          "endTimeMs": 151700
+        },
+        {
+          "word": "Yor-",
+          "startTimeMs": 151700,
+          "endTimeMs": 152000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 152000,
+      "endTimeMs": 155700,
+      "segmentIndex": 44,
+      "cueText": "Shh, careful so no one hears us",
+      "text": "Shh, careful so no one hears us",
+      "words": [
+        {
+          "word": "Shh,",
+          "startTimeMs": 152000,
+          "endTimeMs": 152800
+        },
+        {
+          "word": "careful",
+          "startTimeMs": 152800,
+          "endTimeMs": 153500
+        },
+        {
+          "word": "so",
+          "startTimeMs": 153500,
+          "endTimeMs": 153800
+        },
+        {
+          "word": "no",
+          "startTimeMs": 153800,
+          "endTimeMs": 154200
+        },
+        {
+          "word": "one",
+          "startTimeMs": 154200,
+          "endTimeMs": 154500
+        },
+        {
+          "word": "hears",
+          "startTimeMs": 154500,
+          "endTimeMs": 155000
+        },
+        {
+          "word": "us",
+          "startTimeMs": 155000,
+          "endTimeMs": 155700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 155700,
+      "endTimeMs": 159500,
+      "segmentIndex": 45,
+      "cueText": "Shh, careful so no one hears us",
+      "text": "Shh, careful so no one hears us",
+      "words": [
+        {
+          "word": "Shh,",
+          "startTimeMs": 155700,
+          "endTimeMs": 156500
+        },
+        {
+          "word": "careful",
+          "startTimeMs": 156500,
+          "endTimeMs": 157200
+        },
+        {
+          "word": "so",
+          "startTimeMs": 157200,
+          "endTimeMs": 157500
+        },
+        {
+          "word": "no",
+          "startTimeMs": 157500,
+          "endTimeMs": 157900
+        },
+        {
+          "word": "one",
+          "startTimeMs": 157900,
+          "endTimeMs": 158200
+        },
+        {
+          "word": "hears",
+          "startTimeMs": 158200,
+          "endTimeMs": 158700
+        },
+        {
+          "word": "us",
+          "startTimeMs": 158700,
+          "endTimeMs": 159500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 159500,
+      "endTimeMs": 163200,
+      "segmentIndex": 46,
+      "cueText": "Shh, careful so no one hears us",
+      "text": "Shh, careful so no one hears us",
+      "words": [
+        {
+          "word": "Shh,",
+          "startTimeMs": 159500,
+          "endTimeMs": 160300
+        },
+        {
+          "word": "careful",
+          "startTimeMs": 160300,
+          "endTimeMs": 161000
+        },
+        {
+          "word": "so",
+          "startTimeMs": 161000,
+          "endTimeMs": 161300
+        },
+        {
+          "word": "no",
+          "startTimeMs": 161300,
+          "endTimeMs": 161700
+        },
+        {
+          "word": "one",
+          "startTimeMs": 161700,
+          "endTimeMs": 162000
+        },
+        {
+          "word": "hears",
+          "startTimeMs": 162000,
+          "endTimeMs": 162500
+        },
+        {
+          "word": "us",
+          "startTimeMs": 162500,
+          "endTimeMs": 163200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 163200,
+      "endTimeMs": 165000,
+      "segmentIndex": 47,
+      "cueText": "Shh, care-",
+      "text": "Shh, care-",
+      "words": [
+        {
+          "word": "Shh,",
+          "startTimeMs": 163200,
+          "endTimeMs": 164000
+        },
+        {
+          "word": "care-",
+          "startTimeMs": 164000,
+          "endTimeMs": 165000
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 165000,
+      "endTimeMs": 186500,
+      "segmentIndex": 48,
+      "cueText": "Interlude / Speech"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 186500,
+      "endTimeMs": 189000,
+      "segmentIndex": 49,
+      "cueText": "You've got swagger, mami, and so do I",
+      "text": "You've got swagger, mami, and so do I",
+      "words": [
+        {
+          "word": "You've",
+          "startTimeMs": 186500,
+          "endTimeMs": 186800
+        },
+        {
+          "word": "got",
+          "startTimeMs": 186800,
+          "endTimeMs": 187100
+        },
+        {
+          "word": "swagger,",
+          "startTimeMs": 187100,
+          "endTimeMs": 187600
+        },
+        {
+          "word": "mami,",
+          "startTimeMs": 187600,
+          "endTimeMs": 188000
+        },
+        {
+          "word": "and",
+          "startTimeMs": 188000,
+          "endTimeMs": 188200
+        },
+        {
+          "word": "so",
+          "startTimeMs": 188200,
+          "endTimeMs": 188400
+        },
+        {
+          "word": "do",
+          "startTimeMs": 188400,
+          "endTimeMs": 188600
+        },
+        {
+          "word": "I",
+          "startTimeMs": 188600,
+          "endTimeMs": 189000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 189000,
+      "endTimeMs": 190700,
+      "segmentIndex": 50,
+      "cueText": "You're hot and I'm hot too",
+      "text": "You're hot and I'm hot too",
+      "words": [
+        {
+          "word": "You're",
+          "startTimeMs": 189000,
+          "endTimeMs": 189300
+        },
+        {
+          "word": "hot",
+          "startTimeMs": 189300,
+          "endTimeMs": 189700
+        },
+        {
+          "word": "and",
+          "startTimeMs": 189700,
+          "endTimeMs": 189900
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 189900,
+          "endTimeMs": 190200
+        },
+        {
+          "word": "hot",
+          "startTimeMs": 190200,
+          "endTimeMs": 190500
+        },
+        {
+          "word": "too",
+          "startTimeMs": 190500,
+          "endTimeMs": 190700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 190700,
+      "endTimeMs": 192500,
+      "segmentIndex": 51,
+      "cueText": "I smell great and I'm carrying hundreds",
+      "text": "I smell great and I'm carrying hundreds",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 190700,
+          "endTimeMs": 190900
+        },
+        {
+          "word": "smell",
+          "startTimeMs": 190900,
+          "endTimeMs": 191200
+        },
+        {
+          "word": "great",
+          "startTimeMs": 191200,
+          "endTimeMs": 191600
+        },
+        {
+          "word": "and",
+          "startTimeMs": 191600,
+          "endTimeMs": 191800
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 191800,
+          "endTimeMs": 192000
+        },
+        {
+          "word": "carrying",
+          "startTimeMs": 192000,
+          "endTimeMs": 192300
+        },
+        {
+          "word": "hundreds",
+          "startTimeMs": 192300,
+          "endTimeMs": 192500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 192500,
+      "endTimeMs": 194500,
+      "segmentIndex": 52,
+      "cueText": "If you want it, you have to move it",
+      "text": "If you want it, you have to move it",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 192500,
+          "endTimeMs": 192700
+        },
+        {
+          "word": "you",
+          "startTimeMs": 192700,
+          "endTimeMs": 192900
+        },
+        {
+          "word": "want",
+          "startTimeMs": 192900,
+          "endTimeMs": 193200
+        },
+        {
+          "word": "it,",
+          "startTimeMs": 193200,
+          "endTimeMs": 193500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 193500,
+          "endTimeMs": 193700
+        },
+        {
+          "word": "have",
+          "startTimeMs": 193700,
+          "endTimeMs": 193900
+        },
+        {
+          "word": "to",
+          "startTimeMs": 193900,
+          "endTimeMs": 194100
+        },
+        {
+          "word": "move",
+          "startTimeMs": 194100,
+          "endTimeMs": 194300
+        },
+        {
+          "word": "it",
+          "startTimeMs": 194300,
+          "endTimeMs": 194500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 194500,
+      "endTimeMs": 196200,
+      "segmentIndex": 53,
+      "cueText": "You've got swagger, mami, and so do I",
+      "text": "You've got swagger, mami, and so do I",
+      "words": [
+        {
+          "word": "You've",
+          "startTimeMs": 194500,
+          "endTimeMs": 194800
+        },
+        {
+          "word": "got",
+          "startTimeMs": 194800,
+          "endTimeMs": 195100
+        },
+        {
+          "word": "swagger,",
+          "startTimeMs": 195100,
+          "endTimeMs": 195600
+        },
+        {
+          "word": "mami,",
+          "startTimeMs": 195600,
+          "endTimeMs": 195900
+        },
+        {
+          "word": "and",
+          "startTimeMs": 195900,
+          "endTimeMs": 196000
+        },
+        {
+          "word": "so",
+          "startTimeMs": 196000,
+          "endTimeMs": 196100
+        },
+        {
+          "word": "do",
+          "startTimeMs": 196100,
+          "endTimeMs": 196150
+        },
+        {
+          "word": "I",
+          "startTimeMs": 196150,
+          "endTimeMs": 196200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 196200,
+      "endTimeMs": 198200,
+      "segmentIndex": 54,
+      "cueText": "You're hot and I'm hot too",
+      "text": "You're hot and I'm hot too",
+      "words": [
+        {
+          "word": "You're",
+          "startTimeMs": 196200,
+          "endTimeMs": 196500
+        },
+        {
+          "word": "hot",
+          "startTimeMs": 196500,
+          "endTimeMs": 196900
+        },
+        {
+          "word": "and",
+          "startTimeMs": 196900,
+          "endTimeMs": 197100
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 197100,
+          "endTimeMs": 197400
+        },
+        {
+          "word": "hot",
+          "startTimeMs": 197400,
+          "endTimeMs": 197800
+        },
+        {
+          "word": "too",
+          "startTimeMs": 197800,
+          "endTimeMs": 198200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 198200,
+      "endTimeMs": 200000,
+      "segmentIndex": 55,
+      "cueText": "I smell great and I'm carrying hundreds",
+      "text": "I smell great and I'm carrying hundreds",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 198200,
+          "endTimeMs": 198400
+        },
+        {
+          "word": "smell",
+          "startTimeMs": 198400,
+          "endTimeMs": 198700
+        },
+        {
+          "word": "great",
+          "startTimeMs": 198700,
+          "endTimeMs": 199100
+        },
+        {
+          "word": "and",
+          "startTimeMs": 199100,
+          "endTimeMs": 199300
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 199300,
+          "endTimeMs": 199500
+        },
+        {
+          "word": "carrying",
+          "startTimeMs": 199500,
+          "endTimeMs": 199800
+        },
+        {
+          "word": "hundreds",
+          "startTimeMs": 199800,
+          "endTimeMs": 200000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 200000,
+      "endTimeMs": 201700,
+      "segmentIndex": 56,
+      "cueText": "If you want it, you have to move it",
+      "text": "If you want it, you have to move it",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 200000,
+          "endTimeMs": 200200
+        },
+        {
+          "word": "you",
+          "startTimeMs": 200200,
+          "endTimeMs": 200400
+        },
+        {
+          "word": "want",
+          "startTimeMs": 200400,
+          "endTimeMs": 200700
+        },
+        {
+          "word": "it,",
+          "startTimeMs": 200700,
+          "endTimeMs": 201000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 201000,
+          "endTimeMs": 201200
+        },
+        {
+          "word": "have",
+          "startTimeMs": 201200,
+          "endTimeMs": 201400
+        },
+        {
+          "word": "to",
+          "startTimeMs": 201400,
+          "endTimeMs": 201500
+        },
+        {
+          "word": "move",
+          "startTimeMs": 201500,
+          "endTimeMs": 201600
+        },
+        {
+          "word": "it",
+          "startTimeMs": 201600,
+          "endTimeMs": 201700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 201700,
+      "endTimeMs": 203600,
+      "segmentIndex": 57,
+      "cueText": "You have to move-ve-ve-ve",
+      "text": "You have to move-ve-ve-ve",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 201700,
+          "endTimeMs": 201900
+        },
+        {
+          "word": "have",
+          "startTimeMs": 201900,
+          "endTimeMs": 202200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 202200,
+          "endTimeMs": 202500
+        },
+        {
+          "word": "move-ve-ve-ve",
+          "startTimeMs": 202500,
+          "endTimeMs": 203600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 203600,
+      "endTimeMs": 205400,
+      "segmentIndex": 58,
+      "cueText": "Ve-ve-ve-ve, ve-ve-ve-ve",
+      "text": "Ve-ve-ve-ve, ve-ve-ve-ve",
+      "words": [
+        {
+          "word": "Ve-ve-ve-ve,",
+          "startTimeMs": 203600,
+          "endTimeMs": 204500
+        },
+        {
+          "word": "ve-ve-ve-ve",
+          "startTimeMs": 204500,
+          "endTimeMs": 205400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 205400,
+      "endTimeMs": 208900,
+      "segmentIndex": 59,
+      "cueText": "You have to move-ve-ve-ve",
+      "text": "You have to move-ve-ve-ve",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 205400,
+          "endTimeMs": 205700
+        },
+        {
+          "word": "have",
+          "startTimeMs": 205700,
+          "endTimeMs": 206000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 206000,
+          "endTimeMs": 206300
+        },
+        {
+          "word": "move-ve-ve-ve",
+          "startTimeMs": 206300,
+          "endTimeMs": 208900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 208900,
+      "endTimeMs": 210400,
+      "segmentIndex": 60,
+      "cueText": "Ve-ve-ve-ve, ve-ve-ve-ve",
+      "text": "Ve-ve-ve-ve, ve-ve-ve-ve",
+      "words": [
+        {
+          "word": "Ve-ve-ve-ve,",
+          "startTimeMs": 208900,
+          "endTimeMs": 209700
+        },
+        {
+          "word": "ve-ve-ve-ve",
+          "startTimeMs": 209700,
+          "endTimeMs": 210400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 210400,
+      "endTimeMs": 211700,
+      "segmentIndex": 61,
+      "cueText": "You have to move-ve-ve-ve",
+      "text": "You have to move-ve-ve-ve",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 210400,
+          "endTimeMs": 210600
+        },
+        {
+          "word": "have",
+          "startTimeMs": 210600,
+          "endTimeMs": 210800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 210800,
+          "endTimeMs": 211000
+        },
+        {
+          "word": "move-ve-ve-ve",
+          "startTimeMs": 211000,
+          "endTimeMs": 211700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 211700,
+      "endTimeMs": 213200,
+      "segmentIndex": 62,
+      "cueText": "Ve-ve-ve-ve, ve-ve-ve-ve",
+      "text": "Ve-ve-ve-ve, ve-ve-ve-ve",
+      "words": [
+        {
+          "word": "Ve-ve-ve-ve,",
+          "startTimeMs": 211700,
+          "endTimeMs": 212500
+        },
+        {
+          "word": "ve-ve-ve-ve",
+          "startTimeMs": 212500,
+          "endTimeMs": 213200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 213200,
+      "endTimeMs": 215000,
+      "segmentIndex": 63,
+      "cueText": "You have to move-ve-ve-ve",
+      "text": "You have to move-ve-ve-ve",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 213200,
+          "endTimeMs": 213500
+        },
+        {
+          "word": "have",
+          "startTimeMs": 213500,
+          "endTimeMs": 213800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 213800,
+          "endTimeMs": 214000
+        },
+        {
+          "word": "move-ve-ve-ve",
+          "startTimeMs": 214000,
+          "endTimeMs": 215000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 215000,
+      "endTimeMs": 217900,
+      "segmentIndex": 64,
+      "cueText": "Ve-ve-ve-ve, ve-ve-ve-ve",
+      "text": "Ve-ve-ve-ve, ve-ve-ve-ve",
+      "words": [
+        {
+          "word": "Ve-ve-ve-ve,",
+          "startTimeMs": 215000,
+          "endTimeMs": 216500
+        },
+        {
+          "word": "ve-ve-ve-ve",
+          "startTimeMs": 216500,
+          "endTimeMs": 217900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 217900,
+      "endTimeMs": 221000,
+      "segmentIndex": 65,
+      "cueText": "Ve-ve-ve-ve, shh",
+      "text": "Ve-ve-ve-ve, shh",
+      "words": [
+        {
+          "word": "Ve-ve-ve-ve,",
+          "startTimeMs": 217900,
+          "endTimeMs": 219500
+        },
+        {
+          "word": "shh",
+          "startTimeMs": 219500,
+          "endTimeMs": 221000
+        }
+      ]
+    }
+  ]
+}
