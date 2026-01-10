@@ -12,7 +12,7 @@
       "startTimeMs": 0,
       "endTimeMs": 4170,
       "segmentIndex": 0,
-      "cueText": "Intro musical"
+      "cueText": "Intro"
     },
     {
       "type": "LYRIC",
@@ -24,21 +24,21 @@
         {
           "word": "Bad",
           "startTimeMs": 4170,
-          "endTimeMs": 4500
+          "endTimeMs": 4420
         },
         {
           "word": "Bunny,",
-          "startTimeMs": 4500,
-          "endTimeMs": 5000
+          "startTimeMs": 4420,
+          "endTimeMs": 4950
         },
         {
           "word": "baby,",
-          "startTimeMs": 5000,
-          "endTimeMs": 5600
+          "startTimeMs": 4950,
+          "endTimeMs": 5660
         },
         {
           "word": "bebé",
-          "startTimeMs": 5600,
+          "startTimeMs": 5660,
           "endTimeMs": 6390
         }
       ]
@@ -91,16 +91,16 @@
         {
           "word": "pendente'",
           "startTimeMs": 11400,
-          "endTimeMs": 12100
+          "endTimeMs": 12000
         },
         {
           "word": "a",
-          "startTimeMs": 12100,
-          "endTimeMs": 12300
+          "startTimeMs": 12000,
+          "endTimeMs": 12200
         },
         {
           "word": "ti",
-          "startTimeMs": 12300,
+          "startTimeMs": 12200,
           "endTimeMs": 12800
         },
         {
@@ -125,21 +125,21 @@
         {
           "word": "tú",
           "startTimeMs": 13600,
-          "endTimeMs": 13900
+          "endTimeMs": 13800
         },
         {
           "word": "puesta",
-          "startTimeMs": 13900,
-          "endTimeMs": 14400
+          "startTimeMs": 13800,
+          "endTimeMs": 14300
         },
         {
           "word": "pa",
-          "startTimeMs": 14400,
-          "endTimeMs": 14600
+          "startTimeMs": 14300,
+          "endTimeMs": 14500
         },
         {
           "word": "mí",
-          "startTimeMs": 14600,
+          "startTimeMs": 14500,
           "endTimeMs": 15100
         },
         {
@@ -159,36 +159,36 @@
         {
           "word": "Haciendo",
           "startTimeMs": 15620,
-          "endTimeMs": 16200
+          "endTimeMs": 16100
         },
         {
           "word": "que",
-          "startTimeMs": 16200,
-          "endTimeMs": 16400
+          "startTimeMs": 16100,
+          "endTimeMs": 16300
         },
         {
           "word": "me",
-          "startTimeMs": 16400,
-          "endTimeMs": 16600
+          "startTimeMs": 16300,
+          "endTimeMs": 16500
         },
         {
           "word": "odien",
-          "startTimeMs": 16600,
+          "startTimeMs": 16500,
           "endTimeMs": 17000
         },
         {
           "word": "más",
           "startTimeMs": 17000,
-          "endTimeMs": 17500
+          "endTimeMs": 17800
         },
         {
           "word": "(yeh,",
-          "startTimeMs": 17500,
-          "endTimeMs": 18200
+          "startTimeMs": 17800,
+          "endTimeMs": 18300
         },
         {
           "word": "yeh-yeh)",
-          "startTimeMs": 18200,
+          "startTimeMs": 18300,
           "endTimeMs": 19100
         }
       ]
@@ -203,31 +203,31 @@
         {
           "word": "Porque",
           "startTimeMs": 19100,
-          "endTimeMs": 19500
+          "endTimeMs": 19400
         },
         {
           "word": "todos",
-          "startTimeMs": 19500,
-          "endTimeMs": 19900
+          "startTimeMs": 19400,
+          "endTimeMs": 19800
         },
         {
           "word": "te",
-          "startTimeMs": 19900,
-          "endTimeMs": 20100
+          "startTimeMs": 19800,
+          "endTimeMs": 20000
         },
         {
           "word": "quieren",
-          "startTimeMs": 20100,
-          "endTimeMs": 20600
+          "startTimeMs": 20000,
+          "endTimeMs": 20500
         },
         {
           "word": "probar",
-          "startTimeMs": 20600,
-          "endTimeMs": 21500
+          "startTimeMs": 20500,
+          "endTimeMs": 21800
         },
         {
           "word": "(ah)",
-          "startTimeMs": 21500,
+          "startTimeMs": 21800,
           "endTimeMs": 22790
         }
       ]
@@ -242,61 +242,61 @@
         {
           "word": "Lo",
           "startTimeMs": 22790,
-          "endTimeMs": 23000
+          "endTimeMs": 22900
         },
         {
           "word": "que",
-          "startTimeMs": 23000,
-          "endTimeMs": 23200
+          "startTimeMs": 22900,
+          "endTimeMs": 23100
         },
         {
           "word": "no",
-          "startTimeMs": 23200,
-          "endTimeMs": 23500
+          "startTimeMs": 23100,
+          "endTimeMs": 23300
         },
         {
           "word": "saben",
-          "startTimeMs": 23500,
-          "endTimeMs": 24000
+          "startTimeMs": 23300,
+          "endTimeMs": 23800
         },
         {
           "word": "es",
-          "startTimeMs": 24000,
-          "endTimeMs": 24300
+          "startTimeMs": 23800,
+          "endTimeMs": 24000
         },
         {
           "word": "que",
-          "startTimeMs": 24300,
-          "endTimeMs": 24500
+          "startTimeMs": 24000,
+          "endTimeMs": 24200
         },
         {
           "word": "no",
-          "startTimeMs": 24500,
-          "endTimeMs": 24800
+          "startTimeMs": 24200,
+          "endTimeMs": 24500
         },
         {
           "word": "te",
-          "startTimeMs": 24800,
-          "endTimeMs": 25000
+          "startTimeMs": 24500,
+          "endTimeMs": 24700
         },
         {
           "word": "dejas",
-          "startTimeMs": 25000,
-          "endTimeMs": 25800
+          "startTimeMs": 24700,
+          "endTimeMs": 25200
         },
         {
           "word": "llevar",
-          "startTimeMs": 25800,
-          "endTimeMs": 26800
+          "startTimeMs": 25200,
+          "endTimeMs": 26000
         },
         {
           "word": "de",
-          "startTimeMs": 26800,
-          "endTimeMs": 27500
+          "startTimeMs": 26000,
+          "endTimeMs": 26500
         },
         {
           "word": "cualquiera",
-          "startTimeMs": 27500,
+          "startTimeMs": 26500,
           "endTimeMs": 29360
         }
       ]
@@ -321,21 +321,21 @@
         {
           "word": "te",
           "startTimeMs": 29900,
-          "endTimeMs": 30200
+          "endTimeMs": 30100
         },
         {
           "word": "quieren",
-          "startTimeMs": 30200,
-          "endTimeMs": 30700
+          "startTimeMs": 30100,
+          "endTimeMs": 30600
         },
         {
           "word": "probar",
-          "startTimeMs": 30700,
-          "endTimeMs": 31500
+          "startTimeMs": 30600,
+          "endTimeMs": 32000
         },
         {
           "word": "(ah)",
-          "startTimeMs": 31500,
+          "startTimeMs": 32000,
           "endTimeMs": 33060
         }
       ]
@@ -350,71 +350,71 @@
         {
           "word": "Lo",
           "startTimeMs": 33060,
-          "endTimeMs": 33300
+          "endTimeMs": 33200
         },
         {
           "word": "que",
-          "startTimeMs": 33300,
-          "endTimeMs": 33500
+          "startTimeMs": 33200,
+          "endTimeMs": 33400
         },
         {
           "word": "no",
-          "startTimeMs": 33500,
-          "endTimeMs": 33700
+          "startTimeMs": 33400,
+          "endTimeMs": 33600
         },
         {
           "word": "saben",
-          "startTimeMs": 33700,
-          "endTimeMs": 34100
+          "startTimeMs": 33600,
+          "endTimeMs": 34000
         },
         {
           "word": "es",
-          "startTimeMs": 34100,
-          "endTimeMs": 34300
+          "startTimeMs": 34000,
+          "endTimeMs": 34200
         },
         {
           "word": "que",
-          "startTimeMs": 34300,
-          "endTimeMs": 34500
+          "startTimeMs": 34200,
+          "endTimeMs": 34400
         },
         {
           "word": "hoy",
-          "startTimeMs": 34500,
-          "endTimeMs": 34800
+          "startTimeMs": 34400,
+          "endTimeMs": 34700
         },
         {
           "word": "yo",
-          "startTimeMs": 34800,
-          "endTimeMs": 35100
+          "startTimeMs": 34700,
+          "endTimeMs": 35000
         },
         {
           "word": "te",
-          "startTimeMs": 35100,
-          "endTimeMs": 35300
+          "startTimeMs": 35000,
+          "endTimeMs": 35200
         },
         {
           "word": "voy",
-          "startTimeMs": 35300,
-          "endTimeMs": 35600
+          "startTimeMs": 35200,
+          "endTimeMs": 35500
         },
         {
           "word": "a",
-          "startTimeMs": 35600,
-          "endTimeMs": 35800
+          "startTimeMs": 35500,
+          "endTimeMs": 35700
         },
         {
           "word": "buscar",
-          "startTimeMs": 35800,
-          "endTimeMs": 36600
+          "startTimeMs": 35700,
+          "endTimeMs": 36800
         },
         {
           "word": "(yeah,",
-          "startTimeMs": 36600,
-          "endTimeMs": 37600
+          "startTimeMs": 36800,
+          "endTimeMs": 37500
         },
         {
           "word": "yeah)",
-          "startTimeMs": 37600,
+          "startTimeMs": 37500,
           "endTimeMs": 38640
         }
       ]
@@ -429,31 +429,31 @@
         {
           "word": "Dile",
           "startTimeMs": 38640,
-          "endTimeMs": 39000
+          "endTimeMs": 38900
         },
         {
           "word": "que",
-          "startTimeMs": 39000,
-          "endTimeMs": 39200
+          "startTimeMs": 38900,
+          "endTimeMs": 39100
         },
         {
           "word": "tú",
-          "startTimeMs": 39200,
-          "endTimeMs": 39400
+          "startTimeMs": 39100,
+          "endTimeMs": 39300
         },
         {
           "word": "eres",
-          "startTimeMs": 39400,
-          "endTimeMs": 39800
+          "startTimeMs": 39300,
+          "endTimeMs": 39600
         },
         {
           "word": "mía,",
-          "startTimeMs": 39800,
-          "endTimeMs": 40300
+          "startTimeMs": 39600,
+          "endTimeMs": 40200
         },
         {
           "word": "mía",
-          "startTimeMs": 40300,
+          "startTimeMs": 40200,
           "endTimeMs": 41010
         }
       ]
@@ -468,11 +468,11 @@
         {
           "word": "Tú",
           "startTimeMs": 41010,
-          "endTimeMs": 41300
+          "endTimeMs": 41200
         },
         {
           "word": "sabe'",
-          "startTimeMs": 41300,
+          "startTimeMs": 41200,
           "endTimeMs": 41600
         },
         {
@@ -483,16 +483,16 @@
         {
           "word": "eres",
           "startTimeMs": 41800,
-          "endTimeMs": 42200
+          "endTimeMs": 42100
         },
         {
           "word": "mía,",
-          "startTimeMs": 42200,
-          "endTimeMs": 42900
+          "startTimeMs": 42100,
+          "endTimeMs": 42700
         },
         {
           "word": "mía",
-          "startTimeMs": 42900,
+          "startTimeMs": 42700,
           "endTimeMs": 43870
         }
       ]
@@ -507,21 +507,21 @@
         {
           "word": "Tú",
           "startTimeMs": 43870,
-          "endTimeMs": 44200
+          "endTimeMs": 44000
         },
         {
           "word": "misma",
-          "startTimeMs": 44200,
-          "endTimeMs": 44700
+          "startTimeMs": 44000,
+          "endTimeMs": 44500
         },
         {
           "word": "lo",
-          "startTimeMs": 44700,
-          "endTimeMs": 45000
+          "startTimeMs": 44500,
+          "endTimeMs": 44700
         },
         {
           "word": "decías",
-          "startTimeMs": 45000,
+          "startTimeMs": 44700,
           "endTimeMs": 45910
         }
       ]
@@ -536,26 +536,26 @@
         {
           "word": "Cuando",
           "startTimeMs": 45910,
-          "endTimeMs": 46400
+          "endTimeMs": 46200
         },
         {
           "word": "yo",
+          "startTimeMs": 46200,
+          "endTimeMs": 46400
+        },
+        {
+          "word": "te",
           "startTimeMs": 46400,
           "endTimeMs": 46600
         },
         {
-          "word": "te",
+          "word": "lo",
           "startTimeMs": 46600,
           "endTimeMs": 46800
         },
         {
-          "word": "lo",
-          "startTimeMs": 46800,
-          "endTimeMs": 47000
-        },
-        {
           "word": "hacía",
-          "startTimeMs": 47000,
+          "startTimeMs": 46800,
           "endTimeMs": 47820
         }
       ]
@@ -570,36 +570,36 @@
         {
           "word": "Yeah,",
           "startTimeMs": 47820,
-          "endTimeMs": 48500
+          "endTimeMs": 48200
         },
         {
           "word": "dile",
-          "startTimeMs": 48500,
-          "endTimeMs": 48900
+          "startTimeMs": 48200,
+          "endTimeMs": 48500
         },
         {
           "word": "que",
-          "startTimeMs": 48900,
-          "endTimeMs": 49100
+          "startTimeMs": 48500,
+          "endTimeMs": 48700
         },
         {
           "word": "tú",
-          "startTimeMs": 49100,
-          "endTimeMs": 49300
+          "startTimeMs": 48700,
+          "endTimeMs": 48900
         },
         {
           "word": "eres",
-          "startTimeMs": 49300,
-          "endTimeMs": 49700
+          "startTimeMs": 48900,
+          "endTimeMs": 49200
         },
         {
           "word": "mía,",
-          "startTimeMs": 49700,
-          "endTimeMs": 50300
+          "startTimeMs": 49200,
+          "endTimeMs": 49800
         },
         {
           "word": "mía",
-          "startTimeMs": 50300,
+          "startTimeMs": 49800,
           "endTimeMs": 51040
         }
       ]
@@ -614,11 +614,11 @@
         {
           "word": "Tú",
           "startTimeMs": 51040,
-          "endTimeMs": 51300
+          "endTimeMs": 51200
         },
         {
           "word": "sabe'",
-          "startTimeMs": 51300,
+          "startTimeMs": 51200,
           "endTimeMs": 51600
         },
         {
@@ -653,21 +653,21 @@
         {
           "word": "Tú",
           "startTimeMs": 53540,
-          "endTimeMs": 54000
+          "endTimeMs": 53700
         },
         {
           "word": "misma",
-          "startTimeMs": 54000,
-          "endTimeMs": 54600
+          "startTimeMs": 53700,
+          "endTimeMs": 54200
         },
         {
           "word": "lo",
-          "startTimeMs": 54600,
-          "endTimeMs": 54900
+          "startTimeMs": 54200,
+          "endTimeMs": 54400
         },
         {
           "word": "decías",
-          "startTimeMs": 54900,
+          "startTimeMs": 54400,
           "endTimeMs": 55810
         }
       ]
@@ -682,26 +682,26 @@
         {
           "word": "Cuando",
           "startTimeMs": 55810,
-          "endTimeMs": 56300
+          "endTimeMs": 56100
         },
         {
           "word": "yo",
+          "startTimeMs": 56100,
+          "endTimeMs": 56300
+        },
+        {
+          "word": "te",
           "startTimeMs": 56300,
           "endTimeMs": 56500
         },
         {
-          "word": "te",
+          "word": "lo",
           "startTimeMs": 56500,
           "endTimeMs": 56700
         },
         {
-          "word": "lo",
-          "startTimeMs": 56700,
-          "endTimeMs": 56900
-        },
-        {
           "word": "hacía",
-          "startTimeMs": 56900,
+          "startTimeMs": 56700,
           "endTimeMs": 57750
         }
       ]
@@ -735,36 +735,36 @@
         {
           "word": "yo",
           "startTimeMs": 59900,
-          "endTimeMs": 60100
+          "endTimeMs": 60200
         },
         {
           "word": "soy",
-          "startTimeMs": 60100,
-          "endTimeMs": 60300
+          "startTimeMs": 60200,
+          "endTimeMs": 60400
         },
         {
           "word": "fan",
-          "startTimeMs": 60300,
-          "endTimeMs": 60700
+          "startTimeMs": 60400,
+          "endTimeMs": 60800
         },
         {
           "word": "de",
-          "startTimeMs": 60700,
-          "endTimeMs": 60900
+          "startTimeMs": 60800,
+          "endTimeMs": 61000
         },
         {
           "word": "tu",
-          "startTimeMs": 60900,
-          "endTimeMs": 61100
+          "startTimeMs": 61000,
+          "endTimeMs": 61200
         },
         {
           "word": "caminar",
-          "startTimeMs": 61100,
-          "endTimeMs": 61800
+          "startTimeMs": 61200,
+          "endTimeMs": 61900
         },
         {
           "word": "(uh)",
-          "startTimeMs": 61800,
+          "startTimeMs": 61900,
           "endTimeMs": 62330
         }
       ]
@@ -779,16 +779,16 @@
         {
           "word": "Te",
           "startTimeMs": 62330,
-          "endTimeMs": 62500
+          "endTimeMs": 62400
         },
         {
           "word": "doy",
-          "startTimeMs": 62500,
-          "endTimeMs": 62700
+          "startTimeMs": 62400,
+          "endTimeMs": 62600
         },
         {
           "word": "todo",
-          "startTimeMs": 62700,
+          "startTimeMs": 62600,
           "endTimeMs": 62900
         },
         {
@@ -814,11 +814,11 @@
         {
           "word": "respirar",
           "startTimeMs": 64000,
-          "endTimeMs": 64300
+          "endTimeMs": 64500
         },
         {
           "word": "(yeah)",
-          "startTimeMs": 64300,
+          "startTimeMs": 64500,
           "endTimeMs": 64660
         }
       ]
@@ -877,11 +877,11 @@
         {
           "word": "Quiero",
           "startTimeMs": 67250,
-          "endTimeMs": 67600
+          "endTimeMs": 67500
         },
         {
           "word": "tirarno'",
-          "startTimeMs": 67600,
+          "startTimeMs": 67500,
           "endTimeMs": 67900
         },
         {
@@ -902,21 +902,21 @@
         {
           "word": "se",
           "startTimeMs": 68600,
-          "endTimeMs": 68800
+          "endTimeMs": 68700
         },
         {
           "word": "hagan",
-          "startTimeMs": 68800,
-          "endTimeMs": 69100
+          "startTimeMs": 68700,
+          "endTimeMs": 69000
         },
         {
           "word": "viral",
-          "startTimeMs": 69100,
-          "endTimeMs": 69300
+          "startTimeMs": 69000,
+          "endTimeMs": 69400
         },
         {
           "word": "(ah)",
-          "startTimeMs": 69300,
+          "startTimeMs": 69400,
           "endTimeMs": 69590
         }
       ]
@@ -931,36 +931,36 @@
         {
           "word": "Tus",
           "startTimeMs": 69590,
-          "endTimeMs": 69800
+          "endTimeMs": 69700
         },
         {
           "word": "ojos",
-          "startTimeMs": 69800,
-          "endTimeMs": 70200
+          "startTimeMs": 69700,
+          "endTimeMs": 70100
         },
         {
           "word": "me",
-          "startTimeMs": 70200,
-          "endTimeMs": 70400
+          "startTimeMs": 70100,
+          "endTimeMs": 70300
         },
         {
           "word": "concentran",
-          "startTimeMs": 70400,
+          "startTimeMs": 70300,
           "endTimeMs": 70900
         },
         {
           "word": "como",
           "startTimeMs": 70900,
-          "endTimeMs": 71200
+          "endTimeMs": 71300
         },
         {
           "word": "Adderall",
-          "startTimeMs": 71200,
-          "endTimeMs": 71800
+          "startTimeMs": 71300,
+          "endTimeMs": 72000
         },
         {
           "word": "(uh)",
-          "startTimeMs": 71800,
+          "startTimeMs": 72000,
           "endTimeMs": 72220
         }
       ]
@@ -990,11 +990,11 @@
         {
           "word": "el",
           "startTimeMs": 73200,
-          "endTimeMs": 73500
+          "endTimeMs": 73400
         },
         {
           "word": "overall",
-          "startTimeMs": 73500,
+          "startTimeMs": 73400,
           "endTimeMs": 74100
         },
         {
@@ -1019,41 +1019,41 @@
         {
           "word": "toco",
           "startTimeMs": 74600,
-          "endTimeMs": 75000
+          "endTimeMs": 74900
         },
         {
           "word": "y",
-          "startTimeMs": 75000,
-          "endTimeMs": 75150
+          "startTimeMs": 74900,
+          "endTimeMs": 75000
         },
         {
           "word": "hasta",
-          "startTimeMs": 75150,
-          "endTimeMs": 75400
+          "startTimeMs": 75000,
+          "endTimeMs": 75300
         },
         {
           "word": "el",
-          "startTimeMs": 75400,
-          "endTimeMs": 75550
+          "startTimeMs": 75300,
+          "endTimeMs": 75400
         },
         {
           "word": "mundo",
-          "startTimeMs": 75550,
-          "endTimeMs": 75900
+          "startTimeMs": 75400,
+          "endTimeMs": 75800
         },
         {
           "word": "deja",
-          "startTimeMs": 75900,
-          "endTimeMs": 76200
+          "startTimeMs": 75800,
+          "endTimeMs": 76100
         },
         {
           "word": "de",
-          "startTimeMs": 76200,
-          "endTimeMs": 76350
+          "startTimeMs": 76100,
+          "endTimeMs": 76200
         },
         {
           "word": "girar",
-          "startTimeMs": 76350,
+          "startTimeMs": 76200,
           "endTimeMs": 76700
         },
         {
@@ -1078,46 +1078,46 @@
         {
           "word": "nosotro'",
           "startTimeMs": 77100,
-          "endTimeMs": 77500
+          "endTimeMs": 77600
         },
         {
           "word": "ni",
-          "startTimeMs": 77500,
-          "endTimeMs": 77700
+          "startTimeMs": 77600,
+          "endTimeMs": 77800
         },
         {
           "word": "la",
-          "startTimeMs": 77700,
-          "endTimeMs": 77900
+          "startTimeMs": 77800,
+          "endTimeMs": 78000
         },
         {
           "word": "muerte",
-          "startTimeMs": 77900,
-          "endTimeMs": 78200
-        },
-        {
-          "word": "nos",
-          "startTimeMs": 78200,
+          "startTimeMs": 78000,
           "endTimeMs": 78400
         },
         {
-          "word": "va",
+          "word": "nos",
           "startTimeMs": 78400,
           "endTimeMs": 78600
         },
         {
-          "word": "a",
+          "word": "va",
           "startTimeMs": 78600,
-          "endTimeMs": 78700
+          "endTimeMs": 78800
+        },
+        {
+          "word": "a",
+          "startTimeMs": 78800,
+          "endTimeMs": 78900
         },
         {
           "word": "separar",
-          "startTimeMs": 78700,
-          "endTimeMs": 79300
+          "startTimeMs": 78900,
+          "endTimeMs": 79400
         },
         {
           "word": "(na)",
-          "startTimeMs": 79300,
+          "startTimeMs": 79400,
           "endTimeMs": 79650
         }
       ]
@@ -1132,26 +1132,26 @@
         {
           "word": "Bebé,",
           "startTimeMs": 79650,
-          "endTimeMs": 79900
+          "endTimeMs": 80100
         },
         {
           "word": "yo",
-          "startTimeMs": 79900,
-          "endTimeMs": 80200
+          "startTimeMs": 80100,
+          "endTimeMs": 80400
         },
         {
           "word": "soy",
-          "startTimeMs": 80200,
-          "endTimeMs": 80500
+          "startTimeMs": 80400,
+          "endTimeMs": 80600
         },
         {
           "word": "tuyo",
-          "startTimeMs": 80500,
-          "endTimeMs": 80800
+          "startTimeMs": 80600,
+          "endTimeMs": 81000
         },
         {
           "word": "na'más",
-          "startTimeMs": 80800,
+          "startTimeMs": 81000,
           "endTimeMs": 81600
         },
         {
@@ -1181,16 +1181,16 @@
         {
           "word": "conmigo",
           "startTimeMs": 82700,
-          "endTimeMs": 83300
+          "endTimeMs": 83200
         },
         {
           "word": "te",
-          "startTimeMs": 83300,
-          "endTimeMs": 83600
+          "startTimeMs": 83200,
+          "endTimeMs": 83400
         },
         {
           "word": "vas",
-          "startTimeMs": 83600,
+          "startTimeMs": 83400,
           "endTimeMs": 84500
         },
         {
@@ -1215,21 +1215,21 @@
         {
           "word": "dejen",
           "startTimeMs": 85400,
-          "endTimeMs": 85900
+          "endTimeMs": 85800
         },
         {
           "word": "de",
-          "startTimeMs": 85900,
-          "endTimeMs": 86100
+          "startTimeMs": 85800,
+          "endTimeMs": 86000
         },
         {
           "word": "tirarte",
-          "startTimeMs": 86100,
-          "endTimeMs": 87000
+          "startTimeMs": 86000,
+          "endTimeMs": 86800
         },
         {
           "word": "(brr)",
-          "startTimeMs": 87000,
+          "startTimeMs": 86800,
           "endTimeMs": 87470
         }
       ]
@@ -1244,36 +1244,36 @@
         {
           "word": "Que",
           "startTimeMs": 87470,
-          "endTimeMs": 87550
+          "endTimeMs": 87570
         },
         {
           "word": "a",
-          "startTimeMs": 87550,
-          "endTimeMs": 87650
+          "startTimeMs": 87570,
+          "endTimeMs": 87670
         },
         {
           "word": "ti",
-          "startTimeMs": 87650,
-          "endTimeMs": 87750
+          "startTimeMs": 87670,
+          "endTimeMs": 87770
         },
         {
           "word": "nadie",
-          "startTimeMs": 87750,
-          "endTimeMs": 87850
+          "startTimeMs": 87770,
+          "endTimeMs": 87870
         },
         {
           "word": "va",
-          "startTimeMs": 87850,
-          "endTimeMs": 87950
+          "startTimeMs": 87870,
+          "endTimeMs": 87970
         },
         {
           "word": "a",
-          "startTimeMs": 87950,
-          "endTimeMs": 88050
+          "startTimeMs": 87970,
+          "endTimeMs": 88070
         },
         {
           "word": "tocarte",
-          "startTimeMs": 88050,
+          "startTimeMs": 88070,
           "endTimeMs": 88230
         }
       ]
@@ -1288,31 +1288,31 @@
         {
           "word": "Dile",
           "startTimeMs": 88230,
-          "endTimeMs": 88600
+          "endTimeMs": 88500
         },
         {
           "word": "que",
-          "startTimeMs": 88600,
-          "endTimeMs": 88800
+          "startTimeMs": 88500,
+          "endTimeMs": 88700
         },
         {
           "word": "tú",
-          "startTimeMs": 88800,
-          "endTimeMs": 89000
+          "startTimeMs": 88700,
+          "endTimeMs": 88900
         },
         {
           "word": "eres",
-          "startTimeMs": 89000,
-          "endTimeMs": 89400
+          "startTimeMs": 88900,
+          "endTimeMs": 89200
         },
         {
           "word": "mía,",
-          "startTimeMs": 89400,
-          "endTimeMs": 89900
+          "startTimeMs": 89200,
+          "endTimeMs": 89800
         },
         {
           "word": "mía",
-          "startTimeMs": 89900,
+          "startTimeMs": 89800,
           "endTimeMs": 90500
         }
       ]
@@ -1327,31 +1327,31 @@
         {
           "word": "Tú",
           "startTimeMs": 90500,
-          "endTimeMs": 90800
+          "endTimeMs": 90700
         },
         {
           "word": "sabe'",
-          "startTimeMs": 90800,
-          "endTimeMs": 91200
+          "startTimeMs": 90700,
+          "endTimeMs": 91100
         },
         {
           "word": "que",
-          "startTimeMs": 91200,
-          "endTimeMs": 91400
+          "startTimeMs": 91100,
+          "endTimeMs": 91300
         },
         {
           "word": "eres",
-          "startTimeMs": 91400,
-          "endTimeMs": 91800
+          "startTimeMs": 91300,
+          "endTimeMs": 91600
         },
         {
           "word": "mía,",
-          "startTimeMs": 91800,
-          "endTimeMs": 92400
+          "startTimeMs": 91600,
+          "endTimeMs": 92200
         },
         {
           "word": "mía",
-          "startTimeMs": 92400,
+          "startTimeMs": 92200,
           "endTimeMs": 93170
         }
       ]
@@ -1366,41 +1366,41 @@
         {
           "word": "Tú",
           "startTimeMs": 93170,
-          "endTimeMs": 93400
+          "endTimeMs": 93300
         },
         {
           "word": "misma",
-          "startTimeMs": 93400,
+          "startTimeMs": 93300,
+          "endTimeMs": 93600
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 93600,
           "endTimeMs": 93800
         },
         {
-          "word": "lo",
-          "startTimeMs": 93800,
-          "endTimeMs": 94000
-        },
-        {
           "word": "decías",
-          "startTimeMs": 94000,
-          "endTimeMs": 94400
+          "startTimeMs": 93800,
+          "endTimeMs": 94300
         },
         {
           "word": "(tú",
-          "startTimeMs": 94400,
-          "endTimeMs": 94600
+          "startTimeMs": 94300,
+          "endTimeMs": 94500
         },
         {
           "word": "misma",
-          "startTimeMs": 94600,
-          "endTimeMs": 94900
+          "startTimeMs": 94500,
+          "endTimeMs": 94800
         },
         {
           "word": "lo",
-          "startTimeMs": 94900,
-          "endTimeMs": 95100
+          "startTimeMs": 94800,
+          "endTimeMs": 95000
         },
         {
           "word": "decías)",
-          "startTimeMs": 95100,
+          "startTimeMs": 95000,
           "endTimeMs": 95350
         }
       ]
@@ -1425,21 +1425,21 @@
         {
           "word": "te",
           "startTimeMs": 95800,
-          "endTimeMs": 95900
+          "endTimeMs": 95950
         },
         {
           "word": "lo",
-          "startTimeMs": 95900,
+          "startTimeMs": 95950,
           "endTimeMs": 96100
         },
         {
           "word": "hacía",
           "startTimeMs": 96100,
-          "endTimeMs": 96600
+          "endTimeMs": 96500
         },
         {
           "word": "(cuando",
-          "startTimeMs": 96600,
+          "startTimeMs": 96500,
           "endTimeMs": 96800
         },
         {
@@ -1455,11 +1455,11 @@
         {
           "word": "lo",
           "startTimeMs": 97100,
-          "endTimeMs": 97200
+          "endTimeMs": 97250
         },
         {
           "word": "hacía)",
-          "startTimeMs": 97200,
+          "startTimeMs": 97250,
           "endTimeMs": 97420
         }
       ]
@@ -1474,36 +1474,36 @@
         {
           "word": "Yeh,",
           "startTimeMs": 97420,
-          "endTimeMs": 98200
+          "endTimeMs": 97800
         },
         {
           "word": "dile",
-          "startTimeMs": 98200,
-          "endTimeMs": 98600
+          "startTimeMs": 97800,
+          "endTimeMs": 98100
         },
         {
           "word": "que",
-          "startTimeMs": 98600,
-          "endTimeMs": 98800
+          "startTimeMs": 98100,
+          "endTimeMs": 98300
         },
         {
           "word": "tú",
-          "startTimeMs": 98800,
-          "endTimeMs": 99000
+          "startTimeMs": 98300,
+          "endTimeMs": 98500
         },
         {
           "word": "eres",
-          "startTimeMs": 99000,
-          "endTimeMs": 99400
+          "startTimeMs": 98500,
+          "endTimeMs": 98800
         },
         {
           "word": "mía,",
-          "startTimeMs": 99400,
-          "endTimeMs": 99900
+          "startTimeMs": 98800,
+          "endTimeMs": 99400
         },
         {
           "word": "mía",
-          "startTimeMs": 99900,
+          "startTimeMs": 99400,
           "endTimeMs": 100600
         }
       ]
@@ -1518,11 +1518,11 @@
         {
           "word": "Tú",
           "startTimeMs": 100600,
-          "endTimeMs": 100900
+          "endTimeMs": 100800
         },
         {
           "word": "sabe'",
-          "startTimeMs": 100900,
+          "startTimeMs": 100800,
           "endTimeMs": 101200
         },
         {
@@ -1533,16 +1533,16 @@
         {
           "word": "eres",
           "startTimeMs": 101400,
-          "endTimeMs": 101800
+          "endTimeMs": 101700
         },
         {
           "word": "mía,",
-          "startTimeMs": 101800,
-          "endTimeMs": 102400
+          "startTimeMs": 101700,
+          "endTimeMs": 102300
         },
         {
           "word": "mía",
-          "startTimeMs": 102400,
+          "startTimeMs": 102300,
           "endTimeMs": 103150
         }
       ]
@@ -1557,41 +1557,41 @@
         {
           "word": "Tú",
           "startTimeMs": 103150,
-          "endTimeMs": 103400
+          "endTimeMs": 103300
         },
         {
           "word": "misma",
-          "startTimeMs": 103400,
+          "startTimeMs": 103300,
+          "endTimeMs": 103600
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 103600,
           "endTimeMs": 103800
         },
         {
-          "word": "lo",
-          "startTimeMs": 103800,
-          "endTimeMs": 104000
-        },
-        {
           "word": "decías",
-          "startTimeMs": 104000,
-          "endTimeMs": 104400
+          "startTimeMs": 103800,
+          "endTimeMs": 104300
         },
         {
           "word": "(tú",
-          "startTimeMs": 104400,
-          "endTimeMs": 104600
+          "startTimeMs": 104300,
+          "endTimeMs": 104500
         },
         {
           "word": "misma",
-          "startTimeMs": 104600,
-          "endTimeMs": 104900
+          "startTimeMs": 104500,
+          "endTimeMs": 104800
         },
         {
           "word": "lo",
-          "startTimeMs": 104900,
-          "endTimeMs": 105100
+          "startTimeMs": 104800,
+          "endTimeMs": 105000
         },
         {
           "word": "decías)",
-          "startTimeMs": 105100,
+          "startTimeMs": 105000,
           "endTimeMs": 105410
         }
       ]
@@ -1616,41 +1616,41 @@
         {
           "word": "te",
           "startTimeMs": 105900,
-          "endTimeMs": 106000
+          "endTimeMs": 106050
         },
         {
           "word": "lo",
-          "startTimeMs": 106000,
+          "startTimeMs": 106050,
           "endTimeMs": 106200
         },
         {
           "word": "hacía",
           "startTimeMs": 106200,
-          "endTimeMs": 106600
+          "endTimeMs": 106700
         },
         {
           "word": "(cuando",
-          "startTimeMs": 106600,
-          "endTimeMs": 106900
+          "startTimeMs": 106700,
+          "endTimeMs": 108500
         },
         {
           "word": "yo",
-          "startTimeMs": 106900,
-          "endTimeMs": 107100
+          "startTimeMs": 108500,
+          "endTimeMs": 108700
         },
         {
           "word": "te",
-          "startTimeMs": 107100,
-          "endTimeMs": 107200
+          "startTimeMs": 108700,
+          "endTimeMs": 108850
         },
         {
           "word": "lo",
-          "startTimeMs": 107200,
-          "endTimeMs": 107400
+          "startTimeMs": 108850,
+          "endTimeMs": 109000
         },
         {
           "word": "hacía)",
-          "startTimeMs": 107400,
+          "startTimeMs": 109000,
           "endTimeMs": 109470
         }
       ]
@@ -1680,26 +1680,26 @@
         {
           "word": "Romeo,",
           "startTimeMs": 110000,
-          "endTimeMs": 110400
+          "endTimeMs": 110500
         },
         {
           "word": "pero",
-          "startTimeMs": 110400,
-          "endTimeMs": 110600
+          "startTimeMs": 110500,
+          "endTimeMs": 110700
         },
         {
           "word": "no",
-          "startTimeMs": 110600,
-          "endTimeMs": 110800
+          "startTimeMs": 110700,
+          "endTimeMs": 110900
         },
         {
           "word": "Santo",
-          "startTimeMs": 110800,
-          "endTimeMs": 111300
+          "startTimeMs": 110900,
+          "endTimeMs": 111400
         },
         {
           "word": "(no)",
-          "startTimeMs": 111300,
+          "startTimeMs": 111400,
           "endTimeMs": 111710
         }
       ]
@@ -1719,41 +1719,41 @@
         {
           "word": "esto'",
           "startTimeMs": 111800,
-          "endTimeMs": 112000
+          "endTimeMs": 112100
         },
         {
           "word": "bobo'",
-          "startTimeMs": 112000,
-          "endTimeMs": 112300
-        },
-        {
-          "word": "con",
-          "startTimeMs": 112300,
+          "startTimeMs": 112100,
           "endTimeMs": 112500
         },
         {
-          "word": "la",
+          "word": "con",
           "startTimeMs": 112500,
           "endTimeMs": 112700
         },
         {
-          "word": "forty",
+          "word": "la",
           "startTimeMs": 112700,
-          "endTimeMs": 113000
+          "endTimeMs": 112900
+        },
+        {
+          "word": "forty",
+          "startTimeMs": 112900,
+          "endTimeMs": 113300
         },
         {
           "word": "lo'",
-          "startTimeMs": 113000,
-          "endTimeMs": 113200
+          "startTimeMs": 113300,
+          "endTimeMs": 113500
         },
         {
           "word": "espanto",
-          "startTimeMs": 113200,
-          "endTimeMs": 113800
+          "startTimeMs": 113500,
+          "endTimeMs": 114000
         },
         {
           "word": "(plo-plo)",
-          "startTimeMs": 113800,
+          "startTimeMs": 114000,
           "endTimeMs": 114360
         }
       ]
@@ -1778,31 +1778,31 @@
         {
           "word": "quieren",
           "startTimeMs": 114900,
-          "endTimeMs": 115200
+          "endTimeMs": 115300
         },
         {
           "word": "desde",
-          "startTimeMs": 115200,
-          "endTimeMs": 115500
+          "startTimeMs": 115300,
+          "endTimeMs": 115600
         },
         {
           "word": "que",
-          "startTimeMs": 115500,
-          "endTimeMs": 115700
+          "startTimeMs": 115600,
+          "endTimeMs": 115800
         },
         {
           "word": "yo",
-          "startTimeMs": 115700,
-          "endTimeMs": 115900
+          "startTimeMs": 115800,
+          "endTimeMs": 116000
         },
         {
           "word": "canto",
-          "startTimeMs": 115900,
-          "endTimeMs": 116400
+          "startTimeMs": 116000,
+          "endTimeMs": 116500
         },
         {
           "word": "(ja)",
-          "startTimeMs": 116400,
+          "startTimeMs": 116500,
           "endTimeMs": 116780
         }
       ]
@@ -1837,11 +1837,11 @@
         {
           "word": "na'más",
           "startTimeMs": 117800,
-          "endTimeMs": 118700
+          "endTimeMs": 118500
         },
         {
           "word": "(uh)",
-          "startTimeMs": 118700,
+          "startTimeMs": 118500,
           "endTimeMs": 119190
         }
       ]
@@ -1871,26 +1871,26 @@
         {
           "word": "Romeo,",
           "startTimeMs": 119700,
-          "endTimeMs": 120100
+          "endTimeMs": 120200
         },
         {
           "word": "pero",
-          "startTimeMs": 120100,
-          "endTimeMs": 120300
-        },
-        {
-          "word": "no",
-          "startTimeMs": 120300,
+          "startTimeMs": 120200,
           "endTimeMs": 120500
         },
         {
-          "word": "Santo",
+          "word": "no",
           "startTimeMs": 120500,
-          "endTimeMs": 121100
+          "endTimeMs": 120800
+        },
+        {
+          "word": "Santo",
+          "startTimeMs": 120800,
+          "endTimeMs": 121300
         },
         {
           "word": "(yeh)",
-          "startTimeMs": 121100,
+          "startTimeMs": 121300,
           "endTimeMs": 121670
         }
       ]
@@ -1910,41 +1910,41 @@
         {
           "word": "esto'",
           "startTimeMs": 121800,
-          "endTimeMs": 122000
+          "endTimeMs": 122100
         },
         {
           "word": "bobo'",
-          "startTimeMs": 122000,
-          "endTimeMs": 122200
+          "startTimeMs": 122100,
+          "endTimeMs": 122500
         },
         {
           "word": "con",
-          "startTimeMs": 122200,
-          "endTimeMs": 122400
+          "startTimeMs": 122500,
+          "endTimeMs": 122700
         },
         {
           "word": "la",
-          "startTimeMs": 122400,
-          "endTimeMs": 122600
-        },
-        {
-          "word": "forty",
-          "startTimeMs": 122600,
+          "startTimeMs": 122700,
           "endTimeMs": 122900
         },
         {
-          "word": "lo'",
+          "word": "forty",
           "startTimeMs": 122900,
-          "endTimeMs": 123100
+          "endTimeMs": 123300
+        },
+        {
+          "word": "lo'",
+          "startTimeMs": 123300,
+          "endTimeMs": 123500
         },
         {
           "word": "espanto",
-          "startTimeMs": 123100,
-          "endTimeMs": 123800
+          "startTimeMs": 123500,
+          "endTimeMs": 124000
         },
         {
           "word": "(brr)",
-          "startTimeMs": 123800,
+          "startTimeMs": 124000,
           "endTimeMs": 124200
         }
       ]
@@ -1959,41 +1959,41 @@
         {
           "word": "Muchas",
           "startTimeMs": 124200,
-          "endTimeMs": 124500
+          "endTimeMs": 124600
         },
         {
           "word": "me",
-          "startTimeMs": 124500,
-          "endTimeMs": 124700
+          "startTimeMs": 124600,
+          "endTimeMs": 124800
         },
         {
           "word": "quieren",
-          "startTimeMs": 124700,
-          "endTimeMs": 125000
+          "startTimeMs": 124800,
+          "endTimeMs": 125200
         },
         {
           "word": "desde",
-          "startTimeMs": 125000,
-          "endTimeMs": 125300
-        },
-        {
-          "word": "que",
-          "startTimeMs": 125300,
+          "startTimeMs": 125200,
           "endTimeMs": 125500
         },
         {
-          "word": "yo",
+          "word": "que",
           "startTimeMs": 125500,
           "endTimeMs": 125700
         },
         {
-          "word": "canto",
+          "word": "yo",
           "startTimeMs": 125700,
-          "endTimeMs": 126200
+          "endTimeMs": 125900
+        },
+        {
+          "word": "canto",
+          "startTimeMs": 125900,
+          "endTimeMs": 126300
         },
         {
           "word": "(ah)",
-          "startTimeMs": 126200,
+          "startTimeMs": 126300,
           "endTimeMs": 126630
         }
       ]
@@ -2023,11 +2023,11 @@
         {
           "word": "tuyo",
           "startTimeMs": 127200,
-          "endTimeMs": 127600
+          "endTimeMs": 127800
         },
         {
           "word": "na'más",
-          "startTimeMs": 127600,
+          "startTimeMs": 127800,
           "endTimeMs": 128810
         }
       ]
@@ -2052,46 +2052,46 @@
         {
           "word": "tú",
           "startTimeMs": 129300,
-          "endTimeMs": 129500
+          "endTimeMs": 129400
         },
         {
           "word": "eres",
-          "startTimeMs": 129500,
-          "endTimeMs": 129700
+          "startTimeMs": 129400,
+          "endTimeMs": 129600
         },
         {
           "word": "mía",
-          "startTimeMs": 129700,
-          "endTimeMs": 130100
+          "startTimeMs": 129600,
+          "endTimeMs": 130000
         },
         {
           "word": "desde",
-          "startTimeMs": 130100,
-          "endTimeMs": 130400
+          "startTimeMs": 130000,
+          "endTimeMs": 130300
         },
         {
           "word": "la",
-          "startTimeMs": 130400,
-          "endTimeMs": 130600
+          "startTimeMs": 130300,
+          "endTimeMs": 130500
         },
         {
           "word": "high",
-          "startTimeMs": 130600,
-          "endTimeMs": 131000
+          "startTimeMs": 130500,
+          "endTimeMs": 130800
         },
         {
           "word": "(desde",
-          "startTimeMs": 131000,
-          "endTimeMs": 131250
+          "startTimeMs": 130800,
+          "endTimeMs": 131100
         },
         {
           "word": "la",
-          "startTimeMs": 131250,
-          "endTimeMs": 131350
+          "startTimeMs": 131100,
+          "endTimeMs": 131200
         },
         {
           "word": "high)",
-          "startTimeMs": 131350,
+          "startTimeMs": 131200,
           "endTimeMs": 131510
         }
       ]
@@ -2106,11 +2106,11 @@
         {
           "word": "El",
           "startTimeMs": 131510,
-          "endTimeMs": 131650
+          "endTimeMs": 131600
         },
         {
           "word": "yerno",
-          "startTimeMs": 131650,
+          "startTimeMs": 131600,
           "endTimeMs": 131900
         },
         {
@@ -2121,11 +2121,11 @@
         {
           "word": "de",
           "startTimeMs": 132400,
-          "endTimeMs": 132550
+          "endTimeMs": 132600
         },
         {
           "word": "tu",
-          "startTimeMs": 132550,
+          "startTimeMs": 132600,
           "endTimeMs": 132700
         },
         {
@@ -2141,11 +2141,11 @@
         {
           "word": "tu",
           "startTimeMs": 133150,
-          "endTimeMs": 133250
+          "endTimeMs": 133300
         },
         {
           "word": "mai)",
-          "startTimeMs": 133250,
+          "startTimeMs": 133300,
           "endTimeMs": 133490
         }
       ]
@@ -2170,56 +2170,56 @@
         {
           "word": "que",
           "startTimeMs": 133900,
-          "endTimeMs": 134050
+          "endTimeMs": 134000
         },
         {
           "word": "tenía",
-          "startTimeMs": 134050,
+          "startTimeMs": 134000,
           "endTimeMs": 134300
         },
         {
           "word": "to'",
           "startTimeMs": 134300,
-          "endTimeMs": 134450
+          "endTimeMs": 134500
         },
         {
           "word": "las",
-          "startTimeMs": 134450,
-          "endTimeMs": 134550
+          "startTimeMs": 134500,
+          "endTimeMs": 134600
         },
         {
           "word": "Jordans",
-          "startTimeMs": 134550,
-          "endTimeMs": 134900
-        },
-        {
-          "word": "y",
-          "startTimeMs": 134900,
+          "startTimeMs": 134600,
           "endTimeMs": 135000
         },
         {
-          "word": "las",
+          "word": "y",
           "startTimeMs": 135000,
           "endTimeMs": 135100
         },
         {
-          "word": "Nike",
+          "word": "las",
           "startTimeMs": 135100,
-          "endTimeMs": 135500
+          "endTimeMs": 135200
+        },
+        {
+          "word": "Nike",
+          "startTimeMs": 135200,
+          "endTimeMs": 135400
         },
         {
           "word": "(y",
+          "startTimeMs": 135400,
+          "endTimeMs": 135500
+        },
+        {
+          "word": "las",
           "startTimeMs": 135500,
           "endTimeMs": 135600
         },
         {
-          "word": "las",
-          "startTimeMs": 135600,
-          "endTimeMs": 135700
-        },
-        {
           "word": "Nike)",
-          "startTimeMs": 135700,
+          "startTimeMs": 135600,
           "endTimeMs": 136000
         }
       ]
@@ -2249,31 +2249,31 @@
         {
           "word": "bobo'",
           "startTimeMs": 136500,
-          "endTimeMs": 136800
+          "endTimeMs": 136900
         },
         {
           "word": "que",
-          "startTimeMs": 136800,
-          "endTimeMs": 137000
+          "startTimeMs": 136900,
+          "endTimeMs": 137100
         },
         {
           "word": "dejen",
-          "startTimeMs": 137000,
-          "endTimeMs": 137300
+          "startTimeMs": 137100,
+          "endTimeMs": 137400
         },
         {
           "word": "de",
-          "startTimeMs": 137300,
-          "endTimeMs": 137450
+          "startTimeMs": 137400,
+          "endTimeMs": 137500
         },
         {
           "word": "darte",
-          "startTimeMs": 137450,
-          "endTimeMs": 137700
+          "startTimeMs": 137500,
+          "endTimeMs": 137800
         },
         {
           "word": "like",
-          "startTimeMs": 137700,
+          "startTimeMs": 137800,
           "endTimeMs": 138100
         },
         {
@@ -2357,11 +2357,11 @@
         {
           "word": "la",
           "startTimeMs": 141800,
-          "endTimeMs": 141950
+          "endTimeMs": 142000
         },
         {
           "word": "escalera",
-          "startTimeMs": 141950,
+          "startTimeMs": 142000,
           "endTimeMs": 142600
         },
         {
@@ -2435,11 +2435,11 @@
         {
           "word": "tu",
           "startTimeMs": 145600,
-          "endTimeMs": 145750
+          "endTimeMs": 145800
         },
         {
           "word": "primero,",
-          "startTimeMs": 145750,
+          "startTimeMs": 145800,
           "endTimeMs": 146300
         },
         {
@@ -2455,11 +2455,11 @@
         {
           "word": "mi",
           "startTimeMs": 146700,
-          "endTimeMs": 146850
+          "endTimeMs": 146900
         },
         {
           "word": "primera,",
-          "startTimeMs": 146850,
+          "startTimeMs": 146900,
           "endTimeMs": 147300
         },
         {
@@ -2479,26 +2479,26 @@
         {
           "word": "Porque",
           "startTimeMs": 147880,
-          "endTimeMs": 148200
+          "endTimeMs": 148100
         },
         {
           "word": "todos",
-          "startTimeMs": 148200,
-          "endTimeMs": 148600
+          "startTimeMs": 148100,
+          "endTimeMs": 148500
         },
         {
           "word": "te",
-          "startTimeMs": 148600,
-          "endTimeMs": 148800
+          "startTimeMs": 148500,
+          "endTimeMs": 148700
         },
         {
           "word": "quieren",
-          "startTimeMs": 148800,
-          "endTimeMs": 149300
+          "startTimeMs": 148700,
+          "endTimeMs": 149200
         },
         {
           "word": "probar",
-          "startTimeMs": 149300,
+          "startTimeMs": 149200,
           "endTimeMs": 150500
         },
         {
@@ -2528,56 +2528,56 @@
         {
           "word": "no",
           "startTimeMs": 151900,
-          "endTimeMs": 152200
+          "endTimeMs": 152100
         },
         {
           "word": "saben",
-          "startTimeMs": 152200,
-          "endTimeMs": 152700
+          "startTimeMs": 152100,
+          "endTimeMs": 152500
         },
         {
           "word": "es",
-          "startTimeMs": 152700,
-          "endTimeMs": 153000
+          "startTimeMs": 152500,
+          "endTimeMs": 152700
         },
         {
           "word": "que",
-          "startTimeMs": 153000,
-          "endTimeMs": 153200
+          "startTimeMs": 152700,
+          "endTimeMs": 152900
         },
         {
           "word": "no",
-          "startTimeMs": 153200,
-          "endTimeMs": 153500
+          "startTimeMs": 152900,
+          "endTimeMs": 153100
         },
         {
           "word": "te",
-          "startTimeMs": 153500,
-          "endTimeMs": 153700
+          "startTimeMs": 153100,
+          "endTimeMs": 153300
         },
         {
           "word": "dejas",
-          "startTimeMs": 153700,
-          "endTimeMs": 154500
+          "startTimeMs": 153300,
+          "endTimeMs": 153700
         },
         {
           "word": "llevar",
-          "startTimeMs": 154500,
-          "endTimeMs": 155500
+          "startTimeMs": 153700,
+          "endTimeMs": 154400
         },
         {
           "word": "de",
-          "startTimeMs": 155500,
-          "endTimeMs": 156000
+          "startTimeMs": 154400,
+          "endTimeMs": 154600
         },
         {
           "word": "cualquiera",
-          "startTimeMs": 156000,
-          "endTimeMs": 157200
+          "startTimeMs": 154600,
+          "endTimeMs": 155500
         },
         {
           "word": "(plo-plo-plo-plo)",
-          "startTimeMs": 157200,
+          "startTimeMs": 155500,
           "endTimeMs": 158220
         }
       ]
@@ -2612,11 +2612,11 @@
         {
           "word": "probar",
           "startTimeMs": 159500,
-          "endTimeMs": 160400
+          "endTimeMs": 160500
         },
         {
           "word": "(uh)",
-          "startTimeMs": 160400,
+          "startTimeMs": 160500,
           "endTimeMs": 161530
         }
       ]
@@ -2641,61 +2641,61 @@
         {
           "word": "no",
           "startTimeMs": 161900,
-          "endTimeMs": 162200
+          "endTimeMs": 162100
         },
         {
           "word": "saben",
-          "startTimeMs": 162200,
-          "endTimeMs": 162600
+          "startTimeMs": 162100,
+          "endTimeMs": 162500
         },
         {
           "word": "es",
-          "startTimeMs": 162600,
-          "endTimeMs": 162800
+          "startTimeMs": 162500,
+          "endTimeMs": 162700
         },
         {
           "word": "que",
-          "startTimeMs": 162800,
-          "endTimeMs": 163000
+          "startTimeMs": 162700,
+          "endTimeMs": 162900
         },
         {
           "word": "hoy",
-          "startTimeMs": 163000,
-          "endTimeMs": 163300
+          "startTimeMs": 162900,
+          "endTimeMs": 163200
         },
         {
           "word": "yo",
-          "startTimeMs": 163300,
-          "endTimeMs": 163600
+          "startTimeMs": 163200,
+          "endTimeMs": 163500
         },
         {
           "word": "te",
-          "startTimeMs": 163600,
-          "endTimeMs": 163800
+          "startTimeMs": 163500,
+          "endTimeMs": 163700
         },
         {
           "word": "voy",
-          "startTimeMs": 163800,
-          "endTimeMs": 164100
+          "startTimeMs": 163700,
+          "endTimeMs": 164000
         },
         {
           "word": "a",
-          "startTimeMs": 164100,
-          "endTimeMs": 164300
+          "startTimeMs": 164000,
+          "endTimeMs": 164200
         },
         {
           "word": "buscar,",
-          "startTimeMs": 164300,
-          "endTimeMs": 165100
+          "startTimeMs": 164200,
+          "endTimeMs": 165500
         },
         {
           "word": "yeah,",
-          "startTimeMs": 165100,
-          "endTimeMs": 166200
+          "startTimeMs": 165500,
+          "endTimeMs": 166300
         },
         {
           "word": "yeah",
-          "startTimeMs": 166200,
+          "startTimeMs": 166300,
           "endTimeMs": 167280
         }
       ]
@@ -2710,31 +2710,31 @@
         {
           "word": "Dile",
           "startTimeMs": 167280,
-          "endTimeMs": 167600
+          "endTimeMs": 167500
         },
         {
           "word": "que",
-          "startTimeMs": 167600,
-          "endTimeMs": 167800
+          "startTimeMs": 167500,
+          "endTimeMs": 167700
         },
         {
           "word": "tú",
-          "startTimeMs": 167800,
-          "endTimeMs": 168000
+          "startTimeMs": 167700,
+          "endTimeMs": 167900
         },
         {
           "word": "eres",
-          "startTimeMs": 168000,
-          "endTimeMs": 168400
+          "startTimeMs": 167900,
+          "endTimeMs": 168200
         },
         {
           "word": "mía,",
-          "startTimeMs": 168400,
-          "endTimeMs": 168900
+          "startTimeMs": 168200,
+          "endTimeMs": 168800
         },
         {
           "word": "mía",
-          "startTimeMs": 168900,
+          "startTimeMs": 168800,
           "endTimeMs": 169630
         }
       ]
@@ -2749,11 +2749,11 @@
         {
           "word": "Tú",
           "startTimeMs": 169630,
-          "endTimeMs": 169900
+          "endTimeMs": 169800
         },
         {
           "word": "sabe'",
-          "startTimeMs": 169900,
+          "startTimeMs": 169800,
           "endTimeMs": 170200
         },
         {
@@ -2764,16 +2764,16 @@
         {
           "word": "eres",
           "startTimeMs": 170400,
-          "endTimeMs": 170800
+          "endTimeMs": 170700
         },
         {
           "word": "mía,",
-          "startTimeMs": 170800,
-          "endTimeMs": 171400
+          "startTimeMs": 170700,
+          "endTimeMs": 171300
         },
         {
           "word": "mía",
-          "startTimeMs": 171400,
+          "startTimeMs": 171300,
           "endTimeMs": 172500
         }
       ]
@@ -2788,21 +2788,21 @@
         {
           "word": "Tú",
           "startTimeMs": 172500,
-          "endTimeMs": 172800
+          "endTimeMs": 172700
         },
         {
           "word": "misma",
-          "startTimeMs": 172800,
-          "endTimeMs": 173100
+          "startTimeMs": 172700,
+          "endTimeMs": 173000
         },
         {
           "word": "lo",
-          "startTimeMs": 173100,
-          "endTimeMs": 173300
+          "startTimeMs": 173000,
+          "endTimeMs": 173200
         },
         {
           "word": "decías",
-          "startTimeMs": 173300,
+          "startTimeMs": 173200,
           "endTimeMs": 173700
         },
         {
@@ -2847,11 +2847,11 @@
         {
           "word": "te",
           "startTimeMs": 175300,
-          "endTimeMs": 175400
+          "endTimeMs": 175450
         },
         {
           "word": "lo",
-          "startTimeMs": 175400,
+          "startTimeMs": 175450,
           "endTimeMs": 175600
         },
         {
@@ -2867,21 +2867,21 @@
         {
           "word": "yo",
           "startTimeMs": 176400,
-          "endTimeMs": 176600
+          "endTimeMs": 176550
         },
         {
           "word": "te",
-          "startTimeMs": 176600,
+          "startTimeMs": 176550,
           "endTimeMs": 176700
         },
         {
           "word": "lo",
           "startTimeMs": 176700,
-          "endTimeMs": 176900
+          "endTimeMs": 176850
         },
         {
           "word": "hacía)",
-          "startTimeMs": 176900,
+          "startTimeMs": 176850,
           "endTimeMs": 177230
         }
       ]
@@ -2896,31 +2896,31 @@
         {
           "word": "Dile",
           "startTimeMs": 177230,
-          "endTimeMs": 177600
+          "endTimeMs": 177500
         },
         {
           "word": "que",
-          "startTimeMs": 177600,
-          "endTimeMs": 177800
+          "startTimeMs": 177500,
+          "endTimeMs": 177700
         },
         {
           "word": "tú",
-          "startTimeMs": 177800,
-          "endTimeMs": 178000
+          "startTimeMs": 177700,
+          "endTimeMs": 177900
         },
         {
           "word": "eres",
-          "startTimeMs": 178000,
-          "endTimeMs": 178400
+          "startTimeMs": 177900,
+          "endTimeMs": 178200
         },
         {
           "word": "mía,",
-          "startTimeMs": 178400,
-          "endTimeMs": 178900
+          "startTimeMs": 178200,
+          "endTimeMs": 178800
         },
         {
           "word": "mía",
-          "startTimeMs": 178900,
+          "startTimeMs": 178800,
           "endTimeMs": 179680
         }
       ]
@@ -2935,11 +2935,11 @@
         {
           "word": "Tú",
           "startTimeMs": 179680,
-          "endTimeMs": 179900
+          "endTimeMs": 179800
         },
         {
           "word": "sabe'",
-          "startTimeMs": 179900,
+          "startTimeMs": 179800,
           "endTimeMs": 180200
         },
         {
@@ -2950,11 +2950,11 @@
         {
           "word": "eres",
           "startTimeMs": 180400,
-          "endTimeMs": 180800
+          "endTimeMs": 180700
         },
         {
           "word": "mía,",
-          "startTimeMs": 180800,
+          "startTimeMs": 180700,
           "endTimeMs": 181300
         },
         {
@@ -2974,21 +2974,21 @@
         {
           "word": "Tú",
           "startTimeMs": 182370,
-          "endTimeMs": 182600
+          "endTimeMs": 182500
         },
         {
           "word": "misma",
-          "startTimeMs": 182600,
-          "endTimeMs": 182900
+          "startTimeMs": 182500,
+          "endTimeMs": 182800
         },
         {
           "word": "lo",
-          "startTimeMs": 182900,
-          "endTimeMs": 183100
+          "startTimeMs": 182800,
+          "endTimeMs": 183000
         },
         {
           "word": "decías",
-          "startTimeMs": 183100,
+          "startTimeMs": 183000,
           "endTimeMs": 183500
         },
         {
@@ -3033,11 +3033,11 @@
         {
           "word": "te",
           "startTimeMs": 185000,
-          "endTimeMs": 185100
+          "endTimeMs": 185150
         },
         {
           "word": "lo",
-          "startTimeMs": 185100,
+          "startTimeMs": 185150,
           "endTimeMs": 185300
         },
         {
@@ -3053,21 +3053,21 @@
         {
           "word": "yo",
           "startTimeMs": 186100,
-          "endTimeMs": 186300
+          "endTimeMs": 186250
         },
         {
           "word": "te",
-          "startTimeMs": 186300,
+          "startTimeMs": 186250,
           "endTimeMs": 186400
         },
         {
           "word": "lo",
           "startTimeMs": 186400,
-          "endTimeMs": 186600
+          "endTimeMs": 186550
         },
         {
           "word": "hacía)",
-          "startTimeMs": 186600,
+          "startTimeMs": 186550,
           "endTimeMs": 187550
         }
       ]

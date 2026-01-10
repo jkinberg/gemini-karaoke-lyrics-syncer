@@ -1,0 +1,135 @@
+[
+  {
+    "term": {
+      "spanish": "pendente'",
+      "english": "keeping an eye"
+    },
+    "definition": "A Caribbean Spanish contraction of 'pendiente'. In this urban context, it refers to being 'on the lookout' or watching someone's every move, often implying social media stalking or jealousy from others.",
+    "difficulty": 4,
+    "example": {
+      "spanish": "Todos están pendente' a ti (wuh)",
+      "english": "Everyone is keeping an eye on you (wuh)"
+    },
+    "highlight": {
+      "spanish": "pendente'",
+      "english": "keeping an eye"
+    },
+    "startTimeMs": 10610,
+    "endTimeMs": 13320,
+    "segmentIndex": 4
+  },
+  {
+    "term": {
+      "spanish": "puesta pa'",
+      "english": "all for"
+    },
+    "definition": "A common slang expression meaning to be completely focused on, committed to, or 'set on' a specific person or goal. It implies that the person is ignoring all other suitors or distractions.",
+    "difficulty": 6,
+    "example": {
+      "spanish": "Todos están pendente' a ti (wuh)",
+      "english": "Everyone is keeping an eye on you (wuh)"
+    },
+    "highlight": {
+      "spanish": "puesta pa",
+      "english": "all for"
+    },
+    "startTimeMs": 10610,
+    "endTimeMs": 13320,
+    "segmentIndex": 5
+  },
+  {
+    "term": {
+      "spanish": "overall",
+      "english": "vibe"
+    },
+    "definition": "In Puerto Rican urban slang, this Anglicism doesn't refer to clothing but rather to one's general mood, energy, or 'vibe'. To have your 'overall' go up means to feel hyped or to have your spirits lifted.",
+    "difficulty": 8,
+    "example": {
+      "spanish": "Contigo me sube el overall (yeah)",
+      "english": "With you my vibe goes up (yeah)"
+    },
+    "highlight": {
+      "spanish": "overall",
+      "english": "vibe"
+    },
+    "startTimeMs": 72220,
+    "endTimeMs": 74460,
+    "segmentIndex": 25
+  },
+  {
+    "term": {
+      "spanish": "tirarte",
+      "english": "hitting on you"
+    },
+    "definition": "Derived from the verb 'tirar' (to throw). In a romantic or social context, it means to hit on someone, flirt aggressively, or 'throw lines' at them to get their attention.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "Que dejen de tirarte (brr)",
+      "english": "Tell them to stop hitting on you (brr)"
+    },
+    "highlight": {
+      "spanish": "tirarte",
+      "english": "hitting on you"
+    },
+    "startTimeMs": 85200,
+    "endTimeMs": 87470,
+    "segmentIndex": 30
+  },
+  {
+    "term": {
+      "spanish": "forty",
+      "english": "forty"
+    },
+    "definition": "Trap and reggaeton slang referring to a .40 caliber handgun. It is used here to create a 'tough' persona, suggesting the artist will protect his relationship or scare off 'fools' (bobos) with force.",
+    "difficulty": 7,
+    "example": {
+      "spanish": "A esto' bobo' con la forty lo' espanto (plo-plo)",
+      "english": "I scare these fools away with the forty (plo-plo)"
+    },
+    "highlight": {
+      "spanish": "forty",
+      "english": "forty"
+    },
+    "startTimeMs": 111710,
+    "endTimeMs": 114360,
+    "segmentIndex": 41
+  },
+  {
+    "term": {
+      "spanish": "la high",
+      "english": "high school"
+    },
+    "definition": "A direct borrowing from English used commonly in Puerto Rico. 'La high' refers to high school, and 'desde la high' indicates a long-term connection reaching back to their teenage years.",
+    "difficulty": 4,
+    "example": {
+      "spanish": "Dile' que tú eres mía desde la high (desde la high)",
+      "english": "Tell them that you've been mine since high school (since high school)"
+    },
+    "highlight": {
+      "spanish": "la high",
+      "english": "high school"
+    },
+    "startTimeMs": 128810,
+    "endTimeMs": 131510,
+    "segmentIndex": 48
+  },
+  {
+    "term": {
+      "spanish": "mai",
+      "english": "mom's"
+    },
+    "definition": "A colloquial Caribbean contraction of 'madre' (mother). It is often used to refer to one's own mother or as a slang term for a woman, emphasizing local, informal speech patterns.",
+    "difficulty": 3,
+    "example": {
+      "spanish": "El yerno favorito de tu mai (de tu mai)",
+      "english": "Your mom's favorite son-in-law (your mom's)"
+    },
+    "highlight": {
+      "spanish": "mai",
+      "english": "mom's"
+    },
+    "startTimeMs": 131510,
+    "endTimeMs": 133490,
+    "segmentIndex": 49
+  }
+]

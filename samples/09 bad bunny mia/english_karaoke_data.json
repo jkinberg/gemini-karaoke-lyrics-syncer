@@ -11,34 +11,34 @@
       "type": "INSTRUMENTAL",
       "startTimeMs": 0,
       "endTimeMs": 4170,
-      "segmentIndex": 1,
-      "cueText": "Musical Intro"
+      "segmentIndex": 0,
+      "cueText": "Intro"
     },
     {
       "type": "LYRIC",
       "startTimeMs": 4170,
       "endTimeMs": 6390,
-      "segmentIndex": 2,
+      "segmentIndex": 1,
       "text": "Bad Bunny, baby, baby",
       "words": [
         {
           "word": "Bad",
           "startTimeMs": 4170,
-          "endTimeMs": 4500
+          "endTimeMs": 4420
         },
         {
           "word": "Bunny,",
-          "startTimeMs": 4500,
-          "endTimeMs": 5000
+          "startTimeMs": 4420,
+          "endTimeMs": 4950
         },
         {
           "word": "baby,",
-          "startTimeMs": 5000,
-          "endTimeMs": 5600
+          "startTimeMs": 4950,
+          "endTimeMs": 5660
         },
         {
           "word": "baby",
-          "startTimeMs": 5600,
+          "startTimeMs": 5660,
           "endTimeMs": 6390
         }
       ]
@@ -47,7 +47,7 @@
       "type": "LYRIC",
       "startTimeMs": 6390,
       "endTimeMs": 9500,
-      "segmentIndex": 3,
+      "segmentIndex": 2,
       "text": "Yeh-yeh-yeh-yeh",
       "words": [
         {
@@ -61,7 +61,7 @@
       "type": "LYRIC",
       "startTimeMs": 9500,
       "endTimeMs": 10610,
-      "segmentIndex": 4,
+      "segmentIndex": 3,
       "text": "Yeah",
       "words": [
         {
@@ -75,42 +75,47 @@
       "type": "LYRIC",
       "startTimeMs": 10610,
       "endTimeMs": 13320,
-      "segmentIndex": 5,
-      "text": "Everyone has their eyes on you (wuh)",
+      "segmentIndex": 4,
+      "text": "Everyone is keeping an eye on you (wuh)",
       "words": [
         {
           "word": "Everyone",
           "startTimeMs": 10610,
-          "endTimeMs": 11210
+          "endTimeMs": 11000
         },
         {
-          "word": "has",
-          "startTimeMs": 11210,
-          "endTimeMs": 11410
+          "word": "is",
+          "startTimeMs": 11000,
+          "endTimeMs": 11200
         },
         {
-          "word": "their",
-          "startTimeMs": 11410,
-          "endTimeMs": 11610
+          "word": "keeping",
+          "startTimeMs": 11200,
+          "endTimeMs": 11600
         },
         {
-          "word": "eyes",
-          "startTimeMs": 11610,
-          "endTimeMs": 11910
+          "word": "an",
+          "startTimeMs": 11600,
+          "endTimeMs": 11800
+        },
+        {
+          "word": "eye",
+          "startTimeMs": 11800,
+          "endTimeMs": 12000
         },
         {
           "word": "on",
-          "startTimeMs": 11910,
-          "endTimeMs": 12110
+          "startTimeMs": 12000,
+          "endTimeMs": 12200
         },
         {
           "word": "you",
-          "startTimeMs": 12110,
-          "endTimeMs": 12510
+          "startTimeMs": 12200,
+          "endTimeMs": 12800
         },
         {
           "word": "(wuh)",
-          "startTimeMs": 12510,
+          "startTimeMs": 12800,
           "endTimeMs": 13320
         }
       ]
@@ -119,37 +124,37 @@
       "type": "LYRIC",
       "startTimeMs": 13320,
       "endTimeMs": 15620,
-      "segmentIndex": 6,
-      "text": "But you're set on me (uh-huh)",
+      "segmentIndex": 5,
+      "text": "But you're all for me (aha)",
       "words": [
         {
           "word": "But",
           "startTimeMs": 13320,
-          "endTimeMs": 13520
+          "endTimeMs": 13600
         },
         {
           "word": "you're",
-          "startTimeMs": 13520,
-          "endTimeMs": 13820
+          "startTimeMs": 13600,
+          "endTimeMs": 13900
         },
         {
-          "word": "set",
-          "startTimeMs": 13820,
-          "endTimeMs": 14120
+          "word": "all",
+          "startTimeMs": 13900,
+          "endTimeMs": 14200
         },
         {
-          "word": "on",
-          "startTimeMs": 14120,
-          "endTimeMs": 14320
+          "word": "for",
+          "startTimeMs": 14200,
+          "endTimeMs": 14500
         },
         {
           "word": "me",
-          "startTimeMs": 14320,
-          "endTimeMs": 14620
+          "startTimeMs": 14500,
+          "endTimeMs": 15100
         },
         {
-          "word": "(uh-huh)",
-          "startTimeMs": 14620,
+          "word": "(aha)",
+          "startTimeMs": 15100,
           "endTimeMs": 15620
         }
       ]
@@ -158,47 +163,47 @@
       "type": "LYRIC",
       "startTimeMs": 15620,
       "endTimeMs": 19100,
-      "segmentIndex": 7,
+      "segmentIndex": 6,
       "text": "Making them hate me even more (yeh, yeh-yeh)",
       "words": [
         {
           "word": "Making",
           "startTimeMs": 15620,
-          "endTimeMs": 16120
+          "endTimeMs": 16000
         },
         {
           "word": "them",
-          "startTimeMs": 16120,
-          "endTimeMs": 16420
+          "startTimeMs": 16000,
+          "endTimeMs": 16300
         },
         {
           "word": "hate",
-          "startTimeMs": 16420,
-          "endTimeMs": 16720
+          "startTimeMs": 16300,
+          "endTimeMs": 16600
         },
         {
           "word": "me",
-          "startTimeMs": 16720,
-          "endTimeMs": 16920
+          "startTimeMs": 16600,
+          "endTimeMs": 16800
         },
         {
           "word": "even",
-          "startTimeMs": 16920,
-          "endTimeMs": 17220
+          "startTimeMs": 16800,
+          "endTimeMs": 17200
         },
         {
           "word": "more",
-          "startTimeMs": 17220,
-          "endTimeMs": 17620
+          "startTimeMs": 17200,
+          "endTimeMs": 17800
         },
         {
           "word": "(yeh,",
-          "startTimeMs": 17620,
-          "endTimeMs": 18220
+          "startTimeMs": 17800,
+          "endTimeMs": 18300
         },
         {
           "word": "yeh-yeh)",
-          "startTimeMs": 18220,
+          "startTimeMs": 18300,
           "endTimeMs": 19100
         }
       ]
@@ -207,47 +212,42 @@
       "type": "LYRIC",
       "startTimeMs": 19100,
       "endTimeMs": 22790,
-      "segmentIndex": 8,
-      "text": "Because everyone wants a taste of you (ah)",
+      "segmentIndex": 7,
+      "text": "Because everyone wants to try you (ah)",
       "words": [
         {
           "word": "Because",
           "startTimeMs": 19100,
-          "endTimeMs": 19500
+          "endTimeMs": 19400
         },
         {
           "word": "everyone",
-          "startTimeMs": 19500,
-          "endTimeMs": 20000
+          "startTimeMs": 19400,
+          "endTimeMs": 19900
         },
         {
           "word": "wants",
-          "startTimeMs": 20000,
-          "endTimeMs": 20300
+          "startTimeMs": 19900,
+          "endTimeMs": 20200
         },
         {
-          "word": "a",
-          "startTimeMs": 20300,
+          "word": "to",
+          "startTimeMs": 20200,
           "endTimeMs": 20400
         },
         {
-          "word": "taste",
+          "word": "try",
           "startTimeMs": 20400,
-          "endTimeMs": 20700
-        },
-        {
-          "word": "of",
-          "startTimeMs": 20700,
-          "endTimeMs": 20800
+          "endTimeMs": 21000
         },
         {
           "word": "you",
-          "startTimeMs": 20800,
-          "endTimeMs": 21100
+          "startTimeMs": 21000,
+          "endTimeMs": 21800
         },
         {
           "word": "(ah)",
-          "startTimeMs": 21100,
+          "startTimeMs": 21800,
           "endTimeMs": 22790
         }
       ]
@@ -256,67 +256,67 @@
       "type": "LYRIC",
       "startTimeMs": 22790,
       "endTimeMs": 29360,
-      "segmentIndex": 9,
-      "text": "What they don't know is that you don't fall for just anyone",
+      "segmentIndex": 8,
+      "text": "What they don't know is you don't let just anyone take you",
       "words": [
         {
           "word": "What",
           "startTimeMs": 22790,
-          "endTimeMs": 23190
+          "endTimeMs": 23000
         },
         {
           "word": "they",
-          "startTimeMs": 23190,
-          "endTimeMs": 23590
+          "startTimeMs": 23000,
+          "endTimeMs": 23200
         },
         {
           "word": "don't",
-          "startTimeMs": 23590,
-          "endTimeMs": 23990
+          "startTimeMs": 23200,
+          "endTimeMs": 23400
         },
         {
           "word": "know",
-          "startTimeMs": 23990,
-          "endTimeMs": 24390
+          "startTimeMs": 23400,
+          "endTimeMs": 23800
         },
         {
           "word": "is",
-          "startTimeMs": 24390,
-          "endTimeMs": 24690
-        },
-        {
-          "word": "that",
-          "startTimeMs": 24690,
-          "endTimeMs": 24990
+          "startTimeMs": 23800,
+          "endTimeMs": 24000
         },
         {
           "word": "you",
-          "startTimeMs": 24990,
-          "endTimeMs": 25290
+          "startTimeMs": 24000,
+          "endTimeMs": 24200
         },
         {
           "word": "don't",
-          "startTimeMs": 25290,
-          "endTimeMs": 25690
+          "startTimeMs": 24200,
+          "endTimeMs": 24500
         },
         {
-          "word": "fall",
-          "startTimeMs": 25690,
-          "endTimeMs": 26090
-        },
-        {
-          "word": "for",
-          "startTimeMs": 26090,
-          "endTimeMs": 26390
+          "word": "let",
+          "startTimeMs": 24500,
+          "endTimeMs": 24700
         },
         {
           "word": "just",
-          "startTimeMs": 26390,
-          "endTimeMs": 26790
+          "startTimeMs": 24700,
+          "endTimeMs": 25000
         },
         {
           "word": "anyone",
-          "startTimeMs": 26790,
+          "startTimeMs": 25000,
+          "endTimeMs": 25500
+        },
+        {
+          "word": "take",
+          "startTimeMs": 25500,
+          "endTimeMs": 26000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 26000,
           "endTimeMs": 29360
         }
       ]
@@ -325,47 +325,42 @@
       "type": "LYRIC",
       "startTimeMs": 29360,
       "endTimeMs": 33060,
-      "segmentIndex": 10,
-      "text": "And everyone wants a taste of you (ah)",
+      "segmentIndex": 9,
+      "text": "And everyone wants to try you (ah)",
       "words": [
         {
           "word": "And",
           "startTimeMs": 29360,
-          "endTimeMs": 29660
+          "endTimeMs": 29500
         },
         {
           "word": "everyone",
-          "startTimeMs": 29660,
-          "endTimeMs": 30160
+          "startTimeMs": 29500,
+          "endTimeMs": 30000
         },
         {
           "word": "wants",
-          "startTimeMs": 30160,
-          "endTimeMs": 30560
+          "startTimeMs": 30000,
+          "endTimeMs": 30300
         },
         {
-          "word": "a",
-          "startTimeMs": 30560,
-          "endTimeMs": 30660
+          "word": "to",
+          "startTimeMs": 30300,
+          "endTimeMs": 30500
         },
         {
-          "word": "taste",
-          "startTimeMs": 30660,
-          "endTimeMs": 30960
-        },
-        {
-          "word": "of",
-          "startTimeMs": 30960,
-          "endTimeMs": 31160
+          "word": "try",
+          "startTimeMs": 30500,
+          "endTimeMs": 31000
         },
         {
           "word": "you",
-          "startTimeMs": 31160,
-          "endTimeMs": 31560
+          "startTimeMs": 31000,
+          "endTimeMs": 32000
         },
         {
           "word": "(ah)",
-          "startTimeMs": 31560,
+          "startTimeMs": 32000,
           "endTimeMs": 33060
         }
       ]
@@ -374,72 +369,77 @@
       "type": "LYRIC",
       "startTimeMs": 33060,
       "endTimeMs": 38640,
-      "segmentIndex": 11,
-      "text": "What they don't know is that today I'm coming for you (yeah, yeah)",
+      "segmentIndex": 10,
+      "text": "What they don't know is today I'm going to look for you (yeah, yeah)",
       "words": [
         {
           "word": "What",
           "startTimeMs": 33060,
-          "endTimeMs": 33360
+          "endTimeMs": 33200
         },
         {
           "word": "they",
-          "startTimeMs": 33360,
-          "endTimeMs": 33660
+          "startTimeMs": 33200,
+          "endTimeMs": 33400
         },
         {
           "word": "don't",
-          "startTimeMs": 33660,
-          "endTimeMs": 33960
+          "startTimeMs": 33400,
+          "endTimeMs": 33600
         },
         {
           "word": "know",
-          "startTimeMs": 33960,
-          "endTimeMs": 34260
+          "startTimeMs": 33600,
+          "endTimeMs": 33900
         },
         {
           "word": "is",
-          "startTimeMs": 34260,
-          "endTimeMs": 34460
-        },
-        {
-          "word": "that",
-          "startTimeMs": 34460,
-          "endTimeMs": 34660
+          "startTimeMs": 33900,
+          "endTimeMs": 34100
         },
         {
           "word": "today",
-          "startTimeMs": 34660,
-          "endTimeMs": 34960
+          "startTimeMs": 34100,
+          "endTimeMs": 34400
         },
         {
           "word": "I'm",
-          "startTimeMs": 34960,
-          "endTimeMs": 35200
+          "startTimeMs": 34400,
+          "endTimeMs": 34600
         },
         {
-          "word": "coming",
-          "startTimeMs": 35200,
-          "endTimeMs": 35600
+          "word": "going",
+          "startTimeMs": 34600,
+          "endTimeMs": 34900
+        },
+        {
+          "word": "to",
+          "startTimeMs": 34900,
+          "endTimeMs": 35100
+        },
+        {
+          "word": "look",
+          "startTimeMs": 35100,
+          "endTimeMs": 35400
         },
         {
           "word": "for",
-          "startTimeMs": 35600,
-          "endTimeMs": 35900
+          "startTimeMs": 35400,
+          "endTimeMs": 35600
         },
         {
           "word": "you",
-          "startTimeMs": 35900,
-          "endTimeMs": 36600
+          "startTimeMs": 35600,
+          "endTimeMs": 36800
         },
         {
           "word": "(yeah,",
-          "startTimeMs": 36600,
-          "endTimeMs": 37600
+          "startTimeMs": 36800,
+          "endTimeMs": 37500
         },
         {
           "word": "yeah)",
-          "startTimeMs": 37600,
+          "startTimeMs": 37500,
           "endTimeMs": 38640
         }
       ]
@@ -448,42 +448,42 @@
       "type": "LYRIC",
       "startTimeMs": 38640,
       "endTimeMs": 41010,
-      "segmentIndex": 12,
-      "text": "Tell him that you are mine, mine",
+      "segmentIndex": 11,
+      "text": "Tell them that you are mine, mine",
       "words": [
         {
           "word": "Tell",
           "startTimeMs": 38640,
-          "endTimeMs": 38940
+          "endTimeMs": 38900
         },
         {
-          "word": "him",
-          "startTimeMs": 38940,
-          "endTimeMs": 39240
+          "word": "them",
+          "startTimeMs": 38900,
+          "endTimeMs": 39100
         },
         {
           "word": "that",
-          "startTimeMs": 39240,
-          "endTimeMs": 39440
+          "startTimeMs": 39100,
+          "endTimeMs": 39300
         },
         {
           "word": "you",
-          "startTimeMs": 39440,
-          "endTimeMs": 39640
+          "startTimeMs": 39300,
+          "endTimeMs": 39500
         },
         {
           "word": "are",
-          "startTimeMs": 39640,
-          "endTimeMs": 39840
+          "startTimeMs": 39500,
+          "endTimeMs": 39700
         },
         {
           "word": "mine,",
-          "startTimeMs": 39840,
-          "endTimeMs": 40340
+          "startTimeMs": 39700,
+          "endTimeMs": 40300
         },
         {
           "word": "mine",
-          "startTimeMs": 40340,
+          "startTimeMs": 40300,
           "endTimeMs": 41010
         }
       ]
@@ -492,42 +492,42 @@
       "type": "LYRIC",
       "startTimeMs": 41010,
       "endTimeMs": 43870,
-      "segmentIndex": 13,
+      "segmentIndex": 12,
       "text": "You know that you are mine, mine",
       "words": [
         {
           "word": "You",
           "startTimeMs": 41010,
-          "endTimeMs": 41310
+          "endTimeMs": 41300
         },
         {
           "word": "know",
-          "startTimeMs": 41310,
-          "endTimeMs": 41610
+          "startTimeMs": 41300,
+          "endTimeMs": 41600
         },
         {
           "word": "that",
-          "startTimeMs": 41610,
-          "endTimeMs": 41810
+          "startTimeMs": 41600,
+          "endTimeMs": 41800
         },
         {
           "word": "you",
-          "startTimeMs": 41810,
-          "endTimeMs": 42010
+          "startTimeMs": 41800,
+          "endTimeMs": 42000
         },
         {
           "word": "are",
-          "startTimeMs": 42010,
-          "endTimeMs": 42210
+          "startTimeMs": 42000,
+          "endTimeMs": 42200
         },
         {
           "word": "mine,",
-          "startTimeMs": 42210,
-          "endTimeMs": 42910
+          "startTimeMs": 42200,
+          "endTimeMs": 42900
         },
         {
           "word": "mine",
-          "startTimeMs": 42910,
+          "startTimeMs": 42900,
           "endTimeMs": 43870
         }
       ]
@@ -536,27 +536,27 @@
       "type": "LYRIC",
       "startTimeMs": 43870,
       "endTimeMs": 45910,
-      "segmentIndex": 14,
+      "segmentIndex": 13,
       "text": "You said it yourself",
       "words": [
         {
           "word": "You",
           "startTimeMs": 43870,
-          "endTimeMs": 44170
+          "endTimeMs": 44200
         },
         {
           "word": "said",
-          "startTimeMs": 44170,
-          "endTimeMs": 44570
+          "startTimeMs": 44200,
+          "endTimeMs": 44600
         },
         {
           "word": "it",
-          "startTimeMs": 44570,
-          "endTimeMs": 44870
+          "startTimeMs": 44600,
+          "endTimeMs": 45000
         },
         {
           "word": "yourself",
-          "startTimeMs": 44870,
+          "startTimeMs": 45000,
           "endTimeMs": 45910
         }
       ]
@@ -565,42 +565,42 @@
       "type": "LYRIC",
       "startTimeMs": 45910,
       "endTimeMs": 47820,
-      "segmentIndex": 15,
+      "segmentIndex": 14,
       "text": "When I was doing it to you",
       "words": [
         {
           "word": "When",
           "startTimeMs": 45910,
-          "endTimeMs": 46210
+          "endTimeMs": 46200
         },
         {
           "word": "I",
-          "startTimeMs": 46210,
-          "endTimeMs": 46410
+          "startTimeMs": 46200,
+          "endTimeMs": 46400
         },
         {
           "word": "was",
-          "startTimeMs": 46410,
-          "endTimeMs": 46610
+          "startTimeMs": 46400,
+          "endTimeMs": 46600
         },
         {
           "word": "doing",
-          "startTimeMs": 46610,
-          "endTimeMs": 47010
+          "startTimeMs": 46600,
+          "endTimeMs": 47000
         },
         {
           "word": "it",
-          "startTimeMs": 47010,
-          "endTimeMs": 47210
+          "startTimeMs": 47000,
+          "endTimeMs": 47200
         },
         {
           "word": "to",
-          "startTimeMs": 47210,
-          "endTimeMs": 47410
+          "startTimeMs": 47200,
+          "endTimeMs": 47400
         },
         {
           "word": "you",
-          "startTimeMs": 47410,
+          "startTimeMs": 47400,
           "endTimeMs": 47820
         }
       ]
@@ -609,47 +609,47 @@
       "type": "LYRIC",
       "startTimeMs": 47820,
       "endTimeMs": 51040,
-      "segmentIndex": 16,
-      "text": "Yeah, tell him that you are mine, mine",
+      "segmentIndex": 15,
+      "text": "Yeah, tell them that you are mine, mine",
       "words": [
         {
           "word": "Yeah,",
           "startTimeMs": 47820,
-          "endTimeMs": 48520
+          "endTimeMs": 48200
         },
         {
           "word": "tell",
-          "startTimeMs": 48520,
-          "endTimeMs": 48920
+          "startTimeMs": 48200,
+          "endTimeMs": 48500
         },
         {
-          "word": "him",
-          "startTimeMs": 48920,
-          "endTimeMs": 49120
+          "word": "them",
+          "startTimeMs": 48500,
+          "endTimeMs": 48700
         },
         {
           "word": "that",
-          "startTimeMs": 49120,
-          "endTimeMs": 49320
+          "startTimeMs": 48700,
+          "endTimeMs": 48900
         },
         {
           "word": "you",
-          "startTimeMs": 49320,
-          "endTimeMs": 49520
+          "startTimeMs": 48900,
+          "endTimeMs": 49100
         },
         {
           "word": "are",
-          "startTimeMs": 49520,
-          "endTimeMs": 49720
+          "startTimeMs": 49100,
+          "endTimeMs": 49300
         },
         {
           "word": "mine,",
-          "startTimeMs": 49720,
-          "endTimeMs": 50320
+          "startTimeMs": 49300,
+          "endTimeMs": 50000
         },
         {
           "word": "mine",
-          "startTimeMs": 50320,
+          "startTimeMs": 50000,
           "endTimeMs": 51040
         }
       ]
@@ -658,42 +658,42 @@
       "type": "LYRIC",
       "startTimeMs": 51040,
       "endTimeMs": 53540,
-      "segmentIndex": 17,
+      "segmentIndex": 16,
       "text": "You know that you are mine, mine",
       "words": [
         {
           "word": "You",
           "startTimeMs": 51040,
-          "endTimeMs": 51340
+          "endTimeMs": 51300
         },
         {
           "word": "know",
-          "startTimeMs": 51340,
-          "endTimeMs": 51640
+          "startTimeMs": 51300,
+          "endTimeMs": 51600
         },
         {
           "word": "that",
-          "startTimeMs": 51640,
-          "endTimeMs": 51840
+          "startTimeMs": 51600,
+          "endTimeMs": 51800
         },
         {
           "word": "you",
-          "startTimeMs": 51840,
-          "endTimeMs": 52040
+          "startTimeMs": 51800,
+          "endTimeMs": 52000
         },
         {
           "word": "are",
-          "startTimeMs": 52040,
-          "endTimeMs": 52240
+          "startTimeMs": 52000,
+          "endTimeMs": 52200
         },
         {
           "word": "mine,",
-          "startTimeMs": 52240,
-          "endTimeMs": 52840
+          "startTimeMs": 52200,
+          "endTimeMs": 52800
         },
         {
           "word": "mine",
-          "startTimeMs": 52840,
+          "startTimeMs": 52800,
           "endTimeMs": 53540
         }
       ]
@@ -702,27 +702,27 @@
       "type": "LYRIC",
       "startTimeMs": 53540,
       "endTimeMs": 55810,
-      "segmentIndex": 18,
+      "segmentIndex": 17,
       "text": "You said it yourself",
       "words": [
         {
           "word": "You",
           "startTimeMs": 53540,
-          "endTimeMs": 53940
+          "endTimeMs": 53900
         },
         {
           "word": "said",
-          "startTimeMs": 53940,
-          "endTimeMs": 54340
+          "startTimeMs": 53900,
+          "endTimeMs": 54300
         },
         {
           "word": "it",
-          "startTimeMs": 54340,
-          "endTimeMs": 54640
+          "startTimeMs": 54300,
+          "endTimeMs": 54700
         },
         {
           "word": "yourself",
-          "startTimeMs": 54640,
+          "startTimeMs": 54700,
           "endTimeMs": 55810
         }
       ]
@@ -731,42 +731,42 @@
       "type": "LYRIC",
       "startTimeMs": 55810,
       "endTimeMs": 57750,
-      "segmentIndex": 19,
+      "segmentIndex": 18,
       "text": "When I was doing it to you",
       "words": [
         {
           "word": "When",
           "startTimeMs": 55810,
-          "endTimeMs": 56110
+          "endTimeMs": 56100
         },
         {
           "word": "I",
-          "startTimeMs": 56110,
-          "endTimeMs": 56310
+          "startTimeMs": 56100,
+          "endTimeMs": 56300
         },
         {
           "word": "was",
-          "startTimeMs": 56310,
-          "endTimeMs": 56510
+          "startTimeMs": 56300,
+          "endTimeMs": 56600
         },
         {
           "word": "doing",
-          "startTimeMs": 56510,
-          "endTimeMs": 56910
+          "startTimeMs": 56600,
+          "endTimeMs": 57000
         },
         {
           "word": "it",
-          "startTimeMs": 56910,
-          "endTimeMs": 57110
+          "startTimeMs": 57000,
+          "endTimeMs": 57200
         },
         {
           "word": "to",
-          "startTimeMs": 57110,
-          "endTimeMs": 57310
+          "startTimeMs": 57200,
+          "endTimeMs": 57400
         },
         {
           "word": "you",
-          "startTimeMs": 57310,
+          "startTimeMs": 57400,
           "endTimeMs": 57750
         }
       ]
@@ -775,11 +775,11 @@
       "type": "LYRIC",
       "startTimeMs": 57750,
       "endTimeMs": 59480,
-      "segmentIndex": 20,
-      "text": "Yeah-call-yeah-yeah",
+      "segmentIndex": 19,
+      "text": "Yeah-yeah-yeah-yeah",
       "words": [
         {
-          "word": "Yeah-call-yeah-yeah",
+          "word": "Yeah-yeah-yeah-yeah",
           "startTimeMs": 57750,
           "endTimeMs": 59480
         }
@@ -789,7 +789,7 @@
       "type": "LYRIC",
       "startTimeMs": 59480,
       "endTimeMs": 62330,
-      "segmentIndex": 21,
+      "segmentIndex": 20,
       "text": "Baby, I'm a fan of the way you walk (uh)",
       "words": [
         {
@@ -820,21 +820,21 @@
         {
           "word": "the",
           "startTimeMs": 60700,
-          "endTimeMs": 60800
+          "endTimeMs": 60900
         },
         {
           "word": "way",
-          "startTimeMs": 60800,
-          "endTimeMs": 61000
+          "startTimeMs": 60900,
+          "endTimeMs": 61100
         },
         {
           "word": "you",
-          "startTimeMs": 61000,
-          "endTimeMs": 61200
+          "startTimeMs": 61100,
+          "endTimeMs": 61300
         },
         {
           "word": "walk",
-          "startTimeMs": 61200,
+          "startTimeMs": 61300,
           "endTimeMs": 61800
         },
         {
@@ -848,57 +848,57 @@
       "type": "LYRIC",
       "startTimeMs": 62330,
       "endTimeMs": 64660,
-      "segmentIndex": 22,
+      "segmentIndex": 21,
       "text": "I give you everything of mine, even my breath (yeah)",
       "words": [
         {
           "word": "I",
           "startTimeMs": 62330,
-          "endTimeMs": 62430
+          "endTimeMs": 62500
         },
         {
           "word": "give",
-          "startTimeMs": 62430,
-          "endTimeMs": 62630
+          "startTimeMs": 62500,
+          "endTimeMs": 62700
         },
         {
           "word": "you",
-          "startTimeMs": 62630,
-          "endTimeMs": 62830
+          "startTimeMs": 62700,
+          "endTimeMs": 62900
         },
         {
           "word": "everything",
-          "startTimeMs": 62830,
-          "endTimeMs": 63230
+          "startTimeMs": 62900,
+          "endTimeMs": 63300
         },
         {
           "word": "of",
-          "startTimeMs": 63230,
-          "endTimeMs": 63330
+          "startTimeMs": 63300,
+          "endTimeMs": 63500
         },
         {
           "word": "mine,",
-          "startTimeMs": 63330,
-          "endTimeMs": 63630
+          "startTimeMs": 63500,
+          "endTimeMs": 63800
         },
         {
           "word": "even",
-          "startTimeMs": 63630,
-          "endTimeMs": 63830
+          "startTimeMs": 63800,
+          "endTimeMs": 64000
         },
         {
           "word": "my",
-          "startTimeMs": 63830,
-          "endTimeMs": 63930
+          "startTimeMs": 64000,
+          "endTimeMs": 64200
         },
         {
           "word": "breath",
-          "startTimeMs": 63930,
-          "endTimeMs": 64330
+          "startTimeMs": 64200,
+          "endTimeMs": 64500
         },
         {
           "word": "(yeah)",
-          "startTimeMs": 64330,
+          "startTimeMs": 64500,
           "endTimeMs": 64660
         }
       ]
@@ -907,52 +907,47 @@
       "type": "LYRIC",
       "startTimeMs": 64660,
       "endTimeMs": 67250,
-      "segmentIndex": 23,
-      "text": "With you I see everything like in a spiral (yeah)",
+      "segmentIndex": 22,
+      "text": "With you I see everything in a spiral (yeah)",
       "words": [
         {
           "word": "With",
           "startTimeMs": 64660,
-          "endTimeMs": 64860
+          "endTimeMs": 64900
         },
         {
           "word": "you",
-          "startTimeMs": 64860,
-          "endTimeMs": 65060
+          "startTimeMs": 64900,
+          "endTimeMs": 65100
         },
         {
           "word": "I",
-          "startTimeMs": 65060,
-          "endTimeMs": 65160
+          "startTimeMs": 65100,
+          "endTimeMs": 65300
         },
         {
           "word": "see",
-          "startTimeMs": 65160,
-          "endTimeMs": 65360
+          "startTimeMs": 65300,
+          "endTimeMs": 65600
         },
         {
           "word": "everything",
-          "startTimeMs": 65360,
-          "endTimeMs": 65760
-        },
-        {
-          "word": "like",
-          "startTimeMs": 65760,
-          "endTimeMs": 65960
+          "startTimeMs": 65600,
+          "endTimeMs": 66000
         },
         {
           "word": "in",
-          "startTimeMs": 65960,
-          "endTimeMs": 66060
+          "startTimeMs": 66000,
+          "endTimeMs": 66200
         },
         {
           "word": "a",
-          "startTimeMs": 66060,
-          "endTimeMs": 66160
+          "startTimeMs": 66200,
+          "endTimeMs": 66400
         },
         {
           "word": "spiral",
-          "startTimeMs": 66160,
+          "startTimeMs": 66400,
           "endTimeMs": 66800
         },
         {
@@ -966,67 +961,67 @@
       "type": "LYRIC",
       "startTimeMs": 67250,
       "endTimeMs": 69590,
-      "segmentIndex": 24,
+      "segmentIndex": 23,
       "text": "I want us to take photos and have them go viral (ah)",
       "words": [
         {
           "word": "I",
           "startTimeMs": 67250,
-          "endTimeMs": 67350
+          "endTimeMs": 67400
         },
         {
           "word": "want",
-          "startTimeMs": 67350,
-          "endTimeMs": 67550
+          "startTimeMs": 67400,
+          "endTimeMs": 67600
         },
         {
           "word": "us",
-          "startTimeMs": 67550,
-          "endTimeMs": 67650
+          "startTimeMs": 67600,
+          "endTimeMs": 67800
         },
         {
           "word": "to",
-          "startTimeMs": 67650,
-          "endTimeMs": 67750
+          "startTimeMs": 67800,
+          "endTimeMs": 68000
         },
         {
           "word": "take",
-          "startTimeMs": 67750,
-          "endTimeMs": 67950
+          "startTimeMs": 68000,
+          "endTimeMs": 68200
         },
         {
           "word": "photos",
-          "startTimeMs": 67950,
-          "endTimeMs": 68250
+          "startTimeMs": 68200,
+          "endTimeMs": 68500
         },
         {
           "word": "and",
-          "startTimeMs": 68250,
-          "endTimeMs": 68350
+          "startTimeMs": 68500,
+          "endTimeMs": 68700
         },
         {
           "word": "have",
-          "startTimeMs": 68350,
-          "endTimeMs": 68450
+          "startTimeMs": 68700,
+          "endTimeMs": 68900
         },
         {
           "word": "them",
-          "startTimeMs": 68450,
-          "endTimeMs": 68550
+          "startTimeMs": 68900,
+          "endTimeMs": 69100
         },
         {
           "word": "go",
-          "startTimeMs": 68550,
-          "endTimeMs": 68750
+          "startTimeMs": 69100,
+          "endTimeMs": 69300
         },
         {
           "word": "viral",
-          "startTimeMs": 68750,
-          "endTimeMs": 69250
+          "startTimeMs": 69300,
+          "endTimeMs": 69400
         },
         {
           "word": "(ah)",
-          "startTimeMs": 69250,
+          "startTimeMs": 69400,
           "endTimeMs": 69590
         }
       ]
@@ -1035,42 +1030,42 @@
       "type": "LYRIC",
       "startTimeMs": 69590,
       "endTimeMs": 72220,
-      "segmentIndex": 25,
-      "text": "Your eyes keep me focused like Adderall (uh)",
+      "segmentIndex": 24,
+      "text": "Your eyes make me focus like Adderall (uh)",
       "words": [
         {
           "word": "Your",
           "startTimeMs": 69590,
-          "endTimeMs": 69790
+          "endTimeMs": 69800
         },
         {
           "word": "eyes",
-          "startTimeMs": 69790,
-          "endTimeMs": 70090
+          "startTimeMs": 69800,
+          "endTimeMs": 70100
         },
         {
-          "word": "keep",
-          "startTimeMs": 70090,
-          "endTimeMs": 70290
+          "word": "make",
+          "startTimeMs": 70100,
+          "endTimeMs": 70300
         },
         {
           "word": "me",
-          "startTimeMs": 70290,
-          "endTimeMs": 70490
+          "startTimeMs": 70300,
+          "endTimeMs": 70500
         },
         {
-          "word": "focused",
-          "startTimeMs": 70490,
-          "endTimeMs": 70890
+          "word": "focus",
+          "startTimeMs": 70500,
+          "endTimeMs": 70900
         },
         {
           "word": "like",
-          "startTimeMs": 70890,
-          "endTimeMs": 71190
+          "startTimeMs": 70900,
+          "endTimeMs": 71200
         },
         {
           "word": "Adderall",
-          "startTimeMs": 71190,
+          "startTimeMs": 71200,
           "endTimeMs": 71800
         },
         {
@@ -1084,42 +1079,42 @@
       "type": "LYRIC",
       "startTimeMs": 72220,
       "endTimeMs": 74460,
-      "segmentIndex": 26,
-      "text": "With you my level goes up (yeah)",
+      "segmentIndex": 25,
+      "text": "With you my vibe goes up (yeah)",
       "words": [
         {
           "word": "With",
           "startTimeMs": 72220,
-          "endTimeMs": 72420
+          "endTimeMs": 72500
         },
         {
           "word": "you",
-          "startTimeMs": 72420,
-          "endTimeMs": 72620
+          "startTimeMs": 72500,
+          "endTimeMs": 72800
         },
         {
           "word": "my",
-          "startTimeMs": 72620,
-          "endTimeMs": 72820
+          "startTimeMs": 72800,
+          "endTimeMs": 73000
         },
         {
-          "word": "level",
-          "startTimeMs": 72820,
-          "endTimeMs": 73220
+          "word": "vibe",
+          "startTimeMs": 73000,
+          "endTimeMs": 73400
         },
         {
           "word": "goes",
-          "startTimeMs": 73220,
-          "endTimeMs": 73520
+          "startTimeMs": 73400,
+          "endTimeMs": 73700
         },
         {
           "word": "up",
-          "startTimeMs": 73520,
-          "endTimeMs": 74020
+          "startTimeMs": 73700,
+          "endTimeMs": 74100
         },
         {
           "word": "(yeah)",
-          "startTimeMs": 74020,
+          "startTimeMs": 74100,
           "endTimeMs": 74460
         }
       ]
@@ -1128,57 +1123,57 @@
       "type": "LYRIC",
       "startTimeMs": 74460,
       "endTimeMs": 76970,
-      "segmentIndex": 27,
+      "segmentIndex": 26,
       "text": "I touch you and even the world stops spinning (uh)",
       "words": [
         {
           "word": "I",
           "startTimeMs": 74460,
-          "endTimeMs": 74560
+          "endTimeMs": 74600
         },
         {
           "word": "touch",
-          "startTimeMs": 74560,
-          "endTimeMs": 74860
+          "startTimeMs": 74600,
+          "endTimeMs": 74900
         },
         {
           "word": "you",
-          "startTimeMs": 74860,
-          "endTimeMs": 75060
+          "startTimeMs": 74900,
+          "endTimeMs": 75100
         },
         {
           "word": "and",
-          "startTimeMs": 75060,
-          "endTimeMs": 75160
+          "startTimeMs": 75100,
+          "endTimeMs": 75300
         },
         {
           "word": "even",
-          "startTimeMs": 75160,
-          "endTimeMs": 75360
+          "startTimeMs": 75300,
+          "endTimeMs": 75600
         },
         {
           "word": "the",
-          "startTimeMs": 75360,
-          "endTimeMs": 75460
+          "startTimeMs": 75600,
+          "endTimeMs": 75800
         },
         {
           "word": "world",
-          "startTimeMs": 75460,
-          "endTimeMs": 75760
+          "startTimeMs": 75800,
+          "endTimeMs": 76100
         },
         {
           "word": "stops",
-          "startTimeMs": 75760,
-          "endTimeMs": 76060
+          "startTimeMs": 76100,
+          "endTimeMs": 76400
         },
         {
           "word": "spinning",
-          "startTimeMs": 76060,
-          "endTimeMs": 76600
+          "startTimeMs": 76400,
+          "endTimeMs": 76700
         },
         {
           "word": "(uh)",
-          "startTimeMs": 76600,
+          "startTimeMs": 76700,
           "endTimeMs": 76970
         }
       ]
@@ -1187,52 +1182,52 @@
       "type": "LYRIC",
       "startTimeMs": 76970,
       "endTimeMs": 79650,
-      "segmentIndex": 28,
+      "segmentIndex": 27,
       "text": "Not even death is going to separate us (nah)",
       "words": [
         {
           "word": "Not",
           "startTimeMs": 76970,
-          "endTimeMs": 77170
+          "endTimeMs": 77200
         },
         {
           "word": "even",
-          "startTimeMs": 77170,
-          "endTimeMs": 77370
+          "startTimeMs": 77200,
+          "endTimeMs": 77500
         },
         {
           "word": "death",
-          "startTimeMs": 77370,
-          "endTimeMs": 77670
+          "startTimeMs": 77500,
+          "endTimeMs": 77900
         },
         {
           "word": "is",
-          "startTimeMs": 77670,
-          "endTimeMs": 77770
+          "startTimeMs": 77900,
+          "endTimeMs": 78100
         },
         {
           "word": "going",
-          "startTimeMs": 77770,
-          "endTimeMs": 78070
+          "startTimeMs": 78100,
+          "endTimeMs": 78400
         },
         {
           "word": "to",
-          "startTimeMs": 78070,
-          "endTimeMs": 78170
+          "startTimeMs": 78400,
+          "endTimeMs": 78600
         },
         {
           "word": "separate",
-          "startTimeMs": 78170,
-          "endTimeMs": 78670
+          "startTimeMs": 78600,
+          "endTimeMs": 79100
         },
         {
           "word": "us",
-          "startTimeMs": 78670,
-          "endTimeMs": 79270
+          "startTimeMs": 79100,
+          "endTimeMs": 79400
         },
         {
           "word": "(nah)",
-          "startTimeMs": 79270,
+          "startTimeMs": 79400,
           "endTimeMs": 79650
         }
       ]
@@ -1241,47 +1236,32 @@
       "type": "LYRIC",
       "startTimeMs": 79650,
       "endTimeMs": 82060,
-      "segmentIndex": 29,
-      "text": "Baby, I am yours and only yours (more)",
+      "segmentIndex": 28,
+      "text": "Baby, I'm only yours (more)",
       "words": [
         {
           "word": "Baby,",
           "startTimeMs": 79650,
-          "endTimeMs": 80000
-        },
-        {
-          "word": "I",
-          "startTimeMs": 80000,
           "endTimeMs": 80100
         },
         {
-          "word": "am",
+          "word": "I'm",
           "startTimeMs": 80100,
-          "endTimeMs": 80200
-        },
-        {
-          "word": "yours",
-          "startTimeMs": 80200,
-          "endTimeMs": 80500
-        },
-        {
-          "word": "and",
-          "startTimeMs": 80500,
-          "endTimeMs": 80600
+          "endTimeMs": 80400
         },
         {
           "word": "only",
-          "startTimeMs": 80600,
-          "endTimeMs": 80900
+          "startTimeMs": 80400,
+          "endTimeMs": 80800
         },
         {
           "word": "yours",
-          "startTimeMs": 80900,
-          "endTimeMs": 81500
+          "startTimeMs": 80800,
+          "endTimeMs": 81600
         },
         {
           "word": "(more)",
-          "startTimeMs": 81500,
+          "startTimeMs": 81600,
           "endTimeMs": 82060
         }
       ]
@@ -1290,47 +1270,47 @@
       "type": "LYRIC",
       "startTimeMs": 82060,
       "endTimeMs": 85200,
-      "segmentIndex": 30,
+      "segmentIndex": 29,
       "text": "Tell them that you're leaving with me (uh)",
       "words": [
         {
           "word": "Tell",
           "startTimeMs": 82060,
-          "endTimeMs": 82360
+          "endTimeMs": 82500
         },
         {
           "word": "them",
-          "startTimeMs": 82360,
-          "endTimeMs": 82560
+          "startTimeMs": 82500,
+          "endTimeMs": 82800
         },
         {
           "word": "that",
-          "startTimeMs": 82560,
-          "endTimeMs": 82760
+          "startTimeMs": 82800,
+          "endTimeMs": 83000
         },
         {
           "word": "you're",
-          "startTimeMs": 82760,
-          "endTimeMs": 83060
+          "startTimeMs": 83000,
+          "endTimeMs": 83300
         },
         {
           "word": "leaving",
-          "startTimeMs": 83060,
-          "endTimeMs": 83560
+          "startTimeMs": 83300,
+          "endTimeMs": 83800
         },
         {
           "word": "with",
-          "startTimeMs": 83560,
-          "endTimeMs": 83860
+          "startTimeMs": 83800,
+          "endTimeMs": 84200
         },
         {
           "word": "me",
-          "startTimeMs": 83860,
-          "endTimeMs": 84500
+          "startTimeMs": 84200,
+          "endTimeMs": 84800
         },
         {
           "word": "(uh)",
-          "startTimeMs": 84500,
+          "startTimeMs": 84800,
           "endTimeMs": 85200
         }
       ]
@@ -1339,42 +1319,42 @@
       "type": "LYRIC",
       "startTimeMs": 85200,
       "endTimeMs": 87470,
-      "segmentIndex": 31,
+      "segmentIndex": 30,
       "text": "Tell them to stop hitting on you (brr)",
       "words": [
         {
           "word": "Tell",
           "startTimeMs": 85200,
-          "endTimeMs": 85400
+          "endTimeMs": 85500
         },
         {
           "word": "them",
-          "startTimeMs": 85400,
-          "endTimeMs": 85600
+          "startTimeMs": 85500,
+          "endTimeMs": 85800
         },
         {
           "word": "to",
-          "startTimeMs": 85600,
-          "endTimeMs": 85700
-        },
-        {
-          "word": "stop",
-          "startTimeMs": 85700,
+          "startTimeMs": 85800,
           "endTimeMs": 86000
         },
         {
-          "word": "hitting",
+          "word": "stop",
           "startTimeMs": 86000,
-          "endTimeMs": 86400
+          "endTimeMs": 86300
         },
         {
-          "word": "on",
-          "startTimeMs": 86400,
+          "word": "hitting",
+          "startTimeMs": 86300,
           "endTimeMs": 86600
         },
         {
-          "word": "you",
+          "word": "on",
           "startTimeMs": 86600,
+          "endTimeMs": 86800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 86800,
           "endTimeMs": 87000
         },
         {
@@ -1388,47 +1368,42 @@
       "type": "LYRIC",
       "startTimeMs": 87470,
       "endTimeMs": 88230,
-      "segmentIndex": 32,
-      "text": "That no one is going to touch you",
+      "segmentIndex": 31,
+      "text": "That nobody is going to touch you",
       "words": [
         {
           "word": "That",
           "startTimeMs": 87470,
-          "endTimeMs": 87550
+          "endTimeMs": 87580
         },
         {
-          "word": "no",
-          "startTimeMs": 87550,
-          "endTimeMs": 87650
-        },
-        {
-          "word": "one",
-          "startTimeMs": 87650,
+          "word": "nobody",
+          "startTimeMs": 87580,
           "endTimeMs": 87750
         },
         {
           "word": "is",
           "startTimeMs": 87750,
-          "endTimeMs": 87820
+          "endTimeMs": 87850
         },
         {
           "word": "going",
-          "startTimeMs": 87820,
-          "endTimeMs": 87920
+          "startTimeMs": 87850,
+          "endTimeMs": 87950
         },
         {
           "word": "to",
-          "startTimeMs": 87920,
-          "endTimeMs": 88000
+          "startTimeMs": 87950,
+          "endTimeMs": 88050
         },
         {
           "word": "touch",
-          "startTimeMs": 88000,
-          "endTimeMs": 88130
+          "startTimeMs": 88050,
+          "endTimeMs": 88150
         },
         {
           "word": "you",
-          "startTimeMs": 88130,
+          "startTimeMs": 88150,
           "endTimeMs": 88230
         }
       ]
@@ -1437,42 +1412,42 @@
       "type": "LYRIC",
       "startTimeMs": 88230,
       "endTimeMs": 90500,
-      "segmentIndex": 33,
-      "text": "Tell him that you are mine, mine",
+      "segmentIndex": 32,
+      "text": "Tell them that you are mine, mine",
       "words": [
         {
           "word": "Tell",
           "startTimeMs": 88230,
-          "endTimeMs": 88530
+          "endTimeMs": 88500
         },
         {
-          "word": "him",
-          "startTimeMs": 88530,
-          "endTimeMs": 88730
+          "word": "them",
+          "startTimeMs": 88500,
+          "endTimeMs": 88800
         },
         {
           "word": "that",
-          "startTimeMs": 88730,
-          "endTimeMs": 88930
+          "startTimeMs": 88800,
+          "endTimeMs": 89000
         },
         {
           "word": "you",
-          "startTimeMs": 88930,
-          "endTimeMs": 89130
+          "startTimeMs": 89000,
+          "endTimeMs": 89200
         },
         {
           "word": "are",
-          "startTimeMs": 89130,
-          "endTimeMs": 89330
+          "startTimeMs": 89200,
+          "endTimeMs": 89500
         },
         {
           "word": "mine,",
-          "startTimeMs": 89330,
-          "endTimeMs": 89830
+          "startTimeMs": 89500,
+          "endTimeMs": 90000
         },
         {
           "word": "mine",
-          "startTimeMs": 89830,
+          "startTimeMs": 90000,
           "endTimeMs": 90500
         }
       ]
@@ -1481,7 +1456,7 @@
       "type": "LYRIC",
       "startTimeMs": 90500,
       "endTimeMs": 93170,
-      "segmentIndex": 34,
+      "segmentIndex": 33,
       "text": "You know that you are mine, mine",
       "words": [
         {
@@ -1507,16 +1482,16 @@
         {
           "word": "are",
           "startTimeMs": 91500,
-          "endTimeMs": 91700
+          "endTimeMs": 91800
         },
         {
           "word": "mine,",
-          "startTimeMs": 91700,
-          "endTimeMs": 92300
+          "startTimeMs": 91800,
+          "endTimeMs": 92400
         },
         {
           "word": "mine",
-          "startTimeMs": 92300,
+          "startTimeMs": 92400,
           "endTimeMs": 93170
         }
       ]
@@ -1525,47 +1500,47 @@
       "type": "LYRIC",
       "startTimeMs": 93170,
       "endTimeMs": 95350,
-      "segmentIndex": 35,
+      "segmentIndex": 34,
       "text": "You said it yourself (you said it yourself)",
       "words": [
         {
           "word": "You",
           "startTimeMs": 93170,
-          "endTimeMs": 93370
+          "endTimeMs": 93350
         },
         {
           "word": "said",
-          "startTimeMs": 93370,
-          "endTimeMs": 93670
+          "startTimeMs": 93350,
+          "endTimeMs": 93600
         },
         {
           "word": "it",
-          "startTimeMs": 93670,
-          "endTimeMs": 93870
+          "startTimeMs": 93600,
+          "endTimeMs": 93800
         },
         {
           "word": "yourself",
-          "startTimeMs": 93870,
-          "endTimeMs": 94370
+          "startTimeMs": 93800,
+          "endTimeMs": 94200
         },
         {
           "word": "(you",
-          "startTimeMs": 94370,
-          "endTimeMs": 94570
+          "startTimeMs": 94200,
+          "endTimeMs": 94450
         },
         {
           "word": "said",
-          "startTimeMs": 94570,
-          "endTimeMs": 94770
+          "startTimeMs": 94450,
+          "endTimeMs": 94650
         },
         {
           "word": "it",
-          "startTimeMs": 94770,
-          "endTimeMs": 94970
+          "startTimeMs": 94650,
+          "endTimeMs": 94850
         },
         {
           "word": "yourself)",
-          "startTimeMs": 94970,
+          "startTimeMs": 94850,
           "endTimeMs": 95350
         }
       ]
@@ -1574,77 +1549,72 @@
       "type": "LYRIC",
       "startTimeMs": 95350,
       "endTimeMs": 97420,
-      "segmentIndex": 36,
+      "segmentIndex": 35,
       "text": "When I was doing it to you (when I was doing it to you)",
       "words": [
         {
           "word": "When",
           "startTimeMs": 95350,
-          "endTimeMs": 95550
+          "endTimeMs": 95600
         },
         {
           "word": "I",
-          "startTimeMs": 95550,
-          "endTimeMs": 95650
+          "startTimeMs": 95600,
+          "endTimeMs": 95800
         },
         {
           "word": "was",
-          "startTimeMs": 95650,
-          "endTimeMs": 95750
-        },
-        {
-          "word": "doing",
-          "startTimeMs": 95750,
+          "startTimeMs": 95800,
           "endTimeMs": 95950
         },
         {
-          "word": "it",
+          "word": "doing",
           "startTimeMs": 95950,
-          "endTimeMs": 96050
+          "endTimeMs": 96200
+        },
+        {
+          "word": "it",
+          "startTimeMs": 96200,
+          "endTimeMs": 96350
         },
         {
           "word": "to",
-          "startTimeMs": 96050,
-          "endTimeMs": 96150
+          "startTimeMs": 96350,
+          "endTimeMs": 96500
         },
         {
           "word": "you",
-          "startTimeMs": 96150,
-          "endTimeMs": 96550
-        },
-        {
-          "word": "(when",
-          "startTimeMs": 96550,
+          "startTimeMs": 96500,
           "endTimeMs": 96700
         },
         {
-          "word": "I",
+          "word": "(when",
           "startTimeMs": 96700,
-          "endTimeMs": 96780
+          "endTimeMs": 96900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 96900,
+          "endTimeMs": 97000
         },
         {
           "word": "was",
-          "startTimeMs": 96780,
-          "endTimeMs": 96860
+          "startTimeMs": 97000,
+          "endTimeMs": 97100
         },
         {
           "word": "doing",
-          "startTimeMs": 96860,
-          "endTimeMs": 97060
+          "startTimeMs": 97100,
+          "endTimeMs": 97200
         },
         {
           "word": "it",
-          "startTimeMs": 97060,
-          "endTimeMs": 97160
+          "startTimeMs": 97200,
+          "endTimeMs": 97300
         },
         {
           "word": "to",
-          "startTimeMs": 97160,
-          "endTimeMs": 97260
-        },
-        {
-          "word": "you)",
-          "startTimeMs": 97260,
+          "startTimeMs": 97300,
           "endTimeMs": 97420
         }
       ]
@@ -1653,47 +1623,47 @@
       "type": "LYRIC",
       "startTimeMs": 97420,
       "endTimeMs": 100600,
-      "segmentIndex": 37,
-      "text": "Yeh, tell him that you are mine, mine",
+      "segmentIndex": 36,
+      "text": "Yeh, tell them that you are mine, mine",
       "words": [
         {
           "word": "Yeh,",
           "startTimeMs": 97420,
-          "endTimeMs": 98120
+          "endTimeMs": 97800
         },
         {
           "word": "tell",
-          "startTimeMs": 98120,
-          "endTimeMs": 98520
+          "startTimeMs": 97800,
+          "endTimeMs": 98100
         },
         {
-          "word": "him",
-          "startTimeMs": 98520,
-          "endTimeMs": 98720
+          "word": "them",
+          "startTimeMs": 98100,
+          "endTimeMs": 98300
         },
         {
           "word": "that",
-          "startTimeMs": 98720,
-          "endTimeMs": 98920
+          "startTimeMs": 98300,
+          "endTimeMs": 98600
         },
         {
           "word": "you",
-          "startTimeMs": 98920,
-          "endTimeMs": 99120
+          "startTimeMs": 98600,
+          "endTimeMs": 98900
         },
         {
           "word": "are",
-          "startTimeMs": 99120,
-          "endTimeMs": 99320
+          "startTimeMs": 98900,
+          "endTimeMs": 99200
         },
         {
           "word": "mine,",
-          "startTimeMs": 99320,
-          "endTimeMs": 99920
+          "startTimeMs": 99200,
+          "endTimeMs": 99800
         },
         {
           "word": "mine",
-          "startTimeMs": 99920,
+          "startTimeMs": 99800,
           "endTimeMs": 100600
         }
       ]
@@ -1702,7 +1672,7 @@
       "type": "LYRIC",
       "startTimeMs": 100600,
       "endTimeMs": 103150,
-      "segmentIndex": 38,
+      "segmentIndex": 37,
       "text": "You know that you are mine, mine",
       "words": [
         {
@@ -1723,21 +1693,21 @@
         {
           "word": "you",
           "startTimeMs": 101400,
-          "endTimeMs": 101600
+          "endTimeMs": 101700
         },
         {
           "word": "are",
-          "startTimeMs": 101600,
-          "endTimeMs": 101800
+          "startTimeMs": 101700,
+          "endTimeMs": 102000
         },
         {
           "word": "mine,",
-          "startTimeMs": 101800,
-          "endTimeMs": 102400
+          "startTimeMs": 102000,
+          "endTimeMs": 102500
         },
         {
           "word": "mine",
-          "startTimeMs": 102400,
+          "startTimeMs": 102500,
           "endTimeMs": 103150
         }
       ]
@@ -1746,47 +1716,47 @@
       "type": "LYRIC",
       "startTimeMs": 103150,
       "endTimeMs": 105410,
-      "segmentIndex": 39,
+      "segmentIndex": 38,
       "text": "You said it yourself (you said it yourself)",
       "words": [
         {
           "word": "You",
           "startTimeMs": 103150,
-          "endTimeMs": 103350
+          "endTimeMs": 103300
         },
         {
           "word": "said",
-          "startTimeMs": 103350,
-          "endTimeMs": 103650
+          "startTimeMs": 103300,
+          "endTimeMs": 103600
         },
         {
           "word": "it",
-          "startTimeMs": 103650,
-          "endTimeMs": 103850
+          "startTimeMs": 103600,
+          "endTimeMs": 103800
         },
         {
           "word": "yourself",
-          "startTimeMs": 103850,
-          "endTimeMs": 104350
+          "startTimeMs": 103800,
+          "endTimeMs": 104250
         },
         {
           "word": "(you",
-          "startTimeMs": 104350,
-          "endTimeMs": 104550
+          "startTimeMs": 104250,
+          "endTimeMs": 104450
         },
         {
           "word": "said",
-          "startTimeMs": 104550,
-          "endTimeMs": 104750
+          "startTimeMs": 104450,
+          "endTimeMs": 104650
         },
         {
           "word": "it",
-          "startTimeMs": 104750,
-          "endTimeMs": 104950
+          "startTimeMs": 104650,
+          "endTimeMs": 104850
         },
         {
           "word": "yourself)",
-          "startTimeMs": 104950,
+          "startTimeMs": 104850,
           "endTimeMs": 105410
         }
       ]
@@ -1795,77 +1765,72 @@
       "type": "LYRIC",
       "startTimeMs": 105410,
       "endTimeMs": 109470,
-      "segmentIndex": 40,
+      "segmentIndex": 39,
       "text": "When I was doing it to you (when I was doing it to you)",
       "words": [
         {
           "word": "When",
           "startTimeMs": 105410,
-          "endTimeMs": 105610
+          "endTimeMs": 105700
         },
         {
           "word": "I",
-          "startTimeMs": 105610,
-          "endTimeMs": 105710
+          "startTimeMs": 105700,
+          "endTimeMs": 105900
         },
         {
           "word": "was",
-          "startTimeMs": 105710,
-          "endTimeMs": 105810
+          "startTimeMs": 105900,
+          "endTimeMs": 106050
         },
         {
           "word": "doing",
-          "startTimeMs": 105810,
-          "endTimeMs": 106010
+          "startTimeMs": 106050,
+          "endTimeMs": 106300
         },
         {
           "word": "it",
-          "startTimeMs": 106010,
-          "endTimeMs": 106110
+          "startTimeMs": 106300,
+          "endTimeMs": 106450
         },
         {
           "word": "to",
-          "startTimeMs": 106110,
-          "endTimeMs": 106210
+          "startTimeMs": 106450,
+          "endTimeMs": 106700
         },
         {
           "word": "you",
-          "startTimeMs": 106210,
-          "endTimeMs": 106600
+          "startTimeMs": 106700,
+          "endTimeMs": 107500
         },
         {
           "word": "(when",
-          "startTimeMs": 106600,
-          "endTimeMs": 107000
+          "startTimeMs": 107500,
+          "endTimeMs": 108500
         },
         {
           "word": "I",
-          "startTimeMs": 107000,
-          "endTimeMs": 107100
+          "startTimeMs": 108500,
+          "endTimeMs": 108700
         },
         {
           "word": "was",
-          "startTimeMs": 107100,
-          "endTimeMs": 107200
+          "startTimeMs": 108700,
+          "endTimeMs": 108850
         },
         {
           "word": "doing",
-          "startTimeMs": 107200,
-          "endTimeMs": 107600
+          "startTimeMs": 108850,
+          "endTimeMs": 109100
         },
         {
           "word": "it",
-          "startTimeMs": 107600,
-          "endTimeMs": 107800
+          "startTimeMs": 109100,
+          "endTimeMs": 109250
         },
         {
           "word": "to",
-          "startTimeMs": 107800,
-          "endTimeMs": 108000
-        },
-        {
-          "word": "you)",
-          "startTimeMs": 108000,
+          "startTimeMs": 109250,
           "endTimeMs": 109470
         }
       ]
@@ -1874,47 +1839,42 @@
       "type": "LYRIC",
       "startTimeMs": 109470,
       "endTimeMs": 111710,
-      "segmentIndex": 41,
-      "text": "I am your Romeo, but not Santo (no)",
+      "segmentIndex": 40,
+      "text": "I'm your Romeo, but no Saint (no)",
       "words": [
         {
-          "word": "I",
+          "word": "I'm",
           "startTimeMs": 109470,
-          "endTimeMs": 109570
-        },
-        {
-          "word": "am",
-          "startTimeMs": 109570,
-          "endTimeMs": 109670
+          "endTimeMs": 109700
         },
         {
           "word": "your",
-          "startTimeMs": 109670,
-          "endTimeMs": 109870
+          "startTimeMs": 109700,
+          "endTimeMs": 110000
         },
         {
           "word": "Romeo,",
-          "startTimeMs": 109870,
-          "endTimeMs": 110270
+          "startTimeMs": 110000,
+          "endTimeMs": 110500
         },
         {
           "word": "but",
-          "startTimeMs": 110270,
-          "endTimeMs": 110470
+          "startTimeMs": 110500,
+          "endTimeMs": 110800
         },
         {
-          "word": "not",
-          "startTimeMs": 110470,
-          "endTimeMs": 110670
+          "word": "no",
+          "startTimeMs": 110800,
+          "endTimeMs": 111000
         },
         {
-          "word": "Santo",
-          "startTimeMs": 110670,
-          "endTimeMs": 111200
+          "word": "Saint",
+          "startTimeMs": 111000,
+          "endTimeMs": 111400
         },
         {
           "word": "(no)",
-          "startTimeMs": 111200,
+          "startTimeMs": 111400,
           "endTimeMs": 111710
         }
       ]
@@ -1923,52 +1883,52 @@
       "type": "LYRIC",
       "startTimeMs": 111710,
       "endTimeMs": 114360,
-      "segmentIndex": 42,
+      "segmentIndex": 41,
       "text": "I scare these fools away with the forty (plo-plo)",
       "words": [
         {
           "word": "I",
           "startTimeMs": 111710,
-          "endTimeMs": 111810
+          "endTimeMs": 111900
         },
         {
           "word": "scare",
-          "startTimeMs": 111810,
-          "endTimeMs": 112010
+          "startTimeMs": 111900,
+          "endTimeMs": 112200
         },
         {
           "word": "these",
-          "startTimeMs": 112010,
-          "endTimeMs": 112210
+          "startTimeMs": 112200,
+          "endTimeMs": 112400
         },
         {
           "word": "fools",
-          "startTimeMs": 112210,
-          "endTimeMs": 112410
+          "startTimeMs": 112400,
+          "endTimeMs": 112600
         },
         {
           "word": "away",
-          "startTimeMs": 112410,
-          "endTimeMs": 112610
+          "startTimeMs": 112600,
+          "endTimeMs": 112900
         },
         {
           "word": "with",
-          "startTimeMs": 112610,
-          "endTimeMs": 112710
+          "startTimeMs": 112900,
+          "endTimeMs": 113100
         },
         {
           "word": "the",
-          "startTimeMs": 112710,
-          "endTimeMs": 112810
-        },
-        {
-          "word": "forty",
-          "startTimeMs": 112810,
+          "startTimeMs": 113100,
           "endTimeMs": 113300
         },
         {
-          "word": "(plo-plo)",
+          "word": "forty",
           "startTimeMs": 113300,
+          "endTimeMs": 113800
+        },
+        {
+          "word": "(plo-plo)",
+          "startTimeMs": 113800,
           "endTimeMs": 114360
         }
       ]
@@ -1977,52 +1937,52 @@
       "type": "LYRIC",
       "startTimeMs": 114360,
       "endTimeMs": 116780,
-      "segmentIndex": 43,
+      "segmentIndex": 42,
       "text": "Many have wanted me since I've been singing (ha)",
       "words": [
         {
           "word": "Many",
           "startTimeMs": 114360,
-          "endTimeMs": 114660
+          "endTimeMs": 114600
         },
         {
           "word": "have",
-          "startTimeMs": 114660,
-          "endTimeMs": 114860
+          "startTimeMs": 114600,
+          "endTimeMs": 114800
         },
         {
           "word": "wanted",
-          "startTimeMs": 114860,
-          "endTimeMs": 115160
+          "startTimeMs": 114800,
+          "endTimeMs": 115200
         },
         {
           "word": "me",
-          "startTimeMs": 115160,
-          "endTimeMs": 115260
+          "startTimeMs": 115200,
+          "endTimeMs": 115400
         },
         {
           "word": "since",
-          "startTimeMs": 115260,
-          "endTimeMs": 115460
+          "startTimeMs": 115400,
+          "endTimeMs": 115700
         },
         {
           "word": "I've",
-          "startTimeMs": 115460,
-          "endTimeMs": 115660
+          "startTimeMs": 115700,
+          "endTimeMs": 115900
         },
         {
           "word": "been",
-          "startTimeMs": 115660,
-          "endTimeMs": 115860
+          "startTimeMs": 115900,
+          "endTimeMs": 116100
         },
         {
           "word": "singing",
-          "startTimeMs": 115860,
-          "endTimeMs": 116360
+          "startTimeMs": 116100,
+          "endTimeMs": 116500
         },
         {
           "word": "(ha)",
-          "startTimeMs": 116360,
+          "startTimeMs": 116500,
           "endTimeMs": 116780
         }
       ]
@@ -2031,47 +1991,32 @@
       "type": "LYRIC",
       "startTimeMs": 116780,
       "endTimeMs": 119190,
-      "segmentIndex": 44,
-      "text": "But I am yours and only yours (uh)",
+      "segmentIndex": 43,
+      "text": "But I'm only yours (uh)",
       "words": [
         {
           "word": "But",
           "startTimeMs": 116780,
-          "endTimeMs": 116980
+          "endTimeMs": 117100
         },
         {
-          "word": "I",
-          "startTimeMs": 116980,
-          "endTimeMs": 117080
-        },
-        {
-          "word": "am",
-          "startTimeMs": 117080,
-          "endTimeMs": 117180
-        },
-        {
-          "word": "yours",
-          "startTimeMs": 117180,
-          "endTimeMs": 117480
-        },
-        {
-          "word": "and",
-          "startTimeMs": 117480,
-          "endTimeMs": 117580
+          "word": "I'm",
+          "startTimeMs": 117100,
+          "endTimeMs": 117400
         },
         {
           "word": "only",
-          "startTimeMs": 117580,
-          "endTimeMs": 117880
+          "startTimeMs": 117400,
+          "endTimeMs": 117900
         },
         {
           "word": "yours",
-          "startTimeMs": 117880,
-          "endTimeMs": 118680
+          "startTimeMs": 117900,
+          "endTimeMs": 118600
         },
         {
           "word": "(uh)",
-          "startTimeMs": 118680,
+          "startTimeMs": 118600,
           "endTimeMs": 119190
         }
       ]
@@ -2080,47 +2025,42 @@
       "type": "LYRIC",
       "startTimeMs": 119190,
       "endTimeMs": 121670,
-      "segmentIndex": 45,
-      "text": "I am your Romeo, but not Santo (yeh)",
+      "segmentIndex": 44,
+      "text": "I'm your Romeo, but no Saint (yeh)",
       "words": [
         {
-          "word": "I",
+          "word": "I'm",
           "startTimeMs": 119190,
-          "endTimeMs": 119290
-        },
-        {
-          "word": "am",
-          "startTimeMs": 119290,
-          "endTimeMs": 119390
+          "endTimeMs": 119400
         },
         {
           "word": "your",
-          "startTimeMs": 119390,
-          "endTimeMs": 119590
+          "startTimeMs": 119400,
+          "endTimeMs": 119700
         },
         {
           "word": "Romeo,",
-          "startTimeMs": 119590,
-          "endTimeMs": 119990
+          "startTimeMs": 119700,
+          "endTimeMs": 120200
         },
         {
           "word": "but",
-          "startTimeMs": 119990,
-          "endTimeMs": 120190
+          "startTimeMs": 120200,
+          "endTimeMs": 120500
         },
         {
-          "word": "not",
-          "startTimeMs": 120190,
-          "endTimeMs": 120390
+          "word": "no",
+          "startTimeMs": 120500,
+          "endTimeMs": 120800
         },
         {
-          "word": "Santo",
-          "startTimeMs": 120390,
-          "endTimeMs": 121000
+          "word": "Saint",
+          "startTimeMs": 120800,
+          "endTimeMs": 121300
         },
         {
           "word": "(yeh)",
-          "startTimeMs": 121000,
+          "startTimeMs": 121300,
           "endTimeMs": 121670
         }
       ]
@@ -2129,52 +2069,52 @@
       "type": "LYRIC",
       "startTimeMs": 121670,
       "endTimeMs": 124200,
-      "segmentIndex": 46,
+      "segmentIndex": 45,
       "text": "I scare these fools away with the forty (brr)",
       "words": [
         {
           "word": "I",
           "startTimeMs": 121670,
-          "endTimeMs": 121770
+          "endTimeMs": 121800
         },
         {
           "word": "scare",
-          "startTimeMs": 121770,
-          "endTimeMs": 121970
+          "startTimeMs": 121800,
+          "endTimeMs": 122100
         },
         {
           "word": "these",
-          "startTimeMs": 121970,
-          "endTimeMs": 122170
+          "startTimeMs": 122100,
+          "endTimeMs": 122300
         },
         {
           "word": "fools",
-          "startTimeMs": 122170,
-          "endTimeMs": 122370
+          "startTimeMs": 122300,
+          "endTimeMs": 122500
         },
         {
           "word": "away",
-          "startTimeMs": 122370,
-          "endTimeMs": 122570
+          "startTimeMs": 122500,
+          "endTimeMs": 122700
         },
         {
           "word": "with",
-          "startTimeMs": 122570,
-          "endTimeMs": 122670
+          "startTimeMs": 122700,
+          "endTimeMs": 122900
         },
         {
           "word": "the",
-          "startTimeMs": 122670,
-          "endTimeMs": 122770
+          "startTimeMs": 122900,
+          "endTimeMs": 123100
         },
         {
           "word": "forty",
-          "startTimeMs": 122770,
-          "endTimeMs": 123300
+          "startTimeMs": 123100,
+          "endTimeMs": 123600
         },
         {
           "word": "(brr)",
-          "startTimeMs": 123300,
+          "startTimeMs": 123600,
           "endTimeMs": 124200
         }
       ]
@@ -2183,52 +2123,52 @@
       "type": "LYRIC",
       "startTimeMs": 124200,
       "endTimeMs": 126630,
-      "segmentIndex": 47,
+      "segmentIndex": 46,
       "text": "Many have wanted me since I've been singing (ah)",
       "words": [
         {
           "word": "Many",
           "startTimeMs": 124200,
-          "endTimeMs": 124500
+          "endTimeMs": 124600
         },
         {
           "word": "have",
-          "startTimeMs": 124500,
-          "endTimeMs": 124700
+          "startTimeMs": 124600,
+          "endTimeMs": 124800
         },
         {
           "word": "wanted",
-          "startTimeMs": 124700,
-          "endTimeMs": 125000
+          "startTimeMs": 124800,
+          "endTimeMs": 125200
         },
         {
           "word": "me",
-          "startTimeMs": 125000,
-          "endTimeMs": 125100
+          "startTimeMs": 125200,
+          "endTimeMs": 125400
         },
         {
           "word": "since",
-          "startTimeMs": 125100,
-          "endTimeMs": 125300
-        },
-        {
-          "word": "I've",
-          "startTimeMs": 125300,
-          "endTimeMs": 125500
-        },
-        {
-          "word": "been",
-          "startTimeMs": 125500,
+          "startTimeMs": 125400,
           "endTimeMs": 125700
         },
         {
-          "word": "singing",
+          "word": "I've",
           "startTimeMs": 125700,
-          "endTimeMs": 126200
+          "endTimeMs": 125900
+        },
+        {
+          "word": "been",
+          "startTimeMs": 125900,
+          "endTimeMs": 126100
+        },
+        {
+          "word": "singing",
+          "startTimeMs": 126100,
+          "endTimeMs": 126400
         },
         {
           "word": "(ah)",
-          "startTimeMs": 126200,
+          "startTimeMs": 126400,
           "endTimeMs": 126630
         }
       ]
@@ -2237,42 +2177,27 @@
       "type": "LYRIC",
       "startTimeMs": 126630,
       "endTimeMs": 128810,
-      "segmentIndex": 48,
-      "text": "But I am yours and only yours",
+      "segmentIndex": 47,
+      "text": "But I'm only yours",
       "words": [
         {
           "word": "But",
           "startTimeMs": 126630,
-          "endTimeMs": 126830
+          "endTimeMs": 126900
         },
         {
-          "word": "I",
-          "startTimeMs": 126830,
-          "endTimeMs": 126930
-        },
-        {
-          "word": "am",
-          "startTimeMs": 126930,
-          "endTimeMs": 127030
-        },
-        {
-          "word": "yours",
-          "startTimeMs": 127030,
-          "endTimeMs": 127330
-        },
-        {
-          "word": "and",
-          "startTimeMs": 127330,
-          "endTimeMs": 127430
+          "word": "I'm",
+          "startTimeMs": 126900,
+          "endTimeMs": 127200
         },
         {
           "word": "only",
-          "startTimeMs": 127430,
-          "endTimeMs": 127730
+          "startTimeMs": 127200,
+          "endTimeMs": 127800
         },
         {
           "word": "yours",
-          "startTimeMs": 127730,
+          "startTimeMs": 127800,
           "endTimeMs": 128810
         }
       ]
@@ -2281,67 +2206,67 @@
       "type": "LYRIC",
       "startTimeMs": 128810,
       "endTimeMs": 131510,
-      "segmentIndex": 49,
-      "text": "Tell them that you are mine since high school (since high school)",
+      "segmentIndex": 48,
+      "text": "Tell them that you've been mine since high school (since high school)",
       "words": [
         {
           "word": "Tell",
           "startTimeMs": 128810,
-          "endTimeMs": 129010
+          "endTimeMs": 129000
         },
         {
           "word": "them",
-          "startTimeMs": 129010,
-          "endTimeMs": 129210
+          "startTimeMs": 129000,
+          "endTimeMs": 129200
         },
         {
           "word": "that",
-          "startTimeMs": 129210,
-          "endTimeMs": 129310
+          "startTimeMs": 129200,
+          "endTimeMs": 129300
         },
         {
-          "word": "you",
-          "startTimeMs": 129310,
-          "endTimeMs": 129410
+          "word": "you've",
+          "startTimeMs": 129300,
+          "endTimeMs": 129500
         },
         {
-          "word": "are",
-          "startTimeMs": 129410,
-          "endTimeMs": 129510
+          "word": "been",
+          "startTimeMs": 129500,
+          "endTimeMs": 129700
         },
         {
           "word": "mine",
-          "startTimeMs": 129510,
-          "endTimeMs": 129810
+          "startTimeMs": 129700,
+          "endTimeMs": 130100
         },
         {
           "word": "since",
-          "startTimeMs": 129810,
-          "endTimeMs": 130010
+          "startTimeMs": 130100,
+          "endTimeMs": 130300
         },
         {
           "word": "high",
-          "startTimeMs": 130010,
-          "endTimeMs": 130210
+          "startTimeMs": 130300,
+          "endTimeMs": 130500
         },
         {
           "word": "school",
-          "startTimeMs": 130210,
-          "endTimeMs": 130610
+          "startTimeMs": 130500,
+          "endTimeMs": 130800
         },
         {
           "word": "(since",
-          "startTimeMs": 130610,
-          "endTimeMs": 130810
+          "startTimeMs": 130800,
+          "endTimeMs": 131000
         },
         {
           "word": "high",
-          "startTimeMs": 130810,
-          "endTimeMs": 131010
+          "startTimeMs": 131000,
+          "endTimeMs": 131200
         },
         {
           "word": "school)",
-          "startTimeMs": 131010,
+          "startTimeMs": 131200,
           "endTimeMs": 131510
         }
       ]
@@ -2350,52 +2275,37 @@
       "type": "LYRIC",
       "startTimeMs": 131510,
       "endTimeMs": 133490,
-      "segmentIndex": 50,
-      "text": "The favorite son-in-law of your mom (of your mom)",
+      "segmentIndex": 49,
+      "text": "Your mom's favorite son-in-law (your mom's)",
       "words": [
         {
-          "word": "The",
+          "word": "Your",
           "startTimeMs": 131510,
-          "endTimeMs": 131610
+          "endTimeMs": 131700
+        },
+        {
+          "word": "mom's",
+          "startTimeMs": 131700,
+          "endTimeMs": 132000
         },
         {
           "word": "favorite",
-          "startTimeMs": 131610,
-          "endTimeMs": 132010
+          "startTimeMs": 132000,
+          "endTimeMs": 132500
         },
         {
           "word": "son-in-law",
-          "startTimeMs": 132010,
-          "endTimeMs": 132410
+          "startTimeMs": 132500,
+          "endTimeMs": 133000
         },
         {
-          "word": "of",
-          "startTimeMs": 132410,
-          "endTimeMs": 132510
+          "word": "(your",
+          "startTimeMs": 133000,
+          "endTimeMs": 133200
         },
         {
-          "word": "your",
-          "startTimeMs": 132510,
-          "endTimeMs": 132610
-        },
-        {
-          "word": "mom",
-          "startTimeMs": 132610,
-          "endTimeMs": 132910
-        },
-        {
-          "word": "(of",
-          "startTimeMs": 132910,
-          "endTimeMs": 133010
-        },
-        {
-          "word": "your",
-          "startTimeMs": 133010,
-          "endTimeMs": 133110
-        },
-        {
-          "word": "mom)",
-          "startTimeMs": 133110,
+          "word": "mom's)",
+          "startTimeMs": 133200,
           "endTimeMs": 133490
         }
       ]
@@ -2404,72 +2314,72 @@
       "type": "LYRIC",
       "startTimeMs": 133490,
       "endTimeMs": 136000,
-      "segmentIndex": 51,
+      "segmentIndex": 50,
       "text": "The boss who had all the Jordans and the Nikes (and the Nikes)",
       "words": [
         {
           "word": "The",
           "startTimeMs": 133490,
-          "endTimeMs": 133590
+          "endTimeMs": 133600
         },
         {
           "word": "boss",
-          "startTimeMs": 133590,
-          "endTimeMs": 133790
+          "startTimeMs": 133600,
+          "endTimeMs": 133900
         },
         {
           "word": "who",
-          "startTimeMs": 133790,
-          "endTimeMs": 133890
+          "startTimeMs": 133900,
+          "endTimeMs": 134100
         },
         {
           "word": "had",
-          "startTimeMs": 133890,
-          "endTimeMs": 133990
+          "startTimeMs": 134100,
+          "endTimeMs": 134300
         },
         {
           "word": "all",
-          "startTimeMs": 133990,
-          "endTimeMs": 134090
+          "startTimeMs": 134300,
+          "endTimeMs": 134500
         },
         {
           "word": "the",
-          "startTimeMs": 134090,
-          "endTimeMs": 134190
+          "startTimeMs": 134500,
+          "endTimeMs": 134600
         },
         {
           "word": "Jordans",
-          "startTimeMs": 134190,
-          "endTimeMs": 134590
+          "startTimeMs": 134600,
+          "endTimeMs": 135000
         },
         {
           "word": "and",
-          "startTimeMs": 134590,
-          "endTimeMs": 134690
+          "startTimeMs": 135000,
+          "endTimeMs": 135100
         },
         {
           "word": "the",
-          "startTimeMs": 134690,
-          "endTimeMs": 134790
+          "startTimeMs": 135100,
+          "endTimeMs": 135200
         },
         {
           "word": "Nikes",
-          "startTimeMs": 134790,
-          "endTimeMs": 135190
+          "startTimeMs": 135200,
+          "endTimeMs": 135400
         },
         {
           "word": "(and",
-          "startTimeMs": 135190,
-          "endTimeMs": 135390
+          "startTimeMs": 135400,
+          "endTimeMs": 135600
         },
         {
           "word": "the",
-          "startTimeMs": 135390,
-          "endTimeMs": 135490
+          "startTimeMs": 135600,
+          "endTimeMs": 135700
         },
         {
           "word": "Nikes)",
-          "startTimeMs": 135490,
+          "startTimeMs": 135700,
           "endTimeMs": 136000
         }
       ]
@@ -2478,8 +2388,8 @@
       "type": "LYRIC",
       "startTimeMs": 136000,
       "endTimeMs": 138850,
-      "segmentIndex": 52,
-      "text": "Tell these fools to stop liking your photos (liking your photos)",
+      "segmentIndex": 51,
+      "text": "Tell these fools to stop liking your posts (liking your posts)",
       "words": [
         {
           "word": "Tell",
@@ -2494,46 +2404,46 @@
         {
           "word": "fools",
           "startTimeMs": 136400,
-          "endTimeMs": 136600
-        },
-        {
-          "word": "to",
-          "startTimeMs": 136600,
           "endTimeMs": 136700
         },
         {
-          "word": "stop",
+          "word": "to",
           "startTimeMs": 136700,
           "endTimeMs": 136900
         },
         {
-          "word": "liking",
+          "word": "stop",
           "startTimeMs": 136900,
           "endTimeMs": 137200
         },
         {
-          "word": "your",
+          "word": "liking",
           "startTimeMs": 137200,
-          "endTimeMs": 137400
+          "endTimeMs": 137500
         },
         {
-          "word": "photos",
-          "startTimeMs": 137400,
-          "endTimeMs": 137800
+          "word": "your",
+          "startTimeMs": 137500,
+          "endTimeMs": 137700
         },
         {
-          "word": "(liking",
-          "startTimeMs": 137800,
+          "word": "posts",
+          "startTimeMs": 137700,
           "endTimeMs": 138100
         },
         {
-          "word": "your",
+          "word": "(liking",
           "startTimeMs": 138100,
           "endTimeMs": 138300
         },
         {
-          "word": "photos)",
+          "word": "your",
           "startTimeMs": 138300,
+          "endTimeMs": 138500
+        },
+        {
+          "word": "posts)",
+          "startTimeMs": 138500,
           "endTimeMs": 138850
         }
       ]
@@ -2542,32 +2452,32 @@
       "type": "LYRIC",
       "startTimeMs": 138850,
       "endTimeMs": 140360,
-      "segmentIndex": 53,
-      "text": "I want this entire night",
+      "segmentIndex": 52,
+      "text": "I want this whole night",
       "words": [
         {
           "word": "I",
           "startTimeMs": 138850,
-          "endTimeMs": 139050
+          "endTimeMs": 139100
         },
         {
           "word": "want",
-          "startTimeMs": 139050,
-          "endTimeMs": 139250
+          "startTimeMs": 139100,
+          "endTimeMs": 139400
         },
         {
           "word": "this",
-          "startTimeMs": 139250,
-          "endTimeMs": 139450
+          "startTimeMs": 139400,
+          "endTimeMs": 139700
         },
         {
-          "word": "entire",
-          "startTimeMs": 139450,
-          "endTimeMs": 139850
+          "word": "whole",
+          "startTimeMs": 139700,
+          "endTimeMs": 140000
         },
         {
           "word": "night",
-          "startTimeMs": 139850,
+          "startTimeMs": 140000,
           "endTimeMs": 140360
         }
       ]
@@ -2576,52 +2486,52 @@
       "type": "LYRIC",
       "startTimeMs": 140360,
       "endTimeMs": 143450,
-      "segmentIndex": 54,
+      "segmentIndex": 53,
       "text": "To remember the times on the stairs (the stairs)",
       "words": [
         {
           "word": "To",
           "startTimeMs": 140360,
-          "endTimeMs": 140560
+          "endTimeMs": 140500
         },
         {
           "word": "remember",
-          "startTimeMs": 140560,
-          "endTimeMs": 141060
+          "startTimeMs": 140500,
+          "endTimeMs": 141000
         },
         {
           "word": "the",
-          "startTimeMs": 141060,
-          "endTimeMs": 141260
+          "startTimeMs": 141000,
+          "endTimeMs": 141200
         },
         {
           "word": "times",
-          "startTimeMs": 141260,
-          "endTimeMs": 141560
+          "startTimeMs": 141200,
+          "endTimeMs": 141600
         },
         {
           "word": "on",
-          "startTimeMs": 141560,
-          "endTimeMs": 141760
+          "startTimeMs": 141600,
+          "endTimeMs": 141800
         },
         {
           "word": "the",
-          "startTimeMs": 141760,
-          "endTimeMs": 141960
+          "startTimeMs": 141800,
+          "endTimeMs": 142000
         },
         {
           "word": "stairs",
-          "startTimeMs": 141960,
-          "endTimeMs": 142560
+          "startTimeMs": 142000,
+          "endTimeMs": 142600
         },
         {
           "word": "(the",
-          "startTimeMs": 142560,
-          "endTimeMs": 142760
+          "startTimeMs": 142600,
+          "endTimeMs": 142900
         },
         {
           "word": "stairs)",
-          "startTimeMs": 142760,
+          "startTimeMs": 142900,
           "endTimeMs": 143450
         }
       ]
@@ -2630,42 +2540,42 @@
       "type": "LYRIC",
       "startTimeMs": 143450,
       "endTimeMs": 145250,
-      "segmentIndex": 55,
-      "text": "Tell him that I'm not just anyone",
+      "segmentIndex": 54,
+      "text": "Tell them that I'm not just anyone",
       "words": [
         {
           "word": "Tell",
           "startTimeMs": 143450,
-          "endTimeMs": 143650
+          "endTimeMs": 143700
         },
         {
-          "word": "him",
-          "startTimeMs": 143650,
-          "endTimeMs": 143850
+          "word": "them",
+          "startTimeMs": 143700,
+          "endTimeMs": 143900
         },
         {
           "word": "that",
-          "startTimeMs": 143850,
-          "endTimeMs": 144050
+          "startTimeMs": 143900,
+          "endTimeMs": 144100
         },
         {
           "word": "I'm",
-          "startTimeMs": 144050,
-          "endTimeMs": 144250
+          "startTimeMs": 144100,
+          "endTimeMs": 144300
         },
         {
           "word": "not",
-          "startTimeMs": 144250,
-          "endTimeMs": 144450
+          "startTimeMs": 144300,
+          "endTimeMs": 144500
         },
         {
           "word": "just",
-          "startTimeMs": 144450,
-          "endTimeMs": 144650
+          "startTimeMs": 144500,
+          "endTimeMs": 144800
         },
         {
           "word": "anyone",
-          "startTimeMs": 144650,
+          "startTimeMs": 144800,
           "endTimeMs": 145250
         }
       ]
@@ -2674,52 +2584,42 @@
       "type": "LYRIC",
       "startTimeMs": 145250,
       "endTimeMs": 147880,
-      "segmentIndex": 56,
-      "text": "I am your first, you are my first, yah-yah-yah",
+      "segmentIndex": 55,
+      "text": "I'm your first, you're my first, yah-yah-yah",
       "words": [
         {
-          "word": "I",
+          "word": "I'm",
           "startTimeMs": 145250,
-          "endTimeMs": 145350
-        },
-        {
-          "word": "am",
-          "startTimeMs": 145350,
-          "endTimeMs": 145450
+          "endTimeMs": 145400
         },
         {
           "word": "your",
-          "startTimeMs": 145450,
-          "endTimeMs": 145550
+          "startTimeMs": 145400,
+          "endTimeMs": 145600
         },
         {
           "word": "first,",
-          "startTimeMs": 145550,
-          "endTimeMs": 145950
+          "startTimeMs": 145600,
+          "endTimeMs": 146200
         },
         {
-          "word": "you",
-          "startTimeMs": 145950,
-          "endTimeMs": 146150
-        },
-        {
-          "word": "are",
-          "startTimeMs": 146150,
-          "endTimeMs": 146250
+          "word": "you're",
+          "startTimeMs": 146200,
+          "endTimeMs": 146500
         },
         {
           "word": "my",
-          "startTimeMs": 146250,
-          "endTimeMs": 146350
+          "startTimeMs": 146500,
+          "endTimeMs": 146800
         },
         {
           "word": "first,",
-          "startTimeMs": 146350,
-          "endTimeMs": 146850
+          "startTimeMs": 146800,
+          "endTimeMs": 147300
         },
         {
           "word": "yah-yah-yah",
-          "startTimeMs": 146850,
+          "startTimeMs": 147300,
           "endTimeMs": 147880
         }
       ]
@@ -2728,47 +2628,42 @@
       "type": "LYRIC",
       "startTimeMs": 147880,
       "endTimeMs": 151520,
-      "segmentIndex": 57,
-      "text": "Because everyone wants a taste of you (uh-huh)",
+      "segmentIndex": 56,
+      "text": "Because everyone wants to try you (aha)",
       "words": [
         {
           "word": "Because",
           "startTimeMs": 147880,
-          "endTimeMs": 148280
+          "endTimeMs": 148100
         },
         {
           "word": "everyone",
-          "startTimeMs": 148280,
-          "endTimeMs": 148780
+          "startTimeMs": 148100,
+          "endTimeMs": 148500
         },
         {
           "word": "wants",
-          "startTimeMs": 148780,
-          "endTimeMs": 149080
+          "startTimeMs": 148500,
+          "endTimeMs": 148700
         },
         {
-          "word": "a",
-          "startTimeMs": 149080,
-          "endTimeMs": 149180
+          "word": "to",
+          "startTimeMs": 148700,
+          "endTimeMs": 149200
         },
         {
-          "word": "taste",
-          "startTimeMs": 149180,
-          "endTimeMs": 149480
-        },
-        {
-          "word": "of",
-          "startTimeMs": 149480,
-          "endTimeMs": 149580
+          "word": "try",
+          "startTimeMs": 149200,
+          "endTimeMs": 150500
         },
         {
           "word": "you",
-          "startTimeMs": 149580,
-          "endTimeMs": 149880
+          "startTimeMs": 150500,
+          "endTimeMs": 151000
         },
         {
-          "word": "(uh-huh)",
-          "startTimeMs": 149880,
+          "word": "(aha)",
+          "startTimeMs": 151000,
           "endTimeMs": 151520
         }
       ]
@@ -2777,67 +2672,67 @@
       "type": "LYRIC",
       "startTimeMs": 151520,
       "endTimeMs": 158220,
-      "segmentIndex": 58,
-      "text": "What they don't know is that you don't fall for just anyone (plo-plo-plo-plo)",
+      "segmentIndex": 57,
+      "text": "What they don't know is you don't let just anyone take you (plo-plo-plo-plo)",
       "words": [
         {
           "word": "What",
           "startTimeMs": 151520,
-          "endTimeMs": 151820
+          "endTimeMs": 151700
         },
         {
           "word": "they",
-          "startTimeMs": 151820,
-          "endTimeMs": 152120
+          "startTimeMs": 151700,
+          "endTimeMs": 151900
         },
         {
           "word": "don't",
-          "startTimeMs": 152120,
-          "endTimeMs": 152420
+          "startTimeMs": 151900,
+          "endTimeMs": 152100
         },
         {
           "word": "know",
-          "startTimeMs": 152420,
-          "endTimeMs": 152720
+          "startTimeMs": 152100,
+          "endTimeMs": 152300
         },
         {
           "word": "is",
-          "startTimeMs": 152720,
-          "endTimeMs": 152920
-        },
-        {
-          "word": "that",
-          "startTimeMs": 152920,
-          "endTimeMs": 153120
+          "startTimeMs": 152300,
+          "endTimeMs": 152500
         },
         {
           "word": "you",
-          "startTimeMs": 153120,
-          "endTimeMs": 153320
+          "startTimeMs": 152500,
+          "endTimeMs": 152700
         },
         {
           "word": "don't",
-          "startTimeMs": 153320,
-          "endTimeMs": 153620
+          "startTimeMs": 152700,
+          "endTimeMs": 152900
         },
         {
-          "word": "fall",
-          "startTimeMs": 153620,
-          "endTimeMs": 153920
-        },
-        {
-          "word": "for",
-          "startTimeMs": 153920,
-          "endTimeMs": 154120
+          "word": "let",
+          "startTimeMs": 152900,
+          "endTimeMs": 153100
         },
         {
           "word": "just",
-          "startTimeMs": 154120,
-          "endTimeMs": 154420
+          "startTimeMs": 153100,
+          "endTimeMs": 153300
         },
         {
           "word": "anyone",
-          "startTimeMs": 154420,
+          "startTimeMs": 153300,
+          "endTimeMs": 153900
+        },
+        {
+          "word": "take",
+          "startTimeMs": 153900,
+          "endTimeMs": 154500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 154500,
           "endTimeMs": 155500
         },
         {
@@ -2851,47 +2746,42 @@
       "type": "LYRIC",
       "startTimeMs": 158220,
       "endTimeMs": 161530,
-      "segmentIndex": 59,
-      "text": "And everyone wants a taste of you (uh)",
+      "segmentIndex": 58,
+      "text": "And everyone wants to try you (uh)",
       "words": [
         {
           "word": "And",
           "startTimeMs": 158220,
-          "endTimeMs": 158420
+          "endTimeMs": 158400
         },
         {
           "word": "everyone",
-          "startTimeMs": 158420,
-          "endTimeMs": 158920
+          "startTimeMs": 158400,
+          "endTimeMs": 158800
         },
         {
           "word": "wants",
-          "startTimeMs": 158920,
-          "endTimeMs": 159220
+          "startTimeMs": 158800,
+          "endTimeMs": 159000
         },
         {
-          "word": "a",
-          "startTimeMs": 159220,
-          "endTimeMs": 159320
+          "word": "to",
+          "startTimeMs": 159000,
+          "endTimeMs": 159500
         },
         {
-          "word": "taste",
-          "startTimeMs": 159320,
-          "endTimeMs": 159620
-        },
-        {
-          "word": "of",
-          "startTimeMs": 159620,
-          "endTimeMs": 159720
+          "word": "try",
+          "startTimeMs": 159500,
+          "endTimeMs": 160500
         },
         {
           "word": "you",
-          "startTimeMs": 159720,
-          "endTimeMs": 160020
+          "startTimeMs": 160500,
+          "endTimeMs": 161000
         },
         {
           "word": "(uh)",
-          "startTimeMs": 160020,
+          "startTimeMs": 161000,
           "endTimeMs": 161530
         }
       ]
@@ -2900,72 +2790,77 @@
       "type": "LYRIC",
       "startTimeMs": 161530,
       "endTimeMs": 167280,
-      "segmentIndex": 60,
-      "text": "What they don't know is that today I'm coming for you, yeah, yeah",
+      "segmentIndex": 59,
+      "text": "What they don't know is today I'm going to look for you, yeah, yeah",
       "words": [
         {
           "word": "What",
           "startTimeMs": 161530,
-          "endTimeMs": 161830
+          "endTimeMs": 161700
         },
         {
           "word": "they",
-          "startTimeMs": 161830,
-          "endTimeMs": 162130
+          "startTimeMs": 161700,
+          "endTimeMs": 161900
         },
         {
           "word": "don't",
-          "startTimeMs": 162130,
-          "endTimeMs": 162430
+          "startTimeMs": 161900,
+          "endTimeMs": 162100
         },
         {
           "word": "know",
-          "startTimeMs": 162430,
-          "endTimeMs": 162730
+          "startTimeMs": 162100,
+          "endTimeMs": 162500
         },
         {
           "word": "is",
-          "startTimeMs": 162730,
-          "endTimeMs": 162930
-        },
-        {
-          "word": "that",
-          "startTimeMs": 162930,
-          "endTimeMs": 163130
+          "startTimeMs": 162500,
+          "endTimeMs": 162700
         },
         {
           "word": "today",
-          "startTimeMs": 163130,
-          "endTimeMs": 163430
+          "startTimeMs": 162700,
+          "endTimeMs": 163000
         },
         {
           "word": "I'm",
-          "startTimeMs": 163430,
-          "endTimeMs": 163630
+          "startTimeMs": 163000,
+          "endTimeMs": 163300
         },
         {
-          "word": "coming",
-          "startTimeMs": 163630,
-          "endTimeMs": 163930
+          "word": "going",
+          "startTimeMs": 163300,
+          "endTimeMs": 163600
+        },
+        {
+          "word": "to",
+          "startTimeMs": 163600,
+          "endTimeMs": 163800
+        },
+        {
+          "word": "look",
+          "startTimeMs": 163800,
+          "endTimeMs": 164200
         },
         {
           "word": "for",
-          "startTimeMs": 163930,
-          "endTimeMs": 164230
+          "startTimeMs": 164200,
+          "endTimeMs": 165500
         },
         {
           "word": "you,",
-          "startTimeMs": 164230,
-          "endTimeMs": 164630
+          "startTimeMs": 165500,
+          "endTimeMs": 166300
         },
         {
           "word": "yeah,",
-          "startTimeMs": 164630,
-          "endTimeMs": 165630
+          "startTimeMs": 166300,
+          "endTimeMs": 166800
         },
         {
           "word": "yeah",
-          "startTimeMs": 165630,
+          "startTimeMs": 166800,
           "endTimeMs": 167280
         }
       ]
@@ -2974,42 +2869,42 @@
       "type": "LYRIC",
       "startTimeMs": 167280,
       "endTimeMs": 169630,
-      "segmentIndex": 61,
-      "text": "Tell him that you are mine, mine",
+      "segmentIndex": 60,
+      "text": "Tell them that you are mine, mine",
       "words": [
         {
           "word": "Tell",
           "startTimeMs": 167280,
-          "endTimeMs": 167580
+          "endTimeMs": 167500
         },
         {
-          "word": "him",
-          "startTimeMs": 167580,
-          "endTimeMs": 167880
+          "word": "them",
+          "startTimeMs": 167500,
+          "endTimeMs": 167700
         },
         {
           "word": "that",
-          "startTimeMs": 167880,
-          "endTimeMs": 168080
+          "startTimeMs": 167700,
+          "endTimeMs": 167900
         },
         {
           "word": "you",
-          "startTimeMs": 168080,
-          "endTimeMs": 168280
+          "startTimeMs": 167900,
+          "endTimeMs": 168100
         },
         {
           "word": "are",
-          "startTimeMs": 168280,
-          "endTimeMs": 168480
+          "startTimeMs": 168100,
+          "endTimeMs": 168300
         },
         {
           "word": "mine,",
-          "startTimeMs": 168480,
-          "endTimeMs": 168980
+          "startTimeMs": 168300,
+          "endTimeMs": 168800
         },
         {
           "word": "mine",
-          "startTimeMs": 168980,
+          "startTimeMs": 168800,
           "endTimeMs": 169630
         }
       ]
@@ -3018,42 +2913,42 @@
       "type": "LYRIC",
       "startTimeMs": 169630,
       "endTimeMs": 172500,
-      "segmentIndex": 62,
+      "segmentIndex": 61,
       "text": "You know that you are mine, mine",
       "words": [
         {
           "word": "You",
           "startTimeMs": 169630,
-          "endTimeMs": 169930
+          "endTimeMs": 169800
         },
         {
           "word": "know",
-          "startTimeMs": 169930,
-          "endTimeMs": 170230
+          "startTimeMs": 169800,
+          "endTimeMs": 170200
         },
         {
           "word": "that",
-          "startTimeMs": 170230,
-          "endTimeMs": 170430
+          "startTimeMs": 170200,
+          "endTimeMs": 170400
         },
         {
           "word": "you",
-          "startTimeMs": 170430,
-          "endTimeMs": 170630
+          "startTimeMs": 170400,
+          "endTimeMs": 170700
         },
         {
           "word": "are",
-          "startTimeMs": 170630,
-          "endTimeMs": 170830
+          "startTimeMs": 170700,
+          "endTimeMs": 171000
         },
         {
           "word": "mine,",
-          "startTimeMs": 170830,
-          "endTimeMs": 171430
+          "startTimeMs": 171000,
+          "endTimeMs": 171600
         },
         {
           "word": "mine",
-          "startTimeMs": 171430,
+          "startTimeMs": 171600,
           "endTimeMs": 172500
         }
       ]
@@ -3062,7 +2957,7 @@
       "type": "LYRIC",
       "startTimeMs": 172500,
       "endTimeMs": 174820,
-      "segmentIndex": 63,
+      "segmentIndex": 62,
       "text": "You said it yourself (you said it yourself)",
       "words": [
         {
@@ -3111,77 +3006,72 @@
       "type": "LYRIC",
       "startTimeMs": 174820,
       "endTimeMs": 177230,
-      "segmentIndex": 64,
+      "segmentIndex": 63,
       "text": "When I was doing it to you (when I was doing it to you)",
       "words": [
         {
           "word": "When",
           "startTimeMs": 174820,
-          "endTimeMs": 175020
+          "endTimeMs": 175100
         },
         {
           "word": "I",
-          "startTimeMs": 175020,
-          "endTimeMs": 175120
+          "startTimeMs": 175100,
+          "endTimeMs": 175300
         },
         {
           "word": "was",
-          "startTimeMs": 175120,
-          "endTimeMs": 175220
+          "startTimeMs": 175300,
+          "endTimeMs": 175450
         },
         {
           "word": "doing",
-          "startTimeMs": 175220,
-          "endTimeMs": 175420
+          "startTimeMs": 175450,
+          "endTimeMs": 175600
         },
         {
           "word": "it",
-          "startTimeMs": 175420,
-          "endTimeMs": 175520
+          "startTimeMs": 175600,
+          "endTimeMs": 175750
         },
         {
           "word": "to",
-          "startTimeMs": 175520,
-          "endTimeMs": 175620
+          "startTimeMs": 175750,
+          "endTimeMs": 175900
         },
         {
           "word": "you",
-          "startTimeMs": 175620,
-          "endTimeMs": 176020
+          "startTimeMs": 175900,
+          "endTimeMs": 176100
         },
         {
           "word": "(when",
-          "startTimeMs": 176020,
-          "endTimeMs": 176320
+          "startTimeMs": 176100,
+          "endTimeMs": 176400
         },
         {
           "word": "I",
-          "startTimeMs": 176320,
-          "endTimeMs": 176420
+          "startTimeMs": 176400,
+          "endTimeMs": 176550
         },
         {
           "word": "was",
-          "startTimeMs": 176420,
-          "endTimeMs": 176520
+          "startTimeMs": 176550,
+          "endTimeMs": 176700
         },
         {
           "word": "doing",
-          "startTimeMs": 176520,
-          "endTimeMs": 176720
+          "startTimeMs": 176700,
+          "endTimeMs": 176850
         },
         {
           "word": "it",
-          "startTimeMs": 176720,
-          "endTimeMs": 176820
+          "startTimeMs": 176850,
+          "endTimeMs": 177000
         },
         {
           "word": "to",
-          "startTimeMs": 176820,
-          "endTimeMs": 176920
-        },
-        {
-          "word": "you)",
-          "startTimeMs": 176920,
+          "startTimeMs": 177000,
           "endTimeMs": 177230
         }
       ]
@@ -3190,42 +3080,42 @@
       "type": "LYRIC",
       "startTimeMs": 177230,
       "endTimeMs": 179680,
-      "segmentIndex": 65,
-      "text": "Tell him that you are mine, mine",
+      "segmentIndex": 64,
+      "text": "Tell them that you are mine, mine",
       "words": [
         {
           "word": "Tell",
           "startTimeMs": 177230,
-          "endTimeMs": 177530
+          "endTimeMs": 177500
         },
         {
-          "word": "him",
-          "startTimeMs": 177530,
-          "endTimeMs": 177830
+          "word": "them",
+          "startTimeMs": 177500,
+          "endTimeMs": 177700
         },
         {
           "word": "that",
-          "startTimeMs": 177830,
-          "endTimeMs": 178030
+          "startTimeMs": 177700,
+          "endTimeMs": 177900
         },
         {
           "word": "you",
-          "startTimeMs": 178030,
-          "endTimeMs": 178230
+          "startTimeMs": 177900,
+          "endTimeMs": 178100
         },
         {
           "word": "are",
-          "startTimeMs": 178230,
-          "endTimeMs": 178430
+          "startTimeMs": 178100,
+          "endTimeMs": 178300
         },
         {
           "word": "mine,",
-          "startTimeMs": 178430,
-          "endTimeMs": 178930
+          "startTimeMs": 178300,
+          "endTimeMs": 178800
         },
         {
           "word": "mine",
-          "startTimeMs": 178930,
+          "startTimeMs": 178800,
           "endTimeMs": 179680
         }
       ]
@@ -3234,42 +3124,42 @@
       "type": "LYRIC",
       "startTimeMs": 179680,
       "endTimeMs": 182370,
-      "segmentIndex": 66,
+      "segmentIndex": 65,
       "text": "You know that you are mine, mine",
       "words": [
         {
           "word": "You",
           "startTimeMs": 179680,
-          "endTimeMs": 179980
+          "endTimeMs": 179800
         },
         {
           "word": "know",
-          "startTimeMs": 179980,
-          "endTimeMs": 180280
+          "startTimeMs": 179800,
+          "endTimeMs": 180200
         },
         {
           "word": "that",
-          "startTimeMs": 180280,
-          "endTimeMs": 180480
+          "startTimeMs": 180200,
+          "endTimeMs": 180400
         },
         {
           "word": "you",
-          "startTimeMs": 180480,
-          "endTimeMs": 180680
+          "startTimeMs": 180400,
+          "endTimeMs": 180700
         },
         {
           "word": "are",
-          "startTimeMs": 180680,
-          "endTimeMs": 180880
+          "startTimeMs": 180700,
+          "endTimeMs": 181000
         },
         {
           "word": "mine,",
-          "startTimeMs": 180880,
-          "endTimeMs": 181480
+          "startTimeMs": 181000,
+          "endTimeMs": 181600
         },
         {
           "word": "mine",
-          "startTimeMs": 181480,
+          "startTimeMs": 181600,
           "endTimeMs": 182370
         }
       ]
@@ -3278,47 +3168,47 @@
       "type": "LYRIC",
       "startTimeMs": 182370,
       "endTimeMs": 184550,
-      "segmentIndex": 67,
+      "segmentIndex": 66,
       "text": "You said it yourself (you said it yourself)",
       "words": [
         {
           "word": "You",
           "startTimeMs": 182370,
-          "endTimeMs": 182570
+          "endTimeMs": 182500
         },
         {
           "word": "said",
-          "startTimeMs": 182570,
-          "endTimeMs": 182870
+          "startTimeMs": 182500,
+          "endTimeMs": 182800
         },
         {
           "word": "it",
-          "startTimeMs": 182870,
-          "endTimeMs": 183070
+          "startTimeMs": 182800,
+          "endTimeMs": 183000
         },
         {
           "word": "yourself",
-          "startTimeMs": 183070,
-          "endTimeMs": 183570
+          "startTimeMs": 183000,
+          "endTimeMs": 183500
         },
         {
           "word": "(you",
-          "startTimeMs": 183570,
-          "endTimeMs": 183770
+          "startTimeMs": 183500,
+          "endTimeMs": 183700
         },
         {
           "word": "said",
-          "startTimeMs": 183770,
-          "endTimeMs": 184070
+          "startTimeMs": 183700,
+          "endTimeMs": 184000
         },
         {
           "word": "it",
-          "startTimeMs": 184070,
-          "endTimeMs": 184270
+          "startTimeMs": 184000,
+          "endTimeMs": 184200
         },
         {
           "word": "yourself)",
-          "startTimeMs": 184270,
+          "startTimeMs": 184200,
           "endTimeMs": 184550
         }
       ]
@@ -3327,77 +3217,72 @@
       "type": "LYRIC",
       "startTimeMs": 184550,
       "endTimeMs": 187550,
-      "segmentIndex": 68,
+      "segmentIndex": 67,
       "text": "When I was doing it to you (when I was doing it to you)",
       "words": [
         {
           "word": "When",
           "startTimeMs": 184550,
-          "endTimeMs": 184750
+          "endTimeMs": 184800
         },
         {
           "word": "I",
-          "startTimeMs": 184750,
-          "endTimeMs": 184850
+          "startTimeMs": 184800,
+          "endTimeMs": 185000
         },
         {
           "word": "was",
-          "startTimeMs": 184850,
-          "endTimeMs": 184950
-        },
-        {
-          "word": "doing",
-          "startTimeMs": 184950,
+          "startTimeMs": 185000,
           "endTimeMs": 185150
         },
         {
-          "word": "it",
+          "word": "doing",
           "startTimeMs": 185150,
-          "endTimeMs": 185250
+          "endTimeMs": 185300
+        },
+        {
+          "word": "it",
+          "startTimeMs": 185300,
+          "endTimeMs": 185450
         },
         {
           "word": "to",
-          "startTimeMs": 185250,
-          "endTimeMs": 185350
+          "startTimeMs": 185450,
+          "endTimeMs": 185800
         },
         {
           "word": "you",
-          "startTimeMs": 185350,
-          "endTimeMs": 185750
+          "startTimeMs": 185800,
+          "endTimeMs": 186100
         },
         {
           "word": "(when",
-          "startTimeMs": 185750,
-          "endTimeMs": 186050
-        },
-        {
-          "word": "I",
-          "startTimeMs": 186050,
-          "endTimeMs": 186150
-        },
-        {
-          "word": "was",
-          "startTimeMs": 186150,
+          "startTimeMs": 186100,
           "endTimeMs": 186250
         },
         {
-          "word": "doing",
+          "word": "I",
           "startTimeMs": 186250,
-          "endTimeMs": 186450
+          "endTimeMs": 186400
         },
         {
-          "word": "it",
-          "startTimeMs": 186450,
+          "word": "was",
+          "startTimeMs": 186400,
           "endTimeMs": 186550
         },
         {
-          "word": "to",
+          "word": "doing",
           "startTimeMs": 186550,
-          "endTimeMs": 186650
+          "endTimeMs": 186700
         },
         {
-          "word": "you)",
-          "startTimeMs": 186650,
+          "word": "it",
+          "startTimeMs": 186700,
+          "endTimeMs": 186900
+        },
+        {
+          "word": "to",
+          "startTimeMs": 186900,
           "endTimeMs": 187550
         }
       ]
@@ -3406,7 +3291,7 @@
       "type": "INSTRUMENTAL",
       "startTimeMs": 187550,
       "endTimeMs": 210350,
-      "segmentIndex": 69,
+      "segmentIndex": 68,
       "cueText": "Outro"
     }
   ]
