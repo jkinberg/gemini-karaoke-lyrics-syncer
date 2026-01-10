@@ -42,10 +42,11 @@ The current approach of sending raw lyrics + audio to Gemini for full-song synch
    - `generateBilingualKaraokeFromLrc(audioFile, lrcContent, onStatusUpdate, modelTier)` - Full bilingual workflow: parse LRC → translate → generate Spanish timing → align English
 
 4. **UI Integration** (`App.tsx`)
-   - Auto-detection: When LRC format is detected in lyrics textarea, UI switches to "LRC MODE"
-   - Visual indicator: Blue "LRC MODE" badge when active
-   - Simplified workflow: English lyrics textarea hidden (translations generated automatically)
-   - Button text updates: "Generate Karaoke from LRC" when in LRC mode
+   - Simplified single-input workflow: Only LRC content input (no English textarea)
+   - Upload button: "Upload .LRC" for easy file selection
+   - Auto-detection: Shows "LRC detected" badge when valid LRC format is pasted
+   - LRC info display: Shows line count and metadata when LRC is detected
+   - Translations are always auto-generated (no manual input needed)
 
 5. **Partial Output Refinement** (`services/geminiService.ts`)
    - Refactored auto-correction to return only refined segments instead of full song data
@@ -57,17 +58,22 @@ The current approach of sending raw lyrics + audio to Gemini for full-song synch
 
 | Decision | Choice | Rationale |
 |----------|--------|-----------|
-| LRC Input | Auto-detect in textarea | Simpler UX, no mode toggle needed |
-| Timestamp flexibility | ±500ms adjustment allowed | LRC timestamps aren't always perfect |
+| LRC Input | Upload button + auto-detect in textarea | Simple UX, supports both paste and file upload |
+| Timestamp approach | Hybrid: LRC as primary guide + instrumental detection | Fast (uses LRC timing) while detecting missing sections |
+| Timestamp flexibility | ±1000ms adjustment allowed | LRC timestamps may be slightly off |
+| Instrumentals | Explicit detection from audio | Detects intros, interludes, outros not in LRC |
 | Processing | Single API call | Full song context, simpler implementation |
-| Instrumentals | Detected via gaps >5s | Automatic, no manual marking needed |
 | Translation | Gemini Flash | Fast, cost-effective for text translation |
+| Default model | Gemini 3 Pro | Better accuracy than 2.5, fast enough for production |
+| UI | Simplified single-input | Removed English textarea, translations auto-generated |
 
 ### Results
 
 - **Accuracy**: Significantly improved word-level timing accuracy
+- **Speed**: Fast generation using LRC timestamps as primary guide
 - **Gemini 3 Pro**: Produces high-quality results without needing auto-correction
-- **User experience**: Simpler workflow when LRC files are available
+- **Instrumental detection**: Properly adds intro/interlude/outro segments
+- **User experience**: Simplified workflow with single LRC input
 
 ---
 
