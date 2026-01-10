@@ -6,6 +6,7 @@ import {
   translateLyrics,
   refineKaraokeData,
   refineTranslatedKaraokeData,
+  alignTranslatedToRefinedOriginal,
   refineMarkedSegments,
   autoRefineProblems,
   generateBilingualKaraokeFromLrc,
@@ -1529,19 +1530,18 @@ const KaraokeDataDisplay: React.FC<KaraokeDataDisplayProps> = ({ karaokeData, se
       setRefineStatus(`${originalLangName} refinement complete!`);
 
 
-      // Step 2: Refine Translated Language (Timing Alignment)
-      setRefineStatus(`Step 2/2: Aligning ${translatedLangName} translation timing...`);
+      // Step 2: Align Translated Language to Refined Original (Text-only, no audio needed)
+      setRefineStatus(`Step 2/2: Aligning ${translatedLangName} translation timing (fast text-only pass)...`);
       setRefineProgress(60);
       const translatedDataToRefine = karaokeData[translatedDataKey];
-      const refinedTranslatedData = await refineTranslatedKaraokeData(
-        audioFile,
-        translatedDataToRefine,
+      const refinedTranslatedData = await alignTranslatedToRefinedOriginal(
         refinedOriginalData,
-        translatedLangName,
+        translatedDataToRefine,
         originalLangName,
+        translatedLangName,
         (status) => {
           setRefineStatus(`Step 2/2: Aligning ${translatedLangName} - ${status}`);
-          if (status.toLowerCase().includes('sending data')) setRefineProgress(75);
+          if (status.toLowerCase().includes('using')) setRefineProgress(75);
       }, modelTier);
       
       const finalData = {

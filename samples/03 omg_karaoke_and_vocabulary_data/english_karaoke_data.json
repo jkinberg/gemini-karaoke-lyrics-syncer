@@ -1,1763 +1,1896 @@
 {
   "metadata": {
-    "title": "Oh My God",
-    "artist": "Guianko",
-    "durationMs": 182000,
-    "language": "en",
+    "title": "Oh my God",
+    "artist": "Yanko",
+    "durationMs": 192000,
+    "language": "en-US",
     "version": "1.0"
   },
   "segments": [
     {
       "type": "INSTRUMENTAL",
       "startTimeMs": 0,
-      "endTimeMs": 10112,
-      "segmentIndex": 0,
-      "cueText": "Intro"
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 10113,
-      "endTimeMs": 11283,
+      "endTimeMs": 5025,
       "segmentIndex": 1,
       "text": "Oh my God",
       "words": [
         {
           "word": "Oh",
-          "startTimeMs": 10113,
-          "endTimeMs": 10483
+          "startTimeMs": 0,
+          "endTimeMs": 1675
         },
         {
           "word": "my",
-          "startTimeMs": 10493,
-          "endTimeMs": 10733
+          "startTimeMs": 1675,
+          "endTimeMs": 3350
         },
         {
           "word": "God",
-          "startTimeMs": 10743,
-          "endTimeMs": 11283
+          "startTimeMs": 3350,
+          "endTimeMs": 5025
         }
       ]
     },
     {
-      "type": "LYRIC",
-      "startTimeMs": 12023,
-      "endTimeMs": 13913,
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 5025,
+      "endTimeMs": 10050,
       "segmentIndex": 2,
-      "text": "All the bad, cast it away",
+      "text": "Oh my God",
       "words": [
         {
-          "word": "All",
-          "startTimeMs": 12023,
-          "endTimeMs": 12303
+          "word": "Oh",
+          "startTimeMs": 5025,
+          "endTimeMs": 6700
         },
         {
-          "word": "the",
-          "startTimeMs": 12313,
-          "endTimeMs": 12473
+          "word": "my",
+          "startTimeMs": 6700,
+          "endTimeMs": 8375
         },
         {
-          "word": "bad,",
-          "startTimeMs": 12483,
-          "endTimeMs": 12843
-        },
-        {
-          "word": "cast",
-          "startTimeMs": 12853,
-          "endTimeMs": 13323
-        },
-        {
-          "word": "it",
-          "startTimeMs": 13333,
-          "endTimeMs": 13533
-        },
-        {
-          "word": "away",
-          "startTimeMs": 13543,
-          "endTimeMs": 13913
+          "word": "God",
+          "startTimeMs": 8375,
+          "endTimeMs": 10050
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 14633,
-      "endTimeMs": 15823,
+      "startTimeMs": 10050,
+      "endTimeMs": 12100,
       "segmentIndex": 3,
       "text": "Oh my God",
       "words": [
         {
           "word": "Oh",
-          "startTimeMs": 14633,
-          "endTimeMs": 14893
+          "startTimeMs": 10050,
+          "endTimeMs": 10450
         },
         {
           "word": "my",
-          "startTimeMs": 14903,
-          "endTimeMs": 15133
+          "startTimeMs": 10450,
+          "endTimeMs": 10800
         },
         {
           "word": "God",
-          "startTimeMs": 15143,
-          "endTimeMs": 15823
+          "startTimeMs": 10800,
+          "endTimeMs": 12100
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 16383,
-      "endTimeMs": 18483,
+      "startTimeMs": 12100,
+      "endTimeMs": 14800,
       "segmentIndex": 4,
+      "text": "Cast all the bad away",
+      "words": [
+        {
+          "word": "Cast",
+          "startTimeMs": 12100,
+          "endTimeMs": 12400
+        },
+        {
+          "word": "all",
+          "startTimeMs": 12400,
+          "endTimeMs": 12500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 12500,
+          "endTimeMs": 13000
+        },
+        {
+          "word": "bad",
+          "startTimeMs": 13000,
+          "endTimeMs": 13600
+        },
+        {
+          "word": "away",
+          "startTimeMs": 13600,
+          "endTimeMs": 14800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 14800,
+      "endTimeMs": 16360,
+      "segmentIndex": 5,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 14800,
+          "endTimeMs": 15300
+        },
+        {
+          "word": "my",
+          "startTimeMs": 15300,
+          "endTimeMs": 15800
+        },
+        {
+          "word": "God",
+          "startTimeMs": 15800,
+          "endTimeMs": 16360
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 16360,
+      "endTimeMs": 19570,
+      "segmentIndex": 6,
       "text": "Give me health and prosperity",
       "words": [
         {
           "word": "Give",
-          "startTimeMs": 16383,
-          "endTimeMs": 16543
+          "startTimeMs": 16360,
+          "endTimeMs": 16800
         },
         {
           "word": "me",
-          "startTimeMs": 16553,
-          "endTimeMs": 16743
+          "startTimeMs": 16800,
+          "endTimeMs": 17200
         },
         {
           "word": "health",
-          "startTimeMs": 16753,
-          "endTimeMs": 17163
+          "startTimeMs": 17200,
+          "endTimeMs": 17800
         },
         {
           "word": "and",
-          "startTimeMs": 17173,
-          "endTimeMs": 17313
+          "startTimeMs": 17800,
+          "endTimeMs": 18200
         },
         {
           "word": "prosperity",
-          "startTimeMs": 17323,
-          "endTimeMs": 18483
+          "startTimeMs": 18200,
+          "endTimeMs": 19570
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 19788,
-      "endTimeMs": 23228,
-      "segmentIndex": 5,
-      "text": "I have nothing but I am happy",
+      "startTimeMs": 19570,
+      "endTimeMs": 24140,
+      "segmentIndex": 7,
+      "text": "I have nothing, but I am happy",
       "words": [
         {
           "word": "I",
-          "startTimeMs": 19788,
-          "endTimeMs": 19938
+          "startTimeMs": 19570,
+          "endTimeMs": 19900
         },
         {
           "word": "have",
-          "startTimeMs": 19948,
-          "endTimeMs": 20428
+          "startTimeMs": 19900,
+          "endTimeMs": 20400
         },
         {
-          "word": "nothing",
-          "startTimeMs": 20438,
-          "endTimeMs": 20978
+          "word": "nothing,",
+          "startTimeMs": 20400,
+          "endTimeMs": 21500
         },
         {
           "word": "but",
-          "startTimeMs": 20988,
-          "endTimeMs": 21278
+          "startTimeMs": 21500,
+          "endTimeMs": 22000
         },
         {
           "word": "I",
-          "startTimeMs": 21288,
-          "endTimeMs": 21478
+          "startTimeMs": 22000,
+          "endTimeMs": 22400
         },
         {
           "word": "am",
-          "startTimeMs": 21488,
-          "endTimeMs": 21958
+          "startTimeMs": 22400,
+          "endTimeMs": 22800
         },
         {
           "word": "happy",
-          "startTimeMs": 21968,
-          "endTimeMs": 23228
+          "startTimeMs": 22800,
+          "endTimeMs": 24140
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 24098,
-      "endTimeMs": 27768,
-      "segmentIndex": 6,
-      "text": "Only memories dwell within me",
+      "startTimeMs": 24140,
+      "endTimeMs": 28050,
+      "segmentIndex": 8,
+      "text": "Only memories live within me",
       "words": [
         {
           "word": "Only",
-          "startTimeMs": 24098,
-          "endTimeMs": 24498
+          "startTimeMs": 24140,
+          "endTimeMs": 24800
         },
         {
           "word": "memories",
-          "startTimeMs": 24508,
-          "endTimeMs": 25378
+          "startTimeMs": 24800,
+          "endTimeMs": 25800
         },
         {
-          "word": "dwell",
-          "startTimeMs": 25388,
-          "endTimeMs": 25798
+          "word": "live",
+          "startTimeMs": 25800,
+          "endTimeMs": 26500
         },
         {
           "word": "within",
-          "startTimeMs": 25808,
-          "endTimeMs": 26398
+          "startTimeMs": 26500,
+          "endTimeMs": 27200
         },
         {
           "word": "me",
-          "startTimeMs": 26408,
-          "endTimeMs": 27768
+          "startTimeMs": 27200,
+          "endTimeMs": 28050
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 28588,
-      "endTimeMs": 32188,
-      "segmentIndex": 7,
-      "text": "Dreams to fulfill and I'm going for them",
+      "startTimeMs": 28050,
+      "endTimeMs": 30750,
+      "segmentIndex": 9,
+      "text": "Dreams to fulfill (dreams)",
       "words": [
         {
           "word": "Dreams",
-          "startTimeMs": 28588,
-          "endTimeMs": 29028
+          "startTimeMs": 28050,
+          "endTimeMs": 28700
         },
         {
           "word": "to",
-          "startTimeMs": 29038,
-          "endTimeMs": 29208
+          "startTimeMs": 28700,
+          "endTimeMs": 29000
         },
         {
           "word": "fulfill",
-          "startTimeMs": 29218,
-          "endTimeMs": 30148
+          "startTimeMs": 29000,
+          "endTimeMs": 29800
         },
         {
-          "word": "and",
-          "startTimeMs": 30158,
-          "endTimeMs": 30338
-        },
-        {
-          "word": "I'm",
-          "startTimeMs": 30348,
-          "endTimeMs": 30598
-        },
-        {
-          "word": "going",
-          "startTimeMs": 30608,
-          "endTimeMs": 30888
-        },
-        {
-          "word": "for",
-          "startTimeMs": 30898,
-          "endTimeMs": 31048
-        },
-        {
-          "word": "them",
-          "startTimeMs": 31058,
-          "endTimeMs": 32188
+          "word": "(dreams)",
+          "startTimeMs": 29800,
+          "endTimeMs": 30750
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 32998,
-      "endTimeMs": 35518,
-      "segmentIndex": 8,
+      "startTimeMs": 30750,
+      "endTimeMs": 33130,
+      "segmentIndex": 10,
+      "text": "And I believe in myself (in myself)",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 30750,
+          "endTimeMs": 31000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 31000,
+          "endTimeMs": 31200
+        },
+        {
+          "word": "believe",
+          "startTimeMs": 31200,
+          "endTimeMs": 31600
+        },
+        {
+          "word": "in",
+          "startTimeMs": 31600,
+          "endTimeMs": 31800
+        },
+        {
+          "word": "myself",
+          "startTimeMs": 31800,
+          "endTimeMs": 32300
+        },
+        {
+          "word": "(in",
+          "startTimeMs": 32300,
+          "endTimeMs": 32600
+        },
+        {
+          "word": "myself)",
+          "startTimeMs": 32600,
+          "endTimeMs": 33130
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 33130,
+      "endTimeMs": 35680,
+      "segmentIndex": 11,
       "text": "I might be crazy, but not lazy",
       "words": [
         {
           "word": "I",
-          "startTimeMs": 32998,
-          "endTimeMs": 33128
+          "startTimeMs": 33130,
+          "endTimeMs": 33300
         },
         {
           "word": "might",
-          "startTimeMs": 33138,
-          "endTimeMs": 33328
+          "startTimeMs": 33300,
+          "endTimeMs": 33600
         },
         {
           "word": "be",
-          "startTimeMs": 33338,
-          "endTimeMs": 33798
+          "startTimeMs": 33600,
+          "endTimeMs": 33800
         },
         {
           "word": "crazy,",
-          "startTimeMs": 33808,
-          "endTimeMs": 34398
+          "startTimeMs": 33800,
+          "endTimeMs": 34400
         },
         {
           "word": "but",
-          "startTimeMs": 34408,
-          "endTimeMs": 34758
+          "startTimeMs": 34400,
+          "endTimeMs": 34800
         },
         {
           "word": "not",
-          "startTimeMs": 34768,
-          "endTimeMs": 34978
+          "startTimeMs": 34800,
+          "endTimeMs": 35100
         },
         {
           "word": "lazy",
-          "startTimeMs": 34988,
-          "endTimeMs": 35518
+          "startTimeMs": 35100,
+          "endTimeMs": 35680
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 35848,
-      "endTimeMs": 38008,
-      "segmentIndex": 9,
-      "text": "Until I achieve it, I will continue",
+      "startTimeMs": 35680,
+      "endTimeMs": 38990,
+      "segmentIndex": 12,
+      "text": "And until I achieve it I’m going to keep going",
       "words": [
         {
-          "word": "Until",
-          "startTimeMs": 35848,
-          "endTimeMs": 36178
+          "word": "And",
+          "startTimeMs": 35680,
+          "endTimeMs": 35900
+        },
+        {
+          "word": "until",
+          "startTimeMs": 35900,
+          "endTimeMs": 36300
         },
         {
           "word": "I",
-          "startTimeMs": 36188,
-          "endTimeMs": 36328
+          "startTimeMs": 36300,
+          "endTimeMs": 36500
         },
         {
           "word": "achieve",
-          "startTimeMs": 36338,
-          "endTimeMs": 36828
-        },
-        {
-          "word": "it,",
-          "startTimeMs": 36838,
-          "endTimeMs": 37078
-        },
-        {
-          "word": "I",
-          "startTimeMs": 37088,
-          "endTimeMs": 37238
-        },
-        {
-          "word": "will",
-          "startTimeMs": 37248,
-          "endTimeMs": 37448
-        },
-        {
-          "word": "continue",
-          "startTimeMs": 37458,
-          "endTimeMs": 38008
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 38778,
-      "endTimeMs": 40088,
-      "segmentIndex": 10,
-      "text": "Oh my God",
-      "words": [
-        {
-          "word": "Oh",
-          "startTimeMs": 38778,
-          "endTimeMs": 39028
-        },
-        {
-          "word": "my",
-          "startTimeMs": 39038,
-          "endTimeMs": 39288
-        },
-        {
-          "word": "God",
-          "startTimeMs": 39298,
-          "endTimeMs": 40088
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 40608,
-      "endTimeMs": 42838,
-      "segmentIndex": 11,
-      "text": "All the bad, cast it away",
-      "words": [
-        {
-          "word": "All",
-          "startTimeMs": 40608,
-          "endTimeMs": 40888
-        },
-        {
-          "word": "the",
-          "startTimeMs": 40898,
-          "endTimeMs": 41018
-        },
-        {
-          "word": "bad,",
-          "startTimeMs": 41028,
-          "endTimeMs": 41418
-        },
-        {
-          "word": "cast",
-          "startTimeMs": 41428,
-          "endTimeMs": 41888
+          "startTimeMs": 36500,
+          "endTimeMs": 37000
         },
         {
           "word": "it",
-          "startTimeMs": 41898,
-          "endTimeMs": 42098
+          "startTimeMs": 37000,
+          "endTimeMs": 37200
         },
         {
-          "word": "away",
-          "startTimeMs": 42108,
-          "endTimeMs": 42838
+          "word": "I’m",
+          "startTimeMs": 37200,
+          "endTimeMs": 37500
+        },
+        {
+          "word": "going",
+          "startTimeMs": 37500,
+          "endTimeMs": 37800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 37800,
+          "endTimeMs": 38000
+        },
+        {
+          "word": "keep",
+          "startTimeMs": 38000,
+          "endTimeMs": 38400
+        },
+        {
+          "word": "going",
+          "startTimeMs": 38400,
+          "endTimeMs": 38990
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 43418,
-      "endTimeMs": 44768,
-      "segmentIndex": 12,
+      "startTimeMs": 38990,
+      "endTimeMs": 40810,
+      "segmentIndex": 13,
       "text": "Oh my God",
       "words": [
         {
           "word": "Oh",
-          "startTimeMs": 43418,
-          "endTimeMs": 43698
+          "startTimeMs": 38990,
+          "endTimeMs": 39600
         },
         {
           "word": "my",
-          "startTimeMs": 43708,
-          "endTimeMs": 43948
+          "startTimeMs": 39600,
+          "endTimeMs": 40200
         },
         {
           "word": "God",
-          "startTimeMs": 43958,
-          "endTimeMs": 44768
+          "startTimeMs": 40200,
+          "endTimeMs": 40810
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 45338,
-      "endTimeMs": 47448,
-      "segmentIndex": 13,
+      "startTimeMs": 40810,
+      "endTimeMs": 43750,
+      "segmentIndex": 14,
+      "text": "Cast all the bad away",
+      "words": [
+        {
+          "word": "Cast",
+          "startTimeMs": 40810,
+          "endTimeMs": 41400
+        },
+        {
+          "word": "all",
+          "startTimeMs": 41400,
+          "endTimeMs": 41800
+        },
+        {
+          "word": "the",
+          "startTimeMs": 41800,
+          "endTimeMs": 42100
+        },
+        {
+          "word": "bad",
+          "startTimeMs": 42100,
+          "endTimeMs": 42700
+        },
+        {
+          "word": "away",
+          "startTimeMs": 42700,
+          "endTimeMs": 43750
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 43750,
+      "endTimeMs": 45400,
+      "segmentIndex": 15,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 43750,
+          "endTimeMs": 44300
+        },
+        {
+          "word": "my",
+          "startTimeMs": 44300,
+          "endTimeMs": 44800
+        },
+        {
+          "word": "God",
+          "startTimeMs": 44800,
+          "endTimeMs": 45400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 45400,
+      "endTimeMs": 47870,
+      "segmentIndex": 16,
       "text": "Give me health and prosperity",
       "words": [
         {
           "word": "Give",
-          "startTimeMs": 45338,
-          "endTimeMs": 45648
+          "startTimeMs": 45400,
+          "endTimeMs": 45900
         },
         {
           "word": "me",
-          "startTimeMs": 45658,
-          "endTimeMs": 45828
+          "startTimeMs": 45900,
+          "endTimeMs": 46300
         },
         {
           "word": "health",
-          "startTimeMs": 45838,
-          "endTimeMs": 46028
+          "startTimeMs": 46300,
+          "endTimeMs": 46800
         },
         {
           "word": "and",
-          "startTimeMs": 46038,
-          "endTimeMs": 46188
+          "startTimeMs": 46800,
+          "endTimeMs": 47100
         },
         {
           "word": "prosperity",
-          "startTimeMs": 46198,
-          "endTimeMs": 47448
+          "startTimeMs": 47100,
+          "endTimeMs": 47870
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 48138,
-      "endTimeMs": 50298,
-      "segmentIndex": 14,
-      "text": "May all the planets align for me",
+      "startTimeMs": 47870,
+      "endTimeMs": 50360,
+      "segmentIndex": 17,
+      "text": "Let all the planets align for me",
       "words": [
         {
-          "word": "May",
-          "startTimeMs": 48138,
-          "endTimeMs": 48298
+          "word": "Let",
+          "startTimeMs": 47870,
+          "endTimeMs": 48200
         },
         {
           "word": "all",
-          "startTimeMs": 48308,
-          "endTimeMs": 48478
+          "startTimeMs": 48200,
+          "endTimeMs": 48500
         },
         {
           "word": "the",
-          "startTimeMs": 48488,
-          "endTimeMs": 48608
+          "startTimeMs": 48500,
+          "endTimeMs": 48800
         },
         {
           "word": "planets",
-          "startTimeMs": 48618,
-          "endTimeMs": 49328
+          "startTimeMs": 48800,
+          "endTimeMs": 49400
         },
         {
           "word": "align",
-          "startTimeMs": 49338,
-          "endTimeMs": 49878
+          "startTimeMs": 49400,
+          "endTimeMs": 49800
         },
         {
           "word": "for",
-          "startTimeMs": 49888,
-          "endTimeMs": 50078
+          "startTimeMs": 49800,
+          "endTimeMs": 50000
         },
         {
           "word": "me",
-          "startTimeMs": 50088,
-          "endTimeMs": 50298
+          "startTimeMs": 50000,
+          "endTimeMs": 50360
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 50488,
-      "endTimeMs": 52638,
-      "segmentIndex": 15,
-      "text": "May my wallet stop dieting",
+      "startTimeMs": 50360,
+      "endTimeMs": 52770,
+      "segmentIndex": 18,
+      "text": "Let my wallet stop its diet",
       "words": [
         {
-          "word": "May",
-          "startTimeMs": 50488,
-          "endTimeMs": 50648
+          "word": "Let",
+          "startTimeMs": 50360,
+          "endTimeMs": 50600
         },
         {
           "word": "my",
-          "startTimeMs": 50658,
-          "endTimeMs": 50828
+          "startTimeMs": 50600,
+          "endTimeMs": 50800
         },
         {
           "word": "wallet",
-          "startTimeMs": 50838,
-          "endTimeMs": 51388
+          "startTimeMs": 50800,
+          "endTimeMs": 51400
         },
         {
           "word": "stop",
-          "startTimeMs": 51398,
-          "endTimeMs": 51858
+          "startTimeMs": 51400,
+          "endTimeMs": 51800
         },
         {
-          "word": "dieting",
-          "startTimeMs": 51868,
-          "endTimeMs": 52638
+          "word": "its",
+          "startTimeMs": 51800,
+          "endTimeMs": 52100
+        },
+        {
+          "word": "diet",
+          "startTimeMs": 52100,
+          "endTimeMs": 52770
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 52788,
-      "endTimeMs": 54788,
-      "segmentIndex": 16,
-      "text": "May good luck visit me",
+      "startTimeMs": 52770,
+      "endTimeMs": 55080,
+      "segmentIndex": 19,
+      "text": "Let good luck visit me",
       "words": [
         {
-          "word": "May",
-          "startTimeMs": 52788,
-          "endTimeMs": 52948
+          "word": "Let",
+          "startTimeMs": 52770,
+          "endTimeMs": 53000
         },
         {
           "word": "good",
-          "startTimeMs": 52958,
-          "endTimeMs": 53118
+          "startTimeMs": 53000,
+          "endTimeMs": 53400
         },
         {
           "word": "luck",
-          "startTimeMs": 53128,
-          "endTimeMs": 53708
+          "startTimeMs": 53400,
+          "endTimeMs": 53800
         },
         {
           "word": "visit",
-          "startTimeMs": 53718,
-          "endTimeMs": 54198
+          "startTimeMs": 53800,
+          "endTimeMs": 54400
         },
         {
           "word": "me",
-          "startTimeMs": 54208,
-          "endTimeMs": 54788
+          "startTimeMs": 54400,
+          "endTimeMs": 55080
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 55238,
-      "endTimeMs": 57148,
-      "segmentIndex": 17,
+      "startTimeMs": 55080,
+      "endTimeMs": 58240,
+      "segmentIndex": 20,
       "text": "To help all my people",
       "words": [
         {
           "word": "To",
-          "startTimeMs": 55238,
-          "endTimeMs": 55528
+          "startTimeMs": 55080,
+          "endTimeMs": 55500
         },
         {
           "word": "help",
-          "startTimeMs": 55538,
-          "endTimeMs": 56028
+          "startTimeMs": 55500,
+          "endTimeMs": 56000
         },
         {
           "word": "all",
-          "startTimeMs": 56038,
-          "endTimeMs": 56198
+          "startTimeMs": 56000,
+          "endTimeMs": 56500
         },
         {
           "word": "my",
-          "startTimeMs": 56208,
-          "endTimeMs": 56498
+          "startTimeMs": 56500,
+          "endTimeMs": 57000
         },
         {
           "word": "people",
-          "startTimeMs": 56508,
-          "endTimeMs": 57148
+          "startTimeMs": 57000,
+          "endTimeMs": 58240
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 58028,
-      "endTimeMs": 59308,
-      "segmentIndex": 18,
+      "startTimeMs": 58240,
+      "endTimeMs": 60200,
+      "segmentIndex": 21,
       "text": "Oh my God",
       "words": [
         {
           "word": "Oh",
-          "startTimeMs": 58028,
-          "endTimeMs": 58278
+          "startTimeMs": 58240,
+          "endTimeMs": 58800
         },
         {
           "word": "my",
-          "startTimeMs": 58288,
-          "endTimeMs": 58528
+          "startTimeMs": 58800,
+          "endTimeMs": 59400
         },
         {
           "word": "God",
-          "startTimeMs": 58538,
-          "endTimeMs": 59308
+          "startTimeMs": 59400,
+          "endTimeMs": 60200
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 59978,
-      "endTimeMs": 62208,
-      "segmentIndex": 19,
-      "text": "All the bad, cast it away",
+      "startTimeMs": 60200,
+      "endTimeMs": 63130,
+      "segmentIndex": 22,
+      "text": "Cast all the bad away",
       "words": [
         {
-          "word": "All",
-          "startTimeMs": 59978,
-          "endTimeMs": 60238
+          "word": "Cast",
+          "startTimeMs": 60200,
+          "endTimeMs": 60600
+        },
+        {
+          "word": "all",
+          "startTimeMs": 60600,
+          "endTimeMs": 61000
         },
         {
           "word": "the",
-          "startTimeMs": 60248,
-          "endTimeMs": 60398
+          "startTimeMs": 61000,
+          "endTimeMs": 61300
         },
         {
-          "word": "bad,",
-          "startTimeMs": 60408,
-          "endTimeMs": 60788
-        },
-        {
-          "word": "cast",
-          "startTimeMs": 60798,
-          "endTimeMs": 61268
-        },
-        {
-          "word": "it",
-          "startTimeMs": 61278,
-          "endTimeMs": 61488
+          "word": "bad",
+          "startTimeMs": 61300,
+          "endTimeMs": 62000
         },
         {
           "word": "away",
-          "startTimeMs": 61498,
-          "endTimeMs": 62208
+          "startTimeMs": 62000,
+          "endTimeMs": 63130
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 62888,
-      "endTimeMs": 64158,
-      "segmentIndex": 20,
+      "startTimeMs": 63130,
+      "endTimeMs": 64700,
+      "segmentIndex": 23,
       "text": "Oh my God",
       "words": [
         {
           "word": "Oh",
-          "startTimeMs": 62888,
-          "endTimeMs": 63138
+          "startTimeMs": 63130,
+          "endTimeMs": 63600
         },
         {
           "word": "my",
-          "startTimeMs": 63148,
-          "endTimeMs": 63378
+          "startTimeMs": 63600,
+          "endTimeMs": 64100
         },
         {
           "word": "God",
-          "startTimeMs": 63388,
-          "endTimeMs": 64158
+          "startTimeMs": 64100,
+          "endTimeMs": 64700
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 64748,
-      "endTimeMs": 66988,
-      "segmentIndex": 21,
+      "startTimeMs": 64700,
+      "endTimeMs": 67420,
+      "segmentIndex": 24,
       "text": "Give me health and prosperity",
       "words": [
         {
           "word": "Give",
-          "startTimeMs": 64748,
-          "endTimeMs": 65058
+          "startTimeMs": 64700,
+          "endTimeMs": 65300
         },
         {
           "word": "me",
-          "startTimeMs": 65068,
-          "endTimeMs": 65278
+          "startTimeMs": 65300,
+          "endTimeMs": 65700
         },
         {
           "word": "health",
-          "startTimeMs": 65288,
-          "endTimeMs": 65478
+          "startTimeMs": 65700,
+          "endTimeMs": 66200
         },
         {
           "word": "and",
-          "startTimeMs": 65488,
-          "endTimeMs": 65638
+          "startTimeMs": 66200,
+          "endTimeMs": 66600
         },
         {
           "word": "prosperity",
-          "startTimeMs": 65648,
-          "endTimeMs": 66988
+          "startTimeMs": 66600,
+          "endTimeMs": 67420
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 67831,
-      "endTimeMs": 69861,
-      "segmentIndex": 22,
+      "startTimeMs": 67420,
+      "endTimeMs": 69930,
+      "segmentIndex": 25,
       "text": "We must give thanks for one more day of life",
       "words": [
         {
           "word": "We",
-          "startTimeMs": 67831,
-          "endTimeMs": 67981
+          "startTimeMs": 67420,
+          "endTimeMs": 67650
         },
         {
           "word": "must",
-          "startTimeMs": 67991,
-          "endTimeMs": 68121
+          "startTimeMs": 67650,
+          "endTimeMs": 67900
         },
         {
           "word": "give",
-          "startTimeMs": 68131,
-          "endTimeMs": 68321
+          "startTimeMs": 67900,
+          "endTimeMs": 68150
         },
         {
           "word": "thanks",
-          "startTimeMs": 68331,
-          "endTimeMs": 68711
+          "startTimeMs": 68150,
+          "endTimeMs": 68400
         },
         {
           "word": "for",
-          "startTimeMs": 68721,
-          "endTimeMs": 68891
+          "startTimeMs": 68400,
+          "endTimeMs": 68650
         },
         {
           "word": "one",
-          "startTimeMs": 68901,
-          "endTimeMs": 69021
+          "startTimeMs": 68650,
+          "endTimeMs": 68900
         },
         {
           "word": "more",
-          "startTimeMs": 69031,
-          "endTimeMs": 69211
+          "startTimeMs": 68900,
+          "endTimeMs": 69150
         },
         {
           "word": "day",
-          "startTimeMs": 69221,
-          "endTimeMs": 69401
+          "startTimeMs": 69150,
+          "endTimeMs": 69400
         },
         {
           "word": "of",
-          "startTimeMs": 69411,
-          "endTimeMs": 69531
+          "startTimeMs": 69400,
+          "endTimeMs": 69650
         },
         {
           "word": "life",
-          "startTimeMs": 69541,
-          "endTimeMs": 69861
+          "startTimeMs": 69650,
+          "endTimeMs": 69930
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 70291,
-      "endTimeMs": 72321,
-      "segmentIndex": 23,
-      "text": "For friends who are few nowadays",
+      "startTimeMs": 69930,
+      "endTimeMs": 72450,
+      "segmentIndex": 26,
+      "text": "For friends, who are few nowadays",
       "words": [
         {
           "word": "For",
-          "startTimeMs": 70291,
-          "endTimeMs": 70441
+          "startTimeMs": 69930,
+          "endTimeMs": 70200
         },
         {
-          "word": "friends",
-          "startTimeMs": 70451,
-          "endTimeMs": 71051
+          "word": "friends,",
+          "startTimeMs": 70200,
+          "endTimeMs": 70800
         },
         {
           "word": "who",
-          "startTimeMs": 71061,
-          "endTimeMs": 71181
+          "startTimeMs": 70800,
+          "endTimeMs": 71100
         },
         {
           "word": "are",
-          "startTimeMs": 71191,
-          "endTimeMs": 71391
+          "startTimeMs": 71100,
+          "endTimeMs": 71300
         },
         {
           "word": "few",
-          "startTimeMs": 71401,
-          "endTimeMs": 71711
+          "startTimeMs": 71300,
+          "endTimeMs": 71600
         },
         {
           "word": "nowadays",
-          "startTimeMs": 71721,
-          "endTimeMs": 72321
+          "startTimeMs": 71600,
+          "endTimeMs": 72450
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 72661,
-      "endTimeMs": 74781,
-      "segmentIndex": 24,
-      "text": "Don't do evil because everything turns on you",
+      "startTimeMs": 72450,
+      "endTimeMs": 74650,
+      "segmentIndex": 27,
+      "text": "Don’t do evil because it all turns back on you",
       "words": [
         {
-          "word": "Don't",
-          "startTimeMs": 72661,
-          "endTimeMs": 72831
+          "word": "Don’t",
+          "startTimeMs": 72450,
+          "endTimeMs": 72700
         },
         {
           "word": "do",
-          "startTimeMs": 72841,
-          "endTimeMs": 73121
+          "startTimeMs": 72700,
+          "endTimeMs": 72900
         },
         {
           "word": "evil",
-          "startTimeMs": 73131,
-          "endTimeMs": 73511
+          "startTimeMs": 72900,
+          "endTimeMs": 73200
         },
         {
           "word": "because",
-          "startTimeMs": 73521,
-          "endTimeMs": 73841
+          "startTimeMs": 73200,
+          "endTimeMs": 73500
         },
         {
-          "word": "everything",
-          "startTimeMs": 73851,
-          "endTimeMs": 74091
+          "word": "it",
+          "startTimeMs": 73500,
+          "endTimeMs": 73700
+        },
+        {
+          "word": "all",
+          "startTimeMs": 73700,
+          "endTimeMs": 73900
         },
         {
           "word": "turns",
-          "startTimeMs": 74101,
-          "endTimeMs": 74221
+          "startTimeMs": 73900,
+          "endTimeMs": 74150
+        },
+        {
+          "word": "back",
+          "startTimeMs": 74150,
+          "endTimeMs": 74400
         },
         {
           "word": "on",
-          "startTimeMs": 74231,
-          "endTimeMs": 74381
+          "startTimeMs": 74400,
+          "endTimeMs": 74550
         },
         {
           "word": "you",
-          "startTimeMs": 74391,
-          "endTimeMs": 74781
+          "startTimeMs": 74550,
+          "endTimeMs": 74650
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 75161,
-      "endTimeMs": 77111,
-      "segmentIndex": 25,
-      "text": "One day you're down and the next day you're up",
+      "startTimeMs": 74650,
+      "endTimeMs": 76610,
+      "segmentIndex": 28,
+      "text": "One day you’re down and the next day, up",
       "words": [
         {
           "word": "One",
-          "startTimeMs": 75161,
-          "endTimeMs": 75321
+          "startTimeMs": 74650,
+          "endTimeMs": 74800
         },
         {
           "word": "day",
-          "startTimeMs": 75331,
-          "endTimeMs": 75491
+          "startTimeMs": 74800,
+          "endTimeMs": 75000
         },
         {
-          "word": "you're",
-          "startTimeMs": 75501,
-          "endTimeMs": 75791
+          "word": "you’re",
+          "startTimeMs": 75000,
+          "endTimeMs": 75300
         },
         {
           "word": "down",
-          "startTimeMs": 75801,
-          "endTimeMs": 76211
+          "startTimeMs": 75300,
+          "endTimeMs": 75500
         },
         {
           "word": "and",
-          "startTimeMs": 76221,
-          "endTimeMs": 76291
+          "startTimeMs": 75500,
+          "endTimeMs": 75700
         },
         {
           "word": "the",
-          "startTimeMs": 76301,
-          "endTimeMs": 76421
+          "startTimeMs": 75700,
+          "endTimeMs": 75850
         },
         {
           "word": "next",
-          "startTimeMs": 76431,
-          "endTimeMs": 76681
+          "startTimeMs": 75850,
+          "endTimeMs": 76100
         },
         {
-          "word": "day",
-          "startTimeMs": 76691,
-          "endTimeMs": 76831
-        },
-        {
-          "word": "you're",
-          "startTimeMs": 76841,
-          "endTimeMs": 76911
+          "word": "day,",
+          "startTimeMs": 76100,
+          "endTimeMs": 76300
         },
         {
           "word": "up",
-          "startTimeMs": 76921,
-          "endTimeMs": 77111
+          "startTimeMs": 76300,
+          "endTimeMs": 76610
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 77461,
-      "endTimeMs": 80511,
-      "segmentIndex": 26,
-      "text": "Dreams to fulfill and I'm going for them",
+      "startTimeMs": 76610,
+      "endTimeMs": 79160,
+      "segmentIndex": 29,
+      "text": "Dreams to fulfill (oh-oh)",
       "words": [
         {
           "word": "Dreams",
-          "startTimeMs": 77461,
-          "endTimeMs": 77911
+          "startTimeMs": 76610,
+          "endTimeMs": 77200
         },
         {
           "word": "to",
-          "startTimeMs": 77921,
-          "endTimeMs": 78101
+          "startTimeMs": 77200,
+          "endTimeMs": 77500
         },
         {
           "word": "fulfill",
-          "startTimeMs": 78111,
-          "endTimeMs": 79031
+          "startTimeMs": 77500,
+          "endTimeMs": 78200
         },
         {
-          "word": "and",
-          "startTimeMs": 79041,
-          "endTimeMs": 79211
-        },
-        {
-          "word": "I'm",
-          "startTimeMs": 79221,
-          "endTimeMs": 79461
-        },
-        {
-          "word": "going",
-          "startTimeMs": 79471,
-          "endTimeMs": 79761
-        },
-        {
-          "word": "for",
-          "startTimeMs": 79771,
-          "endTimeMs": 79911
-        },
-        {
-          "word": "them",
-          "startTimeMs": 79921,
-          "endTimeMs": 80511
+          "word": "(oh-oh)",
+          "startTimeMs": 78200,
+          "endTimeMs": 79160
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 81561,
-      "endTimeMs": 83861,
-      "segmentIndex": 27,
+      "startTimeMs": 79160,
+      "endTimeMs": 81590,
+      "segmentIndex": 30,
+      "text": "And I believe in myself (oh-oh)",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 79160,
+          "endTimeMs": 79400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 79400,
+          "endTimeMs": 79600
+        },
+        {
+          "word": "believe",
+          "startTimeMs": 79600,
+          "endTimeMs": 80000
+        },
+        {
+          "word": "in",
+          "startTimeMs": 80000,
+          "endTimeMs": 80200
+        },
+        {
+          "word": "myself",
+          "startTimeMs": 80200,
+          "endTimeMs": 80700
+        },
+        {
+          "word": "(oh-oh)",
+          "startTimeMs": 80700,
+          "endTimeMs": 81590
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 81590,
+      "endTimeMs": 84260,
+      "segmentIndex": 31,
       "text": "I might be crazy, but not lazy",
       "words": [
         {
           "word": "I",
-          "startTimeMs": 81561,
-          "endTimeMs": 81661
+          "startTimeMs": 81590,
+          "endTimeMs": 81800
         },
         {
           "word": "might",
-          "startTimeMs": 81671,
-          "endTimeMs": 81861
+          "startTimeMs": 81800,
+          "endTimeMs": 82000
         },
         {
           "word": "be",
-          "startTimeMs": 81871,
-          "endTimeMs": 82011
+          "startTimeMs": 82000,
+          "endTimeMs": 82200
         },
         {
           "word": "crazy,",
-          "startTimeMs": 82021,
-          "endTimeMs": 82941
+          "startTimeMs": 82200,
+          "endTimeMs": 82800
         },
         {
           "word": "but",
-          "startTimeMs": 82951,
-          "endTimeMs": 83291
+          "startTimeMs": 82800,
+          "endTimeMs": 83200
         },
         {
           "word": "not",
-          "startTimeMs": 83301,
-          "endTimeMs": 83501
+          "startTimeMs": 83200,
+          "endTimeMs": 83500
         },
         {
           "word": "lazy",
-          "startTimeMs": 83511,
-          "endTimeMs": 83861
+          "startTimeMs": 83500,
+          "endTimeMs": 84260
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 84111,
-      "endTimeMs": 86061,
-      "segmentIndex": 28,
-      "text": "Until I achieve it, I will continue",
+      "startTimeMs": 84260,
+      "endTimeMs": 88500,
+      "segmentIndex": 32,
+      "text": "And until I achieve it I’m going to keep going",
       "words": [
         {
-          "word": "Until",
-          "startTimeMs": 84111,
-          "endTimeMs": 84401
+          "word": "And",
+          "startTimeMs": 84260,
+          "endTimeMs": 84500
+        },
+        {
+          "word": "until",
+          "startTimeMs": 84500,
+          "endTimeMs": 85000
         },
         {
           "word": "I",
-          "startTimeMs": 84411,
-          "endTimeMs": 84571
+          "startTimeMs": 85000,
+          "endTimeMs": 85300
         },
         {
           "word": "achieve",
-          "startTimeMs": 84581,
-          "endTimeMs": 85071
+          "startTimeMs": 85300,
+          "endTimeMs": 85800
         },
         {
-          "word": "it,",
-          "startTimeMs": 85081,
-          "endTimeMs": 85331
+          "word": "it",
+          "startTimeMs": 85800,
+          "endTimeMs": 86000
         },
         {
-          "word": "I",
-          "startTimeMs": 85341,
-          "endTimeMs": 85481
+          "word": "I’m",
+          "startTimeMs": 86000,
+          "endTimeMs": 86300
         },
         {
-          "word": "will",
-          "startTimeMs": 85491,
-          "endTimeMs": 85661
+          "word": "going",
+          "startTimeMs": 86300,
+          "endTimeMs": 86700
         },
         {
-          "word": "continue",
-          "startTimeMs": 85671,
-          "endTimeMs": 86061
+          "word": "to",
+          "startTimeMs": 86700,
+          "endTimeMs": 87000
+        },
+        {
+          "word": "keep",
+          "startTimeMs": 87000,
+          "endTimeMs": 87500
+        },
+        {
+          "word": "going",
+          "startTimeMs": 87500,
+          "endTimeMs": 88500
         }
       ]
     },
     {
       "type": "INSTRUMENTAL",
-      "startTimeMs": 86062,
-      "endTimeMs": 93343,
-      "segmentIndex": 29,
+      "startTimeMs": 88500,
+      "endTimeMs": 94000,
+      "segmentIndex": 33,
       "cueText": "Musical Bridge"
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 93744,
-      "endTimeMs": 94984,
-      "segmentIndex": 30,
-      "text": "Oh my God!",
-      "words": [
-        {
-          "word": "Oh",
-          "startTimeMs": 93744,
-          "endTimeMs": 94014
-        },
-        {
-          "word": "my",
-          "startTimeMs": 94024,
-          "endTimeMs": 94264
-        },
-        {
-          "word": "God!",
-          "startTimeMs": 94274,
-          "endTimeMs": 94984
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 97684,
-      "endTimeMs": 98374,
-      "segmentIndex": 31,
-      "text": "Little flame!",
-      "words": [
-        {
-          "word": "Little",
-          "startTimeMs": 97684,
-          "endTimeMs": 98024
-        },
-        {
-          "word": "flame!",
-          "startTimeMs": 98034,
-          "endTimeMs": 98374
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 98764,
-      "endTimeMs": 100024,
-      "segmentIndex": 32,
-      "text": "Oh my God",
-      "words": [
-        {
-          "word": "Oh",
-          "startTimeMs": 98764,
-          "endTimeMs": 99034
-        },
-        {
-          "word": "my",
-          "startTimeMs": 99044,
-          "endTimeMs": 99264
-        },
-        {
-          "word": "God",
-          "startTimeMs": 99274,
-          "endTimeMs": 100024
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 100684,
-      "endTimeMs": 102824,
-      "segmentIndex": 33,
-      "text": "Mauro! Tell them, Guianko!",
-      "words": [
-        {
-          "word": "Mauro!",
-          "startTimeMs": 100684,
-          "endTimeMs": 101414
-        },
-        {
-          "word": "Tell",
-          "startTimeMs": 101884,
-          "endTimeMs": 102014
-        },
-        {
-          "word": "them,",
-          "startTimeMs": 102024,
-          "endTimeMs": 102314
-        },
-        {
-          "word": "Guianko!",
-          "startTimeMs": 102324,
-          "endTimeMs": 102824
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 103434,
-      "endTimeMs": 104684,
+      "startTimeMs": 94000,
+      "endTimeMs": 98170,
       "segmentIndex": 34,
-      "text": "Oh my God",
+      "text": "Oh my God (ay-ay-ay)",
       "words": [
         {
           "word": "Oh",
-          "startTimeMs": 103434,
-          "endTimeMs": 103684
+          "startTimeMs": 94000,
+          "endTimeMs": 94600
         },
         {
           "word": "my",
-          "startTimeMs": 103694,
-          "endTimeMs": 103934
+          "startTimeMs": 94600,
+          "endTimeMs": 95200
         },
         {
           "word": "God",
-          "startTimeMs": 103944,
-          "endTimeMs": 104684
+          "startTimeMs": 95200,
+          "endTimeMs": 96000
+        },
+        {
+          "word": "(ay-ay-ay)",
+          "startTimeMs": 96000,
+          "endTimeMs": 98170
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 105264,
-      "endTimeMs": 107514,
+      "startTimeMs": 98170,
+      "endTimeMs": 99350,
       "segmentIndex": 35,
-      "text": "All the bad, cast it away",
+      "text": "Candelita",
       "words": [
         {
-          "word": "All",
-          "startTimeMs": 105264,
-          "endTimeMs": 105534
-        },
-        {
-          "word": "the",
-          "startTimeMs": 105544,
-          "endTimeMs": 105694
-        },
-        {
-          "word": "bad,",
-          "startTimeMs": 105704,
-          "endTimeMs": 106084
-        },
-        {
-          "word": "cast",
-          "startTimeMs": 106094,
-          "endTimeMs": 106564
-        },
-        {
-          "word": "it",
-          "startTimeMs": 106574,
-          "endTimeMs": 106764
-        },
-        {
-          "word": "away",
-          "startTimeMs": 106774,
-          "endTimeMs": 107514
+          "word": "Candelita",
+          "startTimeMs": 98170,
+          "endTimeMs": 99350
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 108114,
-      "endTimeMs": 109364,
+      "startTimeMs": 99350,
+      "endTimeMs": 101390,
       "segmentIndex": 36,
       "text": "Oh my God",
       "words": [
         {
           "word": "Oh",
-          "startTimeMs": 108114,
-          "endTimeMs": 108384
+          "startTimeMs": 99350,
+          "endTimeMs": 99900
         },
         {
           "word": "my",
-          "startTimeMs": 108394,
-          "endTimeMs": 108614
+          "startTimeMs": 99900,
+          "endTimeMs": 100500
         },
         {
           "word": "God",
-          "startTimeMs": 108624,
-          "endTimeMs": 109364
+          "startTimeMs": 100500,
+          "endTimeMs": 101390
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 109954,
-      "endTimeMs": 112064,
+      "startTimeMs": 101390,
+      "endTimeMs": 103140,
       "segmentIndex": 37,
-      "text": "Give me health and prosperity",
+      "text": "Mauro",
       "words": [
         {
-          "word": "Give",
-          "startTimeMs": 109954,
-          "endTimeMs": 110264
-        },
-        {
-          "word": "me",
-          "startTimeMs": 110274,
-          "endTimeMs": 110484
-        },
-        {
-          "word": "health",
-          "startTimeMs": 110494,
-          "endTimeMs": 110684
-        },
-        {
-          "word": "and",
-          "startTimeMs": 110694,
-          "endTimeMs": 110824
-        },
-        {
-          "word": "prosperity",
-          "startTimeMs": 110834,
-          "endTimeMs": 112064
+          "word": "Mauro",
+          "startTimeMs": 101390,
+          "endTimeMs": 103140
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 112434,
-      "endTimeMs": 114674,
+      "startTimeMs": 103140,
+      "endTimeMs": 104220,
       "segmentIndex": 38,
-      "text": "May badmouthing not have a chance",
+      "text": "Tell them, Yanko",
       "words": [
         {
-          "word": "May",
-          "startTimeMs": 112434,
-          "endTimeMs": 112594
+          "word": "Tell",
+          "startTimeMs": 103140,
+          "endTimeMs": 103500
         },
         {
-          "word": "badmouthing",
-          "startTimeMs": 112604,
-          "endTimeMs": 113544
+          "word": "them,",
+          "startTimeMs": 103500,
+          "endTimeMs": 103800
         },
         {
-          "word": "not",
-          "startTimeMs": 113554,
-          "endTimeMs": 113704
-        },
-        {
-          "word": "have",
-          "startTimeMs": 113714,
-          "endTimeMs": 114034
-        },
-        {
-          "word": "a",
-          "startTimeMs": 114044,
-          "endTimeMs": 114244
-        },
-        {
-          "word": "chance",
-          "startTimeMs": 114254,
-          "endTimeMs": 114674
+          "word": "Yanko",
+          "startTimeMs": 103800,
+          "endTimeMs": 104220
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 115104,
-      "endTimeMs": 116974,
+      "startTimeMs": 104220,
+      "endTimeMs": 106130,
       "segmentIndex": 39,
-      "text": "And may envy not reach me",
+      "text": "Oh my God",
       "words": [
         {
-          "word": "And",
-          "startTimeMs": 115104,
-          "endTimeMs": 115184
+          "word": "Oh",
+          "startTimeMs": 104220,
+          "endTimeMs": 104800
         },
         {
-          "word": "may",
-          "startTimeMs": 115194,
-          "endTimeMs": 115334
+          "word": "my",
+          "startTimeMs": 104800,
+          "endTimeMs": 105400
         },
         {
-          "word": "envy",
-          "startTimeMs": 115344,
-          "endTimeMs": 116024
-        },
-        {
-          "word": "not",
-          "startTimeMs": 116034,
-          "endTimeMs": 116234
-        },
-        {
-          "word": "reach",
-          "startTimeMs": 116244,
-          "endTimeMs": 116514
-        },
-        {
-          "word": "me",
-          "startTimeMs": 116524,
-          "endTimeMs": 116974
+          "word": "God",
+          "startTimeMs": 105400,
+          "endTimeMs": 106130
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 117334,
-      "endTimeMs": 119504,
+      "startTimeMs": 106130,
+      "endTimeMs": 108890,
       "segmentIndex": 40,
-      "text": "May time always be my witness",
+      "text": "Cast all the bad away",
       "words": [
         {
-          "word": "May",
-          "startTimeMs": 117334,
-          "endTimeMs": 117484
+          "word": "Cast",
+          "startTimeMs": 106130,
+          "endTimeMs": 106600
         },
         {
-          "word": "time",
-          "startTimeMs": 117494,
-          "endTimeMs": 118024
-        },
-        {
-          "word": "always",
-          "startTimeMs": 118034,
-          "endTimeMs": 118424
-        },
-        {
-          "word": "be",
-          "startTimeMs": 118434,
-          "endTimeMs": 118654
-        },
-        {
-          "word": "my",
-          "startTimeMs": 118664,
-          "endTimeMs": 118814
-        },
-        {
-          "word": "witness",
-          "startTimeMs": 118824,
-          "endTimeMs": 119504
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 119844,
-      "endTimeMs": 121984,
-      "segmentIndex": 41,
-      "text": "I only do good, that's why I ask you",
-      "words": [
-        {
-          "word": "I",
-          "startTimeMs": 119844,
-          "endTimeMs": 119944
-        },
-        {
-          "word": "only",
-          "startTimeMs": 119954,
-          "endTimeMs": 120194
-        },
-        {
-          "word": "do",
-          "startTimeMs": 120204,
-          "endTimeMs": 120484
-        },
-        {
-          "word": "good,",
-          "startTimeMs": 120494,
-          "endTimeMs": 120894
-        },
-        {
-          "word": "that's",
-          "startTimeMs": 120904,
-          "endTimeMs": 121104
-        },
-        {
-          "word": "why",
-          "startTimeMs": 121114,
-          "endTimeMs": 121404
-        },
-        {
-          "word": "I",
-          "startTimeMs": 121414,
-          "endTimeMs": 121554
-        },
-        {
-          "word": "ask",
-          "startTimeMs": 121564,
-          "endTimeMs": 121784
-        },
-        {
-          "word": "you",
-          "startTimeMs": 121794,
-          "endTimeMs": 121984
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 122724,
-      "endTimeMs": 123904,
-      "segmentIndex": 42,
-      "text": "Oh my God",
-      "words": [
-        {
-          "word": "Oh",
-          "startTimeMs": 122724,
-          "endTimeMs": 122984
-        },
-        {
-          "word": "my",
-          "startTimeMs": 122994,
-          "endTimeMs": 123214
-        },
-        {
-          "word": "God",
-          "startTimeMs": 123224,
-          "endTimeMs": 123904
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 124284,
-      "endTimeMs": 126744,
-      "segmentIndex": 43,
-      "text": "Fight for your dream, yes you can",
-      "words": [
-        {
-          "word": "Fight",
-          "startTimeMs": 124284,
-          "endTimeMs": 124584
-        },
-        {
-          "word": "for",
-          "startTimeMs": 124594,
-          "endTimeMs": 124774
-        },
-        {
-          "word": "your",
-          "startTimeMs": 124784,
-          "endTimeMs": 124924
-        },
-        {
-          "word": "dream,",
-          "startTimeMs": 124934,
-          "endTimeMs": 125574
-        },
-        {
-          "word": "yes",
-          "startTimeMs": 125784,
-          "endTimeMs": 125914
-        },
-        {
-          "word": "you",
-          "startTimeMs": 125924,
-          "endTimeMs": 126114
-        },
-        {
-          "word": "can",
-          "startTimeMs": 126124,
-          "endTimeMs": 126744
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 127444,
-      "endTimeMs": 128624,
-      "segmentIndex": 44,
-      "text": "Oh my God",
-      "words": [
-        {
-          "word": "Oh",
-          "startTimeMs": 127444,
-          "endTimeMs": 127684
-        },
-        {
-          "word": "my",
-          "startTimeMs": 127694,
-          "endTimeMs": 127924
-        },
-        {
-          "word": "God",
-          "startTimeMs": 127934,
-          "endTimeMs": 128624
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 128924,
-      "endTimeMs": 131804,
-      "segmentIndex": 45,
-      "text": "And when you don't find the way out, sing with me",
-      "words": [
-        {
-          "word": "And",
-          "startTimeMs": 128924,
-          "endTimeMs": 129044
-        },
-        {
-          "word": "when",
-          "startTimeMs": 129054,
-          "endTimeMs": 129384
-        },
-        {
-          "word": "you",
-          "startTimeMs": 129394,
-          "endTimeMs": 129544
-        },
-        {
-          "word": "don't",
-          "startTimeMs": 129554,
-          "endTimeMs": 129744
-        },
-        {
-          "word": "find",
-          "startTimeMs": 129754,
-          "endTimeMs": 130044
+          "word": "all",
+          "startTimeMs": 106600,
+          "endTimeMs": 106900
         },
         {
           "word": "the",
-          "startTimeMs": 130054,
-          "endTimeMs": 130204
+          "startTimeMs": 106900,
+          "endTimeMs": 107400
         },
         {
-          "word": "way",
-          "startTimeMs": 130214,
-          "endTimeMs": 130494
-        },
-        {
-          "word": "out,",
-          "startTimeMs": 130504,
-          "endTimeMs": 130794
-        },
-        {
-          "word": "sing",
-          "startTimeMs": 130804,
-          "endTimeMs": 131224
-        },
-        {
-          "word": "with",
-          "startTimeMs": 131234,
-          "endTimeMs": 131504
-        },
-        {
-          "word": "me",
-          "startTimeMs": 131514,
-          "endTimeMs": 131804
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 132334,
-      "endTimeMs": 133554,
-      "segmentIndex": 46,
-      "text": "Oh my God",
-      "words": [
-        {
-          "word": "Oh",
-          "startTimeMs": 132334,
-          "endTimeMs": 132604
-        },
-        {
-          "word": "my",
-          "startTimeMs": 132614,
-          "endTimeMs": 132834
-        },
-        {
-          "word": "God",
-          "startTimeMs": 132844,
-          "endTimeMs": 133554
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 134154,
-      "endTimeMs": 136374,
-      "segmentIndex": 47,
-      "text": "All the bad, cast it away",
-      "words": [
-        {
-          "word": "All",
-          "startTimeMs": 134154,
-          "endTimeMs": 134414
-        },
-        {
-          "word": "the",
-          "startTimeMs": 134424,
-          "endTimeMs": 134574
-        },
-        {
-          "word": "bad,",
-          "startTimeMs": 134584,
-          "endTimeMs": 134974
-        },
-        {
-          "word": "cast",
-          "startTimeMs": 134984,
-          "endTimeMs": 135444
-        },
-        {
-          "word": "it",
-          "startTimeMs": 135454,
-          "endTimeMs": 135644
+          "word": "bad",
+          "startTimeMs": 107400,
+          "endTimeMs": 108100
         },
         {
           "word": "away",
-          "startTimeMs": 135654,
-          "endTimeMs": 136374
+          "startTimeMs": 108100,
+          "endTimeMs": 108890
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 137004,
-      "endTimeMs": 138224,
-      "segmentIndex": 48,
+      "startTimeMs": 108890,
+      "endTimeMs": 110670,
+      "segmentIndex": 41,
       "text": "Oh my God",
       "words": [
         {
           "word": "Oh",
-          "startTimeMs": 137004,
-          "endTimeMs": 137264
+          "startTimeMs": 108890,
+          "endTimeMs": 109400
         },
         {
           "word": "my",
-          "startTimeMs": 137274,
-          "endTimeMs": 137494
+          "startTimeMs": 109400,
+          "endTimeMs": 110000
         },
         {
           "word": "God",
-          "startTimeMs": 137504,
-          "endTimeMs": 138224
+          "startTimeMs": 110000,
+          "endTimeMs": 110670
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 138824,
-      "endTimeMs": 140964,
-      "segmentIndex": 49,
+      "startTimeMs": 110670,
+      "endTimeMs": 112850,
+      "segmentIndex": 42,
       "text": "Give me health and prosperity",
       "words": [
         {
           "word": "Give",
-          "startTimeMs": 138824,
-          "endTimeMs": 139124
+          "startTimeMs": 110670,
+          "endTimeMs": 111300
         },
         {
           "word": "me",
-          "startTimeMs": 139134,
-          "endTimeMs": 139344
+          "startTimeMs": 111300,
+          "endTimeMs": 111600
         },
         {
           "word": "health",
-          "startTimeMs": 139354,
-          "endTimeMs": 139544
+          "startTimeMs": 111600,
+          "endTimeMs": 112100
         },
         {
           "word": "and",
-          "startTimeMs": 139554,
-          "endTimeMs": 139694
+          "startTimeMs": 112100,
+          "endTimeMs": 112400
         },
         {
           "word": "prosperity",
-          "startTimeMs": 139704,
-          "endTimeMs": 140964
+          "startTimeMs": 112400,
+          "endTimeMs": 112850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 112850,
+      "endTimeMs": 115470,
+      "segmentIndex": 43,
+      "text": "Let the wicked tongue have no chance",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 112850,
+          "endTimeMs": 113200
+        },
+        {
+          "word": "the",
+          "startTimeMs": 113200,
+          "endTimeMs": 113500
+        },
+        {
+          "word": "wicked",
+          "startTimeMs": 113500,
+          "endTimeMs": 114000
+        },
+        {
+          "word": "tongue",
+          "startTimeMs": 114000,
+          "endTimeMs": 114500
+        },
+        {
+          "word": "have",
+          "startTimeMs": 114500,
+          "endTimeMs": 114800
+        },
+        {
+          "word": "no",
+          "startTimeMs": 114800,
+          "endTimeMs": 115100
+        },
+        {
+          "word": "chance",
+          "startTimeMs": 115100,
+          "endTimeMs": 115470
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 115470,
+      "endTimeMs": 117760,
+      "segmentIndex": 44,
+      "text": "And let envy not reach me",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 115470,
+          "endTimeMs": 115800
+        },
+        {
+          "word": "let",
+          "startTimeMs": 115800,
+          "endTimeMs": 116200
+        },
+        {
+          "word": "envy",
+          "startTimeMs": 116200,
+          "endTimeMs": 116800
+        },
+        {
+          "word": "not",
+          "startTimeMs": 116800,
+          "endTimeMs": 117200
+        },
+        {
+          "word": "reach",
+          "startTimeMs": 117200,
+          "endTimeMs": 117500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 117500,
+          "endTimeMs": 117760
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 117760,
+      "endTimeMs": 120150,
+      "segmentIndex": 45,
+      "text": "Let time always be my witness",
+      "words": [
+        {
+          "word": "Let",
+          "startTimeMs": 117760,
+          "endTimeMs": 118000
+        },
+        {
+          "word": "time",
+          "startTimeMs": 118000,
+          "endTimeMs": 118500
+        },
+        {
+          "word": "always",
+          "startTimeMs": 118500,
+          "endTimeMs": 119000
+        },
+        {
+          "word": "be",
+          "startTimeMs": 119000,
+          "endTimeMs": 119300
+        },
+        {
+          "word": "my",
+          "startTimeMs": 119300,
+          "endTimeMs": 119600
+        },
+        {
+          "word": "witness",
+          "startTimeMs": 119600,
+          "endTimeMs": 120150
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 120150,
+      "endTimeMs": 123500,
+      "segmentIndex": 46,
+      "text": "I only do good, that’s why I ask you",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 120150,
+          "endTimeMs": 120400
+        },
+        {
+          "word": "only",
+          "startTimeMs": 120400,
+          "endTimeMs": 120700
+        },
+        {
+          "word": "do",
+          "startTimeMs": 120700,
+          "endTimeMs": 121000
+        },
+        {
+          "word": "good,",
+          "startTimeMs": 121000,
+          "endTimeMs": 121500
+        },
+        {
+          "word": "that’s",
+          "startTimeMs": 121500,
+          "endTimeMs": 121900
+        },
+        {
+          "word": "why",
+          "startTimeMs": 121900,
+          "endTimeMs": 122300
+        },
+        {
+          "word": "I",
+          "startTimeMs": 122300,
+          "endTimeMs": 122600
+        },
+        {
+          "word": "ask",
+          "startTimeMs": 122600,
+          "endTimeMs": 123000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 123000,
+          "endTimeMs": 123500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 123500,
+      "endTimeMs": 127210,
+      "segmentIndex": 47,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 123500,
+          "endTimeMs": 124500
+        },
+        {
+          "word": "my",
+          "startTimeMs": 124500,
+          "endTimeMs": 125500
+        },
+        {
+          "word": "God",
+          "startTimeMs": 125500,
+          "endTimeMs": 127210
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 127210,
+      "endTimeMs": 128380,
+      "segmentIndex": 48,
+      "text": "Yes you can",
+      "words": [
+        {
+          "word": "Yes",
+          "startTimeMs": 127210,
+          "endTimeMs": 127600
+        },
+        {
+          "word": "you",
+          "startTimeMs": 127600,
+          "endTimeMs": 127900
+        },
+        {
+          "word": "can",
+          "startTimeMs": 127900,
+          "endTimeMs": 128380
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 128380,
+      "endTimeMs": 129730,
+      "segmentIndex": 49,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 128380,
+          "endTimeMs": 128800
+        },
+        {
+          "word": "my",
+          "startTimeMs": 128800,
+          "endTimeMs": 129200
+        },
+        {
+          "word": "God",
+          "startTimeMs": 129200,
+          "endTimeMs": 129730
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 129730,
+      "endTimeMs": 132090,
+      "segmentIndex": 50,
+      "text": "When you can't find the way out",
+      "words": [
+        {
+          "word": "When",
+          "startTimeMs": 129730,
+          "endTimeMs": 130100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 130100,
+          "endTimeMs": 130400
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 130400,
+          "endTimeMs": 130800
+        },
+        {
+          "word": "find",
+          "startTimeMs": 130800,
+          "endTimeMs": 131200
+        },
+        {
+          "word": "the",
+          "startTimeMs": 131200,
+          "endTimeMs": 131500
+        },
+        {
+          "word": "way",
+          "startTimeMs": 131500,
+          "endTimeMs": 131700
+        },
+        {
+          "word": "out",
+          "startTimeMs": 131700,
+          "endTimeMs": 132090
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 132090,
+      "endTimeMs": 133120,
+      "segmentIndex": 51,
+      "text": "Sing with me",
+      "words": [
+        {
+          "word": "Sing",
+          "startTimeMs": 132090,
+          "endTimeMs": 132600
+        },
+        {
+          "word": "with",
+          "startTimeMs": 132600,
+          "endTimeMs": 132800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 132800,
+          "endTimeMs": 133120
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 133120,
+      "endTimeMs": 135140,
+      "segmentIndex": 52,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 133120,
+          "endTimeMs": 133800
+        },
+        {
+          "word": "my",
+          "startTimeMs": 133800,
+          "endTimeMs": 134400
+        },
+        {
+          "word": "God",
+          "startTimeMs": 134400,
+          "endTimeMs": 135140
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 135140,
+      "endTimeMs": 137920,
+      "segmentIndex": 53,
+      "text": "Cast all the bad away",
+      "words": [
+        {
+          "word": "Cast",
+          "startTimeMs": 135140,
+          "endTimeMs": 135600
+        },
+        {
+          "word": "all",
+          "startTimeMs": 135600,
+          "endTimeMs": 135900
+        },
+        {
+          "word": "the",
+          "startTimeMs": 135900,
+          "endTimeMs": 136400
+        },
+        {
+          "word": "bad",
+          "startTimeMs": 136400,
+          "endTimeMs": 137100
+        },
+        {
+          "word": "away",
+          "startTimeMs": 137100,
+          "endTimeMs": 137920
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 137920,
+      "endTimeMs": 139510,
+      "segmentIndex": 54,
+      "text": "Oh my God",
+      "words": [
+        {
+          "word": "Oh",
+          "startTimeMs": 137920,
+          "endTimeMs": 138400
+        },
+        {
+          "word": "my",
+          "startTimeMs": 138400,
+          "endTimeMs": 138900
+        },
+        {
+          "word": "God",
+          "startTimeMs": 138900,
+          "endTimeMs": 139510
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 139510,
+      "endTimeMs": 143500,
+      "segmentIndex": 55,
+      "text": "Give me health and prosperity",
+      "words": [
+        {
+          "word": "Give",
+          "startTimeMs": 139510,
+          "endTimeMs": 140000
+        },
+        {
+          "word": "me",
+          "startTimeMs": 140000,
+          "endTimeMs": 141000
+        },
+        {
+          "word": "health",
+          "startTimeMs": 141000,
+          "endTimeMs": 141500
+        },
+        {
+          "word": "and",
+          "startTimeMs": 141500,
+          "endTimeMs": 142000
+        },
+        {
+          "word": "prosperity",
+          "startTimeMs": 142000,
+          "endTimeMs": 143500
         }
       ]
     },
     {
       "type": "INSTRUMENTAL",
-      "startTimeMs": 140965,
-      "endTimeMs": 182000,
-      "segmentIndex": 50,
+      "startTimeMs": 143500,
+      "endTimeMs": 185060,
+      "segmentIndex": 56,
+      "cueText": "Interlude"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 185060,
+      "endTimeMs": 188060,
+      "segmentIndex": 57,
+      "text": "Fight for your dream",
+      "words": [
+        {
+          "word": "Fight",
+          "startTimeMs": 185060,
+          "endTimeMs": 185800
+        },
+        {
+          "word": "for",
+          "startTimeMs": 185800,
+          "endTimeMs": 186300
+        },
+        {
+          "word": "your",
+          "startTimeMs": 186300,
+          "endTimeMs": 186800
+        },
+        {
+          "word": "dream",
+          "startTimeMs": 186800,
+          "endTimeMs": 188060
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 188060,
+      "endTimeMs": 192000,
+      "segmentIndex": 58,
       "cueText": "Outro"
     }
   ]

@@ -535,6 +535,69 @@ You are a precise Temporal Alignment Specialist for multilingual karaoke. Your t
 `;
 };
 
+/**
+ * Build a text-only alignment prompt for aligning translated lyrics to refined original timing.
+ * NO AUDIO NEEDED - this is a pure text transformation based on timing data.
+ */
+const buildTextOnlyAlignmentPrompt = (
+  refinedOriginalData: KaraokeData,
+  draftTranslatedData: KaraokeData,
+  originalLangName: string,
+  translatedLangName: string
+): string => {
+  const segmentCount = refinedOriginalData.segments.length;
+
+  return `
+You are a precise Text-to-Timing Alignment Engine. Your task is to align translated lyrics to match the timing structure of an already-refined original version.
+
+**THIS IS A TEXT-ONLY TASK - NO AUDIO ANALYSIS REQUIRED.**
+The ${originalLangName} version has already been perfectly timed against the audio. You simply need to redistribute the ${translatedLangName} words within the same segment boundaries.
+
+**CRITICAL STRUCTURAL CONSTRAINTS:**
+1. Output EXACTLY ${segmentCount} segments - no more, no less
+2. Each segment's startTimeMs and endTimeMs MUST be IDENTICAL to the ${originalLangName} version
+3. Segment type (LYRIC/INSTRUMENTAL) MUST match exactly
+4. Do NOT modify any text content - only adjust word-level timing
+5. segmentIndex values must match the original (1 through ${segmentCount})
+
+**Input Data:**
+
+1. **Ground Truth (${originalLangName}) - USE THESE TIMINGS:**
+\`\`\`json
+${JSON.stringify(refinedOriginalData)}
+\`\`\`
+
+2. **Draft ${translatedLangName} Data - ALIGN THIS:**
+\`\`\`json
+${JSON.stringify(draftTranslatedData)}
+\`\`\`
+
+**Task:**
+
+For each LYRIC segment:
+1. Copy segment-level startTimeMs and endTimeMs EXACTLY from ${originalLangName}
+2. Take the ${translatedLangName} words from the draft
+3. Distribute word timings within the segment boundaries:
+   - First word starts at segment.startTimeMs
+   - Last word ends at segment.endTimeMs
+   - Distribute intermediate words proportionally based on syllable count
+   - No overlapping words, no gaps
+
+For INSTRUMENTAL segments:
+- Copy all timing fields exactly from ${originalLangName}
+- Keep cueText from ${translatedLangName} draft
+
+**Example:**
+If ${originalLangName} segment is: startTimeMs: 5000, endTimeMs: 8000
+And ${translatedLangName} has 4 words: "I love you too"
+Then distribute: ~750ms per word across the 3000ms window
+
+**Output:**
+Return a single, minified JSON object matching the KaraokeData schema.
+No explanations, no markdown - just the JSON.
+`;
+};
+
 const parseGoogleGenerativeAIError = (error: any): string => {
     if (typeof error === 'object' && error !== null && 'message' in error) {
         const message = error.message as string;
@@ -710,7 +773,7 @@ export const refineKaraokeData = async (
       {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
-        maxOutputTokens: 32768,
+        maxOutputTokens: 65536, // Increased to handle longer songs
       }
     );
 
@@ -722,18 +785,19 @@ export const refineKaraokeData = async (
       }
     );
 
+    // 8 minute timeout for longer songs with audio analysis
     const timeoutPromise = new Promise<never>((_, reject) =>
-      setTimeout(() => reject(new Error("The refinement request timed out after 5 minutes.")), 300000)
+      setTimeout(() => reject(new Error("The refinement request timed out after 8 minutes.")), 480000)
     );
 
     const response = await Promise.race([apiCallPromise, timeoutPromise]);
-    
+
     onStatusUpdate('Received refined data, parsing final result...');
     const text = response.text.trim();
      if (!text) {
         throw new Error("The AI model returned an empty response during the refinement pass.");
     }
-    
+
     try {
         const refinedData = JSON.parse(text);
         return refinedData as KaraokeData;
@@ -819,6 +883,84 @@ export const refineTranslatedKaraokeData = async (
     console.error("Error during karaoke alignment process:", error);
     if (error instanceof Error && (error.message.includes("JSON format") || error.message.includes("empty response") || error.message.includes("timed out"))) {
         throw error;
+    }
+    throw new Error(parseGoogleGenerativeAIError(error));
+  }
+};
+
+/**
+ * Align translated karaoke data to refined original timing - NO AUDIO NEEDED.
+ * Uses Gemini Flash for fast, text-only alignment.
+ * This is much faster and more reliable than the audio-based refineTranslatedKaraokeData.
+ */
+export const alignTranslatedToRefinedOriginal = async (
+  refinedOriginalData: KaraokeData,
+  draftTranslatedData: KaraokeData,
+  originalLangName: string,
+  translatedLangName: string,
+  onStatusUpdate: (message: string) => void,
+  modelTier: GeminiModelTier = 'gemini-2.5',
+): Promise<KaraokeData> => {
+  const models = getModelNames(modelTier);
+
+  try {
+    onStatusUpdate(`Aligning ${translatedLangName} timing to refined ${originalLangName} structure...`);
+
+    const alignmentPrompt = buildTextOnlyAlignmentPrompt(
+      refinedOriginalData,
+      draftTranslatedData,
+      originalLangName,
+      translatedLangName
+    );
+
+    // Use Flash model - no audio analysis needed, just text transformation
+    const model = models.flash;
+    onStatusUpdate(`Using ${model} for fast text-only alignment...`);
+
+    const apiCall = () => callGeminiProxy(
+      model,
+      alignmentPrompt,
+      {
+        responseMimeType: 'application/json',
+        responseSchema: singleLanguageSchema,
+        maxOutputTokens: 65536,
+      }
+    );
+
+    const apiCallPromise = retryWithBackoff(
+      apiCall, 3, 1000,
+      (attempt) => {
+        console.warn(`Text alignment API call failed on attempt ${attempt}. Retrying...`);
+        onStatusUpdate(`Alignment failed, retrying... (Attempt ${attempt + 1}/3)`);
+      }
+    );
+
+    // Shorter timeout since no audio processing
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("The text alignment request timed out after 2 minutes.")), 120000)
+    );
+
+    const response = await Promise.race([apiCallPromise, timeoutPromise]);
+
+    onStatusUpdate('Received aligned data, parsing result...');
+    const text = response.text.trim();
+    if (!text) {
+      throw new Error("The AI model returned an empty response during text alignment.");
+    }
+
+    try {
+      const alignedData = JSON.parse(text);
+      onStatusUpdate(`${translatedLangName} alignment complete!`);
+      return alignedData as KaraokeData;
+    } catch (parseError) {
+      console.error("Failed to parse JSON response from text alignment:", text);
+      throw new Error("The AI model's response during text alignment was not in the expected JSON format.");
+    }
+
+  } catch (error) {
+    console.error("Error during text-only alignment process:", error);
+    if (error instanceof Error && (error.message.includes("JSON format") || error.message.includes("empty response") || error.message.includes("timed out"))) {
+      throw error;
     }
     throw new Error(parseGoogleGenerativeAIError(error));
   }
