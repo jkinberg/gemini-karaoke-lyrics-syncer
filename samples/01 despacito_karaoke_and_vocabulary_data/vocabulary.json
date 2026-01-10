@@ -1,107 +1,30 @@
 [
   {
     "term": {
-      "spanish": "llevo un rato mirándote",
-      "english": "I've been watching you for a while"
+      "spanish": "un rato",
+      "english": "a while"
     },
-    "definition": "The phrase \"llevar un rato\" means \"to have been doing something for a while.\" It's a common and natural way to express a continuous action over a period of time in Spanish, more idiomatic than a direct word-for-word translation.",
-    "difficulty": 3,
-    "example": {
-      "spanish": "Sí, sabes que ya llevo un rato mirándote",
-      "english": "Yes, you know I've been watching you for a while"
-    },
-    "highlight": {
-      "spanish": "llevo un rato mirándote",
-      "english": "been watching you for a while"
-    }
-  },
-  {
-    "term": {
-      "spanish": "armar el plan",
-      "english": "to devise the plan"
-    },
-    "definition": "While \"armar\" literally means to assemble or arm, \"armar un plan\" is a common idiomatic expression meaning \"to put together a plan\" or \"to devise a plan.\" It's a very natural way to say it in Spanish.",
-    "difficulty": 4,
-    "example": {
-      "spanish": "Me voy acercando y voy armando el plan",
-      "english": "I'm getting closer and I'm putting together the plan"
-    },
-    "highlight": {
-      "spanish": "armando el plan",
-      "english": "putting together the plan"
-    }
-  },
-  {
-    "term": {
-      "spanish": "se acelera el pulso",
-      "english": "my pulse quickens"
-    },
-    "definition": "This phrase uses the reflexive verb \"acelerarse\" to describe an involuntary physical reaction. \"Se acelera el pulso\" is a common way to say \"my pulse quickens\" or \"my heart races,\" indicating excitement or nervousness.",
-    "difficulty": 3,
-    "example": {
-      "spanish": "Solo con pensarlo se acelera el pulso (oh yeah)",
-      "english": "Just thinking about it quickens my pulse (oh yeah)"
-    },
-    "highlight": {
-      "spanish": "se acelera el pulso",
-      "english": "quickens my pulse"
-    }
-  },
-  {
-    "term": {
-      "spanish": "sin ningún apuro",
-      "english": "without any rush"
-    },
-    "definition": "\"Sin apuro\" is a widely used adverbial phrase meaning \"without haste,\" \"without rushing,\" or \"at leisure.\" It implies taking one's time and enjoying the process without pressure, which is key to the song's sensual theme.",
+    "definition": "While literally meaning 'a short time,' in Latin American songs it often implies a lingering, intentional period of observation or waiting, suggesting a build-up of romantic tension.",
     "difficulty": 2,
     "example": {
-      "spanish": "Esto hay que tomarlo sin ningún apuro",
-      "english": "We have to take this without any rush"
+      "spanish": "Sí, sabes que ya llevo un rato mirándote",
+      "english": "Yes, you know I’ve been looking at you for a while"
     },
     "highlight": {
-      "spanish": "sin ningún apuro",
-      "english": "without any rush"
-    }
-  },
-  {
-    "term": {
-      "spanish": "sobrepasar tus zonas de peligro",
-      "english": "to exceed your danger zones"
+      "spanish": "un rato",
+      "english": "a while"
     },
-    "definition": "While \"sobrepasar\" means \"to exceed\" or \"to go beyond,\" in this highly sensual and flirtatious context, \"sobrepasar tus zonas de peligro\" is a euphemism. It implies pushing boundaries, venturing into more intimate territory, and going past one's comfort zone in a romantic encounter.",
-    "difficulty": 6,
-    "example": {
-      "spanish": "Déjame sobrepasar tus zonas de peligro",
-      "english": "Let me exceed your danger zones"
-    },
-    "highlight": {
-      "spanish": "sobrepasar tus zonas de peligro",
-      "english": "exceed your danger zones"
-    }
-  },
-  {
-    "term": {
-      "spanish": "olvides tu apellido",
-      "english": "forget your last name"
-    },
-    "definition": "This is a powerful and poetic metaphor. To \"forget your last name\" implies becoming so utterly consumed by passion and pleasure that one loses all sense of identity, self-awareness, or connection to the outside world, completely surrendering to the moment.",
-    "difficulty": 8,
-    "example": {
-      "spanish": "Hasta provocar tus gritos, Y que olvides tu apellido",
-      "english": "Until I provoke your screams, And that you forget your last name"
-    },
-    "highlight": {
-      "spanish": "olvides tu apellido",
-      "english": "forget your last name"
-    }
+    "startTimeMs": 41430,
+    "endTimeMs": 46770,
+    "segmentIndex": 7
   },
   {
     "term": {
       "spanish": "dando y dándolo",
-      "english": "giving and giving / back and forth"
+      "english": "give and take"
     },
-    "definition": "This idiomatic expression signifies a continuous, energetic, and often reciprocal action, a constant give-and-take. In the context of the song, it suggests an intense and passionate interaction, a relentless flow of desire and shared energy.",
-    "difficulty": 7,
+    "definition": "A colloquial expression used to describe a mutual, high-energy exchange. In a romantic or dance context, it implies that both parties are equally and intensely involved in the action.",
+    "difficulty": 5,
     "example": {
       "spanish": "Mami, esto es dando y dándolo",
       "english": "Mami, this is giving and giving"
@@ -109,134 +32,85 @@
     "highlight": {
       "spanish": "dando y dándolo",
       "english": "giving and giving"
-    }
+    },
+    "startTimeMs": 131330,
+    "endTimeMs": 132670,
+    "segmentIndex": 41
   },
   {
     "term": {
-      "spanish": "beba 'tá",
-      "english": "baby is"
+      "spanish": "beba",
+      "english": "babe"
     },
-    "definition": "\"Beba\" is a very common, informal term of endearment, widely used in Latin American, especially Caribbean, Spanish, equivalent to \"baby\" or \"babe.\" \"'Tá\" is a colloquial contraction of \"está\" (is), typical in urban and spoken Spanish.",
+    "definition": "A common Caribbean slang term derived from 'bebita.' It is used as an affectionate or flirtatious way to refer to an attractive woman, similar to 'babe' or 'shawty' in English urban music.",
     "difficulty": 4,
     "example": {
-      "spanish": "Sabe que esa beba 'tá buscando de mi bam bam",
-      "english": "You know that baby is looking for my bam bam"
+      "spanish": "Sabes que esa beba está buscando de mi bam-bam",
+      "english": "You know that baby is looking for my bam-bam"
     },
     "highlight": {
-      "spanish": "beba 'tá",
-      "english": "baby is"
-    }
-  },
-  {
-    "term": {
-      "spanish": "bam bam",
-      "english": "sexual energy/attraction"
+      "spanish": "beba",
+      "english": "baby"
     },
-    "definition": "An onomatopoeic phrase used as a piece of slang in urban music. It functions as a euphemism, often referring to a person's raw sexual energy, charm, or captivating attractiveness. It represents a compelling, almost explosive, appeal.",
-    "difficulty": 8,
-    "example": {
-      "spanish": "Sabe que esa beba 'tá buscando de mi bam bam",
-      "english": "You know that baby is looking for my bam bam"
-    },
-    "highlight": {
-      "spanish": "bam bam",
-      "english": "bam bam"
-    }
+    "startTimeMs": 135430,
+    "endTimeMs": 138170,
+    "segmentIndex": 43
   },
   {
     "term": {
       "spanish": "dar el viaje",
-      "english": "to take the trip / to enjoy the journey"
+      "english": "to enjoy the ride"
     },
-    "definition": "While literally \"to give oneself the trip,\" this idiomatic phrase means to fully enjoy an experience, to \"take the ride,\" or to immerse oneself in a journey. It implies a willingness to explore, indulge, and savor the entire process, often with a sensual or adventurous connotation.",
-    "difficulty": 5,
+    "definition": "Literally 'to give oneself the trip.' In this context, it refers to fully immersing oneself in an experience or a moment of intense pleasure, often with a sensual or adventurous connotation.",
+    "difficulty": 6,
     "example": {
       "spanish": "Yo no tengo prisa, yo me quiero dar el viaje",
-      "english": "I'm not in a hurry, I want to take the trip"
+      "english": "I’m in no hurry, I want to take the trip"
     },
     "highlight": {
       "spanish": "dar el viaje",
       "english": "take the trip"
-    }
+    },
+    "startTimeMs": 143470,
+    "endTimeMs": 146270,
+    "segmentIndex": 46
   },
   {
     "term": {
-      "spanish": "Pasito a pasito",
-      "english": "Step by step"
+      "spanish": "pa'",
+      "english": "for / to"
     },
-    "definition": "A very common and rhythmic phrase meaning \"step by step.\" The use of the diminutive \"pasito\" (little step) emphasizes a gentle, careful, and gradual approach, which is central to the song's theme of slow seduction.",
-    "difficulty": 3,
+    "definition": "A ubiquitous contraction of 'para' used in informal spoken Spanish and Caribbean music. Understanding this is essential for following the flow and rhythm of reggaeton lyrics.",
+    "difficulty": 2,
     "example": {
-      "spanish": "Pasito a pasito, suave suavecito",
-      "english": "Step by step, soft softly"
+      "spanish": "Pero pa' montarlo, aquí tengo la pieza, oye",
+      "english": "But to put it together, here I have the piece, listen"
     },
     "highlight": {
-      "spanish": "Pasito a pasito",
-      "english": "Step by step"
-    }
+      "spanish": "pa'",
+      "english": "to"
+    },
+    "startTimeMs": 167600,
+    "endTimeMs": 171400,
+    "segmentIndex": 55
   },
   {
     "term": {
-      "spanish": "suave suavecito",
-      "english": "soft softly / very gently"
+      "spanish": "ay, Bendito",
+      "english": "Oh my God"
     },
-    "definition": "\"Suavecito\" is the diminutive form of \"suave\" (soft, gentle). The repetition and diminutive intensify the meaning to \"very softly\" or \"very gently.\" This adds a layer of tenderness and endearment, perfect for describing a slow, sensual approach.",
-    "difficulty": 3,
+    "definition": "A quintessential Puerto Rican idiomatic expression. While it often means 'poor thing,' here it serves as an exclamation of intense emotion, pleasure, or awe, grounding the song in its cultural origin.",
+    "difficulty": 8,
     "example": {
-      "spanish": "Pasito a pasito, suave suavecito",
-      "english": "Step by step, soft softly"
+      "spanish": "Hasta que las olas griten: \"¡ay, Bendito!\"",
+      "english": "Until the waves shout: \"Oh, Blessed!\""
     },
     "highlight": {
-      "spanish": "suave suavecito",
-      "english": "soft softly"
-    }
-  },
-  {
-    "term": {
-      "spanish": "malicia con delicadeza",
-      "english": "mischief with delicacy"
+      "spanish": "ay, Bendito",
+      "english": "Oh, Blessed"
     },
-    "definition": "This is a poetic and slightly oxymoronic phrase describing a captivating quality. It suggests a seductive blend of playful wickedness or cunning (\"malicia\") combined with elegance, grace, or refinement (\"delicadeza\"). It describes someone who is subtly provocative and alluring.",
-    "difficulty": 7,
-    "example": {
-      "spanish": "Veo que eres malicia con delicadeza",
-      "english": "I see that you are mischief with delicacy"
-    },
-    "highlight": {
-      "spanish": "malicia con delicadeza",
-      "english": "mischief with delicacy"
-    }
-  },
-  {
-    "term": {
-      "spanish": "rompecabezas",
-      "english": "puzzle"
-    },
-    "definition": "While literally meaning \"puzzle,\" the term is used metaphorically here to describe someone's beauty or personality as intricate, complex, and intriguing. It implies that the person is a captivating mystery, something to be 'figured out' or 'assembled.'",
-    "difficulty": 5,
-    "example": {
-      "spanish": "Y es que esa belleza es un rompecabezas (oh no)",
-      "english": "And that beauty is a puzzle (oh no)"
-    },
-    "highlight": {
-      "spanish": "rompecabezas",
-      "english": "puzzle"
-    }
-  },
-  {
-    "term": {
-      "spanish": "Ay, bendito",
-      "english": "Oh, blessed / Oh my goodness"
-    },
-    "definition": "A ubiquitous interjection in Puerto Rican Spanish, \"Ay, bendito\" can express a wide range of intense emotions including surprise, pity, sadness, exasperation, or profound joy/delight. In this context, coming from the 'waves,' it signifies an overwhelming, ecstatic, or shocked reaction to the intensity of the moment. It's culturally specific to Puerto Rico.",
-    "difficulty": 9,
-    "example": {
-      "spanish": "Hasta que las olas griten \"Ay, bendito\"",
-      "english": "Until the waves scream \"Ay, bendito\""
-    },
-    "highlight": {
-      "spanish": "Ay, bendito",
-      "english": "Ay, bendito"
-    }
+    "startTimeMs": 218570,
+    "endTimeMs": 221500,
+    "segmentIndex": 72
   }
 ]

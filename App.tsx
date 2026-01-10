@@ -8,9 +8,11 @@ import {
   refineTranslatedKaraokeData,
   refineMarkedSegments,
   autoRefineProblems,
+  generateBilingualKaraokeFromLrc,
   GeminiModelTier,
   AutoRefineProgress,
 } from './services/geminiService';
+import { isLrcFormat, parseLrc } from './services/lrcParser';
 import {
   validateKaraokeDataPair,
   getScoreInterpretation,
@@ -145,7 +147,19 @@ const App: React.FC = () => {
     const [spanishLyrics, setSpanishLyrics] = useState<string>('');
     const [englishLyrics, setEnglishLyrics] = useState<string>('');
     const [languageFlow, setLanguageFlow] = useState<'es-en' | 'en-es'>('es-en');
-    const [modelTier, setModelTier] = useState<GeminiModelTier>('gemini-2.5');
+    const [modelTier, setModelTier] = useState<GeminiModelTier>('gemini-3-preview');
+
+    // LRC Mode - auto-detected when Spanish lyrics contain LRC timestamps
+    const [lrcContent, setLrcContent] = useState<string>('');
+    const isLrcMode = useMemo(() => isLrcFormat(spanishLyrics), [spanishLyrics]);
+    const parsedLrcInfo = useMemo(() => {
+        if (!isLrcMode) return null;
+        const parsed = parseLrc(spanishLyrics);
+        return {
+            lineCount: parsed.lines.length,
+            metadata: parsed.metadata,
+        };
+    }, [isLrcMode, spanishLyrics]);
 
     // UI State
     const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -275,6 +289,7 @@ const App: React.FC = () => {
         setAudioFile(null);
         setSpanishLyrics('');
         setEnglishLyrics('');
+        setLrcContent('');
         setKaraokeData(null);
         setVocabularyList(null);
         setValidationReport(null);
@@ -320,9 +335,19 @@ const App: React.FC = () => {
             setError("Please provide an audio file.");
             return;
         }
-        if (!spanishLyrics || !englishLyrics) {
-            setError("Please provide both Spanish and English lyrics.");
-            return;
+
+        // In LRC mode, we only need the Spanish LRC content
+        // In standard mode, we need both Spanish and English lyrics
+        if (isLrcMode) {
+            if (!spanishLyrics) {
+                setError("Please provide LRC content.");
+                return;
+            }
+        } else {
+            if (!spanishLyrics || !englishLyrics) {
+                setError("Please provide both Spanish and English lyrics.");
+                return;
+            }
         }
 
         setIsLoading(true);
@@ -344,16 +369,31 @@ const App: React.FC = () => {
         try {
             const onStatusUpdate = (message: string) => {
                 setStatusMessage(message);
-                if (message.includes('Step 1/2')) setProgress(p => Math.max(p, 10));
+                if (message.includes('Step 1')) setProgress(p => Math.max(p, 10));
+                if (message.includes('Step 2')) setProgress(p => Math.max(p, 30));
+                if (message.includes('Step 3')) setProgress(p => Math.max(p, 50));
+                if (message.includes('Step 4')) setProgress(p => Math.max(p, 80));
                 if (message.includes('Analyzing')) setProgress(p => Math.max(p, 25));
-                if (message.includes('Step 2/2')) setProgress(p => Math.max(p, 80));
-                if (message.includes('Success')) setProgress(100);
+                if (message.includes('complete')) setProgress(100);
             };
 
-            const originalLyrics = languageFlow === 'es-en' ? spanishLyrics : englishLyrics;
-            const translatedLyrics = languageFlow === 'es-en' ? englishLyrics : spanishLyrics;
+            let result: KaraokeApiResponse;
 
-            const result = await generateKaraokeData(audioFile, originalLyrics, translatedLyrics, languageFlow, onStatusUpdate, modelTier);
+            if (isLrcMode) {
+                // Use LRC-based generation (auto-translates and generates bilingual)
+                result = await generateBilingualKaraokeFromLrc(
+                    audioFile,
+                    spanishLyrics,
+                    onStatusUpdate,
+                    modelTier
+                );
+            } else {
+                // Use standard generation
+                const originalLyrics = languageFlow === 'es-en' ? spanishLyrics : englishLyrics;
+                const translatedLyrics = languageFlow === 'es-en' ? englishLyrics : spanishLyrics;
+                result = await generateKaraokeData(audioFile, originalLyrics, translatedLyrics, languageFlow, onStatusUpdate, modelTier);
+            }
+
             setKaraokeData(result);
             setActiveTab('preview');
 
@@ -463,7 +503,9 @@ const App: React.FC = () => {
         }
     };
 
-    const isGenerateDisabled = isLoading || !audioFile || !spanishLyrics || !englishLyrics;
+    // We only need audio + lyrics (LRC content)
+    // English translation is always auto-generated
+    const isGenerateDisabled = isLoading || !audioFile || !spanishLyrics;
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-start p-4 sm:p-6 md:p-8 space-y-8">
@@ -486,17 +528,76 @@ const App: React.FC = () => {
                                     <div>
                                         <label className="block text-sm font-medium text-textSecondary mb-1">AI Model</label>
                                         <select value={modelTier} onChange={(e) => setModelTier(e.target.value as GeminiModelTier)} className="w-full p-3 bg-black/20 text-textPrimary rounded-lg border border-white/20 focus:ring-2 focus:ring-secondary focus:border-secondary">
+                                            <option value="gemini-3-preview">Gemini 3 (Recommended)</option>
                                             <option value="gemini-2.5">Gemini 2.5 (Stable)</option>
-                                            <option value="gemini-3-preview">Gemini 3 (Preview)</option>
                                         </select>
                                     </div>
-                                    <ActionButton onClick={handleTranslate} disabled={isTranslating} icon="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z">
-                                        {isTranslating ? 'Translating...' : `Translate to ${languageFlow === 'es-en' ? 'English' : 'Spanish'}`}
-                                    </ActionButton>
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <LyricEditor value={spanishLyrics} onChange={setSpanishLyrics} placeholder="[Intro]..." lang="Spanish" />
-                                    <LyricEditor value={englishLyrics} onChange={setEnglishLyrics} placeholder="[Intro]..." lang="English" />
+                                {/* LRC Mode Info */}
+                                {isLrcMode && parsedLrcInfo && (
+                                    <div className="flex flex-wrap items-center gap-3 p-3 bg-secondary/10 border border-secondary/30 rounded-lg text-sm">
+                                        <span className="text-textPrimary">
+                                            <span className="font-medium">{parsedLrcInfo.lineCount} lines</span> with timestamps
+                                        </span>
+                                        {(parsedLrcInfo.metadata.title || parsedLrcInfo.metadata.artist) && (
+                                            <span className="text-textSecondary">
+                                                {parsedLrcInfo.metadata.title && `"${parsedLrcInfo.metadata.title}"`}
+                                                {parsedLrcInfo.metadata.title && parsedLrcInfo.metadata.artist && ' by '}
+                                                {parsedLrcInfo.metadata.artist}
+                                            </span>
+                                        )}
+                                        <span className="ml-auto text-textSecondary">
+                                            English translation will be auto-generated
+                                        </span>
+                                    </div>
+                                )}
+
+                                <div>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <div className="flex items-center gap-2">
+                                            <label className="block text-sm font-medium text-textSecondary">
+                                                LRC Content
+                                            </label>
+                                            {isLrcMode && (
+                                                <span className="px-2 py-0.5 bg-secondary/20 text-secondary text-xs font-medium rounded">
+                                                    LRC detected
+                                                </span>
+                                            )}
+                                        </div>
+                                        <label className="flex items-center gap-2 px-3 py-1.5 bg-secondary/20 hover:bg-secondary/30 text-secondary text-sm font-medium rounded-lg cursor-pointer transition-colors">
+                                            <Icon path="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" className="w-4 h-4" />
+                                            Upload .LRC
+                                            <input
+                                                type="file"
+                                                accept=".lrc,.txt"
+                                                className="hidden"
+                                                onChange={(e) => {
+                                                    const file = e.target.files?.[0];
+                                                    if (file) {
+                                                        const reader = new FileReader();
+                                                        reader.onload = (event) => {
+                                                            const content = event.target?.result as string;
+                                                            setSpanishLyrics(content);
+                                                        };
+                                                        reader.readAsText(file);
+                                                    }
+                                                }}
+                                            />
+                                        </label>
+                                    </div>
+                                    {!isLrcMode && (
+                                        <p className="text-xs text-textSecondary/70 mb-2">
+                                            Paste or upload an <span className="text-secondary font-medium">.LRC file</span> with timestamps like <code className="bg-black/30 px-1 rounded">[00:10.14] lyrics here</code>. English translation will be auto-generated.
+                                        </p>
+                                    )}
+                                    <textarea
+                                        value={spanishLyrics}
+                                        onChange={(e) => setSpanishLyrics(e.target.value)}
+                                        placeholder="[00:10.14] Paste LRC content here, or click 'Upload .LRC' above..."
+                                        className={`w-full h-64 p-3 bg-black/20 text-textPrimary rounded-lg border focus:ring-2 focus:ring-secondary focus:border-secondary resize-none font-mono text-sm leading-6 ${
+                                            isLrcMode ? 'border-secondary/50' : 'border-white/20'
+                                        }`}
+                                    />
                                 </div>
                             </>
                         )}
@@ -506,7 +607,7 @@ const App: React.FC = () => {
                               disabled={isGenerateDisabled}
                               className={`w-full sm:w-auto px-12 py-4 text-lg font-bold ${isGenerateDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
                               icon="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 22.5l-.648-1.938a3.375 3.375 0 00-2.456-2.456L11.25 18l1.938-.648a3.375 3.375 0 002.456-2.456L16.25 13l.648 1.938a3.375 3.375 0 002.456 2.456L21 18l-1.938.648a3.375 3.375 0 00-2.456 2.456z">
-                                {isLoading ? 'Generating...' : 'Generate Synced Files'}
+                                {isLoading ? 'Generating...' : 'Generate Karaoke'}
                             </ActionButton>
                             <button onClick={clearAll} className="text-textSecondary hover:text-textPrimary transition">Clear All</button>
                         </div>

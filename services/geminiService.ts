@@ -1,10 +1,11 @@
 import { Type } from "@google/genai";
-import { KaraokeApiResponse, KaraokeData, VocabularyItem } from '../types';
+import { KaraokeApiResponse, KaraokeData, VocabularyItem, ParsedLrc } from '../types';
 import {
   validateKaraokeDataPair,
   extractProblemSegmentIndices,
   ValidationReport,
 } from './validationService';
+import { parseLrc, extractLyricsText } from './lrcParser';
 
 // Model tier type - exported for use in App.tsx
 export type GeminiModelTier = 'gemini-2.5' | 'gemini-3-preview';
@@ -155,6 +156,110 @@ export const singleLanguageSchema = {
     required: ["metadata", "segments"]
 };
 
+// Schema for partial refinement output (only refined segments)
+const partialRefinementSchema = {
+    type: Type.OBJECT,
+    properties: {
+        refinedSegments: {
+            type: Type.ARRAY,
+            items: {
+                type: Type.OBJECT,
+                properties: {
+                    originalIndex: { type: Type.INTEGER },
+                    type: { type: Type.STRING },
+                    startTimeMs: { type: Type.INTEGER },
+                    endTimeMs: { type: Type.INTEGER },
+                    cueText: { type: Type.STRING },
+                    text: { type: Type.STRING },
+                    segmentIndex: { type: Type.INTEGER },
+                    words: {
+                        type: Type.ARRAY,
+                        items: {
+                            type: Type.OBJECT,
+                            properties: {
+                                word: { type: Type.STRING },
+                                startTimeMs: { type: Type.INTEGER },
+                                endTimeMs: { type: Type.INTEGER }
+                            },
+                            required: ["word", "startTimeMs", "endTimeMs"]
+                        }
+                    }
+                },
+                required: ["originalIndex", "type", "startTimeMs", "endTimeMs", "segmentIndex"]
+            }
+        }
+    },
+    required: ["refinedSegments"]
+};
+
+// Type for refined segment with originalIndex
+interface RefinedSegment {
+    originalIndex: number;
+    type: 'LYRIC' | 'INSTRUMENTAL';
+    startTimeMs: number;
+    endTimeMs: number;
+    segmentIndex: number;
+    text?: string;
+    cueText?: string;
+    words?: Array<{ word: string; startTimeMs: number; endTimeMs: number }>;
+}
+
+// Merge refined segments back into the original karaoke data
+const mergeRefinedSegments = (
+    originalData: KaraokeData,
+    refinedSegments: RefinedSegment[],
+    markedIndices: number[]
+): KaraokeData => {
+    // Create a copy of the segments array
+    const mergedSegments = [...originalData.segments];
+    const { focusIndices } = calculateFocusArea(markedIndices, mergedSegments.length);
+
+    // Replace segments in the focus area with refined versions
+    for (const refined of refinedSegments) {
+        const idx = refined.originalIndex;
+        if (idx >= 0 && idx < mergedSegments.length) {
+            // Remove originalIndex before storing (it's not part of KaraokeSegment)
+            const { originalIndex, ...segmentData } = refined;
+            mergedSegments[idx] = segmentData as typeof mergedSegments[0];
+        }
+    }
+
+    // Adjust boundaries with adjacent segments outside focus area
+    const minFocusIdx = Math.min(...focusIndices);
+    const maxFocusIdx = Math.max(...focusIndices);
+
+    // Adjust segment before focus area if needed
+    if (minFocusIdx > 0) {
+        const prevSegment = mergedSegments[minFocusIdx - 1];
+        const firstFocusSegment = mergedSegments[minFocusIdx];
+        // If previous segment overlaps with first focus segment, adjust its end
+        if (prevSegment.endTimeMs > firstFocusSegment.startTimeMs) {
+            mergedSegments[minFocusIdx - 1] = {
+                ...prevSegment,
+                endTimeMs: firstFocusSegment.startTimeMs,
+            };
+        }
+    }
+
+    // Adjust segment after focus area if needed
+    if (maxFocusIdx < mergedSegments.length - 1) {
+        const nextSegment = mergedSegments[maxFocusIdx + 1];
+        const lastFocusSegment = mergedSegments[maxFocusIdx];
+        // If last focus segment overlaps with next segment, adjust next's start
+        if (lastFocusSegment.endTimeMs > nextSegment.startTimeMs) {
+            mergedSegments[maxFocusIdx + 1] = {
+                ...nextSegment,
+                startTimeMs: lastFocusSegment.endTimeMs,
+            };
+        }
+    }
+
+    return {
+        ...originalData,
+        segments: mergedSegments,
+    };
+};
+
 
 const buildSingleLanguagePrompt = (lyrics: string, langName: string): string => {
   return `
@@ -252,6 +357,85 @@ You are a precise text-transformation engine. Your task is to create a translate
 
 **Output Format:**
 You MUST return a single, minified JSON object for the ${translatedLangName} version, strictly following the same schema as the input JSON. Do not include any other text, explanations, or markdown.
+`;
+};
+
+// --- LRC-Based Synchronization ---
+
+/**
+ * Build a prompt for LRC-guided karaoke generation.
+ * Hybrid approach: Uses LRC timestamps as primary timing guide (fast) while detecting
+ * instrumental sections that aren't in the LRC (intros, interludes, outros).
+ */
+const buildLrcBasedPrompt = (parsedLrc: ParsedLrc, langName: string): string => {
+  // Convert LRC lines to segment input format
+  const segments = parsedLrc.lines.map((line, index) => ({
+    segmentIndex: index + 1,
+    startTimeMs: line.startTimeMs,
+    endTimeMs: line.endTimeMs,
+    text: line.text,
+    wordCount: line.wordCount,
+  }));
+
+  // Calculate if there's likely an intro (first lyric starts > 5 seconds in)
+  const firstLyricStart = segments[0]?.startTimeMs || 0;
+  const likelyHasIntro = firstLyricStart > 5000;
+
+  return `
+You are a precise Audio-to-Lyrics Alignment Specialist. Your task is to add WORD-LEVEL timing to lyrics using LRC timestamps as your PRIMARY timing guide.
+
+**KEY CONCEPT: LRC-Guided with Instrumental Detection**
+The LRC provides reliable line-level timestamps. Your job is to:
+1. Use LRC timestamps as the base timing for each lyric line
+2. Distribute words within each line's time window based on what you hear
+3. Detect and ADD instrumental sections (intros, interludes, outros) that aren't in the LRC
+
+**Input Data:**
+- Audio File: [Provided in the request]
+- ${langName} Lyrics with LRC timestamps:
+  \`\`\`json
+  ${JSON.stringify(segments, null, 2)}
+  \`\`\`
+${likelyHasIntro ? `
+**NOTE:** The first lyric starts at ${firstLyricStart}ms (${(firstLyricStart/1000).toFixed(1)}s). Listen to confirm if there's an instrumental intro before vocals begin.
+` : ''}
+**RULES:**
+
+1. **Use LRC Timing as Base:**
+   - Each lyric segment's startTimeMs and endTimeMs come from the LRC - use these as your timing foundation
+   - You may adjust by ±1000ms if the audio clearly indicates the line starts/ends at a different time
+   - For word-level timing WITHIN each segment, listen to the audio to distribute words accurately
+
+2. **Detect Instrumental Sections:**
+   - If there's music BEFORE the first lyric (intro), add an INSTRUMENTAL segment from 0 to the first lyric's start
+   - If there's a gap > 5 seconds between lyric segments, consider adding an INSTRUMENTAL segment
+   - If there's music AFTER the last lyric (outro), add an INSTRUMENTAL segment
+   - Use descriptive cueText in ${langName}: "Intro musical", "Interludio", "Outro", etc.
+
+3. **Word-Level Timing:**
+   - Distribute words within each segment's time window based on what you HEAR
+   - First word starts at/near segment.startTimeMs
+   - Last word ends at/near segment.endTimeMs
+   - Words should NOT overlap and no zero-duration words
+   - Pay attention to fast sections - word timings must be precise
+
+4. **Structure:**
+   - Include all ${segments.length} lyric lines from the LRC
+   - ADD instrumental segments where detected
+   - Use sequential segmentIndex starting from 1
+
+**Output Format:**
+Return a KaraokeData JSON object with:
+- metadata: { title, artist, durationMs, language: "${langName === 'Spanish' ? 'es-ES' : 'en-US'}", version: "1.0" }
+- segments: Array with LYRIC and INSTRUMENTAL segments
+
+LYRIC segment:
+{ "type": "LYRIC", "startTimeMs": <from LRC>, "endTimeMs": <from LRC>, "text": "...", "segmentIndex": N, "words": [{ "word": "...", "startTimeMs": ..., "endTimeMs": ... }, ...] }
+
+INSTRUMENTAL segment:
+{ "type": "INSTRUMENTAL", "startTimeMs": ..., "endTimeMs": ..., "cueText": "...", "segmentIndex": N }
+
+Return a single, minified JSON object with no other text.
 `;
 };
 
@@ -836,6 +1020,28 @@ Do not include any other text, explanations, or markdown formatting.
 };
 
 // Build a focused refinement prompt for specific segments
+// Helper to calculate focus area indices (marked segments + context window)
+const calculateFocusArea = (
+  markedSegmentIndices: number[],
+  totalSegments: number,
+  contextWindow: number = 2
+): { focusIndices: number[]; markedSet: Set<number> } => {
+  const segmentsToRefine = new Set<number>();
+
+  markedSegmentIndices.forEach(idx => {
+    segmentsToRefine.add(idx);
+    for (let i = 1; i <= contextWindow; i++) {
+      if (idx - i >= 0) segmentsToRefine.add(idx - i);
+      if (idx + i < totalSegments) segmentsToRefine.add(idx + i);
+    }
+  });
+
+  return {
+    focusIndices: Array.from(segmentsToRefine).sort((a, b) => a - b),
+    markedSet: new Set(markedSegmentIndices),
+  };
+};
+
 const buildSegmentFocusedRefinementPrompt = (
   draftKaraokeData: KaraokeData,
   markedSegmentIndices: number[],
@@ -843,38 +1049,15 @@ const buildSegmentFocusedRefinementPrompt = (
   referenceData?: KaraokeData
 ): string => {
   const segmentCount = draftKaraokeData.segments.length;
+  const { focusIndices, markedSet } = calculateFocusArea(markedSegmentIndices, segmentCount);
 
-  // Calculate context window - include 2 segments before and after each marked segment
-  const contextWindow = 2;
-  const segmentsToRefine = new Set<number>();
-
-  markedSegmentIndices.forEach(idx => {
-    // Add the marked segment
-    segmentsToRefine.add(idx);
-    // Add context segments before
-    for (let i = 1; i <= contextWindow; i++) {
-      if (idx - i >= 0) segmentsToRefine.add(idx - i);
-    }
-    // Add context segments after
-    for (let i = 1; i <= contextWindow; i++) {
-      if (idx + i < segmentCount) segmentsToRefine.add(idx + i);
-    }
-  });
-
-  const sortedSegmentsToRefine = Array.from(segmentsToRefine).sort((a, b) => a - b);
-  const markedIndicesSet = new Set(markedSegmentIndices);
-
-  // Create a focused view of the segments that need attention
-  const focusedSegmentInfo = sortedSegmentsToRefine.map(idx => {
+  // Extract only the segments in the focus area for input
+  const focusSegments = focusIndices.map(idx => {
     const segment = draftKaraokeData.segments[idx];
     return {
-      index: idx,
-      isMarkedForRefinement: markedIndicesSet.has(idx),
-      isContextSegment: !markedIndicesSet.has(idx),
-      type: segment.type,
-      text: segment.text || segment.cueText,
-      currentStartTimeMs: segment.startTimeMs,
-      currentEndTimeMs: segment.endTimeMs,
+      originalIndex: idx,
+      isMarkedForRefinement: markedSet.has(idx),
+      ...segment,
     };
   });
 
@@ -883,69 +1066,70 @@ const buildSegmentFocusedRefinementPrompt = (
 **Reference Timing Data (already refined):**
 Use these segment timings as the ground truth for structural alignment:
 \`\`\`json
-${JSON.stringify(referenceData.segments.filter((_, idx) => segmentsToRefine.has(idx)))}
+${JSON.stringify(focusIndices.map(idx => ({ originalIndex: idx, ...referenceData.segments[idx] })))}
 \`\`\`` : '';
 
   return `
 You are a precision Audio-Lyric Synchronization Specialist. The user has identified specific segments in their karaoke file that appear to be MISALIGNED with the audio. Your task is to carefully re-analyze these segments against the audio and provide corrected timing data.
 
-**CRITICAL STRUCTURAL CONSTRAINTS:**
-1. You MUST output EXACTLY ${segmentCount} segments - no more, no less
-2. Each segment MUST have segmentIndex values 1 through ${segmentCount} in order
-3. Segment type (LYRIC/INSTRUMENTAL) MUST remain unchanged
-4. Do NOT merge, split, add, or remove segments
-5. For segments NOT in the focus area, copy them EXACTLY as provided
-6. For segments IN the focus area, carefully re-time them against the audio
+**IMPORTANT: PARTIAL OUTPUT MODE**
+You will ONLY return the refined segments from the focus area, NOT the entire song.
+This keeps the response compact and efficient.
 
-**User-Marked Problem Segments:**
-The following segments have been flagged as MISALIGNED by the user. These need the most careful attention:
+**User-Marked Problem Segments (indices in original song):**
 ${markedSegmentIndices.map(idx => `- Segment ${idx + 1}: "${draftKaraokeData.segments[idx].text || draftKaraokeData.segments[idx].cueText}"`).join('\n')}
 
-**Focus Area (Segments to Re-analyze):**
-You should re-analyze these segments (marked segments + surrounding context):
+**Focus Area Segments (to be refined and returned):**
+These are the segments you need to analyze and return. Each has an \`originalIndex\` field indicating its position in the full song:
 \`\`\`json
-${JSON.stringify(focusedSegmentInfo, null, 2)}
+${JSON.stringify(focusSegments, null, 2)}
 \`\`\`
 ${referenceInfo}
-
-**Full Current ${langName} Data:**
-\`\`\`json
-${JSON.stringify(draftKaraokeData)}
-\`\`\`
 
 **Audio File:** [Provided in the request]
 
 **Task Instructions:**
 
-1. **Listen to the Audio Carefully:** Focus especially on the time ranges where the marked segments occur.
+1. **Listen to the Audio Carefully:** Focus on the time ranges where these segments occur.
 
-2. **Re-analyze Marked Segments:** For each segment marked as "isMarkedForRefinement: true":
-   - Listen to when the vocals ACTUALLY start for that line
-   - Listen to when the vocals ACTUALLY end
+2. **Re-analyze Marked Segments:** For segments with "isMarkedForRefinement: true":
+   - Listen to when the vocals ACTUALLY start and end
    - Adjust \`startTimeMs\` and \`endTimeMs\` to match the REAL audio
-   - Re-time every word in the \`words\` array to match actual pronunciation timing
+   - Re-time every word in the \`words\` array to match actual pronunciation
 
-3. **Adjust Context Segments:** For segments marked as "isContextSegment: true":
-   - These may need timing adjustments due to changes in the marked segments
-   - Ensure they don't overlap with adjusted segments
-   - Maintain smooth timing flow between segments
+3. **Adjust Context Segments:** For other segments in the focus area:
+   - Adjust timing to flow smoothly with the refined marked segments
+   - Ensure no overlaps between adjacent segments
+   - Maintain natural timing flow
 
-4. **Handle Cascading Effects:** If you adjust a segment's timing, ensure that:
-   - No segments overlap (unless the audio genuinely overlaps)
-   - The flow remains natural from one segment to the next
-   - Word timings within each segment are accurate
+4. **Handle Boundaries:** The first and last segments in your output may need to align with segments outside the focus area:
+   - First segment (originalIndex: ${focusIndices[0]}): Previous segment ends at ${focusIndices[0] > 0 ? draftKaraokeData.segments[focusIndices[0] - 1].endTimeMs : 0}ms
+   - Last segment (originalIndex: ${focusIndices[focusIndices.length - 1]}): Next segment starts at ${focusIndices[focusIndices.length - 1] < segmentCount - 1 ? draftKaraokeData.segments[focusIndices[focusIndices.length - 1] + 1].startTimeMs : 'end of song'}
 
-5. **Preserve Unchanged Segments:** For segments NOT in the focus area, copy them exactly as-is from the input data.
+**Output Format:**
+Return a JSON object with this structure:
+\`\`\`json
+{
+  "refinedSegments": [
+    {
+      "originalIndex": <number>,
+      "type": "LYRIC" | "INSTRUMENTAL",
+      "startTimeMs": <number>,
+      "endTimeMs": <number>,
+      "segmentIndex": <number>,
+      "text": "<string>",
+      "words": [{ "word": "...", "startTimeMs": ..., "endTimeMs": ... }, ...]
+    },
+    ...
+  ]
+}
+\`\`\`
 
-**Common Issues to Look For:**
-- Segments starting too early or too late
-- Word timing drift within a segment
-- Segment end times cutting off sustained vocals
-- Timing accumulation errors that compound over multiple segments
-
-**Output Mandate:**
-Return a single, complete, minified JSON object representing the ENTIRE corrected song data with all ${segmentCount} segments.
-Do not include explanations or text outside the JSON object.
+CRITICAL:
+- Return ONLY the ${focusIndices.length} segments from the focus area
+- Each segment MUST include its \`originalIndex\` so we can merge it back
+- Keep \`segmentIndex\` values unchanged from the input
+- Return minified JSON only, no explanations
 `;
 };
 
@@ -963,11 +1147,13 @@ export const refineMarkedSegments = async (
   }
 
   const models = getModelNames(modelTier);
+  const { focusIndices } = calculateFocusArea(markedSegmentIndices, karaokeDataToRefine.segments.length);
+
   try {
     onStatusUpdate('Preparing audio for focused analysis...');
     const audioPart = await fileToGenerativePart(audioFile);
 
-    onStatusUpdate(`Constructing focused refinement prompt for ${markedSegmentIndices.length} segment(s)...`);
+    onStatusUpdate(`Constructing focused refinement prompt for ${markedSegmentIndices.length} segment(s) (${focusIndices.length} with context)...`);
     const refinementPrompt = buildSegmentFocusedRefinementPrompt(
       karaokeDataToRefine,
       markedSegmentIndices,
@@ -977,15 +1163,16 @@ export const refineMarkedSegments = async (
     const textPart = { text: refinementPrompt };
 
     const model = models.pro;
-    onStatusUpdate(`Analyzing marked segments. This may take several minutes...`);
+    onStatusUpdate(`Analyzing ${focusIndices.length} segments. This may take a few minutes...`);
 
+    // Use partial refinement schema - only returns refined segments, not the whole song
     const apiCall = () => callGeminiProxy(
       model,
       [{ parts: [textPart, audioPart] }],
       {
         responseMimeType: 'application/json',
-        responseSchema: singleLanguageSchema,
-        maxOutputTokens: 32768, // Increased to handle full song JSON output
+        responseSchema: partialRefinementSchema,
+        maxOutputTokens: 32768, // Reduced since we only return focus segments now
       }
     );
 
@@ -1003,24 +1190,38 @@ export const refineMarkedSegments = async (
 
     const response = await Promise.race([apiCallPromise, timeoutPromise]);
 
-    onStatusUpdate('Received refined data, parsing result...');
+    onStatusUpdate('Received refined segments, merging into original data...');
     const text = response.text.trim();
     if (!text) {
       throw new Error("The AI model returned an empty response during segment refinement.");
     }
 
     try {
-      const refinedData = JSON.parse(text);
+      const parsedResponse = JSON.parse(text);
 
-      // Validate segment count matches
-      if (refinedData.segments?.length !== karaokeDataToRefine.segments.length) {
-        console.warn(`Segment count mismatch: expected ${karaokeDataToRefine.segments.length}, got ${refinedData.segments?.length}`);
-        throw new Error("The AI model changed the segment structure. Please try again.");
+      // Validate we got refinedSegments array
+      if (!parsedResponse.refinedSegments || !Array.isArray(parsedResponse.refinedSegments)) {
+        console.error("Response missing refinedSegments array:", text);
+        throw new Error("The AI model did not return the expected refinedSegments format.");
       }
 
-      return refinedData as KaraokeData;
+      const refinedSegments: RefinedSegment[] = parsedResponse.refinedSegments;
+
+      // Validate segment count matches focus area
+      if (refinedSegments.length !== focusIndices.length) {
+        console.warn(`Refined segment count mismatch: expected ${focusIndices.length}, got ${refinedSegments.length}`);
+        // Continue anyway - we'll merge what we got
+      }
+
+      // Merge refined segments back into the original data
+      onStatusUpdate('Merging refined segments and adjusting boundaries...');
+      const mergedData = mergeRefinedSegments(karaokeDataToRefine, refinedSegments, markedSegmentIndices);
+
+      onStatusUpdate('Segment refinement complete!');
+      return mergedData;
+
     } catch (parseError) {
-      console.error("Failed to parse JSON response from segment refinement:", text);
+      console.error("Failed to parse JSON response from segment refinement:", text.substring(0, 500) + '...');
       throw new Error("The AI model's response during segment refinement was not in the expected JSON format.");
     }
 
@@ -1030,7 +1231,206 @@ export const refineMarkedSegments = async (
       error.message.includes("JSON format") ||
       error.message.includes("empty response") ||
       error.message.includes("timed out") ||
-      error.message.includes("segment structure")
+      error.message.includes("refinedSegments")
+    )) {
+      throw error;
+    }
+    throw new Error(parseGoogleGenerativeAIError(error));
+  }
+};
+
+// --- LRC-Based Karaoke Generation ---
+
+/**
+ * Generate karaoke data from an LRC file (single language).
+ * Uses LRC timestamps as anchor points for segment boundaries.
+ */
+export const generateKaraokeFromLrc = async (
+  audioFile: File,
+  lrcContent: string,
+  langName: string,
+  onStatusUpdate: (message: string) => void,
+  modelTier: GeminiModelTier = 'gemini-2.5',
+): Promise<KaraokeData> => {
+  const models = getModelNames(modelTier);
+
+  try {
+    onStatusUpdate('Parsing LRC file...');
+    const parsedLrc = parseLrc(lrcContent);
+
+    if (parsedLrc.lines.length === 0) {
+      throw new Error('No valid lyric lines found in LRC content. Please check the format.');
+    }
+
+    onStatusUpdate(`Found ${parsedLrc.lines.length} lyric lines in LRC file.`);
+
+    onStatusUpdate('Preparing audio for analysis...');
+    const audioPart = await fileToGenerativePart(audioFile);
+
+    onStatusUpdate('Building LRC-anchored prompt...');
+    const prompt = buildLrcBasedPrompt(parsedLrc, langName);
+    const textPart = { text: prompt };
+
+    const model = models.pro;
+    onStatusUpdate(`Analyzing audio with LRC anchors. This may take several minutes...`);
+
+    const apiCall = () => callGeminiProxy(
+      model,
+      [{ parts: [textPart, audioPart] }],
+      {
+        responseMimeType: 'application/json',
+        responseSchema: singleLanguageSchema,
+        maxOutputTokens: 65536, // Increased to handle longer songs with many segments
+      }
+    );
+
+    const apiCallPromise = retryWithBackoff(
+      apiCall, 3, 2000,
+      (attempt) => {
+        console.warn(`LRC-based generation failed on attempt ${attempt}. Retrying...`);
+        onStatusUpdate(`Request failed, retrying... (Attempt ${attempt + 1}/3)`);
+      }
+    );
+
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("The LRC-based generation request timed out after 5 minutes.")), 300000)
+    );
+
+    const response = await Promise.race([apiCallPromise, timeoutPromise]);
+
+    onStatusUpdate('Received response, parsing karaoke data...');
+    const text = response.text.trim();
+    if (!text) {
+      throw new Error("The AI model returned an empty response for LRC-based generation.");
+    }
+
+    let karaokeData: KaraokeData;
+    try {
+      karaokeData = JSON.parse(text);
+    } catch (parseError) {
+      console.error("Failed to parse JSON response from LRC-based generation:", text);
+      throw new Error("The AI model's response was not in the expected JSON format.");
+    }
+
+    // Add metadata from LRC if available
+    if (parsedLrc.metadata.title && !karaokeData.metadata.title) {
+      karaokeData.metadata.title = parsedLrc.metadata.title;
+    }
+    if (parsedLrc.metadata.artist && !karaokeData.metadata.artist) {
+      karaokeData.metadata.artist = parsedLrc.metadata.artist;
+    }
+
+    onStatusUpdate('LRC-based generation complete!');
+    return karaokeData;
+
+  } catch (error) {
+    console.error("Error during LRC-based karaoke generation:", error);
+    if (error instanceof Error && (
+      error.message.includes("JSON format") ||
+      error.message.includes("empty response") ||
+      error.message.includes("timed out") ||
+      error.message.includes("No valid lyric lines")
+    )) {
+      throw error;
+    }
+    throw new Error(parseGoogleGenerativeAIError(error));
+  }
+};
+
+/**
+ * Generate bilingual karaoke data from a Spanish LRC file.
+ * Orchestrates the full pipeline: parse LRC → translate → generate Spanish → align English.
+ */
+export const generateBilingualKaraokeFromLrc = async (
+  audioFile: File,
+  lrcContent: string,
+  onStatusUpdate: (message: string) => void,
+  modelTier: GeminiModelTier = 'gemini-2.5',
+): Promise<KaraokeApiResponse> => {
+  try {
+    // Step 1: Parse LRC
+    onStatusUpdate('Step 1/4: Parsing LRC file...');
+    const parsedLrc = parseLrc(lrcContent);
+
+    if (parsedLrc.lines.length === 0) {
+      throw new Error('No valid lyric lines found in LRC content. Please check the format.');
+    }
+
+    onStatusUpdate(`Found ${parsedLrc.lines.length} lyric lines in LRC file.`);
+
+    // Step 2: Translate Spanish lyrics to English
+    onStatusUpdate('Step 2/4: Translating Spanish lyrics to English...');
+    const spanishLyrics = extractLyricsText(parsedLrc);
+    const englishLyrics = await translateLyrics(spanishLyrics, 'es', 'en', modelTier);
+
+    onStatusUpdate('Translation complete.');
+
+    // Step 3: Generate Spanish karaoke with LRC anchors
+    onStatusUpdate('Step 3/4: Generating Spanish karaoke with LRC timing anchors...');
+    const spanishKaraoke = await generateKaraokeFromLrc(
+      audioFile,
+      lrcContent,
+      'Spanish',
+      (msg) => onStatusUpdate(`Step 3/4: ${msg}`),
+      modelTier
+    );
+
+    // Step 4: Align English translation to Spanish timing
+    onStatusUpdate('Step 4/4: Aligning English translation to Spanish timing...');
+    const models = getModelNames(modelTier);
+
+    const translationPrompt = buildTranslationAlignmentPrompt(
+      spanishKaraoke,
+      englishLyrics,
+      'Spanish',
+      'English'
+    );
+
+    const translationApiCall = () => callGeminiProxy(
+      models.pro,
+      translationPrompt,
+      {
+        responseMimeType: 'application/json',
+        responseSchema: singleLanguageSchema,
+        maxOutputTokens: 65536, // Increased to handle longer songs with many segments
+      }
+    );
+
+    const translationResponse = await retryWithBackoff(
+      translationApiCall, 3, 1000,
+      (attempt) => {
+        console.warn(`Translation alignment failed on attempt ${attempt}. Retrying...`);
+        onStatusUpdate(`Step 4/4: Alignment failed, retrying... (Attempt ${attempt + 1}/3)`);
+      }
+    );
+
+    const translationText = translationResponse.text.trim();
+    if (!translationText) {
+      throw new Error("The AI model returned an empty response for translation alignment.");
+    }
+
+    let englishKaraoke: KaraokeData;
+    try {
+      englishKaraoke = JSON.parse(translationText);
+    } catch (parseError) {
+      console.error("Failed to parse JSON response from translation alignment:", translationText);
+      throw new Error("The AI model's response for translation was not in the expected JSON format.");
+    }
+
+    onStatusUpdate('Bilingual LRC-based generation complete!');
+
+    return {
+      spanish: spanishKaraoke,
+      english: englishKaraoke,
+    };
+
+  } catch (error) {
+    console.error("Error during bilingual LRC-based karaoke generation:", error);
+    if (error instanceof Error && (
+      error.message.includes("JSON format") ||
+      error.message.includes("empty response") ||
+      error.message.includes("timed out") ||
+      error.message.includes("No valid lyric lines")
     )) {
       throw error;
     }
@@ -1081,7 +1481,7 @@ export const autoRefineProblems = async (
   } = options;
 
   // Determine language names from flow
-  const isSpanishToEnglish = languageFlow === 'spanish-to-english';
+  const isSpanishToEnglish = languageFlow === 'es-en';
   const primaryLang = isSpanishToEnglish ? 'Spanish' : 'English';
   const secondaryLang = isSpanishToEnglish ? 'English' : 'Spanish';
 
@@ -1129,39 +1529,60 @@ export const autoRefineProblems = async (
       `Iteration ${iteration}/${maxIterations}: Refining ${totalProblems} problem segment(s)...`
     );
 
+    // Limit segments per batch to avoid response truncation
+    const MAX_SEGMENTS_PER_BATCH = 10;
+
     try {
       // Refine Spanish (primary) if there are issues
       if (problemIndices.spanish.length > 0) {
-        onStatusUpdate(
-          `Refining ${problemIndices.spanish.length} ${primaryLang} segment(s)...`
-        );
-        const refinedSpanish = await refineMarkedSegments(
-          audioFile,
-          currentData.spanish,
-          problemIndices.spanish,
-          primaryLang,
-          onStatusUpdate,
-          undefined,
-          modelTier
-        );
-        currentData = { ...currentData, spanish: refinedSpanish };
+        // Batch the segments if there are too many
+        const spanishBatches: number[][] = [];
+        for (let i = 0; i < problemIndices.spanish.length; i += MAX_SEGMENTS_PER_BATCH) {
+          spanishBatches.push(problemIndices.spanish.slice(i, i + MAX_SEGMENTS_PER_BATCH));
+        }
+
+        for (let batchIdx = 0; batchIdx < spanishBatches.length; batchIdx++) {
+          const batch = spanishBatches[batchIdx];
+          onStatusUpdate(
+            `Refining ${primaryLang} batch ${batchIdx + 1}/${spanishBatches.length} (${batch.length} segment(s))...`
+          );
+          const refinedSpanish = await refineMarkedSegments(
+            audioFile,
+            currentData.spanish,
+            batch,
+            primaryLang,
+            onStatusUpdate,
+            undefined,
+            modelTier
+          );
+          currentData = { ...currentData, spanish: refinedSpanish };
+        }
       }
 
       // Refine English (secondary) if there are issues
       if (problemIndices.english.length > 0) {
-        onStatusUpdate(
-          `Refining ${problemIndices.english.length} ${secondaryLang} segment(s)...`
-        );
-        const refinedEnglish = await refineMarkedSegments(
-          audioFile,
-          currentData.english,
-          problemIndices.english,
-          secondaryLang,
-          onStatusUpdate,
-          currentData.spanish, // Use Spanish as reference for alignment
-          modelTier
-        );
-        currentData = { ...currentData, english: refinedEnglish };
+        // Batch the segments if there are too many
+        const englishBatches: number[][] = [];
+        for (let i = 0; i < problemIndices.english.length; i += MAX_SEGMENTS_PER_BATCH) {
+          englishBatches.push(problemIndices.english.slice(i, i + MAX_SEGMENTS_PER_BATCH));
+        }
+
+        for (let batchIdx = 0; batchIdx < englishBatches.length; batchIdx++) {
+          const batch = englishBatches[batchIdx];
+          onStatusUpdate(
+            `Refining ${secondaryLang} batch ${batchIdx + 1}/${englishBatches.length} (${batch.length} segment(s))...`
+          );
+          const refinedEnglish = await refineMarkedSegments(
+            audioFile,
+            currentData.english,
+            batch,
+            secondaryLang,
+            onStatusUpdate,
+            currentData.spanish, // Use Spanish as reference for alignment
+            modelTier
+          );
+          currentData = { ...currentData, english: refinedEnglish };
+        }
       }
 
       // Re-validate

@@ -8,8 +8,8 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 - **Backend:** Express 4 (API proxy for Gemini)
 - **Build:** Vite 6
 - **AI:** Google Gemini API (@google/genai)
-  - **Pro models** for sync: Gemini 2.5 Pro (stable) or Gemini 3 Pro (preview) - user selectable
-  - **Flash models** for translation: Gemini 2.5 Flash or Gemini 3 Flash
+  - **Pro models** for sync: Gemini 3 Pro (default/recommended) or Gemini 2.5 Pro (stable fallback)
+  - **Flash models** for translation: Gemini 3 Flash or Gemini 2.5 Flash
 - **Utilities:** jszip, Web Audio API
 
 ## Project Structure
@@ -19,6 +19,7 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 ├── server.ts            # Express server with /api/gemini proxy
 ├── services/
 │   ├── geminiService.ts # Client-side API calls, auto-refinement logic
+│   ├── lrcParser.ts     # LRC file parsing and format detection
 │   └── validationService.ts # Quality validation, problem detection
 ├── types.ts             # TypeScript type definitions
 ├── index.tsx            # React entry point
@@ -61,17 +62,22 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 - `KaraokeSegment` - Individual lyric/instrumental segment with word-level timing
 - `KaraokeWord` - Single word with startTimeMs/endTimeMs
 - `VocabularyItem` - Extracted cultural vocabulary with audio timecodes
+- `ParsedLrc` - Parsed LRC file with line-level timestamps
+- `LrcLine` - Single LRC line with timing and text
 
 ## Core Workflow
 
-1. User uploads audio + provides lyrics in source language
-2. User selects AI model tier (Gemini 2.5 stable or Gemini 3 preview)
-3. Optional: Auto-translate via Gemini Flash
-4. Gemini Pro generates word-level timestamps (treats audio as ground truth)
-5. Second pass aligns translated lyrics to original timing
-6. Automatic validation calculates quality score (0-100)
-7. Optional: **Auto-Fix Issues** - automatically refines problem segments identified by validation
-8. Optional: Manual segment refinement or timing adjustments
+1. User uploads audio + pastes/uploads LRC content (auto-detected by `[mm:ss.xx]` format)
+2. User selects AI model tier (Gemini 3 recommended, Gemini 2.5 stable fallback)
+3. LRC provides line-level timing as primary guide
+4. Auto-translate Spanish lyrics to English via Gemini Flash
+5. Gemini Pro:
+   - Uses LRC timestamps as base timing for each lyric line
+   - Distributes words within each segment based on audio
+   - Detects and adds instrumental sections (intros, interludes, outros)
+6. English words aligned to same segment structure
+7. Automatic validation calculates quality score (0-100)
+8. Optional: **Auto-Fix Issues** - refines problem segments
 9. Export as JSON or zip archive
 
 ## Architecture Notes
@@ -86,6 +92,7 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 
 ## Documentation
 
+- `docs/tech-spec-lrc-based-synchronization.md` - LRC file support for improved timing accuracy
 - `docs/tech-spec-security-and-deployment.md` - API key security fix and Cloud Run CI/CD setup
 - `docs/tech-spec-automated-quality-validation.md` - Automated QA for generated karaoke data:
   - Phase 1-3: Core validation logic and UI integration
@@ -96,14 +103,16 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 
 ## Key Features
 
-- **Model Selection** - Switch between Gemini 2.5 (stable, reliable) and Gemini 3 (preview, experimental)
+- **LRC-Based Sync** - Upload or paste LRC files for fast, accurate word-level synchronization
+- **Instrumental Detection** - Automatically detects and adds intro, interlude, and outro sections
+- **Model Selection** - Gemini 3 (default/recommended) or Gemini 2.5 (stable fallback)
 - **Auto Validation** - Quality score (0-100) with error/warning detection after generation
 - **Auto-Fix Issues** - One-click automatic refinement of problem segments (iterates up to 3x until score >= 85)
 - **Manual Refinement** - Mark specific segments for targeted AI re-analysis
-- **Cross-language Validation** - Ensures Spanish/English segments stay structurally aligned
+- **Bilingual Output** - Auto-translates and generates both Spanish and English karaoke data
 
 ## Known Limitations
 
-1. **Long API calls** - Full song analysis takes 3-5+ minutes, prone to timeout with Gemini 3 preview
+1. **LRC file accuracy** - Results depend on LRC file quality; misaligned LRC files may produce timing drift
 2. **Translation timing** - Word-level timing in translations is estimated, not audio-verified
 3. **Vocabulary drift** - Segment indices may need re-extraction after major refinements

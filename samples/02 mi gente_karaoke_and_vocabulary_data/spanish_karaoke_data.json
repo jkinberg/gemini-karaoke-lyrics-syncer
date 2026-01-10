@@ -2,284 +2,314 @@
   "metadata": {
     "title": "Mi Gente",
     "artist": "J Balvin, Willy William",
-    "durationMs": 189000,
-    "language": "es",
-    "version": "Original"
+    "durationMs": 185000,
+    "language": "es-ES",
+    "version": "1.0"
   },
   "segments": [
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 0,
-      "endTimeMs": 9100,
-      "segmentIndex": 0,
-      "cueText": "Intro"
+      "type": "LYRIC",
+      "startTimeMs": 4810,
+      "endTimeMs": 5300,
+      "segmentIndex": 1,
+      "text": "¡Wuh!",
+      "words": [
+        {
+          "word": "¡Wuh!",
+          "startTimeMs": 4810,
+          "endTimeMs": 5300
+        }
+      ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 9100,
-      "endTimeMs": 13400,
-      "segmentIndex": 1,
-      "text": "Si el ritmo te lleva a mover la cabeza ya empezamos como es",
+      "startTimeMs": 9690,
+      "endTimeMs": 12180,
+      "segmentIndex": 2,
+      "text": "Si el ritmo te lleva a mover la cabeza",
       "words": [
         {
           "word": "Si",
-          "startTimeMs": 9140,
-          "endTimeMs": 9300
+          "startTimeMs": 9690,
+          "endTimeMs": 9800
         },
         {
           "word": "el",
-          "startTimeMs": 9300,
-          "endTimeMs": 9450
+          "startTimeMs": 9800,
+          "endTimeMs": 9950
         },
         {
           "word": "ritmo",
-          "startTimeMs": 9450,
-          "endTimeMs": 9750
+          "startTimeMs": 9950,
+          "endTimeMs": 10400
         },
         {
           "word": "te",
-          "startTimeMs": 9750,
-          "endTimeMs": 9900
+          "startTimeMs": 10400,
+          "endTimeMs": 10600
         },
         {
           "word": "lleva",
-          "startTimeMs": 9900,
-          "endTimeMs": 10150
+          "startTimeMs": 10600,
+          "endTimeMs": 11000
         },
         {
           "word": "a",
-          "startTimeMs": 10150,
-          "endTimeMs": 10250
+          "startTimeMs": 11000,
+          "endTimeMs": 11100
         },
         {
           "word": "mover",
-          "startTimeMs": 10250,
-          "endTimeMs": 10550
+          "startTimeMs": 11100,
+          "endTimeMs": 11500
         },
         {
           "word": "la",
-          "startTimeMs": 10550,
-          "endTimeMs": 10700
-        },
-        {
-          "word": "cabeza",
-          "startTimeMs": 10700,
-          "endTimeMs": 11200
-        },
-        {
-          "word": "Ya",
           "startTimeMs": 11500,
           "endTimeMs": 11700
         },
         {
-          "word": "empezamos",
+          "word": "cabeza",
           "startTimeMs": 11700,
-          "endTimeMs": 12400
+          "endTimeMs": 12180
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 12180,
+      "endTimeMs": 14320,
+      "segmentIndex": 3,
+      "text": "Ya empezamo' como es",
+      "words": [
+        {
+          "word": "Ya",
+          "startTimeMs": 12180,
+          "endTimeMs": 12500
+        },
+        {
+          "word": "empezamo'",
+          "startTimeMs": 12500,
+          "endTimeMs": 13200
         },
         {
           "word": "como",
-          "startTimeMs": 12400,
-          "endTimeMs": 12700
+          "startTimeMs": 13200,
+          "endTimeMs": 13600
         },
         {
           "word": "es",
-          "startTimeMs": 12700,
-          "endTimeMs": 13100
+          "startTimeMs": 13600,
+          "endTimeMs": 14320
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 13400,
-      "endTimeMs": 17900,
-      "segmentIndex": 2,
-      "text": "Mi música no discrimina a nadie así que vamos a romper",
+      "startTimeMs": 14320,
+      "endTimeMs": 16640,
+      "segmentIndex": 4,
+      "text": "Mi música no discrimina a nadie",
       "words": [
         {
           "word": "Mi",
-          "startTimeMs": 13500,
-          "endTimeMs": 13700
-        },
-        {
-          "word": "música",
-          "startTimeMs": 13700,
-          "endTimeMs": 14300
-        },
-        {
-          "word": "no",
-          "startTimeMs": 14300,
+          "startTimeMs": 14320,
           "endTimeMs": 14500
         },
         {
-          "word": "discrimina",
+          "word": "música",
           "startTimeMs": 14500,
-          "endTimeMs": 15100
+          "endTimeMs": 15000
+        },
+        {
+          "word": "no",
+          "startTimeMs": 15000,
+          "endTimeMs": 15300
+        },
+        {
+          "word": "discrimina",
+          "startTimeMs": 15300,
+          "endTimeMs": 16000
         },
         {
           "word": "a",
-          "startTimeMs": 15100,
-          "endTimeMs": 15250
+          "startTimeMs": 16000,
+          "endTimeMs": 16100
         },
         {
           "word": "nadie",
-          "startTimeMs": 15250,
-          "endTimeMs": 15800
-        },
+          "startTimeMs": 16100,
+          "endTimeMs": 16640
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 16640,
+      "endTimeMs": 18230,
+      "segmentIndex": 5,
+      "text": "Así que vamo' a romper",
+      "words": [
         {
           "word": "Así",
-          "startTimeMs": 16000,
-          "endTimeMs": 16250
-        },
-        {
-          "word": "que",
-          "startTimeMs": 16250,
-          "endTimeMs": 16400
-        },
-        {
-          "word": "vamos",
-          "startTimeMs": 16400,
-          "endTimeMs": 16750
-        },
-        {
-          "word": "a",
-          "startTimeMs": 16750,
+          "startTimeMs": 16640,
           "endTimeMs": 16900
         },
         {
-          "word": "romper",
+          "word": "que",
           "startTimeMs": 16900,
+          "endTimeMs": 17100
+        },
+        {
+          "word": "vamo'",
+          "startTimeMs": 17100,
           "endTimeMs": 17500
+        },
+        {
+          "word": "a",
+          "startTimeMs": 17500,
+          "endTimeMs": 17700
+        },
+        {
+          "word": "romper",
+          "startTimeMs": 17700,
+          "endTimeMs": 18230
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 17900,
-      "endTimeMs": 19800,
-      "segmentIndex": 3,
-      "text": "Toda mi gente se mueve",
+      "startTimeMs": 18230,
+      "endTimeMs": 20110,
+      "segmentIndex": 6,
+      "text": "Toda mi gente se mueve (rra)",
       "words": [
         {
           "word": "Toda",
-          "startTimeMs": 17950,
-          "endTimeMs": 18250
+          "startTimeMs": 18230,
+          "endTimeMs": 18500
         },
         {
           "word": "mi",
-          "startTimeMs": 18250,
-          "endTimeMs": 18450
+          "startTimeMs": 18500,
+          "endTimeMs": 18700
         },
         {
           "word": "gente",
-          "startTimeMs": 18450,
-          "endTimeMs": 18900
-        },
-        {
-          "word": "se",
-          "startTimeMs": 18900,
+          "startTimeMs": 18700,
           "endTimeMs": 19200
         },
         {
-          "word": "mueve",
+          "word": "se",
           "startTimeMs": 19200,
-          "endTimeMs": 19700
+          "endTimeMs": 19400
+        },
+        {
+          "word": "mueve",
+          "startTimeMs": 19400,
+          "endTimeMs": 19800
+        },
+        {
+          "word": "(rra)",
+          "startTimeMs": 19800,
+          "endTimeMs": 20110
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 19800,
-      "endTimeMs": 22000,
-      "segmentIndex": 4,
+      "startTimeMs": 20110,
+      "endTimeMs": 22090,
+      "segmentIndex": 7,
       "text": "Mira el ritmo cómo los tiene",
       "words": [
         {
           "word": "Mira",
-          "startTimeMs": 19850,
-          "endTimeMs": 20100
+          "startTimeMs": 20110,
+          "endTimeMs": 20400
         },
         {
           "word": "el",
-          "startTimeMs": 20100,
-          "endTimeMs": 20250
+          "startTimeMs": 20400,
+          "endTimeMs": 20550
         },
         {
           "word": "ritmo",
-          "startTimeMs": 20250,
-          "endTimeMs": 20700
-        },
-        {
-          "word": "cómo",
-          "startTimeMs": 20700,
+          "startTimeMs": 20550,
           "endTimeMs": 21000
         },
         {
-          "word": "los",
+          "word": "cómo",
           "startTimeMs": 21000,
           "endTimeMs": 21300
         },
         {
-          "word": "tiene",
+          "word": "los",
           "startTimeMs": 21300,
-          "endTimeMs": 21800
+          "endTimeMs": 21500
+        },
+        {
+          "word": "tiene",
+          "startTimeMs": 21500,
+          "endTimeMs": 22090
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 22000,
-      "endTimeMs": 24000,
-      "segmentIndex": 5,
+      "startTimeMs": 22090,
+      "endTimeMs": 24310,
+      "segmentIndex": 8,
       "text": "Hago música que entretiene",
       "words": [
         {
           "word": "Hago",
-          "startTimeMs": 22100,
-          "endTimeMs": 22350
+          "startTimeMs": 22090,
+          "endTimeMs": 22400
         },
         {
           "word": "música",
-          "startTimeMs": 22350,
-          "endTimeMs": 22850
+          "startTimeMs": 22400,
+          "endTimeMs": 23000
         },
         {
           "word": "que",
-          "startTimeMs": 22850,
-          "endTimeMs": 23100
+          "startTimeMs": 23000,
+          "endTimeMs": 23300
         },
         {
           "word": "entretiene",
-          "startTimeMs": 23100,
-          "endTimeMs": 23900
+          "startTimeMs": 23300,
+          "endTimeMs": 24310
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 24000,
-      "endTimeMs": 27500,
-      "segmentIndex": 6,
+      "startTimeMs": 24310,
+      "endTimeMs": 26740,
+      "segmentIndex": 9,
       "text": "El mundo nos quiere, nos quiere, me quiere a mí",
       "words": [
         {
           "word": "El",
-          "startTimeMs": 24100,
-          "endTimeMs": 24250
+          "startTimeMs": 24310,
+          "endTimeMs": 24450
         },
         {
           "word": "mundo",
-          "startTimeMs": 24250,
-          "endTimeMs": 24700
+          "startTimeMs": 24450,
+          "endTimeMs": 24800
         },
         {
           "word": "nos",
-          "startTimeMs": 24700,
-          "endTimeMs": 24900
+          "startTimeMs": 24800,
+          "endTimeMs": 25000
         },
         {
           "word": "quiere,",
-          "startTimeMs": 24900,
-          "endTimeMs": 25400
+          "startTimeMs": 25000,
+          "endTimeMs": 25500
         },
         {
           "word": "nos",
@@ -289,616 +319,649 @@
         {
           "word": "quiere,",
           "startTimeMs": 25700,
-          "endTimeMs": 26200
+          "endTimeMs": 26050
         },
         {
           "word": "me",
-          "startTimeMs": 26300,
-          "endTimeMs": 26500
+          "startTimeMs": 26050,
+          "endTimeMs": 26200
         },
         {
           "word": "quiere",
-          "startTimeMs": 26500,
-          "endTimeMs": 26900
+          "startTimeMs": 26200,
+          "endTimeMs": 26550
         },
         {
           "word": "a",
-          "startTimeMs": 26900,
-          "endTimeMs": 27100
+          "startTimeMs": 26550,
+          "endTimeMs": 26650
         },
         {
           "word": "mí",
-          "startTimeMs": 27100,
-          "endTimeMs": 27400
+          "startTimeMs": 26650,
+          "endTimeMs": 26740
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 27500,
-      "endTimeMs": 29500,
-      "segmentIndex": 7,
-      "text": "Toda mi gente se mueve",
+      "startTimeMs": 26740,
+      "endTimeMs": 29270,
+      "segmentIndex": 10,
+      "text": "Toda mi gente se mueve (rra)",
       "words": [
         {
           "word": "Toda",
-          "startTimeMs": 27600,
-          "endTimeMs": 27900
+          "startTimeMs": 26740,
+          "endTimeMs": 27000
         },
         {
           "word": "mi",
-          "startTimeMs": 27900,
-          "endTimeMs": 28100
+          "startTimeMs": 27000,
+          "endTimeMs": 27200
         },
         {
           "word": "gente",
-          "startTimeMs": 28100,
-          "endTimeMs": 28600
+          "startTimeMs": 27200,
+          "endTimeMs": 27700
         },
         {
           "word": "se",
-          "startTimeMs": 28600,
-          "endTimeMs": 28900
+          "startTimeMs": 27700,
+          "endTimeMs": 27900
         },
         {
           "word": "mueve",
-          "startTimeMs": 28900,
-          "endTimeMs": 29400
+          "startTimeMs": 27900,
+          "endTimeMs": 28300
+        },
+        {
+          "word": "(rra)",
+          "startTimeMs": 28300,
+          "endTimeMs": 29270
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 29500,
-      "endTimeMs": 31500,
-      "segmentIndex": 8,
+      "startTimeMs": 29270,
+      "endTimeMs": 31460,
+      "segmentIndex": 11,
       "text": "Mira el ritmo cómo los tiene",
       "words": [
         {
           "word": "Mira",
-          "startTimeMs": 29600,
-          "endTimeMs": 29850
+          "startTimeMs": 29270,
+          "endTimeMs": 29600
         },
         {
           "word": "el",
-          "startTimeMs": 29850,
-          "endTimeMs": 30000
+          "startTimeMs": 29600,
+          "endTimeMs": 29800
         },
         {
           "word": "ritmo",
-          "startTimeMs": 30000,
-          "endTimeMs": 30400
+          "startTimeMs": 29800,
+          "endTimeMs": 30200
         },
         {
           "word": "cómo",
-          "startTimeMs": 30400,
-          "endTimeMs": 30700
+          "startTimeMs": 30200,
+          "endTimeMs": 30500
         },
         {
           "word": "los",
-          "startTimeMs": 30700,
-          "endTimeMs": 31000
+          "startTimeMs": 30500,
+          "endTimeMs": 30800
         },
         {
           "word": "tiene",
-          "startTimeMs": 31000,
-          "endTimeMs": 31400
+          "startTimeMs": 30800,
+          "endTimeMs": 31460
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 31500,
-      "endTimeMs": 33500,
-      "segmentIndex": 9,
+      "startTimeMs": 31460,
+      "endTimeMs": 32920,
+      "segmentIndex": 12,
       "text": "Hago música que entretiene",
       "words": [
         {
           "word": "Hago",
-          "startTimeMs": 31600,
-          "endTimeMs": 31850
+          "startTimeMs": 31460,
+          "endTimeMs": 31700
         },
         {
           "word": "música",
-          "startTimeMs": 31850,
-          "endTimeMs": 32300
+          "startTimeMs": 31700,
+          "endTimeMs": 32100
         },
         {
           "word": "que",
-          "startTimeMs": 32300,
-          "endTimeMs": 32600
+          "startTimeMs": 32100,
+          "endTimeMs": 32300
         },
         {
           "word": "entretiene",
-          "startTimeMs": 32600,
-          "endTimeMs": 33400
+          "startTimeMs": 32300,
+          "endTimeMs": 32920
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 33500,
+      "startTimeMs": 32920,
       "endTimeMs": 37000,
-      "segmentIndex": 10,
-      "text": "Mi música los tiene fuerte bailando y se baila así",
+      "segmentIndex": 13,
+      "text": "Mi música los tiene fuerte bailando y se baila así (let's go)",
       "words": [
         {
           "word": "Mi",
-          "startTimeMs": 33600,
-          "endTimeMs": 33800
+          "startTimeMs": 32920,
+          "endTimeMs": 33100
         },
         {
           "word": "música",
-          "startTimeMs": 33800,
-          "endTimeMs": 34300
+          "startTimeMs": 33100,
+          "endTimeMs": 33500
         },
         {
           "word": "los",
-          "startTimeMs": 34300,
-          "endTimeMs": 34500
+          "startTimeMs": 33500,
+          "endTimeMs": 33700
         },
         {
           "word": "tiene",
-          "startTimeMs": 34500,
-          "endTimeMs": 34800
+          "startTimeMs": 33700,
+          "endTimeMs": 34000
         },
         {
           "word": "fuerte",
-          "startTimeMs": 34800,
-          "endTimeMs": 35300
+          "startTimeMs": 34000,
+          "endTimeMs": 34400
         },
         {
           "word": "bailando",
-          "startTimeMs": 35300,
-          "endTimeMs": 35800
+          "startTimeMs": 34400,
+          "endTimeMs": 35000
         },
         {
-          "word": "Y",
-          "startTimeMs": 36000,
-          "endTimeMs": 36150
+          "word": "y",
+          "startTimeMs": 35000,
+          "endTimeMs": 35150
         },
         {
           "word": "se",
-          "startTimeMs": 36150,
-          "endTimeMs": 36300
+          "startTimeMs": 35150,
+          "endTimeMs": 35300
         },
         {
           "word": "baila",
-          "startTimeMs": 36300,
-          "endTimeMs": 36600
+          "startTimeMs": 35300,
+          "endTimeMs": 35700
         },
         {
           "word": "así",
+          "startTimeMs": 35700,
+          "endTimeMs": 36200
+        },
+        {
+          "word": "(let's",
+          "startTimeMs": 36200,
+          "endTimeMs": 36600
+        },
+        {
+          "word": "go)",
           "startTimeMs": 36600,
-          "endTimeMs": 36900
+          "endTimeMs": 37000
         }
       ]
     },
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 37000,
-      "endTimeMs": 55300,
-      "segmentIndex": 11,
-      "cueText": "Drop"
-    },
-    {
       "type": "LYRIC",
-      "startTimeMs": 55300,
-      "endTimeMs": 57500,
-      "segmentIndex": 12,
-      "text": "Tamo' rompiendo la discoteca",
+      "startTimeMs": 54920,
+      "endTimeMs": 57290,
+      "segmentIndex": 14,
+      "text": "Estamo' rompiendo la discoteca",
       "words": [
         {
-          "word": "Tamo'",
-          "startTimeMs": 55500,
-          "endTimeMs": 55900
+          "word": "Estamo'",
+          "startTimeMs": 54920,
+          "endTimeMs": 55400
         },
         {
           "word": "rompiendo",
-          "startTimeMs": 55900,
-          "endTimeMs": 56500
+          "startTimeMs": 55400,
+          "endTimeMs": 56100
         },
         {
           "word": "la",
-          "startTimeMs": 56500,
-          "endTimeMs": 56700
+          "startTimeMs": 56100,
+          "endTimeMs": 56300
         },
         {
           "word": "discoteca",
-          "startTimeMs": 56700,
-          "endTimeMs": 57400
+          "startTimeMs": 56300,
+          "endTimeMs": 57290
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 57500,
-      "endTimeMs": 59800,
-      "segmentIndex": 13,
+      "startTimeMs": 57290,
+      "endTimeMs": 59390,
+      "segmentIndex": 15,
       "text": "La fiesta no para, apenas comienza",
       "words": [
         {
           "word": "La",
-          "startTimeMs": 57700,
-          "endTimeMs": 57900
+          "startTimeMs": 57290,
+          "endTimeMs": 57400
         },
         {
           "word": "fiesta",
-          "startTimeMs": 57900,
-          "endTimeMs": 58300
+          "startTimeMs": 57400,
+          "endTimeMs": 57900
         },
         {
           "word": "no",
-          "startTimeMs": 58300,
-          "endTimeMs": 58500
+          "startTimeMs": 57900,
+          "endTimeMs": 58100
         },
         {
           "word": "para,",
+          "startTimeMs": 58100,
+          "endTimeMs": 58500
+        },
+        {
+          "word": "apenas",
           "startTimeMs": 58500,
           "endTimeMs": 58900
         },
         {
-          "word": "apenas",
-          "startTimeMs": 59000,
-          "endTimeMs": 59400
-        },
-        {
           "word": "comienza",
-          "startTimeMs": 59400,
-          "endTimeMs": 59800
+          "startTimeMs": 58900,
+          "endTimeMs": 59390
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 59800,
-      "endTimeMs": 61900,
-      "segmentIndex": 14,
-      "text": "C'est comme-ci, c'est comme ça",
+      "startTimeMs": 59390,
+      "endTimeMs": 61910,
+      "segmentIndex": 16,
+      "text": "(¡Eh!) C'est comme ci (¡eh!), c'est comme ça",
       "words": [
         {
+          "word": "(¡Eh!)",
+          "startTimeMs": 59390,
+          "endTimeMs": 59700
+        },
+        {
           "word": "C'est",
-          "startTimeMs": 59900,
-          "endTimeMs": 60300
-        },
-        {
-          "word": "comme-ci,",
-          "startTimeMs": 60300,
-          "endTimeMs": 60800
-        },
-        {
-          "word": "c'est",
-          "startTimeMs": 61000,
-          "endTimeMs": 61300
+          "startTimeMs": 59700,
+          "endTimeMs": 60000
         },
         {
           "word": "comme",
-          "startTimeMs": 61300,
-          "endTimeMs": 61500
+          "startTimeMs": 60000,
+          "endTimeMs": 60200
+        },
+        {
+          "word": "ci",
+          "startTimeMs": 60200,
+          "endTimeMs": 60600
+        },
+        {
+          "word": "(¡eh!),",
+          "startTimeMs": 60600,
+          "endTimeMs": 60900
+        },
+        {
+          "word": "c'est",
+          "startTimeMs": 60900,
+          "endTimeMs": 61200
+        },
+        {
+          "word": "comme",
+          "startTimeMs": 61200,
+          "endTimeMs": 61400
         },
         {
           "word": "ça",
-          "startTimeMs": 61500,
-          "endTimeMs": 61800
+          "startTimeMs": 61400,
+          "endTimeMs": 61910
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 61900,
-      "endTimeMs": 64500,
-      "segmentIndex": 15,
-      "text": "Ma chèrie, la-la-la-la-la",
+      "startTimeMs": 61910,
+      "endTimeMs": 64040,
+      "segmentIndex": 17,
+      "text": "(¡Eh!) Ma chérie, la-la-la-la-la",
       "words": [
         {
-          "word": "Ma",
-          "startTimeMs": 62000,
+          "word": "(¡Eh!)",
+          "startTimeMs": 61910,
           "endTimeMs": 62300
         },
         {
-          "word": "chèrie,",
+          "word": "Ma",
           "startTimeMs": 62300,
-          "endTimeMs": 62800
+          "endTimeMs": 62500
         },
         {
-          "word": "la",
-          "startTimeMs": 62900,
-          "endTimeMs": 63200
+          "word": "chérie,",
+          "startTimeMs": 62500,
+          "endTimeMs": 63000
         },
         {
-          "word": "la",
-          "startTimeMs": 63200,
-          "endTimeMs": 63400
-        },
-        {
-          "word": "la",
-          "startTimeMs": 63400,
-          "endTimeMs": 63600
-        },
-        {
-          "word": "la",
-          "startTimeMs": 63600,
-          "endTimeMs": 63800
-        },
-        {
-          "word": "la",
-          "startTimeMs": 63800,
-          "endTimeMs": 64200
+          "word": "la-la-la-la-la",
+          "startTimeMs": 63000,
+          "endTimeMs": 64040
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 64500,
-      "endTimeMs": 66500,
-      "segmentIndex": 16,
-      "text": "Francia, Colombia",
+      "startTimeMs": 64040,
+      "endTimeMs": 66470,
+      "segmentIndex": 18,
+      "text": "(Eh) Francia (eh), Colombia (eh)",
       "words": [
         {
-          "word": "Francia,",
-          "startTimeMs": 64600,
-          "endTimeMs": 65100
+          "word": "(Eh)",
+          "startTimeMs": 64040,
+          "endTimeMs": 64400
+        },
+        {
+          "word": "Francia",
+          "startTimeMs": 64400,
+          "endTimeMs": 65000
+        },
+        {
+          "word": "(eh),",
+          "startTimeMs": 65000,
+          "endTimeMs": 65400
         },
         {
           "word": "Colombia",
-          "startTimeMs": 65500,
-          "endTimeMs": 66200
+          "startTimeMs": 65400,
+          "endTimeMs": 66100
+        },
+        {
+          "word": "(eh)",
+          "startTimeMs": 66100,
+          "endTimeMs": 66470
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 66500,
-      "endTimeMs": 68500,
-      "segmentIndex": 17,
-      "text": "Me gusta (Freeze)",
+      "startTimeMs": 66470,
+      "endTimeMs": 68770,
+      "segmentIndex": 19,
+      "text": "Me gusta (¡freeze!)",
       "words": [
         {
           "word": "Me",
-          "startTimeMs": 66600,
-          "endTimeMs": 66900
+          "startTimeMs": 66470,
+          "endTimeMs": 66600
         },
         {
           "word": "gusta",
-          "startTimeMs": 66900,
-          "endTimeMs": 67500
+          "startTimeMs": 66600,
+          "endTimeMs": 67100
         },
         {
-          "word": "(Freeze)",
-          "startTimeMs": 67800,
-          "endTimeMs": 68200
+          "word": "(¡freeze!)",
+          "startTimeMs": 67100,
+          "endTimeMs": 68770
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 68500,
-      "endTimeMs": 70700,
-      "segmentIndex": 18,
-      "text": "J Balvin, Willy William",
+      "startTimeMs": 68770,
+      "endTimeMs": 71600,
+      "segmentIndex": 20,
+      "text": "(Eh) J Balvin (eh), Willy William (eh)",
       "words": [
         {
-          "word": "J",
-          "startTimeMs": 68800,
-          "endTimeMs": 69100
+          "word": "(Eh)",
+          "startTimeMs": 68770,
+          "endTimeMs": 69200
         },
         {
-          "word": "Balvin,",
-          "startTimeMs": 69100,
-          "endTimeMs": 69600
+          "word": "J",
+          "startTimeMs": 69200,
+          "endTimeMs": 69400
+        },
+        {
+          "word": "Balvin",
+          "startTimeMs": 69400,
+          "endTimeMs": 69900
+        },
+        {
+          "word": "(eh),",
+          "startTimeMs": 69900,
+          "endTimeMs": 70300
         },
         {
           "word": "Willy",
-          "startTimeMs": 69600,
-          "endTimeMs": 70000
+          "startTimeMs": 70300,
+          "endTimeMs": 70600
         },
         {
           "word": "William",
-          "startTimeMs": 70000,
-          "endTimeMs": 70500
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 70700,
-      "endTimeMs": 72500,
-      "segmentIndex": 19,
-      "text": "Le gusta (Freeze)",
-      "words": [
-        {
-          "word": "Le",
-          "startTimeMs": 70800,
+          "startTimeMs": 70600,
           "endTimeMs": 71100
         },
         {
-          "word": "gusta",
+          "word": "(eh)",
           "startTimeMs": 71100,
           "endTimeMs": 71600
-        },
-        {
-          "word": "(Freeze)",
-          "startTimeMs": 72000,
-          "endTimeMs": 72400
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 72500,
-      "endTimeMs": 75400,
-      "segmentIndex": 20,
-      "text": "Los DJs no mienten, le gusta a mi gente",
+      "startTimeMs": 71600,
+      "endTimeMs": 73220,
+      "segmentIndex": 21,
+      "text": "Me gusta (¡freeze!)",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 71600,
+          "endTimeMs": 71800
+        },
+        {
+          "word": "gusta",
+          "startTimeMs": 71800,
+          "endTimeMs": 72300
+        },
+        {
+          "word": "(¡freeze!)",
+          "startTimeMs": 72300,
+          "endTimeMs": 73220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 73220,
+      "endTimeMs": 75690,
+      "segmentIndex": 22,
+      "text": "Los DJs no mienten, les gusta mi gente",
       "words": [
         {
           "word": "Los",
-          "startTimeMs": 72900,
-          "endTimeMs": 73200
+          "startTimeMs": 73220,
+          "endTimeMs": 73400
         },
         {
           "word": "DJs",
-          "startTimeMs": 73200,
-          "endTimeMs": 73600
-        },
-        {
-          "word": "no",
-          "startTimeMs": 73600,
+          "startTimeMs": 73400,
           "endTimeMs": 73800
         },
         {
-          "word": "mienten,",
+          "word": "no",
           "startTimeMs": 73800,
-          "endTimeMs": 74200
+          "endTimeMs": 74000
         },
         {
-          "word": "le",
-          "startTimeMs": 74200,
+          "word": "mienten,",
+          "startTimeMs": 74000,
           "endTimeMs": 74400
         },
         {
-          "word": "gusta",
+          "word": "les",
           "startTimeMs": 74400,
-          "endTimeMs": 74800
+          "endTimeMs": 74600
         },
         {
-          "word": "a",
-          "startTimeMs": 74800,
-          "endTimeMs": 74900
+          "word": "gusta",
+          "startTimeMs": 74600,
+          "endTimeMs": 75000
         },
         {
           "word": "mi",
-          "startTimeMs": 74900,
-          "endTimeMs": 75100
+          "startTimeMs": 75000,
+          "endTimeMs": 75200
         },
         {
           "word": "gente",
-          "startTimeMs": 75100,
-          "endTimeMs": 75400
+          "startTimeMs": 75200,
+          "endTimeMs": 75690
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 75400,
-      "endTimeMs": 77400,
-      "segmentIndex": 21,
-      "text": "Y eso se fue mundial (Freeze)",
+      "startTimeMs": 75690,
+      "endTimeMs": 78080,
+      "segmentIndex": 23,
+      "text": "Y eso se fue mundial (¡freeze!)",
       "words": [
         {
           "word": "Y",
-          "startTimeMs": 75500,
-          "endTimeMs": 75600
+          "startTimeMs": 75690,
+          "endTimeMs": 75800
         },
         {
           "word": "eso",
-          "startTimeMs": 75600,
-          "endTimeMs": 75900
-        },
-        {
-          "word": "se",
-          "startTimeMs": 75900,
+          "startTimeMs": 75800,
           "endTimeMs": 76100
         },
         {
-          "word": "fue",
+          "word": "se",
           "startTimeMs": 76100,
           "endTimeMs": 76300
         },
         {
-          "word": "mundial",
+          "word": "fue",
           "startTimeMs": 76300,
-          "endTimeMs": 76800
+          "endTimeMs": 76500
         },
         {
-          "word": "(Freeze)",
-          "startTimeMs": 76900,
-          "endTimeMs": 77300
+          "word": "mundial",
+          "startTimeMs": 76500,
+          "endTimeMs": 77100
+        },
+        {
+          "word": "(¡freeze!)",
+          "startTimeMs": 77100,
+          "endTimeMs": 78080
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 77400,
-      "endTimeMs": 79800,
-      "segmentIndex": 22,
-      "text": "No le bajamos, más nunca paramos",
+      "startTimeMs": 78080,
+      "endTimeMs": 80370,
+      "segmentIndex": 24,
+      "text": "No le bajamos, mas nunca paramos",
       "words": [
         {
           "word": "No",
-          "startTimeMs": 77500,
-          "endTimeMs": 77700
+          "startTimeMs": 78080,
+          "endTimeMs": 78200
         },
         {
           "word": "le",
-          "startTimeMs": 77700,
-          "endTimeMs": 77900
-        },
-        {
-          "word": "bajamos,",
-          "startTimeMs": 77900,
+          "startTimeMs": 78200,
           "endTimeMs": 78400
         },
         {
-          "word": "más",
-          "startTimeMs": 78500,
-          "endTimeMs": 78800
+          "word": "bajamos,",
+          "startTimeMs": 78400,
+          "endTimeMs": 78900
+        },
+        {
+          "word": "mas",
+          "startTimeMs": 78900,
+          "endTimeMs": 79100
         },
         {
           "word": "nunca",
-          "startTimeMs": 78800,
-          "endTimeMs": 79200
+          "startTimeMs": 79100,
+          "endTimeMs": 79500
         },
         {
           "word": "paramos",
-          "startTimeMs": 79200,
-          "endTimeMs": 79800
+          "startTimeMs": 79500,
+          "endTimeMs": 80370
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 79800,
-      "endTimeMs": 81800,
-      "segmentIndex": 23,
-      "text": "Es otro palo y ¡blam!",
+      "startTimeMs": 80370,
+      "endTimeMs": 81930,
+      "segmentIndex": 25,
+      "text": "Es otro palo y, ¡blam!",
       "words": [
         {
           "word": "Es",
-          "startTimeMs": 79900,
-          "endTimeMs": 80100
+          "startTimeMs": 80370,
+          "endTimeMs": 80500
         },
         {
           "word": "otro",
-          "startTimeMs": 80100,
-          "endTimeMs": 80400
-        },
-        {
-          "word": "palo",
-          "startTimeMs": 80400,
+          "startTimeMs": 80500,
           "endTimeMs": 80800
         },
         {
-          "word": "y",
+          "word": "palo",
           "startTimeMs": 80800,
-          "endTimeMs": 81000
+          "endTimeMs": 81300
+        },
+        {
+          "word": "y,",
+          "startTimeMs": 81300,
+          "endTimeMs": 81500
         },
         {
           "word": "¡blam!",
-          "startTimeMs": 81100,
-          "endTimeMs": 81700
+          "startTimeMs": 81500,
+          "endTimeMs": 81930
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 81800,
-      "endTimeMs": 83900,
-      "segmentIndex": 24,
+      "startTimeMs": 81930,
+      "endTimeMs": 84030,
+      "segmentIndex": 26,
       "text": "¿Y dónde está mi gente?",
       "words": [
         {
           "word": "¿Y",
-          "startTimeMs": 81900,
+          "startTimeMs": 81930,
           "endTimeMs": 82100
         },
         {
@@ -919,64 +982,64 @@
         {
           "word": "gente?",
           "startTimeMs": 83200,
-          "endTimeMs": 83700
+          "endTimeMs": 84030
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 83900,
-      "endTimeMs": 85900,
-      "segmentIndex": 25,
+      "startTimeMs": 84030,
+      "endTimeMs": 85740,
+      "segmentIndex": 27,
       "text": "Mais fais bouger la tête",
       "words": [
         {
           "word": "Mais",
-          "startTimeMs": 84000,
-          "endTimeMs": 84300
+          "startTimeMs": 84030,
+          "endTimeMs": 84200
         },
         {
           "word": "fais",
-          "startTimeMs": 84300,
-          "endTimeMs": 84600
+          "startTimeMs": 84200,
+          "endTimeMs": 84500
         },
         {
           "word": "bouger",
-          "startTimeMs": 84600,
-          "endTimeMs": 85200
+          "startTimeMs": 84500,
+          "endTimeMs": 85000
         },
         {
           "word": "la",
-          "startTimeMs": 85200,
-          "endTimeMs": 85400
+          "startTimeMs": 85000,
+          "endTimeMs": 85200
         },
         {
           "word": "tête",
-          "startTimeMs": 85400,
-          "endTimeMs": 85900
+          "startTimeMs": 85200,
+          "endTimeMs": 85740
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 85900,
-      "endTimeMs": 88000,
-      "segmentIndex": 26,
+      "startTimeMs": 85740,
+      "endTimeMs": 88480,
+      "segmentIndex": 28,
       "text": "¿Y dónde está mi gente?",
       "words": [
         {
           "word": "¿Y",
-          "startTimeMs": 86000,
-          "endTimeMs": 86200
+          "startTimeMs": 85740,
+          "endTimeMs": 86100
         },
         {
           "word": "dónde",
-          "startTimeMs": 86200,
-          "endTimeMs": 86600
+          "startTimeMs": 86100,
+          "endTimeMs": 86500
         },
         {
           "word": "está",
-          "startTimeMs": 86600,
+          "startTimeMs": 86500,
           "endTimeMs": 86900
         },
         {
@@ -987,787 +1050,898 @@
         {
           "word": "gente?",
           "startTimeMs": 87200,
-          "endTimeMs": 87800
+          "endTimeMs": 88480
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 88000,
-      "endTimeMs": 90000,
-      "segmentIndex": 27,
+      "startTimeMs": 88480,
+      "endTimeMs": 89750,
+      "segmentIndex": 29,
       "text": "Say yeah, yeah, yeah",
       "words": [
         {
           "word": "Say",
-          "startTimeMs": 88100,
-          "endTimeMs": 88400
+          "startTimeMs": 88480,
+          "endTimeMs": 88700
         },
         {
           "word": "yeah,",
-          "startTimeMs": 88400,
-          "endTimeMs": 88900
+          "startTimeMs": 88700,
+          "endTimeMs": 89000
         },
         {
           "word": "yeah,",
-          "startTimeMs": 88900,
-          "endTimeMs": 89400
+          "startTimeMs": 89000,
+          "endTimeMs": 89300
         },
         {
           "word": "yeah",
-          "startTimeMs": 89400,
-          "endTimeMs": 89900
+          "startTimeMs": 89300,
+          "endTimeMs": 89750
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 90000,
-      "endTimeMs": 92500,
-      "segmentIndex": 28,
-      "text": "Un, dos, tres, ¡leggo!",
+      "startTimeMs": 89750,
+      "endTimeMs": 91500,
+      "segmentIndex": 30,
+      "text": "¡Un, dos, tres, leggo! (Ay, di que sí)",
       "words": [
         {
-          "word": "Un,",
-          "startTimeMs": 90100,
-          "endTimeMs": 90500
+          "word": "¡Un,",
+          "startTimeMs": 89750,
+          "endTimeMs": 90000
         },
         {
           "word": "dos,",
-          "startTimeMs": 90500,
-          "endTimeMs": 90900
+          "startTimeMs": 90000,
+          "endTimeMs": 90300
         },
         {
           "word": "tres,",
-          "startTimeMs": 90900,
-          "endTimeMs": 91500
+          "startTimeMs": 90300,
+          "endTimeMs": 90600
         },
         {
-          "word": "¡leggo!",
-          "startTimeMs": 91500,
-          "endTimeMs": 92400
+          "word": "leggo!",
+          "startTimeMs": 90600,
+          "endTimeMs": 91000
+        },
+        {
+          "word": "(Ay,",
+          "startTimeMs": 91000,
+          "endTimeMs": 91200
+        },
+        {
+          "word": "di",
+          "startTimeMs": 91200,
+          "endTimeMs": 91300
+        },
+        {
+          "word": "que",
+          "startTimeMs": 91300,
+          "endTimeMs": 91400
+        },
+        {
+          "word": "sí)",
+          "startTimeMs": 91400,
+          "endTimeMs": 91500
         }
       ]
     },
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 92500,
-      "endTimeMs": 110000,
-      "segmentIndex": 29,
-      "cueText": "(Ay, di que sí) [Drop]"
+      "type": "LYRIC",
+      "startTimeMs": 107900,
+      "endTimeMs": 110080,
+      "segmentIndex": 31,
+      "text": "¡Rra!",
+      "words": [
+        {
+          "word": "¡Rra!",
+          "startTimeMs": 109000,
+          "endTimeMs": 110080
+        }
+      ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 110000,
-      "endTimeMs": 112500,
-      "segmentIndex": 30,
+      "startTimeMs": 110080,
+      "endTimeMs": 112730,
+      "segmentIndex": 32,
       "text": "Esquina a esquina, de ahí no' vamo'",
       "words": [
         {
           "word": "Esquina",
-          "startTimeMs": 110200,
-          "endTimeMs": 110600
+          "startTimeMs": 110080,
+          "endTimeMs": 110500
         },
         {
           "word": "a",
-          "startTimeMs": 110600,
-          "endTimeMs": 110750
+          "startTimeMs": 110500,
+          "endTimeMs": 110600
         },
         {
           "word": "esquina,",
-          "startTimeMs": 110750,
+          "startTimeMs": 110600,
           "endTimeMs": 111100
         },
         {
           "word": "de",
           "startTimeMs": 111100,
-          "endTimeMs": 111250
+          "endTimeMs": 111300
         },
         {
           "word": "ahí",
-          "startTimeMs": 111250,
-          "endTimeMs": 111500
+          "startTimeMs": 111300,
+          "endTimeMs": 111600
         },
         {
           "word": "no'",
-          "startTimeMs": 111500,
-          "endTimeMs": 111750
+          "startTimeMs": 111600,
+          "endTimeMs": 111900
         },
         {
           "word": "vamo'",
-          "startTimeMs": 111750,
-          "endTimeMs": 112300
+          "startTimeMs": 111900,
+          "endTimeMs": 112730
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 112500,
-      "endTimeMs": 115000,
-      "segmentIndex": 31,
+      "startTimeMs": 112730,
+      "endTimeMs": 114670,
+      "segmentIndex": 33,
       "text": "El mundo es grande, pero lo tengo en mi' manos",
       "words": [
         {
           "word": "El",
-          "startTimeMs": 112600,
-          "endTimeMs": 112750
+          "startTimeMs": 112730,
+          "endTimeMs": 112900
         },
         {
           "word": "mundo",
-          "startTimeMs": 112750,
-          "endTimeMs": 113000
+          "startTimeMs": 112900,
+          "endTimeMs": 113300
         },
         {
           "word": "es",
-          "startTimeMs": 113000,
-          "endTimeMs": 113200
+          "startTimeMs": 113300,
+          "endTimeMs": 113500
         },
         {
           "word": "grande,",
-          "startTimeMs": 113200,
-          "endTimeMs": 113600
-        },
-        {
-          "word": "pero",
-          "startTimeMs": 113600,
+          "startTimeMs": 113500,
           "endTimeMs": 113800
         },
         {
-          "word": "lo",
+          "word": "pero",
           "startTimeMs": 113800,
-          "endTimeMs": 113950
+          "endTimeMs": 114000
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 114000,
+          "endTimeMs": 114100
         },
         {
           "word": "tengo",
-          "startTimeMs": 113950,
-          "endTimeMs": 114200
+          "startTimeMs": 114100,
+          "endTimeMs": 114400
         },
         {
           "word": "en",
-          "startTimeMs": 114200,
-          "endTimeMs": 114350
+          "startTimeMs": 114400,
+          "endTimeMs": 114500
         },
         {
           "word": "mi'",
-          "startTimeMs": 114350,
-          "endTimeMs": 114550
+          "startTimeMs": 114500,
+          "endTimeMs": 114600
         },
         {
           "word": "manos",
-          "startTimeMs": 114550,
-          "endTimeMs": 114950
+          "startTimeMs": 114600,
+          "endTimeMs": 114670
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 115000,
-      "endTimeMs": 117300,
-      "segmentIndex": 32,
-      "text": "Estoy muy duro, sí, ok, ahí vamos",
+      "startTimeMs": 114670,
+      "endTimeMs": 116810,
+      "segmentIndex": 34,
+      "text": "Estoy muy duro, sí, okay, ahí vamos",
       "words": [
         {
           "word": "Estoy",
-          "startTimeMs": 115100,
-          "endTimeMs": 115400
+          "startTimeMs": 114670,
+          "endTimeMs": 114900
         },
         {
           "word": "muy",
-          "startTimeMs": 115400,
-          "endTimeMs": 115550
+          "startTimeMs": 114900,
+          "endTimeMs": 115100
         },
         {
           "word": "duro,",
-          "startTimeMs": 115550,
-          "endTimeMs": 116000
+          "startTimeMs": 115100,
+          "endTimeMs": 115500
         },
         {
           "word": "sí,",
-          "startTimeMs": 116000,
+          "startTimeMs": 115500,
+          "endTimeMs": 115800
+        },
+        {
+          "word": "okay,",
+          "startTimeMs": 115800,
           "endTimeMs": 116200
         },
         {
-          "word": "ok,",
-          "startTimeMs": 116250,
+          "word": "ahí",
+          "startTimeMs": 116200,
           "endTimeMs": 116500
         },
         {
-          "word": "ahí",
-          "startTimeMs": 116500,
-          "endTimeMs": 116800
-        },
-        {
           "word": "vamos",
-          "startTimeMs": 116800,
-          "endTimeMs": 117200
+          "startTimeMs": 116500,
+          "endTimeMs": 116810
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 117300,
-      "endTimeMs": 119500,
-      "segmentIndex": 33,
-      "text": "Y con el tiempo nos seguimos elevando",
+      "startTimeMs": 116810,
+      "endTimeMs": 119370,
+      "segmentIndex": 35,
+      "text": "Y con el tiempo nos seguimos elevando (y yeah)",
       "words": [
         {
           "word": "Y",
-          "startTimeMs": 117400,
-          "endTimeMs": 117550
+          "startTimeMs": 116810,
+          "endTimeMs": 116900
         },
         {
           "word": "con",
-          "startTimeMs": 117550,
-          "endTimeMs": 117700
+          "startTimeMs": 116900,
+          "endTimeMs": 117100
         },
         {
           "word": "el",
-          "startTimeMs": 117700,
-          "endTimeMs": 117850
+          "startTimeMs": 117100,
+          "endTimeMs": 117200
         },
         {
           "word": "tiempo",
-          "startTimeMs": 117850,
-          "endTimeMs": 118200
+          "startTimeMs": 117200,
+          "endTimeMs": 117700
         },
         {
           "word": "nos",
-          "startTimeMs": 118200,
+          "startTimeMs": 117700,
+          "endTimeMs": 117900
+        },
+        {
+          "word": "seguimos",
+          "startTimeMs": 117900,
           "endTimeMs": 118400
         },
         {
-          "word": "seguimos",
+          "word": "elevando",
           "startTimeMs": 118400,
-          "endTimeMs": 118900
+          "endTimeMs": 119000
         },
         {
-          "word": "elevando",
-          "startTimeMs": 118900,
-          "endTimeMs": 119400
+          "word": "(y",
+          "startTimeMs": 119000,
+          "endTimeMs": 119200
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 119200,
+          "endTimeMs": 119370
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 119500,
-      "endTimeMs": 121500,
-      "segmentIndex": 34,
-      "text": "Que seguimos rompiendo aquí",
+      "startTimeMs": 119370,
+      "endTimeMs": 121890,
+      "segmentIndex": 36,
+      "text": "Que seguimos rompiendo aquí (y yeah)",
       "words": [
         {
           "word": "Que",
-          "startTimeMs": 119600,
-          "endTimeMs": 119800
+          "startTimeMs": 119370,
+          "endTimeMs": 119600
         },
         {
           "word": "seguimos",
-          "startTimeMs": 119800,
-          "endTimeMs": 120400
+          "startTimeMs": 119600,
+          "endTimeMs": 120100
         },
         {
           "word": "rompiendo",
-          "startTimeMs": 120400,
-          "endTimeMs": 121000
+          "startTimeMs": 120100,
+          "endTimeMs": 120700
         },
         {
           "word": "aquí",
-          "startTimeMs": 121000,
-          "endTimeMs": 121400
+          "startTimeMs": 120700,
+          "endTimeMs": 121300
+        },
+        {
+          "word": "(y",
+          "startTimeMs": 121300,
+          "endTimeMs": 121600
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 121600,
+          "endTimeMs": 121890
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 121500,
-      "endTimeMs": 123500,
-      "segmentIndex": 35,
-      "text": "Esta fiesta no tiene fin",
+      "startTimeMs": 121890,
+      "endTimeMs": 123710,
+      "segmentIndex": 37,
+      "text": "Esta fiesta no tiene fin (y yeah)",
       "words": [
         {
           "word": "Esta",
-          "startTimeMs": 121600,
-          "endTimeMs": 121900
+          "startTimeMs": 121890,
+          "endTimeMs": 122100
         },
         {
           "word": "fiesta",
-          "startTimeMs": 121900,
-          "endTimeMs": 122400
+          "startTimeMs": 122100,
+          "endTimeMs": 122500
         },
         {
           "word": "no",
-          "startTimeMs": 122400,
-          "endTimeMs": 122600
+          "startTimeMs": 122500,
+          "endTimeMs": 122700
         },
         {
           "word": "tiene",
-          "startTimeMs": 122600,
+          "startTimeMs": 122700,
           "endTimeMs": 123000
         },
         {
           "word": "fin",
           "startTimeMs": 123000,
-          "endTimeMs": 123400
+          "endTimeMs": 123300
+        },
+        {
+          "word": "(y",
+          "startTimeMs": 123300,
+          "endTimeMs": 123500
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 123500,
+          "endTimeMs": 123710
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 123500,
-      "endTimeMs": 125500,
-      "segmentIndex": 36,
+      "startTimeMs": 123710,
+      "endTimeMs": 125540,
+      "segmentIndex": 38,
       "text": "Botellas para arriba, sí",
       "words": [
         {
           "word": "Botellas",
-          "startTimeMs": 123600,
-          "endTimeMs": 124100
+          "startTimeMs": 123710,
+          "endTimeMs": 124200
         },
         {
           "word": "para",
-          "startTimeMs": 124100,
-          "endTimeMs": 124400
+          "startTimeMs": 124200,
+          "endTimeMs": 124500
         },
         {
           "word": "arriba,",
-          "startTimeMs": 124400,
+          "startTimeMs": 124500,
           "endTimeMs": 125000
         },
         {
           "word": "sí",
-          "startTimeMs": 125100,
-          "endTimeMs": 125400
+          "startTimeMs": 125000,
+          "endTimeMs": 125540
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 125500,
-      "endTimeMs": 128100,
-      "segmentIndex": 37,
-      "text": "Los tengo bailando, rompiendo y yo sigo aquí",
+      "startTimeMs": 125540,
+      "endTimeMs": 128180,
+      "segmentIndex": 39,
+      "text": "Los tengo bailando, rompiendo y yo sigo aquí (y yeah)",
       "words": [
         {
           "word": "Los",
-          "startTimeMs": 125600,
-          "endTimeMs": 125800
+          "startTimeMs": 125540,
+          "endTimeMs": 125680
         },
         {
           "word": "tengo",
-          "startTimeMs": 125800,
-          "endTimeMs": 126100
+          "startTimeMs": 125680,
+          "endTimeMs": 126000
         },
         {
           "word": "bailando,",
-          "startTimeMs": 126100,
-          "endTimeMs": 126600
+          "startTimeMs": 126000,
+          "endTimeMs": 126550
         },
         {
           "word": "rompiendo",
-          "startTimeMs": 126600,
-          "endTimeMs": 127200
+          "startTimeMs": 126550,
+          "endTimeMs": 127100
         },
         {
           "word": "y",
-          "startTimeMs": 127200,
-          "endTimeMs": 127350
+          "startTimeMs": 127100,
+          "endTimeMs": 127200
         },
         {
           "word": "yo",
-          "startTimeMs": 127350,
-          "endTimeMs": 127500
+          "startTimeMs": 127200,
+          "endTimeMs": 127300
         },
         {
           "word": "sigo",
-          "startTimeMs": 127500,
-          "endTimeMs": 127750
+          "startTimeMs": 127300,
+          "endTimeMs": 127550
         },
         {
           "word": "aquí",
-          "startTimeMs": 127750,
+          "startTimeMs": 127550,
+          "endTimeMs": 127850
+        },
+        {
+          "word": "(y",
+          "startTimeMs": 127850,
           "endTimeMs": 128000
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 128000,
+          "endTimeMs": 128180
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 128100,
-      "endTimeMs": 130100,
-      "segmentIndex": 38,
-      "text": "Que seguimos rompiendo aquí",
+      "startTimeMs": 128180,
+      "endTimeMs": 130000,
+      "segmentIndex": 40,
+      "text": "Que seguimos rompiendo aquí (y yeah)",
       "words": [
         {
           "word": "Que",
-          "startTimeMs": 128200,
-          "endTimeMs": 128400
+          "startTimeMs": 128180,
+          "endTimeMs": 128300
         },
         {
           "word": "seguimos",
-          "startTimeMs": 128400,
-          "endTimeMs": 129000
+          "startTimeMs": 128300,
+          "endTimeMs": 128800
         },
         {
           "word": "rompiendo",
-          "startTimeMs": 129000,
-          "endTimeMs": 129600
+          "startTimeMs": 128800,
+          "endTimeMs": 129350
         },
         {
           "word": "aquí",
-          "startTimeMs": 129600,
+          "startTimeMs": 129350,
+          "endTimeMs": 129700
+        },
+        {
+          "word": "(y",
+          "startTimeMs": 129700,
+          "endTimeMs": 129850
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 129850,
           "endTimeMs": 130000
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 130100,
-      "endTimeMs": 132100,
-      "segmentIndex": 39,
-      "text": "Esta fiesta no tiene fin",
+      "startTimeMs": 130000,
+      "endTimeMs": 132000,
+      "segmentIndex": 41,
+      "text": "Esta fiesta no tiene fin (y yeah)",
       "words": [
         {
           "word": "Esta",
-          "startTimeMs": 130200,
-          "endTimeMs": 130500
+          "startTimeMs": 130000,
+          "endTimeMs": 130200
         },
         {
           "word": "fiesta",
-          "startTimeMs": 130500,
-          "endTimeMs": 131000
+          "startTimeMs": 130200,
+          "endTimeMs": 130600
         },
         {
           "word": "no",
-          "startTimeMs": 131000,
-          "endTimeMs": 131200
+          "startTimeMs": 130600,
+          "endTimeMs": 130750
         },
         {
           "word": "tiene",
-          "startTimeMs": 131200,
-          "endTimeMs": 131600
+          "startTimeMs": 130750,
+          "endTimeMs": 131050
         },
         {
           "word": "fin",
-          "startTimeMs": 131600,
+          "startTimeMs": 131050,
+          "endTimeMs": 131450
+        },
+        {
+          "word": "(y",
+          "startTimeMs": 131450,
+          "endTimeMs": 131650
+        },
+        {
+          "word": "yeah)",
+          "startTimeMs": 131650,
           "endTimeMs": 132000
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 132100,
-      "endTimeMs": 134100,
-      "segmentIndex": 40,
+      "startTimeMs": 133750,
+      "endTimeMs": 135250,
+      "segmentIndex": 42,
       "text": "Botellas para arriba, sí",
       "words": [
         {
           "word": "Botellas",
-          "startTimeMs": 132200,
-          "endTimeMs": 132700
+          "startTimeMs": 133750,
+          "endTimeMs": 134300
         },
         {
           "word": "para",
-          "startTimeMs": 132700,
-          "endTimeMs": 133000
+          "startTimeMs": 134300,
+          "endTimeMs": 134600
         },
         {
           "word": "arriba,",
-          "startTimeMs": 133000,
-          "endTimeMs": 133600
+          "startTimeMs": 134600,
+          "endTimeMs": 135000
         },
         {
           "word": "sí",
-          "startTimeMs": 133700,
-          "endTimeMs": 134000
+          "startTimeMs": 135000,
+          "endTimeMs": 135250
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 134100,
-      "endTimeMs": 137000,
-      "segmentIndex": 41,
+      "startTimeMs": 135250,
+      "endTimeMs": 136870,
+      "segmentIndex": 43,
       "text": "Los tengo bailando, rompiendo",
       "words": [
         {
           "word": "Los",
-          "startTimeMs": 134200,
-          "endTimeMs": 134400
+          "startTimeMs": 135250,
+          "endTimeMs": 135400
         },
         {
           "word": "tengo",
-          "startTimeMs": 134400,
-          "endTimeMs": 134700
+          "startTimeMs": 135400,
+          "endTimeMs": 135700
         },
         {
           "word": "bailando,",
-          "startTimeMs": 134700,
-          "endTimeMs": 135300
+          "startTimeMs": 135700,
+          "endTimeMs": 136200
         },
         {
           "word": "rompiendo",
-          "startTimeMs": 135300,
-          "endTimeMs": 136000
+          "startTimeMs": 136200,
+          "endTimeMs": 136870
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 137000,
-      "endTimeMs": 139100,
-      "segmentIndex": 42,
-      "text": "¿Y dónde está mi gente?",
-      "words": [
-        {
-          "word": "¿Y",
-          "startTimeMs": 137100,
-          "endTimeMs": 137300
-        },
-        {
-          "word": "dónde",
-          "startTimeMs": 137300,
-          "endTimeMs": 137700
-        },
-        {
-          "word": "está",
-          "startTimeMs": 137700,
-          "endTimeMs": 138100
-        },
-        {
-          "word": "mi",
-          "startTimeMs": 138100,
-          "endTimeMs": 138400
-        },
-        {
-          "word": "gente?",
-          "startTimeMs": 138400,
-          "endTimeMs": 138900
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 139100,
-      "endTimeMs": 141200,
-      "segmentIndex": 43,
-      "text": "Mais fais bouger la tête",
-      "words": [
-        {
-          "word": "Mais",
-          "startTimeMs": 139200,
-          "endTimeMs": 139500
-        },
-        {
-          "word": "fais",
-          "startTimeMs": 139500,
-          "endTimeMs": 139800
-        },
-        {
-          "word": "bouger",
-          "startTimeMs": 139800,
-          "endTimeMs": 140400
-        },
-        {
-          "word": "la",
-          "startTimeMs": 140400,
-          "endTimeMs": 140600
-        },
-        {
-          "word": "tête",
-          "startTimeMs": 140600,
-          "endTimeMs": 141100
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 141200,
-      "endTimeMs": 143300,
+      "startTimeMs": 136870,
+      "endTimeMs": 139070,
       "segmentIndex": 44,
       "text": "¿Y dónde está mi gente?",
       "words": [
         {
           "word": "¿Y",
-          "startTimeMs": 141300,
-          "endTimeMs": 141500
+          "startTimeMs": 136870,
+          "endTimeMs": 137000
         },
         {
           "word": "dónde",
-          "startTimeMs": 141500,
-          "endTimeMs": 141900
+          "startTimeMs": 137000,
+          "endTimeMs": 137400
         },
         {
           "word": "está",
-          "startTimeMs": 141900,
-          "endTimeMs": 142200
+          "startTimeMs": 137400,
+          "endTimeMs": 137800
         },
         {
           "word": "mi",
-          "startTimeMs": 142200,
-          "endTimeMs": 142500
+          "startTimeMs": 137800,
+          "endTimeMs": 138100
         },
         {
           "word": "gente?",
-          "startTimeMs": 142500,
-          "endTimeMs": 143000
+          "startTimeMs": 138100,
+          "endTimeMs": 139070
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 143300,
-      "endTimeMs": 145300,
+      "startTimeMs": 139070,
+      "endTimeMs": 141540,
       "segmentIndex": 45,
+      "text": "Mais fais bouger la tête",
+      "words": [
+        {
+          "word": "Mais",
+          "startTimeMs": 139070,
+          "endTimeMs": 139300
+        },
+        {
+          "word": "fais",
+          "startTimeMs": 139300,
+          "endTimeMs": 139600
+        },
+        {
+          "word": "bouger",
+          "startTimeMs": 139600,
+          "endTimeMs": 140100
+        },
+        {
+          "word": "la",
+          "startTimeMs": 140100,
+          "endTimeMs": 140300
+        },
+        {
+          "word": "tête",
+          "startTimeMs": 140300,
+          "endTimeMs": 141540
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 141540,
+      "endTimeMs": 143780,
+      "segmentIndex": 46,
+      "text": "¿Y dónde está mi gente?",
+      "words": [
+        {
+          "word": "¿Y",
+          "startTimeMs": 141540,
+          "endTimeMs": 141800
+        },
+        {
+          "word": "dónde",
+          "startTimeMs": 141800,
+          "endTimeMs": 142200
+        },
+        {
+          "word": "está",
+          "startTimeMs": 142200,
+          "endTimeMs": 142600
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 142600,
+          "endTimeMs": 142900
+        },
+        {
+          "word": "gente?",
+          "startTimeMs": 142900,
+          "endTimeMs": 143780
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 143780,
+      "endTimeMs": 144670,
+      "segmentIndex": 47,
       "text": "Say yeah, yeah, yeah",
       "words": [
         {
           "word": "Say",
-          "startTimeMs": 143400,
-          "endTimeMs": 143700
+          "startTimeMs": 143780,
+          "endTimeMs": 144000
         },
         {
           "word": "yeah,",
-          "startTimeMs": 143700,
+          "startTimeMs": 144000,
           "endTimeMs": 144200
         },
         {
           "word": "yeah,",
           "startTimeMs": 144200,
-          "endTimeMs": 144700
+          "endTimeMs": 144400
         },
         {
           "word": "yeah",
-          "startTimeMs": 144700,
-          "endTimeMs": 145200
+          "startTimeMs": 144400,
+          "endTimeMs": 144670
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 145300,
-      "endTimeMs": 147800,
-      "segmentIndex": 46,
-      "text": "Un, dos, tres, ¡leggo!",
+      "startTimeMs": 144670,
+      "endTimeMs": 146500,
+      "segmentIndex": 48,
+      "text": "¡Un, dos, tres, leggo! (Ay, di que sí)",
       "words": [
         {
-          "word": "Un,",
-          "startTimeMs": 145400,
-          "endTimeMs": 145800
+          "word": "¡Un,",
+          "startTimeMs": 144670,
+          "endTimeMs": 144900
         },
         {
           "word": "dos,",
-          "startTimeMs": 145800,
-          "endTimeMs": 146200
+          "startTimeMs": 144900,
+          "endTimeMs": 145200
         },
         {
           "word": "tres,",
-          "startTimeMs": 146200,
-          "endTimeMs": 146800
+          "startTimeMs": 145200,
+          "endTimeMs": 145500
         },
         {
-          "word": "¡leggo!",
-          "startTimeMs": 146800,
-          "endTimeMs": 147700
+          "word": "leggo!",
+          "startTimeMs": 145500,
+          "endTimeMs": 145900
+        },
+        {
+          "word": "(Ay,",
+          "startTimeMs": 145900,
+          "endTimeMs": 146100
+        },
+        {
+          "word": "di",
+          "startTimeMs": 146100,
+          "endTimeMs": 146200
+        },
+        {
+          "word": "que",
+          "startTimeMs": 146200,
+          "endTimeMs": 146300
+        },
+        {
+          "word": "sí)",
+          "startTimeMs": 146300,
+          "endTimeMs": 146500
         }
       ]
     },
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 147800,
-      "endTimeMs": 160000,
-      "segmentIndex": 47,
-      "cueText": "(Ay di que sí) [Drop]"
-    },
-    {
       "type": "LYRIC",
-      "startTimeMs": 160000,
-      "endTimeMs": 161800,
-      "segmentIndex": 48,
-      "text": "Worldwide",
+      "startTimeMs": 160180,
+      "endTimeMs": 163530,
+      "segmentIndex": 49,
+      "text": "Worldwide, Willy William",
       "words": [
         {
-          "word": "Worldwide",
-          "startTimeMs": 160500,
-          "endTimeMs": 161500
-        }
-      ]
-    },
-    {
-      "type": "LYRIC",
-      "startTimeMs": 161800,
-      "endTimeMs": 163500,
-      "segmentIndex": 49,
-      "text": "Willy William",
-      "words": [
+          "word": "Worldwide,",
+          "startTimeMs": 160180,
+          "endTimeMs": 161000
+        },
         {
           "word": "Willy",
-          "startTimeMs": 161900,
-          "endTimeMs": 162500
+          "startTimeMs": 161000,
+          "endTimeMs": 161500
         },
         {
           "word": "William",
-          "startTimeMs": 162500,
-          "endTimeMs": 163200
+          "startTimeMs": 161500,
+          "endTimeMs": 163530
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 163500,
-      "endTimeMs": 165500,
+      "startTimeMs": 163530,
+      "endTimeMs": 165130,
       "segmentIndex": 50,
       "text": "J Balvin, man",
       "words": [
         {
           "word": "J",
-          "startTimeMs": 163600,
-          "endTimeMs": 163900
+          "startTimeMs": 163530,
+          "endTimeMs": 163800
         },
         {
           "word": "Balvin,",
-          "startTimeMs": 163900,
-          "endTimeMs": 164400
+          "startTimeMs": 163800,
+          "endTimeMs": 164300
         },
         {
           "word": "man",
-          "startTimeMs": 164400,
-          "endTimeMs": 164800
+          "startTimeMs": 164300,
+          "endTimeMs": 165130
         }
       ]
     },
     {
       "type": "LYRIC",
-      "startTimeMs": 165500,
-      "endTimeMs": 170000,
+      "startTimeMs": 165130,
+      "endTimeMs": 167380,
       "segmentIndex": 51,
-      "text": "Uh-huh, uh-huh, uh-huh, uh-huh",
+      "text": "Ajá",
       "words": [
         {
-          "word": "Uh-huh",
-          "startTimeMs": 165600,
-          "endTimeMs": 166400
-        },
-        {
-          "word": "uh-huh",
-          "startTimeMs": 166500,
-          "endTimeMs": 167300
-        },
-        {
-          "word": "uh-huh",
-          "startTimeMs": 167400,
-          "endTimeMs": 168200
-        },
-        {
-          "word": "uh-huh",
-          "startTimeMs": 168300,
-          "endTimeMs": 169100
+          "word": "Ajá",
+          "startTimeMs": 165130,
+          "endTimeMs": 165800
         }
       ]
     },
     {
-      "type": "INSTRUMENTAL",
-      "startTimeMs": 170000,
-      "endTimeMs": 189000,
+      "type": "LYRIC",
+      "startTimeMs": 167380,
+      "endTimeMs": 169560,
       "segmentIndex": 52,
-      "cueText": "Outro"
+      "text": "Ajá",
+      "words": [
+        {
+          "word": "Ajá",
+          "startTimeMs": 167380,
+          "endTimeMs": 168000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 169560,
+      "endTimeMs": 171730,
+      "segmentIndex": 53,
+      "text": "Ajá",
+      "words": [
+        {
+          "word": "Ajá",
+          "startTimeMs": 169560,
+          "endTimeMs": 170200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 171730,
+      "endTimeMs": 174730,
+      "segmentIndex": 54,
+      "text": "Ajá",
+      "words": [
+        {
+          "word": "Ajá",
+          "startTimeMs": 171730,
+          "endTimeMs": 172500
+        }
+      ]
     }
   ]
 }

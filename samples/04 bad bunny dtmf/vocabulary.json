@@ -1,0 +1,154 @@
+[
+  {
+    "term": {
+      "spanish": "Acho",
+      "english": "Man / Dude"
+    },
+    "definition": "A quintessential Puerto Rican contraction of 'muchacho'. It is used as an interjection to start a sentence, grab attention, or express surprise, similar to how 'man' or 'bro' is used in English. It is an essential marker of the island's dialect.",
+    "difficulty": 6,
+    "example": {
+      "spanish": "(Acho, bruto te ves bien linda, déjame tirarte una foto)",
+      "english": "(Man, damn you look real pretty, let me take a photo of you)"
+    },
+    "highlight": {
+      "spanish": "Acho",
+      "english": "Man"
+    },
+    "startTimeMs": 45820,
+    "endTimeMs": 49280,
+    "segmentIndex": 10
+  },
+  {
+    "term": {
+      "spanish": "cabrón",
+      "english": "badass / awesome"
+    },
+    "definition": "While in many Spanish-speaking countries 'cabrón' is a harsh insult (meaning cuckold or bastard), in Puerto Rican slang, it is frequently used as an adjective to describe something that is exceptionally cool, badass, or impressive.",
+    "difficulty": 7,
+    "example": {
+      "spanish": "Y sería cabrón que tú me toque' el güiro",
+      "english": "And it would be badass if you played the güiro for me"
+    },
+    "highlight": {
+      "spanish": "cabrón",
+      "english": "badass"
+    },
+    "startTimeMs": 67170,
+    "endTimeMs": 70150,
+    "segmentIndex": 17
+  },
+  {
+    "term": {
+      "spanish": "'esbaratá",
+      "english": "wrecked / lit"
+    },
+    "definition": "A phonetic spelling of 'desbaratada' (dismantled/broken). In the context of a party or the 'street', it implies leaving a place completely spent, torn up, or 'wrecked' because the energy was so high.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "Hoy la calle la dejamo' 'esbaratá",
+      "english": "Today we're leaving the street wrecked"
+    },
+    "highlight": {
+      "spanish": "'esbaratá",
+      "english": "wrecked"
+    },
+    "startTimeMs": 63870,
+    "endTimeMs": 67170,
+    "segmentIndex": 16
+  },
+  {
+    "term": {
+      "spanish": "los mío'",
+      "english": "my people / my circle"
+    },
+    "definition": "Refers to one's inner circle, close friends, or family. It conveys a sense of deep loyalty and community, suggesting those who have been there from the beginning ('day ones').",
+    "difficulty": 4,
+    "example": {
+      "spanish": "Ey, ojalá que los mío' nunca se muden",
+      "english": "Hey, I hope my people never move away"
+    },
+    "highlight": {
+      "spanish": "los mío'",
+      "english": "my people"
+    },
+    "startTimeMs": 93590,
+    "endTimeMs": 97830,
+    "segmentIndex": 24
+  },
+  {
+    "term": {
+      "spanish": "se da caña",
+      "english": "go hard / bring the heat"
+    },
+    "definition": "An idiomatic expression meaning to do something with intensity or energy. While 'caña' literally means 'cane' (referring to sugar cane), in slang it refers to effort, volume, or 'bringing the heat' to a situation.",
+    "difficulty": 7,
+    "example": {
+      "spanish": "Aquí todavía se da caña, chequéate las babie'",
+      "english": "Here we still go hard, check out the babies"
+    },
+    "highlight": {
+      "spanish": "se da caña",
+      "english": "go hard"
+    },
+    "startTimeMs": 138070,
+    "endTimeMs": 141330,
+    "segmentIndex": 34
+  },
+  {
+    "term": {
+      "spanish": "guía",
+      "english": "drive"
+    },
+    "definition": "In Puerto Rico, 'guiar' is the standard verb for 'to drive' a car, whereas most of the Spanish-speaking world uses 'manejar' or 'conducir'. Using 'guía' specifically marks the speaker as being from the island.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "Cabrón, guía tú, que hasta caminando yo estoy que choco",
+      "english": "Bastard, you drive, even walking I'm about to crash"
+    },
+    "highlight": {
+      "spanish": "guía",
+      "english": "drive"
+    },
+    "startTimeMs": 156220,
+    "endTimeMs": 160230,
+    "segmentIndex": 40
+  },
+  {
+    "term": {
+      "spanish": "corillo",
+      "english": "crew / squad"
+    },
+    "definition": "A very popular Puerto Rican term for a group of friends or a social circle. Derived from 'coro' (choir), it implies a tight-knit group that moves and hangs out together.",
+    "difficulty": 6,
+    "example": {
+      "spanish": "Métase to'l mundo, to'l corillo, vamo'",
+      "english": "Everyone get in, the whole crew, let's go"
+    },
+    "highlight": {
+      "spanish": "corillo",
+      "english": "crew"
+    },
+    "startTimeMs": 181370,
+    "endTimeMs": 183670,
+    "segmentIndex": 50
+  },
+  {
+    "term": {
+      "spanish": "la movie",
+      "english": "the lifestyle / the flex"
+    },
+    "definition": "Refers to living a life that seems like a movie—full of luxury, status symbols, and drama. In modern urban slang, it often has a slightly negative connotation of being fake or focusing too much on appearances.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "Ya no estamo' pa' la movie' y las cadena'",
+      "english": "We're not about the movies and the chains anymore"
+    },
+    "highlight": {
+      "spanish": "movie'",
+      "english": "movies"
+    },
+    "startTimeMs": 188930,
+    "endTimeMs": 192490,
+    "segmentIndex": 53
+  }
+]
