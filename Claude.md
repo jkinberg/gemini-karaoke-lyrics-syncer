@@ -62,19 +62,21 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 - `KaraokeSegment` - Individual lyric/instrumental segment with word-level timing
 - `KaraokeWord` - Single word with startTimeMs/endTimeMs
 - `VocabularyItem` - Extracted cultural vocabulary with audio timecodes
-- `ParsedLrc` - Parsed LRC file with line-level timestamps
+- `ParsedLrc` - Parsed LRC file with line-level timestamps and detected sections
 - `LrcLine` - Single LRC line with timing and text
+- `DetectedSection` - Non-lyric section (intro, interlude, skit, outro) detected during LRC correction
 
 ## Core Workflow
 
 1. User uploads audio + pastes/uploads LRC content (auto-detected by `[mm:ss.xx]` format)
 2. User selects AI model tier (Gemini 3 recommended, Gemini 2.5 stable fallback)
-3. LRC provides line-level timing as primary guide
+3. **LRC Timestamp Correction** - Gemini Pro verifies/corrects each line's timing against audio:
+   - Fixes drift that accumulates when LRC timestamps are off
+   - Detects non-lyric sections (intros, interludes, skits, outros) common in YouTube music videos
 4. Auto-translate Spanish lyrics to English via Gemini Flash
-5. Gemini Pro:
-   - Uses LRC timestamps as base timing for each lyric line
-   - Distributes words within each segment based on audio
-   - Detects and adds instrumental sections (intros, interludes, outros)
+5. Gemini Pro generates word-level timing using corrected LRC boundaries:
+   - Distributes words within each corrected segment based on audio
+   - Inserts detected instrumental sections at appropriate positions
 6. English words aligned to same segment structure
 7. Automatic validation calculates quality score (0-100)
 8. Optional: **Auto-Fix Issues** - refines problem segments
@@ -104,6 +106,8 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 ## Key Features
 
 - **LRC-Based Sync** - Upload or paste LRC files for fast, accurate word-level synchronization
+- **LRC Timestamp Correction** - Verifies/corrects LRC timing against audio, fixing drift issues
+- **YouTube Audio Support** - Detects non-lyric sections (intros, skits, interludes) common in music videos
 - **Instrumental Detection** - Automatically detects and adds intro, interlude, and outro sections
 - **Model Selection** - Gemini 3 (default/recommended) or Gemini 2.5 (stable fallback)
 - **Auto Validation** - Quality score (0-100) with error/warning detection after generation
@@ -113,6 +117,6 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 
 ## Known Limitations
 
-1. **LRC file accuracy** - Results depend on LRC file quality; misaligned LRC files may produce timing drift
+1. **LRC correction accuracy** - LRC timestamp correction improves results but may still miss subtle timing issues
 2. **Translation timing** - Word-level timing in translations is estimated, not audio-verified
 3. **Vocabulary drift** - Segment indices may need re-extraction after major refinements

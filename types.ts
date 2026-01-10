@@ -67,7 +67,16 @@ export interface LrcMetadata {
   length?: string;
 }
 
+export interface DetectedSection {
+  type: 'intro' | 'interlude' | 'skit' | 'outro';
+  startTimeMs: number;
+  endTimeMs: number;
+  description?: string;
+  insertAfterLineIndex: number;  // -1 for intro (before all lyrics)
+}
+
 export interface ParsedLrc {
   lines: LrcLine[];
   metadata: LrcMetadata;
+  detectedSections?: DetectedSection[];  // Non-lyric sections detected during LRC correction
 }

@@ -192,6 +192,58 @@ const partialRefinementSchema = {
     required: ["refinedSegments"]
 };
 
+// Schema for LRC timestamp correction output
+const lrcCorrectionSchema = {
+    type: Type.OBJECT,
+    properties: {
+        correctedLines: {
+            type: Type.ARRAY,
+            items: {
+                type: Type.OBJECT,
+                properties: {
+                    lineIndex: { type: Type.INTEGER },
+                    originalStartMs: { type: Type.INTEGER },
+                    correctedStartMs: { type: Type.INTEGER },
+                    text: { type: Type.STRING },
+                },
+                required: ["lineIndex", "originalStartMs", "correctedStartMs", "text"]
+            }
+        },
+        detectedSections: {
+            type: Type.ARRAY,
+            items: {
+                type: Type.OBJECT,
+                properties: {
+                    type: { type: Type.STRING },  // "intro", "interlude", "skit", "outro"
+                    startTimeMs: { type: Type.INTEGER },
+                    endTimeMs: { type: Type.INTEGER },
+                    description: { type: Type.STRING },
+                    insertAfterLineIndex: { type: Type.INTEGER },  // -1 for intro
+                },
+                required: ["type", "startTimeMs", "endTimeMs", "insertAfterLineIndex"]
+            }
+        }
+    },
+    required: ["correctedLines"]
+};
+
+// Type for LRC correction response
+interface LrcCorrectionResponse {
+    correctedLines: Array<{
+        lineIndex: number;
+        originalStartMs: number;
+        correctedStartMs: number;
+        text: string;
+    }>;
+    detectedSections?: Array<{
+        type: 'intro' | 'interlude' | 'skit' | 'outro';
+        startTimeMs: number;
+        endTimeMs: number;
+        description?: string;
+        insertAfterLineIndex: number;
+    }>;
+}
+
 // Type for refined segment with originalIndex
 interface RefinedSegment {
     originalIndex: number;
@@ -436,6 +488,80 @@ INSTRUMENTAL segment:
 { "type": "INSTRUMENTAL", "startTimeMs": ..., "endTimeMs": ..., "cueText": "...", "segmentIndex": N }
 
 Return a single, minified JSON object with no other text.
+`;
+};
+
+/**
+ * Build a prompt for LRC timestamp correction.
+ * Verifies and corrects line-level timestamps against audio, and detects non-lyric sections.
+ */
+const buildLrcCorrectionPrompt = (parsedLrc: ParsedLrc, langName: string): string => {
+  const lines = parsedLrc.lines.map((line, index) => ({
+    lineIndex: index,
+    originalStartMs: line.startTimeMs,
+    text: line.text,
+  }));
+
+  const firstLineStart = lines[0]?.originalStartMs || 0;
+  const likelyHasIntro = firstLineStart > 3000;
+
+  return `
+You are a precise LRC Timestamp Verification Specialist. Your task is to verify and correct the line-level timestamps in an LRC file against the actual audio.
+
+**IMPORTANT CONTEXT:**
+- The audio is from a YouTube music video, which may contain content not in the lyrics
+- YouTube videos often have: intro graphics, instrumental breaks, spoken interludes, DJ tags, and outros
+- The lyrics TEXT is correct, but the TIMESTAMPS may be off
+- LRC files often have cumulative drift - if one line is off, subsequent lines are likely off by a similar amount
+
+**Input LRC Lines (${langName}):**
+\`\`\`json
+${JSON.stringify(lines, null, 2)}
+\`\`\`
+${likelyHasIntro ? `
+**NOTE:** First lyric starts at ${firstLineStart}ms (${(firstLineStart/1000).toFixed(1)}s). There may be an intro before this.
+` : ''}
+**YOUR TASKS:**
+
+1. **Verify Each Line's Start Time:**
+   - Listen to when each lyric line ACTUALLY starts in the audio
+   - If the timestamp is accurate (within ±500ms), keep it as-is
+   - If the timestamp is wrong, provide the corrected startTimeMs
+   - Pay special attention to cumulative drift - if line 5 is 2 seconds late, lines 6+ are probably also late
+
+2. **Detect Non-Lyric Sections:**
+   Look for these types of sections that may NOT be in the LRC:
+   - **intro**: Music, video intro, or other content BEFORE the first lyric
+   - **interlude**: Instrumental breaks, beat drops, or musical sections BETWEEN lyrics (gaps > 5 seconds)
+   - **skit**: Spoken dialogue, DJ tags, or non-singing audio that interrupts the song
+   - **outro**: Music or content AFTER the last lyric
+
+**OUTPUT FORMAT:**
+
+Return a JSON object with:
+1. \`correctedLines\`: Array with corrected timestamps for ALL lines
+2. \`detectedSections\`: Array of any non-lyric sections found (can be empty)
+
+Example:
+\`\`\`json
+{
+  "correctedLines": [
+    { "lineIndex": 0, "originalStartMs": 15000, "correctedStartMs": 17500, "text": "First line..." },
+    { "lineIndex": 1, "originalStartMs": 18000, "correctedStartMs": 20500, "text": "Second line..." }
+  ],
+  "detectedSections": [
+    { "type": "intro", "startTimeMs": 0, "endTimeMs": 17000, "description": "Instrumental intro", "insertAfterLineIndex": -1 },
+    { "type": "interlude", "startTimeMs": 45000, "endTimeMs": 60000, "description": "Guitar solo", "insertAfterLineIndex": 5 }
+  ]
+}
+\`\`\`
+
+**RULES:**
+- Return ALL ${lines.length} lines in correctedLines, even if timestamps are unchanged
+- For unchanged timestamps, set correctedStartMs = originalStartMs
+- insertAfterLineIndex: -1 for intro (before all lyrics), or the 0-based line index after which to insert
+- Only include detectedSections if you actually detect non-lyric sections
+- Return minified JSON only, no explanations
 `;
 };
 
@@ -1384,12 +1510,132 @@ export const refineMarkedSegments = async (
 // --- LRC-Based Karaoke Generation ---
 
 /**
- * Generate karaoke data from an LRC file (single language).
- * Uses LRC timestamps as anchor points for segment boundaries.
+ * Correct LRC timestamps against audio and detect non-lyric sections.
+ * This is the first pass before word-level generation.
  */
-export const generateKaraokeFromLrc = async (
+export const correctLrcTimestamps = async (
   audioFile: File,
-  lrcContent: string,
+  parsedLrc: ParsedLrc,
+  languageName: string,
+  onStatusUpdate: (message: string) => void,
+  modelTier: GeminiModelTier = 'gemini-2.5',
+): Promise<ParsedLrc> => {
+  const models = getModelNames(modelTier);
+
+  try {
+    onStatusUpdate('Preparing audio for LRC timestamp verification...');
+    const audioPart = await fileToGenerativePart(audioFile);
+
+    onStatusUpdate(`Verifying ${parsedLrc.lines.length} LRC line timestamps against audio...`);
+    const prompt = buildLrcCorrectionPrompt(parsedLrc, languageName);
+    const textPart = { text: prompt };
+
+    const model = models.pro;
+    onStatusUpdate('Analyzing audio to correct LRC timestamps and detect non-lyric sections...');
+
+    const apiCall = () => callGeminiProxy(
+      model,
+      [{ parts: [textPart, audioPart] }],
+      {
+        responseMimeType: 'application/json',
+        responseSchema: lrcCorrectionSchema,
+        maxOutputTokens: 16384, // Smaller output than full karaoke
+      }
+    );
+
+    const apiCallPromise = retryWithBackoff(
+      apiCall, 3, 2000,
+      (attempt) => {
+        console.warn(`LRC correction API call failed on attempt ${attempt}. Retrying...`);
+        onStatusUpdate(`LRC correction failed, retrying... (Attempt ${attempt + 1}/3)`);
+      }
+    );
+
+    // 5 minute timeout - shorter than full karaoke generation
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("The LRC correction request timed out after 5 minutes.")), 300000)
+    );
+
+    const response = await Promise.race([apiCallPromise, timeoutPromise]);
+
+    onStatusUpdate('Received corrections, applying to LRC data...');
+    const text = response.text.trim();
+    if (!text) {
+      throw new Error("The AI model returned an empty response for LRC correction.");
+    }
+
+    let correctionData: LrcCorrectionResponse;
+    try {
+      correctionData = JSON.parse(text);
+    } catch (parseError) {
+      console.error("Failed to parse LRC correction response:", text);
+      throw new Error("The AI model's LRC correction response was not in the expected JSON format.");
+    }
+
+    // Apply corrections to ParsedLrc
+    const correctedLines = [...parsedLrc.lines];
+    let correctionsApplied = 0;
+
+    for (const correction of correctionData.correctedLines) {
+      const idx = correction.lineIndex;
+      if (idx >= 0 && idx < correctedLines.length) {
+        const originalStart = correctedLines[idx].startTimeMs;
+        const newStart = correction.correctedStartMs;
+
+        if (originalStart !== newStart) {
+          correctedLines[idx] = {
+            ...correctedLines[idx],
+            startTimeMs: newStart,
+          };
+          correctionsApplied++;
+        }
+      }
+    }
+
+    // Recalculate endTimeMs for each line based on next line's start
+    for (let i = 0; i < correctedLines.length - 1; i++) {
+      correctedLines[i] = {
+        ...correctedLines[i],
+        endTimeMs: correctedLines[i + 1].startTimeMs,
+      };
+    }
+
+    // Log detected sections for visibility
+    const sections = correctionData.detectedSections || [];
+    if (sections.length > 0) {
+      console.log(`Detected ${sections.length} non-lyric section(s):`, sections);
+      onStatusUpdate(`Detected ${sections.length} non-lyric section(s): ${sections.map(s => s.type).join(', ')}`);
+    }
+
+    onStatusUpdate(`LRC correction complete! ${correctionsApplied} timestamp(s) corrected.`);
+
+    // Return corrected ParsedLrc with detected sections attached
+    return {
+      ...parsedLrc,
+      lines: correctedLines,
+      detectedSections: sections,
+    };
+
+  } catch (error) {
+    console.error("Error during LRC timestamp correction:", error);
+    if (error instanceof Error && (
+      error.message.includes("JSON format") ||
+      error.message.includes("empty response") ||
+      error.message.includes("timed out")
+    )) {
+      throw error;
+    }
+    throw new Error(parseGoogleGenerativeAIError(error));
+  }
+};
+
+/**
+ * Internal function to generate karaoke from a pre-parsed LRC.
+ * Used by both generateKaraokeFromLrc and generateBilingualKaraokeFromLrc.
+ */
+const generateKaraokeFromParsedLrc = async (
+  audioFile: File,
+  parsedLrc: ParsedLrc,
   langName: string,
   onStatusUpdate: (message: string) => void,
   modelTier: GeminiModelTier = 'gemini-2.5',
@@ -1397,15 +1643,6 @@ export const generateKaraokeFromLrc = async (
   const models = getModelNames(modelTier);
 
   try {
-    onStatusUpdate('Parsing LRC file...');
-    const parsedLrc = parseLrc(lrcContent);
-
-    if (parsedLrc.lines.length === 0) {
-      throw new Error('No valid lyric lines found in LRC content. Please check the format.');
-    }
-
-    onStatusUpdate(`Found ${parsedLrc.lines.length} lyric lines in LRC file.`);
-
     onStatusUpdate('Preparing audio for analysis...');
     const audioPart = await fileToGenerativePart(audioFile);
 
@@ -1480,8 +1717,31 @@ export const generateKaraokeFromLrc = async (
 };
 
 /**
+ * Generate karaoke data from an LRC file (single language).
+ * Public wrapper that parses LRC content first.
+ */
+export const generateKaraokeFromLrc = async (
+  audioFile: File,
+  lrcContent: string,
+  langName: string,
+  onStatusUpdate: (message: string) => void,
+  modelTier: GeminiModelTier = 'gemini-2.5',
+): Promise<KaraokeData> => {
+  onStatusUpdate('Parsing LRC file...');
+  const parsedLrc = parseLrc(lrcContent);
+
+  if (parsedLrc.lines.length === 0) {
+    throw new Error('No valid lyric lines found in LRC content. Please check the format.');
+  }
+
+  onStatusUpdate(`Found ${parsedLrc.lines.length} lyric lines in LRC file.`);
+
+  return generateKaraokeFromParsedLrc(audioFile, parsedLrc, langName, onStatusUpdate, modelTier);
+};
+
+/**
  * Generate bilingual karaoke data from a Spanish LRC file.
- * Orchestrates the full pipeline: parse LRC → translate → generate Spanish → align English.
+ * Orchestrates the full pipeline: parse LRC → correct timestamps → translate → generate Spanish → align English.
  */
 export const generateBilingualKaraokeFromLrc = async (
   audioFile: File,
@@ -1491,7 +1751,7 @@ export const generateBilingualKaraokeFromLrc = async (
 ): Promise<KaraokeApiResponse> => {
   try {
     // Step 1: Parse LRC
-    onStatusUpdate('Step 1/4: Parsing LRC file...');
+    onStatusUpdate('Step 1/5: Parsing LRC file...');
     const parsedLrc = parseLrc(lrcContent);
 
     if (parsedLrc.lines.length === 0) {
@@ -1500,25 +1760,35 @@ export const generateBilingualKaraokeFromLrc = async (
 
     onStatusUpdate(`Found ${parsedLrc.lines.length} lyric lines in LRC file.`);
 
-    // Step 2: Translate Spanish lyrics to English
-    onStatusUpdate('Step 2/4: Translating Spanish lyrics to English...');
-    const spanishLyrics = extractLyricsText(parsedLrc);
+    // Step 2: Correct LRC timestamps against audio
+    onStatusUpdate('Step 2/5: Verifying and correcting LRC timestamps against audio...');
+    const correctedLrc = await correctLrcTimestamps(
+      audioFile,
+      parsedLrc,
+      'Spanish',
+      (msg) => onStatusUpdate(`Step 2/5: ${msg}`),
+      modelTier
+    );
+
+    // Step 3: Translate Spanish lyrics to English
+    onStatusUpdate('Step 3/5: Translating Spanish lyrics to English...');
+    const spanishLyrics = extractLyricsText(correctedLrc);
     const englishLyrics = await translateLyrics(spanishLyrics, 'es', 'en', modelTier);
 
     onStatusUpdate('Translation complete.');
 
-    // Step 3: Generate Spanish karaoke with LRC anchors
-    onStatusUpdate('Step 3/4: Generating Spanish karaoke with LRC timing anchors...');
-    const spanishKaraoke = await generateKaraokeFromLrc(
+    // Step 4: Generate Spanish karaoke with CORRECTED LRC anchors
+    onStatusUpdate('Step 4/5: Generating Spanish karaoke with corrected LRC timing...');
+    const spanishKaraoke = await generateKaraokeFromParsedLrc(
       audioFile,
-      lrcContent,
+      correctedLrc,
       'Spanish',
-      (msg) => onStatusUpdate(`Step 3/4: ${msg}`),
+      (msg) => onStatusUpdate(`Step 4/5: ${msg}`),
       modelTier
     );
 
-    // Step 4: Align English translation to Spanish timing
-    onStatusUpdate('Step 4/4: Aligning English translation to Spanish timing...');
+    // Step 5: Align English translation to Spanish timing
+    onStatusUpdate('Step 5/5: Aligning English translation to Spanish timing...');
     const models = getModelNames(modelTier);
 
     const translationPrompt = buildTranslationAlignmentPrompt(
@@ -1542,7 +1812,7 @@ export const generateBilingualKaraokeFromLrc = async (
       translationApiCall, 3, 1000,
       (attempt) => {
         console.warn(`Translation alignment failed on attempt ${attempt}. Retrying...`);
-        onStatusUpdate(`Step 4/4: Alignment failed, retrying... (Attempt ${attempt + 1}/3)`);
+        onStatusUpdate(`Step 5/5: Alignment failed, retrying... (Attempt ${attempt + 1}/3)`);
       }
     );
 

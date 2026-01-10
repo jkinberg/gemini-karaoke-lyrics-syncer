@@ -1,0 +1,135 @@
+[
+  {
+    "term": {
+      "spanish": "hacer caso",
+      "english": "to listen to / to pay attention"
+    },
+    "definition": "Commonly used to mean 'to pay attention' or 'to obey.' In this context, it describes the act of following one's heart or intuition over logic. It is an essential idiom for expressing whose advice or signals you are prioritizing.",
+    "difficulty": 3,
+    "example": {
+      "spanish": "Hace mucho tiempo le hago caso al corazón",
+      "english": "For a long time now I've been listening to my heart"
+    },
+    "highlight": {
+      "spanish": "hago caso",
+      "english": "listening to"
+    },
+    "startTimeMs": 15200,
+    "endTimeMs": 21000,
+    "segmentIndex": 2
+  },
+  {
+    "term": {
+      "spanish": "ojitos",
+      "english": "little eyes"
+    },
+    "definition": "The use of the diminutive suffix '-itos' here is crucial for understanding Spanish emotional nuances. It is not literally about size, but is used to convey extreme affection, tenderness, and intimacy. The phrase 'ojitos lindos' serves as a pet name for the person the singer is enamored with.",
+    "difficulty": 4,
+    "example": {
+      "spanish": "Y solo mírame con esos ojito' lindo'",
+      "english": "And just look at me with those pretty little eyes"
+    },
+    "highlight": {
+      "spanish": "ojito'",
+      "english": "little eyes"
+    },
+    "startTimeMs": 50800,
+    "endTimeMs": 55900,
+    "segmentIndex": 10
+  },
+  {
+    "term": {
+      "spanish": "enredao",
+      "english": "tangled up / hooked"
+    },
+    "definition": "A colloquial pronunciation of 'enredado' (dropping the 'd'). While it literally means tangled, in a romantic context it describes being emotionally 'caught' or stuck on someone, suggesting a complexity of feelings that is hard to escape.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "Pero tú me tiene' enredao, me envolví",
+      "english": "But you have me all tangled up, I got caught up"
+    },
+    "highlight": {
+      "spanish": "enredao",
+      "english": "tangled up"
+    },
+    "startTimeMs": 74400,
+    "endTimeMs": 77900,
+    "segmentIndex": 15
+  },
+  {
+    "term": {
+      "spanish": "me envolví",
+      "english": "I got caught up / hooked"
+    },
+    "definition": "From the verb 'envolverse' (to wrap oneself up). In Puerto Rican urban slang, this specific reflexive usage means to get deeply infatuated or obsessed with a situation or person, often implies losing one's sense of time or previous intentions because of the intensity of the feeling.",
+    "difficulty": 7,
+    "example": {
+      "spanish": "Pero tú me tiene' enredao, me envolví",
+      "english": "But you have me all tangled up, I got caught up"
+    },
+    "highlight": {
+      "spanish": "me envolví",
+      "english": "I got caught up"
+    },
+    "startTimeMs": 74400,
+    "endTimeMs": 77900,
+    "segmentIndex": 15
+  },
+  {
+    "term": {
+      "spanish": "culo'",
+      "english": "girls / dates (slang)"
+    },
+    "definition": "Literally 'asses.' In urban and reggaeton slang, 'un culo' is a crude but common colloquialism used to refer to a person one is dating casually or a romantic interest. Here, Bad Bunny uses it to say he is done with his previous casual hookups to focus on a real connection.",
+    "difficulty": 8,
+    "example": {
+      "spanish": "Bye-bye a los culo', ni me despedí",
+      "english": "Bye-bye to the other girls, I didn't even say goodbye"
+    },
+    "highlight": {
+      "spanish": "culo'",
+      "english": "other girls"
+    },
+    "startTimeMs": 83900,
+    "endTimeMs": 86900,
+    "segmentIndex": 18
+  },
+  {
+    "term": {
+      "spanish": "chocamo'",
+      "english": "we collided / ran into each other"
+    },
+    "definition": "Colloquial drop of the 's' from 'chocamos.' While it literally means to crash or collide, in this context it describes a 'destined' encounter—two people whose paths crossed unexpectedly but with high impact, like a physical collision.",
+    "difficulty": 4,
+    "example": {
+      "spanish": "Chocamo' en el trayecto",
+      "english": "We collided on the way"
+    },
+    "highlight": {
+      "spanish": "Chocamo'",
+      "english": "collided"
+    },
+    "startTimeMs": 89800,
+    "endTimeMs": 92300,
+    "segmentIndex": 20
+  },
+  {
+    "term": {
+      "spanish": "me pone",
+      "english": "makes me feel / turns me on"
+    },
+    "definition": "A very common colloquial use of 'poner.' It refers to the physical or emotional effect someone has on the speaker. While it can be used to describe arousal, in this song it refers to the unique, intense emotional 'vibe' or state that only this specific partner can trigger.",
+    "difficulty": 6,
+    "example": {
+      "spanish": "Nadie me pone como tú me pone'",
+      "english": "No one makes me feel the way you do"
+    },
+    "highlight": {
+      "spanish": "me pone",
+      "english": "makes me feel"
+    },
+    "startTimeMs": 185800,
+    "endTimeMs": 189000,
+    "segmentIndex": 46
+  }
+]

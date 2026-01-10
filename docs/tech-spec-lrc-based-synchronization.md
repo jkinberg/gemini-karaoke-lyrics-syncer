@@ -2,7 +2,7 @@
 
 **Status:** Complete
 **Created:** 2026-01-08
-**Updated:** 2026-01-09
+**Updated:** 2026-01-10
 **Priority:** High
 **Branch:** `feature/lrc-based-sync`
 
@@ -537,6 +537,93 @@ The LRC-based approach is additive - it doesn't remove the existing raw lyrics a
 | UI Updates | 2-3 hours |
 | Testing & Iteration | 3-4 hours |
 | **Total** | **10-15 hours** |
+
+---
+
+## Enhancement: LRC Timestamp Correction (2026-01-10)
+
+### Problem
+
+LRC files often have timing inaccuracies that accumulate throughout the song:
+- Early drift compounds—if line 5 is 500ms late, lines 6-50 are all 500ms late
+- YouTube music video audio often contains content not in LRC (intros, skits, interludes)
+- LRC timestamps may not match the specific audio source being used
+
+### Solution: Two-Pass Generation
+
+**New workflow:**
+```
+User LRC + Audio → Parse LRC → [NEW] Correct LRC timestamps → Generate word-level timing
+```
+
+**Pass 1: LRC Line Correction**
+- Send audio + LRC line data to Gemini Pro
+- Gemini verifies/corrects each line's start timestamp against actual audio
+- Detects non-lyric sections (intros, interludes, skits, outros)
+- Returns corrected line timestamps
+
+**Pass 2: Word Distribution (existing)**
+- Uses corrected LRC timestamps as anchors
+- Distributes words within each corrected line's boundaries
+
+### Implementation
+
+**New types** (`types.ts`):
+```typescript
+interface DetectedSection {
+  type: 'intro' | 'interlude' | 'skit' | 'outro';
+  startTimeMs: number;
+  endTimeMs: number;
+  description?: string;
+  insertAfterLineIndex: number;  // -1 for intro (before all lyrics)
+}
+
+interface ParsedLrc {
+  lines: LrcLine[];
+  metadata: LrcMetadata;
+  detectedSections?: DetectedSection[];  // Populated during correction
+}
+```
+
+**New functions** (`services/geminiService.ts`):
+- `lrcCorrectionSchema` - Structured output schema for correction response
+- `buildLrcCorrectionPrompt(parsedLrc, langName)` - Prompt for timestamp verification
+- `correctLrcTimestamps(audioFile, parsedLrc, languageName, onStatusUpdate, modelTier)` - Correction pass
+
+**Updated workflow** (`generateBilingualKaraokeFromLrc`):
+```
+Step 1/5: Parse LRC file
+Step 2/5: Correct LRC timestamps against audio  ← NEW
+Step 3/5: Translate Spanish lyrics to English
+Step 4/5: Generate Spanish karaoke with corrected LRC timing
+Step 5/5: Align English translation to Spanish timing
+```
+
+### Section Detection
+
+The correction pass specifically looks for:
+- **Intro**: Music/content before first lyric (YouTube video intros, instrumental openings)
+- **Interlude**: Musical breaks between lyrics (guitar solos, beat drops)
+- **Skit**: Spoken dialogue or non-singing audio (common in hip-hop/Latin music videos)
+- **Outro**: Content after last lyric (music fade out, video outros)
+
+### Benefits
+
+| Before | After |
+|--------|-------|
+| LRC drift accumulates | Each line verified against audio |
+| YouTube intros cause misalignment | Intros/skits detected and accounted for |
+| Single-pass, trust LRC timing | Two-pass, audio is ground truth |
+| Manual refinement often needed | Better first-pass accuracy |
+
+### Token Efficiency
+
+LRC correction has a smaller output than full karaoke generation:
+- Input: Audio + ~50 lines of LRC data
+- Output: ~50 corrected timestamps (not N×M words)
+- Estimated output: ~2-5K tokens (vs 15-30K for full karaoke)
+
+This makes the correction pass fast and reliable.
 
 ---
 

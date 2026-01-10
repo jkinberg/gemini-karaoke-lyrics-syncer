@@ -1,0 +1,3165 @@
+{
+  "metadata": {
+    "title": "Ojitos Lindos",
+    "artist": "Bad Bunny, Bomba Estéreo",
+    "durationMs": 270000,
+    "language": "en-US",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 15200,
+      "segmentIndex": 1,
+      "cueText": "Musical intro"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 15200,
+      "endTimeMs": 21000,
+      "segmentIndex": 2,
+      "text": "For a long time now I've been listening to my heart",
+      "words": [
+        {
+          "word": "For",
+          "startTimeMs": 15200,
+          "endTimeMs": 15400
+        },
+        {
+          "word": "a",
+          "startTimeMs": 15400,
+          "endTimeMs": 15600
+        },
+        {
+          "word": "long",
+          "startTimeMs": 15600,
+          "endTimeMs": 16000
+        },
+        {
+          "word": "time",
+          "startTimeMs": 16000,
+          "endTimeMs": 16400
+        },
+        {
+          "word": "now",
+          "startTimeMs": 16400,
+          "endTimeMs": 16800
+        },
+        {
+          "word": "I've",
+          "startTimeMs": 16800,
+          "endTimeMs": 17200
+        },
+        {
+          "word": "been",
+          "startTimeMs": 17200,
+          "endTimeMs": 17600
+        },
+        {
+          "word": "listening",
+          "startTimeMs": 17600,
+          "endTimeMs": 18200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 18200,
+          "endTimeMs": 18500
+        },
+        {
+          "word": "my",
+          "startTimeMs": 18500,
+          "endTimeMs": 18900
+        },
+        {
+          "word": "heart",
+          "startTimeMs": 18900,
+          "endTimeMs": 20800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 21000,
+      "endTimeMs": 27100,
+      "segmentIndex": 3,
+      "text": "And the days, the months pass thinking of your scent",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 21000,
+          "endTimeMs": 21300
+        },
+        {
+          "word": "the",
+          "startTimeMs": 21300,
+          "endTimeMs": 21600
+        },
+        {
+          "word": "days,",
+          "startTimeMs": 21600,
+          "endTimeMs": 22200
+        },
+        {
+          "word": "the",
+          "startTimeMs": 22200,
+          "endTimeMs": 22500
+        },
+        {
+          "word": "months",
+          "startTimeMs": 22500,
+          "endTimeMs": 23100
+        },
+        {
+          "word": "pass",
+          "startTimeMs": 23100,
+          "endTimeMs": 23600
+        },
+        {
+          "word": "thinking",
+          "startTimeMs": 23600,
+          "endTimeMs": 24400
+        },
+        {
+          "word": "of",
+          "startTimeMs": 24400,
+          "endTimeMs": 24700
+        },
+        {
+          "word": "your",
+          "startTimeMs": 24700,
+          "endTimeMs": 25100
+        },
+        {
+          "word": "scent",
+          "startTimeMs": 25100,
+          "endTimeMs": 26800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 27100,
+      "endTimeMs": 33000,
+      "segmentIndex": 4,
+      "text": "The time has come to use reason",
+      "words": [
+        {
+          "word": "The",
+          "startTimeMs": 27100,
+          "endTimeMs": 27400
+        },
+        {
+          "word": "time",
+          "startTimeMs": 27400,
+          "endTimeMs": 28100
+        },
+        {
+          "word": "has",
+          "startTimeMs": 28100,
+          "endTimeMs": 28600
+        },
+        {
+          "word": "come",
+          "startTimeMs": 28600,
+          "endTimeMs": 29100
+        },
+        {
+          "word": "to",
+          "startTimeMs": 29100,
+          "endTimeMs": 29500
+        },
+        {
+          "word": "use",
+          "startTimeMs": 29500,
+          "endTimeMs": 30000
+        },
+        {
+          "word": "reason",
+          "startTimeMs": 30000,
+          "endTimeMs": 32800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 33000,
+      "endTimeMs": 39100,
+      "segmentIndex": 5,
+      "text": "Before it's too late and I unintentionally break in two",
+      "words": [
+        {
+          "word": "Before",
+          "startTimeMs": 33000,
+          "endTimeMs": 33500
+        },
+        {
+          "word": "it's",
+          "startTimeMs": 33500,
+          "endTimeMs": 33800
+        },
+        {
+          "word": "too",
+          "startTimeMs": 33800,
+          "endTimeMs": 34100
+        },
+        {
+          "word": "late",
+          "startTimeMs": 34100,
+          "endTimeMs": 34600
+        },
+        {
+          "word": "and",
+          "startTimeMs": 34600,
+          "endTimeMs": 34900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 34900,
+          "endTimeMs": 35200
+        },
+        {
+          "word": "unintentionally",
+          "startTimeMs": 35200,
+          "endTimeMs": 36200
+        },
+        {
+          "word": "break",
+          "startTimeMs": 36200,
+          "endTimeMs": 36700
+        },
+        {
+          "word": "in",
+          "startTimeMs": 36700,
+          "endTimeMs": 37000
+        },
+        {
+          "word": "two",
+          "startTimeMs": 37000,
+          "endTimeMs": 38800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 39100,
+      "endTimeMs": 42000,
+      "segmentIndex": 6,
+      "text": "Before the sun comes up and I floor the accelerator",
+      "words": [
+        {
+          "word": "Before",
+          "startTimeMs": 39100,
+          "endTimeMs": 39400
+        },
+        {
+          "word": "the",
+          "startTimeMs": 39400,
+          "endTimeMs": 39600
+        },
+        {
+          "word": "sun",
+          "startTimeMs": 39600,
+          "endTimeMs": 39800
+        },
+        {
+          "word": "comes",
+          "startTimeMs": 39800,
+          "endTimeMs": 40100
+        },
+        {
+          "word": "up",
+          "startTimeMs": 40100,
+          "endTimeMs": 40300
+        },
+        {
+          "word": "and",
+          "startTimeMs": 40300,
+          "endTimeMs": 40500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 40500,
+          "endTimeMs": 40700
+        },
+        {
+          "word": "floor",
+          "startTimeMs": 40700,
+          "endTimeMs": 40900
+        },
+        {
+          "word": "the",
+          "startTimeMs": 40900,
+          "endTimeMs": 41100
+        },
+        {
+          "word": "accelerator",
+          "startTimeMs": 41100,
+          "endTimeMs": 41900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 42000,
+      "endTimeMs": 45000,
+      "segmentIndex": 7,
+      "text": "Going without brakes and losing control",
+      "words": [
+        {
+          "word": "Going",
+          "startTimeMs": 42000,
+          "endTimeMs": 42400
+        },
+        {
+          "word": "without",
+          "startTimeMs": 42400,
+          "endTimeMs": 42800
+        },
+        {
+          "word": "brakes",
+          "startTimeMs": 42800,
+          "endTimeMs": 43300
+        },
+        {
+          "word": "and",
+          "startTimeMs": 43300,
+          "endTimeMs": 43600
+        },
+        {
+          "word": "losing",
+          "startTimeMs": 43600,
+          "endTimeMs": 44000
+        },
+        {
+          "word": "control",
+          "startTimeMs": 44000,
+          "endTimeMs": 44950
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 45000,
+      "endTimeMs": 48100,
+      "segmentIndex": 8,
+      "text": "It'll just be the two of us, you and I caressing each other",
+      "words": [
+        {
+          "word": "It'll",
+          "startTimeMs": 45000,
+          "endTimeMs": 45200
+        },
+        {
+          "word": "just",
+          "startTimeMs": 45200,
+          "endTimeMs": 45350
+        },
+        {
+          "word": "be",
+          "startTimeMs": 45350,
+          "endTimeMs": 45500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 45500,
+          "endTimeMs": 45650
+        },
+        {
+          "word": "two",
+          "startTimeMs": 45650,
+          "endTimeMs": 45900
+        },
+        {
+          "word": "of",
+          "startTimeMs": 45900,
+          "endTimeMs": 46050
+        },
+        {
+          "word": "us,",
+          "startTimeMs": 46050,
+          "endTimeMs": 46300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 46300,
+          "endTimeMs": 46500
+        },
+        {
+          "word": "and",
+          "startTimeMs": 46500,
+          "endTimeMs": 46700
+        },
+        {
+          "word": "I",
+          "startTimeMs": 46700,
+          "endTimeMs": 46900
+        },
+        {
+          "word": "caressing",
+          "startTimeMs": 46900,
+          "endTimeMs": 47500
+        },
+        {
+          "word": "each",
+          "startTimeMs": 47500,
+          "endTimeMs": 47700
+        },
+        {
+          "word": "other",
+          "startTimeMs": 47700,
+          "endTimeMs": 48050
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 48100,
+      "endTimeMs": 50800,
+      "segmentIndex": 9,
+      "text": "In the middle of time, without saying goodbye",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 48100,
+          "endTimeMs": 48300
+        },
+        {
+          "word": "the",
+          "startTimeMs": 48300,
+          "endTimeMs": 48500
+        },
+        {
+          "word": "middle",
+          "startTimeMs": 48500,
+          "endTimeMs": 48900
+        },
+        {
+          "word": "of",
+          "startTimeMs": 48900,
+          "endTimeMs": 49100
+        },
+        {
+          "word": "time,",
+          "startTimeMs": 49100,
+          "endTimeMs": 49500
+        },
+        {
+          "word": "without",
+          "startTimeMs": 49500,
+          "endTimeMs": 49800
+        },
+        {
+          "word": "saying",
+          "startTimeMs": 49800,
+          "endTimeMs": 50200
+        },
+        {
+          "word": "goodbye",
+          "startTimeMs": 50200,
+          "endTimeMs": 50700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 50800,
+      "endTimeMs": 55900,
+      "segmentIndex": 10,
+      "text": "And just look at me with those pretty little eyes",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 50800,
+          "endTimeMs": 51200
+        },
+        {
+          "word": "just",
+          "startTimeMs": 51200,
+          "endTimeMs": 51600
+        },
+        {
+          "word": "look",
+          "startTimeMs": 51600,
+          "endTimeMs": 52000
+        },
+        {
+          "word": "at",
+          "startTimeMs": 52000,
+          "endTimeMs": 52400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 52400,
+          "endTimeMs": 52800
+        },
+        {
+          "word": "with",
+          "startTimeMs": 52800,
+          "endTimeMs": 53300
+        },
+        {
+          "word": "those",
+          "startTimeMs": 53300,
+          "endTimeMs": 53800
+        },
+        {
+          "word": "pretty",
+          "startTimeMs": 53800,
+          "endTimeMs": 54400
+        },
+        {
+          "word": "little",
+          "startTimeMs": 54400,
+          "endTimeMs": 54900
+        },
+        {
+          "word": "eyes",
+          "startTimeMs": 54900,
+          "endTimeMs": 55800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 55900,
+      "endTimeMs": 58900,
+      "segmentIndex": 11,
+      "text": "Because with that, I'm doing fine",
+      "words": [
+        {
+          "word": "Because",
+          "startTimeMs": 55900,
+          "endTimeMs": 56400
+        },
+        {
+          "word": "with",
+          "startTimeMs": 56400,
+          "endTimeMs": 56800
+        },
+        {
+          "word": "that,",
+          "startTimeMs": 56800,
+          "endTimeMs": 57200
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 57200,
+          "endTimeMs": 57600
+        },
+        {
+          "word": "doing",
+          "startTimeMs": 57600,
+          "endTimeMs": 58000
+        },
+        {
+          "word": "fine",
+          "startTimeMs": 58000,
+          "endTimeMs": 58800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 58900,
+      "endTimeMs": 63500,
+      "segmentIndex": 12,
+      "text": "Today I've been born again",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 58900,
+          "endTimeMs": 59400
+        },
+        {
+          "word": "I've",
+          "startTimeMs": 59400,
+          "endTimeMs": 59800
+        },
+        {
+          "word": "been",
+          "startTimeMs": 59800,
+          "endTimeMs": 60200
+        },
+        {
+          "word": "born",
+          "startTimeMs": 60200,
+          "endTimeMs": 60600
+        },
+        {
+          "word": "again",
+          "startTimeMs": 60600,
+          "endTimeMs": 63200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 63500,
+      "endTimeMs": 69500,
+      "segmentIndex": 13,
+      "text": "It's been a long time since I held anyone's hand",
+      "words": [
+        {
+          "word": "It's",
+          "startTimeMs": 63500,
+          "endTimeMs": 63900
+        },
+        {
+          "word": "been",
+          "startTimeMs": 63900,
+          "endTimeMs": 64300
+        },
+        {
+          "word": "a",
+          "startTimeMs": 64300,
+          "endTimeMs": 64500
+        },
+        {
+          "word": "long",
+          "startTimeMs": 64500,
+          "endTimeMs": 64900
+        },
+        {
+          "word": "time",
+          "startTimeMs": 64900,
+          "endTimeMs": 65400
+        },
+        {
+          "word": "since",
+          "startTimeMs": 65400,
+          "endTimeMs": 65800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 65800,
+          "endTimeMs": 66000
+        },
+        {
+          "word": "held",
+          "startTimeMs": 66000,
+          "endTimeMs": 66400
+        },
+        {
+          "word": "anyone's",
+          "startTimeMs": 66400,
+          "endTimeMs": 66900
+        },
+        {
+          "word": "hand",
+          "startTimeMs": 66900,
+          "endTimeMs": 69200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 69500,
+      "endTimeMs": 74400,
+      "segmentIndex": 14,
+      "text": "It's been a long time since I sent: \"good morning, I love you\"",
+      "words": [
+        {
+          "word": "It's",
+          "startTimeMs": 69500,
+          "endTimeMs": 69800
+        },
+        {
+          "word": "been",
+          "startTimeMs": 69800,
+          "endTimeMs": 70100
+        },
+        {
+          "word": "a",
+          "startTimeMs": 70100,
+          "endTimeMs": 70300
+        },
+        {
+          "word": "long",
+          "startTimeMs": 70300,
+          "endTimeMs": 70600
+        },
+        {
+          "word": "time",
+          "startTimeMs": 70600,
+          "endTimeMs": 71000
+        },
+        {
+          "word": "since",
+          "startTimeMs": 71000,
+          "endTimeMs": 71300
+        },
+        {
+          "word": "I",
+          "startTimeMs": 71300,
+          "endTimeMs": 71500
+        },
+        {
+          "word": "sent:",
+          "startTimeMs": 71500,
+          "endTimeMs": 71900
+        },
+        {
+          "word": "\"good",
+          "startTimeMs": 71900,
+          "endTimeMs": 72300
+        },
+        {
+          "word": "morning,",
+          "startTimeMs": 72300,
+          "endTimeMs": 72700
+        },
+        {
+          "word": "I",
+          "startTimeMs": 72700,
+          "endTimeMs": 72900
+        },
+        {
+          "word": "love",
+          "startTimeMs": 72900,
+          "endTimeMs": 73300
+        },
+        {
+          "word": "you\"",
+          "startTimeMs": 73300,
+          "endTimeMs": 74100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 74400,
+      "endTimeMs": 77900,
+      "segmentIndex": 15,
+      "text": "But you have me all tangled up, I got caught up",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 74400,
+          "endTimeMs": 74600
+        },
+        {
+          "word": "you",
+          "startTimeMs": 74600,
+          "endTimeMs": 74800
+        },
+        {
+          "word": "have",
+          "startTimeMs": 74800,
+          "endTimeMs": 75000
+        },
+        {
+          "word": "me",
+          "startTimeMs": 75000,
+          "endTimeMs": 75200
+        },
+        {
+          "word": "all",
+          "startTimeMs": 75200,
+          "endTimeMs": 75400
+        },
+        {
+          "word": "tangled",
+          "startTimeMs": 75400,
+          "endTimeMs": 75800
+        },
+        {
+          "word": "up,",
+          "startTimeMs": 75800,
+          "endTimeMs": 76100
+        },
+        {
+          "word": "I",
+          "startTimeMs": 76100,
+          "endTimeMs": 76300
+        },
+        {
+          "word": "got",
+          "startTimeMs": 76300,
+          "endTimeMs": 76500
+        },
+        {
+          "word": "caught",
+          "startTimeMs": 76500,
+          "endTimeMs": 76900
+        },
+        {
+          "word": "up",
+          "startTimeMs": 76900,
+          "endTimeMs": 77800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 77900,
+      "endTimeMs": 80700,
+      "segmentIndex": 16,
+      "text": "I was on my way and I got lost",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 77900,
+          "endTimeMs": 78200
+        },
+        {
+          "word": "was",
+          "startTimeMs": 78200,
+          "endTimeMs": 78500
+        },
+        {
+          "word": "on",
+          "startTimeMs": 78500,
+          "endTimeMs": 78700
+        },
+        {
+          "word": "my",
+          "startTimeMs": 78700,
+          "endTimeMs": 78900
+        },
+        {
+          "word": "way",
+          "startTimeMs": 78900,
+          "endTimeMs": 79300
+        },
+        {
+          "word": "and",
+          "startTimeMs": 79300,
+          "endTimeMs": 79500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 79500,
+          "endTimeMs": 79700
+        },
+        {
+          "word": "got",
+          "startTimeMs": 79700,
+          "endTimeMs": 80000
+        },
+        {
+          "word": "lost",
+          "startTimeMs": 80000,
+          "endTimeMs": 80600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 80700,
+      "endTimeMs": 83900,
+      "segmentIndex": 17,
+      "text": "My gaze changed when I saw your eyes",
+      "words": [
+        {
+          "word": "My",
+          "startTimeMs": 80700,
+          "endTimeMs": 81000
+        },
+        {
+          "word": "gaze",
+          "startTimeMs": 81000,
+          "endTimeMs": 81500
+        },
+        {
+          "word": "changed",
+          "startTimeMs": 81500,
+          "endTimeMs": 82000
+        },
+        {
+          "word": "when",
+          "startTimeMs": 82000,
+          "endTimeMs": 82400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 82400,
+          "endTimeMs": 82600
+        },
+        {
+          "word": "saw",
+          "startTimeMs": 82600,
+          "endTimeMs": 82900
+        },
+        {
+          "word": "your",
+          "startTimeMs": 82900,
+          "endTimeMs": 83200
+        },
+        {
+          "word": "eyes",
+          "startTimeMs": 83200,
+          "endTimeMs": 83800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 83900,
+      "endTimeMs": 86900,
+      "segmentIndex": 18,
+      "text": "Bye-bye to the other girls, I didn't even say goodbye",
+      "words": [
+        {
+          "word": "Bye-bye",
+          "startTimeMs": 83900,
+          "endTimeMs": 84300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 84300,
+          "endTimeMs": 84500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 84500,
+          "endTimeMs": 84700
+        },
+        {
+          "word": "other",
+          "startTimeMs": 84700,
+          "endTimeMs": 85000
+        },
+        {
+          "word": "girls,",
+          "startTimeMs": 85000,
+          "endTimeMs": 85400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 85400,
+          "endTimeMs": 85600
+        },
+        {
+          "word": "didn't",
+          "startTimeMs": 85600,
+          "endTimeMs": 85900
+        },
+        {
+          "word": "even",
+          "startTimeMs": 85900,
+          "endTimeMs": 86200
+        },
+        {
+          "word": "say",
+          "startTimeMs": 86200,
+          "endTimeMs": 86500
+        },
+        {
+          "word": "goodbye",
+          "startTimeMs": 86500,
+          "endTimeMs": 86800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 86900,
+      "endTimeMs": 89800,
+      "segmentIndex": 19,
+      "text": "I didn't look for you, no",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 86900,
+          "endTimeMs": 87200
+        },
+        {
+          "word": "didn't",
+          "startTimeMs": 87200,
+          "endTimeMs": 87600
+        },
+        {
+          "word": "look",
+          "startTimeMs": 87600,
+          "endTimeMs": 88000
+        },
+        {
+          "word": "for",
+          "startTimeMs": 88000,
+          "endTimeMs": 88300
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 88300,
+          "endTimeMs": 88600
+        },
+        {
+          "word": "no",
+          "startTimeMs": 88600,
+          "endTimeMs": 89400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 89800,
+      "endTimeMs": 92300,
+      "segmentIndex": 20,
+      "text": "We collided on the way",
+      "words": [
+        {
+          "word": "We",
+          "startTimeMs": 89800,
+          "endTimeMs": 90100
+        },
+        {
+          "word": "collided",
+          "startTimeMs": 90100,
+          "endTimeMs": 90700
+        },
+        {
+          "word": "on",
+          "startTimeMs": 90700,
+          "endTimeMs": 91000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 91000,
+          "endTimeMs": 91300
+        },
+        {
+          "word": "way",
+          "startTimeMs": 91300,
+          "endTimeMs": 92100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 92300,
+      "endTimeMs": 95000,
+      "segmentIndex": 21,
+      "text": "It's with your soul that I connect",
+      "words": [
+        {
+          "word": "It's",
+          "startTimeMs": 92300,
+          "endTimeMs": 92600
+        },
+        {
+          "word": "with",
+          "startTimeMs": 92600,
+          "endTimeMs": 92900
+        },
+        {
+          "word": "your",
+          "startTimeMs": 92900,
+          "endTimeMs": 93200
+        },
+        {
+          "word": "soul",
+          "startTimeMs": 93200,
+          "endTimeMs": 93700
+        },
+        {
+          "word": "that",
+          "startTimeMs": 93700,
+          "endTimeMs": 94000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 94000,
+          "endTimeMs": 94200
+        },
+        {
+          "word": "connect",
+          "startTimeMs": 94200,
+          "endTimeMs": 94900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 95000,
+      "endTimeMs": 99200,
+      "segmentIndex": 22,
+      "text": "Don't worry, it doesn't have to be perfect, no",
+      "words": [
+        {
+          "word": "Don't",
+          "startTimeMs": 95000,
+          "endTimeMs": 95500
+        },
+        {
+          "word": "worry,",
+          "startTimeMs": 95500,
+          "endTimeMs": 96000
+        },
+        {
+          "word": "it",
+          "startTimeMs": 96000,
+          "endTimeMs": 96200
+        },
+        {
+          "word": "doesn't",
+          "startTimeMs": 96200,
+          "endTimeMs": 96600
+        },
+        {
+          "word": "have",
+          "startTimeMs": 96600,
+          "endTimeMs": 96900
+        },
+        {
+          "word": "to",
+          "startTimeMs": 96900,
+          "endTimeMs": 97100
+        },
+        {
+          "word": "be",
+          "startTimeMs": 97100,
+          "endTimeMs": 97300
+        },
+        {
+          "word": "perfect,",
+          "startTimeMs": 97300,
+          "endTimeMs": 97800
+        },
+        {
+          "word": "no",
+          "startTimeMs": 97800,
+          "endTimeMs": 98800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 99200,
+      "endTimeMs": 102100,
+      "segmentIndex": 23,
+      "text": "Sin doesn't exist here",
+      "words": [
+        {
+          "word": "Sin",
+          "startTimeMs": 99200,
+          "endTimeMs": 99800
+        },
+        {
+          "word": "doesn't",
+          "startTimeMs": 99800,
+          "endTimeMs": 100400
+        },
+        {
+          "word": "exist",
+          "startTimeMs": 100400,
+          "endTimeMs": 101000
+        },
+        {
+          "word": "here",
+          "startTimeMs": 101000,
+          "endTimeMs": 101800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 102100,
+      "endTimeMs": 105300,
+      "segmentIndex": 24,
+      "text": "And making mistakes is beautiful",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 102100,
+          "endTimeMs": 102300
+        },
+        {
+          "word": "making",
+          "startTimeMs": 102300,
+          "endTimeMs": 103000
+        },
+        {
+          "word": "mistakes",
+          "startTimeMs": 103000,
+          "endTimeMs": 103800
+        },
+        {
+          "word": "is",
+          "startTimeMs": 103800,
+          "endTimeMs": 104200
+        },
+        {
+          "word": "beautiful",
+          "startTimeMs": 104200,
+          "endTimeMs": 104800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 105300,
+      "endTimeMs": 108200,
+      "segmentIndex": 25,
+      "text": "Mistakes are pleasures",
+      "words": [
+        {
+          "word": "Mistakes",
+          "startTimeMs": 105300,
+          "endTimeMs": 106000
+        },
+        {
+          "word": "are",
+          "startTimeMs": 106000,
+          "endTimeMs": 106500
+        },
+        {
+          "word": "pleasures",
+          "startTimeMs": 106500,
+          "endTimeMs": 107800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 108200,
+      "endTimeMs": 110800,
+      "segmentIndex": 26,
+      "text": "Just like all your little kisses",
+      "words": [
+        {
+          "word": "Just",
+          "startTimeMs": 108200,
+          "endTimeMs": 108600
+        },
+        {
+          "word": "like",
+          "startTimeMs": 108600,
+          "endTimeMs": 109000
+        },
+        {
+          "word": "all",
+          "startTimeMs": 109000,
+          "endTimeMs": 109300
+        },
+        {
+          "word": "your",
+          "startTimeMs": 109300,
+          "endTimeMs": 109700
+        },
+        {
+          "word": "little",
+          "startTimeMs": 109700,
+          "endTimeMs": 110200
+        },
+        {
+          "word": "kisses",
+          "startTimeMs": 110200,
+          "endTimeMs": 110600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 110800,
+      "endTimeMs": 115900,
+      "segmentIndex": 27,
+      "text": "And just look at me with those pretty little eyes",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 110800,
+          "endTimeMs": 111200
+        },
+        {
+          "word": "just",
+          "startTimeMs": 111200,
+          "endTimeMs": 111600
+        },
+        {
+          "word": "look",
+          "startTimeMs": 111600,
+          "endTimeMs": 112000
+        },
+        {
+          "word": "at",
+          "startTimeMs": 112000,
+          "endTimeMs": 112400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 112400,
+          "endTimeMs": 112800
+        },
+        {
+          "word": "with",
+          "startTimeMs": 112800,
+          "endTimeMs": 113300
+        },
+        {
+          "word": "those",
+          "startTimeMs": 113300,
+          "endTimeMs": 113800
+        },
+        {
+          "word": "pretty",
+          "startTimeMs": 113800,
+          "endTimeMs": 114400
+        },
+        {
+          "word": "little",
+          "startTimeMs": 114400,
+          "endTimeMs": 114900
+        },
+        {
+          "word": "eyes",
+          "startTimeMs": 114900,
+          "endTimeMs": 115800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 115900,
+      "endTimeMs": 119000,
+      "segmentIndex": 28,
+      "text": "Because with that, I'm doing fine",
+      "words": [
+        {
+          "word": "Because",
+          "startTimeMs": 115900,
+          "endTimeMs": 116400
+        },
+        {
+          "word": "with",
+          "startTimeMs": 116400,
+          "endTimeMs": 116800
+        },
+        {
+          "word": "that,",
+          "startTimeMs": 116800,
+          "endTimeMs": 117200
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 117200,
+          "endTimeMs": 117600
+        },
+        {
+          "word": "doing",
+          "startTimeMs": 117600,
+          "endTimeMs": 118000
+        },
+        {
+          "word": "fine",
+          "startTimeMs": 118000,
+          "endTimeMs": 118900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 119000,
+      "endTimeMs": 122800,
+      "segmentIndex": 29,
+      "text": "Today I've been born again",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 119000,
+          "endTimeMs": 119400
+        },
+        {
+          "word": "I've",
+          "startTimeMs": 119400,
+          "endTimeMs": 119800
+        },
+        {
+          "word": "been",
+          "startTimeMs": 119800,
+          "endTimeMs": 120200
+        },
+        {
+          "word": "born",
+          "startTimeMs": 120200,
+          "endTimeMs": 120600
+        },
+        {
+          "word": "again",
+          "startTimeMs": 120600,
+          "endTimeMs": 122500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 122800,
+      "endTimeMs": 127700,
+      "segmentIndex": 30,
+      "text": "And just look at me with those pretty little eyes",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 122800,
+          "endTimeMs": 123200
+        },
+        {
+          "word": "just",
+          "startTimeMs": 123200,
+          "endTimeMs": 123600
+        },
+        {
+          "word": "look",
+          "startTimeMs": 123600,
+          "endTimeMs": 124000
+        },
+        {
+          "word": "at",
+          "startTimeMs": 124000,
+          "endTimeMs": 124400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 124400,
+          "endTimeMs": 124800
+        },
+        {
+          "word": "with",
+          "startTimeMs": 124800,
+          "endTimeMs": 125300
+        },
+        {
+          "word": "those",
+          "startTimeMs": 125300,
+          "endTimeMs": 125800
+        },
+        {
+          "word": "pretty",
+          "startTimeMs": 125800,
+          "endTimeMs": 126400
+        },
+        {
+          "word": "little",
+          "startTimeMs": 126400,
+          "endTimeMs": 126900
+        },
+        {
+          "word": "eyes",
+          "startTimeMs": 126900,
+          "endTimeMs": 127600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 127700,
+      "endTimeMs": 130900,
+      "segmentIndex": 31,
+      "text": "Because with that, I'm doing fine",
+      "words": [
+        {
+          "word": "Because",
+          "startTimeMs": 127700,
+          "endTimeMs": 128200
+        },
+        {
+          "word": "with",
+          "startTimeMs": 128200,
+          "endTimeMs": 128600
+        },
+        {
+          "word": "that,",
+          "startTimeMs": 128600,
+          "endTimeMs": 129000
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 129000,
+          "endTimeMs": 129400
+        },
+        {
+          "word": "doing",
+          "startTimeMs": 129400,
+          "endTimeMs": 129800
+        },
+        {
+          "word": "fine",
+          "startTimeMs": 129800,
+          "endTimeMs": 130800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 130900,
+      "endTimeMs": 135300,
+      "segmentIndex": 32,
+      "text": "Today I've been born again",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 130900,
+          "endTimeMs": 131300
+        },
+        {
+          "word": "I've",
+          "startTimeMs": 131300,
+          "endTimeMs": 131700
+        },
+        {
+          "word": "been",
+          "startTimeMs": 131700,
+          "endTimeMs": 132100
+        },
+        {
+          "word": "born",
+          "startTimeMs": 132100,
+          "endTimeMs": 132500
+        },
+        {
+          "word": "again",
+          "startTimeMs": 132500,
+          "endTimeMs": 135000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 135300,
+      "endTimeMs": 141400,
+      "segmentIndex": 33,
+      "text": "You and I, you and I, you and I (you and I, you and I)",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 135300,
+          "endTimeMs": 135600
+        },
+        {
+          "word": "and",
+          "startTimeMs": 135600,
+          "endTimeMs": 135800
+        },
+        {
+          "word": "I,",
+          "startTimeMs": 135800,
+          "endTimeMs": 136300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 136300,
+          "endTimeMs": 136600
+        },
+        {
+          "word": "and",
+          "startTimeMs": 136600,
+          "endTimeMs": 136800
+        },
+        {
+          "word": "I,",
+          "startTimeMs": 136800,
+          "endTimeMs": 137300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 137300,
+          "endTimeMs": 137600
+        },
+        {
+          "word": "and",
+          "startTimeMs": 137600,
+          "endTimeMs": 137800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 137800,
+          "endTimeMs": 138300
+        },
+        {
+          "word": "(you",
+          "startTimeMs": 138300,
+          "endTimeMs": 138800
+        },
+        {
+          "word": "and",
+          "startTimeMs": 138800,
+          "endTimeMs": 139000
+        },
+        {
+          "word": "I,",
+          "startTimeMs": 139000,
+          "endTimeMs": 139500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 139500,
+          "endTimeMs": 140000
+        },
+        {
+          "word": "and",
+          "startTimeMs": 140000,
+          "endTimeMs": 140200
+        },
+        {
+          "word": "I)",
+          "startTimeMs": 140200,
+          "endTimeMs": 141200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 141400,
+      "endTimeMs": 151300,
+      "segmentIndex": 34,
+      "text": "You and I, you and I (you and I, you and I), you and I",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 141400,
+          "endTimeMs": 142000
+        },
+        {
+          "word": "and",
+          "startTimeMs": 142000,
+          "endTimeMs": 142200
+        },
+        {
+          "word": "I,",
+          "startTimeMs": 142200,
+          "endTimeMs": 142800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 142800,
+          "endTimeMs": 143200
+        },
+        {
+          "word": "and",
+          "startTimeMs": 143200,
+          "endTimeMs": 143400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 143400,
+          "endTimeMs": 144000
+        },
+        {
+          "word": "(you",
+          "startTimeMs": 144000,
+          "endTimeMs": 144500
+        },
+        {
+          "word": "and",
+          "startTimeMs": 144500,
+          "endTimeMs": 144700
+        },
+        {
+          "word": "I,",
+          "startTimeMs": 144700,
+          "endTimeMs": 145300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 145300,
+          "endTimeMs": 145800
+        },
+        {
+          "word": "and",
+          "startTimeMs": 145800,
+          "endTimeMs": 146000
+        },
+        {
+          "word": "I),",
+          "startTimeMs": 146000,
+          "endTimeMs": 147500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 147500,
+          "endTimeMs": 149000
+        },
+        {
+          "word": "and",
+          "startTimeMs": 149000,
+          "endTimeMs": 149300
+        },
+        {
+          "word": "I",
+          "startTimeMs": 149300,
+          "endTimeMs": 151000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 151300,
+      "endTimeMs": 155900,
+      "segmentIndex": 35,
+      "text": "You and I, you and I",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 151300,
+          "endTimeMs": 152000
+        },
+        {
+          "word": "and",
+          "startTimeMs": 152000,
+          "endTimeMs": 152300
+        },
+        {
+          "word": "I,",
+          "startTimeMs": 152300,
+          "endTimeMs": 153000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 153000,
+          "endTimeMs": 154000
+        },
+        {
+          "word": "and",
+          "startTimeMs": 154000,
+          "endTimeMs": 154300
+        },
+        {
+          "word": "I",
+          "startTimeMs": 154300,
+          "endTimeMs": 155500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 155900,
+      "endTimeMs": 158400,
+      "segmentIndex": 36,
+      "text": "You and I, you and I",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 155900,
+          "endTimeMs": 156300
+        },
+        {
+          "word": "and",
+          "startTimeMs": 156300,
+          "endTimeMs": 156500
+        },
+        {
+          "word": "I,",
+          "startTimeMs": 156500,
+          "endTimeMs": 157000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 157000,
+          "endTimeMs": 157400
+        },
+        {
+          "word": "and",
+          "startTimeMs": 157400,
+          "endTimeMs": 157600
+        },
+        {
+          "word": "I",
+          "startTimeMs": 157600,
+          "endTimeMs": 158300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 158400,
+      "endTimeMs": 160400,
+      "segmentIndex": 37,
+      "text": "I don't let myself be led by anyone",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 158400,
+          "endTimeMs": 158600
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 158600,
+          "endTimeMs": 158800
+        },
+        {
+          "word": "let",
+          "startTimeMs": 158800,
+          "endTimeMs": 159000
+        },
+        {
+          "word": "myself",
+          "startTimeMs": 159000,
+          "endTimeMs": 159300
+        },
+        {
+          "word": "be",
+          "startTimeMs": 159300,
+          "endTimeMs": 159500
+        },
+        {
+          "word": "led",
+          "startTimeMs": 159500,
+          "endTimeMs": 159700
+        },
+        {
+          "word": "by",
+          "startTimeMs": 159700,
+          "endTimeMs": 160000
+        },
+        {
+          "word": "anyone",
+          "startTimeMs": 160000,
+          "endTimeMs": 160350
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 160400,
+      "endTimeMs": 163700,
+      "segmentIndex": 38,
+      "text": "I only let myself be led by your smile",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 160400,
+          "endTimeMs": 160700
+        },
+        {
+          "word": "only",
+          "startTimeMs": 160700,
+          "endTimeMs": 161000
+        },
+        {
+          "word": "let",
+          "startTimeMs": 161000,
+          "endTimeMs": 161200
+        },
+        {
+          "word": "myself",
+          "startTimeMs": 161200,
+          "endTimeMs": 161500
+        },
+        {
+          "word": "be",
+          "startTimeMs": 161500,
+          "endTimeMs": 161700
+        },
+        {
+          "word": "led",
+          "startTimeMs": 161700,
+          "endTimeMs": 161900
+        },
+        {
+          "word": "by",
+          "startTimeMs": 161900,
+          "endTimeMs": 162200
+        },
+        {
+          "word": "your",
+          "startTimeMs": 162200,
+          "endTimeMs": 162500
+        },
+        {
+          "word": "smile",
+          "startTimeMs": 162500,
+          "endTimeMs": 163300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 163700,
+      "endTimeMs": 167000,
+      "segmentIndex": 39,
+      "text": "And by the mole near your mouth",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 163700,
+          "endTimeMs": 164000
+        },
+        {
+          "word": "by",
+          "startTimeMs": 164000,
+          "endTimeMs": 164300
+        },
+        {
+          "word": "the",
+          "startTimeMs": 164300,
+          "endTimeMs": 164500
+        },
+        {
+          "word": "mole",
+          "startTimeMs": 164500,
+          "endTimeMs": 165000
+        },
+        {
+          "word": "near",
+          "startTimeMs": 165000,
+          "endTimeMs": 165500
+        },
+        {
+          "word": "your",
+          "startTimeMs": 165500,
+          "endTimeMs": 165800
+        },
+        {
+          "word": "mouth",
+          "startTimeMs": 165800,
+          "endTimeMs": 166800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 167000,
+      "endTimeMs": 170000,
+      "segmentIndex": 40,
+      "text": "If I'm crazy, you're a little crazy",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 167000,
+          "endTimeMs": 167300
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 167300,
+          "endTimeMs": 167600
+        },
+        {
+          "word": "crazy,",
+          "startTimeMs": 167600,
+          "endTimeMs": 168100
+        },
+        {
+          "word": "you're",
+          "startTimeMs": 168100,
+          "endTimeMs": 168400
+        },
+        {
+          "word": "a",
+          "startTimeMs": 168400,
+          "endTimeMs": 168700
+        },
+        {
+          "word": "little",
+          "startTimeMs": 168700,
+          "endTimeMs": 169100
+        },
+        {
+          "word": "crazy",
+          "startTimeMs": 169100,
+          "endTimeMs": 169800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 170000,
+      "endTimeMs": 174000,
+      "segmentIndex": 41,
+      "text": "But, baby, there's no other like you, no",
+      "words": [
+        {
+          "word": "But,",
+          "startTimeMs": 170000,
+          "endTimeMs": 170400
+        },
+        {
+          "word": "baby,",
+          "startTimeMs": 170400,
+          "endTimeMs": 170900
+        },
+        {
+          "word": "there's",
+          "startTimeMs": 170900,
+          "endTimeMs": 171400
+        },
+        {
+          "word": "no",
+          "startTimeMs": 171400,
+          "endTimeMs": 171600
+        },
+        {
+          "word": "other",
+          "startTimeMs": 171600,
+          "endTimeMs": 171900
+        },
+        {
+          "word": "like",
+          "startTimeMs": 171900,
+          "endTimeMs": 172200
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 172200,
+          "endTimeMs": 172500
+        },
+        {
+          "word": "no",
+          "startTimeMs": 172500,
+          "endTimeMs": 173800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 174000,
+      "endTimeMs": 176600,
+      "segmentIndex": 42,
+      "text": "I want to give you sunflowers",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 174000,
+          "endTimeMs": 174300
+        },
+        {
+          "word": "want",
+          "startTimeMs": 174300,
+          "endTimeMs": 174600
+        },
+        {
+          "word": "to",
+          "startTimeMs": 174600,
+          "endTimeMs": 174800
+        },
+        {
+          "word": "give",
+          "startTimeMs": 174800,
+          "endTimeMs": 175200
+        },
+        {
+          "word": "you",
+          "startTimeMs": 175200,
+          "endTimeMs": 175500
+        },
+        {
+          "word": "sunflowers",
+          "startTimeMs": 175500,
+          "endTimeMs": 176300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 176600,
+      "endTimeMs": 179800,
+      "segmentIndex": 43,
+      "text": "Go to the beach and look for shells for you",
+      "words": [
+        {
+          "word": "Go",
+          "startTimeMs": 176600,
+          "endTimeMs": 176800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 176800,
+          "endTimeMs": 177000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 177000,
+          "endTimeMs": 177200
+        },
+        {
+          "word": "beach",
+          "startTimeMs": 177200,
+          "endTimeMs": 177700
+        },
+        {
+          "word": "and",
+          "startTimeMs": 177700,
+          "endTimeMs": 178000
+        },
+        {
+          "word": "look",
+          "startTimeMs": 178000,
+          "endTimeMs": 178300
+        },
+        {
+          "word": "for",
+          "startTimeMs": 178300,
+          "endTimeMs": 178600
+        },
+        {
+          "word": "shells",
+          "startTimeMs": 178600,
+          "endTimeMs": 179000
+        },
+        {
+          "word": "for",
+          "startTimeMs": 179000,
+          "endTimeMs": 179300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 179300,
+          "endTimeMs": 179700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 179800,
+      "endTimeMs": 182900,
+      "segmentIndex": 44,
+      "text": "When I'm with you, I don't look at the Rolex",
+      "words": [
+        {
+          "word": "When",
+          "startTimeMs": 179800,
+          "endTimeMs": 180100
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 180100,
+          "endTimeMs": 180400
+        },
+        {
+          "word": "with",
+          "startTimeMs": 180400,
+          "endTimeMs": 180700
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 180700,
+          "endTimeMs": 181000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 181000,
+          "endTimeMs": 181200
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 181200,
+          "endTimeMs": 181500
+        },
+        {
+          "word": "look",
+          "startTimeMs": 181500,
+          "endTimeMs": 181800
+        },
+        {
+          "word": "at",
+          "startTimeMs": 181800,
+          "endTimeMs": 182000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 182000,
+          "endTimeMs": 182200
+        },
+        {
+          "word": "Rolex",
+          "startTimeMs": 182200,
+          "endTimeMs": 182800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 182900,
+      "endTimeMs": 185800,
+      "segmentIndex": 45,
+      "text": "Let's dance to 200 songs",
+      "words": [
+        {
+          "word": "Let's",
+          "startTimeMs": 182900,
+          "endTimeMs": 183500
+        },
+        {
+          "word": "dance",
+          "startTimeMs": 183500,
+          "endTimeMs": 184000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 184000,
+          "endTimeMs": 184200
+        },
+        {
+          "word": "200",
+          "startTimeMs": 184200,
+          "endTimeMs": 184800
+        },
+        {
+          "word": "songs",
+          "startTimeMs": 184800,
+          "endTimeMs": 185700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 185800,
+      "endTimeMs": 189000,
+      "segmentIndex": 46,
+      "text": "No one makes me feel the way you do",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 185800,
+          "endTimeMs": 186100
+        },
+        {
+          "word": "one",
+          "startTimeMs": 186100,
+          "endTimeMs": 186400
+        },
+        {
+          "word": "makes",
+          "startTimeMs": 186400,
+          "endTimeMs": 186800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 186800,
+          "endTimeMs": 187100
+        },
+        {
+          "word": "feel",
+          "startTimeMs": 187100,
+          "endTimeMs": 187500
+        },
+        {
+          "word": "the",
+          "startTimeMs": 187500,
+          "endTimeMs": 187800
+        },
+        {
+          "word": "way",
+          "startTimeMs": 187800,
+          "endTimeMs": 188100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 188100,
+          "endTimeMs": 188400
+        },
+        {
+          "word": "do",
+          "startTimeMs": 188400,
+          "endTimeMs": 188900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 189000,
+      "endTimeMs": 192200,
+      "segmentIndex": 47,
+      "text": "Mmm, mm-mm, mmm",
+      "words": [
+        {
+          "word": "Mmm,",
+          "startTimeMs": 189000,
+          "endTimeMs": 190000
+        },
+        {
+          "word": "mm-mm,",
+          "startTimeMs": 190000,
+          "endTimeMs": 191200
+        },
+        {
+          "word": "mmm",
+          "startTimeMs": 191200,
+          "endTimeMs": 192100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 192200,
+      "endTimeMs": 201000,
+      "segmentIndex": 48,
+      "text": "Mmm, mm-mm, mmm",
+      "words": [
+        {
+          "word": "Mmm,",
+          "startTimeMs": 192200,
+          "endTimeMs": 195000
+        },
+        {
+          "word": "mm-mm,",
+          "startTimeMs": 195000,
+          "endTimeMs": 198000
+        },
+        {
+          "word": "mmm",
+          "startTimeMs": 198000,
+          "endTimeMs": 200500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 201000,
+      "endTimeMs": 203700,
+      "segmentIndex": 49,
+      "text": "I talk to God and you are His answer",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 201000,
+          "endTimeMs": 201300
+        },
+        {
+          "word": "talk",
+          "startTimeMs": 201300,
+          "endTimeMs": 201600
+        },
+        {
+          "word": "to",
+          "startTimeMs": 201600,
+          "endTimeMs": 201900
+        },
+        {
+          "word": "God",
+          "startTimeMs": 201900,
+          "endTimeMs": 202200
+        },
+        {
+          "word": "and",
+          "startTimeMs": 202200,
+          "endTimeMs": 202400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 202400,
+          "endTimeMs": 202600
+        },
+        {
+          "word": "are",
+          "startTimeMs": 202600,
+          "endTimeMs": 202800
+        },
+        {
+          "word": "His",
+          "startTimeMs": 202800,
+          "endTimeMs": 203000
+        },
+        {
+          "word": "answer",
+          "startTimeMs": 203000,
+          "endTimeMs": 203650
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 203700,
+      "endTimeMs": 207200,
+      "segmentIndex": 50,
+      "text": "I learned that beautiful moments never cost a thing",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 203700,
+          "endTimeMs": 204100
+        },
+        {
+          "word": "learned",
+          "startTimeMs": 204100,
+          "endTimeMs": 204500
+        },
+        {
+          "word": "that",
+          "startTimeMs": 204500,
+          "endTimeMs": 204800
+        },
+        {
+          "word": "beautiful",
+          "startTimeMs": 204800,
+          "endTimeMs": 205300
+        },
+        {
+          "word": "moments",
+          "startTimeMs": 205300,
+          "endTimeMs": 205800
+        },
+        {
+          "word": "never",
+          "startTimeMs": 205800,
+          "endTimeMs": 206200
+        },
+        {
+          "word": "cost",
+          "startTimeMs": 206200,
+          "endTimeMs": 206500
+        },
+        {
+          "word": "a",
+          "startTimeMs": 206500,
+          "endTimeMs": 206700
+        },
+        {
+          "word": "thing",
+          "startTimeMs": 206700,
+          "endTimeMs": 207100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 207200,
+      "endTimeMs": 209800,
+      "segmentIndex": 51,
+      "text": "Like when you give me your gaze",
+      "words": [
+        {
+          "word": "Like",
+          "startTimeMs": 207200,
+          "endTimeMs": 207500
+        },
+        {
+          "word": "when",
+          "startTimeMs": 207500,
+          "endTimeMs": 207800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 207800,
+          "endTimeMs": 208100
+        },
+        {
+          "word": "give",
+          "startTimeMs": 208100,
+          "endTimeMs": 208400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 208400,
+          "endTimeMs": 208700
+        },
+        {
+          "word": "your",
+          "startTimeMs": 208700,
+          "endTimeMs": 209000
+        },
+        {
+          "word": "gaze",
+          "startTimeMs": 209000,
+          "endTimeMs": 209700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 209800,
+      "endTimeMs": 213000,
+      "segmentIndex": 52,
+      "text": "And the sun, its setting (ey, ey), and the sun, its setting",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 209800,
+          "endTimeMs": 210000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 210000,
+          "endTimeMs": 210200
+        },
+        {
+          "word": "sun,",
+          "startTimeMs": 210200,
+          "endTimeMs": 210500
+        },
+        {
+          "word": "its",
+          "startTimeMs": 210500,
+          "endTimeMs": 210700
+        },
+        {
+          "word": "setting",
+          "startTimeMs": 210700,
+          "endTimeMs": 211100
+        },
+        {
+          "word": "(ey,",
+          "startTimeMs": 211100,
+          "endTimeMs": 211400
+        },
+        {
+          "word": "ey),",
+          "startTimeMs": 211400,
+          "endTimeMs": 211700
+        },
+        {
+          "word": "and",
+          "startTimeMs": 211700,
+          "endTimeMs": 211900
+        },
+        {
+          "word": "the",
+          "startTimeMs": 211900,
+          "endTimeMs": 212100
+        },
+        {
+          "word": "sun,",
+          "startTimeMs": 212100,
+          "endTimeMs": 212400
+        },
+        {
+          "word": "its",
+          "startTimeMs": 212400,
+          "endTimeMs": 212600
+        },
+        {
+          "word": "setting",
+          "startTimeMs": 212600,
+          "endTimeMs": 212900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 213000,
+      "endTimeMs": 216000,
+      "segmentIndex": 53,
+      "text": "When I'm on top of you, of you",
+      "words": [
+        {
+          "word": "When",
+          "startTimeMs": 213000,
+          "endTimeMs": 213400
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 213400,
+          "endTimeMs": 213700
+        },
+        {
+          "word": "on",
+          "startTimeMs": 213700,
+          "endTimeMs": 213900
+        },
+        {
+          "word": "top",
+          "startTimeMs": 213900,
+          "endTimeMs": 214200
+        },
+        {
+          "word": "of",
+          "startTimeMs": 214200,
+          "endTimeMs": 214400
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 214400,
+          "endTimeMs": 214800
+        },
+        {
+          "word": "of",
+          "startTimeMs": 214800,
+          "endTimeMs": 215100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 215100,
+          "endTimeMs": 215800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 216000,
+      "endTimeMs": 219000,
+      "segmentIndex": 54,
+      "text": "Mami, I forget about everything, everything",
+      "words": [
+        {
+          "word": "Mami,",
+          "startTimeMs": 216000,
+          "endTimeMs": 216500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 216500,
+          "endTimeMs": 216700
+        },
+        {
+          "word": "forget",
+          "startTimeMs": 216700,
+          "endTimeMs": 217100
+        },
+        {
+          "word": "about",
+          "startTimeMs": 217100,
+          "endTimeMs": 217500
+        },
+        {
+          "word": "everything,",
+          "startTimeMs": 217500,
+          "endTimeMs": 218000
+        },
+        {
+          "word": "everything",
+          "startTimeMs": 218000,
+          "endTimeMs": 218900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 219000,
+      "endTimeMs": 222000,
+      "segmentIndex": 55,
+      "text": "No one else is needed here",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 219000,
+          "endTimeMs": 219500
+        },
+        {
+          "word": "one",
+          "startTimeMs": 219500,
+          "endTimeMs": 219800
+        },
+        {
+          "word": "else",
+          "startTimeMs": 219800,
+          "endTimeMs": 220200
+        },
+        {
+          "word": "is",
+          "startTimeMs": 220200,
+          "endTimeMs": 220500
+        },
+        {
+          "word": "needed",
+          "startTimeMs": 220500,
+          "endTimeMs": 221000
+        },
+        {
+          "word": "here",
+          "startTimeMs": 221000,
+          "endTimeMs": 221800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 222000,
+      "endTimeMs": 225300,
+      "segmentIndex": 56,
+      "text": "Only you and I",
+      "words": [
+        {
+          "word": "Only",
+          "startTimeMs": 222000,
+          "endTimeMs": 223500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 223500,
+          "endTimeMs": 224000
+        },
+        {
+          "word": "and",
+          "startTimeMs": 224000,
+          "endTimeMs": 224300
+        },
+        {
+          "word": "I",
+          "startTimeMs": 224300,
+          "endTimeMs": 225200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 225300,
+      "endTimeMs": 228100,
+      "segmentIndex": 57,
+      "text": "Before the sun comes up and I floor the accelerator",
+      "words": [
+        {
+          "word": "Before",
+          "startTimeMs": 225300,
+          "endTimeMs": 225550
+        },
+        {
+          "word": "the",
+          "startTimeMs": 225550,
+          "endTimeMs": 225700
+        },
+        {
+          "word": "sun",
+          "startTimeMs": 225700,
+          "endTimeMs": 225900
+        },
+        {
+          "word": "comes",
+          "startTimeMs": 225900,
+          "endTimeMs": 226100
+        },
+        {
+          "word": "up",
+          "startTimeMs": 226100,
+          "endTimeMs": 226300
+        },
+        {
+          "word": "and",
+          "startTimeMs": 226300,
+          "endTimeMs": 226500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 226500,
+          "endTimeMs": 226700
+        },
+        {
+          "word": "floor",
+          "startTimeMs": 226700,
+          "endTimeMs": 227000
+        },
+        {
+          "word": "the",
+          "startTimeMs": 227000,
+          "endTimeMs": 227200
+        },
+        {
+          "word": "accelerator",
+          "startTimeMs": 227200,
+          "endTimeMs": 228000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 228100,
+      "endTimeMs": 231100,
+      "segmentIndex": 58,
+      "text": "Going without brakes and losing control",
+      "words": [
+        {
+          "word": "Going",
+          "startTimeMs": 228100,
+          "endTimeMs": 228500
+        },
+        {
+          "word": "without",
+          "startTimeMs": 228500,
+          "endTimeMs": 228900
+        },
+        {
+          "word": "brakes",
+          "startTimeMs": 228900,
+          "endTimeMs": 229400
+        },
+        {
+          "word": "and",
+          "startTimeMs": 229400,
+          "endTimeMs": 229700
+        },
+        {
+          "word": "losing",
+          "startTimeMs": 229700,
+          "endTimeMs": 230100
+        },
+        {
+          "word": "control",
+          "startTimeMs": 230100,
+          "endTimeMs": 231000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 231100,
+      "endTimeMs": 234200,
+      "segmentIndex": 59,
+      "text": "It'll just be the two of us, you and I caressing each other",
+      "words": [
+        {
+          "word": "It'll",
+          "startTimeMs": 231100,
+          "endTimeMs": 231300
+        },
+        {
+          "word": "just",
+          "startTimeMs": 231300,
+          "endTimeMs": 231450
+        },
+        {
+          "word": "be",
+          "startTimeMs": 231450,
+          "endTimeMs": 231600
+        },
+        {
+          "word": "the",
+          "startTimeMs": 231600,
+          "endTimeMs": 231750
+        },
+        {
+          "word": "two",
+          "startTimeMs": 231750,
+          "endTimeMs": 232000
+        },
+        {
+          "word": "of",
+          "startTimeMs": 232000,
+          "endTimeMs": 232150
+        },
+        {
+          "word": "us,",
+          "startTimeMs": 232150,
+          "endTimeMs": 232400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 232400,
+          "endTimeMs": 232600
+        },
+        {
+          "word": "and",
+          "startTimeMs": 232600,
+          "endTimeMs": 232800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 232800,
+          "endTimeMs": 233000
+        },
+        {
+          "word": "caressing",
+          "startTimeMs": 233000,
+          "endTimeMs": 233600
+        },
+        {
+          "word": "each",
+          "startTimeMs": 233600,
+          "endTimeMs": 233800
+        },
+        {
+          "word": "other",
+          "startTimeMs": 233800,
+          "endTimeMs": 234100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 234200,
+      "endTimeMs": 236800,
+      "segmentIndex": 60,
+      "text": "In the middle of time, without saying goodbye",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 234200,
+          "endTimeMs": 234400
+        },
+        {
+          "word": "the",
+          "startTimeMs": 234400,
+          "endTimeMs": 234600
+        },
+        {
+          "word": "middle",
+          "startTimeMs": 234600,
+          "endTimeMs": 235000
+        },
+        {
+          "word": "of",
+          "startTimeMs": 235000,
+          "endTimeMs": 235200
+        },
+        {
+          "word": "time,",
+          "startTimeMs": 235200,
+          "endTimeMs": 235600
+        },
+        {
+          "word": "without",
+          "startTimeMs": 235600,
+          "endTimeMs": 235900
+        },
+        {
+          "word": "saying",
+          "startTimeMs": 235900,
+          "endTimeMs": 236300
+        },
+        {
+          "word": "goodbye",
+          "startTimeMs": 236300,
+          "endTimeMs": 236700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 236800,
+      "endTimeMs": 241800,
+      "segmentIndex": 61,
+      "text": "And just look at me with those pretty little eyes",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 236800,
+          "endTimeMs": 237200
+        },
+        {
+          "word": "just",
+          "startTimeMs": 237200,
+          "endTimeMs": 237600
+        },
+        {
+          "word": "look",
+          "startTimeMs": 237600,
+          "endTimeMs": 238000
+        },
+        {
+          "word": "at",
+          "startTimeMs": 238000,
+          "endTimeMs": 238400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 238400,
+          "endTimeMs": 238800
+        },
+        {
+          "word": "with",
+          "startTimeMs": 238800,
+          "endTimeMs": 239300
+        },
+        {
+          "word": "those",
+          "startTimeMs": 239300,
+          "endTimeMs": 239800
+        },
+        {
+          "word": "pretty",
+          "startTimeMs": 239800,
+          "endTimeMs": 240400
+        },
+        {
+          "word": "little",
+          "startTimeMs": 240400,
+          "endTimeMs": 240900
+        },
+        {
+          "word": "eyes",
+          "startTimeMs": 240900,
+          "endTimeMs": 241700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 241800,
+      "endTimeMs": 245000,
+      "segmentIndex": 62,
+      "text": "Because with that, I'm doing fine",
+      "words": [
+        {
+          "word": "Because",
+          "startTimeMs": 241800,
+          "endTimeMs": 242300
+        },
+        {
+          "word": "with",
+          "startTimeMs": 242300,
+          "endTimeMs": 242700
+        },
+        {
+          "word": "that,",
+          "startTimeMs": 242700,
+          "endTimeMs": 243100
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 243100,
+          "endTimeMs": 243500
+        },
+        {
+          "word": "doing",
+          "startTimeMs": 243500,
+          "endTimeMs": 243900
+        },
+        {
+          "word": "fine",
+          "startTimeMs": 243900,
+          "endTimeMs": 244900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 245000,
+      "endTimeMs": 248800,
+      "segmentIndex": 63,
+      "text": "Today I've been born again",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 245000,
+          "endTimeMs": 245400
+        },
+        {
+          "word": "I've",
+          "startTimeMs": 245400,
+          "endTimeMs": 245800
+        },
+        {
+          "word": "been",
+          "startTimeMs": 245800,
+          "endTimeMs": 246200
+        },
+        {
+          "word": "born",
+          "startTimeMs": 246200,
+          "endTimeMs": 246600
+        },
+        {
+          "word": "again",
+          "startTimeMs": 246600,
+          "endTimeMs": 248600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 248800,
+      "endTimeMs": 253800,
+      "segmentIndex": 64,
+      "text": "And just look at me with those pretty little eyes",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 248800,
+          "endTimeMs": 249200
+        },
+        {
+          "word": "just",
+          "startTimeMs": 249200,
+          "endTimeMs": 249600
+        },
+        {
+          "word": "look",
+          "startTimeMs": 249600,
+          "endTimeMs": 250000
+        },
+        {
+          "word": "at",
+          "startTimeMs": 250000,
+          "endTimeMs": 250400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 250400,
+          "endTimeMs": 250800
+        },
+        {
+          "word": "with",
+          "startTimeMs": 250800,
+          "endTimeMs": 251300
+        },
+        {
+          "word": "those",
+          "startTimeMs": 251300,
+          "endTimeMs": 251800
+        },
+        {
+          "word": "pretty",
+          "startTimeMs": 251800,
+          "endTimeMs": 252400
+        },
+        {
+          "word": "little",
+          "startTimeMs": 252400,
+          "endTimeMs": 252900
+        },
+        {
+          "word": "eyes",
+          "startTimeMs": 252900,
+          "endTimeMs": 253700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 253800,
+      "endTimeMs": 257000,
+      "segmentIndex": 65,
+      "text": "Because with that, I'm doing fine",
+      "words": [
+        {
+          "word": "Because",
+          "startTimeMs": 253800,
+          "endTimeMs": 254300
+        },
+        {
+          "word": "with",
+          "startTimeMs": 254300,
+          "endTimeMs": 254700
+        },
+        {
+          "word": "that,",
+          "startTimeMs": 254700,
+          "endTimeMs": 255100
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 255100,
+          "endTimeMs": 255500
+        },
+        {
+          "word": "doing",
+          "startTimeMs": 255500,
+          "endTimeMs": 255900
+        },
+        {
+          "word": "fine",
+          "startTimeMs": 255900,
+          "endTimeMs": 256900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 257000,
+      "endTimeMs": 261000,
+      "segmentIndex": 66,
+      "text": "Today I've been born again",
+      "words": [
+        {
+          "word": "Today",
+          "startTimeMs": 257000,
+          "endTimeMs": 257400
+        },
+        {
+          "word": "I've",
+          "startTimeMs": 257400,
+          "endTimeMs": 257800
+        },
+        {
+          "word": "been",
+          "startTimeMs": 257800,
+          "endTimeMs": 258200
+        },
+        {
+          "word": "born",
+          "startTimeMs": 258200,
+          "endTimeMs": 258600
+        },
+        {
+          "word": "again",
+          "startTimeMs": 258600,
+          "endTimeMs": 260800
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 261000,
+      "endTimeMs": 270000,
+      "segmentIndex": 67,
+      "cueText": "Outro"
+    }
+  ]
+}
