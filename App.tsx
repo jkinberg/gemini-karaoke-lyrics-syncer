@@ -59,6 +59,52 @@ const playNotificationSound = (type: 'success' | 'error') => {
   }
 };
 
+// --- Session Persistence ---
+const SESSION_STORAGE_KEY = 'karaoke-syncer-session';
+
+interface PersistedSession {
+    spanishLyrics: string;
+    englishLyrics: string;
+    karaokeData: KaraokeApiResponse | null;
+    vocabularyList: VocabularyItem[] | null;
+    validationReport: ValidationReport | null;
+    languageFlow: 'es-en' | 'en-es';
+    modelTier: GeminiModelTier;
+    audioFileName: string | null;
+    activeTab: 'preview' | 'data' | 'vocab';
+    savedAt: number;
+}
+
+const saveSession = (session: Partial<PersistedSession>) => {
+    try {
+        const existing = loadSession();
+        const updated = { ...existing, ...session, savedAt: Date.now() };
+        localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(updated));
+    } catch (e) {
+        console.warn('Failed to save session to localStorage:', e);
+    }
+};
+
+const loadSession = (): PersistedSession | null => {
+    try {
+        const stored = localStorage.getItem(SESSION_STORAGE_KEY);
+        if (stored) {
+            return JSON.parse(stored) as PersistedSession;
+        }
+    } catch (e) {
+        console.warn('Failed to load session from localStorage:', e);
+    }
+    return null;
+};
+
+const clearSession = () => {
+    try {
+        localStorage.removeItem(SESSION_STORAGE_KEY);
+    } catch (e) {
+        console.warn('Failed to clear session from localStorage:', e);
+    }
+};
+
 const Icon: React.FC<{ path: string; className?: string }> = ({ path, className = 'w-6 h-6' }) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
     <path strokeLinecap="round" strokeLinejoin="round" d={path} />
@@ -189,6 +235,10 @@ const App: React.FC = () => {
     // Audio blob URL - managed at App level to persist across tab switches
     const [audioUrl, setAudioUrl] = useState<string | null>(null);
 
+    // Session restoration state
+    const [restoredFromSession, setRestoredFromSession] = useState(false);
+    const [restoredAudioFileName, setRestoredAudioFileName] = useState<string | null>(null);
+
     // Create/revoke blob URL when audioFile changes
     useEffect(() => {
         if (audioFile) {
@@ -216,6 +266,44 @@ const App: React.FC = () => {
         })
         .catch(() => setBuildTimestamp('N/A'));
     }, []);
+
+    // Restore session from localStorage on mount
+    useEffect(() => {
+        const session = loadSession();
+        if (session && session.karaokeData) {
+            console.log('Restoring session from localStorage, saved at:', new Date(session.savedAt).toLocaleString());
+            setSpanishLyrics(session.spanishLyrics || '');
+            setEnglishLyrics(session.englishLyrics || '');
+            setKaraokeData(session.karaokeData);
+            setVocabularyList(session.vocabularyList || null);
+            setValidationReport(session.validationReport || null);
+            setLanguageFlow(session.languageFlow || 'es-en');
+            setModelTier(session.modelTier || 'gemini-3-preview');
+            setActiveTab(session.activeTab || 'preview');
+            setRestoredFromSession(true);
+            if (session.audioFileName) {
+                setRestoredAudioFileName(session.audioFileName);
+            }
+        }
+    }, []);
+
+    // Save session when important data changes
+    useEffect(() => {
+        // Only save if we have karaoke data (don't save empty sessions)
+        if (karaokeData) {
+            saveSession({
+                spanishLyrics,
+                englishLyrics,
+                karaokeData,
+                vocabularyList,
+                validationReport,
+                languageFlow,
+                modelTier,
+                audioFileName: audioFile?.name || restoredAudioFileName,
+                activeTab,
+            });
+        }
+    }, [karaokeData, vocabularyList, validationReport, spanishLyrics, englishLyrics, languageFlow, modelTier, activeTab, audioFile, restoredAudioFileName]);
 
     useEffect(() => {
         if (playRequest) {
@@ -299,6 +387,9 @@ const App: React.FC = () => {
         setIsLoading(false);
         setProgress(0);
         setMarkedSegments(new Set());
+        setRestoredFromSession(false);
+        setRestoredAudioFileName(null);
+        clearSession(); // Clear localStorage
     };
 
     const handleTranslate = async () => {
@@ -617,6 +708,33 @@ const App: React.FC = () => {
 
                 {(isLoading || isAutoRefining) && <ProgressBar progress={progress} statusMessage={statusMessage} />}
                 {error && <ErrorMessage message={error} />}
+
+                {/* Session Restored Banner */}
+                {restoredFromSession && !audioFile && karaokeData && (
+                    <div className="mx-8 mt-4 p-4 bg-blue-900/50 border border-blue-500 rounded-lg text-blue-200">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <p className="font-bold flex items-center gap-2">
+                                    <Icon path="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" className="w-5 h-5" />
+                                    Session Restored
+                                </p>
+                                <p className="text-sm mt-1">
+                                    Your previous work was restored from local storage.
+                                    {restoredAudioFileName && (
+                                        <span> Please re-upload the audio file: <strong>{restoredAudioFileName}</strong></span>
+                                    )}
+                                </p>
+                            </div>
+                            <button
+                                onClick={() => setRestoredFromSession(false)}
+                                className="text-blue-300 hover:text-white transition p-1"
+                                title="Dismiss"
+                            >
+                                <Icon path="M6 18L18 6M6 6l12 12" className="w-5 h-5" />
+                            </button>
+                        </div>
+                    </div>
+                )}
 
                 {karaokeData && !isLoading && (
                     <div className="p-4 sm:p-8">

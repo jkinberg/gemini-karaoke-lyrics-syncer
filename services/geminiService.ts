@@ -2006,31 +2006,19 @@ export const autoRefineProblems = async (
         }
       }
 
-      // Refine English (secondary) if there are issues
-      if (problemIndices.english.length > 0) {
-        // Batch the segments if there are too many
-        const englishBatches: number[][] = [];
-        for (let i = 0; i < problemIndices.english.length; i += MAX_SEGMENTS_PER_BATCH) {
-          englishBatches.push(problemIndices.english.slice(i, i + MAX_SEGMENTS_PER_BATCH));
-        }
-
-        for (let batchIdx = 0; batchIdx < englishBatches.length; batchIdx++) {
-          const batch = englishBatches[batchIdx];
-          onStatusUpdate(
-            `Refining ${secondaryLang} batch ${batchIdx + 1}/${englishBatches.length} (${batch.length} segment(s))...`
-          );
-          const refinedEnglish = await refineMarkedSegments(
-            audioFile,
-            currentData.english,
-            batch,
-            secondaryLang,
-            onStatusUpdate,
-            currentData.spanish, // Use Spanish as reference for alignment
-            modelTier
-          );
-          currentData = { ...currentData, english: refinedEnglish };
-        }
-      }
+      // Realign English to match refined Spanish structure using Flash (text-only, no audio)
+      // This is much faster than refining English with Pro+audio since English just needs
+      // to match the Spanish segment timing, not verify against audio
+      onStatusUpdate(`Realigning ${secondaryLang} to refined ${primaryLang} structure (Flash)...`);
+      const realignedEnglish = await alignTranslatedToRefinedOriginal(
+        currentData.spanish,
+        currentData.english,
+        primaryLang,
+        secondaryLang,
+        onStatusUpdate,
+        modelTier
+      );
+      currentData = { ...currentData, english: realignedEnglish };
 
       // Re-validate
       onProgress?.({

@@ -14,7 +14,7 @@ You can try the live application here: **[https://karaoke-syncer-362554121203.us
 - **AI Model Selection**: Gemini 3.0 (default/recommended) or Gemini 2.5 (stable fallback).
 - **Interactive Karaoke Preview**: Instantly verify the synchronization with a built-in player. Watch lyrics highlight word-by-word in real-time, side-by-side in both languages, complete with audio controls, a **real-time audio spectrum visualizer**, and clickable line-seeking to check timing accuracy.
 - **Automatic Quality Validation**: After generation, the app automatically validates the output with a quality score (0-100), detecting errors like overlapping words, timing mismatches, and cross-language inconsistencies.
-- **Auto-Fix Issues**: One-click automatic refinement that identifies problem segments from validation and iteratively fixes them until quality reaches the target threshold (85+).
+- **Auto-Fix Issues**: One-click automatic refinement that identifies problem segments from validation and iteratively fixes them until quality reaches the target threshold (85+). Uses an optimized two-phase approach: Spanish segments are refined with Gemini Pro + audio analysis, then English is realigned using fast Flash model.
 - **AI Refinement Pass**: An optional "review and refine" step where a second AI pass acts as a quality assurance specialist, critiquing and correcting the initial synchronization for the highest possible accuracy.
 - **Word-Level Timing**: Generates start and end timestamps for every single word, enabling precise karaoke-style highlighting.
 - **Bilingual Workflow**: Supports both **Spanish ↔ English** processing. You can provide the original audio in either language.
@@ -24,6 +24,7 @@ You can try the live application here: **[https://karaoke-syncer-362554121203.us
 - **Live Status Updates**: A visual progress bar and dynamic status messages give you real-time feedback during the AI generation process.
 - **Robust API Communication**: Implements an automatic retry mechanism with exponential backoff for all API calls, making the application more resilient to transient network errors.
 - **Flexible Export Options**: Download individual karaoke data files (`.json`) and vocabulary lists (`.json`, `.csv`).
+- **Session Persistence**: Your work is automatically saved to localStorage. If your browser refreshes or your computer sleeps, your karaoke data, vocabulary, and settings are restored automatically. Just re-upload the audio file to continue.
 - **Modern & Responsive UI**: A clean "glassmorphism" UI built with Tailwind CSS that provides a guided, tabbed experience and works seamlessly on both desktop and mobile devices.
 
 ## 🚀 How It Works

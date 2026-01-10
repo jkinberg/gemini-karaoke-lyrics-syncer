@@ -112,8 +112,11 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 - **Model Selection** - Gemini 3 (default/recommended) or Gemini 2.5 (stable fallback)
 - **Auto Validation** - Quality score (0-100) with error/warning detection after generation
 - **Auto-Fix Issues** - One-click automatic refinement of problem segments (iterates up to 3x until score >= 85)
+  - Optimized two-phase approach: Spanish refined with Pro+audio, English realigned with Flash (text-only)
+  - ~50% faster than previous implementation
 - **Manual Refinement** - Mark specific segments for targeted AI re-analysis
 - **Bilingual Output** - Auto-translates and generates both Spanish and English karaoke data
+- **Session Persistence** - Auto-saves work to localStorage; survives browser refresh/sleep (re-upload audio to continue)
 
 ## Known Limitations
 
