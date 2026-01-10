@@ -12,11 +12,9 @@ You can try the live application here: **[https://karaoke-syncer-362554121203.us
 - **High-Accuracy Synchronization**: Uses **Gemini Pro** with LRC timestamps as the primary timing guide, distributing words within each segment based on audio analysis.
 - **AI Model Selection**: Gemini 3.0 (default/recommended) or Gemini 2.5 (stable fallback).
 - **Interactive Karaoke Preview**: Instantly verify the synchronization with a built-in player. Watch lyrics highlight word-by-word in real-time, side-by-side in both languages, complete with audio controls, a **real-time audio spectrum visualizer**, and clickable line-seeking to check timing accuracy.
-- **Instant Manual Timing Adjustment**: A powerful, interactive tool to fix synchronization drift. Users can select an anchor point, nudge its timing with millisecond precision while getting **live audio feedback**, and instantly apply the shift to all subsequent lyrics in both languages. This provides precise, tactile control for perfect results.
 - **Automatic Quality Validation**: After generation, the app automatically validates the output with a quality score (0-100), detecting errors like overlapping words, timing mismatches, and cross-language inconsistencies.
 - **Auto-Fix Issues**: One-click automatic refinement that identifies problem segments from validation and iteratively fixes them until quality reaches the target threshold (85+).
 - **AI Refinement Pass**: An optional "review and refine" step where a second AI pass acts as a quality assurance specialist, critiquing and correcting the initial synchronization for the highest possible accuracy.
-- **Built-in Diagnostic Tool**: Run a pre-validated test case to verify the preview player's accuracy independently of the AI's output, helping to isolate and debug issues.
 - **Word-Level Timing**: Generates start and end timestamps for every single word, enabling precise karaoke-style highlighting.
 - **Bilingual Workflow**: Supports both **Spanish ↔ English** processing. You can provide the original audio in either language.
 - **AI Lyric Translation**: Includes a built-in translation feature powered by **Gemini Flash** to automatically generate the translated lyrics, saving you time.
@@ -41,9 +39,7 @@ The application uses LRC files (with line-level timestamps) as the foundation fo
 5.  **Generate English Karaoke**: The translated lyrics are aligned to match the Spanish segment structure.
 6.  **Automatic Validation**: The generated data is validated with a quality score (0-100), checking for overlapping words, timing issues, and cross-language consistency.
 7.  **Auto-Fix Issues (Optional)**: If the quality score is below 85, one-click refinement identifies and fixes problem segments (up to 3 iterations).
-8.  **Manual Refinement (Optional)**:
-    *   **Segment-Focused AI Refinement:** Mark specific segments for targeted AI re-analysis.
-    *   **Manual Timing Adjustment:** Nudge timing with millisecond precision.
+8.  **Segment-Focused Refinement (Optional)**: Mark specific segments for targeted AI re-analysis.
 9.  **Cultural Vocabulary Extraction**: Generate vocabulary lists with **Gemini Flash** acting as a **cultural linguist**, identifying Spanish slang, idioms, and culturally-nuanced phrases with precise timecodes.
 10. **Preview & Download**: Navigate the tabbed interface to preview, view data, and download files.
 
