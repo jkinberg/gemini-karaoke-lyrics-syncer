@@ -364,107 +364,78 @@ You MUST return a single, minified JSON object for the ${translatedLangName} ver
 
 /**
  * Build a prompt for LRC-guided karaoke generation.
- * LRC provides structure (lyrics text, order) while audio analysis determines actual timing.
- * The prompt instructs Gemini to detect instrumental sections and handle LRC/audio mismatches.
+ * Hybrid approach: Uses LRC timestamps as primary timing guide (fast) while detecting
+ * instrumental sections that aren't in the LRC (intros, interludes, outros).
  */
 const buildLrcBasedPrompt = (parsedLrc: ParsedLrc, langName: string): string => {
   // Convert LRC lines to segment input format
   const segments = parsedLrc.lines.map((line, index) => ({
     segmentIndex: index + 1,
-    approximateStartMs: line.startTimeMs,
-    approximateEndMs: line.endTimeMs,
+    startTimeMs: line.startTimeMs,
+    endTimeMs: line.endTimeMs,
     text: line.text,
     wordCount: line.wordCount,
   }));
 
+  // Calculate if there's likely an intro (first lyric starts > 5 seconds in)
+  const firstLyricStart = segments[0]?.startTimeMs || 0;
+  const likelyHasIntro = firstLyricStart > 5000;
+
   return `
-You are a precise Audio-to-Lyrics Alignment Specialist. Your task is to synchronize lyrics to audio, using an LRC file as a STRUCTURAL GUIDE while relying on AUDIO ANALYSIS for accurate timing.
+You are a precise Audio-to-Lyrics Alignment Specialist. Your task is to add WORD-LEVEL timing to lyrics using LRC timestamps as your PRIMARY timing guide.
 
-**KEY CONCEPT: LRC as Structure, Audio as Truth**
-The LRC file provides:
-- The lyrics TEXT (what words to look for)
-- The general ORDER of lines
-- APPROXIMATE timing (which may be significantly off for this specific audio file)
-
-The AUDIO provides:
-- The ACTUAL timing of when vocals occur (ground truth)
-- Detection of instrumental sections, intros, outros, and breaks
-- Verification of what's actually sung vs what's in the lyrics
-
-**IMPORTANT:** The LRC timestamps may be significantly misaligned with this audio file (different song versions, different intro lengths, timing drift). You MUST listen to the audio and determine the ACTUAL timing - do NOT blindly follow LRC timestamps.
+**KEY CONCEPT: LRC-Guided with Instrumental Detection**
+The LRC provides reliable line-level timestamps. Your job is to:
+1. Use LRC timestamps as the base timing for each lyric line
+2. Distribute words within each line's time window based on what you hear
+3. Detect and ADD instrumental sections (intros, interludes, outros) that aren't in the LRC
 
 **Input Data:**
 - Audio File: [Provided in the request]
-- ${langName} Lyrics from LRC (APPROXIMATE timing - verify against audio):
+- ${langName} Lyrics with LRC timestamps:
   \`\`\`json
   ${JSON.stringify(segments, null, 2)}
   \`\`\`
+${likelyHasIntro ? `
+**NOTE:** The first lyric starts at ${firstLyricStart}ms (${(firstLyricStart/1000).toFixed(1)}s). Listen to confirm if there's an instrumental intro before vocals begin.
+` : ''}
+**RULES:**
 
-**RULES (MUST FOLLOW):**
+1. **Use LRC Timing as Base:**
+   - Each lyric segment's startTimeMs and endTimeMs come from the LRC - use these as your timing foundation
+   - You may adjust by ±1000ms if the audio clearly indicates the line starts/ends at a different time
+   - For word-level timing WITHIN each segment, listen to the audio to distribute words accurately
 
-1. **Audio is Ground Truth:**
-   - LISTEN to the audio to find when each line is ACTUALLY sung
-   - The LRC timestamps are just a rough guide - they may be off by many seconds
-   - If the audio has a long intro before vocals, the first lyric segment should start when vocals actually begin
-   - Trust your audio analysis over the LRC timestamps
-
-2. **Detect Non-Vocal Sections:**
-   - **Instrumental Intros:** If the audio has music before vocals begin, add an INSTRUMENTAL segment
-   - **Musical Interludes:** If there are instrumental breaks between vocal sections, add INSTRUMENTAL segments
-   - **Outros:** If the song ends with instrumental music after the last lyrics, add an INSTRUMENTAL segment
-   - **Skits/Spoken Word:** If there are non-singing vocal sections (dialogue, skits, spoken intros), you may mark these as INSTRUMENTAL with descriptive cueText, or include them as LYRIC segments if the text is provided
-   - For all INSTRUMENTAL segments, provide a descriptive cueText in ${langName} (e.g., "Intro musical", "Interludio", "Outro")
+2. **Detect Instrumental Sections:**
+   - If there's music BEFORE the first lyric (intro), add an INSTRUMENTAL segment from 0 to the first lyric's start
+   - If there's a gap > 5 seconds between lyric segments, consider adding an INSTRUMENTAL segment
+   - If there's music AFTER the last lyric (outro), add an INSTRUMENTAL segment
+   - Use descriptive cueText in ${langName}: "Intro musical", "Interludio", "Outro", etc.
 
 3. **Word-Level Timing:**
-   - For each LYRIC segment, distribute word timing based on what you HEAR
-   - Words should NOT overlap
-   - No zero-duration words
+   - Distribute words within each segment's time window based on what you HEAR
+   - First word starts at/near segment.startTimeMs
+   - Last word ends at/near segment.endTimeMs
+   - Words should NOT overlap and no zero-duration words
    - Pay attention to fast sections - word timings must be precise
-   - For sustained notes, endTimeMs should reflect the full duration held
 
-4. **Flexible Structure:**
-   - Start with the ${segments.length} lyrics lines from the LRC
-   - ADD instrumental segments where you detect non-vocal sections in the audio
-   - The final segment count may be MORE than ${segments.length} due to added instrumentals
-   - Each segment needs a sequential segmentIndex starting from 1
-
-5. **Handle LRC/Audio Mismatches:**
-   - If lyrics in LRC don't match what's sung (ad-libs, variations), prioritize what's actually sung
-   - If the LRC is missing sections that are sung, include them
-   - If the LRC has lines that aren't in the audio, omit them
+4. **Structure:**
+   - Include all ${segments.length} lyric lines from the LRC
+   - ADD instrumental segments where detected
+   - Use sequential segmentIndex starting from 1
 
 **Output Format:**
-Return a complete KaraokeData JSON object with:
+Return a KaraokeData JSON object with:
 - metadata: { title, artist, durationMs, language: "${langName === 'Spanish' ? 'es-ES' : 'en-US'}", version: "1.0" }
-- segments: Array of segments with word-level timing (may include added INSTRUMENTAL segments)
+- segments: Array with LYRIC and INSTRUMENTAL segments
 
-LYRIC segment format:
-\`\`\`json
-{
-  "type": "LYRIC",
-  "startTimeMs": <actual timing from audio>,
-  "endTimeMs": <actual timing from audio>,
-  "text": "<the lyric text>",
-  "segmentIndex": <sequential 1-based index>,
-  "words": [
-    { "word": "...", "startTimeMs": ..., "endTimeMs": ... },
-    ...
-  ]
-}
-\`\`\`
+LYRIC segment:
+{ "type": "LYRIC", "startTimeMs": <from LRC>, "endTimeMs": <from LRC>, "text": "...", "segmentIndex": N, "words": [{ "word": "...", "startTimeMs": ..., "endTimeMs": ... }, ...] }
 
-INSTRUMENTAL segment format:
-\`\`\`json
-{
-  "type": "INSTRUMENTAL",
-  "startTimeMs": <start of instrumental section>,
-  "endTimeMs": <end of instrumental section>,
-  "cueText": "<description in ${langName}>",
-  "segmentIndex": <sequential 1-based index>
-}
-\`\`\`
+INSTRUMENTAL segment:
+{ "type": "INSTRUMENTAL", "startTimeMs": ..., "endTimeMs": ..., "cueText": "...", "segmentIndex": N }
 
-You MUST return a single, minified JSON object. Do not include any other text, explanations, or markdown formatting.
+Return a single, minified JSON object with no other text.
 `;
 };
 
@@ -1309,7 +1280,7 @@ export const generateKaraokeFromLrc = async (
       {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
-        maxOutputTokens: 32768,
+        maxOutputTokens: 65536, // Increased to handle longer songs with many segments
       }
     );
 
@@ -1421,7 +1392,7 @@ export const generateBilingualKaraokeFromLrc = async (
       {
         responseMimeType: 'application/json',
         responseSchema: singleLanguageSchema,
-        maxOutputTokens: 32768,
+        maxOutputTokens: 65536, // Increased to handle longer songs with many segments
       }
     );
 
