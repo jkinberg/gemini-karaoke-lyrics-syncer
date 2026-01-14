@@ -28,8 +28,9 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 │   ├── ViewerApp.tsx    # Main viewer component
 │   ├── index.tsx        # Viewer entry point
 │   ├── types.ts         # Viewer type definitions
-│   ├── components/      # UI components (PlayerScreen, VocabPanel, etc.)
-│   └── hooks/           # React hooks (useYouTubePlayer, useKaraokeSync, etc.)
+│   ├── components/      # UI components (PlayerScreen, VideoPlayer, AudioPlayer, etc.)
+│   ├── hooks/           # React hooks (useYouTubePlayer, useAudioPlayer, useKaraokeSync, etc.)
+│   └── utils/           # Utilities (deviceDetection)
 ├── viewer.html          # Viewer HTML entry
 ├── public/              # Static assets (playlist.json, track data)
 ├── vite.config.ts       # Vite config with multi-entry points
@@ -111,7 +112,9 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 A mobile-first viewer for learning Spanish through karaoke music videos.
 
 **Features:**
-- YouTube video player with autoplay (muted) and tap-to-unmute
+- YouTube video player (desktop) / HTML5 audio player (mobile)
+- Automatic device detection for player selection
+- Audio visualizer with frequency bars on mobile (Web Audio API)
 - Word-by-word synchronized lyrics (Spanish + English translation)
 - Vocabulary word highlighting with purple glow effect
 - Toast notifications when vocab words are unlocked
@@ -124,10 +127,14 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 **Key Files:**
 - `viewer/ViewerApp.tsx` - Main app component, state management
 - `viewer/hooks/useYouTubePlayer.ts` - YouTube IFrame API integration
+- `viewer/hooks/useAudioPlayer.ts` - HTML5 Audio API for mobile (with Web Audio visualizer)
 - `viewer/hooks/useKaraokeSync.ts` - Word-level timing synchronization
 - `viewer/hooks/useProgress.ts` - Session progress tracking
-- `viewer/components/PlayerScreen.tsx` - Video player and lyrics display
+- `viewer/components/PlayerScreen.tsx` - Video/audio player and lyrics display
+- `viewer/components/VideoPlayer.tsx` - YouTube video player (desktop)
+- `viewer/components/AudioPlayer.tsx` - HTML5 audio player (mobile)
 - `viewer/components/VocabPanel.tsx` - Vocabulary list with seek-to-word
+- `viewer/utils/deviceDetection.ts` - Mobile device detection
 - `public/playlist.json` - Track metadata and file paths
 
 ## Documentation
@@ -159,8 +166,15 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 - **Bilingual Output** - Auto-translates and generates both Spanish and English karaoke data
 - **Session Persistence** - Auto-saves work to localStorage; survives browser refresh/sleep (re-upload audio to continue)
 
+## External Services
+
+- **Google Cloud Storage** - Audio files for mobile playback hosted in `karaoke_static_assets` bucket
+  - Supports MP3 and M4A/AAC formats
+  - Audio URLs stored in `playlist.json` under `audioUrl` field
+
 ## Known Limitations
 
 1. **LRC correction accuracy** - LRC timestamp correction improves results but may still miss subtle timing issues
 2. **Translation timing** - Word-level timing in translations is estimated, not audio-verified
 3. **Vocabulary drift** - Segment indices may need re-extraction after major refinements
+4. **Mobile audio** - Audio files must be manually uploaded to GCS; no video on mobile (audio only with thumbnail)

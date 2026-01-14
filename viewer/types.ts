@@ -40,6 +40,7 @@ export interface Track {
   order: number;
   metadata: TrackMetadata;
   youtube: YouTubeInfo;
+  audioUrl?: string; // Direct audio URL for mobile playback (m4a/mp3)
   dataFiles: TrackDataFiles;
 }
 

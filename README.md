@@ -13,7 +13,8 @@ Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini 
 
 ### Karaoke Viewer App (NEW)
 
-- **YouTube Integration**: Embedded video player with autoplay and tap-to-unmute for mobile
+- **Adaptive Media Player**: YouTube video on desktop, HTML5 audio player on mobile (automatic device detection)
+- **Audio Visualizer**: Frequency bar animation overlaid on thumbnail (mobile only)
 - **Word-by-Word Lyrics**: Real-time synchronized Spanish lyrics with English translation below
 - **Vocabulary Learning**: Purple-highlighted vocab words unlock as you listen, with toast notifications
 - **Expandable Vocab Panel**: Swipe up to see definitions, examples, and seek to any word in the song
@@ -87,8 +88,9 @@ The application uses LRC files (with line-level timestamps) as the foundation fo
 │   ├── index.tsx         # Viewer React entry
 │   ├── ViewerApp.tsx     # Viewer main component
 │   ├── types.ts          # Viewer type definitions
-│   ├── components/       # UI components (PlayerScreen, VocabPanel, etc.)
-│   └── hooks/            # React hooks (useYouTubePlayer, useKaraokeSync, etc.)
+│   ├── components/       # UI components (PlayerScreen, VideoPlayer, AudioPlayer, etc.)
+│   ├── hooks/            # React hooks (useYouTubePlayer, useAudioPlayer, useKaraokeSync, etc.)
+│   └── utils/            # Utilities (deviceDetection)
 ├── public/               # Static assets
 │   └── playlist.json     # Track metadata for viewer
 ├── server.ts             # Express server with Gemini API proxy

@@ -50,16 +50,24 @@
 
 ---
 
-## Known Issues
+## Mobile Audio Player - IN PROGRESS
 
-### YouTube Embed Limitations on Mobile
-- YouTube IFrame embeds have restrictions on mobile devices (autoplay blocked, controls forced)
-- Need alternate solution to demo on mobile devices
-- Options to explore:
-  - [ ] Native app wrapper (Capacitor/React Native)
-  - [ ] Server-side audio extraction + HTML5 audio player
-  - [ ] YouTube Data API + separate audio source
-  - [ ] PWA with service worker for better mobile experience
+**Problem:** YouTube IFrame embeds have restrictions on mobile devices (autoplay blocked, controls forced).
+
+**Solution implemented:**
+- HTML5 audio player as YouTube alternative on mobile
+- Device detection via user agent (iOS/Android)
+- Audio files hosted on Google Cloud Storage bucket `karaoke_static_assets`
+- Audio visualizer overlay using Web Audio API (AnalyserNode)
+- Same UX as YouTube player: tap-to-unmute, scrubber, play/pause, track navigation
+
+**Files created:**
+- `viewer/utils/deviceDetection.ts` - Mobile detection utility
+- `viewer/hooks/useAudioPlayer.ts` - Audio player hook (mirrors useYouTubePlayer interface)
+- `viewer/components/AudioVisualizer.tsx` - Canvas frequency bar visualization
+- `viewer/components/AudioPlayer.tsx` - Audio player component
+
+**Supported formats:** MP3, M4A/AAC (universal browser support)
 
 ---
 
@@ -67,6 +75,7 @@
 
 ### Viewer App - High Priority
 - [ ] Create desktop-optimized layout (current layout is mobile-only)
+- [ ] Add social sharing metadata (Open Graph, Twitter Cards) and social image
 - [ ] Integrate Google Analytics tracking
 - [ ] Integrate feedback survey link
 - [ ] Display language selector with other options (Italian, French, Korean) shown as "Coming Soon"
