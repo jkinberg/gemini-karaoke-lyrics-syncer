@@ -6,6 +6,7 @@ import { PlayerScreen } from './components/PlayerScreen';
 import { VocabPanel } from './components/VocabPanel';
 import { VocabToastContainer, type ToastMessage } from './components/VocabToast';
 import { StatsPanel } from './components/StatsPanel';
+import { isMobileDevice } from './utils/deviceDetection';
 
 let toastIdCounter = 0;
 
@@ -13,12 +14,18 @@ export default function ViewerApp() {
   const [activeScreen, setActiveScreen] = useState<ScreenType>('player');
   const [currentTimeMs, setCurrentTimeMs] = useState(0);
   const [isMuted, setIsMuted] = useState(true); // Start muted for autoplay
+  const [isMobile, setIsMobile] = useState(false); // Detect mobile for audio player
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
   const [seekToTimeMs, setSeekToTimeMs] = useState<number | null>(null);
   const [highlightedVocabIndex, setHighlightedVocabIndex] = useState<number | null>(null);
   const [shouldPause, setShouldPause] = useState(false);
   const [unlockedVocabIndices, setUnlockedVocabIndices] = useState<Set<number>>(new Set());
   const [videoEnded, setVideoEnded] = useState(false);
+
+  // Detect mobile device on mount
+  useEffect(() => {
+    setIsMobile(isMobileDevice());
+  }, []);
 
   // Track which vocab items have been shown as toasts (by index)
   const shownToastsRef = useRef<Set<number>>(new Set());
@@ -304,6 +311,7 @@ export default function ViewerApp() {
           unlockedVocabCount={unlockedVocabCount}
           unlockedVocabIndices={unlockedVocabIndices}
           isMuted={isMuted}
+          isMobile={isMobile}
           seekToTimeMs={seekToTimeMs}
           shouldPause={shouldPause}
           hasNextTrack={hasNextTrack}

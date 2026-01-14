@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Track, LoadedTrackData, VocabularyItem } from '../types';
 import { VideoPlayer } from './VideoPlayer';
+import { AudioPlayer } from './AudioPlayer';
 import { useKaraokeSync, getWordVocabState } from '../hooks/useKaraokeSync';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
 
@@ -32,6 +33,7 @@ interface PlayerScreenProps {
   unlockedVocabCount: number;
   unlockedVocabIndices: Set<number>;
   isMuted: boolean;
+  isMobile: boolean;
   seekToTimeMs: number | null;
   shouldPause?: boolean;
   hasNextTrack: boolean;
@@ -54,6 +56,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
   unlockedVocabCount,
   unlockedVocabIndices,
   isMuted,
+  isMobile,
   seekToTimeMs,
   shouldPause,
   hasNextTrack,
@@ -78,9 +81,9 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
   });
 
   return (
-    <div className="h-full flex flex-col bg-black">
+    <div className="h-full flex flex-col bg-black overflow-hidden">
       {/* Top Bar */}
-      <div className="flex-shrink-0 px-4 pt-12 pb-2 flex items-center justify-between safe-area-top">
+      <div className="flex-shrink-0 px-4 pt-2 pb-2 flex items-center justify-between safe-area-top">
         <div className="text-white">
           <MusicNoteIcon />
         </div>
@@ -105,25 +108,46 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
         </button>
       </div>
 
-      {/* Video Player - relative z-10 to keep scrubber above lyrics */}
+      {/* Media Player - relative z-10 to keep scrubber above lyrics */}
       <div className="relative z-10 flex-shrink-0">
         {track ? (
-          <VideoPlayer
-            videoId={track.youtube.videoId}
-            title={track.metadata.title}
-            artist={track.metadata.artist}
-            thumbnailUrl={track.youtube.thumbnailUrl}
-            seekToTimeMs={seekToTimeMs}
-            shouldPause={shouldPause}
-            hasNextTrack={hasNextTrack}
-            hasPrevTrack={hasPrevTrack}
-            onTimeUpdate={onTimeUpdate}
-            onEnded={onEnded}
-            onNextTrack={onNextTrack}
-            onPrevTrack={onPrevTrack}
-            persistedMuted={isMuted}
-            onMutedChange={onMutedChange}
-          />
+          isMobile && track.audioUrl ? (
+            <AudioPlayer
+              audioUrl={track.audioUrl}
+              expectedDurationMs={track.metadata.durationMs}
+              title={track.metadata.title}
+              artist={track.metadata.artist}
+              album={track.metadata.album}
+              thumbnailUrl={track.youtube.thumbnailUrl}
+              seekToTimeMs={seekToTimeMs}
+              shouldPause={shouldPause}
+              hasNextTrack={hasNextTrack}
+              hasPrevTrack={hasPrevTrack}
+              onTimeUpdate={onTimeUpdate}
+              onEnded={onEnded}
+              onNextTrack={onNextTrack}
+              onPrevTrack={onPrevTrack}
+              persistedMuted={isMuted}
+              onMutedChange={onMutedChange}
+            />
+          ) : (
+            <VideoPlayer
+              videoId={track.youtube.videoId}
+              title={track.metadata.title}
+              artist={track.metadata.artist}
+              thumbnailUrl={track.youtube.thumbnailUrl}
+              seekToTimeMs={seekToTimeMs}
+              shouldPause={shouldPause}
+              hasNextTrack={hasNextTrack}
+              hasPrevTrack={hasPrevTrack}
+              onTimeUpdate={onTimeUpdate}
+              onEnded={onEnded}
+              onNextTrack={onNextTrack}
+              onPrevTrack={onPrevTrack}
+              persistedMuted={isMuted}
+              onMutedChange={onMutedChange}
+            />
+          )
         ) : (
           <div className="bg-zinc-900 flex items-center justify-center" style={{ height: 200 }}>
             <div className="text-zinc-500">Loading...</div>
@@ -138,6 +162,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
             trackData={trackData}
             currentTimeMs={currentTimeMs}
             unlockedVocabIndices={unlockedVocabIndices}
+            isMobile={isMobile}
           />
         ) : (
           <div className="text-zinc-600 text-center">
@@ -150,7 +175,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
       <button
         onClick={onOpenVocab}
         {...vocabBarSwipe}
-        className="flex-shrink-0 bg-zinc-900/95 backdrop-blur border-t border-zinc-800 px-4 py-3 pb-8 safe-area-bottom"
+        className="flex-shrink-0 bg-zinc-900/95 backdrop-blur border-t border-zinc-800 px-4 py-3 pb-16 safe-area-bottom"
       >
         <div className="relative flex items-center justify-between mb-2">
           <div className="flex items-center gap-2 text-zinc-400">
@@ -207,7 +232,8 @@ const LyricsDisplay: React.FC<{
   trackData: LoadedTrackData;
   currentTimeMs: number;
   unlockedVocabIndices: Set<number>;
-}> = ({ trackData, currentTimeMs, unlockedVocabIndices }) => {
+  isMobile?: boolean;
+}> = ({ trackData, currentTimeMs, unlockedVocabIndices, isMobile = false }) => {
   const {
     currentSegmentIndex,
     currentWordIndex,
@@ -230,10 +256,14 @@ const LyricsDisplay: React.FC<{
     );
   }
 
+  // Font sizes: slightly smaller on mobile to reduce word wrapping
+  const spanishFontSize = isMobile ? 32 : 36;
+  const englishFontSize = isMobile ? 20 : 24;
+
   return (
     <div className="text-center">
       {/* Spanish lyrics */}
-      <div className="mb-8" style={{ fontSize: 36, lineHeight: 1.2, fontWeight: 700 }}>
+      <div className="mb-8" style={{ fontSize: spanishFontSize, lineHeight: 1.2, fontWeight: 700 }}>
         {spanishSegment.words?.map((word, index) => {
           const isHighlighted = index < currentWordIndex ||
             (index === currentWordIndex && currentTimeMs >= word.startTimeMs);
@@ -280,7 +310,7 @@ const LyricsDisplay: React.FC<{
       </div>
 
       {/* English translation */}
-      <div style={{ fontSize: 24, lineHeight: 1.3 }}>
+      <div style={{ fontSize: englishFontSize, lineHeight: 1.3 }}>
         {englishSegment?.words?.map((word, index) => {
           const isHighlighted = index < currentWordIndex ||
             (index === currentWordIndex && currentTimeMs >= word.startTimeMs);

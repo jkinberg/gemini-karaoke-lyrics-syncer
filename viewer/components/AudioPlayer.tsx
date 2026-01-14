@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { useYouTubePlayer } from '../hooks/useYouTubePlayer';
+import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
+import { AudioVisualizer } from './AudioVisualizer';
 import { initPingSoundContext } from '../utils/pingSoundContext';
 
 // Icons
@@ -34,10 +35,12 @@ const ChevronRightIcon = () => (
   </svg>
 );
 
-interface VideoPlayerProps {
-  videoId: string;
+interface AudioPlayerProps {
+  audioUrl: string;
+  expectedDurationMs?: number;
   title: string;
   artist: string;
+  album?: string;
   thumbnailUrl: string;
   seekToTimeMs?: number | null;
   shouldPause?: boolean;
@@ -51,10 +54,12 @@ interface VideoPlayerProps {
   onMutedChange?: (muted: boolean) => void;
 }
 
-export const VideoPlayer: React.FC<VideoPlayerProps> = ({
-  videoId,
+export const AudioPlayer: React.FC<AudioPlayerProps> = ({
+  audioUrl,
+  expectedDurationMs,
   title,
   artist,
+  album,
   thumbnailUrl,
   seekToTimeMs,
   shouldPause,
@@ -67,11 +72,11 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   persistedMuted = true,
   onMutedChange,
 }) => {
-  const [showMetadata, setShowMetadata] = useState(true);
   const [showControls, setShowControls] = useState(false);
 
   const {
-    containerRef,
+    audioRef,
+    analyserNode,
     isReady,
     isPlaying,
     isMuted,
@@ -83,8 +88,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     togglePlay,
     unmute,
     seekTo,
-  } = useYouTubePlayer({
-    videoId,
+  } = useAudioPlayer({
+    audioUrl,
+    expectedDurationMs,
     onTimeUpdate,
     onEnded,
     initialMuted: persistedMuted,
@@ -187,7 +193,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   // Handle external seek requests
   useEffect(() => {
     if (seekToTimeMs !== null && seekToTimeMs !== undefined && isReady) {
-      seekTo(seekToTimeMs); // seekTo expects ms and converts internally
+      seekTo(seekToTimeMs);
     }
   }, [seekToTimeMs, isReady, seekTo]);
 
@@ -216,13 +222,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     onMutedChange?.(isMuted);
   }, [isMuted, onMutedChange]);
 
-  // Show metadata for 3 seconds, then fade out
-  useEffect(() => {
-    setShowMetadata(true);
-    const timer = setTimeout(() => setShowMetadata(false), 3000);
-    return () => clearTimeout(timer);
-  }, [videoId]); // Reset when video changes
-
   // Swipe gesture for track navigation
   const swipeHandlers = useSwipeGesture({
     onSwipeLeft: onNextTrack,
@@ -231,8 +230,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     maxSwipeTime: 300,
   });
 
-  // Handle tap on video
-  const handleVideoTap = (e: React.MouseEvent) => {
+  // Handle tap on player
+  const handlePlayerTap = (e: React.MouseEvent) => {
     e.stopPropagation();
 
     if (isMuted) {
@@ -243,35 +242,45 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       // Subsequent taps toggle play/pause
       togglePlay();
 
-      // Show controls briefly
-      setShowControls(true);
-      setTimeout(() => setShowControls(false), 1500);
+      // Only show controls briefly when playing (pause icon fades out)
+      // When paused, the play icon is shown persistently
+      if (!isPlaying) {
+        // We're about to play, show pause icon briefly then fade
+        setShowControls(true);
+        setTimeout(() => setShowControls(false), 1200);
+      }
     }
   };
 
-  const videoElement = (
+  const playerElement = (
     <div
       className="relative bg-black cursor-pointer overflow-hidden"
       style={{ height: 200 }}
-      onClick={handleVideoTap}
+      onClick={handlePlayerTap}
       {...swipeHandlers}
     >
+      {/* Hidden audio element - src and crossOrigin managed by useAudioPlayer hook */}
+      <audio
+        ref={audioRef}
+        playsInline
+        style={{ display: 'none' }}
+      />
 
-      {/* Thumbnail (shown before video loads) */}
-      {!isReady && (
-        <img
-          src={thumbnailUrl}
-          alt={title}
-          className="absolute inset-0 w-full h-full object-cover"
+      {/* Thumbnail image with dark overlay */}
+      <img
+        src={thumbnailUrl}
+        alt={title}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black/40" />
+
+      {/* Audio Visualizer overlay */}
+      {isReady && !isMuted && analyserNode && (
+        <AudioVisualizer
+          analyserNode={analyserNode}
+          isPlaying={isPlaying}
         />
       )}
-
-      {/* YouTube Player Container */}
-      <div
-        ref={containerRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ pointerEvents: 'none' }} // Prevent YouTube player from capturing clicks
-      />
 
       {/* Tap to Unmute overlay */}
       {isReady && isMuted && (
@@ -285,11 +294,24 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
         </div>
       )}
 
-      {/* Play/Pause indicator (shown briefly on tap) */}
-      {showControls && !isMuted && (
+      {/* Play button - shown persistently when paused */}
+      {!isPlaying && !isMuted && isReady && (
         <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
-          <div className="w-16 h-16 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white animate-fade-in">
-            {isPlaying ? <PauseIcon /> : <PlayIcon />}
+          <div className="w-16 h-16 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white">
+            <PlayIcon />
+          </div>
+        </div>
+      )}
+
+      {/* Pause indicator - shown briefly when playing, with slow fade out */}
+      {isPlaying && !isMuted && (
+        <div
+          className={`absolute inset-0 flex items-center justify-center z-20 pointer-events-none transition-opacity duration-700 ${
+            showControls ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <div className="w-16 h-16 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white">
+            <PauseIcon />
           </div>
         </div>
       )}
@@ -301,36 +323,20 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
         </div>
       )}
 
-      {/* Error overlay - show link to YouTube */}
+      {/* Error overlay */}
       {error && (
         <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/80">
           <div className="text-center px-4">
-            <div className="text-zinc-400 text-sm mb-3">{error}</div>
-            <a
-              href={`https://www.youtube.com/watch?v=${videoId}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-              </svg>
-              Watch on YouTube
-            </a>
+            <div className="text-zinc-400 text-sm">{error}</div>
           </div>
         </div>
       )}
 
-      {/* Song metadata overlay */}
-      <div
-        className={`absolute bottom-3 left-4 z-20 transition-opacity duration-1000 ${
-          showMetadata ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        <div className="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Now Playing</div>
+      {/* Song metadata overlay - top left, always visible */}
+      <div className="absolute top-3 left-4 z-20">
         <div className="font-bold text-base leading-tight text-white drop-shadow-lg">{title}</div>
         <div className="text-zinc-300 text-sm drop-shadow-lg">{artist}</div>
+        {album && <div className="text-zinc-400 text-xs drop-shadow-lg mt-0.5">{album}</div>}
       </div>
 
       {/* Navigation buttons - only show if there's a prev/next track */}
@@ -356,7 +362,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
           <ChevronRightIcon />
         </button>
       )}
-
     </div>
   );
 
@@ -372,18 +377,18 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const displayTimeMs = isDragging ? (dragProgress / 100) * duration : currentTimeMs;
   const remainingMs = duration - displayTimeMs;
 
-  // Scrubber bar component - rendered separately to be placed outside video
+  // Scrubber bar component - rendered separately to be placed outside player
   const scrubberBar = isReady ? (
-    <div className="flex items-center gap-2 px-3 py-1 bg-black">
+    <div className="flex items-center px-4 py-1 bg-black">
       {/* Elapsed time */}
       <span className="text-xs text-zinc-400 font-mono w-10 text-right">
         {formatTime(displayTimeMs)}
       </span>
 
-      {/* Scrubber track */}
+      {/* Scrubber track - with horizontal margin for spacing from time */}
       <div
         ref={scrubberRef}
-        className="flex-1 h-8 flex items-center cursor-pointer"
+        className="flex-1 h-8 flex items-center cursor-pointer mx-4"
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
       >
@@ -413,10 +418,10 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   return (
     <>
-      {videoElement}
+      {playerElement}
       {scrubberBar}
     </>
   );
 };
 
-export default VideoPlayer;
+export default AudioPlayer;

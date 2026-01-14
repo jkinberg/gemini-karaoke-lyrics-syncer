@@ -13,13 +13,17 @@ Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini 
 
 ### Karaoke Viewer App (NEW)
 
-- **YouTube Integration**: Embedded video player with autoplay and tap-to-unmute for mobile
+- **Adaptive Media Player**: YouTube video on desktop, HTML5 audio player on mobile (automatic device detection)
+- **Audio Visualizer**: Full-width waveform animation overlaid on thumbnail with Web Audio API (mobile only)
 - **Word-by-Word Lyrics**: Real-time synchronized Spanish lyrics with English translation below
-- **Vocabulary Learning**: Purple-highlighted vocab words unlock as you listen, with toast notifications
+- **Responsive Typography**: Smaller font sizes on mobile to reduce word wrapping
+- **Vocabulary Learning**: Purple-highlighted vocab words unlock as you listen, with toast notifications and ping sound
 - **Expandable Vocab Panel**: Swipe up to see definitions, examples, and seek to any word in the song
 - **Progress Tracking**: Session-based stats including streak, vocab count, songs completed, and listening time
 - **Swipe Navigation**: Swipe left/right on video to change tracks, up/down to open/close vocab panel
 - **End-of-Song Actions**: Play Again or Play Next buttons when video ends
+- **Screen Wake Lock**: Prevents screen from sleeping during playback
+- **iOS Safari Support**: Safe area handling and viewport fixes for notch devices
 
 ### Syncer Tool
 
@@ -87,8 +91,9 @@ The application uses LRC files (with line-level timestamps) as the foundation fo
 │   ├── index.tsx         # Viewer React entry
 │   ├── ViewerApp.tsx     # Viewer main component
 │   ├── types.ts          # Viewer type definitions
-│   ├── components/       # UI components (PlayerScreen, VocabPanel, etc.)
-│   └── hooks/            # React hooks (useYouTubePlayer, useKaraokeSync, etc.)
+│   ├── components/       # UI components (PlayerScreen, VideoPlayer, AudioPlayer, etc.)
+│   ├── hooks/            # React hooks (useYouTubePlayer, useAudioPlayer, useKaraokeSync, etc.)
+│   └── utils/            # Utilities (deviceDetection, pingSoundContext)
 ├── public/               # Static assets
 │   └── playlist.json     # Track metadata for viewer
 ├── server.ts             # Express server with Gemini API proxy

@@ -50,16 +50,37 @@
 
 ---
 
-## Known Issues
+## Mobile Audio Player - COMPLETED
 
-### YouTube Embed Limitations on Mobile
-- YouTube IFrame embeds have restrictions on mobile devices (autoplay blocked, controls forced)
-- Need alternate solution to demo on mobile devices
-- Options to explore:
-  - [ ] Native app wrapper (Capacitor/React Native)
-  - [ ] Server-side audio extraction + HTML5 audio player
-  - [ ] YouTube Data API + separate audio source
-  - [ ] PWA with service worker for better mobile experience
+**Problem:** YouTube IFrame embeds have restrictions on mobile devices (autoplay blocked, controls forced).
+
+**Solution implemented:**
+- HTML5 audio player as YouTube alternative on mobile
+- Device detection via user agent (iOS/Android)
+- Audio files hosted on Google Cloud Storage bucket `karaoke_static_assets`
+- Full-width waveform audio visualizer using Web Audio API (AnalyserNode + Canvas)
+- Same UX as YouTube player: tap-to-unmute, scrubber, play/pause, track navigation
+
+**Mobile-specific features:**
+- Darkened thumbnail with track metadata overlay (title, artist, album)
+- Full-width waveform visualizer (samples lower frequencies where music energy is concentrated)
+- Tap to unmute (required for mobile autoplay policy)
+- Play button shown persistently when paused, pause button fades out after tap
+- Scrubber with elapsed/remaining time and draggable handle
+- Ping sound on vocab toast (shared AudioContext initialized on user gesture)
+- Screen Wake Lock API to prevent sleep during playback
+- iOS Safari safe area and viewport handling
+- CORS retry logic (falls back gracefully if CORS headers missing)
+- Responsive lyrics font sizes (Spanish 32px, English 20px vs 36/24 desktop)
+
+**Files created:**
+- `viewer/utils/deviceDetection.ts` - Mobile detection utility
+- `viewer/utils/pingSoundContext.ts` - Shared AudioContext for UI ping sounds
+- `viewer/hooks/useAudioPlayer.ts` - Audio player hook with Web Audio visualizer and wake lock
+- `viewer/components/AudioVisualizer.tsx` - Canvas-based waveform visualization
+- `viewer/components/AudioPlayer.tsx` - Full audio player component
+
+**Supported formats:** MP3, M4A/AAC (universal browser support)
 
 ---
 
@@ -67,6 +88,7 @@
 
 ### Viewer App - High Priority
 - [ ] Create desktop-optimized layout (current layout is mobile-only)
+- [ ] Add social sharing metadata (Open Graph, Twitter Cards) and social image
 - [ ] Integrate Google Analytics tracking
 - [ ] Integrate feedback survey link
 - [ ] Display language selector with other options (Italian, French, Korean) shown as "Coming Soon"

@@ -1,39 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-
-// Create a ping sound using Web Audio API
-function playPingSound() {
-  try {
-    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-
-    // Create oscillator for the ping tone
-    const oscillator = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
-
-    oscillator.connect(gainNode);
-    gainNode.connect(audioContext.destination);
-
-    // Configure the ping sound - a pleasant chime
-    oscillator.frequency.setValueAtTime(880, audioContext.currentTime); // A5 note
-    oscillator.frequency.exponentialRampToValueAtTime(1320, audioContext.currentTime + 0.1); // E6
-    oscillator.type = 'sine';
-
-    // Envelope: quick attack, short sustain, fade out
-    gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-    gainNode.gain.linearRampToValueAtTime(0.3, audioContext.currentTime + 0.02);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-
-    oscillator.start(audioContext.currentTime);
-    oscillator.stop(audioContext.currentTime + 0.3);
-
-    // Clean up
-    setTimeout(() => {
-      audioContext.close();
-    }, 500);
-  } catch (e) {
-    // Audio not supported or blocked, fail silently
-    console.debug('Could not play ping sound:', e);
-  }
-}
+import { playPingSound } from '../utils/pingSoundContext';
 
 export interface ToastMessage {
   id: number;

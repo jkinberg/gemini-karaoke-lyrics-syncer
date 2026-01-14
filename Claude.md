@@ -28,8 +28,9 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 │   ├── ViewerApp.tsx    # Main viewer component
 │   ├── index.tsx        # Viewer entry point
 │   ├── types.ts         # Viewer type definitions
-│   ├── components/      # UI components (PlayerScreen, VocabPanel, etc.)
-│   └── hooks/           # React hooks (useYouTubePlayer, useKaraokeSync, etc.)
+│   ├── components/      # UI components (PlayerScreen, VideoPlayer, AudioPlayer, etc.)
+│   ├── hooks/           # React hooks (useYouTubePlayer, useAudioPlayer, useKaraokeSync, etc.)
+│   └── utils/           # Utilities (deviceDetection)
 ├── viewer.html          # Viewer HTML entry
 ├── public/              # Static assets (playlist.json, track data)
 ├── vite.config.ts       # Vite config with multi-entry points
@@ -63,6 +64,11 @@ npm run deploy:preview:delete  # Delete preview service when done
 ## Environment
 
 Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
+
+### Local Machine Setup
+
+- **Homebrew binaries**: `/opt/homebrew/bin` (includes `gh`, `node`, etc.)
+- **GitHub CLI**: `/opt/homebrew/bin/gh` - use full path if not in PATH
 
 ## Key Types
 
@@ -111,23 +117,44 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 A mobile-first viewer for learning Spanish through karaoke music videos.
 
 **Features:**
-- YouTube video player with autoplay (muted) and tap-to-unmute
+- YouTube video player (desktop) / HTML5 audio player (mobile)
+- Automatic device detection for player selection
+- Audio visualizer with full-width waveform animation (Web Audio API)
 - Word-by-word synchronized lyrics (Spanish + English translation)
+- Responsive font sizes (smaller on mobile to reduce word wrapping)
 - Vocabulary word highlighting with purple glow effect
-- Toast notifications when vocab words are unlocked
+- Toast notifications with ping sound when vocab words are unlocked
 - Collapsible vocab panel with progress tracking
 - Stats panel with streak tracking and achievements
 - Swipe gestures for track navigation
 - Session-level progress persistence
 - Video end screen with Play Again/Play Next buttons
+- Wake lock to prevent screen sleep during playback
+- iOS Safari safe area handling
+
+**Mobile Audio Player Features:**
+- Darkened thumbnail with track metadata overlay (title, artist, album)
+- Full-width waveform visualizer using Web Audio API AnalyserNode
+- Tap to unmute (required for mobile autoplay policy)
+- Play button shown persistently when paused
+- Pause button appears briefly then fades out when playing
+- Scrubber with elapsed/remaining time and draggable handle
+- CORS retry logic (falls back to no visualizer if CORS fails)
 
 **Key Files:**
 - `viewer/ViewerApp.tsx` - Main app component, state management
 - `viewer/hooks/useYouTubePlayer.ts` - YouTube IFrame API integration
+- `viewer/hooks/useAudioPlayer.ts` - HTML5 Audio API for mobile (with Web Audio visualizer, wake lock)
 - `viewer/hooks/useKaraokeSync.ts` - Word-level timing synchronization
 - `viewer/hooks/useProgress.ts` - Session progress tracking
-- `viewer/components/PlayerScreen.tsx` - Video player and lyrics display
+- `viewer/components/PlayerScreen.tsx` - Video/audio player and lyrics display
+- `viewer/components/VideoPlayer.tsx` - YouTube video player (desktop)
+- `viewer/components/AudioPlayer.tsx` - HTML5 audio player (mobile)
+- `viewer/components/AudioVisualizer.tsx` - Canvas-based waveform visualization
 - `viewer/components/VocabPanel.tsx` - Vocabulary list with seek-to-word
+- `viewer/components/VocabToast.tsx` - Toast notifications with ping sound
+- `viewer/utils/deviceDetection.ts` - Mobile device detection
+- `viewer/utils/pingSoundContext.ts` - Shared AudioContext for UI sounds
 - `public/playlist.json` - Track metadata and file paths
 
 ## Documentation
@@ -159,8 +186,15 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 - **Bilingual Output** - Auto-translates and generates both Spanish and English karaoke data
 - **Session Persistence** - Auto-saves work to localStorage; survives browser refresh/sleep (re-upload audio to continue)
 
+## External Services
+
+- **Google Cloud Storage** - Audio files for mobile playback hosted in `karaoke_static_assets` bucket
+  - Supports MP3 and M4A/AAC formats
+  - Audio URLs stored in `playlist.json` under `audioUrl` field
+
 ## Known Limitations
 
 1. **LRC correction accuracy** - LRC timestamp correction improves results but may still miss subtle timing issues
 2. **Translation timing** - Word-level timing in translations is estimated, not audio-verified
 3. **Vocabulary drift** - Segment indices may need re-extraction after major refinements
+4. **Mobile audio** - Audio files must be manually uploaded to GCS; no video on mobile (audio only with thumbnail)
