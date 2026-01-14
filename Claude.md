@@ -114,27 +114,42 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 **Features:**
 - YouTube video player (desktop) / HTML5 audio player (mobile)
 - Automatic device detection for player selection
-- Audio visualizer with frequency bars on mobile (Web Audio API)
+- Audio visualizer with full-width waveform animation (Web Audio API)
 - Word-by-word synchronized lyrics (Spanish + English translation)
+- Responsive font sizes (smaller on mobile to reduce word wrapping)
 - Vocabulary word highlighting with purple glow effect
-- Toast notifications when vocab words are unlocked
+- Toast notifications with ping sound when vocab words are unlocked
 - Collapsible vocab panel with progress tracking
 - Stats panel with streak tracking and achievements
 - Swipe gestures for track navigation
 - Session-level progress persistence
 - Video end screen with Play Again/Play Next buttons
+- Wake lock to prevent screen sleep during playback
+- iOS Safari safe area handling
+
+**Mobile Audio Player Features:**
+- Darkened thumbnail with track metadata overlay (title, artist, album)
+- Full-width waveform visualizer using Web Audio API AnalyserNode
+- Tap to unmute (required for mobile autoplay policy)
+- Play button shown persistently when paused
+- Pause button appears briefly then fades out when playing
+- Scrubber with elapsed/remaining time and draggable handle
+- CORS retry logic (falls back to no visualizer if CORS fails)
 
 **Key Files:**
 - `viewer/ViewerApp.tsx` - Main app component, state management
 - `viewer/hooks/useYouTubePlayer.ts` - YouTube IFrame API integration
-- `viewer/hooks/useAudioPlayer.ts` - HTML5 Audio API for mobile (with Web Audio visualizer)
+- `viewer/hooks/useAudioPlayer.ts` - HTML5 Audio API for mobile (with Web Audio visualizer, wake lock)
 - `viewer/hooks/useKaraokeSync.ts` - Word-level timing synchronization
 - `viewer/hooks/useProgress.ts` - Session progress tracking
 - `viewer/components/PlayerScreen.tsx` - Video/audio player and lyrics display
 - `viewer/components/VideoPlayer.tsx` - YouTube video player (desktop)
 - `viewer/components/AudioPlayer.tsx` - HTML5 audio player (mobile)
+- `viewer/components/AudioVisualizer.tsx` - Canvas-based waveform visualization
 - `viewer/components/VocabPanel.tsx` - Vocabulary list with seek-to-word
+- `viewer/components/VocabToast.tsx` - Toast notifications with ping sound
 - `viewer/utils/deviceDetection.ts` - Mobile device detection
+- `viewer/utils/pingSoundContext.ts` - Shared AudioContext for UI sounds
 - `public/playlist.json` - Track metadata and file paths
 
 ## Documentation

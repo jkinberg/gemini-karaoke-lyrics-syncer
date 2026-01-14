@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
 import { AudioVisualizer } from './AudioVisualizer';
+import { initPingSoundContext } from '../utils/pingSoundContext';
 
 // Icons
 const PlayIcon = () => (
@@ -39,6 +40,7 @@ interface AudioPlayerProps {
   expectedDurationMs?: number;
   title: string;
   artist: string;
+  album?: string;
   thumbnailUrl: string;
   seekToTimeMs?: number | null;
   shouldPause?: boolean;
@@ -57,6 +59,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   expectedDurationMs,
   title,
   artist,
+  album,
   thumbnailUrl,
   seekToTimeMs,
   shouldPause,
@@ -69,7 +72,6 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   persistedMuted = true,
   onMutedChange,
 }) => {
-  const [showMetadata, setShowMetadata] = useState(true);
   const [showControls, setShowControls] = useState(false);
 
   const {
@@ -220,13 +222,6 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
     onMutedChange?.(isMuted);
   }, [isMuted, onMutedChange]);
 
-  // Show metadata for 3 seconds, then fade out
-  useEffect(() => {
-    setShowMetadata(true);
-    const timer = setTimeout(() => setShowMetadata(false), 3000);
-    return () => clearTimeout(timer);
-  }, [audioUrl]); // Reset when audio changes
-
   // Swipe gesture for track navigation
   const swipeHandlers = useSwipeGesture({
     onSwipeLeft: onNextTrack,
@@ -240,15 +235,20 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
     e.stopPropagation();
 
     if (isMuted) {
-      // First tap unmutes
+      // First tap unmutes - also init ping sound context (requires user gesture)
+      initPingSoundContext();
       unmute();
     } else {
       // Subsequent taps toggle play/pause
       togglePlay();
 
-      // Show controls briefly
-      setShowControls(true);
-      setTimeout(() => setShowControls(false), 1500);
+      // Only show controls briefly when playing (pause icon fades out)
+      // When paused, the play icon is shown persistently
+      if (!isPlaying) {
+        // We're about to play, show pause icon briefly then fade
+        setShowControls(true);
+        setTimeout(() => setShowControls(false), 1200);
+      }
     }
   };
 
@@ -275,7 +275,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Audio Visualizer overlay */}
-      {isReady && !isMuted && (
+      {isReady && !isMuted && analyserNode && (
         <AudioVisualizer
           analyserNode={analyserNode}
           isPlaying={isPlaying}
@@ -294,11 +294,24 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
         </div>
       )}
 
-      {/* Play/Pause indicator (shown briefly on tap) */}
-      {showControls && !isMuted && (
+      {/* Play button - shown persistently when paused */}
+      {!isPlaying && !isMuted && isReady && (
         <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
-          <div className="w-16 h-16 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white animate-fade-in">
-            {isPlaying ? <PauseIcon /> : <PlayIcon />}
+          <div className="w-16 h-16 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white">
+            <PlayIcon />
+          </div>
+        </div>
+      )}
+
+      {/* Pause indicator - shown briefly when playing, with slow fade out */}
+      {isPlaying && !isMuted && (
+        <div
+          className={`absolute inset-0 flex items-center justify-center z-20 pointer-events-none transition-opacity duration-700 ${
+            showControls ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <div className="w-16 h-16 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white">
+            <PauseIcon />
           </div>
         </div>
       )}
@@ -319,15 +332,11 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
         </div>
       )}
 
-      {/* Song metadata overlay */}
-      <div
-        className={`absolute bottom-3 left-4 z-20 transition-opacity duration-1000 ${
-          showMetadata ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        <div className="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Now Playing</div>
+      {/* Song metadata overlay - top left, always visible */}
+      <div className="absolute top-3 left-4 z-20">
         <div className="font-bold text-base leading-tight text-white drop-shadow-lg">{title}</div>
         <div className="text-zinc-300 text-sm drop-shadow-lg">{artist}</div>
+        {album && <div className="text-zinc-400 text-xs drop-shadow-lg mt-0.5">{album}</div>}
       </div>
 
       {/* Navigation buttons - only show if there's a prev/next track */}
@@ -370,16 +379,16 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
   // Scrubber bar component - rendered separately to be placed outside player
   const scrubberBar = isReady ? (
-    <div className="flex items-center gap-2 px-3 py-1 bg-black">
+    <div className="flex items-center px-4 py-1 bg-black">
       {/* Elapsed time */}
       <span className="text-xs text-zinc-400 font-mono w-10 text-right">
         {formatTime(displayTimeMs)}
       </span>
 
-      {/* Scrubber track */}
+      {/* Scrubber track - with horizontal margin for spacing from time */}
       <div
         ref={scrubberRef}
-        className="flex-1 h-8 flex items-center cursor-pointer"
+        className="flex-1 h-8 flex items-center cursor-pointer mx-4"
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
       >

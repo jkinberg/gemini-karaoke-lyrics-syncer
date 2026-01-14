@@ -11,24 +11,13 @@ export function AudioVisualizer({
 }: AudioVisualizerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameRef = useRef<number | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const container = containerRef.current;
-    if (!canvas || !container || !analyserNode) return;
+    if (!canvas || !analyserNode) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
-    // Set canvas size to match container
-    const updateCanvasSize = () => {
-      const rect = container.getBoundingClientRect();
-      canvas.width = rect.width * window.devicePixelRatio;
-      canvas.height = rect.height * window.devicePixelRatio;
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-    };
-    updateCanvasSize();
 
     const bufferLength = analyserNode.frequencyBinCount;
     const dataArray = new Uint8Array(bufferLength);
@@ -37,107 +26,127 @@ export function AudioVisualizer({
     const purpleLight = 'rgba(192, 132, 252, 0.9)'; // purple-400
     const purpleDark = 'rgba(139, 92, 246, 0.6)';   // violet-500
 
-    const draw = () => {
-      if (!isPlaying) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        return;
-      }
+    // Number of bars to display across the full width
+    const barCount = 64;
 
+    const draw = () => {
+      // Always request next frame to keep animation loop alive
       animationFrameRef.current = requestAnimationFrame(draw);
 
-      analyserNode.getByteFrequencyData(dataArray);
-
-      const rect = container.getBoundingClientRect();
+      // Get canvas dimensions from its display size
+      const rect = canvas.getBoundingClientRect();
       const width = rect.width;
       const height = rect.height;
+
+      // Set canvas internal resolution to match display size
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
 
       // Clear canvas
       ctx.clearRect(0, 0, width, height);
 
-      // Create a smooth waveform visualization that spans full width
-      const sliceWidth = width / bufferLength;
+      if (!isPlaying) {
+        return;
+      }
+
+      analyserNode.getByteFrequencyData(dataArray);
+
+      // Only use the lower frequencies where music energy is concentrated
+      // Use first 1/4 of the frequency bins (most music content is here)
+      const usableBins = Math.floor(bufferLength / 4);
+      const binsPerBar = Math.max(1, Math.floor(usableBins / barCount));
+
+      // Calculate bar width to span full screen width
+      const barWidth = width / barCount;
+
+      const points: { x: number; y: number }[] = [];
+
+      for (let i = 0; i < barCount; i++) {
+        // Average the frequency data for this bar
+        let sum = 0;
+        for (let j = 0; j < binsPerBar; j++) {
+          const index = i * binsPerBar + j;
+          if (index < bufferLength) {
+            sum += dataArray[index];
+          }
+        }
+        const average = sum / binsPerBar;
+
+        const v = average / 255;
+        // Use exponential scaling for more dynamic response
+        const scaledV = Math.pow(v, 0.7);
+        const barHeight = scaledV * height * 0.75;
+        const y = height - barHeight;
+        const x = i * barWidth + barWidth / 2;
+
+        points.push({ x, y });
+      }
 
       // Draw filled waveform from bottom
-      ctx.beginPath();
-      ctx.moveTo(0, height);
+      if (points.length > 0) {
+        ctx.beginPath();
+        ctx.moveTo(0, height);
+        ctx.lineTo(0, points[0].y);
 
-      for (let i = 0; i < bufferLength; i++) {
-        const v = dataArray[i] / 255;
-        // Use exponential scaling for more dynamic response
-        const scaledV = Math.pow(v, 0.8);
-        const y = height - (scaledV * height * 0.7);
-        const x = i * sliceWidth;
-
-        if (i === 0) {
-          ctx.lineTo(x, y);
-        } else {
-          // Use quadratic curves for smoother waveform
-          const prevX = (i - 1) * sliceWidth;
-          const cpX = (prevX + x) / 2;
-          ctx.quadraticCurveTo(prevX, ctx.getLineDash.length > 0 ? y : y, cpX, y);
-          ctx.lineTo(x, y);
+        for (let i = 0; i < points.length - 1; i++) {
+          const current = points[i];
+          const next = points[i + 1];
+          const cpX = (current.x + next.x) / 2;
+          ctx.quadraticCurveTo(current.x, current.y, cpX, (current.y + next.y) / 2);
         }
-      }
 
-      ctx.lineTo(width, height);
-      ctx.closePath();
+        // Final point - extend to right edge
+        const lastPoint = points[points.length - 1];
+        ctx.lineTo(lastPoint.x, lastPoint.y);
+        ctx.lineTo(width, lastPoint.y);
+        ctx.lineTo(width, height);
+        ctx.closePath();
 
-      // Fill with gradient
-      const gradient = ctx.createLinearGradient(0, 0, 0, height);
-      gradient.addColorStop(0, purpleLight);
-      gradient.addColorStop(1, purpleDark);
-      ctx.fillStyle = gradient;
-      ctx.fill();
+        // Fill with gradient
+        const gradient = ctx.createLinearGradient(0, 0, 0, height);
+        gradient.addColorStop(0, purpleLight);
+        gradient.addColorStop(1, purpleDark);
+        ctx.fillStyle = gradient;
+        ctx.fill();
 
-      // Add a glowing top line
-      ctx.beginPath();
-      ctx.moveTo(0, height);
+        // Add a glowing top line
+        ctx.beginPath();
+        ctx.moveTo(0, points[0].y);
 
-      for (let i = 0; i < bufferLength; i++) {
-        const v = dataArray[i] / 255;
-        const scaledV = Math.pow(v, 0.8);
-        const y = height - (scaledV * height * 0.7);
-        const x = i * sliceWidth;
-
-        if (i === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
+        for (let i = 0; i < points.length - 1; i++) {
+          const current = points[i];
+          const next = points[i + 1];
+          const cpX = (current.x + next.x) / 2;
+          ctx.quadraticCurveTo(current.x, current.y, cpX, (current.y + next.y) / 2);
         }
-      }
 
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
-      ctx.lineWidth = 2;
-      ctx.stroke();
+        const last = points[points.length - 1];
+        ctx.lineTo(last.x, last.y);
+        ctx.lineTo(width, last.y);
+
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
     };
 
-    if (isPlaying) {
-      draw();
-    } else {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }
-
-    // Handle resize
-    const handleResize = () => {
-      updateCanvasSize();
-    };
-    window.addEventListener('resize', handleResize);
+    // Start animation loop
+    draw();
 
     return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
-      window.removeEventListener('resize', handleResize);
     };
   }, [analyserNode, isPlaying]);
 
   return (
-    <div ref={containerRef} className="absolute inset-0 w-full h-full pointer-events-none">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{ mixBlendMode: 'screen' }}
-      />
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full pointer-events-none z-10"
+      style={{ mixBlendMode: 'screen' }}
+    />
   );
 }

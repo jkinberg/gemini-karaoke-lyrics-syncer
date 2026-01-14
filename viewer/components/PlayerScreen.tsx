@@ -117,6 +117,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
               expectedDurationMs={track.metadata.durationMs}
               title={track.metadata.title}
               artist={track.metadata.artist}
+              album={track.metadata.album}
               thumbnailUrl={track.youtube.thumbnailUrl}
               seekToTimeMs={seekToTimeMs}
               shouldPause={shouldPause}
@@ -161,6 +162,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
             trackData={trackData}
             currentTimeMs={currentTimeMs}
             unlockedVocabIndices={unlockedVocabIndices}
+            isMobile={isMobile}
           />
         ) : (
           <div className="text-zinc-600 text-center">
@@ -230,7 +232,8 @@ const LyricsDisplay: React.FC<{
   trackData: LoadedTrackData;
   currentTimeMs: number;
   unlockedVocabIndices: Set<number>;
-}> = ({ trackData, currentTimeMs, unlockedVocabIndices }) => {
+  isMobile?: boolean;
+}> = ({ trackData, currentTimeMs, unlockedVocabIndices, isMobile = false }) => {
   const {
     currentSegmentIndex,
     currentWordIndex,
@@ -253,10 +256,14 @@ const LyricsDisplay: React.FC<{
     );
   }
 
+  // Font sizes: slightly smaller on mobile to reduce word wrapping
+  const spanishFontSize = isMobile ? 32 : 36;
+  const englishFontSize = isMobile ? 20 : 24;
+
   return (
     <div className="text-center">
       {/* Spanish lyrics */}
-      <div className="mb-8" style={{ fontSize: 36, lineHeight: 1.2, fontWeight: 700 }}>
+      <div className="mb-8" style={{ fontSize: spanishFontSize, lineHeight: 1.2, fontWeight: 700 }}>
         {spanishSegment.words?.map((word, index) => {
           const isHighlighted = index < currentWordIndex ||
             (index === currentWordIndex && currentTimeMs >= word.startTimeMs);
@@ -303,7 +310,7 @@ const LyricsDisplay: React.FC<{
       </div>
 
       {/* English translation */}
-      <div style={{ fontSize: 24, lineHeight: 1.3 }}>
+      <div style={{ fontSize: englishFontSize, lineHeight: 1.3 }}>
         {englishSegment?.words?.map((word, index) => {
           const isHighlighted = index < currentWordIndex ||
             (index === currentWordIndex && currentTimeMs >= word.startTimeMs);

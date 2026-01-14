@@ -40,6 +40,9 @@ export function useAudioPlayer({
   const analyserRef = useRef<AnalyserNode | null>(null);
   const sourceRef = useRef<MediaElementAudioSourceNode | null>(null);
   const timeUpdateIntervalRef = useRef<number | null>(null);
+  const wakeLockRef = useRef<WakeLockSentinel | null>(null);
+  const hasTriggeredLogicalEnd = useRef(false);
+  const expectedDurationMsRef = useRef(expectedDurationMs);
 
   const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -51,6 +54,11 @@ export function useAudioPlayer({
 
   // Store the muted preference to persist across audio changes
   const mutedPreferenceRef = useRef(initialMuted);
+
+  // Keep expectedDurationMs ref in sync with prop
+  useEffect(() => {
+    expectedDurationMsRef.current = expectedDurationMs;
+  }, [expectedDurationMs]);
 
   // Setup Web Audio API for visualizer
   const setupAudioContext = useCallback(() => {
@@ -95,6 +103,7 @@ export function useAudioPlayer({
     setCurrentTimeMs(0);
     setDuration(0);
     setIsPlaying(false);
+    hasTriggeredLogicalEnd.current = false;
 
     const audio = audioRef.current;
     if (!audio) return;
@@ -202,6 +211,61 @@ export function useAudioPlayer({
     };
   }, []);
 
+  // Wake lock to prevent screen sleep during playback
+  useEffect(() => {
+    const requestWakeLock = async () => {
+      if ('wakeLock' in navigator && isPlaying) {
+        try {
+          wakeLockRef.current = await navigator.wakeLock.request('screen');
+        } catch (e) {
+          // Wake lock request failed (e.g., low battery, tab not visible)
+          console.debug('Wake lock request failed:', e);
+        }
+      }
+    };
+
+    const releaseWakeLock = async () => {
+      if (wakeLockRef.current) {
+        try {
+          await wakeLockRef.current.release();
+          wakeLockRef.current = null;
+        } catch (e) {
+          console.debug('Wake lock release failed:', e);
+        }
+      }
+    };
+
+    if (isPlaying) {
+      requestWakeLock();
+    } else {
+      releaseWakeLock();
+    }
+
+    // Re-acquire wake lock when page becomes visible again
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible' && isPlaying) {
+        requestWakeLock();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      releaseWakeLock();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [isPlaying]);
+
+  // Store callbacks in refs to avoid stale closures in interval
+  const onEndedRef = useRef(onEnded);
+  const onStateChangeRef = useRef(onStateChange);
+  const onTimeUpdateRef = useRef(onTimeUpdate);
+
+  useEffect(() => {
+    onEndedRef.current = onEnded;
+    onStateChangeRef.current = onStateChange;
+    onTimeUpdateRef.current = onTimeUpdate;
+  }, [onEnded, onStateChange, onTimeUpdate]);
+
   // Time update polling (50ms for smooth word-by-word sync)
   useEffect(() => {
     if (!isPlaying || !audioRef.current) {
@@ -215,8 +279,28 @@ export function useAudioPlayer({
     timeUpdateIntervalRef.current = window.setInterval(() => {
       if (audioRef.current) {
         const timeMs = audioRef.current.currentTime * 1000;
-        setCurrentTimeMs(timeMs);
-        onTimeUpdate?.(timeMs);
+        const expectedDuration = expectedDurationMsRef.current;
+
+        // Check if we've passed the expected duration (lyrics end)
+        // This handles the case where actual audio is longer than lyrics
+        if (
+          expectedDuration &&
+          timeMs >= expectedDuration &&
+          !hasTriggeredLogicalEnd.current
+        ) {
+          hasTriggeredLogicalEnd.current = true;
+          // Pause the audio and trigger ended callback
+          audioRef.current.pause();
+          setIsPlaying(false);
+          onStateChangeRef.current?.(false);
+          onEndedRef.current?.();
+          return;
+        }
+
+        // Cap the time at expectedDuration to prevent negative remaining time
+        const cappedTimeMs = expectedDuration ? Math.min(timeMs, expectedDuration) : timeMs;
+        setCurrentTimeMs(cappedTimeMs);
+        onTimeUpdateRef.current?.(cappedTimeMs);
       }
     }, 50);
 
@@ -226,16 +310,19 @@ export function useAudioPlayer({
         timeUpdateIntervalRef.current = null;
       }
     };
-  }, [isPlaying, onTimeUpdate]);
+  }, [isPlaying]);
 
-  const play = useCallback(() => {
-    resumeAudioContext();
+  const play = useCallback(async () => {
+    // Resume AudioContext first and wait for it
+    if (audioContextRef.current?.state === 'suspended') {
+      await audioContextRef.current.resume();
+    }
     audioRef.current?.play();
-  }, [resumeAudioContext]);
+  }, []);
 
   const pause = useCallback(() => {
     audioRef.current?.pause();
-    // Also suspend AudioContext to stop any lingering audio processing
+    // Suspend AudioContext to stop any audio pipeline processing
     if (audioContextRef.current?.state === 'running') {
       audioContextRef.current.suspend();
     }
@@ -257,18 +344,21 @@ export function useAudioPlayer({
     }
   }, []);
 
-  const unmute = useCallback(() => {
+  const unmute = useCallback(async () => {
     if (audioRef.current) {
       audioRef.current.muted = false;
       setIsMuted(false);
       mutedPreferenceRef.current = false;
-      resumeAudioContext();
+      // Resume AudioContext first
+      if (audioContextRef.current?.state === 'suspended') {
+        await audioContextRef.current.resume();
+      }
       // Try to play if paused (user interaction enables autoplay)
       if (audioRef.current.paused) {
         audioRef.current.play().catch(() => {});
       }
     }
-  }, [resumeAudioContext]);
+  }, []);
 
   const toggleMute = useCallback(() => {
     if (isMuted) {
@@ -282,6 +372,11 @@ export function useAudioPlayer({
     if (audioRef.current) {
       audioRef.current.currentTime = timeMs / 1000;
       setCurrentTimeMs(timeMs);
+      // Reset logical end flag if seeking to before the end
+      const expectedDuration = expectedDurationMsRef.current;
+      if (expectedDuration && timeMs < expectedDuration) {
+        hasTriggeredLogicalEnd.current = false;
+      }
     }
   }, []);
 

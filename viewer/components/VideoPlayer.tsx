@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useYouTubePlayer } from '../hooks/useYouTubePlayer';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
+import { initPingSoundContext } from '../utils/pingSoundContext';
 
 // Icons
 const PlayIcon = () => (
@@ -235,7 +236,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     e.stopPropagation();
 
     if (isMuted) {
-      // First tap unmutes
+      // First tap unmutes - also init ping sound context (requires user gesture)
+      initPingSoundContext();
       unmute();
     } else {
       // Subsequent taps toggle play/pause
