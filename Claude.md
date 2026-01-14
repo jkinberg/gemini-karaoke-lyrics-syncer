@@ -132,6 +132,7 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 
 ## Documentation
 
+- `TODO.md` - Roadmap, known issues, and future ideas
 - `docs/karaoke-app-spec.md` - Viewer app feature requirements
 - `docs/karaoke-viewer-implementation-plan.md` - Viewer implementation plan
 - `docs/tech-spec-lrc-based-synchronization.md` - LRC file support for improved timing accuracy

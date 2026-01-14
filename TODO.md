@@ -66,6 +66,7 @@
 ## Future Ideas
 
 ### Viewer App - High Priority
+- [ ] Create desktop-optimized layout (current layout is mobile-only)
 - [ ] Integrate Google Analytics tracking
 - [ ] Integrate feedback survey link
 - [ ] Display language selector with other options (Italian, French, Korean) shown as "Coming Soon"
