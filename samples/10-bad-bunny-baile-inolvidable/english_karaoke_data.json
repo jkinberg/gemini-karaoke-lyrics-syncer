@@ -1,0 +1,3052 @@
+{
+  "metadata": {
+    "title": "BAILE INOLVIDABLE",
+    "artist": "Bad Bunny",
+    "durationMs": 335000,
+    "language": "en-US",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 3570,
+      "segmentIndex": 1,
+      "cueText": "Musical Intro"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 3570,
+      "endTimeMs": 9330,
+      "segmentIndex": 2,
+      "text": "I thought I was going to grow old with you",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 3570,
+          "endTimeMs": 3800
+        },
+        {
+          "word": "thought",
+          "startTimeMs": 3800,
+          "endTimeMs": 4300
+        },
+        {
+          "word": "I",
+          "startTimeMs": 4300,
+          "endTimeMs": 4500
+        },
+        {
+          "word": "was",
+          "startTimeMs": 4500,
+          "endTimeMs": 4800
+        },
+        {
+          "word": "going",
+          "startTimeMs": 4800,
+          "endTimeMs": 5300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 5300,
+          "endTimeMs": 5500
+        },
+        {
+          "word": "grow",
+          "startTimeMs": 5500,
+          "endTimeMs": 6000
+        },
+        {
+          "word": "old",
+          "startTimeMs": 6000,
+          "endTimeMs": 6500
+        },
+        {
+          "word": "with",
+          "startTimeMs": 6500,
+          "endTimeMs": 7000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 7000,
+          "endTimeMs": 9330
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 9330,
+      "endTimeMs": 15260,
+      "segmentIndex": 3,
+      "text": "In another life, in another world, it could be",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 9330,
+          "endTimeMs": 9500
+        },
+        {
+          "word": "another",
+          "startTimeMs": 9500,
+          "endTimeMs": 10000
+        },
+        {
+          "word": "life,",
+          "startTimeMs": 10000,
+          "endTimeMs": 10500
+        },
+        {
+          "word": "in",
+          "startTimeMs": 10500,
+          "endTimeMs": 10800
+        },
+        {
+          "word": "another",
+          "startTimeMs": 10800,
+          "endTimeMs": 11300
+        },
+        {
+          "word": "world,",
+          "startTimeMs": 11300,
+          "endTimeMs": 12000
+        },
+        {
+          "word": "it",
+          "startTimeMs": 12000,
+          "endTimeMs": 12300
+        },
+        {
+          "word": "could",
+          "startTimeMs": 12300,
+          "endTimeMs": 13000
+        },
+        {
+          "word": "be",
+          "startTimeMs": 13000,
+          "endTimeMs": 15260
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 15260,
+      "endTimeMs": 20660,
+      "segmentIndex": 4,
+      "text": "In this one, all that's left is to leave one day",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 15260,
+          "endTimeMs": 15500
+        },
+        {
+          "word": "this",
+          "startTimeMs": 15500,
+          "endTimeMs": 15800
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 15800,
+          "endTimeMs": 16300
+        },
+        {
+          "word": "all",
+          "startTimeMs": 16300,
+          "endTimeMs": 16600
+        },
+        {
+          "word": "that's",
+          "startTimeMs": 16600,
+          "endTimeMs": 16900
+        },
+        {
+          "word": "left",
+          "startTimeMs": 16900,
+          "endTimeMs": 17400
+        },
+        {
+          "word": "is",
+          "startTimeMs": 17400,
+          "endTimeMs": 17600
+        },
+        {
+          "word": "to",
+          "startTimeMs": 17600,
+          "endTimeMs": 17800
+        },
+        {
+          "word": "leave",
+          "startTimeMs": 17800,
+          "endTimeMs": 18500
+        },
+        {
+          "word": "one",
+          "startTimeMs": 18500,
+          "endTimeMs": 19000
+        },
+        {
+          "word": "day",
+          "startTimeMs": 19000,
+          "endTimeMs": 20660
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 20660,
+      "endTimeMs": 26610,
+      "segmentIndex": 5,
+      "text": "And only see you in the sunset",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 20660,
+          "endTimeMs": 21000
+        },
+        {
+          "word": "only",
+          "startTimeMs": 21000,
+          "endTimeMs": 21800
+        },
+        {
+          "word": "see",
+          "startTimeMs": 21800,
+          "endTimeMs": 22300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 22300,
+          "endTimeMs": 22800
+        },
+        {
+          "word": "in",
+          "startTimeMs": 22800,
+          "endTimeMs": 23300
+        },
+        {
+          "word": "the",
+          "startTimeMs": 23300,
+          "endTimeMs": 23600
+        },
+        {
+          "word": "sunset",
+          "startTimeMs": 23600,
+          "endTimeMs": 26610
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 26610,
+      "endTimeMs": 32490,
+      "segmentIndex": 6,
+      "text": "If they see me alone and sad, don't talk to me",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 26610,
+          "endTimeMs": 26900
+        },
+        {
+          "word": "they",
+          "startTimeMs": 26900,
+          "endTimeMs": 27200
+        },
+        {
+          "word": "see",
+          "startTimeMs": 27200,
+          "endTimeMs": 27600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 27600,
+          "endTimeMs": 28000
+        },
+        {
+          "word": "alone",
+          "startTimeMs": 28000,
+          "endTimeMs": 28600
+        },
+        {
+          "word": "and",
+          "startTimeMs": 28600,
+          "endTimeMs": 28900
+        },
+        {
+          "word": "sad,",
+          "startTimeMs": 28900,
+          "endTimeMs": 29600
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 29600,
+          "endTimeMs": 30200
+        },
+        {
+          "word": "talk",
+          "startTimeMs": 30200,
+          "endTimeMs": 30800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 30800,
+          "endTimeMs": 31200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 31200,
+          "endTimeMs": 32490
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 32490,
+      "endTimeMs": 38330,
+      "segmentIndex": 7,
+      "text": "If they see me alone and sad, I'm to blame",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 32490,
+          "endTimeMs": 32800
+        },
+        {
+          "word": "they",
+          "startTimeMs": 32800,
+          "endTimeMs": 33100
+        },
+        {
+          "word": "see",
+          "startTimeMs": 33100,
+          "endTimeMs": 33500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 33500,
+          "endTimeMs": 33900
+        },
+        {
+          "word": "alone",
+          "startTimeMs": 33900,
+          "endTimeMs": 34500
+        },
+        {
+          "word": "and",
+          "startTimeMs": 34500,
+          "endTimeMs": 34900
+        },
+        {
+          "word": "sad,",
+          "startTimeMs": 34900,
+          "endTimeMs": 35600
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 35600,
+          "endTimeMs": 36200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 36200,
+          "endTimeMs": 36600
+        },
+        {
+          "word": "blame",
+          "startTimeMs": 36600,
+          "endTimeMs": 38330
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 38330,
+      "endTimeMs": 44020,
+      "segmentIndex": 8,
+      "text": "Life is a party that one day ends",
+      "words": [
+        {
+          "word": "Life",
+          "startTimeMs": 38330,
+          "endTimeMs": 38800
+        },
+        {
+          "word": "is",
+          "startTimeMs": 38800,
+          "endTimeMs": 39100
+        },
+        {
+          "word": "a",
+          "startTimeMs": 39100,
+          "endTimeMs": 39300
+        },
+        {
+          "word": "party",
+          "startTimeMs": 39300,
+          "endTimeMs": 40200
+        },
+        {
+          "word": "that",
+          "startTimeMs": 40200,
+          "endTimeMs": 40600
+        },
+        {
+          "word": "one",
+          "startTimeMs": 40600,
+          "endTimeMs": 41200
+        },
+        {
+          "word": "day",
+          "startTimeMs": 41200,
+          "endTimeMs": 41800
+        },
+        {
+          "word": "ends",
+          "startTimeMs": 41800,
+          "endTimeMs": 44020
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 44020,
+      "endTimeMs": 54600,
+      "segmentIndex": 9,
+      "text": "And you were my UNFoRGETTABLE DANCE",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 44020,
+          "endTimeMs": 44500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 44500,
+          "endTimeMs": 45000
+        },
+        {
+          "word": "were",
+          "startTimeMs": 45000,
+          "endTimeMs": 45800
+        },
+        {
+          "word": "my",
+          "startTimeMs": 45800,
+          "endTimeMs": 46500
+        },
+        {
+          "word": "UNFoRGETTABLE",
+          "startTimeMs": 46500,
+          "endTimeMs": 50000
+        },
+        {
+          "word": "DANCE",
+          "startTimeMs": 50000,
+          "endTimeMs": 54600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 54600,
+      "endTimeMs": 59600,
+      "segmentIndex": 10,
+      "text": "And you were my UNFoRGETTABLE DANCE",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 54600,
+          "endTimeMs": 54900
+        },
+        {
+          "word": "you",
+          "startTimeMs": 54900,
+          "endTimeMs": 55400
+        },
+        {
+          "word": "were",
+          "startTimeMs": 55400,
+          "endTimeMs": 55900
+        },
+        {
+          "word": "my",
+          "startTimeMs": 55900,
+          "endTimeMs": 56400
+        },
+        {
+          "word": "UNFoRGETTABLE",
+          "startTimeMs": 56400,
+          "endTimeMs": 58000
+        },
+        {
+          "word": "DANCE",
+          "startTimeMs": 58000,
+          "endTimeMs": 59600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 59600,
+      "endTimeMs": 63400,
+      "segmentIndex": 11,
+      "text": "Eh-eh, eh-eh",
+      "words": [
+        {
+          "word": "Eh-eh,",
+          "startTimeMs": 59600,
+          "endTimeMs": 61500
+        },
+        {
+          "word": "eh-eh",
+          "startTimeMs": 61500,
+          "endTimeMs": 63400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 63400,
+      "endTimeMs": 67500,
+      "segmentIndex": 12,
+      "text": "Eh-eh, eh-eh",
+      "words": [
+        {
+          "word": "Eh-eh,",
+          "startTimeMs": 63400,
+          "endTimeMs": 65400
+        },
+        {
+          "word": "eh-eh",
+          "startTimeMs": 65400,
+          "endTimeMs": 67500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 67500,
+      "endTimeMs": 70500,
+      "segmentIndex": 13,
+      "text": "\"While one is alive",
+      "words": [
+        {
+          "word": "\"While",
+          "startTimeMs": 67500,
+          "endTimeMs": 68500
+        },
+        {
+          "word": "one",
+          "startTimeMs": 68500,
+          "endTimeMs": 69200
+        },
+        {
+          "word": "is",
+          "startTimeMs": 69200,
+          "endTimeMs": 69700
+        },
+        {
+          "word": "alive",
+          "startTimeMs": 69700,
+          "endTimeMs": 70500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 70500,
+      "endTimeMs": 102600,
+      "segmentIndex": 14,
+      "text": "One must love as much as they can\"",
+      "words": [
+        {
+          "word": "One",
+          "startTimeMs": 70500,
+          "endTimeMs": 70800
+        },
+        {
+          "word": "must",
+          "startTimeMs": 70800,
+          "endTimeMs": 71200
+        },
+        {
+          "word": "love",
+          "startTimeMs": 71200,
+          "endTimeMs": 71800
+        },
+        {
+          "word": "as",
+          "startTimeMs": 71800,
+          "endTimeMs": 72000
+        },
+        {
+          "word": "much",
+          "startTimeMs": 72000,
+          "endTimeMs": 72300
+        },
+        {
+          "word": "as",
+          "startTimeMs": 72300,
+          "endTimeMs": 72500
+        },
+        {
+          "word": "they",
+          "startTimeMs": 72500,
+          "endTimeMs": 72800
+        },
+        {
+          "word": "can\"",
+          "startTimeMs": 72800,
+          "endTimeMs": 75000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 102600,
+      "endTimeMs": 108400,
+      "segmentIndex": 15,
+      "text": "I thought I was going to grow old with you",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 102600,
+          "endTimeMs": 102900
+        },
+        {
+          "word": "thought",
+          "startTimeMs": 102900,
+          "endTimeMs": 103400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 103400,
+          "endTimeMs": 103600
+        },
+        {
+          "word": "was",
+          "startTimeMs": 103600,
+          "endTimeMs": 103900
+        },
+        {
+          "word": "going",
+          "startTimeMs": 103900,
+          "endTimeMs": 104300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 104300,
+          "endTimeMs": 104500
+        },
+        {
+          "word": "grow",
+          "startTimeMs": 104500,
+          "endTimeMs": 105000
+        },
+        {
+          "word": "old",
+          "startTimeMs": 105000,
+          "endTimeMs": 105500
+        },
+        {
+          "word": "with",
+          "startTimeMs": 105500,
+          "endTimeMs": 106000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 106000,
+          "endTimeMs": 108400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 108400,
+      "endTimeMs": 113900,
+      "segmentIndex": 16,
+      "text": "In another life, in another world, it could be",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 108400,
+          "endTimeMs": 108700
+        },
+        {
+          "word": "another",
+          "startTimeMs": 108700,
+          "endTimeMs": 109200
+        },
+        {
+          "word": "life,",
+          "startTimeMs": 109200,
+          "endTimeMs": 109800
+        },
+        {
+          "word": "in",
+          "startTimeMs": 109800,
+          "endTimeMs": 110100
+        },
+        {
+          "word": "another",
+          "startTimeMs": 110100,
+          "endTimeMs": 110600
+        },
+        {
+          "word": "world,",
+          "startTimeMs": 110600,
+          "endTimeMs": 111400
+        },
+        {
+          "word": "it",
+          "startTimeMs": 111400,
+          "endTimeMs": 111800
+        },
+        {
+          "word": "could",
+          "startTimeMs": 111800,
+          "endTimeMs": 112500
+        },
+        {
+          "word": "be",
+          "startTimeMs": 112500,
+          "endTimeMs": 113900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 113900,
+      "endTimeMs": 119300,
+      "segmentIndex": 17,
+      "text": "In this one, all that's left is to leave one day",
+      "words": [
+        {
+          "word": "In",
+          "startTimeMs": 113900,
+          "endTimeMs": 114200
+        },
+        {
+          "word": "this",
+          "startTimeMs": 114200,
+          "endTimeMs": 114500
+        },
+        {
+          "word": "one,",
+          "startTimeMs": 114500,
+          "endTimeMs": 115000
+        },
+        {
+          "word": "all",
+          "startTimeMs": 115000,
+          "endTimeMs": 115300
+        },
+        {
+          "word": "that's",
+          "startTimeMs": 115300,
+          "endTimeMs": 115600
+        },
+        {
+          "word": "left",
+          "startTimeMs": 115600,
+          "endTimeMs": 116100
+        },
+        {
+          "word": "is",
+          "startTimeMs": 116100,
+          "endTimeMs": 116300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 116300,
+          "endTimeMs": 116500
+        },
+        {
+          "word": "leave",
+          "startTimeMs": 116500,
+          "endTimeMs": 117200
+        },
+        {
+          "word": "one",
+          "startTimeMs": 117200,
+          "endTimeMs": 117700
+        },
+        {
+          "word": "day",
+          "startTimeMs": 117700,
+          "endTimeMs": 119300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 119300,
+      "endTimeMs": 124900,
+      "segmentIndex": 18,
+      "text": "And look at the sky to see if I see you fall",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 119300,
+          "endTimeMs": 119600
+        },
+        {
+          "word": "look",
+          "startTimeMs": 119600,
+          "endTimeMs": 120000
+        },
+        {
+          "word": "at",
+          "startTimeMs": 120000,
+          "endTimeMs": 120300
+        },
+        {
+          "word": "the",
+          "startTimeMs": 120300,
+          "endTimeMs": 120600
+        },
+        {
+          "word": "sky",
+          "startTimeMs": 120600,
+          "endTimeMs": 121200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 121200,
+          "endTimeMs": 121500
+        },
+        {
+          "word": "see",
+          "startTimeMs": 121500,
+          "endTimeMs": 121800
+        },
+        {
+          "word": "if",
+          "startTimeMs": 121800,
+          "endTimeMs": 122100
+        },
+        {
+          "word": "I",
+          "startTimeMs": 122100,
+          "endTimeMs": 122300
+        },
+        {
+          "word": "see",
+          "startTimeMs": 122300,
+          "endTimeMs": 122700
+        },
+        {
+          "word": "you",
+          "startTimeMs": 122700,
+          "endTimeMs": 123200
+        },
+        {
+          "word": "fall",
+          "startTimeMs": 123200,
+          "endTimeMs": 124900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 124900,
+      "endTimeMs": 130600,
+      "segmentIndex": 19,
+      "text": "If they see me alone and sad, don't talk to me",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 124900,
+          "endTimeMs": 125200
+        },
+        {
+          "word": "they",
+          "startTimeMs": 125200,
+          "endTimeMs": 125500
+        },
+        {
+          "word": "see",
+          "startTimeMs": 125500,
+          "endTimeMs": 125900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 125900,
+          "endTimeMs": 126300
+        },
+        {
+          "word": "alone",
+          "startTimeMs": 126300,
+          "endTimeMs": 126900
+        },
+        {
+          "word": "and",
+          "startTimeMs": 126900,
+          "endTimeMs": 127200
+        },
+        {
+          "word": "sad,",
+          "startTimeMs": 127200,
+          "endTimeMs": 127900
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 127900,
+          "endTimeMs": 128500
+        },
+        {
+          "word": "talk",
+          "startTimeMs": 128500,
+          "endTimeMs": 129000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 129000,
+          "endTimeMs": 129400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 129400,
+          "endTimeMs": 130600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 130600,
+      "endTimeMs": 135900,
+      "segmentIndex": 20,
+      "text": "If they see me alone and sad, I'm to blame",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 130600,
+          "endTimeMs": 130900
+        },
+        {
+          "word": "they",
+          "startTimeMs": 130900,
+          "endTimeMs": 131200
+        },
+        {
+          "word": "see",
+          "startTimeMs": 131200,
+          "endTimeMs": 131600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 131600,
+          "endTimeMs": 132000
+        },
+        {
+          "word": "alone",
+          "startTimeMs": 132000,
+          "endTimeMs": 132600
+        },
+        {
+          "word": "and",
+          "startTimeMs": 132600,
+          "endTimeMs": 132900
+        },
+        {
+          "word": "sad,",
+          "startTimeMs": 132900,
+          "endTimeMs": 133600
+        },
+        {
+          "word": "I'm",
+          "startTimeMs": 133600,
+          "endTimeMs": 134200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 134200,
+          "endTimeMs": 134600
+        },
+        {
+          "word": "blame",
+          "startTimeMs": 134600,
+          "endTimeMs": 135900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 135900,
+      "endTimeMs": 140900,
+      "segmentIndex": 21,
+      "text": "Life is a party that one day ends",
+      "words": [
+        {
+          "word": "Life",
+          "startTimeMs": 135900,
+          "endTimeMs": 136400
+        },
+        {
+          "word": "is",
+          "startTimeMs": 136400,
+          "endTimeMs": 136700
+        },
+        {
+          "word": "a",
+          "startTimeMs": 136700,
+          "endTimeMs": 136900
+        },
+        {
+          "word": "party",
+          "startTimeMs": 136900,
+          "endTimeMs": 137800
+        },
+        {
+          "word": "that",
+          "startTimeMs": 137800,
+          "endTimeMs": 138200
+        },
+        {
+          "word": "one",
+          "startTimeMs": 138200,
+          "endTimeMs": 138800
+        },
+        {
+          "word": "day",
+          "startTimeMs": 138800,
+          "endTimeMs": 139400
+        },
+        {
+          "word": "ends",
+          "startTimeMs": 139400,
+          "endTimeMs": 140900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 140900,
+      "endTimeMs": 154900,
+      "segmentIndex": 22,
+      "text": "And you were my UNFoRGETTABLE DANCE",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 140900,
+          "endTimeMs": 141400
+        },
+        {
+          "word": "you",
+          "startTimeMs": 141400,
+          "endTimeMs": 142000
+        },
+        {
+          "word": "were",
+          "startTimeMs": 142000,
+          "endTimeMs": 143000
+        },
+        {
+          "word": "my",
+          "startTimeMs": 143000,
+          "endTimeMs": 144000
+        },
+        {
+          "word": "UNFoRGETTABLE",
+          "startTimeMs": 144000,
+          "endTimeMs": 148000
+        },
+        {
+          "word": "DANCE",
+          "startTimeMs": 148000,
+          "endTimeMs": 154900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 154900,
+      "endTimeMs": 157400,
+      "segmentIndex": 23,
+      "text": "No, I can't forget you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 154900,
+          "endTimeMs": 155400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 155400,
+          "endTimeMs": 155800
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 155800,
+          "endTimeMs": 156400
+        },
+        {
+          "word": "forget",
+          "startTimeMs": 156400,
+          "endTimeMs": 157000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 157000,
+          "endTimeMs": 157400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 157400,
+      "endTimeMs": 160000,
+      "segmentIndex": 24,
+      "text": "No, I can't erase you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 157400,
+          "endTimeMs": 157900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 157900,
+          "endTimeMs": 158300
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 158300,
+          "endTimeMs": 158900
+        },
+        {
+          "word": "erase",
+          "startTimeMs": 158900,
+          "endTimeMs": 159500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 159500,
+          "endTimeMs": 160000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 160000,
+      "endTimeMs": 162500,
+      "segmentIndex": 25,
+      "text": "You taught me how to love",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 160000,
+          "endTimeMs": 160400
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 160400,
+          "endTimeMs": 160900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 160900,
+          "endTimeMs": 161200
+        },
+        {
+          "word": "how",
+          "startTimeMs": 161200,
+          "endTimeMs": 161500
+        },
+        {
+          "word": "to",
+          "startTimeMs": 161500,
+          "endTimeMs": 161800
+        },
+        {
+          "word": "love",
+          "startTimeMs": 161800,
+          "endTimeMs": 162500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 162500,
+      "endTimeMs": 176500,
+      "segmentIndex": 26,
+      "text": "You taught me how to dance",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 162500,
+          "endTimeMs": 162800
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 162800,
+          "endTimeMs": 163200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 163200,
+          "endTimeMs": 163500
+        },
+        {
+          "word": "how",
+          "startTimeMs": 163500,
+          "endTimeMs": 163700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 163700,
+          "endTimeMs": 163900
+        },
+        {
+          "word": "dance",
+          "startTimeMs": 163900,
+          "endTimeMs": 176500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 176500,
+      "endTimeMs": 179000,
+      "segmentIndex": 27,
+      "text": "No, I can't forget you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 176500,
+          "endTimeMs": 177000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 177000,
+          "endTimeMs": 177400
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 177400,
+          "endTimeMs": 178000
+        },
+        {
+          "word": "forget",
+          "startTimeMs": 178000,
+          "endTimeMs": 178600
+        },
+        {
+          "word": "you",
+          "startTimeMs": 178600,
+          "endTimeMs": 179000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 179000,
+      "endTimeMs": 181700,
+      "segmentIndex": 28,
+      "text": "No, I can't erase you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 179000,
+          "endTimeMs": 179500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 179500,
+          "endTimeMs": 179900
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 179900,
+          "endTimeMs": 180500
+        },
+        {
+          "word": "erase",
+          "startTimeMs": 180500,
+          "endTimeMs": 181100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 181100,
+          "endTimeMs": 181700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 181700,
+      "endTimeMs": 184300,
+      "segmentIndex": 29,
+      "text": "You taught me how to love",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 181700,
+          "endTimeMs": 182100
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 182100,
+          "endTimeMs": 182600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 182600,
+          "endTimeMs": 182900
+        },
+        {
+          "word": "how",
+          "startTimeMs": 182900,
+          "endTimeMs": 183200
+        },
+        {
+          "word": "to",
+          "startTimeMs": 183200,
+          "endTimeMs": 183500
+        },
+        {
+          "word": "love",
+          "startTimeMs": 183500,
+          "endTimeMs": 184300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 184300,
+      "endTimeMs": 187000,
+      "segmentIndex": 30,
+      "text": "You taught me how to dance",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 184300,
+          "endTimeMs": 184700
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 184700,
+          "endTimeMs": 185200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 185200,
+          "endTimeMs": 185500
+        },
+        {
+          "word": "how",
+          "startTimeMs": 185500,
+          "endTimeMs": 185800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 185800,
+          "endTimeMs": 186100
+        },
+        {
+          "word": "dance",
+          "startTimeMs": 186100,
+          "endTimeMs": 187000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 187000,
+      "endTimeMs": 190100,
+      "segmentIndex": 31,
+      "text": "Yeah-yeah-yeah-yeah, hey, tell me how I can forget you",
+      "words": [
+        {
+          "word": "Yeah-yeah-yeah-yeah,",
+          "startTimeMs": 187000,
+          "endTimeMs": 188000
+        },
+        {
+          "word": "hey,",
+          "startTimeMs": 188000,
+          "endTimeMs": 188300
+        },
+        {
+          "word": "tell",
+          "startTimeMs": 188300,
+          "endTimeMs": 188600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 188600,
+          "endTimeMs": 188800
+        },
+        {
+          "word": "how",
+          "startTimeMs": 188800,
+          "endTimeMs": 189100
+        },
+        {
+          "word": "I",
+          "startTimeMs": 189100,
+          "endTimeMs": 189300
+        },
+        {
+          "word": "can",
+          "startTimeMs": 189300,
+          "endTimeMs": 189500
+        },
+        {
+          "word": "forget",
+          "startTimeMs": 189500,
+          "endTimeMs": 189800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 189800,
+          "endTimeMs": 190100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 190100,
+      "endTimeMs": 192300,
+      "segmentIndex": 32,
+      "text": "There’s a new step I want to teach you",
+      "words": [
+        {
+          "word": "There’s",
+          "startTimeMs": 190100,
+          "endTimeMs": 190400
+        },
+        {
+          "word": "a",
+          "startTimeMs": 190400,
+          "endTimeMs": 190600
+        },
+        {
+          "word": "new",
+          "startTimeMs": 190600,
+          "endTimeMs": 190900
+        },
+        {
+          "word": "step",
+          "startTimeMs": 190900,
+          "endTimeMs": 191200
+        },
+        {
+          "word": "I",
+          "startTimeMs": 191200,
+          "endTimeMs": 191400
+        },
+        {
+          "word": "want",
+          "startTimeMs": 191400,
+          "endTimeMs": 191700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 191700,
+          "endTimeMs": 191900
+        },
+        {
+          "word": "teach",
+          "startTimeMs": 191900,
+          "endTimeMs": 192100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 192100,
+          "endTimeMs": 192300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 192300,
+      "endTimeMs": 195100,
+      "segmentIndex": 33,
+      "text": "At night I can't even sleep anymore",
+      "words": [
+        {
+          "word": "At",
+          "startTimeMs": 192300,
+          "endTimeMs": 192500
+        },
+        {
+          "word": "night",
+          "startTimeMs": 192500,
+          "endTimeMs": 192900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 192900,
+          "endTimeMs": 193200
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 193200,
+          "endTimeMs": 193600
+        },
+        {
+          "word": "even",
+          "startTimeMs": 193600,
+          "endTimeMs": 194000
+        },
+        {
+          "word": "sleep",
+          "startTimeMs": 194000,
+          "endTimeMs": 194500
+        },
+        {
+          "word": "anymore",
+          "startTimeMs": 194500,
+          "endTimeMs": 195100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 195100,
+      "endTimeMs": 197300,
+      "segmentIndex": 34,
+      "text": "All I do is dream of you",
+      "words": [
+        {
+          "word": "All",
+          "startTimeMs": 195100,
+          "endTimeMs": 195400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 195400,
+          "endTimeMs": 195700
+        },
+        {
+          "word": "do",
+          "startTimeMs": 195700,
+          "endTimeMs": 196000
+        },
+        {
+          "word": "is",
+          "startTimeMs": 196000,
+          "endTimeMs": 196300
+        },
+        {
+          "word": "dream",
+          "startTimeMs": 196300,
+          "endTimeMs": 196800
+        },
+        {
+          "word": "of",
+          "startTimeMs": 196800,
+          "endTimeMs": 197000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 197000,
+          "endTimeMs": 197300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 197300,
+      "endTimeMs": 199900,
+      "segmentIndex": 35,
+      "text": "No, I can't forget you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 197300,
+          "endTimeMs": 197800
+        },
+        {
+          "word": "I",
+          "startTimeMs": 197800,
+          "endTimeMs": 198200
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 198200,
+          "endTimeMs": 198800
+        },
+        {
+          "word": "forget",
+          "startTimeMs": 198800,
+          "endTimeMs": 199500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 199500,
+          "endTimeMs": 199900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 199900,
+      "endTimeMs": 202500,
+      "segmentIndex": 36,
+      "text": "No, I can't erase you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 199900,
+          "endTimeMs": 200400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 200400,
+          "endTimeMs": 200800
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 200800,
+          "endTimeMs": 201400
+        },
+        {
+          "word": "erase",
+          "startTimeMs": 201400,
+          "endTimeMs": 202000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 202000,
+          "endTimeMs": 202500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 202500,
+      "endTimeMs": 205000,
+      "segmentIndex": 37,
+      "text": "You taught me how to love",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 202500,
+          "endTimeMs": 202900
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 202900,
+          "endTimeMs": 203400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 203400,
+          "endTimeMs": 203700
+        },
+        {
+          "word": "how",
+          "startTimeMs": 203700,
+          "endTimeMs": 204000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 204000,
+          "endTimeMs": 204300
+        },
+        {
+          "word": "love",
+          "startTimeMs": 204300,
+          "endTimeMs": 205000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 205000,
+      "endTimeMs": 207700,
+      "segmentIndex": 38,
+      "text": "You taught me how to dance",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 205000,
+          "endTimeMs": 205400
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 205400,
+          "endTimeMs": 205900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 205900,
+          "endTimeMs": 206200
+        },
+        {
+          "word": "how",
+          "startTimeMs": 206200,
+          "endTimeMs": 206500
+        },
+        {
+          "word": "to",
+          "startTimeMs": 206500,
+          "endTimeMs": 206800
+        },
+        {
+          "word": "dance",
+          "startTimeMs": 206800,
+          "endTimeMs": 207700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 207700,
+      "endTimeMs": 210300,
+      "segmentIndex": 39,
+      "text": "How you used to kiss me, how I used to do it to you",
+      "words": [
+        {
+          "word": "How",
+          "startTimeMs": 207700,
+          "endTimeMs": 207900
+        },
+        {
+          "word": "you",
+          "startTimeMs": 207900,
+          "endTimeMs": 208100
+        },
+        {
+          "word": "used",
+          "startTimeMs": 208100,
+          "endTimeMs": 208300
+        },
+        {
+          "word": "to",
+          "startTimeMs": 208300,
+          "endTimeMs": 208500
+        },
+        {
+          "word": "kiss",
+          "startTimeMs": 208500,
+          "endTimeMs": 208800
+        },
+        {
+          "word": "me,",
+          "startTimeMs": 208800,
+          "endTimeMs": 209100
+        },
+        {
+          "word": "how",
+          "startTimeMs": 209100,
+          "endTimeMs": 209300
+        },
+        {
+          "word": "I",
+          "startTimeMs": 209300,
+          "endTimeMs": 209500
+        },
+        {
+          "word": "used",
+          "startTimeMs": 209500,
+          "endTimeMs": 209700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 209700,
+          "endTimeMs": 209800
+        },
+        {
+          "word": "do",
+          "startTimeMs": 209800,
+          "endTimeMs": 209900
+        },
+        {
+          "word": "it",
+          "startTimeMs": 209900,
+          "endTimeMs": 210000
+        },
+        {
+          "word": "to",
+          "startTimeMs": 210000,
+          "endTimeMs": 210100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 210100,
+          "endTimeMs": 210300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 210300,
+      "endTimeMs": 213000,
+      "segmentIndex": 40,
+      "text": "How you used to look at me, it would turn me on",
+      "words": [
+        {
+          "word": "How",
+          "startTimeMs": 210300,
+          "endTimeMs": 210500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 210500,
+          "endTimeMs": 210700
+        },
+        {
+          "word": "used",
+          "startTimeMs": 210700,
+          "endTimeMs": 210900
+        },
+        {
+          "word": "to",
+          "startTimeMs": 210900,
+          "endTimeMs": 211100
+        },
+        {
+          "word": "look",
+          "startTimeMs": 211100,
+          "endTimeMs": 211400
+        },
+        {
+          "word": "at",
+          "startTimeMs": 211400,
+          "endTimeMs": 211600
+        },
+        {
+          "word": "me,",
+          "startTimeMs": 211600,
+          "endTimeMs": 211900
+        },
+        {
+          "word": "it",
+          "startTimeMs": 211900,
+          "endTimeMs": 212100
+        },
+        {
+          "word": "would",
+          "startTimeMs": 212100,
+          "endTimeMs": 212300
+        },
+        {
+          "word": "turn",
+          "startTimeMs": 212300,
+          "endTimeMs": 212600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 212600,
+          "endTimeMs": 212800
+        },
+        {
+          "word": "on",
+          "startTimeMs": 212800,
+          "endTimeMs": 213000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 213000,
+      "endTimeMs": 215400,
+      "segmentIndex": 41,
+      "text": "It feels bad not having you close",
+      "words": [
+        {
+          "word": "It",
+          "startTimeMs": 213000,
+          "endTimeMs": 213200
+        },
+        {
+          "word": "feels",
+          "startTimeMs": 213200,
+          "endTimeMs": 213600
+        },
+        {
+          "word": "bad",
+          "startTimeMs": 213600,
+          "endTimeMs": 214000
+        },
+        {
+          "word": "not",
+          "startTimeMs": 214000,
+          "endTimeMs": 214300
+        },
+        {
+          "word": "having",
+          "startTimeMs": 214300,
+          "endTimeMs": 214800
+        },
+        {
+          "word": "you",
+          "startTimeMs": 214800,
+          "endTimeMs": 215000
+        },
+        {
+          "word": "close",
+          "startTimeMs": 215000,
+          "endTimeMs": 215400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 215400,
+      "endTimeMs": 220600,
+      "segmentIndex": 42,
+      "text": "The new girl's good, but it's not your sweet mouth",
+      "words": [
+        {
+          "word": "The",
+          "startTimeMs": 215400,
+          "endTimeMs": 215700
+        },
+        {
+          "word": "new",
+          "startTimeMs": 215700,
+          "endTimeMs": 216000
+        },
+        {
+          "word": "girl's",
+          "startTimeMs": 216000,
+          "endTimeMs": 216500
+        },
+        {
+          "word": "good,",
+          "startTimeMs": 216500,
+          "endTimeMs": 217000
+        },
+        {
+          "word": "but",
+          "startTimeMs": 217000,
+          "endTimeMs": 217400
+        },
+        {
+          "word": "it's",
+          "startTimeMs": 217400,
+          "endTimeMs": 217700
+        },
+        {
+          "word": "not",
+          "startTimeMs": 217700,
+          "endTimeMs": 218000
+        },
+        {
+          "word": "your",
+          "startTimeMs": 218000,
+          "endTimeMs": 218400
+        },
+        {
+          "word": "sweet",
+          "startTimeMs": 218400,
+          "endTimeMs": 219000
+        },
+        {
+          "word": "mouth",
+          "startTimeMs": 219000,
+          "endTimeMs": 220600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 220600,
+      "endTimeMs": 223260,
+      "segmentIndex": 43,
+      "text": "My devil, my angel, my crazy girl",
+      "words": [
+        {
+          "word": "My",
+          "startTimeMs": 220600,
+          "endTimeMs": 220900
+        },
+        {
+          "word": "devil,",
+          "startTimeMs": 220900,
+          "endTimeMs": 221600
+        },
+        {
+          "word": "my",
+          "startTimeMs": 221600,
+          "endTimeMs": 221900
+        },
+        {
+          "word": "angel,",
+          "startTimeMs": 221900,
+          "endTimeMs": 222400
+        },
+        {
+          "word": "my",
+          "startTimeMs": 222400,
+          "endTimeMs": 222700
+        },
+        {
+          "word": "crazy",
+          "startTimeMs": 222700,
+          "endTimeMs": 223000
+        },
+        {
+          "word": "girl",
+          "startTimeMs": 223000,
+          "endTimeMs": 223260
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 223260,
+      "endTimeMs": 240300,
+      "segmentIndex": 44,
+      "text": "My devil, my angel, my crazy girl, hey",
+      "words": [
+        {
+          "word": "My",
+          "startTimeMs": 223260,
+          "endTimeMs": 223500
+        },
+        {
+          "word": "devil,",
+          "startTimeMs": 223500,
+          "endTimeMs": 224200
+        },
+        {
+          "word": "my",
+          "startTimeMs": 224200,
+          "endTimeMs": 224500
+        },
+        {
+          "word": "angel,",
+          "startTimeMs": 224500,
+          "endTimeMs": 225000
+        },
+        {
+          "word": "my",
+          "startTimeMs": 225000,
+          "endTimeMs": 225300
+        },
+        {
+          "word": "crazy",
+          "startTimeMs": 225300,
+          "endTimeMs": 225800
+        },
+        {
+          "word": "girl,",
+          "startTimeMs": 225800,
+          "endTimeMs": 226200
+        },
+        {
+          "word": "hey",
+          "startTimeMs": 226200,
+          "endTimeMs": 226500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 240300,
+      "endTimeMs": 242800,
+      "segmentIndex": 45,
+      "text": "Everything sounds awesome",
+      "words": [
+        {
+          "word": "Everything",
+          "startTimeMs": 240300,
+          "endTimeMs": 241200
+        },
+        {
+          "word": "sounds",
+          "startTimeMs": 241200,
+          "endTimeMs": 241800
+        },
+        {
+          "word": "awesome",
+          "startTimeMs": 241800,
+          "endTimeMs": 242800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 242800,
+      "endTimeMs": 245300,
+      "segmentIndex": 46,
+      "text": "Let’s do it again",
+      "words": [
+        {
+          "word": "Let’s",
+          "startTimeMs": 242800,
+          "endTimeMs": 243300
+        },
+        {
+          "word": "do",
+          "startTimeMs": 243300,
+          "endTimeMs": 243600
+        },
+        {
+          "word": "it",
+          "startTimeMs": 243600,
+          "endTimeMs": 244000
+        },
+        {
+          "word": "again",
+          "startTimeMs": 244000,
+          "endTimeMs": 245300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 245300,
+      "endTimeMs": 249300,
+      "segmentIndex": 47,
+      "text": "Like last night, like last night",
+      "words": [
+        {
+          "word": "Like",
+          "startTimeMs": 245300,
+          "endTimeMs": 245800
+        },
+        {
+          "word": "last",
+          "startTimeMs": 245800,
+          "endTimeMs": 246200
+        },
+        {
+          "word": "night,",
+          "startTimeMs": 246200,
+          "endTimeMs": 246800
+        },
+        {
+          "word": "like",
+          "startTimeMs": 246800,
+          "endTimeMs": 247300
+        },
+        {
+          "word": "last",
+          "startTimeMs": 247300,
+          "endTimeMs": 247800
+        },
+        {
+          "word": "night",
+          "startTimeMs": 247800,
+          "endTimeMs": 249300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 249300,
+      "endTimeMs": 253200,
+      "segmentIndex": 48,
+      "text": "Tan-tan, ta-na-na, ta-na-na",
+      "words": [
+        {
+          "word": "Tan-tan,",
+          "startTimeMs": 249300,
+          "endTimeMs": 250500
+        },
+        {
+          "word": "ta-na-na,",
+          "startTimeMs": 250500,
+          "endTimeMs": 251800
+        },
+        {
+          "word": "ta-na-na",
+          "startTimeMs": 251800,
+          "endTimeMs": 253200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 253200,
+      "endTimeMs": 277400,
+      "segmentIndex": 49,
+      "text": "Hold tight, kid, hold tight",
+      "words": [
+        {
+          "word": "Hold",
+          "startTimeMs": 253200,
+          "endTimeMs": 253600
+        },
+        {
+          "word": "tight,",
+          "startTimeMs": 253600,
+          "endTimeMs": 254200
+        },
+        {
+          "word": "kid,",
+          "startTimeMs": 254200,
+          "endTimeMs": 254800
+        },
+        {
+          "word": "hold",
+          "startTimeMs": 254800,
+          "endTimeMs": 255500
+        },
+        {
+          "word": "tight",
+          "startTimeMs": 255500,
+          "endTimeMs": 256500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 277400,
+      "endTimeMs": 280000,
+      "segmentIndex": 50,
+      "text": "Right there, there, there, let's go!",
+      "words": [
+        {
+          "word": "Right",
+          "startTimeMs": 277400,
+          "endTimeMs": 277700
+        },
+        {
+          "word": "there,",
+          "startTimeMs": 277700,
+          "endTimeMs": 278000
+        },
+        {
+          "word": "there,",
+          "startTimeMs": 278000,
+          "endTimeMs": 278500
+        },
+        {
+          "word": "there,",
+          "startTimeMs": 278500,
+          "endTimeMs": 279000
+        },
+        {
+          "word": "let's",
+          "startTimeMs": 279000,
+          "endTimeMs": 279500
+        },
+        {
+          "word": "go!",
+          "startTimeMs": 279500,
+          "endTimeMs": 280000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 280000,
+      "endTimeMs": 282500,
+      "segmentIndex": 51,
+      "text": "No, I can't forget you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 280000,
+          "endTimeMs": 280400
+        },
+        {
+          "word": "I",
+          "startTimeMs": 280400,
+          "endTimeMs": 280800
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 280800,
+          "endTimeMs": 281400
+        },
+        {
+          "word": "forget",
+          "startTimeMs": 281400,
+          "endTimeMs": 282000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 282000,
+          "endTimeMs": 282500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 282500,
+      "endTimeMs": 285300,
+      "segmentIndex": 52,
+      "text": "No, I can't erase you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 282500,
+          "endTimeMs": 282900
+        },
+        {
+          "word": "I",
+          "startTimeMs": 282900,
+          "endTimeMs": 283300
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 283300,
+          "endTimeMs": 283900
+        },
+        {
+          "word": "erase",
+          "startTimeMs": 283900,
+          "endTimeMs": 284500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 284500,
+          "endTimeMs": 285300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 285300,
+      "endTimeMs": 287800,
+      "segmentIndex": 53,
+      "text": "You taught me how to love",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 285300,
+          "endTimeMs": 285700
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 285700,
+          "endTimeMs": 286200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 286200,
+          "endTimeMs": 286500
+        },
+        {
+          "word": "how",
+          "startTimeMs": 286500,
+          "endTimeMs": 286800
+        },
+        {
+          "word": "to",
+          "startTimeMs": 286800,
+          "endTimeMs": 287100
+        },
+        {
+          "word": "love",
+          "startTimeMs": 287100,
+          "endTimeMs": 287800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 287800,
+      "endTimeMs": 289100,
+      "segmentIndex": 54,
+      "text": "You taught me how to dance",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 287800,
+          "endTimeMs": 288100
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 288100,
+          "endTimeMs": 288400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 288400,
+          "endTimeMs": 288600
+        },
+        {
+          "word": "how",
+          "startTimeMs": 288600,
+          "endTimeMs": 288700
+        },
+        {
+          "word": "to",
+          "startTimeMs": 288700,
+          "endTimeMs": 288900
+        },
+        {
+          "word": "dance",
+          "startTimeMs": 288900,
+          "endTimeMs": 289100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 289100,
+      "endTimeMs": 291800,
+      "segmentIndex": 55,
+      "text": "Oh, I can sleep with anyone",
+      "words": [
+        {
+          "word": "Oh,",
+          "startTimeMs": 289100,
+          "endTimeMs": 289500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 289500,
+          "endTimeMs": 289800
+        },
+        {
+          "word": "can",
+          "startTimeMs": 289800,
+          "endTimeMs": 290100
+        },
+        {
+          "word": "sleep",
+          "startTimeMs": 290100,
+          "endTimeMs": 290500
+        },
+        {
+          "word": "with",
+          "startTimeMs": 290500,
+          "endTimeMs": 290900
+        },
+        {
+          "word": "anyone",
+          "startTimeMs": 290900,
+          "endTimeMs": 291800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 291800,
+      "endTimeMs": 295200,
+      "segmentIndex": 56,
+      "text": "But I don't want to wake up with just anyone",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 291800,
+          "endTimeMs": 292100
+        },
+        {
+          "word": "I",
+          "startTimeMs": 292100,
+          "endTimeMs": 292300
+        },
+        {
+          "word": "don't",
+          "startTimeMs": 292300,
+          "endTimeMs": 292600
+        },
+        {
+          "word": "want",
+          "startTimeMs": 292600,
+          "endTimeMs": 292900
+        },
+        {
+          "word": "to",
+          "startTimeMs": 292900,
+          "endTimeMs": 293100
+        },
+        {
+          "word": "wake",
+          "startTimeMs": 293100,
+          "endTimeMs": 293600
+        },
+        {
+          "word": "up",
+          "startTimeMs": 293600,
+          "endTimeMs": 293800
+        },
+        {
+          "word": "with",
+          "startTimeMs": 293800,
+          "endTimeMs": 294100
+        },
+        {
+          "word": "just",
+          "startTimeMs": 294100,
+          "endTimeMs": 294400
+        },
+        {
+          "word": "anyone",
+          "startTimeMs": 294400,
+          "endTimeMs": 295200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 295200,
+      "endTimeMs": 297700,
+      "segmentIndex": 57,
+      "text": "Only with you, with you",
+      "words": [
+        {
+          "word": "Only",
+          "startTimeMs": 295200,
+          "endTimeMs": 295600
+        },
+        {
+          "word": "with",
+          "startTimeMs": 295600,
+          "endTimeMs": 296100
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 296100,
+          "endTimeMs": 296500
+        },
+        {
+          "word": "with",
+          "startTimeMs": 296500,
+          "endTimeMs": 297000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 297000,
+          "endTimeMs": 297700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 297700,
+      "endTimeMs": 300500,
+      "segmentIndex": 58,
+      "text": "I dance with you, only with you",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 297700,
+          "endTimeMs": 297900
+        },
+        {
+          "word": "dance",
+          "startTimeMs": 297900,
+          "endTimeMs": 298400
+        },
+        {
+          "word": "with",
+          "startTimeMs": 298400,
+          "endTimeMs": 298800
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 298800,
+          "endTimeMs": 299300
+        },
+        {
+          "word": "only",
+          "startTimeMs": 299300,
+          "endTimeMs": 299700
+        },
+        {
+          "word": "with",
+          "startTimeMs": 299700,
+          "endTimeMs": 300000
+        },
+        {
+          "word": "you",
+          "startTimeMs": 300000,
+          "endTimeMs": 300500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 300500,
+      "endTimeMs": 301800,
+      "segmentIndex": 59,
+      "text": "A kiss wherever you are, wherever you are, baby",
+      "words": [
+        {
+          "word": "A",
+          "startTimeMs": 300500,
+          "endTimeMs": 300600
+        },
+        {
+          "word": "kiss",
+          "startTimeMs": 300600,
+          "endTimeMs": 300800
+        },
+        {
+          "word": "wherever",
+          "startTimeMs": 300800,
+          "endTimeMs": 301100
+        },
+        {
+          "word": "you",
+          "startTimeMs": 301100,
+          "endTimeMs": 301200
+        },
+        {
+          "word": "are,",
+          "startTimeMs": 301200,
+          "endTimeMs": 301300
+        },
+        {
+          "word": "wherever",
+          "startTimeMs": 301300,
+          "endTimeMs": 301500
+        },
+        {
+          "word": "you",
+          "startTimeMs": 301500,
+          "endTimeMs": 301600
+        },
+        {
+          "word": "are,",
+          "startTimeMs": 301600,
+          "endTimeMs": 301700
+        },
+        {
+          "word": "baby",
+          "startTimeMs": 301700,
+          "endTimeMs": 301800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 301800,
+      "endTimeMs": 304300,
+      "segmentIndex": 60,
+      "text": "No, I can't forget you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 301800,
+          "endTimeMs": 302200
+        },
+        {
+          "word": "I",
+          "startTimeMs": 302200,
+          "endTimeMs": 302600
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 302600,
+          "endTimeMs": 303100
+        },
+        {
+          "word": "forget",
+          "startTimeMs": 303100,
+          "endTimeMs": 303700
+        },
+        {
+          "word": "you",
+          "startTimeMs": 303700,
+          "endTimeMs": 304300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 304300,
+      "endTimeMs": 307000,
+      "segmentIndex": 61,
+      "text": "No, I can't erase you",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 304300,
+          "endTimeMs": 304700
+        },
+        {
+          "word": "I",
+          "startTimeMs": 304700,
+          "endTimeMs": 305100
+        },
+        {
+          "word": "can't",
+          "startTimeMs": 305100,
+          "endTimeMs": 305700
+        },
+        {
+          "word": "erase",
+          "startTimeMs": 305700,
+          "endTimeMs": 306300
+        },
+        {
+          "word": "you",
+          "startTimeMs": 306300,
+          "endTimeMs": 307000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 307000,
+      "endTimeMs": 309500,
+      "segmentIndex": 62,
+      "text": "You taught me how to love",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 307000,
+          "endTimeMs": 307400
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 307400,
+          "endTimeMs": 307900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 307900,
+          "endTimeMs": 308200
+        },
+        {
+          "word": "how",
+          "startTimeMs": 308200,
+          "endTimeMs": 308500
+        },
+        {
+          "word": "to",
+          "startTimeMs": 308500,
+          "endTimeMs": 308800
+        },
+        {
+          "word": "love",
+          "startTimeMs": 308800,
+          "endTimeMs": 309500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 309500,
+      "endTimeMs": 311700,
+      "segmentIndex": 63,
+      "text": "You taught me how to dance",
+      "words": [
+        {
+          "word": "You",
+          "startTimeMs": 309500,
+          "endTimeMs": 309800
+        },
+        {
+          "word": "taught",
+          "startTimeMs": 309800,
+          "endTimeMs": 310500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 310500,
+          "endTimeMs": 310800
+        },
+        {
+          "word": "how",
+          "startTimeMs": 310800,
+          "endTimeMs": 311100
+        },
+        {
+          "word": "to",
+          "startTimeMs": 311100,
+          "endTimeMs": 311400
+        },
+        {
+          "word": "dance",
+          "startTimeMs": 311400,
+          "endTimeMs": 311700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 311700,
+      "endTimeMs": 314300,
+      "segmentIndex": 64,
+      "text": "And I had many girlfriends",
+      "words": [
+        {
+          "word": "And",
+          "startTimeMs": 311700,
+          "endTimeMs": 312000
+        },
+        {
+          "word": "I",
+          "startTimeMs": 312000,
+          "endTimeMs": 312300
+        },
+        {
+          "word": "had",
+          "startTimeMs": 312300,
+          "endTimeMs": 312800
+        },
+        {
+          "word": "many",
+          "startTimeMs": 312800,
+          "endTimeMs": 313500
+        },
+        {
+          "word": "girlfriends",
+          "startTimeMs": 313500,
+          "endTimeMs": 314300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 314300,
+      "endTimeMs": 316800,
+      "segmentIndex": 65,
+      "text": "But like you, none",
+      "words": [
+        {
+          "word": "But",
+          "startTimeMs": 314300,
+          "endTimeMs": 314700
+        },
+        {
+          "word": "like",
+          "startTimeMs": 314700,
+          "endTimeMs": 315200
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 315200,
+          "endTimeMs": 315800
+        },
+        {
+          "word": "none",
+          "startTimeMs": 315800,
+          "endTimeMs": 316800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 316800,
+      "endTimeMs": 319900,
+      "segmentIndex": 66,
+      "text": "I no longer have my sun, I spend my time on the moon",
+      "words": [
+        {
+          "word": "I",
+          "startTimeMs": 316800,
+          "endTimeMs": 317000
+        },
+        {
+          "word": "no",
+          "startTimeMs": 317000,
+          "endTimeMs": 317200
+        },
+        {
+          "word": "longer",
+          "startTimeMs": 317200,
+          "endTimeMs": 317600
+        },
+        {
+          "word": "have",
+          "startTimeMs": 317600,
+          "endTimeMs": 317900
+        },
+        {
+          "word": "my",
+          "startTimeMs": 317900,
+          "endTimeMs": 318100
+        },
+        {
+          "word": "sun,",
+          "startTimeMs": 318100,
+          "endTimeMs": 318500
+        },
+        {
+          "word": "I",
+          "startTimeMs": 318500,
+          "endTimeMs": 318700
+        },
+        {
+          "word": "spend",
+          "startTimeMs": 318700,
+          "endTimeMs": 319000
+        },
+        {
+          "word": "my",
+          "startTimeMs": 319000,
+          "endTimeMs": 319200
+        },
+        {
+          "word": "time",
+          "startTimeMs": 319200,
+          "endTimeMs": 319400
+        },
+        {
+          "word": "on",
+          "startTimeMs": 319400,
+          "endTimeMs": 319600
+        },
+        {
+          "word": "the",
+          "startTimeMs": 319600,
+          "endTimeMs": 319700
+        },
+        {
+          "word": "moon",
+          "startTimeMs": 319700,
+          "endTimeMs": 319900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 319900,
+      "endTimeMs": 324300,
+      "segmentIndex": 67,
+      "text": "If I think of you, I’ll dive in at once",
+      "words": [
+        {
+          "word": "If",
+          "startTimeMs": 319900,
+          "endTimeMs": 320200
+        },
+        {
+          "word": "I",
+          "startTimeMs": 320200,
+          "endTimeMs": 320400
+        },
+        {
+          "word": "think",
+          "startTimeMs": 320400,
+          "endTimeMs": 321000
+        },
+        {
+          "word": "of",
+          "startTimeMs": 321000,
+          "endTimeMs": 321300
+        },
+        {
+          "word": "you,",
+          "startTimeMs": 321300,
+          "endTimeMs": 321800
+        },
+        {
+          "word": "I’ll",
+          "startTimeMs": 321800,
+          "endTimeMs": 322200
+        },
+        {
+          "word": "dive",
+          "startTimeMs": 322200,
+          "endTimeMs": 322800
+        },
+        {
+          "word": "in",
+          "startTimeMs": 322800,
+          "endTimeMs": 323200
+        },
+        {
+          "word": "at",
+          "startTimeMs": 323200,
+          "endTimeMs": 323500
+        },
+        {
+          "word": "once",
+          "startTimeMs": 323500,
+          "endTimeMs": 324300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 324300,
+      "endTimeMs": 327200,
+      "segmentIndex": 68,
+      "text": "Eh-eh, my devil, my angel, my crazy girl",
+      "words": [
+        {
+          "word": "Eh-eh,",
+          "startTimeMs": 324300,
+          "endTimeMs": 325000
+        },
+        {
+          "word": "my",
+          "startTimeMs": 325000,
+          "endTimeMs": 325300
+        },
+        {
+          "word": "devil,",
+          "startTimeMs": 325300,
+          "endTimeMs": 325800
+        },
+        {
+          "word": "my",
+          "startTimeMs": 325800,
+          "endTimeMs": 326100
+        },
+        {
+          "word": "angel,",
+          "startTimeMs": 326100,
+          "endTimeMs": 326600
+        },
+        {
+          "word": "my",
+          "startTimeMs": 326600,
+          "endTimeMs": 326900
+        },
+        {
+          "word": "crazy",
+          "startTimeMs": 326900,
+          "endTimeMs": 327100
+        },
+        {
+          "word": "girl",
+          "startTimeMs": 327100,
+          "endTimeMs": 327200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 327200,
+      "endTimeMs": 330160,
+      "segmentIndex": 69,
+      "text": "My devil, my angel, my crazy girl, eh-eh",
+      "words": [
+        {
+          "word": "My",
+          "startTimeMs": 327200,
+          "endTimeMs": 327500
+        },
+        {
+          "word": "devil,",
+          "startTimeMs": 327500,
+          "endTimeMs": 328000
+        },
+        {
+          "word": "my",
+          "startTimeMs": 328000,
+          "endTimeMs": 328300
+        },
+        {
+          "word": "angel,",
+          "startTimeMs": 328300,
+          "endTimeMs": 328800
+        },
+        {
+          "word": "my",
+          "startTimeMs": 328800,
+          "endTimeMs": 329100
+        },
+        {
+          "word": "crazy",
+          "startTimeMs": 329100,
+          "endTimeMs": 329400
+        },
+        {
+          "word": "girl,",
+          "startTimeMs": 329400,
+          "endTimeMs": 329600
+        },
+        {
+          "word": "eh-eh",
+          "startTimeMs": 329600,
+          "endTimeMs": 330160
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 330160,
+      "endTimeMs": 335000,
+      "segmentIndex": 70,
+      "cueText": "Outro"
+    }
+  ]
+}

@@ -1,0 +1,2657 @@
+{
+  "metadata": {
+    "title": "BAILE INOLVIDABLE",
+    "artist": "Bad Bunny",
+    "durationMs": 335000,
+    "language": "es-ES",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 3570,
+      "segmentIndex": 1,
+      "cueText": "Intro musical"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 3570,
+      "endTimeMs": 9330,
+      "segmentIndex": 2,
+      "text": "Pensaba que contigo iba a envejecer",
+      "words": [
+        {
+          "word": "Pensaba",
+          "startTimeMs": 3570,
+          "endTimeMs": 4500
+        },
+        {
+          "word": "que",
+          "startTimeMs": 4500,
+          "endTimeMs": 4800
+        },
+        {
+          "word": "contigo",
+          "startTimeMs": 4800,
+          "endTimeMs": 5600
+        },
+        {
+          "word": "iba",
+          "startTimeMs": 5600,
+          "endTimeMs": 6000
+        },
+        {
+          "word": "a",
+          "startTimeMs": 6000,
+          "endTimeMs": 6300
+        },
+        {
+          "word": "envejecer",
+          "startTimeMs": 6300,
+          "endTimeMs": 9330
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 9330,
+      "endTimeMs": 15260,
+      "segmentIndex": 3,
+      "text": "En otra vida, en otro mundo, podrá ser",
+      "words": [
+        {
+          "word": "En",
+          "startTimeMs": 9330,
+          "endTimeMs": 9600
+        },
+        {
+          "word": "otra",
+          "startTimeMs": 9600,
+          "endTimeMs": 10200
+        },
+        {
+          "word": "vida,",
+          "startTimeMs": 10200,
+          "endTimeMs": 11000
+        },
+        {
+          "word": "en",
+          "startTimeMs": 11000,
+          "endTimeMs": 11300
+        },
+        {
+          "word": "otro",
+          "startTimeMs": 11300,
+          "endTimeMs": 11900
+        },
+        {
+          "word": "mundo,",
+          "startTimeMs": 11900,
+          "endTimeMs": 12800
+        },
+        {
+          "word": "podrá",
+          "startTimeMs": 12800,
+          "endTimeMs": 13800
+        },
+        {
+          "word": "ser",
+          "startTimeMs": 13800,
+          "endTimeMs": 15260
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 15260,
+      "endTimeMs": 20660,
+      "segmentIndex": 4,
+      "text": "En esta solo queda irme un día",
+      "words": [
+        {
+          "word": "En",
+          "startTimeMs": 15260,
+          "endTimeMs": 15600
+        },
+        {
+          "word": "esta",
+          "startTimeMs": 15600,
+          "endTimeMs": 16100
+        },
+        {
+          "word": "solo",
+          "startTimeMs": 16100,
+          "endTimeMs": 16800
+        },
+        {
+          "word": "queda",
+          "startTimeMs": 16800,
+          "endTimeMs": 17500
+        },
+        {
+          "word": "irme",
+          "startTimeMs": 17500,
+          "endTimeMs": 18300
+        },
+        {
+          "word": "un",
+          "startTimeMs": 18300,
+          "endTimeMs": 18800
+        },
+        {
+          "word": "día",
+          "startTimeMs": 18800,
+          "endTimeMs": 20660
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 20660,
+      "endTimeMs": 26610,
+      "segmentIndex": 5,
+      "text": "Y solamente verte en el atardecer",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 20660,
+          "endTimeMs": 21000
+        },
+        {
+          "word": "solamente",
+          "startTimeMs": 21000,
+          "endTimeMs": 22500
+        },
+        {
+          "word": "verte",
+          "startTimeMs": 22500,
+          "endTimeMs": 23500
+        },
+        {
+          "word": "en",
+          "startTimeMs": 23500,
+          "endTimeMs": 23800
+        },
+        {
+          "word": "el",
+          "startTimeMs": 23800,
+          "endTimeMs": 24200
+        },
+        {
+          "word": "atardecer",
+          "startTimeMs": 24200,
+          "endTimeMs": 26610
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 26610,
+      "endTimeMs": 32490,
+      "segmentIndex": 6,
+      "text": "Si me ven solo y triste, no me hablen",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 26610,
+          "endTimeMs": 26900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 26900,
+          "endTimeMs": 27200
+        },
+        {
+          "word": "ven",
+          "startTimeMs": 27200,
+          "endTimeMs": 27700
+        },
+        {
+          "word": "solo",
+          "startTimeMs": 27700,
+          "endTimeMs": 28500
+        },
+        {
+          "word": "y",
+          "startTimeMs": 28500,
+          "endTimeMs": 28800
+        },
+        {
+          "word": "triste,",
+          "startTimeMs": 28800,
+          "endTimeMs": 29800
+        },
+        {
+          "word": "no",
+          "startTimeMs": 29800,
+          "endTimeMs": 30300
+        },
+        {
+          "word": "me",
+          "startTimeMs": 30300,
+          "endTimeMs": 30700
+        },
+        {
+          "word": "hablen",
+          "startTimeMs": 30700,
+          "endTimeMs": 32490
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 32490,
+      "endTimeMs": 38330,
+      "segmentIndex": 7,
+      "text": "Si me ven solo y triste, soy culpable",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 32490,
+          "endTimeMs": 32800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 32800,
+          "endTimeMs": 33100
+        },
+        {
+          "word": "ven",
+          "startTimeMs": 33100,
+          "endTimeMs": 33600
+        },
+        {
+          "word": "solo",
+          "startTimeMs": 33600,
+          "endTimeMs": 34400
+        },
+        {
+          "word": "y",
+          "startTimeMs": 34400,
+          "endTimeMs": 34700
+        },
+        {
+          "word": "triste,",
+          "startTimeMs": 34700,
+          "endTimeMs": 35700
+        },
+        {
+          "word": "soy",
+          "startTimeMs": 35700,
+          "endTimeMs": 36200
+        },
+        {
+          "word": "culpable",
+          "startTimeMs": 36200,
+          "endTimeMs": 38330
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 38330,
+      "endTimeMs": 44020,
+      "segmentIndex": 8,
+      "text": "La vida es una fiesta que un día termina",
+      "words": [
+        {
+          "word": "La",
+          "startTimeMs": 38330,
+          "endTimeMs": 38600
+        },
+        {
+          "word": "vida",
+          "startTimeMs": 38600,
+          "endTimeMs": 39200
+        },
+        {
+          "word": "es",
+          "startTimeMs": 39200,
+          "endTimeMs": 39500
+        },
+        {
+          "word": "una",
+          "startTimeMs": 39500,
+          "endTimeMs": 39800
+        },
+        {
+          "word": "fiesta",
+          "startTimeMs": 39800,
+          "endTimeMs": 40700
+        },
+        {
+          "word": "que",
+          "startTimeMs": 40700,
+          "endTimeMs": 41000
+        },
+        {
+          "word": "un",
+          "startTimeMs": 41000,
+          "endTimeMs": 41300
+        },
+        {
+          "word": "día",
+          "startTimeMs": 41300,
+          "endTimeMs": 42000
+        },
+        {
+          "word": "termina",
+          "startTimeMs": 42000,
+          "endTimeMs": 44020
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 44020,
+      "endTimeMs": 54600,
+      "segmentIndex": 9,
+      "text": "Y fuiste tú mi BAILE INoLVIDABLE",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 44020,
+          "endTimeMs": 44500
+        },
+        {
+          "word": "fuiste",
+          "startTimeMs": 44500,
+          "endTimeMs": 45500
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 45500,
+          "endTimeMs": 46500
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 46500,
+          "endTimeMs": 47500
+        },
+        {
+          "word": "BAILE",
+          "startTimeMs": 47500,
+          "endTimeMs": 49500
+        },
+        {
+          "word": "INoLVIDABLE",
+          "startTimeMs": 49500,
+          "endTimeMs": 54600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 54600,
+      "endTimeMs": 59600,
+      "segmentIndex": 10,
+      "text": "Y fuiste tú mi BAILE INoLVIDABLE",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 54600,
+          "endTimeMs": 54900
+        },
+        {
+          "word": "fuiste",
+          "startTimeMs": 54900,
+          "endTimeMs": 55500
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 55500,
+          "endTimeMs": 56200
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 56200,
+          "endTimeMs": 56700
+        },
+        {
+          "word": "BAILE",
+          "startTimeMs": 56700,
+          "endTimeMs": 57700
+        },
+        {
+          "word": "INoLVIDABLE",
+          "startTimeMs": 57700,
+          "endTimeMs": 59600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 59600,
+      "endTimeMs": 63400,
+      "segmentIndex": 11,
+      "text": "Eh-eh, eh-eh",
+      "words": [
+        {
+          "word": "Eh-eh,",
+          "startTimeMs": 59600,
+          "endTimeMs": 61500
+        },
+        {
+          "word": "eh-eh",
+          "startTimeMs": 61500,
+          "endTimeMs": 63400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 63400,
+      "endTimeMs": 67500,
+      "segmentIndex": 12,
+      "text": "Eh-eh, eh-eh",
+      "words": [
+        {
+          "word": "Eh-eh,",
+          "startTimeMs": 63400,
+          "endTimeMs": 65400
+        },
+        {
+          "word": "eh-eh",
+          "startTimeMs": 65400,
+          "endTimeMs": 67500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 67500,
+      "endTimeMs": 70500,
+      "segmentIndex": 13,
+      "text": "\"Mientras uno está vivo",
+      "words": [
+        {
+          "word": "\"Mientras",
+          "startTimeMs": 67500,
+          "endTimeMs": 68200
+        },
+        {
+          "word": "uno",
+          "startTimeMs": 68200,
+          "endTimeMs": 68700
+        },
+        {
+          "word": "está",
+          "startTimeMs": 68700,
+          "endTimeMs": 69400
+        },
+        {
+          "word": "vivo",
+          "startTimeMs": 69400,
+          "endTimeMs": 70500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 70500,
+      "endTimeMs": 102600,
+      "segmentIndex": 14,
+      "text": "Uno debe amar lo más que pueda\"",
+      "words": [
+        {
+          "word": "Uno",
+          "startTimeMs": 70500,
+          "endTimeMs": 70800
+        },
+        {
+          "word": "debe",
+          "startTimeMs": 70800,
+          "endTimeMs": 71200
+        },
+        {
+          "word": "amar",
+          "startTimeMs": 71200,
+          "endTimeMs": 71800
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 71800,
+          "endTimeMs": 72100
+        },
+        {
+          "word": "más",
+          "startTimeMs": 72100,
+          "endTimeMs": 72500
+        },
+        {
+          "word": "que",
+          "startTimeMs": 72500,
+          "endTimeMs": 72800
+        },
+        {
+          "word": "pueda\"",
+          "startTimeMs": 72800,
+          "endTimeMs": 75000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 102600,
+      "endTimeMs": 108400,
+      "segmentIndex": 15,
+      "text": "Pensaba que contigo iba a envejecer",
+      "words": [
+        {
+          "word": "Pensaba",
+          "startTimeMs": 102600,
+          "endTimeMs": 103500
+        },
+        {
+          "word": "que",
+          "startTimeMs": 103500,
+          "endTimeMs": 103800
+        },
+        {
+          "word": "contigo",
+          "startTimeMs": 103800,
+          "endTimeMs": 104600
+        },
+        {
+          "word": "iba",
+          "startTimeMs": 104600,
+          "endTimeMs": 105000
+        },
+        {
+          "word": "a",
+          "startTimeMs": 105000,
+          "endTimeMs": 105300
+        },
+        {
+          "word": "envejecer",
+          "startTimeMs": 105300,
+          "endTimeMs": 108400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 108400,
+      "endTimeMs": 113900,
+      "segmentIndex": 16,
+      "text": "En otra vida, en otro mundo podrá ser",
+      "words": [
+        {
+          "word": "En",
+          "startTimeMs": 108400,
+          "endTimeMs": 108700
+        },
+        {
+          "word": "otra",
+          "startTimeMs": 108700,
+          "endTimeMs": 109300
+        },
+        {
+          "word": "vida,",
+          "startTimeMs": 109300,
+          "endTimeMs": 110000
+        },
+        {
+          "word": "en",
+          "startTimeMs": 110000,
+          "endTimeMs": 110300
+        },
+        {
+          "word": "otro",
+          "startTimeMs": 110300,
+          "endTimeMs": 110900
+        },
+        {
+          "word": "mundo",
+          "startTimeMs": 110900,
+          "endTimeMs": 111800
+        },
+        {
+          "word": "podrá",
+          "startTimeMs": 111800,
+          "endTimeMs": 112800
+        },
+        {
+          "word": "ser",
+          "startTimeMs": 112800,
+          "endTimeMs": 113900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 113900,
+      "endTimeMs": 119300,
+      "segmentIndex": 17,
+      "text": "En esta solo queda irme un día",
+      "words": [
+        {
+          "word": "En",
+          "startTimeMs": 113900,
+          "endTimeMs": 114200
+        },
+        {
+          "word": "esta",
+          "startTimeMs": 114200,
+          "endTimeMs": 114700
+        },
+        {
+          "word": "solo",
+          "startTimeMs": 114700,
+          "endTimeMs": 115400
+        },
+        {
+          "word": "queda",
+          "startTimeMs": 115400,
+          "endTimeMs": 116100
+        },
+        {
+          "word": "irme",
+          "startTimeMs": 116100,
+          "endTimeMs": 116900
+        },
+        {
+          "word": "un",
+          "startTimeMs": 116900,
+          "endTimeMs": 117400
+        },
+        {
+          "word": "día",
+          "startTimeMs": 117400,
+          "endTimeMs": 119300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 119300,
+      "endTimeMs": 124900,
+      "segmentIndex": 18,
+      "text": "Y ver pa'l cielo a ver si te veo caer",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 119300,
+          "endTimeMs": 119600
+        },
+        {
+          "word": "ver",
+          "startTimeMs": 119600,
+          "endTimeMs": 120100
+        },
+        {
+          "word": "pa'l",
+          "startTimeMs": 120100,
+          "endTimeMs": 120600
+        },
+        {
+          "word": "cielo",
+          "startTimeMs": 120600,
+          "endTimeMs": 121500
+        },
+        {
+          "word": "a",
+          "startTimeMs": 121500,
+          "endTimeMs": 121800
+        },
+        {
+          "word": "ver",
+          "startTimeMs": 121800,
+          "endTimeMs": 122100
+        },
+        {
+          "word": "si",
+          "startTimeMs": 122100,
+          "endTimeMs": 122400
+        },
+        {
+          "word": "te",
+          "startTimeMs": 122400,
+          "endTimeMs": 122700
+        },
+        {
+          "word": "veo",
+          "startTimeMs": 122700,
+          "endTimeMs": 123200
+        },
+        {
+          "word": "caer",
+          "startTimeMs": 123200,
+          "endTimeMs": 124900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 124900,
+      "endTimeMs": 130600,
+      "segmentIndex": 19,
+      "text": "Si me ven solo y triste, no me hablen",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 124900,
+          "endTimeMs": 125200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 125200,
+          "endTimeMs": 125500
+        },
+        {
+          "word": "ven",
+          "startTimeMs": 125500,
+          "endTimeMs": 126000
+        },
+        {
+          "word": "solo",
+          "startTimeMs": 126000,
+          "endTimeMs": 126800
+        },
+        {
+          "word": "y",
+          "startTimeMs": 126800,
+          "endTimeMs": 127100
+        },
+        {
+          "word": "triste,",
+          "startTimeMs": 127100,
+          "endTimeMs": 127900
+        },
+        {
+          "word": "no",
+          "startTimeMs": 127900,
+          "endTimeMs": 128400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 128400,
+          "endTimeMs": 128800
+        },
+        {
+          "word": "hablen",
+          "startTimeMs": 128800,
+          "endTimeMs": 130600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 130600,
+      "endTimeMs": 135900,
+      "segmentIndex": 20,
+      "text": "Si me ven solo y triste, soy culpable",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 130600,
+          "endTimeMs": 130900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 130900,
+          "endTimeMs": 131200
+        },
+        {
+          "word": "ven",
+          "startTimeMs": 131200,
+          "endTimeMs": 131700
+        },
+        {
+          "word": "solo",
+          "startTimeMs": 131700,
+          "endTimeMs": 132500
+        },
+        {
+          "word": "y",
+          "startTimeMs": 132500,
+          "endTimeMs": 132800
+        },
+        {
+          "word": "triste,",
+          "startTimeMs": 132800,
+          "endTimeMs": 133800
+        },
+        {
+          "word": "soy",
+          "startTimeMs": 133800,
+          "endTimeMs": 134300
+        },
+        {
+          "word": "culpable",
+          "startTimeMs": 134300,
+          "endTimeMs": 135900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 135900,
+      "endTimeMs": 140900,
+      "segmentIndex": 21,
+      "text": "La vida es una fiesta que un día termina",
+      "words": [
+        {
+          "word": "La",
+          "startTimeMs": 135900,
+          "endTimeMs": 136200
+        },
+        {
+          "word": "vida",
+          "startTimeMs": 136200,
+          "endTimeMs": 136800
+        },
+        {
+          "word": "es",
+          "startTimeMs": 136800,
+          "endTimeMs": 137100
+        },
+        {
+          "word": "una",
+          "startTimeMs": 137100,
+          "endTimeMs": 137400
+        },
+        {
+          "word": "fiesta",
+          "startTimeMs": 137400,
+          "endTimeMs": 138200
+        },
+        {
+          "word": "que",
+          "startTimeMs": 138200,
+          "endTimeMs": 138500
+        },
+        {
+          "word": "un",
+          "startTimeMs": 138500,
+          "endTimeMs": 138800
+        },
+        {
+          "word": "día",
+          "startTimeMs": 138800,
+          "endTimeMs": 139500
+        },
+        {
+          "word": "termina",
+          "startTimeMs": 139500,
+          "endTimeMs": 140900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 140900,
+      "endTimeMs": 154900,
+      "segmentIndex": 22,
+      "text": "Y fuiste tú mi BAILE INoLVIDABLE",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 140900,
+          "endTimeMs": 141400
+        },
+        {
+          "word": "fuiste",
+          "startTimeMs": 141400,
+          "endTimeMs": 142400
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 142400,
+          "endTimeMs": 143400
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 143400,
+          "endTimeMs": 144400
+        },
+        {
+          "word": "BAILE",
+          "startTimeMs": 144400,
+          "endTimeMs": 146400
+        },
+        {
+          "word": "INoLVIDABLE",
+          "startTimeMs": 146400,
+          "endTimeMs": 154900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 154900,
+      "endTimeMs": 157400,
+      "segmentIndex": 23,
+      "text": "No, no te puedo olvidar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 154900,
+          "endTimeMs": 155300
+        },
+        {
+          "word": "no",
+          "startTimeMs": 155300,
+          "endTimeMs": 155700
+        },
+        {
+          "word": "te",
+          "startTimeMs": 155700,
+          "endTimeMs": 156000
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 156000,
+          "endTimeMs": 156600
+        },
+        {
+          "word": "olvidar",
+          "startTimeMs": 156600,
+          "endTimeMs": 157400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 157400,
+      "endTimeMs": 160000,
+      "segmentIndex": 24,
+      "text": "No, no te puedo borrar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 157400,
+          "endTimeMs": 157800
+        },
+        {
+          "word": "no",
+          "startTimeMs": 157800,
+          "endTimeMs": 158200
+        },
+        {
+          "word": "te",
+          "startTimeMs": 158200,
+          "endTimeMs": 158500
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 158500,
+          "endTimeMs": 159100
+        },
+        {
+          "word": "borrar",
+          "startTimeMs": 159100,
+          "endTimeMs": 160000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 160000,
+      "endTimeMs": 162500,
+      "segmentIndex": 25,
+      "text": "Tú me enseñaste a querer",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 160000,
+          "endTimeMs": 160400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 160400,
+          "endTimeMs": 160800
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 160800,
+          "endTimeMs": 161600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 161600,
+          "endTimeMs": 161900
+        },
+        {
+          "word": "querer",
+          "startTimeMs": 161900,
+          "endTimeMs": 162500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 162500,
+      "endTimeMs": 176500,
+      "segmentIndex": 26,
+      "text": "Me enseñaste a bailar",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 162500,
+          "endTimeMs": 162800
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 162800,
+          "endTimeMs": 163500
+        },
+        {
+          "word": "a",
+          "startTimeMs": 163500,
+          "endTimeMs": 163800
+        },
+        {
+          "word": "bailar",
+          "startTimeMs": 163800,
+          "endTimeMs": 176500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 176500,
+      "endTimeMs": 179000,
+      "segmentIndex": 27,
+      "text": "No, no te puedo olvidar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 176500,
+          "endTimeMs": 176900
+        },
+        {
+          "word": "no",
+          "startTimeMs": 176900,
+          "endTimeMs": 177300
+        },
+        {
+          "word": "te",
+          "startTimeMs": 177300,
+          "endTimeMs": 177600
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 177600,
+          "endTimeMs": 178200
+        },
+        {
+          "word": "olvidar",
+          "startTimeMs": 178200,
+          "endTimeMs": 179000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 179000,
+      "endTimeMs": 181700,
+      "segmentIndex": 28,
+      "text": "No, no te puedo borrar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 179000,
+          "endTimeMs": 179400
+        },
+        {
+          "word": "no",
+          "startTimeMs": 179400,
+          "endTimeMs": 179800
+        },
+        {
+          "word": "te",
+          "startTimeMs": 179800,
+          "endTimeMs": 180100
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 180100,
+          "endTimeMs": 180700
+        },
+        {
+          "word": "borrar",
+          "startTimeMs": 180700,
+          "endTimeMs": 181700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 181700,
+      "endTimeMs": 184300,
+      "segmentIndex": 29,
+      "text": "Tú me enseñaste a querer",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 181700,
+          "endTimeMs": 182100
+        },
+        {
+          "word": "me",
+          "startTimeMs": 182100,
+          "endTimeMs": 182500
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 182500,
+          "endTimeMs": 183300
+        },
+        {
+          "word": "a",
+          "startTimeMs": 183300,
+          "endTimeMs": 183600
+        },
+        {
+          "word": "querer",
+          "startTimeMs": 183600,
+          "endTimeMs": 184300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 184300,
+      "endTimeMs": 187000,
+      "segmentIndex": 30,
+      "text": "Me enseñaste a bailar",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 184300,
+          "endTimeMs": 184600
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 184600,
+          "endTimeMs": 185300
+        },
+        {
+          "word": "a",
+          "startTimeMs": 185300,
+          "endTimeMs": 185600
+        },
+        {
+          "word": "bailar",
+          "startTimeMs": 185600,
+          "endTimeMs": 187000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 187000,
+      "endTimeMs": 190100,
+      "segmentIndex": 31,
+      "text": "Yeah-yeah-yeah-yeah, ey, dime cómo le hago pa olvidarte",
+      "words": [
+        {
+          "word": "Yeah-yeah-yeah-yeah,",
+          "startTimeMs": 187000,
+          "endTimeMs": 188000
+        },
+        {
+          "word": "ey,",
+          "startTimeMs": 188000,
+          "endTimeMs": 188300
+        },
+        {
+          "word": "dime",
+          "startTimeMs": 188300,
+          "endTimeMs": 188600
+        },
+        {
+          "word": "cómo",
+          "startTimeMs": 188600,
+          "endTimeMs": 188900
+        },
+        {
+          "word": "le",
+          "startTimeMs": 188900,
+          "endTimeMs": 189100
+        },
+        {
+          "word": "hago",
+          "startTimeMs": 189100,
+          "endTimeMs": 189400
+        },
+        {
+          "word": "pa",
+          "startTimeMs": 189400,
+          "endTimeMs": 189600
+        },
+        {
+          "word": "olvidarte",
+          "startTimeMs": 189600,
+          "endTimeMs": 190100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 190100,
+      "endTimeMs": 192300,
+      "segmentIndex": 32,
+      "text": "Hay un paso nuevo que quiero enseñarte",
+      "words": [
+        {
+          "word": "Hay",
+          "startTimeMs": 190100,
+          "endTimeMs": 190300
+        },
+        {
+          "word": "un",
+          "startTimeMs": 190300,
+          "endTimeMs": 190500
+        },
+        {
+          "word": "paso",
+          "startTimeMs": 190500,
+          "endTimeMs": 190800
+        },
+        {
+          "word": "nuevo",
+          "startTimeMs": 190800,
+          "endTimeMs": 191100
+        },
+        {
+          "word": "que",
+          "startTimeMs": 191100,
+          "endTimeMs": 191300
+        },
+        {
+          "word": "quiero",
+          "startTimeMs": 191300,
+          "endTimeMs": 191700
+        },
+        {
+          "word": "enseñarte",
+          "startTimeMs": 191700,
+          "endTimeMs": 192300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 192300,
+      "endTimeMs": 195100,
+      "segmentIndex": 33,
+      "text": "En las noche' ya ni puedo dormir",
+      "words": [
+        {
+          "word": "En",
+          "startTimeMs": 192300,
+          "endTimeMs": 192500
+        },
+        {
+          "word": "las",
+          "startTimeMs": 192500,
+          "endTimeMs": 192700
+        },
+        {
+          "word": "noche'",
+          "startTimeMs": 192700,
+          "endTimeMs": 193100
+        },
+        {
+          "word": "ya",
+          "startTimeMs": 193100,
+          "endTimeMs": 193400
+        },
+        {
+          "word": "ni",
+          "startTimeMs": 193400,
+          "endTimeMs": 193700
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 193700,
+          "endTimeMs": 194300
+        },
+        {
+          "word": "dormir",
+          "startTimeMs": 194300,
+          "endTimeMs": 195100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 195100,
+      "endTimeMs": 197300,
+      "segmentIndex": 34,
+      "text": "Lo que hago es soñarte",
+      "words": [
+        {
+          "word": "Lo",
+          "startTimeMs": 195100,
+          "endTimeMs": 195400
+        },
+        {
+          "word": "que",
+          "startTimeMs": 195400,
+          "endTimeMs": 195700
+        },
+        {
+          "word": "hago",
+          "startTimeMs": 195700,
+          "endTimeMs": 196100
+        },
+        {
+          "word": "es",
+          "startTimeMs": 196100,
+          "endTimeMs": 196400
+        },
+        {
+          "word": "soñarte",
+          "startTimeMs": 196400,
+          "endTimeMs": 197300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 197300,
+      "endTimeMs": 199900,
+      "segmentIndex": 35,
+      "text": "No, no te puedo olvidar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 197300,
+          "endTimeMs": 197700
+        },
+        {
+          "word": "no",
+          "startTimeMs": 197700,
+          "endTimeMs": 198100
+        },
+        {
+          "word": "te",
+          "startTimeMs": 198100,
+          "endTimeMs": 198400
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 198400,
+          "endTimeMs": 199000
+        },
+        {
+          "word": "olvidar",
+          "startTimeMs": 199000,
+          "endTimeMs": 199900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 199900,
+      "endTimeMs": 202500,
+      "segmentIndex": 36,
+      "text": "No, no te puedo borrar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 199900,
+          "endTimeMs": 200300
+        },
+        {
+          "word": "no",
+          "startTimeMs": 200300,
+          "endTimeMs": 200700
+        },
+        {
+          "word": "te",
+          "startTimeMs": 200700,
+          "endTimeMs": 201000
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 201000,
+          "endTimeMs": 201600
+        },
+        {
+          "word": "borrar",
+          "startTimeMs": 201600,
+          "endTimeMs": 202500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 202500,
+      "endTimeMs": 205000,
+      "segmentIndex": 37,
+      "text": "Tú me enseñaste a querer",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 202500,
+          "endTimeMs": 202900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 202900,
+          "endTimeMs": 203300
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 203300,
+          "endTimeMs": 204100
+        },
+        {
+          "word": "a",
+          "startTimeMs": 204100,
+          "endTimeMs": 204400
+        },
+        {
+          "word": "querer",
+          "startTimeMs": 204400,
+          "endTimeMs": 205000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 205000,
+      "endTimeMs": 207700,
+      "segmentIndex": 38,
+      "text": "Me enseñaste a bailar",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 205000,
+          "endTimeMs": 205300
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 205300,
+          "endTimeMs": 206000
+        },
+        {
+          "word": "a",
+          "startTimeMs": 206000,
+          "endTimeMs": 206300
+        },
+        {
+          "word": "bailar",
+          "startTimeMs": 206300,
+          "endTimeMs": 207700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 207700,
+      "endTimeMs": 210300,
+      "segmentIndex": 39,
+      "text": "Cómo tú me besabas, cómo yo te lo hacía",
+      "words": [
+        {
+          "word": "Cómo",
+          "startTimeMs": 207700,
+          "endTimeMs": 207900
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 207900,
+          "endTimeMs": 208100
+        },
+        {
+          "word": "me",
+          "startTimeMs": 208100,
+          "endTimeMs": 208300
+        },
+        {
+          "word": "besabas,",
+          "startTimeMs": 208300,
+          "endTimeMs": 208900
+        },
+        {
+          "word": "cómo",
+          "startTimeMs": 208900,
+          "endTimeMs": 209200
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 209200,
+          "endTimeMs": 209400
+        },
+        {
+          "word": "te",
+          "startTimeMs": 209400,
+          "endTimeMs": 209600
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 209600,
+          "endTimeMs": 209800
+        },
+        {
+          "word": "hacía",
+          "startTimeMs": 209800,
+          "endTimeMs": 210300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 210300,
+      "endTimeMs": 213000,
+      "segmentIndex": 40,
+      "text": "Cómo tú me mirabas, bellaquito me ponía",
+      "words": [
+        {
+          "word": "Cómo",
+          "startTimeMs": 210300,
+          "endTimeMs": 210600
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 210600,
+          "endTimeMs": 210900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 210900,
+          "endTimeMs": 211200
+        },
+        {
+          "word": "mirabas,",
+          "startTimeMs": 211200,
+          "endTimeMs": 211800
+        },
+        {
+          "word": "bellaquito",
+          "startTimeMs": 211800,
+          "endTimeMs": 212500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 212500,
+          "endTimeMs": 212700
+        },
+        {
+          "word": "ponía",
+          "startTimeMs": 212700,
+          "endTimeMs": 213000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 213000,
+      "endTimeMs": 215400,
+      "segmentIndex": 41,
+      "text": "Se siente feo no tenerte cerquita",
+      "words": [
+        {
+          "word": "Se",
+          "startTimeMs": 213000,
+          "endTimeMs": 213200
+        },
+        {
+          "word": "siente",
+          "startTimeMs": 213200,
+          "endTimeMs": 213600
+        },
+        {
+          "word": "feo",
+          "startTimeMs": 213600,
+          "endTimeMs": 214000
+        },
+        {
+          "word": "no",
+          "startTimeMs": 214000,
+          "endTimeMs": 214300
+        },
+        {
+          "word": "tenerte",
+          "startTimeMs": 214300,
+          "endTimeMs": 214800
+        },
+        {
+          "word": "cerquita",
+          "startTimeMs": 214800,
+          "endTimeMs": 215400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 215400,
+      "endTimeMs": 220600,
+      "segmentIndex": 42,
+      "text": "La nueva mama bien, pero no es tu boquita",
+      "words": [
+        {
+          "word": "La",
+          "startTimeMs": 215400,
+          "endTimeMs": 215600
+        },
+        {
+          "word": "nueva",
+          "startTimeMs": 215600,
+          "endTimeMs": 216000
+        },
+        {
+          "word": "mama",
+          "startTimeMs": 216000,
+          "endTimeMs": 216500
+        },
+        {
+          "word": "bien,",
+          "startTimeMs": 216500,
+          "endTimeMs": 217000
+        },
+        {
+          "word": "pero",
+          "startTimeMs": 217000,
+          "endTimeMs": 217400
+        },
+        {
+          "word": "no",
+          "startTimeMs": 217400,
+          "endTimeMs": 217700
+        },
+        {
+          "word": "es",
+          "startTimeMs": 217700,
+          "endTimeMs": 218000
+        },
+        {
+          "word": "tu",
+          "startTimeMs": 218000,
+          "endTimeMs": 218300
+        },
+        {
+          "word": "boquita",
+          "startTimeMs": 218300,
+          "endTimeMs": 220600
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 220600,
+      "endTimeMs": 223260,
+      "segmentIndex": 43,
+      "text": "Mi diabla, mi ángel, mi loquita",
+      "words": [
+        {
+          "word": "Mi",
+          "startTimeMs": 220600,
+          "endTimeMs": 220900
+        },
+        {
+          "word": "diabla,",
+          "startTimeMs": 220900,
+          "endTimeMs": 221600
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 221600,
+          "endTimeMs": 221900
+        },
+        {
+          "word": "ángel,",
+          "startTimeMs": 221900,
+          "endTimeMs": 222400
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 222400,
+          "endTimeMs": 222700
+        },
+        {
+          "word": "loquita",
+          "startTimeMs": 222700,
+          "endTimeMs": 223260
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 223260,
+      "endTimeMs": 240300,
+      "segmentIndex": 44,
+      "text": "Mi diabla, mi ángel, mi loquita, ey",
+      "words": [
+        {
+          "word": "Mi",
+          "startTimeMs": 223260,
+          "endTimeMs": 223500
+        },
+        {
+          "word": "diabla,",
+          "startTimeMs": 223500,
+          "endTimeMs": 224200
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 224200,
+          "endTimeMs": 224500
+        },
+        {
+          "word": "ángel,",
+          "startTimeMs": 224500,
+          "endTimeMs": 225000
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 225000,
+          "endTimeMs": 225300
+        },
+        {
+          "word": "loquita,",
+          "startTimeMs": 225300,
+          "endTimeMs": 226000
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 226000,
+          "endTimeMs": 226500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 240300,
+      "endTimeMs": 242800,
+      "segmentIndex": 45,
+      "text": "To' suena cabrón",
+      "words": [
+        {
+          "word": "To'",
+          "startTimeMs": 240300,
+          "endTimeMs": 240700
+        },
+        {
+          "word": "suena",
+          "startTimeMs": 240700,
+          "endTimeMs": 241500
+        },
+        {
+          "word": "cabrón",
+          "startTimeMs": 241500,
+          "endTimeMs": 242800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 242800,
+      "endTimeMs": 245300,
+      "segmentIndex": 46,
+      "text": "Vamo' a hacerlo otra ve'",
+      "words": [
+        {
+          "word": "Vamo'",
+          "startTimeMs": 242800,
+          "endTimeMs": 243300
+        },
+        {
+          "word": "a",
+          "startTimeMs": 243300,
+          "endTimeMs": 243600
+        },
+        {
+          "word": "hacerlo",
+          "startTimeMs": 243600,
+          "endTimeMs": 244200
+        },
+        {
+          "word": "otra",
+          "startTimeMs": 244200,
+          "endTimeMs": 244700
+        },
+        {
+          "word": "ve'",
+          "startTimeMs": 244700,
+          "endTimeMs": 245300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 245300,
+      "endTimeMs": 249300,
+      "segmentIndex": 47,
+      "text": "Como anoche, como anoche",
+      "words": [
+        {
+          "word": "Como",
+          "startTimeMs": 245300,
+          "endTimeMs": 245800
+        },
+        {
+          "word": "anoche,",
+          "startTimeMs": 245800,
+          "endTimeMs": 246500
+        },
+        {
+          "word": "como",
+          "startTimeMs": 246500,
+          "endTimeMs": 247200
+        },
+        {
+          "word": "anoche",
+          "startTimeMs": 247200,
+          "endTimeMs": 249300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 249300,
+      "endTimeMs": 253200,
+      "segmentIndex": 48,
+      "text": "Tan-tan, ta-na-na, ta-na-na",
+      "words": [
+        {
+          "word": "Tan-tan,",
+          "startTimeMs": 249300,
+          "endTimeMs": 250500
+        },
+        {
+          "word": "ta-na-na,",
+          "startTimeMs": 250500,
+          "endTimeMs": 251800
+        },
+        {
+          "word": "ta-na-na",
+          "startTimeMs": 251800,
+          "endTimeMs": 253200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 253200,
+      "endTimeMs": 277400,
+      "segmentIndex": 49,
+      "text": "Aprieta, chamaquito, aprieta",
+      "words": [
+        {
+          "word": "Aprieta,",
+          "startTimeMs": 253200,
+          "endTimeMs": 253800
+        },
+        {
+          "word": "chamaquito,",
+          "startTimeMs": 253800,
+          "endTimeMs": 254500
+        },
+        {
+          "word": "aprieta",
+          "startTimeMs": 254500,
+          "endTimeMs": 256500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 277400,
+      "endTimeMs": 280000,
+      "segmentIndex": 50,
+      "text": "¡Ahí, ahí, ahí, vamo' allá!",
+      "words": [
+        {
+          "word": "¡Ahí,",
+          "startTimeMs": 277400,
+          "endTimeMs": 277800
+        },
+        {
+          "word": "ahí,",
+          "startTimeMs": 277800,
+          "endTimeMs": 278300
+        },
+        {
+          "word": "ahí,",
+          "startTimeMs": 278300,
+          "endTimeMs": 278800
+        },
+        {
+          "word": "vamo'",
+          "startTimeMs": 278800,
+          "endTimeMs": 279400
+        },
+        {
+          "word": "allá!",
+          "startTimeMs": 279400,
+          "endTimeMs": 280000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 280000,
+      "endTimeMs": 282500,
+      "segmentIndex": 51,
+      "text": "No, no te puedo olvidar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 280000,
+          "endTimeMs": 280400
+        },
+        {
+          "word": "no",
+          "startTimeMs": 280400,
+          "endTimeMs": 280800
+        },
+        {
+          "word": "te",
+          "startTimeMs": 280800,
+          "endTimeMs": 281100
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 281100,
+          "endTimeMs": 281700
+        },
+        {
+          "word": "olvidar",
+          "startTimeMs": 281700,
+          "endTimeMs": 282500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 282500,
+      "endTimeMs": 285300,
+      "segmentIndex": 52,
+      "text": "No, no te puedo borrar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 282500,
+          "endTimeMs": 282900
+        },
+        {
+          "word": "no",
+          "startTimeMs": 282900,
+          "endTimeMs": 283300
+        },
+        {
+          "word": "te",
+          "startTimeMs": 283300,
+          "endTimeMs": 283600
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 283600,
+          "endTimeMs": 284300
+        },
+        {
+          "word": "borrar",
+          "startTimeMs": 284300,
+          "endTimeMs": 285300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 285300,
+      "endTimeMs": 287800,
+      "segmentIndex": 53,
+      "text": "Tú me enseñaste a querer",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 285300,
+          "endTimeMs": 285700
+        },
+        {
+          "word": "me",
+          "startTimeMs": 285700,
+          "endTimeMs": 286100
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 286100,
+          "endTimeMs": 286900
+        },
+        {
+          "word": "a",
+          "startTimeMs": 286900,
+          "endTimeMs": 287200
+        },
+        {
+          "word": "querer",
+          "startTimeMs": 287200,
+          "endTimeMs": 287800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 287800,
+      "endTimeMs": 289100,
+      "segmentIndex": 54,
+      "text": "Me enseñaste a bailar",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 287800,
+          "endTimeMs": 288100
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 288100,
+          "endTimeMs": 288600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 288600,
+          "endTimeMs": 288800
+        },
+        {
+          "word": "bailar",
+          "startTimeMs": 288800,
+          "endTimeMs": 289100
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 289100,
+      "endTimeMs": 291800,
+      "segmentIndex": 55,
+      "text": "Ay, yo con cualquiera me puedo acostar",
+      "words": [
+        {
+          "word": "Ay,",
+          "startTimeMs": 289100,
+          "endTimeMs": 289500
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 289500,
+          "endTimeMs": 289800
+        },
+        {
+          "word": "con",
+          "startTimeMs": 289800,
+          "endTimeMs": 290100
+        },
+        {
+          "word": "cualquiera",
+          "startTimeMs": 290100,
+          "endTimeMs": 290600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 290600,
+          "endTimeMs": 290900
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 290900,
+          "endTimeMs": 291300
+        },
+        {
+          "word": "acostar",
+          "startTimeMs": 291300,
+          "endTimeMs": 291800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 291800,
+      "endTimeMs": 295200,
+      "segmentIndex": 56,
+      "text": "Pero no con cualquiera quiero despertar",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 291800,
+          "endTimeMs": 292200
+        },
+        {
+          "word": "no",
+          "startTimeMs": 292200,
+          "endTimeMs": 292500
+        },
+        {
+          "word": "con",
+          "startTimeMs": 292500,
+          "endTimeMs": 292800
+        },
+        {
+          "word": "cualquiera",
+          "startTimeMs": 292800,
+          "endTimeMs": 293500
+        },
+        {
+          "word": "quiero",
+          "startTimeMs": 293500,
+          "endTimeMs": 294200
+        },
+        {
+          "word": "despertar",
+          "startTimeMs": 294200,
+          "endTimeMs": 295200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 295200,
+      "endTimeMs": 297700,
+      "segmentIndex": 57,
+      "text": "Solo con usted, con usted",
+      "words": [
+        {
+          "word": "Solo",
+          "startTimeMs": 295200,
+          "endTimeMs": 295600
+        },
+        {
+          "word": "con",
+          "startTimeMs": 295600,
+          "endTimeMs": 295900
+        },
+        {
+          "word": "usted,",
+          "startTimeMs": 295900,
+          "endTimeMs": 296500
+        },
+        {
+          "word": "con",
+          "startTimeMs": 296500,
+          "endTimeMs": 296900
+        },
+        {
+          "word": "usted",
+          "startTimeMs": 296900,
+          "endTimeMs": 297700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 297700,
+      "endTimeMs": 300500,
+      "segmentIndex": 58,
+      "text": "Yo bailo con usted, na'más con usted",
+      "words": [
+        {
+          "word": "Yo",
+          "startTimeMs": 297700,
+          "endTimeMs": 297900
+        },
+        {
+          "word": "bailo",
+          "startTimeMs": 297900,
+          "endTimeMs": 298400
+        },
+        {
+          "word": "con",
+          "startTimeMs": 298400,
+          "endTimeMs": 298700
+        },
+        {
+          "word": "usted,",
+          "startTimeMs": 298700,
+          "endTimeMs": 299200
+        },
+        {
+          "word": "na'más",
+          "startTimeMs": 299200,
+          "endTimeMs": 299700
+        },
+        {
+          "word": "con",
+          "startTimeMs": 299700,
+          "endTimeMs": 300000
+        },
+        {
+          "word": "usted",
+          "startTimeMs": 300000,
+          "endTimeMs": 300500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 300500,
+      "endTimeMs": 301800,
+      "segmentIndex": 59,
+      "text": "Un beso donde estés, donde estés, bebé",
+      "words": [
+        {
+          "word": "Un",
+          "startTimeMs": 300500,
+          "endTimeMs": 300600
+        },
+        {
+          "word": "beso",
+          "startTimeMs": 300600,
+          "endTimeMs": 300800
+        },
+        {
+          "word": "donde",
+          "startTimeMs": 300800,
+          "endTimeMs": 301000
+        },
+        {
+          "word": "estés,",
+          "startTimeMs": 301000,
+          "endTimeMs": 301200
+        },
+        {
+          "word": "donde",
+          "startTimeMs": 301200,
+          "endTimeMs": 301400
+        },
+        {
+          "word": "estés,",
+          "startTimeMs": 301400,
+          "endTimeMs": 301600
+        },
+        {
+          "word": "bebé",
+          "startTimeMs": 301600,
+          "endTimeMs": 301800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 301800,
+      "endTimeMs": 304300,
+      "segmentIndex": 60,
+      "text": "No, no te puedo olvidar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 301800,
+          "endTimeMs": 302200
+        },
+        {
+          "word": "no",
+          "startTimeMs": 302200,
+          "endTimeMs": 302600
+        },
+        {
+          "word": "te",
+          "startTimeMs": 302600,
+          "endTimeMs": 302900
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 302900,
+          "endTimeMs": 303500
+        },
+        {
+          "word": "olvidar",
+          "startTimeMs": 303500,
+          "endTimeMs": 304300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 304300,
+      "endTimeMs": 307000,
+      "segmentIndex": 61,
+      "text": "No, no te puedo borrar",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 304300,
+          "endTimeMs": 304700
+        },
+        {
+          "word": "no",
+          "startTimeMs": 304700,
+          "endTimeMs": 305100
+        },
+        {
+          "word": "te",
+          "startTimeMs": 305100,
+          "endTimeMs": 305400
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 305400,
+          "endTimeMs": 306000
+        },
+        {
+          "word": "borrar",
+          "startTimeMs": 306000,
+          "endTimeMs": 307000
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 307000,
+      "endTimeMs": 309500,
+      "segmentIndex": 62,
+      "text": "Tú me enseñaste a querer",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 307000,
+          "endTimeMs": 307400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 307400,
+          "endTimeMs": 307800
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 307800,
+          "endTimeMs": 308600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 308600,
+          "endTimeMs": 308900
+        },
+        {
+          "word": "querer",
+          "startTimeMs": 308900,
+          "endTimeMs": 309500
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 309500,
+      "endTimeMs": 311700,
+      "segmentIndex": 63,
+      "text": "Me enseñaste a bailar",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 309500,
+          "endTimeMs": 309800
+        },
+        {
+          "word": "enseñaste",
+          "startTimeMs": 309800,
+          "endTimeMs": 310500
+        },
+        {
+          "word": "a",
+          "startTimeMs": 310500,
+          "endTimeMs": 310800
+        },
+        {
+          "word": "bailar",
+          "startTimeMs": 310800,
+          "endTimeMs": 311700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 311700,
+      "endTimeMs": 314300,
+      "segmentIndex": 64,
+      "text": "Y yo tenía mucha' novia'",
+      "words": [
+        {
+          "word": "Y",
+          "startTimeMs": 311700,
+          "endTimeMs": 312000
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 312000,
+          "endTimeMs": 312300
+        },
+        {
+          "word": "tenía",
+          "startTimeMs": 312300,
+          "endTimeMs": 312900
+        },
+        {
+          "word": "mucha'",
+          "startTimeMs": 312900,
+          "endTimeMs": 313500
+        },
+        {
+          "word": "novia'",
+          "startTimeMs": 313500,
+          "endTimeMs": 314300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 314300,
+      "endTimeMs": 316800,
+      "segmentIndex": 65,
+      "text": "Pero como tú, ninguna",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 314300,
+          "endTimeMs": 314700
+        },
+        {
+          "word": "como",
+          "startTimeMs": 314700,
+          "endTimeMs": 315100
+        },
+        {
+          "word": "tú,",
+          "startTimeMs": 315100,
+          "endTimeMs": 315600
+        },
+        {
+          "word": "ninguna",
+          "startTimeMs": 315600,
+          "endTimeMs": 316800
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 316800,
+      "endTimeMs": 319900,
+      "segmentIndex": 66,
+      "text": "Ya no tengo mi sol, me paso en la luna",
+      "words": [
+        {
+          "word": "Ya",
+          "startTimeMs": 316800,
+          "endTimeMs": 317100
+        },
+        {
+          "word": "no",
+          "startTimeMs": 317100,
+          "endTimeMs": 317400
+        },
+        {
+          "word": "tengo",
+          "startTimeMs": 317400,
+          "endTimeMs": 317800
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 317800,
+          "endTimeMs": 318100
+        },
+        {
+          "word": "sol,",
+          "startTimeMs": 318100,
+          "endTimeMs": 318600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 318600,
+          "endTimeMs": 318800
+        },
+        {
+          "word": "paso",
+          "startTimeMs": 318800,
+          "endTimeMs": 319200
+        },
+        {
+          "word": "en",
+          "startTimeMs": 319200,
+          "endTimeMs": 319400
+        },
+        {
+          "word": "la",
+          "startTimeMs": 319400,
+          "endTimeMs": 319600
+        },
+        {
+          "word": "luna",
+          "startTimeMs": 319600,
+          "endTimeMs": 319900
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 319900,
+      "endTimeMs": 324300,
+      "segmentIndex": 67,
+      "text": "Si te pienso, me tiro de una",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 319900,
+          "endTimeMs": 320200
+        },
+        {
+          "word": "te",
+          "startTimeMs": 320200,
+          "endTimeMs": 320500
+        },
+        {
+          "word": "pienso,",
+          "startTimeMs": 320500,
+          "endTimeMs": 321500
+        },
+        {
+          "word": "me",
+          "startTimeMs": 321500,
+          "endTimeMs": 322000
+        },
+        {
+          "word": "tiro",
+          "startTimeMs": 322000,
+          "endTimeMs": 322800
+        },
+        {
+          "word": "de",
+          "startTimeMs": 322800,
+          "endTimeMs": 323300
+        },
+        {
+          "word": "una",
+          "startTimeMs": 323300,
+          "endTimeMs": 324300
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 324300,
+      "endTimeMs": 327200,
+      "segmentIndex": 68,
+      "text": "Eh-eh, mi diabla, mi ángel, mi loquita",
+      "words": [
+        {
+          "word": "Eh-eh,",
+          "startTimeMs": 324300,
+          "endTimeMs": 325000
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 325000,
+          "endTimeMs": 325300
+        },
+        {
+          "word": "diabla,",
+          "startTimeMs": 325300,
+          "endTimeMs": 325800
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 325800,
+          "endTimeMs": 326100
+        },
+        {
+          "word": "ángel,",
+          "startTimeMs": 326100,
+          "endTimeMs": 326600
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 326600,
+          "endTimeMs": 326900
+        },
+        {
+          "word": "loquita",
+          "startTimeMs": 326900,
+          "endTimeMs": 327200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 327200,
+      "endTimeMs": 330160,
+      "segmentIndex": 69,
+      "text": "Mi diabla, mi ángel, mi loquita, eh-eh",
+      "words": [
+        {
+          "word": "Mi",
+          "startTimeMs": 327200,
+          "endTimeMs": 327500
+        },
+        {
+          "word": "diabla,",
+          "startTimeMs": 327500,
+          "endTimeMs": 328000
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 328000,
+          "endTimeMs": 328300
+        },
+        {
+          "word": "ángel,",
+          "startTimeMs": 328300,
+          "endTimeMs": 328800
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 328800,
+          "endTimeMs": 329100
+        },
+        {
+          "word": "loquita,",
+          "startTimeMs": 329100,
+          "endTimeMs": 329600
+        },
+        {
+          "word": "eh-eh",
+          "startTimeMs": 329600,
+          "endTimeMs": 330160
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 330160,
+      "endTimeMs": 335000,
+      "segmentIndex": 70,
+      "cueText": "Outro"
+    }
+  ]
+}

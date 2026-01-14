@@ -19,6 +19,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '.'),
+      '@viewer': path.resolve(__dirname, 'viewer'),
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        viewer: path.resolve(__dirname, 'viewer.html'),
+      },
     },
   },
   define: {

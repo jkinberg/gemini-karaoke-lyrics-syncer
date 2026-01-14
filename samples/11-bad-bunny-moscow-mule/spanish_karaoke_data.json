@@ -1,0 +1,2903 @@
+{
+  "metadata": {
+    "title": "Moscow Mule",
+    "artist": "Bad Bunny",
+    "durationMs": 248000,
+    "language": "es-ES",
+    "version": "1.0"
+  },
+  "segments": [
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 0,
+      "endTimeMs": 15260,
+      "segmentIndex": 0,
+      "cueText": "Intro musical"
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 15260,
+      "endTimeMs": 17770,
+      "segmentIndex": 1,
+      "text": "Si yo no te escribo",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 15260,
+          "endTimeMs": 15500
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 15500,
+          "endTimeMs": 15750
+        },
+        {
+          "word": "no",
+          "startTimeMs": 15750,
+          "endTimeMs": 16000
+        },
+        {
+          "word": "te",
+          "startTimeMs": 16000,
+          "endTimeMs": 16250
+        },
+        {
+          "word": "escribo",
+          "startTimeMs": 16250,
+          "endTimeMs": 17770
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 17770,
+      "endTimeMs": 20090,
+      "segmentIndex": 2,
+      "text": "Tú no me escribe', ey",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 17770,
+          "endTimeMs": 18000
+        },
+        {
+          "word": "no",
+          "startTimeMs": 18000,
+          "endTimeMs": 18250
+        },
+        {
+          "word": "me",
+          "startTimeMs": 18250,
+          "endTimeMs": 18500
+        },
+        {
+          "word": "escribe',",
+          "startTimeMs": 18500,
+          "endTimeMs": 19500
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 19500,
+          "endTimeMs": 20090
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 20090,
+      "endTimeMs": 22480,
+      "segmentIndex": 3,
+      "text": "Si tú quieres, te busco",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 20090,
+          "endTimeMs": 20300
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 20300,
+          "endTimeMs": 20600
+        },
+        {
+          "word": "quieres,",
+          "startTimeMs": 20600,
+          "endTimeMs": 21300
+        },
+        {
+          "word": "te",
+          "startTimeMs": 21300,
+          "endTimeMs": 21600
+        },
+        {
+          "word": "busco",
+          "startTimeMs": 21600,
+          "endTimeMs": 22480
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 22480,
+      "endTimeMs": 24220,
+      "segmentIndex": 4,
+      "text": "Yo sé dónde tú vive'",
+      "words": [
+        {
+          "word": "Yo",
+          "startTimeMs": 22480,
+          "endTimeMs": 22700
+        },
+        {
+          "word": "sé",
+          "startTimeMs": 22700,
+          "endTimeMs": 23000
+        },
+        {
+          "word": "dónde",
+          "startTimeMs": 23000,
+          "endTimeMs": 23400
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 23400,
+          "endTimeMs": 23700
+        },
+        {
+          "word": "vive'",
+          "startTimeMs": 23700,
+          "endTimeMs": 24220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 24220,
+      "endTimeMs": 27720,
+      "segmentIndex": 5,
+      "text": "Quizá hoy está' aborrecía",
+      "words": [
+        {
+          "word": "Quizá",
+          "startTimeMs": 24220,
+          "endTimeMs": 24800
+        },
+        {
+          "word": "hoy",
+          "startTimeMs": 24800,
+          "endTimeMs": 25300
+        },
+        {
+          "word": "está'",
+          "startTimeMs": 25300,
+          "endTimeMs": 26000
+        },
+        {
+          "word": "aborrecía",
+          "startTimeMs": 26000,
+          "endTimeMs": 27720
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 27720,
+      "endTimeMs": 31880,
+      "segmentIndex": 6,
+      "text": "Pero por dentro tú tiene' alegría",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 27720,
+          "endTimeMs": 28000
+        },
+        {
+          "word": "por",
+          "startTimeMs": 28000,
+          "endTimeMs": 28300
+        },
+        {
+          "word": "dentro",
+          "startTimeMs": 28300,
+          "endTimeMs": 29000
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 29000,
+          "endTimeMs": 29400
+        },
+        {
+          "word": "tiene'",
+          "startTimeMs": 29400,
+          "endTimeMs": 30200
+        },
+        {
+          "word": "alegría",
+          "startTimeMs": 30200,
+          "endTimeMs": 31880
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 31880,
+      "endTimeMs": 35180,
+      "segmentIndex": 7,
+      "text": "Si quieres, te la saco",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 31880,
+          "endTimeMs": 32200
+        },
+        {
+          "word": "quieres,",
+          "startTimeMs": 32200,
+          "endTimeMs": 33000
+        },
+        {
+          "word": "te",
+          "startTimeMs": 33000,
+          "endTimeMs": 33400
+        },
+        {
+          "word": "la",
+          "startTimeMs": 33400,
+          "endTimeMs": 33800
+        },
+        {
+          "word": "saco",
+          "startTimeMs": 33800,
+          "endTimeMs": 35180
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 35180,
+      "endTimeMs": 39700,
+      "segmentIndex": 8,
+      "text": "Dos trago' y sabes que me pongo bellaco",
+      "words": [
+        {
+          "word": "Dos",
+          "startTimeMs": 35180,
+          "endTimeMs": 35600
+        },
+        {
+          "word": "trago'",
+          "startTimeMs": 35600,
+          "endTimeMs": 36200
+        },
+        {
+          "word": "y",
+          "startTimeMs": 36200,
+          "endTimeMs": 36500
+        },
+        {
+          "word": "sabes",
+          "startTimeMs": 36500,
+          "endTimeMs": 37000
+        },
+        {
+          "word": "que",
+          "startTimeMs": 37000,
+          "endTimeMs": 37300
+        },
+        {
+          "word": "me",
+          "startTimeMs": 37300,
+          "endTimeMs": 37600
+        },
+        {
+          "word": "pongo",
+          "startTimeMs": 37600,
+          "endTimeMs": 38300
+        },
+        {
+          "word": "bellaco",
+          "startTimeMs": 38300,
+          "endTimeMs": 39700
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 39700,
+      "endTimeMs": 46400,
+      "segmentIndex": 9,
+      "text": "No somo' na, pero estamo' envuelto' hace rato, oh-oh, oh",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 39700,
+          "endTimeMs": 40000
+        },
+        {
+          "word": "somo'",
+          "startTimeMs": 40000,
+          "endTimeMs": 40400
+        },
+        {
+          "word": "na,",
+          "startTimeMs": 40400,
+          "endTimeMs": 40900
+        },
+        {
+          "word": "pero",
+          "startTimeMs": 40900,
+          "endTimeMs": 41400
+        },
+        {
+          "word": "estamo'",
+          "startTimeMs": 41400,
+          "endTimeMs": 41900
+        },
+        {
+          "word": "envuelto'",
+          "startTimeMs": 41900,
+          "endTimeMs": 42500
+        },
+        {
+          "word": "hace",
+          "startTimeMs": 42500,
+          "endTimeMs": 43000
+        },
+        {
+          "word": "rato,",
+          "startTimeMs": 43000,
+          "endTimeMs": 44500
+        },
+        {
+          "word": "oh-oh,",
+          "startTimeMs": 44500,
+          "endTimeMs": 45500
+        },
+        {
+          "word": "oh",
+          "startTimeMs": 45500,
+          "endTimeMs": 46400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 46400,
+      "endTimeMs": 51460,
+      "segmentIndex": 10,
+      "text": "WhatsApp sin el retrato, no guarda mi contacto (ey, ey, ey, ey)",
+      "words": [
+        {
+          "word": "WhatsApp",
+          "startTimeMs": 46400,
+          "endTimeMs": 46900
+        },
+        {
+          "word": "sin",
+          "startTimeMs": 46900,
+          "endTimeMs": 47200
+        },
+        {
+          "word": "el",
+          "startTimeMs": 47200,
+          "endTimeMs": 47500
+        },
+        {
+          "word": "retrato,",
+          "startTimeMs": 47500,
+          "endTimeMs": 48200
+        },
+        {
+          "word": "no",
+          "startTimeMs": 48200,
+          "endTimeMs": 48500
+        },
+        {
+          "word": "guarda",
+          "startTimeMs": 48500,
+          "endTimeMs": 49000
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 49000,
+          "endTimeMs": 49300
+        },
+        {
+          "word": "contacto",
+          "startTimeMs": 49300,
+          "endTimeMs": 50000
+        },
+        {
+          "word": "(ey,",
+          "startTimeMs": 50000,
+          "endTimeMs": 50400
+        },
+        {
+          "word": "ey,",
+          "startTimeMs": 50400,
+          "endTimeMs": 50800
+        },
+        {
+          "word": "ey,",
+          "startTimeMs": 50800,
+          "endTimeMs": 51100
+        },
+        {
+          "word": "ey)",
+          "startTimeMs": 51100,
+          "endTimeMs": 51460
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 51460,
+      "endTimeMs": 53930,
+      "segmentIndex": 11,
+      "text": "Pero se la saco",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 51460,
+          "endTimeMs": 51800
+        },
+        {
+          "word": "se",
+          "startTimeMs": 51800,
+          "endTimeMs": 52100
+        },
+        {
+          "word": "la",
+          "startTimeMs": 52100,
+          "endTimeMs": 52500
+        },
+        {
+          "word": "saco",
+          "startTimeMs": 52500,
+          "endTimeMs": 53930
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 53930,
+      "endTimeMs": 58660,
+      "segmentIndex": 12,
+      "text": "Dos trago' y sabes que me pongo bellaco",
+      "words": [
+        {
+          "word": "Dos",
+          "startTimeMs": 53930,
+          "endTimeMs": 54300
+        },
+        {
+          "word": "trago'",
+          "startTimeMs": 54300,
+          "endTimeMs": 55000
+        },
+        {
+          "word": "y",
+          "startTimeMs": 55000,
+          "endTimeMs": 55300
+        },
+        {
+          "word": "sabes",
+          "startTimeMs": 55300,
+          "endTimeMs": 55800
+        },
+        {
+          "word": "que",
+          "startTimeMs": 55800,
+          "endTimeMs": 56100
+        },
+        {
+          "word": "me",
+          "startTimeMs": 56100,
+          "endTimeMs": 56400
+        },
+        {
+          "word": "pongo",
+          "startTimeMs": 56400,
+          "endTimeMs": 57100
+        },
+        {
+          "word": "bellaco",
+          "startTimeMs": 57100,
+          "endTimeMs": 58660
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 58660,
+      "endTimeMs": 65320,
+      "segmentIndex": 13,
+      "text": "No somo' na, pero estamo' envuelto' hace rato, oh-oh, oh",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 58660,
+          "endTimeMs": 59000
+        },
+        {
+          "word": "somo'",
+          "startTimeMs": 59000,
+          "endTimeMs": 59400
+        },
+        {
+          "word": "na,",
+          "startTimeMs": 59400,
+          "endTimeMs": 59900
+        },
+        {
+          "word": "pero",
+          "startTimeMs": 59900,
+          "endTimeMs": 60400
+        },
+        {
+          "word": "estamo'",
+          "startTimeMs": 60400,
+          "endTimeMs": 60900
+        },
+        {
+          "word": "envuelto'",
+          "startTimeMs": 60900,
+          "endTimeMs": 61500
+        },
+        {
+          "word": "hace",
+          "startTimeMs": 61500,
+          "endTimeMs": 62000
+        },
+        {
+          "word": "rato,",
+          "startTimeMs": 62000,
+          "endTimeMs": 63500
+        },
+        {
+          "word": "oh-oh,",
+          "startTimeMs": 63500,
+          "endTimeMs": 64500
+        },
+        {
+          "word": "oh",
+          "startTimeMs": 64500,
+          "endTimeMs": 65320
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 65320,
+      "endTimeMs": 71150,
+      "segmentIndex": 14,
+      "text": "WhatsApp sin el retrato, no guarda mi contacto-to",
+      "words": [
+        {
+          "word": "WhatsApp",
+          "startTimeMs": 65320,
+          "endTimeMs": 65800
+        },
+        {
+          "word": "sin",
+          "startTimeMs": 65800,
+          "endTimeMs": 66100
+        },
+        {
+          "word": "el",
+          "startTimeMs": 66100,
+          "endTimeMs": 66400
+        },
+        {
+          "word": "retrato,",
+          "startTimeMs": 66400,
+          "endTimeMs": 67200
+        },
+        {
+          "word": "no",
+          "startTimeMs": 67200,
+          "endTimeMs": 67500
+        },
+        {
+          "word": "guarda",
+          "startTimeMs": 67500,
+          "endTimeMs": 68000
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 68000,
+          "endTimeMs": 68400
+        },
+        {
+          "word": "contacto-to",
+          "startTimeMs": 68400,
+          "endTimeMs": 71150
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 71150,
+      "endTimeMs": 73060,
+      "segmentIndex": 15,
+      "text": "Todo e'underwater (ey)",
+      "words": [
+        {
+          "word": "Todo",
+          "startTimeMs": 71150,
+          "endTimeMs": 71500
+        },
+        {
+          "word": "e'underwater",
+          "startTimeMs": 71500,
+          "endTimeMs": 72500
+        },
+        {
+          "word": "(ey)",
+          "startTimeMs": 72500,
+          "endTimeMs": 73060
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 73060,
+      "endTimeMs": 75080,
+      "segmentIndex": 16,
+      "text": "Baby, vamo' pa'l cuarto quarter",
+      "words": [
+        {
+          "word": "Baby,",
+          "startTimeMs": 73060,
+          "endTimeMs": 73500
+        },
+        {
+          "word": "vamo'",
+          "startTimeMs": 73500,
+          "endTimeMs": 73800
+        },
+        {
+          "word": "pa'l",
+          "startTimeMs": 73800,
+          "endTimeMs": 74100
+        },
+        {
+          "word": "cuarto",
+          "startTimeMs": 74100,
+          "endTimeMs": 74500
+        },
+        {
+          "word": "quarter",
+          "startTimeMs": 74500,
+          "endTimeMs": 75080
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 75080,
+      "endTimeMs": 77370,
+      "segmentIndex": 17,
+      "text": "En la Uru' comiéndono' el pare",
+      "words": [
+        {
+          "word": "En",
+          "startTimeMs": 75080,
+          "endTimeMs": 75200
+        },
+        {
+          "word": "la",
+          "startTimeMs": 75200,
+          "endTimeMs": 75400
+        },
+        {
+          "word": "Uru'",
+          "startTimeMs": 75400,
+          "endTimeMs": 75900
+        },
+        {
+          "word": "comiéndono'",
+          "startTimeMs": 75900,
+          "endTimeMs": 76600
+        },
+        {
+          "word": "el",
+          "startTimeMs": 76600,
+          "endTimeMs": 76800
+        },
+        {
+          "word": "pare",
+          "startTimeMs": 76800,
+          "endTimeMs": 77370
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 77370,
+      "endTimeMs": 80260,
+      "segmentIndex": 18,
+      "text": "Te vo'a dar duro pa que no me compare', ey",
+      "words": [
+        {
+          "word": "Te",
+          "startTimeMs": 77370,
+          "endTimeMs": 77500
+        },
+        {
+          "word": "vo'a",
+          "startTimeMs": 77500,
+          "endTimeMs": 77700
+        },
+        {
+          "word": "dar",
+          "startTimeMs": 77700,
+          "endTimeMs": 77900
+        },
+        {
+          "word": "duro",
+          "startTimeMs": 77900,
+          "endTimeMs": 78300
+        },
+        {
+          "word": "pa",
+          "startTimeMs": 78300,
+          "endTimeMs": 78500
+        },
+        {
+          "word": "que",
+          "startTimeMs": 78500,
+          "endTimeMs": 78700
+        },
+        {
+          "word": "no",
+          "startTimeMs": 78700,
+          "endTimeMs": 78900
+        },
+        {
+          "word": "me",
+          "startTimeMs": 78900,
+          "endTimeMs": 79100
+        },
+        {
+          "word": "compare',",
+          "startTimeMs": 79100,
+          "endTimeMs": 79800
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 79800,
+          "endTimeMs": 80260
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 80260,
+      "endTimeMs": 83770,
+      "segmentIndex": 19,
+      "text": "Cuidao con ese mahón, que se va a romper (ey)",
+      "words": [
+        {
+          "word": "Cuidao",
+          "startTimeMs": 80260,
+          "endTimeMs": 80600
+        },
+        {
+          "word": "con",
+          "startTimeMs": 80600,
+          "endTimeMs": 80800
+        },
+        {
+          "word": "ese",
+          "startTimeMs": 80800,
+          "endTimeMs": 81100
+        },
+        {
+          "word": "mahón,",
+          "startTimeMs": 81100,
+          "endTimeMs": 81800
+        },
+        {
+          "word": "que",
+          "startTimeMs": 81800,
+          "endTimeMs": 82100
+        },
+        {
+          "word": "se",
+          "startTimeMs": 82100,
+          "endTimeMs": 82300
+        },
+        {
+          "word": "va",
+          "startTimeMs": 82300,
+          "endTimeMs": 82500
+        },
+        {
+          "word": "a",
+          "startTimeMs": 82500,
+          "endTimeMs": 82700
+        },
+        {
+          "word": "romper",
+          "startTimeMs": 82700,
+          "endTimeMs": 83300
+        },
+        {
+          "word": "(ey)",
+          "startTimeMs": 83300,
+          "endTimeMs": 83770
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 83770,
+      "endTimeMs": 85860,
+      "segmentIndex": 20,
+      "text": "Ese booty lo va a romper (ey)",
+      "words": [
+        {
+          "word": "Ese",
+          "startTimeMs": 83770,
+          "endTimeMs": 84000
+        },
+        {
+          "word": "booty",
+          "startTimeMs": 84000,
+          "endTimeMs": 84400
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 84400,
+          "endTimeMs": 84600
+        },
+        {
+          "word": "va",
+          "startTimeMs": 84600,
+          "endTimeMs": 84800
+        },
+        {
+          "word": "a",
+          "startTimeMs": 84800,
+          "endTimeMs": 85000
+        },
+        {
+          "word": "romper",
+          "startTimeMs": 85000,
+          "endTimeMs": 85500
+        },
+        {
+          "word": "(ey)",
+          "startTimeMs": 85500,
+          "endTimeMs": 85860
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 85860,
+      "endTimeMs": 88520,
+      "segmentIndex": 21,
+      "text": "Yo no sé si yo te vuelvo a ver",
+      "words": [
+        {
+          "word": "Yo",
+          "startTimeMs": 85860,
+          "endTimeMs": 86100
+        },
+        {
+          "word": "no",
+          "startTimeMs": 86100,
+          "endTimeMs": 86300
+        },
+        {
+          "word": "sé",
+          "startTimeMs": 86300,
+          "endTimeMs": 86600
+        },
+        {
+          "word": "si",
+          "startTimeMs": 86600,
+          "endTimeMs": 86900
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 86900,
+          "endTimeMs": 87200
+        },
+        {
+          "word": "te",
+          "startTimeMs": 87200,
+          "endTimeMs": 87500
+        },
+        {
+          "word": "vuelvo",
+          "startTimeMs": 87500,
+          "endTimeMs": 88000
+        },
+        {
+          "word": "a",
+          "startTimeMs": 88000,
+          "endTimeMs": 88200
+        },
+        {
+          "word": "ver",
+          "startTimeMs": 88200,
+          "endTimeMs": 88520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 88520,
+      "endTimeMs": 90310,
+      "segmentIndex": 22,
+      "text": "Si mañana me vo'a perder",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 88520,
+          "endTimeMs": 88800
+        },
+        {
+          "word": "mañana",
+          "startTimeMs": 88800,
+          "endTimeMs": 89400
+        },
+        {
+          "word": "me",
+          "startTimeMs": 89400,
+          "endTimeMs": 89700
+        },
+        {
+          "word": "vo'a",
+          "startTimeMs": 89700,
+          "endTimeMs": 90000
+        },
+        {
+          "word": "perder",
+          "startTimeMs": 90000,
+          "endTimeMs": 90310
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 90310,
+      "endTimeMs": 92750,
+      "segmentIndex": 23,
+      "text": "Tú ere' una player, me hiciste un crossover",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 90310,
+          "endTimeMs": 90500
+        },
+        {
+          "word": "ere'",
+          "startTimeMs": 90500,
+          "endTimeMs": 90800
+        },
+        {
+          "word": "una",
+          "startTimeMs": 90800,
+          "endTimeMs": 91100
+        },
+        {
+          "word": "player,",
+          "startTimeMs": 91100,
+          "endTimeMs": 91600
+        },
+        {
+          "word": "me",
+          "startTimeMs": 91600,
+          "endTimeMs": 91800
+        },
+        {
+          "word": "hiciste",
+          "startTimeMs": 91800,
+          "endTimeMs": 92200
+        },
+        {
+          "word": "un",
+          "startTimeMs": 92200,
+          "endTimeMs": 92400
+        },
+        {
+          "word": "crossover",
+          "startTimeMs": 92400,
+          "endTimeMs": 92750
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 92750,
+      "endTimeMs": 96040,
+      "segmentIndex": 24,
+      "text": "Esta ve' metiste, me diste game over, eh-eh",
+      "words": [
+        {
+          "word": "Esta",
+          "startTimeMs": 92750,
+          "endTimeMs": 93000
+        },
+        {
+          "word": "ve'",
+          "startTimeMs": 93000,
+          "endTimeMs": 93300
+        },
+        {
+          "word": "metiste,",
+          "startTimeMs": 93300,
+          "endTimeMs": 93800
+        },
+        {
+          "word": "me",
+          "startTimeMs": 93800,
+          "endTimeMs": 94100
+        },
+        {
+          "word": "diste",
+          "startTimeMs": 94100,
+          "endTimeMs": 94500
+        },
+        {
+          "word": "game",
+          "startTimeMs": 94500,
+          "endTimeMs": 94800
+        },
+        {
+          "word": "over,",
+          "startTimeMs": 94800,
+          "endTimeMs": 95300
+        },
+        {
+          "word": "eh-eh",
+          "startTimeMs": 95300,
+          "endTimeMs": 96040
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 96040,
+      "endTimeMs": 97680,
+      "segmentIndex": 25,
+      "text": "Porque no puedo olvidar",
+      "words": [
+        {
+          "word": "Porque",
+          "startTimeMs": 96040,
+          "endTimeMs": 96500
+        },
+        {
+          "word": "no",
+          "startTimeMs": 96500,
+          "endTimeMs": 96800
+        },
+        {
+          "word": "puedo",
+          "startTimeMs": 96800,
+          "endTimeMs": 97200
+        },
+        {
+          "word": "olvidar",
+          "startTimeMs": 97200,
+          "endTimeMs": 97680
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 97680,
+      "endTimeMs": 100050,
+      "segmentIndex": 26,
+      "text": "El perreo aquel, que se fue viral",
+      "words": [
+        {
+          "word": "El",
+          "startTimeMs": 97680,
+          "endTimeMs": 97900
+        },
+        {
+          "word": "perreo",
+          "startTimeMs": 97900,
+          "endTimeMs": 98400
+        },
+        {
+          "word": "aquel,",
+          "startTimeMs": 98400,
+          "endTimeMs": 99000
+        },
+        {
+          "word": "que",
+          "startTimeMs": 99000,
+          "endTimeMs": 99300
+        },
+        {
+          "word": "se",
+          "startTimeMs": 99300,
+          "endTimeMs": 99500
+        },
+        {
+          "word": "fue",
+          "startTimeMs": 99500,
+          "endTimeMs": 99700
+        },
+        {
+          "word": "viral",
+          "startTimeMs": 99700,
+          "endTimeMs": 100050
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 100050,
+      "endTimeMs": 102490,
+      "segmentIndex": 27,
+      "text": "Dime si mañana te va' a quedar",
+      "words": [
+        {
+          "word": "Dime",
+          "startTimeMs": 100050,
+          "endTimeMs": 100500
+        },
+        {
+          "word": "si",
+          "startTimeMs": 100500,
+          "endTimeMs": 100800
+        },
+        {
+          "word": "mañana",
+          "startTimeMs": 100800,
+          "endTimeMs": 101300
+        },
+        {
+          "word": "te",
+          "startTimeMs": 101300,
+          "endTimeMs": 101500
+        },
+        {
+          "word": "va'",
+          "startTimeMs": 101500,
+          "endTimeMs": 101800
+        },
+        {
+          "word": "a",
+          "startTimeMs": 101800,
+          "endTimeMs": 102000
+        },
+        {
+          "word": "quedar",
+          "startTimeMs": 102000,
+          "endTimeMs": 102490
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 102490,
+      "endTimeMs": 105520,
+      "segmentIndex": 28,
+      "text": "Después de la alarma te lo voy a dar, ey",
+      "words": [
+        {
+          "word": "Después",
+          "startTimeMs": 102490,
+          "endTimeMs": 103000
+        },
+        {
+          "word": "de",
+          "startTimeMs": 103000,
+          "endTimeMs": 103200
+        },
+        {
+          "word": "la",
+          "startTimeMs": 103200,
+          "endTimeMs": 103400
+        },
+        {
+          "word": "alarma",
+          "startTimeMs": 103400,
+          "endTimeMs": 104000
+        },
+        {
+          "word": "te",
+          "startTimeMs": 104000,
+          "endTimeMs": 104200
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 104200,
+          "endTimeMs": 104400
+        },
+        {
+          "word": "voy",
+          "startTimeMs": 104400,
+          "endTimeMs": 104600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 104600,
+          "endTimeMs": 104800
+        },
+        {
+          "word": "dar,",
+          "startTimeMs": 104800,
+          "endTimeMs": 105200
+        },
+        {
+          "word": "ey",
+          "startTimeMs": 105200,
+          "endTimeMs": 105520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 105520,
+      "endTimeMs": 108880,
+      "segmentIndex": 29,
+      "text": "Hoy tú no va' a trabajar, ¡ja!, no",
+      "words": [
+        {
+          "word": "Hoy",
+          "startTimeMs": 105520,
+          "endTimeMs": 105800
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 105800,
+          "endTimeMs": 106000
+        },
+        {
+          "word": "no",
+          "startTimeMs": 106000,
+          "endTimeMs": 106300
+        },
+        {
+          "word": "va'",
+          "startTimeMs": 106300,
+          "endTimeMs": 106600
+        },
+        {
+          "word": "a",
+          "startTimeMs": 106600,
+          "endTimeMs": 106800
+        },
+        {
+          "word": "trabajar,",
+          "startTimeMs": 106800,
+          "endTimeMs": 107600
+        },
+        {
+          "word": "¡ja!,",
+          "startTimeMs": 107600,
+          "endTimeMs": 108200
+        },
+        {
+          "word": "no",
+          "startTimeMs": 108200,
+          "endTimeMs": 108880
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 108880,
+      "endTimeMs": 111530,
+      "segmentIndex": 30,
+      "text": "Si quieres, te la saco",
+      "words": [
+        {
+          "word": "Si",
+          "startTimeMs": 108880,
+          "endTimeMs": 109200
+        },
+        {
+          "word": "quieres,",
+          "startTimeMs": 109200,
+          "endTimeMs": 109800
+        },
+        {
+          "word": "te",
+          "startTimeMs": 109800,
+          "endTimeMs": 110200
+        },
+        {
+          "word": "la",
+          "startTimeMs": 110200,
+          "endTimeMs": 110500
+        },
+        {
+          "word": "saco",
+          "startTimeMs": 110500,
+          "endTimeMs": 111530
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 111530,
+      "endTimeMs": 116580,
+      "segmentIndex": 31,
+      "text": "Dos trago' y sabes que me pongo bellaco",
+      "words": [
+        {
+          "word": "Dos",
+          "startTimeMs": 111530,
+          "endTimeMs": 112000
+        },
+        {
+          "word": "trago'",
+          "startTimeMs": 112000,
+          "endTimeMs": 112800
+        },
+        {
+          "word": "y",
+          "startTimeMs": 112800,
+          "endTimeMs": 113200
+        },
+        {
+          "word": "sabes",
+          "startTimeMs": 113200,
+          "endTimeMs": 113800
+        },
+        {
+          "word": "que",
+          "startTimeMs": 113800,
+          "endTimeMs": 114200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 114200,
+          "endTimeMs": 114600
+        },
+        {
+          "word": "pongo",
+          "startTimeMs": 114600,
+          "endTimeMs": 115200
+        },
+        {
+          "word": "bellaco",
+          "startTimeMs": 115200,
+          "endTimeMs": 116580
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 116580,
+      "endTimeMs": 123050,
+      "segmentIndex": 32,
+      "text": "No somo' na, pero estamo' envuelto' hace rato, oh-oh, oh",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 116580,
+          "endTimeMs": 116900
+        },
+        {
+          "word": "somo'",
+          "startTimeMs": 116900,
+          "endTimeMs": 117300
+        },
+        {
+          "word": "na,",
+          "startTimeMs": 117300,
+          "endTimeMs": 117800
+        },
+        {
+          "word": "pero",
+          "startTimeMs": 117800,
+          "endTimeMs": 118300
+        },
+        {
+          "word": "estamo'",
+          "startTimeMs": 118300,
+          "endTimeMs": 118800
+        },
+        {
+          "word": "envuelto'",
+          "startTimeMs": 118800,
+          "endTimeMs": 119500
+        },
+        {
+          "word": "hace",
+          "startTimeMs": 119500,
+          "endTimeMs": 120000
+        },
+        {
+          "word": "rato,",
+          "startTimeMs": 120000,
+          "endTimeMs": 121500
+        },
+        {
+          "word": "oh-oh,",
+          "startTimeMs": 121500,
+          "endTimeMs": 122200
+        },
+        {
+          "word": "oh",
+          "startTimeMs": 122200,
+          "endTimeMs": 123050
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 123050,
+      "endTimeMs": 128230,
+      "segmentIndex": 33,
+      "text": "WhatsApp sin el retrato, no guarda mi contacto",
+      "words": [
+        {
+          "word": "WhatsApp",
+          "startTimeMs": 123050,
+          "endTimeMs": 123600
+        },
+        {
+          "word": "sin",
+          "startTimeMs": 123600,
+          "endTimeMs": 124000
+        },
+        {
+          "word": "el",
+          "startTimeMs": 124000,
+          "endTimeMs": 124400
+        },
+        {
+          "word": "retrato,",
+          "startTimeMs": 124400,
+          "endTimeMs": 125200
+        },
+        {
+          "word": "no",
+          "startTimeMs": 125200,
+          "endTimeMs": 125600
+        },
+        {
+          "word": "guarda",
+          "startTimeMs": 125600,
+          "endTimeMs": 126200
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 126200,
+          "endTimeMs": 126600
+        },
+        {
+          "word": "contacto",
+          "startTimeMs": 126600,
+          "endTimeMs": 128230
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 128230,
+      "endTimeMs": 130870,
+      "segmentIndex": 34,
+      "text": "Pero se la saco",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 128230,
+          "endTimeMs": 128700
+        },
+        {
+          "word": "se",
+          "startTimeMs": 128700,
+          "endTimeMs": 129000
+        },
+        {
+          "word": "la",
+          "startTimeMs": 129000,
+          "endTimeMs": 129400
+        },
+        {
+          "word": "saco",
+          "startTimeMs": 129400,
+          "endTimeMs": 130870
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 130870,
+      "endTimeMs": 135870,
+      "segmentIndex": 35,
+      "text": "Dos trago' y sabes que me pongo bellaco",
+      "words": [
+        {
+          "word": "Dos",
+          "startTimeMs": 130870,
+          "endTimeMs": 131300
+        },
+        {
+          "word": "trago'",
+          "startTimeMs": 131300,
+          "endTimeMs": 132000
+        },
+        {
+          "word": "y",
+          "startTimeMs": 132000,
+          "endTimeMs": 132300
+        },
+        {
+          "word": "sabes",
+          "startTimeMs": 132300,
+          "endTimeMs": 132800
+        },
+        {
+          "word": "que",
+          "startTimeMs": 132800,
+          "endTimeMs": 133200
+        },
+        {
+          "word": "me",
+          "startTimeMs": 133200,
+          "endTimeMs": 133500
+        },
+        {
+          "word": "pongo",
+          "startTimeMs": 133500,
+          "endTimeMs": 134200
+        },
+        {
+          "word": "bellaco",
+          "startTimeMs": 134200,
+          "endTimeMs": 135870
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 135870,
+      "endTimeMs": 142350,
+      "segmentIndex": 36,
+      "text": "No somo' na, pero estamo' envuelto' hace rato, oh-oh, oh",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 135870,
+          "endTimeMs": 136200
+        },
+        {
+          "word": "somo'",
+          "startTimeMs": 136200,
+          "endTimeMs": 136600
+        },
+        {
+          "word": "na,",
+          "startTimeMs": 136600,
+          "endTimeMs": 137100
+        },
+        {
+          "word": "pero",
+          "startTimeMs": 137100,
+          "endTimeMs": 137600
+        },
+        {
+          "word": "estamo'",
+          "startTimeMs": 137600,
+          "endTimeMs": 138100
+        },
+        {
+          "word": "envuelto'",
+          "startTimeMs": 138100,
+          "endTimeMs": 138800
+        },
+        {
+          "word": "hace",
+          "startTimeMs": 138800,
+          "endTimeMs": 139300
+        },
+        {
+          "word": "rato,",
+          "startTimeMs": 139300,
+          "endTimeMs": 140500
+        },
+        {
+          "word": "oh-oh,",
+          "startTimeMs": 140500,
+          "endTimeMs": 141500
+        },
+        {
+          "word": "oh",
+          "startTimeMs": 141500,
+          "endTimeMs": 142350
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 142350,
+      "endTimeMs": 147860,
+      "segmentIndex": 37,
+      "text": "WhatsApp sin el retrato, no guarda mi contacto",
+      "words": [
+        {
+          "word": "WhatsApp",
+          "startTimeMs": 142350,
+          "endTimeMs": 142800
+        },
+        {
+          "word": "sin",
+          "startTimeMs": 142800,
+          "endTimeMs": 143200
+        },
+        {
+          "word": "el",
+          "startTimeMs": 143200,
+          "endTimeMs": 143500
+        },
+        {
+          "word": "retrato,",
+          "startTimeMs": 143500,
+          "endTimeMs": 144500
+        },
+        {
+          "word": "no",
+          "startTimeMs": 144500,
+          "endTimeMs": 144900
+        },
+        {
+          "word": "guarda",
+          "startTimeMs": 144900,
+          "endTimeMs": 145500
+        },
+        {
+          "word": "mi",
+          "startTimeMs": 145500,
+          "endTimeMs": 146000
+        },
+        {
+          "word": "contacto",
+          "startTimeMs": 146000,
+          "endTimeMs": 147860
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 147860,
+      "endTimeMs": 150470,
+      "segmentIndex": 38,
+      "text": "Me gustan así, piquetúa",
+      "words": [
+        {
+          "word": "Me",
+          "startTimeMs": 147860,
+          "endTimeMs": 148100
+        },
+        {
+          "word": "gustan",
+          "startTimeMs": 148100,
+          "endTimeMs": 148600
+        },
+        {
+          "word": "así,",
+          "startTimeMs": 148600,
+          "endTimeMs": 149200
+        },
+        {
+          "word": "piquetúa",
+          "startTimeMs": 149200,
+          "endTimeMs": 150470
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 150470,
+      "endTimeMs": 152850,
+      "segmentIndex": 39,
+      "text": "Mami, qué rica te ve' desnúa",
+      "words": [
+        {
+          "word": "Mami,",
+          "startTimeMs": 150470,
+          "endTimeMs": 151000
+        },
+        {
+          "word": "qué",
+          "startTimeMs": 151000,
+          "endTimeMs": 151300
+        },
+        {
+          "word": "rica",
+          "startTimeMs": 151300,
+          "endTimeMs": 151700
+        },
+        {
+          "word": "te",
+          "startTimeMs": 151700,
+          "endTimeMs": 151900
+        },
+        {
+          "word": "ve'",
+          "startTimeMs": 151900,
+          "endTimeMs": 152200
+        },
+        {
+          "word": "desnúa",
+          "startTimeMs": 152200,
+          "endTimeMs": 152850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 152850,
+      "endTimeMs": 155160,
+      "segmentIndex": 40,
+      "text": "Quizás no sentiste lo que yo sentí",
+      "words": [
+        {
+          "word": "Quizás",
+          "startTimeMs": 152850,
+          "endTimeMs": 153200
+        },
+        {
+          "word": "no",
+          "startTimeMs": 153200,
+          "endTimeMs": 153500
+        },
+        {
+          "word": "sentiste",
+          "startTimeMs": 153500,
+          "endTimeMs": 154000
+        },
+        {
+          "word": "lo",
+          "startTimeMs": 154000,
+          "endTimeMs": 154200
+        },
+        {
+          "word": "que",
+          "startTimeMs": 154200,
+          "endTimeMs": 154400
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 154400,
+          "endTimeMs": 154600
+        },
+        {
+          "word": "sentí",
+          "startTimeMs": 154600,
+          "endTimeMs": 155160
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 155160,
+      "endTimeMs": 157520,
+      "segmentIndex": 41,
+      "text": "Pero aún te debo una noche en la suite",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 155160,
+          "endTimeMs": 155500
+        },
+        {
+          "word": "aún",
+          "startTimeMs": 155500,
+          "endTimeMs": 155800
+        },
+        {
+          "word": "te",
+          "startTimeMs": 155800,
+          "endTimeMs": 156000
+        },
+        {
+          "word": "debo",
+          "startTimeMs": 156000,
+          "endTimeMs": 156300
+        },
+        {
+          "word": "una",
+          "startTimeMs": 156300,
+          "endTimeMs": 156600
+        },
+        {
+          "word": "noche",
+          "startTimeMs": 156600,
+          "endTimeMs": 157000
+        },
+        {
+          "word": "en",
+          "startTimeMs": 157000,
+          "endTimeMs": 157200
+        },
+        {
+          "word": "la",
+          "startTimeMs": 157200,
+          "endTimeMs": 157300
+        },
+        {
+          "word": "suite",
+          "startTimeMs": 157300,
+          "endTimeMs": 157520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 157520,
+      "endTimeMs": 159590,
+      "segmentIndex": 42,
+      "text": "Pa darte tabla",
+      "words": [
+        {
+          "word": "Pa",
+          "startTimeMs": 157520,
+          "endTimeMs": 157800
+        },
+        {
+          "word": "darte",
+          "startTimeMs": 157800,
+          "endTimeMs": 158300
+        },
+        {
+          "word": "tabla",
+          "startTimeMs": 158300,
+          "endTimeMs": 159590
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 159590,
+      "endTimeMs": 161830,
+      "segmentIndex": 43,
+      "text": "Dale, mami, habla",
+      "words": [
+        {
+          "word": "Dale,",
+          "startTimeMs": 159590,
+          "endTimeMs": 160200
+        },
+        {
+          "word": "mami,",
+          "startTimeMs": 160200,
+          "endTimeMs": 160800
+        },
+        {
+          "word": "habla",
+          "startTimeMs": 160800,
+          "endTimeMs": 161830
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 161830,
+      "endTimeMs": 164850,
+      "segmentIndex": 44,
+      "text": "Tú ere' una diablona",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 161830,
+          "endTimeMs": 162200
+        },
+        {
+          "word": "ere'",
+          "startTimeMs": 162200,
+          "endTimeMs": 162600
+        },
+        {
+          "word": "una",
+          "startTimeMs": 162600,
+          "endTimeMs": 163000
+        },
+        {
+          "word": "diablona",
+          "startTimeMs": 163000,
+          "endTimeMs": 164850
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 164850,
+      "endTimeMs": 166740,
+      "segmentIndex": 45,
+      "text": "No te haga'",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 164850,
+          "endTimeMs": 165200
+        },
+        {
+          "word": "te",
+          "startTimeMs": 165200,
+          "endTimeMs": 165500
+        },
+        {
+          "word": "haga'",
+          "startTimeMs": 165500,
+          "endTimeMs": 166740
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 166740,
+      "endTimeMs": 169180,
+      "segmentIndex": 46,
+      "text": "Pa darte tabla",
+      "words": [
+        {
+          "word": "Pa",
+          "startTimeMs": 166740,
+          "endTimeMs": 167000
+        },
+        {
+          "word": "darte",
+          "startTimeMs": 167000,
+          "endTimeMs": 167500
+        },
+        {
+          "word": "tabla",
+          "startTimeMs": 167500,
+          "endTimeMs": 169180
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 169180,
+      "endTimeMs": 171430,
+      "segmentIndex": 47,
+      "text": "Dale, mami, habla",
+      "words": [
+        {
+          "word": "Dale,",
+          "startTimeMs": 169180,
+          "endTimeMs": 169600
+        },
+        {
+          "word": "mami,",
+          "startTimeMs": 169600,
+          "endTimeMs": 170200
+        },
+        {
+          "word": "habla",
+          "startTimeMs": 170200,
+          "endTimeMs": 171430
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 171430,
+      "endTimeMs": 174420,
+      "segmentIndex": 48,
+      "text": "Tú ere' una diablona",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 171430,
+          "endTimeMs": 171800
+        },
+        {
+          "word": "ere'",
+          "startTimeMs": 171800,
+          "endTimeMs": 172200
+        },
+        {
+          "word": "una",
+          "startTimeMs": 172200,
+          "endTimeMs": 172600
+        },
+        {
+          "word": "diablona",
+          "startTimeMs": 172600,
+          "endTimeMs": 174420
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 174420,
+      "endTimeMs": 176740,
+      "segmentIndex": 49,
+      "text": "No te haga'",
+      "words": [
+        {
+          "word": "No",
+          "startTimeMs": 174420,
+          "endTimeMs": 174800
+        },
+        {
+          "word": "te",
+          "startTimeMs": 174800,
+          "endTimeMs": 175200
+        },
+        {
+          "word": "haga'",
+          "startTimeMs": 175200,
+          "endTimeMs": 176740
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 176740,
+      "endTimeMs": 179200,
+      "segmentIndex": 50,
+      "text": "No, no, no, no (no, no, no, no)",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 176740,
+          "endTimeMs": 177000
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 177000,
+          "endTimeMs": 177300
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 177300,
+          "endTimeMs": 177600
+        },
+        {
+          "word": "no",
+          "startTimeMs": 177600,
+          "endTimeMs": 177900
+        },
+        {
+          "word": "(no,",
+          "startTimeMs": 177900,
+          "endTimeMs": 178200
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 178200,
+          "endTimeMs": 178500
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 178500,
+          "endTimeMs": 178800
+        },
+        {
+          "word": "no)",
+          "startTimeMs": 178800,
+          "endTimeMs": 179200
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 179200,
+      "endTimeMs": 181380,
+      "segmentIndex": 51,
+      "text": "No, no, no, no (no, no, no, no)",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 179200,
+          "endTimeMs": 179500
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 179500,
+          "endTimeMs": 179800
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 179800,
+          "endTimeMs": 180100
+        },
+        {
+          "word": "no",
+          "startTimeMs": 180100,
+          "endTimeMs": 180400
+        },
+        {
+          "word": "(no,",
+          "startTimeMs": 180400,
+          "endTimeMs": 180700
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 180700,
+          "endTimeMs": 181000
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 181000,
+          "endTimeMs": 181200
+        },
+        {
+          "word": "no)",
+          "startTimeMs": 181200,
+          "endTimeMs": 181380
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 181380,
+      "endTimeMs": 185470,
+      "segmentIndex": 52,
+      "text": "No, no, no, no (no, no, no, no)",
+      "words": [
+        {
+          "word": "No,",
+          "startTimeMs": 181380,
+          "endTimeMs": 181800
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 181800,
+          "endTimeMs": 182300
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 182300,
+          "endTimeMs": 182800
+        },
+        {
+          "word": "no",
+          "startTimeMs": 182800,
+          "endTimeMs": 183300
+        },
+        {
+          "word": "(no,",
+          "startTimeMs": 183300,
+          "endTimeMs": 183800
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 183800,
+          "endTimeMs": 184300
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 184300,
+          "endTimeMs": 184800
+        },
+        {
+          "word": "no)",
+          "startTimeMs": 184800,
+          "endTimeMs": 185470
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 185470,
+      "endTimeMs": 188620,
+      "segmentIndex": 53,
+      "text": "Ey, yo no sé tú",
+      "words": [
+        {
+          "word": "Ey,",
+          "startTimeMs": 185470,
+          "endTimeMs": 185800
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 185800,
+          "endTimeMs": 186400
+        },
+        {
+          "word": "no",
+          "startTimeMs": 186400,
+          "endTimeMs": 187000
+        },
+        {
+          "word": "sé",
+          "startTimeMs": 187000,
+          "endTimeMs": 187600
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 187600,
+          "endTimeMs": 188620
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 188620,
+      "endTimeMs": 193430,
+      "segmentIndex": 54,
+      "text": "Pero yo quisiera amanecer esnú",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 188620,
+          "endTimeMs": 189400
+        },
+        {
+          "word": "yo",
+          "startTimeMs": 189400,
+          "endTimeMs": 190000
+        },
+        {
+          "word": "quisiera",
+          "startTimeMs": 190000,
+          "endTimeMs": 191000
+        },
+        {
+          "word": "amanecer",
+          "startTimeMs": 191000,
+          "endTimeMs": 192000
+        },
+        {
+          "word": "esnú",
+          "startTimeMs": 192000,
+          "endTimeMs": 193430
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 193430,
+      "endTimeMs": 200120,
+      "segmentIndex": 55,
+      "text": "En una playa por Balí, si no, Cancún",
+      "words": [
+        {
+          "word": "En",
+          "startTimeMs": 193430,
+          "endTimeMs": 194000
+        },
+        {
+          "word": "una",
+          "startTimeMs": 194000,
+          "endTimeMs": 194500
+        },
+        {
+          "word": "playa",
+          "startTimeMs": 194500,
+          "endTimeMs": 195500
+        },
+        {
+          "word": "por",
+          "startTimeMs": 195500,
+          "endTimeMs": 196500
+        },
+        {
+          "word": "Balí,",
+          "startTimeMs": 196500,
+          "endTimeMs": 197500
+        },
+        {
+          "word": "si",
+          "startTimeMs": 197500,
+          "endTimeMs": 198000
+        },
+        {
+          "word": "no,",
+          "startTimeMs": 198000,
+          "endTimeMs": 198500
+        },
+        {
+          "word": "Cancún",
+          "startTimeMs": 198500,
+          "endTimeMs": 200120
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 200120,
+      "endTimeMs": 205310,
+      "segmentIndex": 56,
+      "text": "Pide otro Moscow Mule (ey)",
+      "words": [
+        {
+          "word": "Pide",
+          "startTimeMs": 200120,
+          "endTimeMs": 201000
+        },
+        {
+          "word": "otro",
+          "startTimeMs": 201000,
+          "endTimeMs": 202000
+        },
+        {
+          "word": "Moscow",
+          "startTimeMs": 202000,
+          "endTimeMs": 203000
+        },
+        {
+          "word": "Mule",
+          "startTimeMs": 203000,
+          "endTimeMs": 204500
+        },
+        {
+          "word": "(ey)",
+          "startTimeMs": 204500,
+          "endTimeMs": 205310
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 205310,
+      "endTimeMs": 208190,
+      "segmentIndex": 57,
+      "text": "Que ando en nota, nota",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 205310,
+          "endTimeMs": 205800
+        },
+        {
+          "word": "ando",
+          "startTimeMs": 205800,
+          "endTimeMs": 206300
+        },
+        {
+          "word": "en",
+          "startTimeMs": 206300,
+          "endTimeMs": 206800
+        },
+        {
+          "word": "nota,",
+          "startTimeMs": 206800,
+          "endTimeMs": 207300
+        },
+        {
+          "word": "nota",
+          "startTimeMs": 207300,
+          "endTimeMs": 208190
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 208190,
+      "endTimeMs": 209510,
+      "segmentIndex": 58,
+      "text": "Ven y choca",
+      "words": [
+        {
+          "word": "Ven",
+          "startTimeMs": 208190,
+          "endTimeMs": 208600
+        },
+        {
+          "word": "y",
+          "startTimeMs": 208600,
+          "endTimeMs": 208900
+        },
+        {
+          "word": "choca",
+          "startTimeMs": 208900,
+          "endTimeMs": 209510
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 209510,
+      "endTimeMs": 212030,
+      "segmentIndex": 59,
+      "text": "Conmigo que se joda",
+      "words": [
+        {
+          "word": "Conmigo",
+          "startTimeMs": 209510,
+          "endTimeMs": 210200
+        },
+        {
+          "word": "que",
+          "startTimeMs": 210200,
+          "endTimeMs": 210800
+        },
+        {
+          "word": "se",
+          "startTimeMs": 210800,
+          "endTimeMs": 211200
+        },
+        {
+          "word": "joda",
+          "startTimeMs": 211200,
+          "endTimeMs": 212030
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 212030,
+      "endTimeMs": 214270,
+      "segmentIndex": 60,
+      "text": "Baby, tú tas grandota",
+      "words": [
+        {
+          "word": "Baby,",
+          "startTimeMs": 212030,
+          "endTimeMs": 212500
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 212500,
+          "endTimeMs": 213000
+        },
+        {
+          "word": "tas",
+          "startTimeMs": 213000,
+          "endTimeMs": 213500
+        },
+        {
+          "word": "grandota",
+          "startTimeMs": 213500,
+          "endTimeMs": 214270
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 214270,
+      "endTimeMs": 217750,
+      "segmentIndex": 61,
+      "text": "Pero hoy ando en nota, nota",
+      "words": [
+        {
+          "word": "Pero",
+          "startTimeMs": 214270,
+          "endTimeMs": 214800
+        },
+        {
+          "word": "hoy",
+          "startTimeMs": 214800,
+          "endTimeMs": 215300
+        },
+        {
+          "word": "ando",
+          "startTimeMs": 215300,
+          "endTimeMs": 215800
+        },
+        {
+          "word": "en",
+          "startTimeMs": 215800,
+          "endTimeMs": 216300
+        },
+        {
+          "word": "nota,",
+          "startTimeMs": 216300,
+          "endTimeMs": 216800
+        },
+        {
+          "word": "nota",
+          "startTimeMs": 216800,
+          "endTimeMs": 217750
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 217750,
+      "endTimeMs": 219220,
+      "segmentIndex": 62,
+      "text": "Ven y choca",
+      "words": [
+        {
+          "word": "Ven",
+          "startTimeMs": 217750,
+          "endTimeMs": 218200
+        },
+        {
+          "word": "y",
+          "startTimeMs": 218200,
+          "endTimeMs": 218600
+        },
+        {
+          "word": "choca",
+          "startTimeMs": 218600,
+          "endTimeMs": 219220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 219220,
+      "endTimeMs": 222520,
+      "segmentIndex": 63,
+      "text": "Conmigo que se joda (eh)",
+      "words": [
+        {
+          "word": "Conmigo",
+          "startTimeMs": 219220,
+          "endTimeMs": 220000
+        },
+        {
+          "word": "que",
+          "startTimeMs": 220000,
+          "endTimeMs": 220500
+        },
+        {
+          "word": "se",
+          "startTimeMs": 220500,
+          "endTimeMs": 221000
+        },
+        {
+          "word": "joda",
+          "startTimeMs": 221000,
+          "endTimeMs": 222000
+        },
+        {
+          "word": "(eh)",
+          "startTimeMs": 222000,
+          "endTimeMs": 222520
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 222520,
+      "endTimeMs": 224580,
+      "segmentIndex": 64,
+      "text": "Que se joda (ey)",
+      "words": [
+        {
+          "word": "Que",
+          "startTimeMs": 222520,
+          "endTimeMs": 223000
+        },
+        {
+          "word": "se",
+          "startTimeMs": 223000,
+          "endTimeMs": 223500
+        },
+        {
+          "word": "joda",
+          "startTimeMs": 223500,
+          "endTimeMs": 224000
+        },
+        {
+          "word": "(ey)",
+          "startTimeMs": 224000,
+          "endTimeMs": 224580
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 224580,
+      "endTimeMs": 227190,
+      "segmentIndex": 65,
+      "text": "Mami, tú quieres perreo (tú quieres perreo)",
+      "words": [
+        {
+          "word": "Mami,",
+          "startTimeMs": 224580,
+          "endTimeMs": 225000
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 225000,
+          "endTimeMs": 225300
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 225300,
+          "endTimeMs": 225800
+        },
+        {
+          "word": "perreo",
+          "startTimeMs": 225800,
+          "endTimeMs": 226300
+        },
+        {
+          "word": "(tú",
+          "startTimeMs": 226300,
+          "endTimeMs": 226500
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 226500,
+          "endTimeMs": 226800
+        },
+        {
+          "word": "perreo)",
+          "startTimeMs": 226800,
+          "endTimeMs": 227190
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 227190,
+      "endTimeMs": 229400,
+      "segmentIndex": 66,
+      "text": "Tú quieres perreo (tú quieres perreo)",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 227190,
+          "endTimeMs": 227500
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 227500,
+          "endTimeMs": 227900
+        },
+        {
+          "word": "perreo",
+          "startTimeMs": 227900,
+          "endTimeMs": 228500
+        },
+        {
+          "word": "(tú",
+          "startTimeMs": 228500,
+          "endTimeMs": 228700
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 228700,
+          "endTimeMs": 229000
+        },
+        {
+          "word": "perreo)",
+          "startTimeMs": 229000,
+          "endTimeMs": 229400
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 229400,
+      "endTimeMs": 231930,
+      "segmentIndex": 67,
+      "text": "Tú quieres bellaqueo (tú quieres bellaqueo)",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 229400,
+          "endTimeMs": 229700
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 229700,
+          "endTimeMs": 230200
+        },
+        {
+          "word": "bellaqueo",
+          "startTimeMs": 230200,
+          "endTimeMs": 231000
+        },
+        {
+          "word": "(tú",
+          "startTimeMs": 231000,
+          "endTimeMs": 231300
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 231300,
+          "endTimeMs": 231600
+        },
+        {
+          "word": "bellaqueo)",
+          "startTimeMs": 231600,
+          "endTimeMs": 231930
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 231930,
+      "endTimeMs": 234160,
+      "segmentIndex": 68,
+      "text": "Tú quieres bellaqueo (tú quieres bellaqueo)",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 231930,
+          "endTimeMs": 232200
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 232200,
+          "endTimeMs": 232600
+        },
+        {
+          "word": "bellaqueo",
+          "startTimeMs": 232600,
+          "endTimeMs": 233300
+        },
+        {
+          "word": "(tú",
+          "startTimeMs": 233300,
+          "endTimeMs": 233600
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 233600,
+          "endTimeMs": 233900
+        },
+        {
+          "word": "bellaqueo)",
+          "startTimeMs": 233900,
+          "endTimeMs": 234160
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 234160,
+      "endTimeMs": 236560,
+      "segmentIndex": 69,
+      "text": "Mami, tú quieres perreo (tú quieres perreo)",
+      "words": [
+        {
+          "word": "Mami,",
+          "startTimeMs": 234160,
+          "endTimeMs": 234600
+        },
+        {
+          "word": "tú",
+          "startTimeMs": 234600,
+          "endTimeMs": 234900
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 234900,
+          "endTimeMs": 235300
+        },
+        {
+          "word": "perreo",
+          "startTimeMs": 235300,
+          "endTimeMs": 235800
+        },
+        {
+          "word": "(tú",
+          "startTimeMs": 235800,
+          "endTimeMs": 236000
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 236000,
+          "endTimeMs": 236200
+        },
+        {
+          "word": "perreo)",
+          "startTimeMs": 236200,
+          "endTimeMs": 236560
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 236560,
+      "endTimeMs": 239190,
+      "segmentIndex": 70,
+      "text": "Tú quieres perreo (tú quieres perreo)",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 236560,
+          "endTimeMs": 236900
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 236900,
+          "endTimeMs": 237300
+        },
+        {
+          "word": "perreo",
+          "startTimeMs": 237300,
+          "endTimeMs": 238000
+        },
+        {
+          "word": "(tú",
+          "startTimeMs": 238000,
+          "endTimeMs": 238300
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 238300,
+          "endTimeMs": 238600
+        },
+        {
+          "word": "perreo)",
+          "startTimeMs": 238600,
+          "endTimeMs": 239190
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 239190,
+      "endTimeMs": 241220,
+      "segmentIndex": 71,
+      "text": "Tú quieres bellaqueo (tú quieres bellaqueo)",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 239190,
+          "endTimeMs": 239500
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 239500,
+          "endTimeMs": 239900
+        },
+        {
+          "word": "bellaqueo",
+          "startTimeMs": 239900,
+          "endTimeMs": 240500
+        },
+        {
+          "word": "(tú",
+          "startTimeMs": 240500,
+          "endTimeMs": 240800
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 240800,
+          "endTimeMs": 241000
+        },
+        {
+          "word": "bellaqueo)",
+          "startTimeMs": 241000,
+          "endTimeMs": 241220
+        }
+      ]
+    },
+    {
+      "type": "LYRIC",
+      "startTimeMs": 241220,
+      "endTimeMs": 244220,
+      "segmentIndex": 72,
+      "text": "Tú quieres bellaqueo (tú quieres bellaqueo)",
+      "words": [
+        {
+          "word": "Tú",
+          "startTimeMs": 241220,
+          "endTimeMs": 241600
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 241600,
+          "endTimeMs": 242000
+        },
+        {
+          "word": "bellaqueo",
+          "startTimeMs": 242000,
+          "endTimeMs": 242800
+        },
+        {
+          "word": "(tú",
+          "startTimeMs": 242800,
+          "endTimeMs": 243200
+        },
+        {
+          "word": "quieres",
+          "startTimeMs": 243200,
+          "endTimeMs": 243600
+        },
+        {
+          "word": "bellaqueo)",
+          "startTimeMs": 243600,
+          "endTimeMs": 244220
+        }
+      ]
+    },
+    {
+      "type": "INSTRUMENTAL",
+      "startTimeMs": 244220,
+      "endTimeMs": 248000,
+      "segmentIndex": 73,
+      "cueText": "Outro"
+    }
+  ]
+}
