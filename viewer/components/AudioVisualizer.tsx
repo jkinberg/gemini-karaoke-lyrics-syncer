@@ -3,38 +3,43 @@ import React, { useEffect, useRef } from 'react';
 interface AudioVisualizerProps {
   analyserNode: AnalyserNode | null;
   isPlaying: boolean;
-  width?: number;
-  height?: number;
 }
 
 export function AudioVisualizer({
   analyserNode,
   isPlaying,
-  width = 400,
-  height = 200,
 }: AudioVisualizerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameRef = useRef<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas || !analyserNode) return;
+    const container = containerRef.current;
+    if (!canvas || !container || !analyserNode) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+
+    // Set canvas size to match container
+    const updateCanvasSize = () => {
+      const rect = container.getBoundingClientRect();
+      canvas.width = rect.width * window.devicePixelRatio;
+      canvas.height = rect.height * window.devicePixelRatio;
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    };
+    updateCanvasSize();
 
     const bufferLength = analyserNode.frequencyBinCount;
     const dataArray = new Uint8Array(bufferLength);
 
     // Purple gradient colors to match vocab highlight theme
-    const gradientStart = 'rgba(168, 85, 247, 0.8)'; // purple-500
-    const gradientEnd = 'rgba(139, 92, 246, 0.6)';   // violet-500
+    const purpleLight = 'rgba(192, 132, 252, 0.9)'; // purple-400
+    const purpleDark = 'rgba(139, 92, 246, 0.6)';   // violet-500
 
     const draw = () => {
       if (!isPlaying) {
-        // Fade out when paused
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         return;
       }
 
@@ -42,80 +47,97 @@ export function AudioVisualizer({
 
       analyserNode.getByteFrequencyData(dataArray);
 
-      // Clear canvas with transparency
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const rect = container.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
 
-      // Calculate bar dimensions
-      const barCount = 32; // Number of bars to display
-      const barWidth = canvas.width / barCount - 2;
-      const barSpacing = 2;
+      // Clear canvas
+      ctx.clearRect(0, 0, width, height);
 
-      // Sample frequency data to reduce to barCount bars
-      const step = Math.floor(bufferLength / barCount);
+      // Create a smooth waveform visualization that spans full width
+      const sliceWidth = width / bufferLength;
 
-      for (let i = 0; i < barCount; i++) {
-        // Average the frequency data for this bar
-        let sum = 0;
-        for (let j = 0; j < step; j++) {
-          sum += dataArray[i * step + j];
+      // Draw filled waveform from bottom
+      ctx.beginPath();
+      ctx.moveTo(0, height);
+
+      for (let i = 0; i < bufferLength; i++) {
+        const v = dataArray[i] / 255;
+        // Use exponential scaling for more dynamic response
+        const scaledV = Math.pow(v, 0.8);
+        const y = height - (scaledV * height * 0.7);
+        const x = i * sliceWidth;
+
+        if (i === 0) {
+          ctx.lineTo(x, y);
+        } else {
+          // Use quadratic curves for smoother waveform
+          const prevX = (i - 1) * sliceWidth;
+          const cpX = (prevX + x) / 2;
+          ctx.quadraticCurveTo(prevX, ctx.getLineDash.length > 0 ? y : y, cpX, y);
+          ctx.lineTo(x, y);
         }
-        const average = sum / step;
-
-        // Calculate bar height (scale to canvas height)
-        const barHeight = (average / 255) * canvas.height * 0.8;
-
-        // Create gradient for each bar
-        const gradient = ctx.createLinearGradient(
-          0,
-          canvas.height - barHeight,
-          0,
-          canvas.height
-        );
-        gradient.addColorStop(0, gradientStart);
-        gradient.addColorStop(1, gradientEnd);
-
-        // Draw bar from bottom
-        const x = i * (barWidth + barSpacing);
-        const y = canvas.height - barHeight;
-
-        // Rounded rectangle for smoother look
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.roundRect(x, y, barWidth, barHeight, 3);
-        ctx.fill();
       }
+
+      ctx.lineTo(width, height);
+      ctx.closePath();
+
+      // Fill with gradient
+      const gradient = ctx.createLinearGradient(0, 0, 0, height);
+      gradient.addColorStop(0, purpleLight);
+      gradient.addColorStop(1, purpleDark);
+      ctx.fillStyle = gradient;
+      ctx.fill();
+
+      // Add a glowing top line
+      ctx.beginPath();
+      ctx.moveTo(0, height);
+
+      for (let i = 0; i < bufferLength; i++) {
+        const v = dataArray[i] / 255;
+        const scaledV = Math.pow(v, 0.8);
+        const y = height - (scaledV * height * 0.7);
+        const x = i * sliceWidth;
+
+        if (i === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
     };
 
     if (isPlaying) {
       draw();
     } else {
-      // Clear canvas when not playing
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
+
+    // Handle resize
+    const handleResize = () => {
+      updateCanvasSize();
+    };
+    window.addEventListener('resize', handleResize);
 
     return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
+      window.removeEventListener('resize', handleResize);
     };
   }, [analyserNode, isPlaying]);
 
-  // Update canvas dimensions when size changes
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (canvas) {
-      canvas.width = width;
-      canvas.height = height;
-    }
-  }, [width, height]);
-
   return (
-    <canvas
-      ref={canvasRef}
-      width={width}
-      height={height}
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ mixBlendMode: 'screen' }}
-    />
+    <div ref={containerRef} className="absolute inset-0 w-full h-full pointer-events-none">
+      <canvas
+        ref={canvasRef}
+        className="w-full h-full"
+        style={{ mixBlendMode: 'screen' }}
+      />
+    </div>
   );
 }

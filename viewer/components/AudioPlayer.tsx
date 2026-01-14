@@ -266,20 +266,19 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
         style={{ display: 'none' }}
       />
 
-      {/* Thumbnail image */}
+      {/* Thumbnail image with dark overlay */}
       <img
         src={thumbnailUrl}
         alt={title}
         className="absolute inset-0 w-full h-full object-cover"
       />
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Audio Visualizer overlay */}
       {isReady && !isMuted && (
         <AudioVisualizer
           analyserNode={analyserNode}
           isPlaying={isPlaying}
-          width={400}
-          height={200}
         />
       )}
 
