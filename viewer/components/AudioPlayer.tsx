@@ -36,6 +36,7 @@ const ChevronRightIcon = () => (
 
 interface AudioPlayerProps {
   audioUrl: string;
+  expectedDurationMs?: number;
   title: string;
   artist: string;
   thumbnailUrl: string;
@@ -53,6 +54,7 @@ interface AudioPlayerProps {
 
 export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   audioUrl,
+  expectedDurationMs,
   title,
   artist,
   thumbnailUrl,
@@ -86,6 +88,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
     seekTo,
   } = useAudioPlayer({
     audioUrl,
+    expectedDurationMs,
     onTimeUpdate,
     onEnded,
     initialMuted: persistedMuted,
@@ -256,12 +259,10 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
       onClick={handlePlayerTap}
       {...swipeHandlers}
     >
-      {/* Hidden audio element */}
+      {/* Hidden audio element - src and crossOrigin managed by useAudioPlayer hook */}
       <audio
         ref={audioRef}
-        preload="auto"
         playsInline
-        crossOrigin="anonymous"
         style={{ display: 'none' }}
       />
 

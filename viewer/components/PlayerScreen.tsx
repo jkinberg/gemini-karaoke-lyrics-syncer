@@ -81,9 +81,9 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
   });
 
   return (
-    <div className="h-full flex flex-col bg-black">
+    <div className="h-full flex flex-col bg-black overflow-hidden">
       {/* Top Bar */}
-      <div className="flex-shrink-0 px-4 pt-12 pb-2 flex items-center justify-between safe-area-top">
+      <div className="flex-shrink-0 px-4 pt-2 pb-2 flex items-center justify-between safe-area-top">
         <div className="text-white">
           <MusicNoteIcon />
         </div>
@@ -114,6 +114,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
           isMobile && track.audioUrl ? (
             <AudioPlayer
               audioUrl={track.audioUrl}
+              expectedDurationMs={track.metadata.durationMs}
               title={track.metadata.title}
               artist={track.metadata.artist}
               thumbnailUrl={track.youtube.thumbnailUrl}
@@ -172,7 +173,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
       <button
         onClick={onOpenVocab}
         {...vocabBarSwipe}
-        className="flex-shrink-0 bg-zinc-900/95 backdrop-blur border-t border-zinc-800 px-4 py-3 pb-8 safe-area-bottom"
+        className="flex-shrink-0 bg-zinc-900/95 backdrop-blur border-t border-zinc-800 px-4 py-3 pb-16 safe-area-bottom"
       >
         <div className="relative flex items-center justify-between mb-2">
           <div className="flex items-center gap-2 text-zinc-400">

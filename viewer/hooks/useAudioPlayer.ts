@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 
 interface UseAudioPlayerOptions {
   audioUrl: string;
+  expectedDurationMs?: number; // Use playlist duration instead of audio metadata
   onTimeUpdate?: (timeMs: number) => void;
   onStateChange?: (isPlaying: boolean) => void;
   onEnded?: () => void;
@@ -28,6 +29,7 @@ interface UseAudioPlayerReturn {
 
 export function useAudioPlayer({
   audioUrl,
+  expectedDurationMs,
   onTimeUpdate,
   onStateChange,
   onEnded,
@@ -98,16 +100,21 @@ export function useAudioPlayer({
     if (!audio) return;
 
     // Configure audio element
+    // Note: crossOrigin='anonymous' is needed for Web Audio API visualizer,
+    // but requires CORS headers from server. We'll try with it first,
+    // and fall back to no crossOrigin if it fails.
+    audio.crossOrigin = 'anonymous';
     audio.src = audioUrl;
     audio.muted = mutedPreferenceRef.current;
     audio.preload = 'auto';
-    audio.crossOrigin = 'anonymous'; // Required for Web Audio API with CORS
 
     const handleCanPlay = () => {
       setIsReady(true);
-      setDuration(audio.duration * 1000);
+      // Use expected duration from playlist if provided (audio metadata can be wrong)
+      const durationMs = expectedDurationMs || (audio.duration * 1000);
+      setDuration(durationMs);
 
-      // Setup Web Audio API on first interaction
+      // Setup Web Audio API on first interaction (only works with CORS)
       if (!audioContextRef.current) {
         setupAudioContext();
       }
@@ -117,6 +124,30 @@ export function useAudioPlayer({
         console.log('Autoplay blocked:', e);
         // Autoplay was blocked, user will need to tap to play
       });
+    };
+
+    // If CORS fails, retry without crossOrigin (visualizer won't work)
+    let corsRetried = false;
+    const handleError = () => {
+      const code = audio.error?.code || 0;
+
+      // If we haven't retried and it might be a CORS issue, try without crossOrigin
+      if (!corsRetried && (code === 4 || code === 2)) {
+        corsRetried = true;
+        console.log('Audio load failed, retrying without CORS (visualizer disabled)');
+        audio.crossOrigin = null as unknown as string;
+        audio.src = audioUrl;
+        audio.load();
+        return;
+      }
+
+      const errorMessages: Record<number, string> = {
+        1: 'Audio loading aborted',
+        2: 'Network error while loading audio',
+        3: 'Audio decoding failed',
+        4: 'Audio format not supported',
+      };
+      setError(errorMessages[code] || 'Audio unavailable');
     };
 
     const handlePlay = () => {
@@ -136,19 +167,10 @@ export function useAudioPlayer({
       onEnded?.();
     };
 
-    const handleError = () => {
-      const errorMessages: Record<number, string> = {
-        1: 'Audio loading aborted',
-        2: 'Network error while loading audio',
-        3: 'Audio decoding failed',
-        4: 'Audio format not supported',
-      };
-      const code = audio.error?.code || 0;
-      setError(errorMessages[code] || 'Audio unavailable');
-    };
-
     const handleLoadedMetadata = () => {
-      setDuration(audio.duration * 1000);
+      // Use expected duration from playlist if provided (audio metadata can be wrong)
+      const durationMs = expectedDurationMs || (audio.duration * 1000);
+      setDuration(durationMs);
     };
 
     audio.addEventListener('canplay', handleCanPlay);
@@ -213,6 +235,10 @@ export function useAudioPlayer({
 
   const pause = useCallback(() => {
     audioRef.current?.pause();
+    // Also suspend AudioContext to stop any lingering audio processing
+    if (audioContextRef.current?.state === 'running') {
+      audioContextRef.current.suspend();
+    }
   }, []);
 
   const togglePlay = useCallback(() => {

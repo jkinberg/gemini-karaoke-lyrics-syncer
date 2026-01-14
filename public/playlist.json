@@ -26,7 +26,7 @@
         "url": "https://www.youtube.com/watch?v=Cr8K88UcO0s",
         "thumbnailUrl": "https://img.youtube.com/vi/Cr8K88UcO0s/maxresdefault.jpg"
       },
-      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/bad_bunny_titi_me_pregunto.m4a",
+      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/bad-bunny-titi-me-pregunto.m4a",
       "dataFiles": {
         "spanish": "samples/05-bad-bunny-titi-me-pregunto/spanish_karaoke_data.json",
         "english": "samples/05-bad-bunny-titi-me-pregunto/english_karaoke_data.json",
@@ -50,7 +50,7 @@
         "url": "https://www.youtube.com/watch?v=KU5V5WZVcVE",
         "thumbnailUrl": "https://img.youtube.com/vi/KU5V5WZVcVE/maxresdefault.jpg"
       },
-      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/BAD%20BUNNY%20-%20NUEVAYoL%20%28Video%20Oficial%29%20_%20DeB%C3%8D%20TiRAR%20M%C3%A1S%20FOToS.mp3",
+      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/bad-bunny-nuevayol.mp3",
       "dataFiles": {
         "spanish": "samples/06-bad-bunny-nuevayol/spanish_karaoke_data.json",
         "english": "samples/06-bad-bunny-nuevayol/english_karaoke_data.json",
@@ -74,7 +74,7 @@
         "url": "https://www.youtube.com/watch?v=wAjHQXrIj9o",
         "thumbnailUrl": "https://img.youtube.com/vi/wAjHQXrIj9o/maxresdefault.jpg"
       },
-      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/YTDown.com_YouTube_Bad-Bunny-ft-Bomba-Estereo-Ojitos-Lindos_Media_wAjHQXrIj9o_007_48k.m4a",
+      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/bad-bunny-ojitos-lindos.m4a",
       "dataFiles": {
         "spanish": "samples/07-bad-bunny-ojitos-lindo/spanish_karaoke_data.json",
         "english": "samples/07-bad-bunny-ojitos-lindo/english_karaoke_data.json",
@@ -98,7 +98,7 @@
         "url": "https://www.youtube.com/watch?v=p38WgakuYDo",
         "thumbnailUrl": "https://img.youtube.com/vi/p38WgakuYDo/maxresdefault.jpg"
       },
-      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/YTDown.com_YouTube_Bad-Bunny-Moscow-Mule-Video-Oficial-Un-V_Media_p38WgakuYDo_007_48k.m4a",
+      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/bad-bunny-moscow-mule.m4a",
       "dataFiles": {
         "spanish": "samples/11-bad-bunny-moscow-mule/spanish_karaoke_data.json",
         "english": "samples/11-bad-bunny-moscow-mule/english_karaoke_data.json",
@@ -122,7 +122,7 @@
         "url": "https://www.youtube.com/watch?v=OSUxrSe5GbI",
         "thumbnailUrl": "https://img.youtube.com/vi/OSUxrSe5GbI/maxresdefault.jpg"
       },
-      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/YTDown.com_YouTube_BAD-BUNNY-x-DRAKE-MIA-Video-Oficial_Media_OSUxrSe5GbI_007_48k.m4a",
+      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/bad-bunny-mia.m4a",
       "dataFiles": {
         "spanish": "samples/09-bad-bunny-mia/spanish_karaoke_data.json",
         "english": "samples/09-bad-bunny-mia/english_karaoke_data.json",
@@ -146,7 +146,7 @@
         "url": "https://www.youtube.com/watch?v=TmKh7lAwnBI",
         "thumbnailUrl": "https://img.youtube.com/vi/TmKh7lAwnBI/maxresdefault.jpg"
       },
-      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/YTDown.com_YouTube_BAD-BUNNY-x-JHAY-CORTEZ-DAKITI-Video-Ofi_Media_TmKh7lAwnBI_007_48k.m4a",
+      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/bad-bunny-dakiti.m4a",
       "dataFiles": {
         "spanish": "samples/08-bad-bunny-dakiti/spanish_karaoke_data.json",
         "english": "samples/08-bad-bunny-dakiti/english_karaoke_data.json",
