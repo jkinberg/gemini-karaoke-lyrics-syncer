@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Karaoke - Learn Spanish Through Music</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Custom colors from spec
+            highlight: '#FBBF24',      // yellow-400 for Spanish active
+            highlightPast: '#52525B',  // zinc-600 for past words
+            vocabInactive: '#581C87',  // purple-900
+            vocabActive: '#C084FC',    // purple-400
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #000000;
+      overscroll-behavior: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    /* Hide scrollbars but keep scrolling */
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    /* Vocab glow effect */
+    .vocab-glow {
+      text-shadow: 0 0 20px rgba(192, 132, 252, 0.8), 0 0 40px rgba(192, 132, 252, 0.5);
+    }
+    /* Safe area for iOS */
+    .safe-area-top { padding-top: env(safe-area-inset-top); }
+    .safe-area-bottom { padding-bottom: env(safe-area-inset-bottom); }
+    /* Animations */
+    @keyframes fade-in {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in { animation: fade-in 0.2s ease-out; }
+    @keyframes slide-up {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-up { animation: slide-up 0.3s ease-out; }
+    /* Touch feedback */
+    .touch-active { transform: scale(0.98); transition: transform 0.1s; }
+    /* Vocab toast animation - slides up, stays visible, then fades out */
+    @keyframes toastFadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes toastFadeOut {
+      from { opacity: 1; transform: translateY(0); }
+      to { opacity: 0; transform: translateY(-10px); }
+    }
+    .vocab-toast {
+      animation: toastFadeIn 0.3s ease-out forwards, toastFadeOut 0.4s ease-in 2.5s forwards;
+      cursor: pointer;
+    }
+    .vocab-toast:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <div id="root"></div>
+  <script type="module" src="/viewer/index.tsx"></script>
+</body>
+</html>

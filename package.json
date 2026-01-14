@@ -9,6 +9,7 @@
     "build": "vite build && tsc server.ts --outDir dist-server --esModuleInterop --module nodenext --moduleResolution nodenext --target ES2022 --skipLibCheck",
     "preview": "vite preview",
     "start": "node dist-server/server.js",
+    "generate:playlist": "tsx scripts/generate-playlist.ts",
     "deploy:preview": "gcloud run deploy karaoke-syncer-preview --source . --region us-west1 --allow-unauthenticated --set-secrets GEMINI_API_KEY=gemini-api-key:latest --memory 1Gi --timeout 300",
     "deploy:preview:delete": "gcloud run services delete karaoke-syncer-preview --region us-west1 --quiet"
   },

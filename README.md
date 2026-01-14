@@ -2,11 +2,26 @@
 
 Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini model to automatically generate perfectly synchronized, word-level karaoke lyric files from an audio track and raw text lyrics. It supports both Spanish and English, provides AI-powered translation, and exports the data in a clean, developer-friendly JSON format. The app also features an interactive preview player and a unique **language-learning module** that acts as a cultural linguist, extracting **slang, idioms, and culturally significant vocabulary** from the song's lyrics.
 
+**NEW:** Also includes a **mobile karaoke viewer app** for learning Spanish through music with word-by-word synchronized lyrics, vocabulary tracking, and progress gamification.
+
 ## 🚀 Live Demo
 
-You can try the live application here: **[https://karaoke-syncer-362554121203.us-west1.run.app/](https://karaoke-syncer-362554121203.us-west1.run.app/)**
+- **Viewer App:** [https://karaoke-syncer-362554121203.us-west1.run.app/](https://karaoke-syncer-362554121203.us-west1.run.app/) - Mobile karaoke player
+- **Syncer Tool:** [https://karaoke-syncer-362554121203.us-west1.run.app/syncer](https://karaoke-syncer-362554121203.us-west1.run.app/syncer) - Content creation tool
 
 ## ✨ Features
+
+### Karaoke Viewer App (NEW)
+
+- **YouTube Integration**: Embedded video player with autoplay and tap-to-unmute for mobile
+- **Word-by-Word Lyrics**: Real-time synchronized Spanish lyrics with English translation below
+- **Vocabulary Learning**: Purple-highlighted vocab words unlock as you listen, with toast notifications
+- **Expandable Vocab Panel**: Swipe up to see definitions, examples, and seek to any word in the song
+- **Progress Tracking**: Session-based stats including streak, vocab count, songs completed, and listening time
+- **Swipe Navigation**: Swipe left/right on video to change tracks, up/down to open/close vocab panel
+- **End-of-Song Actions**: Play Again or Play Next buttons when video ends
+
+### Syncer Tool
 
 - **LRC-Based Synchronization**: Upload or paste LRC files (with `[mm:ss.xx]` timestamps) for fast, highly accurate word-level synchronization. The app verifies and corrects LRC timestamps against the actual audio, then uses the corrected timing as anchors.
 - **LRC Timestamp Correction**: A dedicated AI pass verifies each LRC line's timing against the audio, correcting drift that accumulates when timestamps are off. Also detects non-lyric sections (intros, interludes, skits, outros) common in YouTube music videos.
@@ -64,20 +79,29 @@ The application uses LRC files (with line-level timestamps) as the foundation fo
 
 ```
 .
-├── index.html            # Main HTML entry point
-├── index.tsx             # Renders the React application
-├── App.tsx               # Main application component with all UI and state logic
+├── index.html            # Syncer HTML entry point
+├── index.tsx             # Syncer React entry
+├── App.tsx               # Syncer main component
+├── viewer.html           # Viewer HTML entry point
+├── viewer/               # Karaoke viewer app
+│   ├── index.tsx         # Viewer React entry
+│   ├── ViewerApp.tsx     # Viewer main component
+│   ├── types.ts          # Viewer type definitions
+│   ├── components/       # UI components (PlayerScreen, VocabPanel, etc.)
+│   └── hooks/            # React hooks (useYouTubePlayer, useKaraokeSync, etc.)
+├── public/               # Static assets
+│   └── playlist.json     # Track metadata for viewer
 ├── server.ts             # Express server with Gemini API proxy
 ├── services/
 │   ├── geminiService.ts  # API calls, LRC generation, auto-refinement logic
 │   ├── lrcParser.ts      # LRC file parsing and format detection
 │   └── validationService.ts  # Quality validation, problem detection
-├── types.ts              # TypeScript type definitions
+├── types.ts              # Syncer TypeScript type definitions
 ├── test-data.ts          # Contains pre-validated data for the diagnostic tool
-├── vite.config.ts        # Vite configuration with dev proxy
+├── vite.config.ts        # Vite configuration with multi-entry points
 ├── Dockerfile            # Production container build
 ├── .env.example          # Environment variable template
-├── samples/              # Sample LRC files and generated karaoke data
+├── samples/              # Sample track data and generated karaoke files
 └── docs/                 # Technical specifications
 ```
 

@@ -1,5 +1,29 @@
 # TODO
 
+## Karaoke Viewer App - COMPLETED
+
+**Goal:** Build a mobile-first karaoke viewer for learning Spanish through Bad Bunny songs.
+
+**Features implemented:**
+- YouTube video player with autoplay (muted) and tap-to-unmute
+- Word-by-word synchronized lyrics (Spanish + English translation)
+- Vocabulary word highlighting with purple glow effect
+- Toast notifications when vocab words are unlocked (+1 vocab)
+- Collapsible vocab panel with progress tracking
+- Stats panel with streak, vocab count, songs completed, listening time
+- Swipe gestures for track navigation (horizontal) and vocab panel (vertical)
+- Session-level progress persistence (resets on refresh)
+- Playlist navigation with pagination dots
+- Video end screen with Play Again/Play Next buttons
+- Slide animations for vocab panel open/close
+
+**Architecture:**
+- Multi-entry point Vite config (viewer at `/`, syncer at `/syncer`)
+- React hooks for YouTube IFrame API, karaoke sync, progress tracking
+- Static playlist.json + track data in public/ folder
+
+---
+
 ## Auto-Fix Performance Optimization - COMPLETED
 
 **Problem:** Auto-fix was very slow when fixing many segments (69 segments = ~25-30 min per iteration).
@@ -26,8 +50,35 @@
 
 ---
 
+## Known Issues
+
+### YouTube Embed Limitations on Mobile
+- YouTube IFrame embeds have restrictions on mobile devices (autoplay blocked, controls forced)
+- Need alternate solution to demo on mobile devices
+- Options to explore:
+  - [ ] Native app wrapper (Capacitor/React Native)
+  - [ ] Server-side audio extraction + HTML5 audio player
+  - [ ] YouTube Data API + separate audio source
+  - [ ] PWA with service worker for better mobile experience
+
+---
+
 ## Future Ideas
 
+### Viewer App - High Priority
+- [ ] Integrate Google Analytics tracking
+- [ ] Integrate feedback survey link
+- [ ] Display language selector with other options (Italian, French, Korean) shown as "Coming Soon"
+
+### Viewer App - Future
+- [ ] Persistent progress (localStorage or backend)
+- [ ] User accounts and cross-device sync
+- [ ] Spaced repetition for vocabulary review
+- [ ] Pronunciation practice with speech recognition
+- [ ] More playlists / genres beyond Bad Bunny
+- [ ] Offline mode with cached video/data
+
+### Syncer Tool
 - [ ] Parallelize Spanish batch API calls (with rate limiting consideration)
 - [ ] Increase batch size for shorter songs where truncation is less likely
 - [ ] Add progress estimation based on batch count

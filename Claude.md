@@ -1,6 +1,6 @@
 # Karaoke Syncer AI
 
-AI-powered web app that generates word-level synchronized karaoke lyric files from audio tracks using Google's Gemini API.
+AI-powered web app that generates word-level synchronized karaoke lyric files from audio tracks using Google's Gemini API. Also includes a **mobile karaoke viewer app** for language learning through music.
 
 ## Tech Stack
 
@@ -15,16 +15,24 @@ AI-powered web app that generates word-level synchronized karaoke lyric files fr
 ## Project Structure
 
 ```
-├── App.tsx              # Main React component (all UI components)
-├── server.ts            # Express server with /api/gemini proxy
+├── App.tsx              # Syncer tool - main React component
+├── server.ts            # Express server with /api/gemini proxy + static file serving
 ├── services/
 │   ├── geminiService.ts # Client-side API calls, auto-refinement logic
 │   ├── lrcParser.ts     # LRC file parsing and format detection
 │   └── validationService.ts # Quality validation, problem detection
-├── types.ts             # TypeScript type definitions
-├── index.tsx            # React entry point
-├── index.html           # HTML entry with Tailwind CDN
-├── vite.config.ts       # Vite config with dev proxy
+├── types.ts             # TypeScript type definitions (syncer)
+├── index.tsx            # Syncer entry point
+├── index.html           # Syncer HTML entry
+├── viewer/              # Mobile karaoke viewer app
+│   ├── ViewerApp.tsx    # Main viewer component
+│   ├── index.tsx        # Viewer entry point
+│   ├── types.ts         # Viewer type definitions
+│   ├── components/      # UI components (PlayerScreen, VocabPanel, etc.)
+│   └── hooks/           # React hooks (useYouTubePlayer, useKaraokeSync, etc.)
+├── viewer.html          # Viewer HTML entry
+├── public/              # Static assets (playlist.json, track data)
+├── vite.config.ts       # Vite config with multi-entry points
 ├── Dockerfile           # Production container build
 ├── .env.example         # Environment template
 └── docs/                # Technical specifications
@@ -82,18 +90,50 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 8. Optional: **Auto-Fix Issues** - refines problem segments
 9. Export as JSON or zip archive
 
+## Routes
+
+- `/` - Karaoke viewer app (mobile-first)
+- `/syncer` - Karaoke syncer tool (content creation)
+
 ## Architecture Notes
 
+- **Multi-entry point** - Vite builds two separate apps (viewer + syncer) from different entry points
 - **Server-side API proxy** - Express server handles all Gemini API calls, keeping the API key secure (never in browser)
-- Single-page app with all components in App.tsx
+- Single-page app with all components in App.tsx (syncer) or ViewerApp.tsx (viewer)
 - State management via React hooks (no external state library)
 - geminiService.ts calls `/api/gemini` proxy endpoint with exponential backoff retry
 - Real-time audio spectrum visualizer using Web Audio API
 - Vocabulary extraction identifies Spanish slang/idioms with audio timecodes
 - In development, Vite proxies `/api` requests to Express server on port 8080
 
+## Karaoke Viewer App
+
+A mobile-first viewer for learning Spanish through karaoke music videos.
+
+**Features:**
+- YouTube video player with autoplay (muted) and tap-to-unmute
+- Word-by-word synchronized lyrics (Spanish + English translation)
+- Vocabulary word highlighting with purple glow effect
+- Toast notifications when vocab words are unlocked
+- Collapsible vocab panel with progress tracking
+- Stats panel with streak tracking and achievements
+- Swipe gestures for track navigation
+- Session-level progress persistence
+- Video end screen with Play Again/Play Next buttons
+
+**Key Files:**
+- `viewer/ViewerApp.tsx` - Main app component, state management
+- `viewer/hooks/useYouTubePlayer.ts` - YouTube IFrame API integration
+- `viewer/hooks/useKaraokeSync.ts` - Word-level timing synchronization
+- `viewer/hooks/useProgress.ts` - Session progress tracking
+- `viewer/components/PlayerScreen.tsx` - Video player and lyrics display
+- `viewer/components/VocabPanel.tsx` - Vocabulary list with seek-to-word
+- `public/playlist.json` - Track metadata and file paths
+
 ## Documentation
 
+- `docs/karaoke-app-spec.md` - Viewer app feature requirements
+- `docs/karaoke-viewer-implementation-plan.md` - Viewer implementation plan
 - `docs/tech-spec-lrc-based-synchronization.md` - LRC file support for improved timing accuracy
 - `docs/tech-spec-security-and-deployment.md` - API key security fix and Cloud Run CI/CD setup
 - `docs/tech-spec-automated-quality-validation.md` - Automated QA for generated karaoke data:

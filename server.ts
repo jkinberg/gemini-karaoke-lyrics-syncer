@@ -13,7 +13,13 @@ const PORT = process.env.PORT || 8080;
 // Serve static files from the Vite build
 // Use process.cwd() to find dist - works in both dev (tsx) and prod (node dist-server/server.js)
 const distPath = path.join(process.cwd(), 'dist');
-app.use(express.static(distPath));
+const samplesPath = path.join(process.cwd(), 'samples');
+
+// Serve static files but don't auto-serve index.html (we handle routing explicitly)
+app.use(express.static(distPath, { index: false }));
+
+// Serve samples folder for karaoke data files
+app.use('/samples', express.static(samplesPath));
 
 // Parse JSON bodies - increase limit for audio files (base64 encoded)
 app.use(express.json({ limit: '100mb' }));
@@ -76,9 +82,17 @@ app.post('/api/gemini', async (req: Request, res: Response) => {
   }
 });
 
-// SPA fallback - serve index.html for all other routes
-app.get('*', (_req: Request, res: Response) => {
+// Syncer app routes - serve main index.html
+app.get('/syncer', (_req: Request, res: Response) => {
   res.sendFile(path.join(distPath, 'index.html'));
+});
+app.get('/syncer/*', (_req: Request, res: Response) => {
+  res.sendFile(path.join(distPath, 'index.html'));
+});
+
+// Viewer app - serve viewer.html for all other routes (root becomes viewer)
+app.get('*', (_req: Request, res: Response) => {
+  res.sendFile(path.join(distPath, 'viewer.html'));
 });
 
 app.listen(PORT, () => {

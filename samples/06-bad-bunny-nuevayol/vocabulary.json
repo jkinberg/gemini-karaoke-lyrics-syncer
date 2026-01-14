@@ -16,7 +16,7 @@
     },
     "startTimeMs": 71200,
     "endTimeMs": 73200,
-    "segmentIndex": 13
+    "segmentIndex": 12
   },
   {
     "term": {
@@ -35,7 +35,7 @@
     },
     "startTimeMs": 73200,
     "endTimeMs": 75200,
-    "segmentIndex": 14
+    "segmentIndex": 13
   },
   {
     "term": {
@@ -54,7 +54,7 @@
     },
     "startTimeMs": 75200,
     "endTimeMs": 77200,
-    "segmentIndex": 15
+    "segmentIndex": 14
   },
   {
     "term": {
@@ -73,7 +73,7 @@
     },
     "startTimeMs": 79500,
     "endTimeMs": 82000,
-    "segmentIndex": 17
+    "segmentIndex": 16
   },
   {
     "term": {
@@ -92,7 +92,7 @@
     },
     "startTimeMs": 93200,
     "endTimeMs": 95500,
-    "segmentIndex": 21
+    "segmentIndex": 20
   },
   {
     "term": {
@@ -111,6 +111,6 @@
     },
     "startTimeMs": 186500,
     "endTimeMs": 189000,
-    "segmentIndex": 49
+    "segmentIndex": 48
   }
 ]

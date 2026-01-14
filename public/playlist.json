@@ -1,0 +1,151 @@
+{
+  "playlist": {
+    "id": "bad-bunny-learning",
+    "title": "Bad Bunny Spanish Learning Playlist",
+    "description": "Learn Spanish through Bad Bunny's music with synchronized lyrics and cultural vocabulary",
+    "primaryLanguage": "es",
+    "translationLanguage": "en",
+    "trackCount": 6,
+    "createdAt": "2026-01-12T19:36:02.800Z"
+  },
+  "tracks": [
+    {
+      "id": "05-bad-bunny-titi-me-pregunto",
+      "order": 1,
+      "metadata": {
+        "title": "Titi Me Preguntó",
+        "artist": "Bad Bunny",
+        "album": "Un Verano Sin Ti",
+        "durationMs": 253000,
+        "genre": "Reggaeton",
+        "difficulty": 7,
+        "vocabularyCount": 7
+      },
+      "youtube": {
+        "videoId": "Cr8K88UcO0s",
+        "url": "https://www.youtube.com/watch?v=Cr8K88UcO0s",
+        "thumbnailUrl": "https://img.youtube.com/vi/Cr8K88UcO0s/maxresdefault.jpg"
+      },
+      "dataFiles": {
+        "spanish": "samples/05-bad-bunny-titi-me-pregunto/spanish_karaoke_data.json",
+        "english": "samples/05-bad-bunny-titi-me-pregunto/english_karaoke_data.json",
+        "vocabulary": "samples/05-bad-bunny-titi-me-pregunto/vocabulary.json"
+      }
+    },
+    {
+      "id": "06-bad-bunny-nuevayol",
+      "order": 2,
+      "metadata": {
+        "title": "NUEVAYoL",
+        "artist": "Bad Bunny",
+        "album": "DeBÍ TiRAR MáS FOToS",
+        "durationMs": 221000,
+        "genre": "Reggaeton",
+        "difficulty": 7,
+        "vocabularyCount": 6
+      },
+      "youtube": {
+        "videoId": "KU5V5WZVcVE",
+        "url": "https://www.youtube.com/watch?v=KU5V5WZVcVE",
+        "thumbnailUrl": "https://img.youtube.com/vi/KU5V5WZVcVE/maxresdefault.jpg"
+      },
+      "dataFiles": {
+        "spanish": "samples/06-bad-bunny-nuevayol/spanish_karaoke_data.json",
+        "english": "samples/06-bad-bunny-nuevayol/english_karaoke_data.json",
+        "vocabulary": "samples/06-bad-bunny-nuevayol/vocabulary.json"
+      }
+    },
+    {
+      "id": "07-bad-bunny-ojitos-lindo",
+      "order": 3,
+      "metadata": {
+        "title": "Ojitos Lindos",
+        "artist": "Bad Bunny, Bomba Estéreo",
+        "album": "Un Verano Sin Ti",
+        "durationMs": 270000,
+        "genre": "Reggaeton",
+        "difficulty": 5,
+        "vocabularyCount": 7
+      },
+      "youtube": {
+        "videoId": "wAjHQXrIj9o",
+        "url": "https://www.youtube.com/watch?v=wAjHQXrIj9o",
+        "thumbnailUrl": "https://img.youtube.com/vi/wAjHQXrIj9o/maxresdefault.jpg"
+      },
+      "dataFiles": {
+        "spanish": "samples/07-bad-bunny-ojitos-lindo/spanish_karaoke_data.json",
+        "english": "samples/07-bad-bunny-ojitos-lindo/english_karaoke_data.json",
+        "vocabulary": "samples/07-bad-bunny-ojitos-lindo/vocabulary.json"
+      }
+    },
+    {
+      "id": "11-bad-bunny-moscow-mule",
+      "order": 4,
+      "metadata": {
+        "title": "Moscow Mule",
+        "artist": "Bad Bunny",
+        "album": "Un Verano Sin Ti",
+        "durationMs": 248000,
+        "genre": "Reggaeton",
+        "difficulty": 6,
+        "vocabularyCount": 8
+      },
+      "youtube": {
+        "videoId": "p38WgakuYDo",
+        "url": "https://www.youtube.com/watch?v=p38WgakuYDo",
+        "thumbnailUrl": "https://img.youtube.com/vi/p38WgakuYDo/maxresdefault.jpg"
+      },
+      "dataFiles": {
+        "spanish": "samples/11-bad-bunny-moscow-mule/spanish_karaoke_data.json",
+        "english": "samples/11-bad-bunny-moscow-mule/english_karaoke_data.json",
+        "vocabulary": "samples/11-bad-bunny-moscow-mule/vocabulary.json"
+      }
+    },
+    {
+      "id": "09-bad-bunny-mia",
+      "order": 5,
+      "metadata": {
+        "title": "MIA (feat. Drake)",
+        "artist": "Bad Bunny",
+        "album": "X 100PRE",
+        "durationMs": 210350,
+        "genre": "Reggaeton",
+        "difficulty": 5,
+        "vocabularyCount": 7
+      },
+      "youtube": {
+        "videoId": "OSUxrSe5GbI",
+        "url": "https://www.youtube.com/watch?v=OSUxrSe5GbI",
+        "thumbnailUrl": "https://img.youtube.com/vi/OSUxrSe5GbI/maxresdefault.jpg"
+      },
+      "dataFiles": {
+        "spanish": "samples/09-bad-bunny-mia/spanish_karaoke_data.json",
+        "english": "samples/09-bad-bunny-mia/english_karaoke_data.json",
+        "vocabulary": "samples/09-bad-bunny-mia/vocabulary.json"
+      }
+    },
+    {
+      "id": "08-bad-bunny-dakiti",
+      "order": 6,
+      "metadata": {
+        "title": "DÁKITI",
+        "artist": "Bad Bunny",
+        "album": "EL ÚLTIMO TOUR DEL MUNDO",
+        "durationMs": 180000,
+        "genre": "Reggaeton",
+        "difficulty": 7,
+        "vocabularyCount": 7
+      },
+      "youtube": {
+        "videoId": "TmKh7lAwnBI",
+        "url": "https://www.youtube.com/watch?v=TmKh7lAwnBI",
+        "thumbnailUrl": "https://img.youtube.com/vi/TmKh7lAwnBI/maxresdefault.jpg"
+      },
+      "dataFiles": {
+        "spanish": "samples/08-bad-bunny-dakiti/spanish_karaoke_data.json",
+        "english": "samples/08-bad-bunny-dakiti/english_karaoke_data.json",
+        "vocabulary": "samples/08-bad-bunny-dakiti/vocabulary.json"
+      }
+    }
+  ]
+}

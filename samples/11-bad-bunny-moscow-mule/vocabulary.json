@@ -1,0 +1,154 @@
+[
+  {
+    "term": {
+      "spanish": "aborrecía",
+      "english": "fed up"
+    },
+    "definition": "In Puerto Rico and the Caribbean, 'aborrecido' (shortened here to 'aborrecía') doesn't mean 'hated' as in standard Spanish, but rather feeling bored, frustrated, or in a funk. It describes a specific mood of being tired of the current situation.",
+    "difficulty": 6,
+    "example": {
+      "spanish": "Quizá hoy está' aborrecía",
+      "english": "Maybe today you're fed up"
+    },
+    "highlight": {
+      "spanish": "aborrecía",
+      "english": "fed up"
+    },
+    "startTimeMs": 24220,
+    "endTimeMs": 27720,
+    "segmentIndex": 5
+  },
+  {
+    "term": {
+      "spanish": "bellaco",
+      "english": "horny"
+    },
+    "definition": "A ubiquitous term in reggaeton. While the dictionary defines it as 'cunning' or 'evil,' in urban slang it refers to being sexually aroused. Bad Bunny uses it to describe the effect of the alcohol.",
+    "difficulty": 4,
+    "example": {
+      "spanish": "Dos trago' y sabes que me pongo bellaco",
+      "english": "Two drinks and you know I get naughty"
+    },
+    "highlight": {
+      "spanish": "bellaco",
+      "english": "naughty"
+    },
+    "startTimeMs": 35180,
+    "endTimeMs": 39700,
+    "segmentIndex": 8
+  },
+  {
+    "term": {
+      "spanish": "envuelto'",
+      "english": "caught up"
+    },
+    "definition": "Literally 'wrapped.' In a romantic context, it refers to being deeply 'involved' or infatuated with someone, often in a casual way where you are catching feelings or getting obsessed.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "No somo' na, pero estamo' envuelto' hace rato, oh-oh, oh",
+      "english": "We aren't anything, but we've been involved for a while, oh-oh, oh"
+    },
+    "highlight": {
+      "spanish": "envuelto'",
+      "english": "involved"
+    },
+    "startTimeMs": 39700,
+    "endTimeMs": 46400,
+    "segmentIndex": 9
+  },
+  {
+    "term": {
+      "spanish": "mahón",
+      "english": "jeans"
+    },
+    "definition": "A distinctly Puerto Rican word for denim jeans. While most of the Spanish-speaking world uses 'vaqueros,' 'tejanos,' or simply 'jeans,' using 'mahón' immediately identifies the speaker as Puerto Rican.",
+    "difficulty": 7,
+    "example": {
+      "spanish": "Cuidao con ese mahón, que se va a romper (ey)",
+      "english": "Careful with those jeans, they're gonna rip (ey)"
+    },
+    "highlight": {
+      "spanish": "mahón",
+      "english": "jeans"
+    },
+    "startTimeMs": 80260,
+    "endTimeMs": 83770,
+    "segmentIndex": 19
+  },
+  {
+    "term": {
+      "spanish": "perreo",
+      "english": "grinding"
+    },
+    "definition": "The characteristic style of dancing to reggaeton. It comes from 'perro' (dog) and refers to the physical, rhythmic movement. Culturally, it is the heart of the urban party scene.",
+    "difficulty": 3,
+    "example": {
+      "spanish": "El perreo aquel, que se fue viral",
+      "english": "That perreo dance that went viral"
+    },
+    "highlight": {
+      "spanish": "perreo",
+      "english": "perreo dance"
+    },
+    "startTimeMs": 97680,
+    "endTimeMs": 100050,
+    "segmentIndex": 26
+  },
+  {
+    "term": {
+      "spanish": "piquetúa",
+      "english": "swagger"
+    },
+    "definition": "Derived from 'piquete' (style/swagger). A woman who is 'piquetúa' has a lot of attitude, confidence, and a sharp sense of style. It’s a common compliment in the urban genre.",
+    "difficulty": 8,
+    "example": {
+      "spanish": "Me gustan así, piquetúa",
+      "english": "I like them like that, with swagger"
+    },
+    "highlight": {
+      "spanish": "piquetúa",
+      "english": "swagger"
+    },
+    "startTimeMs": 147860,
+    "endTimeMs": 150470,
+    "segmentIndex": 38
+  },
+  {
+    "term": {
+      "spanish": "dar tabla",
+      "english": "to hit it hard"
+    },
+    "definition": "A slang expression used as a euphemism for having sex. 'Tabla' (board/wood) suggests a vigorous or intense physical encounter.",
+    "difficulty": 8,
+    "example": {
+      "spanish": "Pero aún te debo una noche en la suite",
+      "english": "But I still owe you a night in the suite"
+    },
+    "highlight": {
+      "spanish": "darte tabla",
+      "english": "give it to you hard"
+    },
+    "startTimeMs": 155160,
+    "endTimeMs": 157520,
+    "segmentIndex": 42
+  },
+  {
+    "term": {
+      "spanish": "en nota",
+      "english": "on a vibe"
+    },
+    "definition": "An expression used to describe the state of being high, drunk, or simply feeling the peak of a 'buzz' from a party environment.",
+    "difficulty": 5,
+    "example": {
+      "spanish": "Que ando en nota, nota",
+      "english": "'Cause I'm on a vibe, a vibe"
+    },
+    "highlight": {
+      "spanish": "en nota",
+      "english": "on a vibe"
+    },
+    "startTimeMs": 205310,
+    "endTimeMs": 208190,
+    "segmentIndex": 57
+  }
+]
