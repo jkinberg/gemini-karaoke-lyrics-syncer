@@ -68,7 +68,8 @@ Requires `GEMINI_API_KEY` environment variable for Google Gemini API access.
 ### Local Machine Setup
 
 - **Homebrew binaries**: `/opt/homebrew/bin` (includes `gh`, `node`, etc.)
-- **GitHub CLI**: `/opt/homebrew/bin/gh` - use full path if not in PATH
+- **GitHub CLI**: `/opt/homebrew/bin/gh`
+- **Google Cloud SDK**: `/opt/homebrew/share/google-cloud-sdk/bin/gcloud`
 
 ## Key Types
 
