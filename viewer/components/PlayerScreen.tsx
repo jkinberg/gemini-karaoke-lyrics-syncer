@@ -239,6 +239,7 @@ const LyricsDisplay: React.FC<{
   const {
     currentSegmentIndex,
     currentWordIndex,
+    currentEnglishWordIndex,
     spanishSegment,
     englishSegment,
   } = useKaraokeSync({
@@ -314,8 +315,8 @@ const LyricsDisplay: React.FC<{
       {/* English translation */}
       <div style={{ fontSize: englishFontSize, lineHeight: 1.3 }}>
         {englishSegment?.words?.map((word, index) => {
-          const isHighlighted = index < currentWordIndex ||
-            (index === currentWordIndex && currentTimeMs >= word.startTimeMs);
+          const isHighlighted = index < currentEnglishWordIndex ||
+            (index === currentEnglishWordIndex && currentTimeMs >= word.startTimeMs);
 
           // Check if this word is a vocab word (English side)
           const vocabState = getWordVocabState(

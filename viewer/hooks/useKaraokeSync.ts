@@ -11,6 +11,7 @@ export interface VocabState {
 export interface SyncState {
   currentSegmentIndex: number;
   currentWordIndex: number;
+  currentEnglishWordIndex: number;
   spanishSegment: KaraokeData['segments'][0] | null;
   englishSegment: KaraokeData['segments'][0] | null;
   activeVocabItems: VocabularyItem[];
@@ -35,6 +36,7 @@ export function useKaraokeSync({
       return {
         currentSegmentIndex: -1,
         currentWordIndex: -1,
+        currentEnglishWordIndex: -1,
         spanishSegment: null,
         englishSegment: null,
         activeVocabItems: [],
@@ -50,7 +52,7 @@ export function useKaraokeSync({
     const spanishSegment = spanishData.segments[currentSegmentIndex] ?? null;
     const englishSegment = englishData?.segments[currentSegmentIndex] ?? null;
 
-    // Find current word index within segment
+    // Find current word index within segment (Spanish)
     let currentWordIndex = -1;
     if (spanishSegment?.words) {
       currentWordIndex = spanishSegment.words.findIndex(
@@ -59,6 +61,19 @@ export function useKaraokeSync({
       // If all words have passed, set to last word + 1
       if (currentWordIndex === -1 && spanishSegment.words.length > 0) {
         currentWordIndex = spanishSegment.words.length;
+      }
+    }
+
+    // Find current word index within segment (English)
+    // This is separate because English translations often have different word counts
+    let currentEnglishWordIndex = -1;
+    if (englishSegment?.words) {
+      currentEnglishWordIndex = englishSegment.words.findIndex(
+        (word) => currentTimeMs < word.endTimeMs
+      );
+      // If all words have passed, set to last word + 1
+      if (currentEnglishWordIndex === -1 && englishSegment.words.length > 0) {
+        currentEnglishWordIndex = englishSegment.words.length;
       }
     }
 
@@ -78,6 +93,7 @@ export function useKaraokeSync({
     return {
       currentSegmentIndex,
       currentWordIndex,
+      currentEnglishWordIndex,
       spanishSegment,
       englishSegment,
       activeVocabItems,
