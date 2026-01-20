@@ -217,8 +217,8 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
         )}
       </div>
 
-      {/* Vocab list - scrollable area with safe area padding at bottom */}
-      <div className="flex-1 overflow-y-auto px-4 pt-4 pb-2 space-y-3 safe-area-bottom">
+      {/* Vocab list - scrollable area */}
+      <div className="flex-1 overflow-y-auto px-4 pt-4 pb-4 space-y-3">
         {vocabulary.map((item, index) => {
           const isUnlocked = unlockedIndices.has(index);
           const isHighlighted = highlightedIndex === index;
