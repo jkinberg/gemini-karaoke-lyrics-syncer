@@ -290,9 +290,10 @@ const LyricsDisplay: React.FC<{
             (index === currentWordIndex && currentTimeMs >= word.startTimeMs);
 
           // Check if this word is a vocab word
+          // Use spanishSegment.segmentIndex (the segment's property) not currentSegmentIndex (array index)
           const vocabState = getWordVocabState(
             word.word,
-            currentSegmentIndex,
+            spanishSegment.segmentIndex,
             trackData.vocabulary,
             currentTimeMs,
             'spanish'
@@ -337,9 +338,10 @@ const LyricsDisplay: React.FC<{
             (index === currentEnglishWordIndex && currentTimeMs >= word.startTimeMs);
 
           // Check if this word is a vocab word (English side)
+          // Use spanishSegment.segmentIndex since vocabulary is indexed by Spanish segments
           const vocabState = getWordVocabState(
             word.word,
-            currentSegmentIndex,
+            spanishSegment.segmentIndex,
             trackData.vocabulary,
             currentTimeMs,
             'english'
