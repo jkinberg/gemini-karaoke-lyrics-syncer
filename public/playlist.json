@@ -5,7 +5,7 @@
     "description": "Learn Spanish through Bad Bunny's music with synchronized lyrics and cultural vocabulary",
     "primaryLanguage": "es",
     "translationLanguage": "en",
-    "trackCount": 6,
+    "trackCount": 7,
     "createdAt": "2026-01-12T19:36:02.800Z"
   },
   "tracks": [
@@ -34,8 +34,32 @@
       }
     },
     {
-      "id": "06-bad-bunny-nuevayol",
+      "id": "10-bad-bunny-baile-inolvidable",
       "order": 2,
+      "metadata": {
+        "title": "BAILE INOLVIDABLE",
+        "artist": "Bad Bunny",
+        "album": "DeBÍ TiRAR MáS FOToS",
+        "durationMs": 335000,
+        "genre": "Reggaeton",
+        "difficulty": 7,
+        "vocabularyCount": 7
+      },
+      "youtube": {
+        "videoId": "a1Femq4NPxs",
+        "url": "https://www.youtube.com/watch?v=a1Femq4NPxs",
+        "thumbnailUrl": "https://img.youtube.com/vi/a1Femq4NPxs/maxresdefault.jpg"
+      },
+      "audioUrl": "https://storage.googleapis.com/karaoke_static_assets/bad-bunny-baile-inolvidable.m4a",
+      "dataFiles": {
+        "spanish": "samples/10-bad-bunny-baile-inolvidable/spanish_karaoke_data.json",
+        "english": "samples/10-bad-bunny-baile-inolvidable/english_karaoke_data.json",
+        "vocabulary": "samples/10-bad-bunny-baile-inolvidable/vocabulary.json"
+      }
+    },
+    {
+      "id": "06-bad-bunny-nuevayol",
+      "order": 3,
       "metadata": {
         "title": "NUEVAYoL",
         "artist": "Bad Bunny",
@@ -59,7 +83,7 @@
     },
     {
       "id": "07-bad-bunny-ojitos-lindo",
-      "order": 3,
+      "order": 4,
       "metadata": {
         "title": "Ojitos Lindos",
         "artist": "Bad Bunny, Bomba Estéreo",
@@ -83,7 +107,7 @@
     },
     {
       "id": "11-bad-bunny-moscow-mule",
-      "order": 4,
+      "order": 5,
       "metadata": {
         "title": "Moscow Mule",
         "artist": "Bad Bunny",
@@ -107,7 +131,7 @@
     },
     {
       "id": "09-bad-bunny-mia",
-      "order": 5,
+      "order": 6,
       "metadata": {
         "title": "MIA (feat. Drake)",
         "artist": "Bad Bunny",
@@ -131,7 +155,7 @@
     },
     {
       "id": "08-bad-bunny-dakiti",
-      "order": 6,
+      "order": 7,
       "metadata": {
         "title": "DÁKITI",
         "artist": "Bad Bunny",
