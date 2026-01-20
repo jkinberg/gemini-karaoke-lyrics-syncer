@@ -24,6 +24,16 @@
   <meta name="twitter:title" content="Karaoke - Learn Spanish Through Music" />
   <meta name="twitter:description" content="Learn Spanish through music with word-by-word synchronized karaoke lyrics, vocabulary tracking, and cultural context. Featuring Bad Bunny songs." />
   <meta name="twitter:image" content="https://karaoke-syncer-362554121203.us-west1.run.app/social-preview.png" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA_MEASUREMENT_ID%"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '%VITE_GA_MEASUREMENT_ID%');
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {

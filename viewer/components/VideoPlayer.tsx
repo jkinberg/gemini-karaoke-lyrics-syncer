@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useYouTubePlayer } from '../hooks/useYouTubePlayer';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
 import { initPingSoundContext } from '../utils/pingSoundContext';
+import { analytics } from '../utils/analytics';
 
 // Icons
 const PlayIcon = () => (
@@ -35,6 +36,7 @@ const ChevronRightIcon = () => (
 );
 
 interface VideoPlayerProps {
+  trackId: string;
   videoId: string;
   title: string;
   artist: string;
@@ -52,6 +54,7 @@ interface VideoPlayerProps {
 }
 
 export const VideoPlayer: React.FC<VideoPlayerProps> = ({
+  trackId,
   videoId,
   title,
   artist,
@@ -69,6 +72,14 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 }) => {
   const [showMetadata, setShowMetadata] = useState(true);
   const [showControls, setShowControls] = useState(false);
+
+  // Track if we've sent track_start for this track (only send once per track)
+  const hasTrackedStartRef = useRef(false);
+
+  // Reset tracking when track changes
+  useEffect(() => {
+    hasTrackedStartRef.current = false;
+  }, [trackId]);
 
   const {
     containerRef,
@@ -112,9 +123,12 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   }, [duration]);
 
   const handleScrubberSeek = useCallback((percentage: number) => {
+    const fromTimeMs = currentTimeMs;
     const timeMs = (percentage / 100) * duration;
     seekTo(timeMs);
-  }, [duration, seekTo]);
+    // Track seek event
+    analytics.trackSeek(trackId, fromTimeMs / 1000, timeMs / 1000);
+  }, [duration, seekTo, currentTimeMs, trackId]);
 
   // Mouse events for scrubber
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
@@ -239,9 +253,22 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       // First tap unmutes - also init ping sound context (requires user gesture)
       initPingSoundContext();
       unmute();
+
+      // Track first unmute as track_start
+      if (!hasTrackedStartRef.current) {
+        hasTrackedStartRef.current = true;
+        analytics.trackStart(trackId, title, artist, 'desktop');
+      }
     } else {
       // Subsequent taps toggle play/pause
       togglePlay();
+
+      // Track play/pause
+      if (isPlaying) {
+        analytics.trackPause(trackId, currentTimeMs / 1000, duration / 1000);
+      } else {
+        analytics.trackPlay(trackId, currentTimeMs / 1000);
+      }
 
       // Show controls briefly
       setShowControls(true);

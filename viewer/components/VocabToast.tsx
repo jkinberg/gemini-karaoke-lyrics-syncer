@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { playPingSound } from '../utils/pingSoundContext';
+import { analytics } from '../utils/analytics';
 
 export interface ToastMessage {
   id: number;
@@ -8,6 +9,7 @@ export interface ToastMessage {
 }
 
 interface VocabToastContainerProps {
+  trackId: string;
   toasts: ToastMessage[];
   onRemoveToast: (id: number) => void;
   onToastClick: (vocabIndex: number) => void;
@@ -15,6 +17,7 @@ interface VocabToastContainerProps {
 
 // Container that renders multiple toasts
 export const VocabToastContainer: React.FC<VocabToastContainerProps> = ({
+  trackId,
   toasts,
   onRemoveToast,
   onToastClick,
@@ -27,6 +30,7 @@ export const VocabToastContainer: React.FC<VocabToastContainerProps> = ({
           id={toast.id}
           word={toast.word}
           vocabIndex={toast.vocabIndex}
+          trackId={trackId}
           onComplete={onRemoveToast}
           onClick={onToastClick}
         />
@@ -39,11 +43,12 @@ interface SingleToastProps {
   id: number;
   word: string;
   vocabIndex: number;
+  trackId: string;
   onComplete: (id: number) => void;
   onClick: (vocabIndex: number) => void;
 }
 
-const SingleToast: React.FC<SingleToastProps> = ({ id, word, vocabIndex, onComplete, onClick }) => {
+const SingleToast: React.FC<SingleToastProps> = ({ id, word, vocabIndex, trackId, onComplete, onClick }) => {
   const elementRef = useRef<HTMLDivElement>(null);
   const hasPlayedSound = useRef(false);
 
@@ -65,6 +70,8 @@ const SingleToast: React.FC<SingleToastProps> = ({ id, word, vocabIndex, onCompl
   // Handle click - open vocab panel to this word
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
+    // Track toast click
+    analytics.vocabToastClick(trackId, word);
     onClick(vocabIndex);
     onComplete(id); // Remove toast when clicked
   };

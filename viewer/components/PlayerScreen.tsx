@@ -113,6 +113,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
         {track ? (
           isMobile && track.audioUrl ? (
             <AudioPlayer
+              trackId={track.id}
               audioUrl={track.audioUrl}
               expectedDurationMs={track.metadata.durationMs}
               title={track.metadata.title}
@@ -132,6 +133,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
             />
           ) : (
             <VideoPlayer
+              trackId={track.id}
               videoId={track.youtube.videoId}
               title={track.metadata.title}
               artist={track.metadata.artist}

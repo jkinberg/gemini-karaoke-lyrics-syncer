@@ -1,7 +1,18 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
+import { analytics } from '../utils/analytics';
 
 // Session-only progress tracking (resets on page refresh)
 // For persistent storage, change to use localStorage
+
+// Achievement definitions
+const ACHIEVEMENTS = [
+  { id: 'first-song', name: 'First Song', check: (p: ProgressData) => p.stats.totalSongsCompleted >= 1 },
+  { id: 'vocab-10', name: '10 Words', check: (p: ProgressData) => p.stats.totalVocabUnlocked >= 10 },
+  { id: 'vocab-25', name: '25 Words', check: (p: ProgressData) => p.stats.totalVocabUnlocked >= 25 },
+  { id: 'streak-3', name: '3 Day Streak', check: (p: ProgressData) => p.streak.longest >= 3 },
+  { id: 'streak-7', name: '7 Day Streak', check: (p: ProgressData) => p.streak.longest >= 7 },
+  { id: 'songs-5', name: '5 Songs', check: (p: ProgressData) => p.stats.totalSongsCompleted >= 5 },
+];
 
 export interface VocabProgress {
   unlocked: boolean;
@@ -60,6 +71,19 @@ export function useProgress() {
   // Session-only state - starts fresh on each page load
   const [progress, setProgress] = useState<ProgressData>(DEFAULT_PROGRESS);
 
+  // Track which achievements have been reported (to avoid duplicate tracking)
+  const trackedAchievementsRef = useRef<Set<string>>(new Set());
+
+  // Check for newly earned achievements and track them
+  useEffect(() => {
+    ACHIEVEMENTS.forEach(achievement => {
+      if (achievement.check(progress) && !trackedAchievementsRef.current.has(achievement.id)) {
+        trackedAchievementsRef.current.add(achievement.id);
+        analytics.achievementUnlock(achievement.id, achievement.name);
+      }
+    });
+  }, [progress]);
+
   // Mark user as active today (call when user interacts)
   const markActive = useCallback(() => {
     const today = getTodayDate();
@@ -73,6 +97,11 @@ export function useProgress() {
       if (isYesterday(prev.streak.lastActiveDate)) {
         newStreak = prev.streak.current + 1;
       }
+
+      const isNewLongest = newStreak > prev.streak.longest;
+
+      // Track streak update
+      analytics.streakUpdated(newStreak, isNewLongest);
 
       return {
         ...prev,
