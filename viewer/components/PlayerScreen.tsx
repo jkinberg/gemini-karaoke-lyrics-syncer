@@ -4,6 +4,8 @@ import { VideoPlayer } from './VideoPlayer';
 import { AudioPlayer } from './AudioPlayer';
 import { useKaraokeSync, getWordVocabState } from '../hooks/useKaraokeSync';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
+import { usePullToRefresh } from '../hooks/usePullToRefresh';
+import { PullToRefreshIndicator } from './PullToRefreshIndicator';
 
 // Icons
 const MusicNoteIcon = () => (
@@ -80,8 +82,24 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
     maxSwipeTime: 500,
   });
 
+  // Pull-to-refresh (mobile only)
+  const PULL_THRESHOLD = 80;
+  const { pullDistance, isPulling, isRefreshing, handlers: pullHandlers } = usePullToRefresh({
+    threshold: PULL_THRESHOLD,
+    enabled: isMobile,
+  });
+
   return (
-    <div className="h-full flex flex-col bg-black overflow-hidden">
+    <div
+      className="h-full flex flex-col bg-black overflow-hidden relative"
+      {...pullHandlers}
+    >
+      {/* Pull-to-refresh indicator */}
+      <PullToRefreshIndicator
+        pullDistance={pullDistance}
+        threshold={PULL_THRESHOLD}
+        isRefreshing={isRefreshing}
+      />
       {/* Top Bar */}
       <div className="flex-shrink-0 px-4 pt-2 pb-2 flex items-center justify-between safe-area-top">
         <div className="text-white">
