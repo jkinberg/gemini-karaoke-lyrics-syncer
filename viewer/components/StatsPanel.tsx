@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import type { ProgressData } from '../hooks/useProgress';
+import { analytics } from '../utils/analytics';
 
 // Icons
 const CloseIcon = () => (
@@ -66,6 +67,16 @@ export const StatsPanel: React.FC<StatsPanelProps> = ({
   progress,
   onClose,
 }) => {
+  // Track stats panel view on mount
+  useEffect(() => {
+    analytics.statsView({
+      songsCompleted: progress.stats.totalSongsCompleted,
+      vocabUnlocked: progress.stats.totalVocabUnlocked,
+      minutesListened: progress.stats.totalMinutesListened,
+      streak: progress.streak.current,
+    });
+  }, []); // Only track once on mount
+
   // Define achievements based on progress
   const achievements: Achievement[] = [
     {

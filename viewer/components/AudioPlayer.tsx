@@ -3,6 +3,7 @@ import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
 import { AudioVisualizer } from './AudioVisualizer';
 import { initPingSoundContext } from '../utils/pingSoundContext';
+import { analytics } from '../utils/analytics';
 
 // Icons
 const PlayIcon = () => (
@@ -36,6 +37,7 @@ const ChevronRightIcon = () => (
 );
 
 interface AudioPlayerProps {
+  trackId: string;
   audioUrl: string;
   expectedDurationMs?: number;
   title: string;
@@ -55,6 +57,7 @@ interface AudioPlayerProps {
 }
 
 export const AudioPlayer: React.FC<AudioPlayerProps> = ({
+  trackId,
   audioUrl,
   expectedDurationMs,
   title,
@@ -73,6 +76,17 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   onMutedChange,
 }) => {
   const [showControls, setShowControls] = useState(false);
+
+  // Track if we've sent track_start for this track (only send once per track)
+  const hasTrackedStartRef = useRef(false);
+  // Track previous time for seek detection
+  const previousTimeRef = useRef(0);
+
+  // Reset tracking when track changes
+  useEffect(() => {
+    hasTrackedStartRef.current = false;
+    previousTimeRef.current = 0;
+  }, [trackId]);
 
   const {
     audioRef,
@@ -118,9 +132,12 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   }, [duration]);
 
   const handleScrubberSeek = useCallback((percentage: number) => {
+    const fromTimeMs = currentTimeMs;
     const timeMs = (percentage / 100) * duration;
     seekTo(timeMs);
-  }, [duration, seekTo]);
+    // Track seek event
+    analytics.trackSeek(trackId, fromTimeMs / 1000, timeMs / 1000);
+  }, [duration, seekTo, currentTimeMs, trackId]);
 
   // Mouse events for scrubber
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
@@ -238,9 +255,22 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
       // First tap unmutes - also init ping sound context (requires user gesture)
       initPingSoundContext();
       unmute();
+
+      // Track first unmute as track_start
+      if (!hasTrackedStartRef.current) {
+        hasTrackedStartRef.current = true;
+        analytics.trackStart(trackId, title, artist, 'mobile');
+      }
     } else {
       // Subsequent taps toggle play/pause
       togglePlay();
+
+      // Track play/pause
+      if (isPlaying) {
+        analytics.trackPause(trackId, currentTimeMs / 1000, duration / 1000);
+      } else {
+        analytics.trackPlay(trackId, currentTimeMs / 1000);
+      }
 
       // Only show controls briefly when playing (pause icon fades out)
       // When paused, the play icon is shown persistently

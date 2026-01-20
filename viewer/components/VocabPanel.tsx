@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import type { VocabularyItem } from '../types';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
+import { analytics, type VocabPanelTrigger } from '../utils/analytics';
 
 // Icons
 const BookIcon = () => (
@@ -46,12 +47,14 @@ const NextIcon = () => (
 );
 
 interface VocabPanelProps {
+  trackId: string;
   vocabulary: VocabularyItem[];
   unlockedCount: number;
   unlockedIndices: Set<number>;
   highlightedIndex?: number | null;
   videoEnded?: boolean;
   hasNextTrack?: boolean;
+  openTrigger?: VocabPanelTrigger;
   onClose: () => void;
   onSeekTo: (timeMs: number) => void;
   onPlayAgain?: () => void;
@@ -59,12 +62,14 @@ interface VocabPanelProps {
 }
 
 export const VocabPanel: React.FC<VocabPanelProps> = ({
+  trackId,
   vocabulary,
   unlockedCount,
   unlockedIndices,
   highlightedIndex,
   videoEnded = false,
   hasNextTrack = false,
+  openTrigger = 'tap',
   onClose,
   onSeekTo,
   onPlayAgain,
@@ -74,6 +79,11 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [isClosing, setIsClosing] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  // Track panel open on mount
+  useEffect(() => {
+    analytics.vocabPanelOpen(trackId, unlockedCount, totalCount, openTrigger as VocabPanelTrigger);
+  }, []); // Only track once on mount
 
   // Trigger open animation on mount
   useEffect(() => {
@@ -105,7 +115,9 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
   };
 
   // Handle play button (seek) with animation
-  const handleSeekTo = (timeMs: number) => {
+  const handleSeekTo = (timeMs: number, vocabTerm: string) => {
+    // Track seek to word
+    analytics.vocabSeekToWord(trackId, vocabTerm, timeMs / 1000);
     setIsClosing(true);
     setTimeout(() => {
       onSeekTo(timeMs);
@@ -114,6 +126,7 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
 
   // Handle play again with animation
   const handlePlayAgain = () => {
+    analytics.playAgain(trackId);
     setIsClosing(true);
     setTimeout(() => {
       onPlayAgain?.();
@@ -122,6 +135,7 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
 
   // Handle play next with animation
   const handlePlayNext = () => {
+    // Note: playNext tracking is handled in ViewerApp where we have access to both track IDs
     setIsClosing(true);
     setTimeout(() => {
       onPlayNext?.();
@@ -216,7 +230,7 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
               item={item}
               isUnlocked={isUnlocked}
               isHighlighted={isHighlighted}
-              onPlay={() => handleSeekTo(item.startTimeMs)}
+              onPlay={() => handleSeekTo(item.startTimeMs, item.term.spanish)}
             />
           );
         })}

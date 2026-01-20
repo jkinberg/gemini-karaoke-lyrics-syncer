@@ -89,7 +89,7 @@
 ### Viewer App - High Priority
 - [ ] Create desktop-optimized layout (current layout is mobile-only)
 - [ ] Create social sharing image (1200x630px for Open Graph/Twitter Cards)
-- [ ] Integrate Google Analytics tracking
+- [ ] Integrate Google Analytics tracking - see `docs/tech-spec-google-analytics.md`
 - [ ] Integrate feedback survey link
 - [ ] Display language selector with other options (Italian, French, Korean) shown as "Coming Soon"
 

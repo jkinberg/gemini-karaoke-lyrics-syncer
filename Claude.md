@@ -171,6 +171,7 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
   - Phase 5: Translation alignment improvements
   - Phase 6: Vocabulary timecode consistency
   - **Phase 7: Synchronization quality improvements** (includes auto-fix implementation)
+- `docs/tech-spec-google-analytics.md` - GA4 integration for viewer engagement tracking
 
 ## Key Features
 

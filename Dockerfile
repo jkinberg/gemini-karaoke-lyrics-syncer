@@ -2,6 +2,10 @@ FROM node:20-slim
 
 WORKDIR /app
 
+# Google Analytics measurement ID (build-time variable)
+ARG VITE_GA_MEASUREMENT_ID=G-HBG6LEJSHL
+ENV VITE_GA_MEASUREMENT_ID=$VITE_GA_MEASUREMENT_ID
+
 # Copy package files
 COPY package*.json ./
 

@@ -7,6 +7,7 @@ import { VocabPanel } from './components/VocabPanel';
 import { VocabToastContainer, type ToastMessage } from './components/VocabToast';
 import { StatsPanel } from './components/StatsPanel';
 import { isMobileDevice } from './utils/deviceDetection';
+import { analytics, type VocabPanelTrigger } from './utils/analytics';
 
 let toastIdCounter = 0;
 
@@ -21,11 +22,23 @@ export default function ViewerApp() {
   const [shouldPause, setShouldPause] = useState(false);
   const [unlockedVocabIndices, setUnlockedVocabIndices] = useState<Set<number>>(new Set());
   const [videoEnded, setVideoEnded] = useState(false);
+  const [vocabOpenTrigger, setVocabOpenTrigger] = useState<VocabPanelTrigger>('tap');
 
-  // Detect mobile device on mount
+  // Detect mobile device on mount and track session start
   useEffect(() => {
-    setIsMobile(isMobileDevice());
+    const mobile = isMobileDevice();
+    setIsMobile(mobile);
+    // Track session start with device and player type
+    analytics.sessionStart(
+      mobile ? 'mobile' : 'desktop',
+      mobile ? 'audio' : 'video'
+    );
   }, []);
+
+  // Track screen views for analytics
+  useEffect(() => {
+    analytics.screenView(activeScreen === 'vocab' ? 'vocab_panel' : activeScreen === 'stats' ? 'stats_panel' : 'player');
+  }, [activeScreen]);
 
   // Track which vocab items have been shown as toasts (by index)
   const shownToastsRef = useRef<Set<number>>(new Set());
@@ -169,6 +182,14 @@ export default function ViewerApp() {
         // Add to persistent unlocked set
         setUnlockedVocabIndices(prev => new Set([...prev, index]));
 
+        // Track vocab unlock for analytics
+        analytics.vocabUnlock(
+          currentTrack.id,
+          vocab.term.spanish,
+          index,
+          currentTimeMs / 1000
+        );
+
         // Only show toast within 1 second of unlock time
         if (currentTimeMs < vocab.startTimeMs + 1000) {
           const newToast: ToastMessage = {
@@ -177,6 +198,9 @@ export default function ViewerApp() {
             vocabIndex: index,
           };
           setToasts(prev => [...prev, newToast]);
+
+          // Track toast shown for analytics
+          analytics.vocabToastShown(currentTrack.id, vocab.term.spanish);
         }
 
         // Record vocab unlock in progress
@@ -233,9 +257,10 @@ export default function ViewerApp() {
   }, []);
 
   // Handle opening vocab panel (pauses video)
-  const handleOpenVocab = useCallback((vocabIndex?: number) => {
+  const handleOpenVocab = useCallback((vocabIndex?: number, trigger: VocabPanelTrigger = 'tap') => {
     setActiveScreen('vocab');
     setShouldPause(true);
+    setVocabOpenTrigger(trigger);
     if (vocabIndex !== undefined) {
       setHighlightedVocabIndex(vocabIndex);
     }
@@ -254,6 +279,7 @@ export default function ViewerApp() {
     setVideoEnded(true);
     setActiveScreen('vocab');
     setShouldPause(true);
+    setVocabOpenTrigger('end_screen');
   }, []);
 
   // Handle play again - seek to start and resume
@@ -275,7 +301,7 @@ export default function ViewerApp() {
 
   // Handle toast click - opens vocab panel to specific word
   const handleToastClick = useCallback((vocabIndex: number) => {
-    handleOpenVocab(vocabIndex);
+    handleOpenVocab(vocabIndex, 'toast');
   }, [handleOpenVocab]);
 
   if (loading) {
@@ -327,14 +353,16 @@ export default function ViewerApp() {
           onPrevTrack={prevTrack}
         />
       </div>
-      {activeScreen === 'vocab' && trackData && (
+      {activeScreen === 'vocab' && trackData && currentTrack && (
         <VocabPanel
+          trackId={currentTrack.id}
           vocabulary={trackData.vocabulary || []}
           unlockedCount={unlockedVocabCount}
           unlockedIndices={unlockedVocabIndices}
           highlightedIndex={highlightedVocabIndex}
           videoEnded={videoEnded}
           hasNextTrack={hasNextTrack}
+          openTrigger={vocabOpenTrigger}
           onClose={handleCloseVocab}
           onSeekTo={handleSeekTo}
           onPlayAgain={handlePlayAgain}
@@ -350,6 +378,7 @@ export default function ViewerApp() {
 
       {/* Vocab Toasts */}
       <VocabToastContainer
+        trackId={currentTrack?.id ?? ''}
         toasts={toasts}
         onRemoveToast={handleRemoveToast}
         onToastClick={handleToastClick}
