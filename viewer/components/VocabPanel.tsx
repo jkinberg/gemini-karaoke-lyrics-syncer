@@ -151,14 +151,14 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
 
   return (
     <div
-      className="h-full flex flex-col bg-black transition-transform duration-200 ease-out"
+      className="h-dvh flex flex-col bg-black transition-transform duration-200 ease-out"
       style={{
         transform: isOpen && !isClosing ? 'translateY(0)' : 'translateY(100%)',
       }}
     >
-      {/* Header */}
+      {/* Header - flex-shrink-0 to stay fixed, content scrolls below */}
       <div
-        className="px-4 pt-12 pb-4 border-b border-zinc-800 safe-area-top"
+        className="flex-shrink-0 px-4 pt-12 pb-4 border-b border-zinc-800 safe-area-top bg-black"
         {...headerSwipe}
       >
         {/* Drag handle */}
@@ -217,8 +217,8 @@ export const VocabPanel: React.FC<VocabPanelProps> = ({
         )}
       </div>
 
-      {/* Vocab list */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+      {/* Vocab list - scrollable area with safe area padding at bottom */}
+      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3 safe-area-bottom">
         {vocabulary.map((item, index) => {
           const isUnlocked = unlockedIndices.has(index);
           const isHighlighted = highlightedIndex === index;

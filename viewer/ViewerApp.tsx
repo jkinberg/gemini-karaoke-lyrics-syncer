@@ -334,7 +334,7 @@ export default function ViewerApp() {
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center bg-black">
+      <div className="h-dvh flex items-center justify-center bg-black">
         <div className="text-center">
           <div className="text-zinc-400 mb-2">Loading...</div>
           <div className="w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
@@ -345,7 +345,7 @@ export default function ViewerApp() {
 
   if (error) {
     return (
-      <div className="h-screen flex items-center justify-center bg-black px-4">
+      <div className="h-dvh flex items-center justify-center bg-black px-4">
         <div className="text-center">
           <div className="text-red-500 mb-2">Error loading playlist</div>
           <div className="text-zinc-500 text-sm">{error}</div>
@@ -355,7 +355,7 @@ export default function ViewerApp() {
   }
 
   return (
-    <div className="h-screen overflow-hidden bg-black">
+    <div className="h-dvh overflow-hidden bg-black">
       {/* Always render PlayerScreen to preserve video state, hide when not active */}
       <div className={activeScreen === 'player' ? 'h-full' : 'hidden'}>
         <PlayerScreen

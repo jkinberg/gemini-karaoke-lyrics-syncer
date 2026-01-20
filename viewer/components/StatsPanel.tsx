@@ -120,9 +120,9 @@ export const StatsPanel: React.FC<StatsPanelProps> = ({
   const unlockedAchievements = achievements.filter((a) => a.isUnlocked).length;
 
   return (
-    <div className="h-full flex flex-col bg-black">
-      {/* Header */}
-      <div className="px-4 pt-12 pb-4 border-b border-zinc-800 safe-area-top">
+    <div className="h-dvh flex flex-col bg-black">
+      {/* Header - stays fixed at top */}
+      <div className="flex-shrink-0 px-4 pt-12 pb-4 border-b border-zinc-800 safe-area-top bg-black">
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-bold">Your Progress</h1>
           <button
@@ -134,8 +134,8 @@ export const StatsPanel: React.FC<StatsPanelProps> = ({
         </div>
       </div>
 
-      {/* Content */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
+      {/* Content - scrollable area with safe area padding at bottom */}
+      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4 safe-area-bottom">
         {/* Streak Card */}
         <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl p-5 border border-orange-500/30">
           <div className="flex items-center gap-4">
