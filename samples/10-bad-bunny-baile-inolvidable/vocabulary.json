@@ -1,6 +1,25 @@
 [
   {
     "term": {
+      "spanish": "pa'l",
+      "english": "to the/at the"
+    },
+    "definition": "A common contraction of 'para el'. In Caribbean and informal Spanish, 'para' is frequently shortened to 'pa' in speech, and when followed by 'el', it combines into 'pa'l'.",
+    "difficulty": 4,
+    "example": {
+      "spanish": "Y ver pa'l cielo a ver si te veo caer",
+      "english": "And look at the sky to see if I see you fall"
+    },
+    "highlight": {
+      "spanish": "pa'l",
+      "english": "at the"
+    },
+    "startTimeMs": 119300,
+    "endTimeMs": 124900,
+    "segmentIndex": 18
+  },
+  {
+    "term": {
       "spanish": "bellaquito",
       "english": "horny/aroused"
     },
@@ -36,6 +55,25 @@
     "startTimeMs": 215400,
     "endTimeMs": 220600,
     "segmentIndex": 42
+  },
+  {
+    "term": {
+      "spanish": "loquita",
+      "english": "crazy/wild girl"
+    },
+    "definition": "Used here as an affectionate pet name for a partner. It suggests a woman who is uninhibited, intense, or playfully wild in the context of the relationship.",
+    "difficulty": 3,
+    "example": {
+      "spanish": "Mi diabla, mi ángel, mi loquita",
+      "english": "My devil, my angel, my crazy girl"
+    },
+    "highlight": {
+      "spanish": "loquita",
+      "english": "crazy girl"
+    },
+    "startTimeMs": 220600,
+    "endTimeMs": 223260,
+    "segmentIndex": 43
   },
   {
     "term": {
@@ -84,7 +122,7 @@
     "difficulty": 5,
     "example": {
       "spanish": "Si te pienso, me tiro de una",
-      "english": "If I think of you, I’ll dive in at once"
+      "english": "If I think of you, I'll dive in at once"
     },
     "highlight": {
       "spanish": "de una",
@@ -93,43 +131,5 @@
     "startTimeMs": 319900,
     "endTimeMs": 324300,
     "segmentIndex": 67
-  },
-  {
-    "term": {
-      "spanish": "loquita",
-      "english": "crazy/wild girl"
-    },
-    "definition": "Used here as an affectionate pet name for a partner. It suggests a woman who is uninhibited, intense, or playfully wild in the context of the relationship.",
-    "difficulty": 3,
-    "example": {
-      "spanish": "Mi diabla, mi ángel, mi loquita",
-      "english": "My devil, my angel, my crazy girl"
-    },
-    "highlight": {
-      "spanish": "loquita",
-      "english": "crazy girl"
-    },
-    "startTimeMs": 220600,
-    "endTimeMs": 223260,
-    "segmentIndex": 43
-  },
-  {
-    "term": {
-      "spanish": "pa'l",
-      "english": "to the/at the"
-    },
-    "definition": "A common contraction of 'para el'. In Caribbean and informal Spanish, 'para' is frequently shortened to 'pa' in speech, and when followed by 'el', it combines into 'pa'l'.",
-    "difficulty": 4,
-    "example": {
-      "spanish": "Y ver pa'l cielo a ver si te veo caer",
-      "english": "And look at the sky to see if I see you fall"
-    },
-    "highlight": {
-      "spanish": "pa'l",
-      "english": "at the"
-    },
-    "startTimeMs": 119300,
-    "endTimeMs": 124900,
-    "segmentIndex": 18
   }
 ]
