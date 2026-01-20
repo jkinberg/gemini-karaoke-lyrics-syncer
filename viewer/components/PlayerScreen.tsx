@@ -195,7 +195,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
       <button
         onClick={onOpenVocab}
         {...vocabBarSwipe}
-        className="flex-shrink-0 bg-zinc-900/95 backdrop-blur border-t border-zinc-800 px-4 py-3 pb-16 safe-area-bottom"
+        className="flex-shrink-0 bg-zinc-900/95 backdrop-blur border-t border-zinc-800 px-4 py-3 pb-4 safe-area-bottom"
       >
         <div className="relative flex items-center justify-between mb-2">
           <div className="flex items-center gap-2 text-zinc-400">
