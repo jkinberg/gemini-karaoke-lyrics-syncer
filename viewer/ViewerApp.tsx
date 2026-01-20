@@ -43,6 +43,9 @@ export default function ViewerApp() {
   // Track which vocab items have been shown as toasts (by index)
   const shownToastsRef = useRef<Set<number>>(new Set());
 
+  // Track if we've fired trackComplete for the current track (fires once at 80%)
+  const hasTrackedCompleteRef = useRef<string | null>(null);
+
   // Session-level storage for unlocked vocab per track (persists across track changes within session)
   const sessionVocabByTrackRef = useRef<Map<string, Set<number>>>(new Map());
   const sessionToastsByTrackRef = useRef<Map<string, Set<number>>>(new Map());
@@ -229,6 +232,25 @@ export default function ViewerApp() {
     }
   }, [currentTimeMs, currentTrack, recordSongProgress]);
 
+  // Track when user reaches 80% of the track (fires once per track)
+  useEffect(() => {
+    if (!currentTrack || currentTimeMs === 0) return;
+
+    const durationMs = currentTrack.metadata.durationMs;
+    const completionPercent = (currentTimeMs / durationMs) * 100;
+
+    // Fire trackComplete once when reaching 80%
+    if (completionPercent >= 80 && hasTrackedCompleteRef.current !== currentTrack.id) {
+      hasTrackedCompleteRef.current = currentTrack.id;
+      analytics.trackComplete(
+        currentTrack.id,
+        currentTrack.metadata.title,
+        currentTrack.metadata.artist,
+        currentTimeMs / 1000
+      );
+    }
+  }, [currentTimeMs, currentTrack]);
+
   // Mark user as active when they interact (unmute/play)
   useEffect(() => {
     if (!isMuted) {
@@ -276,11 +298,17 @@ export default function ViewerApp() {
 
   // Handle video ended - open vocab panel with action buttons
   const handleVideoEnded = useCallback(() => {
+    // Track the end event
+    if (currentTrack) {
+      const completionPercent = (currentTimeMs / currentTrack.metadata.durationMs) * 100;
+      analytics.trackEnded(currentTrack.id, completionPercent);
+    }
+
     setVideoEnded(true);
     setActiveScreen('vocab');
     setShouldPause(true);
     setVocabOpenTrigger('end_screen');
-  }, []);
+  }, [currentTrack, currentTimeMs]);
 
   // Handle play again - seek to start and resume
   const handlePlayAgain = useCallback(() => {
