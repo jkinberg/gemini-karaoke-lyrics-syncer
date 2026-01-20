@@ -84,6 +84,32 @@
 
 ---
 
+## iOS Safari UX Improvements - COMPLETED
+
+**Problem:** Various layout and UX issues on iOS Safari mobile browser.
+
+**Issues fixed:**
+- Dynamic viewport height (`100dvh`) for proper layout with Safari's dynamic browser chrome
+- "Shared from..." bar pushing content down - fixed with dynamic viewport units
+- Vocab panel and stats panel headers now stay fixed at top when scrolling
+- Reduced excessive bottom padding in collapsed vocab bar (was 64px + safe area)
+- Prev/Next track navigation arrows made more visible (larger icons, bolder stroke, brighter color)
+- Pull-to-refresh gesture added for mobile (swipe down to reload page)
+
+**Files created:**
+- `viewer/hooks/usePullToRefresh.ts` - Touch gesture handler for pull-to-refresh
+- `viewer/components/PullToRefreshIndicator.tsx` - Animated refresh spinner
+
+**Files modified:**
+- `viewer.html` - Added `100dvh` CSS and `.h-dvh` utility class
+- `viewer/ViewerApp.tsx` - Changed `h-screen` to `h-dvh`
+- `viewer/components/PlayerScreen.tsx` - Pull-to-refresh integration, reduced vocab bar padding
+- `viewer/components/VocabPanel.tsx` - Fixed header and scroll area styling
+- `viewer/components/StatsPanel.tsx` - Fixed header and scroll area styling
+- `viewer/components/AudioPlayer.tsx` - Bolder, more visible navigation arrows
+
+---
+
 ## Future Ideas
 
 ### Viewer App - High Priority

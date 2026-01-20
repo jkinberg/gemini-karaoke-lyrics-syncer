@@ -60,6 +60,7 @@ npm run deploy:preview:delete  # Delete preview service when done
 
 - **Live URL:** https://karaoke-syncer-362554121203.us-west1.run.app/
 - **Platform:** Google Cloud Run
+- **CI/CD:** Cloud Build trigger auto-deploys on push to `main` branch (~1-2 min build time)
 
 ## Environment
 
@@ -131,7 +132,8 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 - Session-level progress persistence
 - Video end screen with Play Again/Play Next buttons
 - Wake lock to prevent screen sleep during playback
-- iOS Safari safe area handling
+- iOS Safari safe area handling with dynamic viewport height (dvh)
+- Pull-to-refresh on mobile (swipe down to reload)
 - Google Analytics 4 tracking (playback, vocab learning, completion events)
 
 **Mobile Audio Player Features:**
@@ -155,6 +157,8 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 - `viewer/components/AudioVisualizer.tsx` - Canvas-based waveform visualization
 - `viewer/components/VocabPanel.tsx` - Vocabulary list with seek-to-word
 - `viewer/components/VocabToast.tsx` - Toast notifications with ping sound
+- `viewer/hooks/usePullToRefresh.ts` - Pull-to-refresh touch gesture handler
+- `viewer/components/PullToRefreshIndicator.tsx` - Pull-to-refresh spinner UI
 - `viewer/utils/deviceDetection.ts` - Mobile device detection
 - `viewer/utils/pingSoundContext.ts` - Shared AudioContext for UI sounds
 - `viewer/utils/analytics.ts` - Google Analytics 4 event tracking

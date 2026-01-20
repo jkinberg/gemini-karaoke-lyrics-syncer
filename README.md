@@ -23,7 +23,8 @@ Karaoke Syncer AI is a powerful web-based tool that leverages the Google Gemini 
 - **Swipe Navigation**: Swipe left/right on video to change tracks, up/down to open/close vocab panel
 - **End-of-Song Actions**: Play Again or Play Next buttons when video ends
 - **Screen Wake Lock**: Prevents screen from sleeping during playback
-- **iOS Safari Support**: Safe area handling and viewport fixes for notch devices
+- **iOS Safari Support**: Safe area handling, dynamic viewport height (dvh), and viewport fixes for notch devices
+- **Pull-to-Refresh**: Swipe down on mobile to reload the page
 - **Analytics**: Google Analytics 4 integration for engagement tracking (respects Do Not Track)
 
 ### Syncer Tool
