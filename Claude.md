@@ -132,6 +132,7 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 - Video end screen with Play Again/Play Next buttons
 - Wake lock to prevent screen sleep during playback
 - iOS Safari safe area handling
+- Google Analytics 4 tracking (playback, vocab learning, completion events)
 
 **Mobile Audio Player Features:**
 - Darkened thumbnail with track metadata overlay (title, artist, album)
@@ -156,6 +157,7 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 - `viewer/components/VocabToast.tsx` - Toast notifications with ping sound
 - `viewer/utils/deviceDetection.ts` - Mobile device detection
 - `viewer/utils/pingSoundContext.ts` - Shared AudioContext for UI sounds
+- `viewer/utils/analytics.ts` - Google Analytics 4 event tracking
 - `public/playlist.json` - Track metadata and file paths
 
 ## Documentation
