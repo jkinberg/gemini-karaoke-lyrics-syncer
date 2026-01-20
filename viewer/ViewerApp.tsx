@@ -79,6 +79,12 @@ export default function ViewerApp() {
   const lastTimeRef = useRef<number>(0);
   const accumulatedSecondsRef = useRef<number>(0);
 
+  // Keep a ref to current time for use in callbacks (avoids stale closure issues)
+  const currentTimeMsRef = useRef<number>(0);
+  useEffect(() => {
+    currentTimeMsRef.current = currentTimeMs;
+  }, [currentTimeMs]);
+
   // Track listening time when playing (not muted)
   useEffect(() => {
     // Only count time when user is actively listening (unmuted)
@@ -298,9 +304,9 @@ export default function ViewerApp() {
 
   // Handle video ended - open vocab panel with action buttons
   const handleVideoEnded = useCallback(() => {
-    // Track the end event
+    // Track the end event (use ref to avoid recreating callback on every time update)
     if (currentTrack) {
-      const completionPercent = (currentTimeMs / currentTrack.metadata.durationMs) * 100;
+      const completionPercent = (currentTimeMsRef.current / currentTrack.metadata.durationMs) * 100;
       analytics.trackEnded(currentTrack.id, completionPercent);
     }
 
@@ -308,7 +314,7 @@ export default function ViewerApp() {
     setActiveScreen('vocab');
     setShouldPause(true);
     setVocabOpenTrigger('end_screen');
-  }, [currentTrack, currentTimeMs]);
+  }, [currentTrack]);
 
   // Handle play again - seek to start and resume
   const handlePlayAgain = useCallback(() => {
