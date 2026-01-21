@@ -197,12 +197,12 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
             <div className="text-xl mb-2">Loading lyrics...</div>
           </div>
         )}
-        {/* Feedback button - positioned at bottom of lyrics area */}
+        {/* Feedback button - positioned at top of lyrics area */}
         <a
           href={FEEDBACK_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 py-1.5 px-3 rounded-full border border-zinc-700 hover:border-zinc-600 text-zinc-500 hover:text-zinc-400 text-xs transition-colors"
+          className="absolute top-2 left-1/2 -translate-x-1/2 flex items-center gap-2 py-1.5 px-3 rounded-full border border-zinc-700 hover:border-zinc-600 text-zinc-500 hover:text-zinc-400 text-xs transition-colors"
         >
           <FeedbackIcon />
           <span>Share your feedback</span>
