@@ -6,6 +6,7 @@ import { useKaraokeSync, getWordVocabState } from '../hooks/useKaraokeSync';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
 import { usePullToRefresh } from '../hooks/usePullToRefresh';
 import { PullToRefreshIndicator } from './PullToRefreshIndicator';
+import { analytics } from '../utils/analytics';
 
 // Icons
 const MusicNoteIcon = () => (
@@ -57,6 +58,7 @@ interface PlayerScreenProps {
   onOpenStats: () => void;
   onNextTrack: () => void;
   onPrevTrack: () => void;
+  onSeekTo?: (timeMs: number) => void;
 }
 
 export const PlayerScreen: React.FC<PlayerScreenProps> = ({
@@ -80,6 +82,7 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
   onOpenStats,
   onNextTrack,
   onPrevTrack,
+  onSeekTo,
 }) => {
   const totalVocab = trackData?.vocabulary?.length ?? 0;
 
@@ -187,10 +190,12 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
       <div className="flex-1 flex flex-col justify-center px-4 py-4 overflow-hidden relative">
         {trackData ? (
           <LyricsDisplay
+            trackId={track?.id}
             trackData={trackData}
             currentTimeMs={currentTimeMs}
             unlockedVocabIndices={unlockedVocabIndices}
             isMobile={isMobile}
+            onSeekTo={onSeekTo}
           />
         ) : (
           <div className="text-zinc-600 text-center">
@@ -267,11 +272,13 @@ const vocabGlowStyle = {
 
 // Lyrics display component - shows current segment with word highlighting
 const LyricsDisplay: React.FC<{
+  trackId?: string;
   trackData: LoadedTrackData;
   currentTimeMs: number;
   unlockedVocabIndices: Set<number>;
   isMobile?: boolean;
-}> = ({ trackData, currentTimeMs, unlockedVocabIndices, isMobile = false }) => {
+  onSeekTo?: (timeMs: number) => void;
+}> = ({ trackId, trackData, currentTimeMs, unlockedVocabIndices, isMobile = false, onSeekTo }) => {
   const {
     currentSegmentIndex,
     currentWordIndex,
@@ -285,12 +292,33 @@ const LyricsDisplay: React.FC<{
     currentTimeMs,
   });
 
+  // Detect skippable intro (first segment is INSTRUMENTAL with duration >= 10 seconds)
+  const firstSegment = trackData.spanish.segments[0];
+  const hasSkippableIntro =
+    firstSegment?.type === 'INSTRUMENTAL' &&
+    (firstSegment.endTimeMs - firstSegment.startTimeMs) >= 10000;
+  const introEndTimeMs = hasSkippableIntro ? firstSegment.endTimeMs : 0;
+  const showSkipIntro = hasSkippableIntro && currentTimeMs < introEndTimeMs;
+
   // Handle instrumental or no segment found
   if (!spanishSegment || spanishSegment.type === 'INSTRUMENTAL') {
     const cueText = spanishSegment?.cueText || 'Instrumental';
     return (
       <div className="text-center">
         <div className="text-2xl text-zinc-500 italic">{cueText}</div>
+        {showSkipIntro && onSeekTo && (
+          <button
+            onClick={() => {
+              if (trackId) {
+                analytics.skipIntro(trackId, introEndTimeMs / 1000);
+              }
+              onSeekTo(introEndTimeMs);
+            }}
+            className="mt-6 px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white font-medium transition-colors"
+          >
+            Skip Intro →
+          </button>
+        )}
       </div>
     );
   }

@@ -385,6 +385,7 @@ export default function ViewerApp() {
           onOpenStats={() => setActiveScreen('stats')}
           onNextTrack={nextTrack}
           onPrevTrack={prevTrack}
+          onSeekTo={handleSeekTo}
         />
       </div>
       {activeScreen === 'vocab' && trackData && currentTrack && (
