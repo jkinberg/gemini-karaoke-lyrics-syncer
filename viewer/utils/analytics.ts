@@ -108,6 +108,12 @@ export const analytics = {
       to_track_id: toTrackId,
     }),
 
+  skipIntro: (trackId: string, introLengthSeconds: number) =>
+    track('skip_intro', {
+      track_id: trackId,
+      intro_length_seconds: Math.round(introLengthSeconds),
+    }),
+
   // Vocabulary learning events
   vocabUnlock: (trackId: string, term: string, index: number, positionSeconds: number) =>
     track('vocab_unlock', {
