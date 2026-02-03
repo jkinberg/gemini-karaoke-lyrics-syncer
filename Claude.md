@@ -134,6 +134,7 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
 - Wake lock to prevent screen sleep during playback
 - iOS Safari safe area handling with dynamic viewport height (dvh)
 - Pull-to-refresh on mobile (swipe down to reload)
+- Skip Intro button for songs with long instrumental intros (≥10 seconds)
 - Google Analytics 4 tracking (playback, vocab learning, completion events)
 
 **Mobile Audio Player Features:**
@@ -178,6 +179,7 @@ A mobile-first viewer for learning Spanish through karaoke music videos.
   - Phase 6: Vocabulary timecode consistency
   - **Phase 7: Synchronization quality improvements** (includes auto-fix implementation)
 - `docs/tech-spec-google-analytics.md` - GA4 integration for viewer engagement tracking
+- `docs/tech-spec-asl-gloss-generation.md` - Future feature: ASL Gloss notation generation from English lyrics
 
 ## Key Features
 
